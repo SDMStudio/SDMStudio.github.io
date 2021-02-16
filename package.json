@@ -1,0 +1,26 @@
+{
+  "name": "sdms-vuepress",
+  "version": "1.0.0",
+  "description": "Website for sdm studio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SDMS",
+    "solver",
+    "decision making",
+    "multi-agent reinforcement learning",
+    "planning"
+  ],
+  "author": "David Albert",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}

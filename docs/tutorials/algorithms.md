@@ -1,5 +1,0 @@
-# Algorithms
-
-## HSVI
-
-## Q-learning

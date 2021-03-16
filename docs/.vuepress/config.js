@@ -3,6 +3,8 @@ module.exports = {
     title: "SDM'Studio",
     description: 'Solver for sequential decision making problems.',
     head: [
+        ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
         ['link', { rel: 'icon', href: '/logo.png' }]
     ],
     locales: {
@@ -48,7 +50,16 @@ module.exports = {
                                     '/tutorials/install',  /* /foo/one.html */
                                     '/tutorials/quickstart',  /* /foo/one.html */
                                     '/tutorials/theory',  /* /foo/one.html */
-                                    '/tutorials/algorithms',  /* /foo/one.html */
+                                    {
+                                        title: 'Algorithms',   // required
+                                        path: '/tutorials/algorithms/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: false, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/tutorials/algorithms/hsvi',  /* /foo/one.html */
+                                            '/tutorials/algorithms/qlearning',  /* /foo/one.html */
+                                        ]
+                                    },
                                     '/tutorials/contribute',  /* /foo/one.html */
                                 ]
                             },
@@ -106,7 +117,16 @@ module.exports = {
                                     '/fr/tutorials/install',  /* /foo/one.html */
                                     '/fr/tutorials/quickstart',  /* /foo/one.html */
                                     '/fr/tutorials/theory',  /* /foo/one.html */
-                                    '/fr/tutorials/algorithms',  /* /foo/one.html */
+                                    {
+                                        title: 'Algorithms',   // required
+                                        path: '/fr/tutorials/algorithms/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: false, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/fr/tutorials/algorithms/hsvi',  /* /foo/one.html */
+                                            '/fr/tutorials/algorithms/qlearning',  /* /foo/one.html */
+                                        ]
+                                    },
                                     '/fr/tutorials/contribute',  /* /foo/one.html */
                                 ]
                             },
@@ -135,5 +155,14 @@ module.exports = {
             }
         },
         repo: 'https://gitlab.inria.fr/chroma1/plasma/sdms',
+
     },
+
+    markdown: {
+        // options for markdown-it-anchor
+        anchor: { permalink: false },
+        extendMarkdown: md => {
+            md.use(require("markdown-it-katex"));
+        }
+    }
 }

@@ -1,17 +1,21 @@
 ---
 sidebar: false
 home: true
+heroImage: /assets/img/sdms-icon-light.png
 heroText: La plateforme de résolution de problème de prise de décision.
 tagline: Résoudre des problèmes de prise de décision séquentielle grâce aux dernières avancées scientifiques du domaine. 
 actionText: Get Started →
 actionLink: /tutorials/fr/quickstart.html
 features:
 - title: Aider les chercheurs dans leurs expérimentations
-  details: blablabla.
-- title: Développer de nouveaux algorithmes grâce aux modules disponibles
-  details: blablabla.
-- title: Trouver la solution à différent problèmes
-  details: blablabla.
+  img: /assets/img/search_IA.jpg
+  details: Réduit le temps entre la théorie et les premières expérimentations grâce à une interface de haut niveau.
+- title: Développer de nouveaux algorithmes facilement
+  img: /assets/img/algos.jpg
+  details: Permet de concevoir de nouveaux algorithmes rapidement en se basant sur des modules génériques à tous les algorithmes du domaine.
+- title: Trouver la solution optimale d'un problème de prise de décision
+  img: /assets/img/solution.jpg
+  details: Permet de résoudre rapidement un problème grâce à l'interface en ligne de commande.
 more:
 - title: Algorithms
   details: Different algorithms are available on SDMS.

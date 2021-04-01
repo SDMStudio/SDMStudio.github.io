@@ -8,7 +8,7 @@
 
 ## Contribute to the tutorials
 
-The main purpose of tutorials is to provide users a comprensive and in depth overview of theoritical and practical aspects behind *SDM'Studio*. Tutorials not only give a way to understand the usage of the platform but also provide the possibility for a user from another domain to understand the goal of researches in this field of AI. We think that popularized tutorials are a good alternative to papers for people that are not expert in the domain. In any case, tutorials can replace papers, they are in addition to give a better intuition of what happen in the theory. However, unlike to papers, tutorials neither show theorems and proofs nor explain experiments.
+The main purpose of tutorials is to provide users a comprehensive and in depth overview of theoritical and practical aspects behind *SDM'Studio*. Tutorials not only give a way to understand the usage of the platform but also provide the possibility for a user from another domain to understand the goal of researches in this field of AI. We think that popularized tutorials are a good alternative to papers for people that are not expert in the domain. In any case, tutorials can replace papers, they are in addition to give a better intuition of what happen in the theory. However, unlike to papers, tutorials neither show theorems and proofs nor explain experiments.
 
 ### How to write tutorials
 

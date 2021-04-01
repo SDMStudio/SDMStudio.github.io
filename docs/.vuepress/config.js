@@ -35,7 +35,7 @@ module.exports = {
                     { text: 'Home', link: '/' },
                     { text: 'Tutorials', link: '/tutorials/' },
                     { text: 'Doc', link: '/doc/' },
-                    { text: 'ANR Plasma', link: '/anr_plasma/' },
+                    { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },
                 ],
                 sidebar: {
 
@@ -102,7 +102,7 @@ module.exports = {
                     { text: 'Home', link: '/fr/' },
                     { text: 'Tutoriels', link: '/fr/tutorials/' },
                     { text: 'Doc', link: '/fr/doc/' },
-                    { text: 'ANR Plasma', link: '/anr_plasma/' },
+                    { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },
                 ],
                 sidebar: {
 

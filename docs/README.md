@@ -1,17 +1,22 @@
 ---
 sidebar: false
 home: true
+# layout: SpecialLayout
+heroImage: /assets/img/sdms-icon-light.png
 heroText: Explore decision making researches.
 tagline: Solve sequential decision making problems using most advanced algorithms in this field. 
 actionText: Get Started →
 actionLink: /tutorials/quickstart.html
 features:
 - title: Help researchers in their experiments
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Easily build new algorithms based existed ones
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
+  img: /assets/img/search_IA.jpg
+  details: High level interface with efficient algorithms will helps researchers to reduce the time from theory to experiments.
+- title: Easily build new algorithms based on existed ones
+  img: /assets/img/algos.jpg
+  details: Algorithms in SDMS are generic and highly reusable. Developers require minimal modification to build a new algorithm.   
 - title: Quickly find solutions to decision making problems
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+  img: /assets/img/solution.jpg
+  details: With the command line interface (CLI), you can quickly use the software to solve decision making problems.
 more:
 - title: Algorithms
   details: Different algorithms are available on SDMS.

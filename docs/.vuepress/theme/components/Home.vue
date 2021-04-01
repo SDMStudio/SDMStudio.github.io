@@ -3,25 +3,44 @@
     class="home"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
   >
-    <header class="hero">
-      <img
-        v-if="data.heroImage"
-        :src="$withBase(data.heroImage)"
-        :alt="data.heroAlt || 'hero'"
-      />
+    <vue-particles
+      color="#98e7ff"
+      :particleOpacity="0.8"
+      :particlesNumber="60"
+      shapeType="circle"
+      :particleSize="5"
+      linesColor="#98e7ff"
+      :linesWidth="3"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+    >
+    </vue-particles>
+    <img
+      v-if="data.heroImage"
+      :src="$withBase(data.heroImage)"
+      :alt="data.heroAlt || 'hero'"
+      id="main-logo"
+    />
 
-      <h1 v-if="data.heroText !== null" id="main-title">
+    <div id="main-title">
+      <h1 v-if="data.heroText !== null">
         {{ data.heroText || $title || "Hello" }}
       </h1>
 
-      <p v-if="data.tagline !== null" class="description">
+      <h3 v-if="data.tagline !== null" class="description" id="sub-title">
         {{ data.tagline || $description || "Welcome to your VuePress site" }}
-      </p>
+      </h3>
+    </div>
 
-      <p v-if="data.actionText && data.actionLink" class="action">
-        <NavLink class="action-button" :item="actionLink" />
-      </p>
-    </header>
+    <p v-if="data.actionText && data.actionLink">
+      <NavLink class="hero-action" :item="actionLink" />
+    </p>
 
     <div>
       <div class="title">
@@ -33,6 +52,11 @@
           :key="index"
           class="feature"
         >
+          <img
+            :src="$withBase(feature.img)"
+            :alt="'feature'"
+            id="feature-img"
+          />
           <h2>{{ feature.title }}</h2>
           <p>{{ feature.details }}</p>
         </div>
@@ -62,11 +86,15 @@
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
+import { ParticlesBg } from "particles-bg-vue";
 
 export default {
   name: "Home",
 
-  components: { NavLink },
+  components: {
+    NavLink,
+    ParticlesBg,
+  },
 
   computed: {
     data() {
@@ -85,53 +113,70 @@ export default {
 
 <style lang="stylus">
 .home {
-  .hero {
-    padding: $navbarHeight 5rem 0;
-    max-width: 100%;
-    margin: 0px auto;
-    display: block;
+  #particles-js {
+    height: 100vh;
+    background-color: darken($navBackColor, 20%);
+  }
+
+  #main-logo {
+    font-family: "'Courier New', Courier, monospace";
+    color: #dedede;
+    position: absolute;
     text-align: left;
-    font-style: oblique;
-    color: $navTextColor;
-    background-image: url('../../public/assets/img/background-header.jpg');
+    top: 15%;
+    width: 30%;
+    margin-left: 8rem;
+  }
 
-    img {
-      max-width: 100%;
-      max-height: 280px;
-      display: block;
-      margin: 3rem auto 1.5rem;
-    }
+  #main-title {
+    font-family: "'Courier New', Courier, monospace";
+    color: #dedede;
+    position: absolute;
+    text-align: left;
+    top: 30%;
+    width: 60%;
+    margin-left: 8rem;
+  }
 
-    h1 {
-      font-size: 2rem;
-    }
+  .action, h1 {
+    font-size: 2.7rem;
+  }
 
-    h1, .description, .action {
-      margin: 1.8rem auto;
-    }
+  h3 {
+    font-size: 2rem;
+  }
 
-    .description {
-      // max-width: 35rem;
-      font-size: 1.2rem;
-      line-height: 1.3;
-      color: darken($navTextColor, 10%);
-    }
+  h1, .description, .action {
+    margin: 1.8rem auto;
+  }
 
-    .action-button {
-      display: inline-block;
-      font-size: 1rem;
-      color: $navTextColor;
-      background-color: $textColor;
-      margin-top: 10rem;
-      padding: 0.5rem 1.2rem;
-      border-radius: 4px;
-      transition: background-color 0.1s ease;
-      box-sizing: border-box;
-      border-bottom: 1px solid darken($textColor, 10%);
+  .description {
+    // max-width: 35rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: darken($navTextColor, 10%);
+  }
 
-      &:hover {
-        background-color: lighten($textColor, 10%);
-      }
+  .hero-action {
+    position: absolute;
+    text-align: left;
+    top: 70%;
+    width: auto;
+    margin-left: 8rem;
+    display: inline-block;
+    font-size: 1rem;
+    color: $navBackColor;
+    background-color: $navAccentColor;
+    margin-top: 10rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    box-sizing: border-box;
+    border-bottom: 1px solid darken($textColor, 10%);
+
+    &:hover {
+      background-color: lighten($textColor, 20%);
+      color: darken($navAccentColor, 20%);
     }
   }
 
@@ -165,6 +210,10 @@ export default {
     flex-grow: 1;
     flex-basis: 30%;
     max-width: 30%;
+
+    img {
+      max-width : 100%;
+    }
 
     h2 {
       font-size: 1.4rem;
@@ -225,12 +274,13 @@ export default {
       background-color: $navAccentColor;
       padding: 0.5rem 1.2rem;
       border-radius: 4px;
-      transition: background-color 0.1s ease;
+      transition: background-color 0.1s ease, color 0.1s ease;
       box-sizing: border-box;
       border-bottom: 1px solid darken($textColor, 10%);
 
       &:hover {
-        background-color: lighten($textColor, 10%);
+        background-color: lighten($textColor, 20%);
+        color: darken($navAccentColor, 20%);
       }
     }
   }

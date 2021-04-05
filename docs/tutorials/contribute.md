@@ -12,7 +12,7 @@ The main purpose of tutorials is to provide users a comprehensive and in depth o
 
 ### How to write tutorials
 
-The tutorials are written in **Markdown**. Refer to the [Markdown guide](#markdown-guide) to have detailed informations about the syntax. In order to provide a better user experience, you may need more flexibility when writing tutorials. To this end, it is also possible to add HTML tags or add Vue.js components to your markdown file. For more information, you can refer to the section [Advanced tutorials](#advanced-tutorials).
+Tutorials are written in **Markdown**. This is a convenient way to quickly write tutorials. You can refer to the [Markdown guide](#markdown-guide) to have detailed informations about the syntax. To provide an improved user experience, you may need flexibility when writing tutorials. To this end, it is also possible to add HTML tags or use Vue.js components to your markdown file. For more information, you can refer to the section [Advanced tutorials](#advanced-tutorials).
 
 
 
@@ -30,40 +30,38 @@ Basics include :
 - Emojis
 - etc
 
-
-
 ### Mathematics
 
-You can write mathematical formulas in markdown by including the 2 following at the top of the file.md . Equations can then be written in *LaTex*.
+You can write mathematical formulas in markdown by including the two following lines on top of the `file.md` . Equations can then be written with standard *LaTex* format.
 
-**Lines to add at the top of the markdown file**:
+**Lines to add at the top of the file**:
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 ```
 
-*Syntax* : 
+***Input*** : 
 ```md
 $$q^{\pi}_{t}(s, a) = \mathbb{E}_{\pi}\left[ \sum_{i=t}^{T} \gamma^{t-i} R_{i} \mid S_t = s, A_t = a\right]$$
 ```
 
-*Results* : 
+***Output*** : 
 $$q^{\pi}_{t}(s, a) = \mathbb{E}_{\pi}\left[ \sum_{i=t}^{T} \gamma^{t-i} R_{i} \mid S_t = s, A_t = a\right]$$
 
 ### Images
 
-*Syntax* :
+***Input*** :
 ```
 ![Paysage](https://mb.cision.com/Public/14683/3219095/aa1f4b9e11644ab0_400x400ar.jpg)
 ```
 
-*Results* :
+***Output*** :
 
 ![Paysage](https://mb.cision.com/Public/14683/3219095/aa1f4b9e11644ab0_400x400ar.jpg)
 
 ### Code
 
-*Syntax* : 
+***Input*** : 
 
 ~~~
 ```cpp
@@ -104,7 +102,7 @@ int main(int argc, char **argv)
 ### Tables
 
 
-*Syntax* : 
+***Input*** : 
 ```md
 | Tables        |      Are      |  Cool |
 | ------------- | :-----------: | ----: |
@@ -123,24 +121,53 @@ int main(int argc, char **argv)
 
 ### Emojis
 
-*Syntax* : `:emoji-name:`
+***Input*** : `:emoji-name:`
 
 *Example* : :smiley: :scream: :-1: :airplane: :bird: :fish:
 
 *More* : [List of emojis](https://gist.github.com/rxaviers/7360908)
 
 
-## Advanced tutorials
+## Write advanced tutorials
 
-To make more advanced tutorials, several tools can be used on top of Markdown syntax.
+In addition to simple markdown syntax, it is possible to make tutorials more attractive. Two examples that enable producing more attractive user interfaces are classic HTML and Vue.js components.
 
 ### Include HTML
 
-When building *SDM'Studio* website, *Markdown* files are first transcrypted in *HTML*. As a results, it is possible to add any HTML tags in the  content of each tutorial and it will appear properly in the resulting HTML file. 
+When building *SDM'Studio* website, *Markdown* files are first transcrypted in *HTML*. As a results, it is possible to add any HTML tag in the content of a tutorial and it will appear as is in the output file. 
+
+::: details
+HTML and Vue.js components can be directly written in the core of any markdown file without previous specifications.
+:::
+
+**Input**
+```md
+<div style="font-style : oblique">
+  <hr>
+  <h4> This is an example </h4>
+
+  <a href='https://en.wikipedia.org/wiki/HTML'> HTML Link</a>
+
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ"></iframe> 
+  <hr>
+</div>
+```
+
+**Output**
+<div style="font-style : oblique">
+  <hr>
+  <h4> This is an example </h4>
+  
+  <a href='https://en.wikipedia.org/wiki/HTML'> HTML Link</a>
+  
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ"></iframe> 
+  <hr>
+</div>
+
 
 ### Use Headers
 
-A good practice when creating a new content file is to add a header. Headers are placed at the top of the Markdown file and allow to store usefull data for the current file (meta-data, tags, title, etc). 
+A good practice when creating a new content file is to add a header. Headers are placed at the top of the file and allow to store usefull data for the current file (meta-data, tags, title, etc). 
 
 ```md
 ---
@@ -155,12 +182,20 @@ tags:
 ---
 ```
 
-A more complete example of what can look like a header is :
+An example of what can be a complete header is :
 
 ```md
 ---
+title: Description page
+meta:
+  - name: description
+    content: SDMS description.
+  - name: keywords
+    content: sdms overview description 
+tags:
+  - description overview
 sidebar: false
-home: true
+home: false
 heroText: Explore decision making researches.
 tagline: Solve sequential decision making problems using most advanced algorithms in this field. 
 actionText: Get Started →
@@ -170,44 +205,25 @@ features:
   details: Minimal setup with markdown-centered project structure helps you focus on writing.
 - title: Easily build new algorithms based existed ones
   details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Quickly find solutions to decision making problems
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-more:
-- title: Algorithms
-  details: Different algorithms are available on SDMS.
-  features:
-  - title: Planning
-    img: planning-img.png
-    details: Planning algorithms are .....
-  - title: Learning
-    img: learning-img.png
-    details: Learning algorithms are .....
-- title: Problems
-  details: Different problems can be solve using the platform.
-  features:
-  - title: Single-agent processes
-    img: planning-img.png
-    details: Planning algorithms are .....
-  - title: Collaborative multi-agent processes
-    img: learning-img.png
-    details: Learning algorithms are .....
-links:
-- title: Install
-  details: Easily install SDMS on your laptop or on any remote server
-  text: How to install ? 
-  link: /tutorials/install.html
-- title: Tutorials
-  details: Tutorials help you to quickly understand the theory and basic usage of SDMS
-  text: View Tutorials 
-  link: /tutorials/ 
-- title: Documentation
-  details: Go deeper into the documentation to understand  implementation details
-  text: View Doc 
-  link: /doc/ 
 footer: MIT Licensed | Copyright © 2021 - ANR Plasma
 ---
 ```
 
 ### Add Vue.js components
 
-Using vue components can considerarly improve the interface. By combining adequatly headers and vue components you can nearly make any custom interactive component you need and reuse them in several tutorials. This requires more time and few knowledge in [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript) and [Vue.js](https://vuejs.org/) but the result is interesting.
+Vue components can considerarly improve the interface. By combining adequatly headers and vue components you can make high level interface of all kind. Moreover, components are reusable in every tutorials. To be valid and accessible from the Markdown files, components must be global. That is to say, they need to be located in `global-components` folder. 
+
+**Example :** including *ImageZoom* component
+
+***Input***
+```md
+<ImageZoom img="/assets/img/sdms-icon-light.png" title="Icon light"/>
+<ImageZoom img="/assets/img/sdms-icon.png" title="Icon dark"/>
+```
+
+***Output***
+<ImageZoom img="/assets/img/sdms-icon-light.png" title="Icon light"/>
+<ImageZoom img="/assets/img/sdms-icon.png" title="Icon dark"/>
+
+
+See [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript) and [Vue.js](https://vuejs.org/) documentation for more information about Vue components.

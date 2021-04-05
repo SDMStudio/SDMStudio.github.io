@@ -86,14 +86,12 @@
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
-import { ParticlesBg } from "particles-bg-vue";
 
 export default {
   name: "Home",
 
   components: {
     NavLink,
-    ParticlesBg,
   },
 
   computed: {

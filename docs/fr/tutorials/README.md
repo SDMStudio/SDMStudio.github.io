@@ -12,7 +12,7 @@ tags:
   - mathematics
 ---
 
-# Aperçu
+# Apercu
 
 ## Qu'es-ce que SDM'Studio
 

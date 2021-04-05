@@ -102,7 +102,7 @@ module.exports = {
                 nav: [
                     { text: 'Home', link: '/fr/' },
                     { text: 'Tutoriels', link: '/fr/tutorials/' },
-                    { text: 'Doc', link: '/fr/doc/' },
+                    { text: 'Doc', link: '/doc/' },
                     { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },
                 ],
                 sidebar: {
@@ -145,7 +145,7 @@ module.exports = {
                             },
                             {
                                 title: 'Documentation',   // required
-                                path: '/fr/doc/',
+                                path: '/doc/',
                                 collapsable: false, // optional, defaults to true
                                 sidebarDepth: 1,
                                 children: [

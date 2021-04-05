@@ -72,4 +72,4 @@ identifier_t sdm::ast::reward_entry_1_t::state;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/ast.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp`

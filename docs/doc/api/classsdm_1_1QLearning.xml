@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1QLearning" kind="class" language="C++" prot="public">
+    <compoundname>sdm::QLearning</compoundname>
+    <basecompoundref refid="classsdm_1_1LearningAlgo" prot="public" virt="non-virtual">sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;</basecompoundref>
+    <includes refid="q__learning_8hpp" local="no">q_learning.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+      <param>
+        <type>typename TObservation</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1QLearning_1a5f2532564d8dd0b219f9658cb44353fa" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; QValueFunction&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;QValueFunction&lt;TState, TAction&gt; &gt; sdm::QLearning&lt; TState, TAction, TObservation &gt;::q_value_</definition>
+        <argsstring></argsstring>
+        <name>q_value_</name>
+        <briefdescription>
+<para>Lower Bound representation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1QLearning_1a0da816046264da2a9ed92aa1d4a0f341" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; QValueFunction&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;QValueFunction&lt;TState, TAction&gt; &gt; sdm::QLearning&lt; TState, TAction, TObservation &gt;::q_target_</definition>
+        <argsstring></argsstring>
+        <name>q_target_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1QLearning_1a1c88a12c472e092238d5889caf53c6da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::QLearning&lt; TState, TAction, TObservation &gt;::QLearning</definition>
+        <argsstring>(number trials, std::string results)</argsstring>
+        <name>QLearning</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>trials</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>results</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classsdm_1_1QLearning" kindref="compound">QLearning</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>results</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1QLearning_1a8213c93b2003f02daab3bacd73a65b7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::QLearning&lt; TState, TAction, TObservation &gt;::QLearning</definition>
+        <argsstring>(std::shared_ptr&lt; GymInterface &gt; &amp;env, std::shared_ptr&lt; QValueFunction&lt; TState, TAction &gt;&gt; value, std::shared_ptr&lt; QValueFunction&lt; TState, TAction &gt;&gt; target, number planning_horizon, double epsilon, number num_max_trials=10000)</argsstring>
+        <name>QLearning</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1GymInterface" kindref="compound">GymInterface</ref> &gt; &amp;</type>
+          <declname>env</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; QValueFunction&lt; TState, TAction &gt;&gt;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; QValueFunction&lt; TState, TAction &gt;&gt;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>planning_horizon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_max_trials</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classsdm_1_1QLearning" kindref="compound">QLearning</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the problem we want to solve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>results</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" line="51" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="520">
+        <label>sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1LearningAlgo"/>
+        <childnode refid="521" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="521">
+        <label>sdm::Algorithm</label>
+        <link refid="classsdm_1_1Algorithm"/>
+      </node>
+      <node id="519">
+        <label>sdm::QLearning&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1QLearning"/>
+        <childnode refid="520" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="523">
+        <label>sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1LearningAlgo"/>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="524">
+        <label>sdm::Algorithm</label>
+        <link refid="classsdm_1_1Algorithm"/>
+      </node>
+      <node id="522">
+        <label>sdm::QLearning&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1QLearning"/>
+        <childnode refid="523" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" line="26" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/q_learning.hpp" bodystart="25" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1Algorithm_1ac7416e15657922c542ec865b71845500" prot="public" virt="pure-virtual"><scope>sdm::QLearning</scope><name>do_initialize</name></member>
+      <member refid="classsdm_1_1Algorithm_1a1c9dad65b7cb1b03bd0a3c11e8a1cf24" prot="public" virt="pure-virtual"><scope>sdm::QLearning</scope><name>do_solve</name></member>
+      <member refid="classsdm_1_1Algorithm_1abf4f9b267c62bc80c30a39d0023ef445" prot="public" virt="pure-virtual"><scope>sdm::QLearning</scope><name>do_test</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1abf42f67bf765c5e0a82f21cb1ea2e791" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>env_</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1ad275ce55da5af8664a25a7c05d119f6a" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>episode</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1a6b866d3be4456b7c84e4e48d8ffbaa35" prot="public" virt="non-virtual"><scope>sdm::QLearning</scope><name>LearningAlgo</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1a670f6b3873eda11ded22e72303f7b7bf" prot="public" virt="non-virtual"><scope>sdm::QLearning</scope><name>LearningAlgo</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1aaa4834a82ca4ef3a32bf572f140de9c6" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>max_trials</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1ace7570eebb3f69ab09e879a792909ff0" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>planning_horizon_</name></member>
+      <member refid="classsdm_1_1QLearning_1a0da816046264da2a9ed92aa1d4a0f341" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>q_target_</name></member>
+      <member refid="classsdm_1_1QLearning_1a5f2532564d8dd0b219f9658cb44353fa" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>q_value_</name></member>
+      <member refid="classsdm_1_1QLearning_1a1c88a12c472e092238d5889caf53c6da" prot="public" virt="non-virtual"><scope>sdm::QLearning</scope><name>QLearning</name></member>
+      <member refid="classsdm_1_1QLearning_1a8213c93b2003f02daab3bacd73a65b7b" prot="public" virt="non-virtual"><scope>sdm::QLearning</scope><name>QLearning</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1ac8581e93070439c1ac264e87c4a4cad5" prot="protected" virt="non-virtual"><scope>sdm::QLearning</scope><name>trial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

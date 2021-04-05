@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1POMDPInitializer" kind="class" language="C++" prot="public">
+    <compoundname>sdm::POMDPInitializer</compoundname>
+    <basecompoundref refid="classsdm_1_1Initializer" prot="public" virt="non-virtual">sdm::Initializer&lt; TState, TAction &gt;</basecompoundref>
+    <includes refid="pomdp__initializer_8hpp" local="no">pomdp_initializer.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsdm_1_1POMDPInitializer_1ae54914095340eac7001e1c6ae6cd5d2b" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sdm::POMDPInitializer&lt; TState, TAction &gt;::algo_name_</definition>
+        <argsstring></argsstring>
+        <name>algo_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1POMDPInitializer_1a64c69cb082c09549001ed7b02976d8a8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::POMDPInitializer&lt; TState, TAction &gt;::error_</definition>
+        <argsstring></argsstring>
+        <name>error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1POMDPInitializer_1aa999758896d71868e6031364848c271e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::POMDPInitializer&lt; TState, TAction &gt;::trials_</definition>
+        <argsstring></argsstring>
+        <name>trials_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1POMDPInitializer_1a9626b14a1b134d42b1d993c5f7bf3cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::POMDPInitializer&lt; TState, TAction &gt;::POMDPInitializer</definition>
+        <argsstring>(std::string algo_name, double error=0.01, int trials=10000)</argsstring>
+        <name>POMDPInitializer</name>
+        <param>
+          <type>std::string</type>
+          <declname>algo_name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>error</declname>
+          <defval>0.01</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trials</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1POMDPInitializer_1a9b9e98a2a279239c9d5e40fc249e9c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::POMDPInitializer&lt; TState, TAction &gt;::init</definition>
+        <argsstring>(ValueFunction&lt; TState, TAction &gt; *vf)</argsstring>
+        <name>init</name>
+        <reimplements refid="classsdm_1_1Initializer_1aa2971b496cd7b51b5abf0c79b5c19d9b">init</reimplements>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; *</type>
+          <declname>vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The POMDP initializer enables to initialize the upper bound in <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref> with the underlying POMDP optimal value function. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>algo_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the algorithm that will be used to solve the underlying POMDP. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximal error </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximal number of trials </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="516">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="515">
+        <label>sdm::POMDPInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1POMDPInitializer"/>
+        <childnode refid="516" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="518">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="517">
+        <label>sdm::POMDPInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1POMDPInitializer"/>
+        <childnode refid="518" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp" bodystart="27" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1POMDPInitializer_1ae54914095340eac7001e1c6ae6cd5d2b" prot="public" virt="non-virtual"><scope>sdm::POMDPInitializer</scope><name>algo_name_</name></member>
+      <member refid="classsdm_1_1POMDPInitializer_1a64c69cb082c09549001ed7b02976d8a8" prot="public" virt="non-virtual"><scope>sdm::POMDPInitializer</scope><name>error_</name></member>
+      <member refid="classsdm_1_1POMDPInitializer_1a9b9e98a2a279239c9d5e40fc249e9c02" prot="public" virt="virtual"><scope>sdm::POMDPInitializer</scope><name>init</name></member>
+      <member refid="classsdm_1_1POMDPInitializer_1a9626b14a1b134d42b1d993c5f7bf3cf0" prot="public" virt="non-virtual"><scope>sdm::POMDPInitializer</scope><name>POMDPInitializer</name></member>
+      <member refid="classsdm_1_1POMDPInitializer_1aa999758896d71868e6031364848c271e" prot="public" virt="non-virtual"><scope>sdm::POMDPInitializer</scope><name>trials_</name></member>
+      <member refid="classsdm_1_1Initializer_1af228ae3e3b0ba75b3e9f82b46e029136" prot="public" virt="virtual"><scope>sdm::POMDPInitializer</scope><name>~Initializer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="parser_8cpp" kind="file" language="C++">
+    <compoundname>parser.cpp</compoundname>
+    <includes refid="exception_8hpp" local="no">sdm/exception.hpp</includes>
+    <includes refid="ast_8hpp" local="no">sdm/parser/ast.hpp</includes>
+    <includes refid="parser_8hpp" local="no">sdm/parser/parser.hpp</includes>
+    <includes refid="config_8hpp" local="no">sdm/parser/config.hpp</includes>
+    <includes refid="printer_8hpp" local="no">sdm/parser/printer.hpp</includes>
+    <includes refid="encoder_8hpp" local="no">sdm/parser/encoder.hpp</includes>
+    <includes refid="parser__def_8hpp" local="no">sdm/parser/parser_def.hpp</includes>
+    <includes refid="ast__adapted_8hpp" local="no">sdm/parser/ast_adapted.hpp</includes>
+    <includes local="no">boost/spirit/home/x3.hpp</includes>
+    <includes local="no">boost/fusion/include/io.hpp</includes>
+    <includes local="no">boost/config/warning_disable.hpp</includes>
+    <includes local="no">string</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="1885">
+        <label>locale</label>
+      </node>
+      <node id="1824">
+        <label>sdm/core/space/multi_space.hpp</label>
+        <link refid="multi__space_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1821" relation="include">
+        </childnode>
+        <childnode refid="1825" relation="include">
+        </childnode>
+      </node>
+      <node id="1897">
+        <label>sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1879" relation="include">
+        </childnode>
+        <childnode refid="1896" relation="include">
+        </childnode>
+        <childnode refid="1898" relation="include">
+        </childnode>
+        <childnode refid="1899" relation="include">
+        </childnode>
+      </node>
+      <node id="1888">
+        <label>sdm/world/world_type.hpp</label>
+        <link refid="world__type_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1889" relation="include">
+        </childnode>
+        <childnode refid="1894" relation="include">
+        </childnode>
+      </node>
+      <node id="1886">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="1908">
+        <label>boost/fusion/include/adapt_struct.hpp</label>
+      </node>
+      <node id="1835">
+        <label>sdm/core/space/multi_discrete_space.tpp</label>
+      </node>
+      <node id="1898">
+        <label>sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1816" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+        <childnode refid="1841" relation="include">
+        </childnode>
+        <childnode refid="1854" relation="include">
+        </childnode>
+      </node>
+      <node id="1823">
+        <label>assert.h</label>
+      </node>
+      <node id="1894">
+        <label>sdm/utils/decision_rules/det_decision_rule.hpp</label>
+        <link refid="det__decision__rule_8hpp"/>
+        <childnode refid="1895" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+        <childnode refid="1865" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+      </node>
+      <node id="1889">
+        <label>sdm/core/states.hpp</label>
+        <link refid="states_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1890" relation="include">
+        </childnode>
+        <childnode refid="1869" relation="include">
+        </childnode>
+        <childnode refid="1867" relation="include">
+        </childnode>
+        <childnode refid="1892" relation="include">
+        </childnode>
+      </node>
+      <node id="1834">
+        <label>sdm/core/space/discrete_space.tpp</label>
+      </node>
+      <node id="1880">
+        <label>sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1881" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1882" relation="include">
+        </childnode>
+        <childnode refid="1884" relation="include">
+        </childnode>
+        <childnode refid="1887" relation="include">
+        </childnode>
+      </node>
+      <node id="1907">
+        <label>boost/spirit/home/x3/support/utility/annotate_on_success.hpp</label>
+      </node>
+      <node id="1869">
+        <label>sdm/core/state/occupancy_state.hpp</label>
+        <link refid="occupancy__state_8hpp"/>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1868" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1878" relation="include">
+        </childnode>
+      </node>
+      <node id="1890">
+        <label>sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1865" relation="include">
+        </childnode>
+        <childnode refid="1891" relation="include">
+        </childnode>
+      </node>
+      <node id="1814">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="1853">
+        <label>sdm/utils/linear_algebra/vector.hpp</label>
+        <link refid="linear__algebra_2vector_8hpp"/>
+        <childnode refid="1847" relation="include">
+        </childnode>
+        <childnode refid="1848" relation="include">
+        </childnode>
+        <childnode refid="1849" relation="include">
+        </childnode>
+        <childnode refid="1850" relation="include">
+        </childnode>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+      </node>
+      <node id="1881">
+        <label>sdm/public/algorithm.hpp</label>
+        <link refid="algorithm_8hpp"/>
+      </node>
+      <node id="1859">
+        <label>sdm/world/po_decision_process.tpp</label>
+      </node>
+      <node id="1910">
+        <label>sdm/parser/printer.hpp</label>
+        <link refid="printer_8hpp"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+      </node>
+      <node id="1804">
+        <label>sdm/parser/ast.hpp</label>
+        <link refid="ast_8hpp"/>
+        <childnode refid="1805" relation="include">
+        </childnode>
+        <childnode refid="1806" relation="include">
+        </childnode>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1802" relation="include">
+        </childnode>
+      </node>
+      <node id="1877">
+        <label>sdm/core/state/jhistory_tree.tpp</label>
+      </node>
+      <node id="1852">
+        <label>cmath</label>
+      </node>
+      <node id="1815">
+        <label>sdm/world/po_decision_process.hpp</label>
+        <link refid="po__decision__process_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1816" relation="include">
+        </childnode>
+        <childnode refid="1856" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+        <childnode refid="1841" relation="include">
+        </childnode>
+        <childnode refid="1858" relation="include">
+        </childnode>
+        <childnode refid="1854" relation="include">
+        </childnode>
+        <childnode refid="1859" relation="include">
+        </childnode>
+      </node>
+      <node id="1905">
+        <label>boost/spirit/home/x3/support/utility/error_reporting.hpp</label>
+      </node>
+      <node id="1850">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="1903">
+        <label>sdm/parser/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="1904" relation="include">
+        </childnode>
+        <childnode refid="1902" relation="include">
+        </childnode>
+      </node>
+      <node id="1802">
+        <label>string</label>
+      </node>
+      <node id="1864">
+        <label>sdm/utils/linear_algebra/sdms_vector.tpp</label>
+      </node>
+      <node id="1883">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="1895">
+        <label>map</label>
+      </node>
+      <node id="1801">
+        <label>sdm/exception.hpp</label>
+        <link refid="exception_8hpp"/>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1803" relation="include">
+        </childnode>
+      </node>
+      <node id="1882">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="1873" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+        <childnode refid="1863" relation="include">
+        </childnode>
+        <childnode refid="1883" relation="include">
+        </childnode>
+      </node>
+      <node id="1842">
+        <label>unordered_set</label>
+      </node>
+      <node id="1909">
+        <label>boost/fusion/include/io.hpp</label>
+      </node>
+      <node id="1832">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="1875">
+        <label>sdm/core/state/history_tree.tpp</label>
+      </node>
+      <node id="1858">
+        <label>sdm/core/observation_dynamics.hpp</label>
+        <link refid="observation__dynamics_8hpp"/>
+        <childnode refid="1842" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1843" relation="include">
+        </childnode>
+      </node>
+      <node id="1833">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1807" relation="include">
+        </childnode>
+      </node>
+      <node id="1878">
+        <label>sdm/core/state/occupancy_state.tpp</label>
+      </node>
+      <node id="1901">
+        <label>sdm/world/occupancy_mdp.tpp</label>
+      </node>
+      <node id="1865">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="1813" relation="include">
+        </childnode>
+        <childnode refid="1852" relation="include">
+        </childnode>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1863" relation="include">
+        </childnode>
+        <childnode refid="1866" relation="include">
+        </childnode>
+      </node>
+      <node id="1803">
+        <label>exception</label>
+      </node>
+      <node id="1830">
+        <label>fstream</label>
+      </node>
+      <node id="1822">
+        <label>sdm/core/space/multi_discrete_space.hpp</label>
+        <link refid="multi__discrete__space_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1824" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1835" relation="include">
+        </childnode>
+      </node>
+      <node id="1913">
+        <label>sdm/parser/ast_adapted.hpp</label>
+        <link refid="ast__adapted_8hpp"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1908" relation="include">
+        </childnode>
+      </node>
+      <node id="1876">
+        <label>sdm/core/state/jhistory_tree.hpp</label>
+        <link refid="jhistory__tree_8hpp"/>
+        <childnode refid="1871" relation="include">
+        </childnode>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1877" relation="include">
+        </childnode>
+      </node>
+      <node id="1860">
+        <label>sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1869" relation="include">
+        </childnode>
+        <childnode refid="1879" relation="include">
+        </childnode>
+        <childnode refid="1896" relation="include">
+        </childnode>
+        <childnode refid="1900" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1853" relation="include">
+        </childnode>
+        <childnode refid="1894" relation="include">
+        </childnode>
+        <childnode refid="1901" relation="include">
+        </childnode>
+      </node>
+      <node id="1879">
+        <label>sdm/world/solvable_by_hsvi.hpp</label>
+        <link refid="solvable__by__hsvi_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1880" relation="include">
+        </childnode>
+        <childnode refid="1888" relation="include">
+        </childnode>
+        <childnode refid="1882" relation="include">
+        </childnode>
+        <childnode refid="1801" relation="include">
+        </childnode>
+      </node>
+      <node id="1871">
+        <label>sdm/core/state/history_tree.hpp</label>
+        <link refid="history__tree_8hpp"/>
+        <childnode refid="1872" relation="include">
+        </childnode>
+        <childnode refid="1875" relation="include">
+        </childnode>
+      </node>
+      <node id="1847">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="1837">
+        <label>sdm/world/base/decision_process_base.hpp</label>
+        <link refid="decision__process__base_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1838" relation="include">
+        </childnode>
+        <childnode refid="1840" relation="include">
+        </childnode>
+      </node>
+      <node id="1900">
+        <label>sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1815" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1841" relation="include">
+        </childnode>
+        <childnode refid="1854" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+      </node>
+      <node id="1912">
+        <label>sdm/parser/parser_def.hpp</label>
+        <link refid="parser__def_8hpp"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1913" relation="include">
+        </childnode>
+        <childnode refid="1904" relation="include">
+        </childnode>
+        <childnode refid="1902" relation="include">
+        </childnode>
+        <childnode refid="1907" relation="include">
+        </childnode>
+      </node>
+      <node id="1848">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="1866">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="1817">
+        <label>tuple</label>
+      </node>
+      <node id="1839">
+        <label>sdm/world/base/stochastic_process_base.tpp</label>
+      </node>
+      <node id="1904">
+        <label>sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1805" relation="include">
+        </childnode>
+        <childnode refid="1905" relation="include">
+        </childnode>
+        <childnode refid="1906" relation="include">
+        </childnode>
+        <childnode refid="1902" relation="include">
+        </childnode>
+        <childnode refid="1907" relation="include">
+        </childnode>
+        <childnode refid="1908" relation="include">
+        </childnode>
+        <childnode refid="1909" relation="include">
+        </childnode>
+        <childnode refid="1895" relation="include">
+        </childnode>
+      </node>
+      <node id="1826">
+        <label>sdm/core/space/discrete_space.hpp</label>
+        <link refid="discrete__space_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1821" relation="include">
+        </childnode>
+        <childnode refid="1834" relation="include">
+        </childnode>
+      </node>
+      <node id="1825">
+        <label>sdm/core/space/multi_space.tpp</label>
+      </node>
+      <node id="1836">
+        <label>sdm/world/gym_interface.tpp</label>
+      </node>
+      <node id="1807">
+        <label>vector</label>
+      </node>
+      <node id="1906">
+        <label>boost/config/warning_disable.hpp</label>
+      </node>
+      <node id="1816">
+        <label>sdm/world/decision_process.hpp</label>
+        <link refid="decision__process_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1817" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1801" relation="include">
+        </childnode>
+        <childnode refid="1818" relation="include">
+        </childnode>
+        <childnode refid="1837" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1824" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+        <childnode refid="1841" relation="include">
+        </childnode>
+        <childnode refid="1854" relation="include">
+        </childnode>
+        <childnode refid="1855" relation="include">
+        </childnode>
+      </node>
+      <node id="1843">
+        <label>sdm/utils/linear_algebra/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="1844" relation="include">
+        </childnode>
+        <childnode refid="1845" relation="include">
+        </childnode>
+        <childnode refid="1846" relation="include">
+        </childnode>
+        <childnode refid="1847" relation="include">
+        </childnode>
+        <childnode refid="1848" relation="include">
+        </childnode>
+        <childnode refid="1849" relation="include">
+        </childnode>
+        <childnode refid="1850" relation="include">
+        </childnode>
+        <childnode refid="1851" relation="include">
+        </childnode>
+        <childnode refid="1852" relation="include">
+        </childnode>
+        <childnode refid="1853" relation="include">
+        </childnode>
+      </node>
+      <node id="1862">
+        <label>sdm/utils/linear_algebra/sdms_vector.hpp</label>
+        <link refid="sdms__vector_8hpp"/>
+        <childnode refid="1847" relation="include">
+        </childnode>
+        <childnode refid="1848" relation="include">
+        </childnode>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1863" relation="include">
+        </childnode>
+        <childnode refid="1864" relation="include">
+        </childnode>
+      </node>
+      <node id="1806">
+        <label>boost/spirit/home/x3/support/ast/variant.hpp</label>
+      </node>
+      <node id="1868">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1833" relation="include">
+        </childnode>
+      </node>
+      <node id="1845">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="1861">
+        <label>sdm/core/state/state.hpp</label>
+        <link refid="state_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1862" relation="include">
+        </childnode>
+        <childnode refid="1865" relation="include">
+        </childnode>
+        <childnode refid="1867" relation="include">
+        </childnode>
+      </node>
+      <node id="1821">
+        <label>sdm/core/space/space.hpp</label>
+        <link refid="space_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+      </node>
+      <node id="1831">
+        <label>sstream</label>
+      </node>
+      <node id="1841">
+        <label>sdm/core/state_dynamics.hpp</label>
+        <link refid="state__dynamics_8hpp"/>
+        <childnode refid="1842" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1843" relation="include">
+        </childnode>
+      </node>
+      <node id="1827">
+        <label>sdm/core/joint.hpp</label>
+        <link refid="joint_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+        <childnode refid="1833" relation="include">
+        </childnode>
+      </node>
+      <node id="1874">
+        <label>sdm/utils/struct/tree.tpp</label>
+      </node>
+      <node id="1809">
+        <label>sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1815" relation="include">
+        </childnode>
+        <childnode refid="1860" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1869" relation="include">
+        </childnode>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1841" relation="include">
+        </childnode>
+        <childnode refid="1854" relation="include">
+        </childnode>
+        <childnode refid="1894" relation="include">
+        </childnode>
+      </node>
+      <node id="1893">
+        <label>sdm/core/state/serialized_occupancy_state.tpp</label>
+      </node>
+      <node id="1884">
+        <label>sdm/utils/logging/logger.hpp</label>
+        <link refid="logger_8hpp"/>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1885" relation="include">
+        </childnode>
+        <childnode refid="1886" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+      </node>
+      <node id="1854">
+        <label>sdm/core/reward.hpp</label>
+        <link refid="reward_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1853" relation="include">
+        </childnode>
+      </node>
+      <node id="1887">
+        <label>sdm/algorithms/hsvi.tpp</label>
+      </node>
+      <node id="1808">
+        <label>sdm/parser/parser.hpp</label>
+        <link refid="parser_8hpp"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1809" relation="include">
+        </childnode>
+        <childnode refid="1902" relation="include">
+        </childnode>
+      </node>
+      <node id="1846">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="1829">
+        <label>cstdlib</label>
+      </node>
+      <node id="1911">
+        <label>sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+        <childnode refid="1809" relation="include">
+        </childnode>
+        <childnode refid="1853" relation="include">
+        </childnode>
+        <childnode refid="1843" relation="include">
+        </childnode>
+      </node>
+      <node id="1812">
+        <label>iostream</label>
+      </node>
+      <node id="1844">
+        <label>boost/numeric/ublas/matrix_sparse.hpp</label>
+      </node>
+      <node id="1838">
+        <label>sdm/world/base/stochastic_process_base.hpp</label>
+        <link refid="stochastic__process__base_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1839" relation="include">
+        </childnode>
+      </node>
+      <node id="1811">
+        <label>cstddef</label>
+      </node>
+      <node id="1892">
+        <label>sdm/core/state/serialized_occupancy_state.hpp</label>
+        <link refid="serialized__occupancy__state_8hpp"/>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1868" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1867" relation="include">
+        </childnode>
+        <childnode refid="1893" relation="include">
+        </childnode>
+      </node>
+      <node id="1828">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1829" relation="include">
+        </childnode>
+        <childnode refid="1830" relation="include">
+        </childnode>
+        <childnode refid="1831" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+      </node>
+      <node id="1813">
+        <label>unordered_map</label>
+      </node>
+      <node id="1856">
+        <label>sdm/world/base/po_process_base.hpp</label>
+        <link refid="po__process__base_8hpp"/>
+        <childnode refid="1838" relation="include">
+        </childnode>
+        <childnode refid="1857" relation="include">
+        </childnode>
+      </node>
+      <node id="1818">
+        <label>sdm/world/gym_interface.hpp</label>
+        <link refid="gym__interface_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1817" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1819" relation="include">
+        </childnode>
+        <childnode refid="1821" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+        <childnode refid="1836" relation="include">
+        </childnode>
+      </node>
+      <node id="1851">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="1840">
+        <label>sdm/world/base/decision_process_base.tpp</label>
+      </node>
+      <node id="1863">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="1829" relation="include">
+        </childnode>
+        <childnode refid="1831" relation="include">
+        </childnode>
+      </node>
+      <node id="1899">
+        <label>sdm/world/belief_mdp.tpp</label>
+      </node>
+      <node id="1902">
+        <label>boost/spirit/home/x3.hpp</label>
+      </node>
+      <node id="1857">
+        <label>sdm/world/base/po_process_base.tpp</label>
+      </node>
+      <node id="1819">
+        <label>sdm/public/world.hpp</label>
+        <link refid="world_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1820" relation="include">
+        </childnode>
+      </node>
+      <node id="1855">
+        <label>sdm/world/decision_process.tpp</label>
+      </node>
+      <node id="1896">
+        <label>sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1879" relation="include">
+        </childnode>
+        <childnode refid="1816" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1841" relation="include">
+        </childnode>
+        <childnode refid="1854" relation="include">
+        </childnode>
+      </node>
+      <node id="1867">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1833" relation="include">
+        </childnode>
+        <childnode refid="1868" relation="include">
+        </childnode>
+      </node>
+      <node id="1870">
+        <label>sdm/core/state/history.hpp</label>
+        <link refid="history_8hpp"/>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1861" relation="include">
+        </childnode>
+        <childnode refid="1871" relation="include">
+        </childnode>
+        <childnode refid="1876" relation="include">
+        </childnode>
+      </node>
+      <node id="1800">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+        <childnode refid="1801" relation="include">
+        </childnode>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1903" relation="include">
+        </childnode>
+        <childnode refid="1910" relation="include">
+        </childnode>
+        <childnode refid="1911" relation="include">
+        </childnode>
+        <childnode refid="1912" relation="include">
+        </childnode>
+        <childnode refid="1913" relation="include">
+        </childnode>
+        <childnode refid="1902" relation="include">
+        </childnode>
+        <childnode refid="1909" relation="include">
+        </childnode>
+        <childnode refid="1906" relation="include">
+        </childnode>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1830" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+      </node>
+      <node id="1891">
+        <label>sdm/core/state/belief_state.tpp</label>
+      </node>
+      <node id="1805">
+        <label>boost/spirit/home/x3/support/ast/position_tagged.hpp</label>
+      </node>
+      <node id="1820">
+        <label>sdm/public/feedback.hpp</label>
+        <link refid="feedback_8hpp"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1817" relation="include">
+        </childnode>
+      </node>
+      <node id="1873">
+        <label>memory</label>
+      </node>
+      <node id="1849">
+        <label>eigen3/Eigen/Sparse</label>
+      </node>
+      <node id="1872">
+        <label>sdm/utils/struct/tree.hpp</label>
+        <link refid="tree_8hpp"/>
+        <childnode refid="1842" relation="include">
+        </childnode>
+        <childnode refid="1813" relation="include">
+        </childnode>
+        <childnode refid="1873" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+        <childnode refid="1874" relation="include">
+        </childnode>
+      </node>
+      <node id="1810">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="1811" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1813" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <innernamespace refid="namespacesdm_1_1parser">sdm::parser</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*=============================================================================</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>(C)<sp/>2016<sp/>Jilles<sp/>Steeve<sp/>Dibangoye</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">==============================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="exception_8hpp" kindref="compound">sdm/exception.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ast_8hpp" kindref="compound">sdm/parser/ast.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parser_8hpp" kindref="compound">sdm/parser/parser.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="config_8hpp" kindref="compound">sdm/parser/config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="printer_8hpp" kindref="compound">sdm/parser/printer.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="encoder_8hpp" kindref="compound">sdm/parser/encoder.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parser__def_8hpp" kindref="compound">sdm/parser/parser_def.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ast__adapted_8hpp" kindref="compound">sdm/parser/ast_adapted.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/fusion/include/io.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/config/warning_disable.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parser</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOST_SPIRIT_INSTANTIATE(<ref refid="namespacesdm_1_1parser_1aa065d8002ae79ff4dc84517ec63ce223" kindref="member">dpomdp_type</ref>,<sp/><ref refid="namespacesdm_1_1parser_1ac9a736298bb9de91173754242685484e" kindref="member">iterator_type</ref>,<sp/><ref refid="namespacesdm_1_1parser_1a3650affcab201f3ae269f1e205d7420b" kindref="member">context_type</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sdm::DiscreteDecPOMDP&gt;<sp/><ref refid="namespacesdm_1_1parser_1a8ff23a846a33d16a7ac775a45dc79575" kindref="member">parse_string</ref>(std::string<sp/>storage)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1parser_1a085dfea4342e980ab09b9908db315b65" kindref="member">sdm::parser::dpomdp_t</ref>;<sp/></highlight><highlight class="comment">//<sp/>Our<sp/>grammar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1dpomdp__t" kindref="compound">sdm::ast::dpomdp_t</ref><sp/>ast;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Our<sp/>tree</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Defines<sp/>spaces<sp/>and<sp/>comments</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>boost::spirit::x3::eol;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>boost::spirit::x3::lexeme;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>boost::spirit::x3::ascii::char_;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>boost::spirit::x3::ascii::space;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>space_comment<sp/>=<sp/>space<sp/>|<sp/>lexeme[</highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal"><sp/>&gt;&gt;<sp/>*(char_<sp/>-<sp/>eol)<sp/>&gt;&gt;<sp/>eol];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parse<sp/>phrase<sp/>(result<sp/>in<sp/>ast<sp/>struct)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string::iterator<sp/>iter<sp/>=<sp/>storage.begin();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string::iterator<sp/>end<sp/>=<sp/>storage.end();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>phrase_parse(iter,<sp/>end,<sp/><ref refid="namespacesdm_1_1parser_1a085dfea4342e980ab09b9908db315b65" kindref="member">dpomdp_t</ref>,<sp/>space_comment,<sp/>ast);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>context(iter,<sp/>end);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(r<sp/>&amp;&amp;<sp/>iter<sp/>==<sp/>end)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>ast<sp/>to<sp/>DPOMDP<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1dpomdp__encoder" kindref="compound">sdm::ast::dpomdp_encoder</ref><sp/>encoder;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>encoder(ast);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string::iterator<sp/>some<sp/>=<sp/>iter<sp/>+<sp/>30;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>context(iter,<sp/>(some<sp/>&gt;<sp/>end)<sp/>?<sp/>end<sp/>:<sp/>some);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1exception_1_1ParsingException" kindref="compound">sdm::exception::ParsingException</ref>(context);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sdm::DiscreteDecPOMDP&gt;<sp/><ref refid="namespacesdm_1_1parser_1aa635cf8a41011ff5170266f2f6941838" kindref="member">parse_file</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*filename)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ifstream<sp/>in(filename,<sp/>std::ios_base::in);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!in)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1exception_1_1FileNotFoundException" kindref="compound">sdm::exception::FileNotFoundException</ref>(std::string(filename));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>storage;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>will<sp/>read<sp/>the<sp/>contents<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>in.unsetf(std::ios::skipws);<sp/></highlight><highlight class="comment">//<sp/>No<sp/>white<sp/>space<sp/>skipping!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::copy(</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::istream_iterator&lt;char&gt;(in),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::istream_iterator&lt;char&gt;(),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::back_inserter(storage));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sdm::DiscreteDecPOMDP&gt;<sp/>parsed_model<sp/>=<sp/><ref refid="namespacesdm_1_1parser_1a8ff23a846a33d16a7ac775a45dc79575" kindref="member">sdm::parser::parse_string</ref>(storage);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parsed_model-&gt;setFileName(filename);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>parsed_model;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sdm::DiscreteDecPOMDP&gt;<sp/><ref refid="namespacesdm_1_1parser_1aa635cf8a41011ff5170266f2f6941838" kindref="member">parse_file</ref>(std::string<sp/>filename)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1parser_1aa635cf8a41011ff5170266f2f6941838" kindref="member">parse_file</ref>(filename.c_str());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>parser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>parser::dpomdp_type<sp/>const&amp;<sp/>dpomdp(){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>return<sp/>sdm::parser::dpomdp_t;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp"/>
+  </compounddef>
+</doxygen>

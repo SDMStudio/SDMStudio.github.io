@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacesdms" kind="namespace" language="C++">
+    <compoundname>sdms</compoundname>
+    <briefdescription>
+<para>Namespace grouping all tools required for sequential decision making. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="19" column="1"/>
+  </compounddef>
+</doxygen>

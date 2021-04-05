@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structDQNImpl" kind="struct" language="C++" prot="public">
+    <compoundname>DQNImpl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Module</basecompoundref>
+    <includes refid="mlpnet_8hpp" local="no">mlpnet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structDQNImpl_1a698b8e5a9d8df31d9eb99c86633a07b4" prot="public" static="no" mutable="no">
+        <type>torch::nn::Linear</type>
+        <definition>torch::nn::Linear DQNImpl::fc1</definition>
+        <argsstring></argsstring>
+        <name>fc1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" line="20" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDQNImpl_1aef3b711ecd645ceef432285126091b23" prot="public" static="no" mutable="no">
+        <type>torch::nn::Linear</type>
+        <definition>torch::nn::Linear DQNImpl::fc2</definition>
+        <argsstring></argsstring>
+        <name>fc2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" line="20" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structDQNImpl_1a1cb93515599b19591c84b254961e657a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DQNImpl::DQNImpl</definition>
+        <argsstring>(sdm::number num_states, sdm::number num_actions)</argsstring>
+        <name>DQNImpl</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">sdm::number</ref></type>
+          <declname>num_states</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">sdm::number</ref></type>
+          <declname>num_actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" line="8" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" bodystart="8" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structDQNImpl_1aef0fc300cb224eab09ce0445e7fd7ee2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>torch::Tensor</type>
+        <definition>torch::Tensor DQNImpl::forward</definition>
+        <argsstring>(torch::Tensor x)</argsstring>
+        <name>forward</name>
+        <param>
+          <type>torch::Tensor</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" line="15" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="180">
+        <label>torch::nn::Module</label>
+      </node>
+      <node id="179">
+        <label>DQNImpl</label>
+        <link refid="structDQNImpl"/>
+        <childnode refid="180" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="182">
+        <label>torch::nn::Module</label>
+      </node>
+      <node id="181">
+        <label>DQNImpl</label>
+        <link refid="structDQNImpl"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" line="7" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/mlpnet.hpp" bodystart="6" bodyend="21"/>
+    <listofallmembers>
+      <member refid="structDQNImpl_1a1cb93515599b19591c84b254961e657a" prot="public" virt="non-virtual"><scope>DQNImpl</scope><name>DQNImpl</name></member>
+      <member refid="structDQNImpl_1a698b8e5a9d8df31d9eb99c86633a07b4" prot="public" virt="non-virtual"><scope>DQNImpl</scope><name>fc1</name></member>
+      <member refid="structDQNImpl_1aef3b711ecd645ceef432285126091b23" prot="public" virt="non-virtual"><scope>DQNImpl</scope><name>fc2</name></member>
+      <member refid="structDQNImpl_1aef0fc300cb224eab09ce0445e7fd7ee2" prot="public" virt="non-virtual"><scope>DQNImpl</scope><name>forward</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

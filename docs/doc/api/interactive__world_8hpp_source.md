@@ -7,9 +7,7 @@
 
 
 ````cpp
-/*=============================================================================
-  Copyright (c) 2020 David Albert
-==============================================================================*/
+
 #pragma once
 
 #include <vector>
@@ -19,11 +17,10 @@
 #include <sdm/world/gym_interface.hpp>
 #include <sdm/public/world.hpp>
 
-
 namespace sdm
 {
     template <typename TDecProcess = POSG>
-    class InteractiveWorld : public GymInterface<typename TDecProcess::observation_space_type, typename TDecProcess::action_space_type>
+    class InteractiveWorld : public GymInterface<typename TDecProcess::observation_space_type, typename TDecProcess::action_space_type, typename TDecProcess::reward_function_type>
     {
     protected:
         number ctimestep_ = 0;
@@ -32,11 +29,14 @@ namespace sdm
     public:
         using observation_space_type = typename TDecProcess::observation_space_type;
         using observation_type = typename observation_space_type::value_type;
-        
+
         using action_space_type = typename TDecProcess::action_space_type;
         using action_type = typename action_space_type::value_type;
 
-        InteractiveWorld(std::shared_ptr<TDecProcess>);
+        using reward_function_type = typename TDecProcess::reward_type;
+        using reward_type = typename reward_type::value_type;
+
+        InteractiveWorld(TDecProcess *real_world);
 
         InteractiveWorld(const TDecProcess &);
 
@@ -44,8 +44,9 @@ namespace sdm
 
         observation_type reset();
 
-        std::tuple<observation_type, std::vector<double>, bool> step(action_type ja); // std::tuple<std::vector<number>, std::vector<double>, bool, map>
+        std::tuple<observation_type, reward_type, bool> step(action_type ja); 
     };
 } // namespace sdm
+#include <sdm/world/interactive_world.tpp>
 ````
 

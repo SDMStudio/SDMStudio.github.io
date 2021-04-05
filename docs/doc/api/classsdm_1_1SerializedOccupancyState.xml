@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1SerializedOccupancyState" kind="class" language="C++" prot="public">
+    <compoundname>sdm::SerializedOccupancyState</compoundname>
+    <basecompoundref refid="classsdm_1_1OccupancyState" prot="public" virt="non-virtual">sdm::OccupancyState&lt; TState, TJointHistory_p &gt;</basecompoundref>
+    <includes refid="serialized__occupancy__state_8hpp" local="no">serialized_occupancy_state.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+        <defval><ref refid="classsdm_1_1SerializedState" kindref="compound">SerializedState</ref></defval>
+      </param>
+      <param>
+        <type>typename TJointHistory_p</type>
+        <defval><ref refid="namespacesdm_1aa5e124f3febe0e2c52f3c1c3ed35cc17" kindref="member">JointHistoryTree_p</ref>&lt;<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1SerializedOccupancyState_1af4dee22d4f10585e76acdf9ac819f189" prot="public" static="no">
+        <type>typename <ref refid="classsdm_1_1OccupancyState" kindref="compound">OccupancyState</ref>&lt; TState, TJointHistory_p &gt;::<ref refid="classsdm_1_1OccupancyState_1ad4775d97c3ead3b8b02a069a7d453fa5" kindref="member">jhistory_type</ref></type>
+        <definition>using sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::jhistory_type =  typename OccupancyState&lt;TState, TJointHistory_p&gt;::jhistory_type</definition>
+        <argsstring></argsstring>
+        <name>jhistory_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="24" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1SerializedOccupancyState_1a86e5101cea1daefa5b6338814c1a371f" prot="public" static="no">
+        <type>typename <ref refid="classsdm_1_1OccupancyState" kindref="compound">OccupancyState</ref>&lt; TState, TJointHistory_p &gt;::<ref refid="classsdm_1_1OccupancyState_1ad464428f8c617597dafd4b7b2fdd2166" kindref="member">state_type</ref></type>
+        <definition>using sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::state_type =  typename OccupancyState&lt;TState, TJointHistory_p&gt;::state_type</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a7334f5dacccceda3bc86a0400ae64631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::SerializedOccupancyState</definition>
+        <argsstring>()</argsstring>
+        <name>SerializedOccupancyState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a76b07e3f6522482df368a0c4b42444d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::SerializedOccupancyState</definition>
+        <argsstring>(double default_value)</argsstring>
+        <name>SerializedOccupancyState</name>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a503fb6ebee2da6ff9d7d05fc0571c4f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::SerializedOccupancyState</definition>
+        <argsstring>(std::size_t size, double default_value)</argsstring>
+        <name>SerializedOccupancyState</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a7495f5ba09cc9764287ce7abaab7b63f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::SerializedOccupancyState</definition>
+        <argsstring>(const SerializedOccupancyState &amp;v)</argsstring>
+        <name>SerializedOccupancyState</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1SerializedOccupancyState" kindref="compound">SerializedOccupancyState</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a874f0b2f115a6e3092c5d78714c0e2ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::getCurrentAgentId</definition>
+        <argsstring>() const</argsstring>
+        <name>getCurrentAgentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a1ff7cff6091eb6716385d16e5aaf5b0a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; typename state_type::state_type &gt;</type>
+        <definition>std::set&lt;typename state_type::state_type&gt; sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::getHiddenStates</definition>
+        <argsstring>() const</argsstring>
+        <name>getHiddenStates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1a56d101d3cc33677757b020b0a4cb2021" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; typename state_type::action_type &gt;</type>
+        <definition>std::set&lt;typename state_type::action_type&gt; sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::getActions</definition>
+        <argsstring>() const</argsstring>
+        <name>getActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1ac4dbec1c502b69290020a87360471d14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>state_type::state_type</type>
+        <definition>state_type::state_type sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::getHiddenState</definition>
+        <argsstring>(const Pair&lt; state_type, jhistory_type &gt; &amp;state) const</argsstring>
+        <name>getHiddenState</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" kindref="member">Pair</ref>&lt; <ref refid="classsdm_1_1OccupancyState_1ad464428f8c617597dafd4b7b2fdd2166" kindref="member">state_type</ref>, <ref refid="classsdm_1_1OccupancyState_1ad4775d97c3ead3b8b02a069a7d453fa5" kindref="member">jhistory_type</ref> &gt; &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedOccupancyState_1ae122e654aee5de29dd8e2e4234eab10f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; typename state_type::action_type &gt;</type>
+        <definition>std::vector&lt;typename state_type::action_type&gt; sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;::getAction</definition>
+        <argsstring>(const Pair&lt; state_type, jhistory_type &gt; &amp;state) const</argsstring>
+        <name>getAction</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" kindref="member">Pair</ref>&lt; <ref refid="classsdm_1_1OccupancyState_1ad464428f8c617597dafd4b7b2fdd2166" kindref="member">state_type</ref>, <ref refid="classsdm_1_1OccupancyState_1ad4775d97c3ead3b8b02a069a7d453fa5" kindref="member">jhistory_type</ref> &gt; &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A serialized occupancy state refers to an occupancy state (i.e refers to the whole knowledge that a central planner can have access to take decisions) with a precise state for each agent. But in this implementation we call serialized occupancy state a distribution over serialized state and joint histories . </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TJointHistory_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="610">
+        <label>sdm::VectorImpl&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="608">
+        <label>sdm::MappedVector&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="609" relation="public-inheritance">
+        </childnode>
+        <childnode refid="610" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="609">
+        <label>std::unordered_map&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+      </node>
+      <node id="607">
+        <label>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1OccupancyState"/>
+        <childnode refid="608" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="606">
+        <label>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1SerializedOccupancyState"/>
+        <childnode refid="607" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="615">
+        <label>sdm::VectorImpl&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="613">
+        <label>sdm::MappedVector&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="614" relation="public-inheritance">
+        </childnode>
+        <childnode refid="615" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="614">
+        <label>std::unordered_map&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+      </node>
+      <node id="612">
+        <label>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1OccupancyState"/>
+        <childnode refid="613" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="611">
+        <label>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1SerializedOccupancyState"/>
+        <childnode refid="612" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" line="22" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_occupancy_state.hpp" bodystart="21" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1MappedVector_1abd49e9817196371ee5fdb1b6078e07e5" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>argmax</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac50a5999b36c9e79e5e40f77371386d3" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>argmin</name></member>
+      <member refid="classsdm_1_1MappedVector_1aeede042319cd5b014764a3bbbc09208f" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>at</name></member>
+      <member refid="classsdm_1_1MappedVector_1abf4654c82755bb1ac5f4f467493a386a" prot="protected" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>default_value_</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad5dc5bcab2d58a6b8e198da61cc1b995" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>dot</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1ae122e654aee5de29dd8e2e4234eab10f" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getAction</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a56d101d3cc33677757b020b0a4cb2021" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getActions</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ab6830499b2a955eccd0f2dde2ba3e956" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getAllIndividualHistories</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a874f0b2f115a6e3092c5d78714c0e2ee" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getCurrentAgentId</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab072a74c6d2977c78ad8d8036a3714ce" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getDefault</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1ac4dbec1c502b69290020a87360471d14" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getHiddenState</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a1ff7cff6091eb6716385d16e5aaf5b0a" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getHiddenStates</name></member>
+      <member refid="classsdm_1_1OccupancyState_1aa5ebec0388c6a6caacad076ba7f71255" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getHistory</name></member>
+      <member refid="classsdm_1_1MappedVector_1a7da358973f207deaf0ce4086e4986c4c" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getIndexes</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ad6cf516a31924aec632d6b38cae97c1f" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getIndividualHistories</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ae116add500b36b10fd833784d48dc6f4" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getJointHistories</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac2a3d3f154eabb04e8800f503659700e" prot="protected" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getMax</name></member>
+      <member refid="classsdm_1_1MappedVector_1af1eb71be40525bd7824b1fdf3e0efb9f" prot="protected" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getMin</name></member>
+      <member refid="classsdm_1_1OccupancyState_1af465a6d90c6d9171b6610019a3b20eed" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getProbability</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ac69d5305f3e3272c09610fdb8ec3df2f" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a2a0c58eb2a34eb1a57cbbddc4a377a2c" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>getStates</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1af4dee22d4f10585e76acdf9ac819f189" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>jhistory_type</name></member>
+      <member refid="classsdm_1_1MappedVector_1a72b3cae7f43436d899c9da8a8bfa240e" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae0a56f79ba91a9f440ec791b4a14da29" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ace7faa27b1ab644fb1480a45721329af" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1a0f29af90b5165693a18cabee3a5819f1" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1aff4f819256fdd7b9c191b57812fca3a8" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>max</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab932c60ef6b0c3cb7680229333be0c2e" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>min</name></member>
+      <member refid="classsdm_1_1MappedVector_1a667ed798b386ca4aadaf5c5998a34cf3" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>norm_1</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad9d78194308798445099a2fecc330293" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>norm_2</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ad9a37f911686e927bfc150e814f63d11" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a5084abf584d221d305a4e432d2010614" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a5600893df42377191a73bd196ec3c468" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a19ef810f39448053bce754166317869f" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1MappedVector_1a52e4edbdbd67b5522d2a56f531db563d" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>operator&lt;</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae64dd3cfae50798e49aa6903d73e82d4" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>operator^</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a7334f5dacccceda3bc86a0400ae64631" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>SerializedOccupancyState</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a76b07e3f6522482df368a0c4b42444d1" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>SerializedOccupancyState</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a503fb6ebee2da6ff9d7d05fc0571c4f7" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>SerializedOccupancyState</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a7495f5ba09cc9764287ce7abaab7b63f" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>SerializedOccupancyState</name></member>
+      <member refid="classsdm_1_1MappedVector_1aa21da534045aee8330037819acc0f81b" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>size</name></member>
+      <member refid="classsdm_1_1MappedVector_1a192fe86ee506a233d165d30a8a920f7e" prot="protected" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>size_</name></member>
+      <member refid="classsdm_1_1SerializedOccupancyState_1a86e5101cea1daefa5b6338814c1a371f" prot="public" virt="non-virtual"><scope>sdm::SerializedOccupancyState</scope><name>state_type</name></member>
+      <member refid="classsdm_1_1MappedVector_1af35decf9e63f3bedc5e7851dec30d6ff" prot="public" virt="virtual"><scope>sdm::SerializedOccupancyState</scope><name>str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

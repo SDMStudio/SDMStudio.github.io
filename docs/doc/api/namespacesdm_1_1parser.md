@@ -8,7 +8,7 @@
 
 
 
-
+_Namespace grouping all functions for parsing files._ 
 
 
 
@@ -75,8 +75,6 @@
 |  auto const | [**observation\_entry\_t\_def**](namespacesdm_1_1parser.md#variable-observation-entry-t-def)   = = [**observation\_entry\_1\_t**](namespacesdm_1_1parser.md#variable-observation-entry-1-t) | [**observation\_entry\_2\_t**](namespacesdm_1_1parser.md#variable-observation-entry-2-t) | [**observation\_entry\_3\_t**](namespacesdm_1_1parser.md#variable-observation-entry-3-t)<br> |
 |  x3::rule&lt; observation\_t\_class, [**ast::observation\_t**](namespacesdm_1_1ast.md#typedef-observation-t) &gt; const | [**observation\_t**](namespacesdm_1_1parser.md#variable-observation-t)   = = "observation\_t"<br> |
 |  auto const | [**observation\_t\_def**](namespacesdm_1_1parser.md#variable-observation-t-def)   = = +[**observation\_entry\_t**](namespacesdm_1_1parser.md#variable-observation-entry-t)<br> |
-|  [**sdm::DecPOMDP**](classsdm_1_1DecPOMDP.md) | [**parse\_file**](namespacesdm_1_1parser.md#variable-parse-file)  <br> |
-|  [**sdm::DecPOMDP**](classsdm_1_1DecPOMDP.md) | [**parse\_string**](namespacesdm_1_1parser.md#variable-parse-string)  <br> |
 |  auto const | [**quoted\_string**](namespacesdm_1_1parser.md#variable-quoted-string)   = = lexeme['"' &gt;&gt; \*(char\_ - '"') &gt;&gt; '"']<br> |
 |  x3::rule&lt; reward\_entry\_1\_t\_class, [**ast::reward\_entry\_1\_t**](structsdm_1_1ast_1_1reward__entry__1__t.md) &gt; const | [**reward\_entry\_1\_t**](namespacesdm_1_1parser.md#variable-reward-entry-1-t)   = = "reward\_entry\_1\_t"<br> |
 |  auto const | [**reward\_entry\_1\_t\_def**](namespacesdm_1_1parser.md#variable-reward-entry-1-t-def)   = =
@@ -114,7 +112,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**sdm::DecPOMDP**](classsdm_1_1DecPOMDP.md) | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (char const \*) <br> |
+|  std::shared\_ptr&lt; [**sdm::DiscreteDecPOMDP**](classsdm_1_1DiscreteDecPOMDP.md) &gt; | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (char const \* filename) <br> |
+|  std::shared\_ptr&lt; [**sdm::DiscreteDecPOMDP**](classsdm_1_1DiscreteDecPOMDP.md) &gt; | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (std::string filename) <br> |
+|  std::shared\_ptr&lt; [**sdm::DiscreteDecPOMDP**](classsdm_1_1DiscreteDecPOMDP.md) &gt; | [**parse\_string**](namespacesdm_1_1parser.md#function-parse-string) (std::string storage) <br> |
 
 
 
@@ -371,24 +371,6 @@ auto const sdm::parser::observation_t_def;
 
 
 
-### variable parse\_file 
-
-
-```cpp
-sdm::DecPOMDP sdm::parser::parse_file(std::string);
-```
-
-
-
-### variable parse\_string 
-
-
-```cpp
-sdm::DecPOMDP sdm::parser::parse_string(std::string);
-```
-
-
-
 ### variable quoted\_string 
 
 
@@ -629,12 +611,34 @@ auto const sdm::parser::vector_stochastic;
 
 
 ```cpp
-sdm::DecPOMDP sdm::parser::parse_file (
-    char const *
+std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_file (
+    char const * filename
+) 
+```
+
+
+
+### function parse\_file 
+
+
+```cpp
+std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_file (
+    std::string filename
+) 
+```
+
+
+
+### function parse\_string 
+
+
+```cpp
+std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_string (
+    std::string storage
 ) 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/config.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp`

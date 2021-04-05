@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1RecursiveMap" kind="class" language="C++" prot="public">
+    <compoundname>sdm::RecursiveMap</compoundname>
+    <includes refid="recursive__map_8hpp" local="no">recursive_map.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T0</type>
+      </param>
+      <param>
+        <type>class T1</type>
+      </param>
+      <param>
+        <type>class...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>The recursive map class (i.e. map&lt;T0, map&lt;T1, ..... , map&lt;TN-1, TN&gt;) </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the first map item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the second map item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the other map items </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="36" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

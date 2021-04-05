@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="belief__state_8hpp" kind="file" language="C++">
+    <compoundname>belief_state.hpp</compoundname>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes refid="mapped__vector_8hpp" local="no">sdm/utils/linear_algebra/mapped_vector.hpp</includes>
+    <includes local="no">sdm/core/state/belief_state.tpp</includes>
+    <includedby refid="serialized__belief__state_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp</includedby>
+    <includedby refid="states_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/states.hpp</includedby>
+    <incdepgraph>
+      <node id="768">
+        <label>assert.h</label>
+      </node>
+      <node id="758">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="764" relation="include">
+        </childnode>
+        <childnode refid="773" relation="include">
+        </childnode>
+      </node>
+      <node id="763">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="765">
+        <label>cmath</label>
+      </node>
+      <node id="766">
+        <label>string</label>
+      </node>
+      <node id="764">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="765" relation="include">
+        </childnode>
+        <childnode refid="766" relation="include">
+        </childnode>
+        <childnode refid="767" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+        <childnode refid="768" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="769" relation="include">
+        </childnode>
+        <childnode refid="772" relation="include">
+        </childnode>
+      </node>
+      <node id="772">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="767">
+        <label>vector</label>
+      </node>
+      <node id="771">
+        <label>sstream</label>
+      </node>
+      <node id="770">
+        <label>cstdlib</label>
+      </node>
+      <node id="761">
+        <label>iostream</label>
+      </node>
+      <node id="760">
+        <label>cstddef</label>
+      </node>
+      <node id="762">
+        <label>unordered_map</label>
+      </node>
+      <node id="769">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="770" relation="include">
+        </childnode>
+        <childnode refid="771" relation="include">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>sdm/core/state/belief_state.tpp</label>
+      </node>
+      <node id="759">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="763" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="786">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/world_type.hpp</label>
+        <link refid="world__type_8hpp"/>
+        <childnode refid="781" relation="include">
+        </childnode>
+        <childnode refid="782" relation="include">
+        </childnode>
+      </node>
+      <node id="804">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="778">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/states.hpp</label>
+        <link refid="states_8hpp"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="780" relation="include">
+        </childnode>
+      </node>
+      <node id="800">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.cpp</label>
+        <link refid="ndpomdp_8cpp"/>
+      </node>
+      <node id="795">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.cpp</label>
+        <link refid="discrete__mdp_8cpp"/>
+      </node>
+      <node id="774">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="775" relation="include">
+        </childnode>
+        <childnode refid="778" relation="include">
+        </childnode>
+      </node>
+      <node id="775">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp</label>
+        <link refid="serialized__belief__state_8hpp"/>
+        <childnode refid="776" relation="include">
+        </childnode>
+        <childnode refid="777" relation="include">
+        </childnode>
+      </node>
+      <node id="803">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp</label>
+        <link refid="serialized__occupancy__mdp_8hpp"/>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="792">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="789" relation="include">
+        </childnode>
+      </node>
+      <node id="785">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp</label>
+        <link refid="value__functions_8hpp"/>
+      </node>
+      <node id="799">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp</label>
+        <link refid="ndpomdp_8hpp"/>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="802">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="787" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp</label>
+        <link refid="serialized__belief__state_8cpp"/>
+      </node>
+      <node id="782">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/solvable_by_hsvi.hpp</label>
+        <link refid="solvable__by__hsvi_8hpp"/>
+        <childnode refid="783" relation="include">
+        </childnode>
+        <childnode refid="784" relation="include">
+        </childnode>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="805">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="806">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_mdp.hpp</label>
+        <link refid="serialized__mdp_8hpp"/>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="793">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp</label>
+        <link refid="parser__def_8hpp"/>
+        <childnode refid="789" relation="include">
+        </childnode>
+      </node>
+      <node id="781">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp</label>
+        <link refid="belief__2__occupancy__vf_8hpp"/>
+      </node>
+      <node id="784">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp</label>
+        <link refid="tabular__value__function_8hpp"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="785" relation="include">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="788" relation="include">
+        </childnode>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="790">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.hpp</label>
+        <link refid="parser_8hpp"/>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="789" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+      </node>
+      <node id="788">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="789" relation="include">
+        </childnode>
+      </node>
+      <node id="797">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.cpp</label>
+        <link refid="discrete__pomdp_8cpp"/>
+      </node>
+      <node id="779">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="796">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.cpp</label>
+        <link refid="discrete__mmdp_8cpp"/>
+      </node>
+      <node id="777">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_belief_mdp.hpp</label>
+        <link refid="serialized__belief__mdp_8hpp"/>
+      </node>
+      <node id="801">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="786" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="794">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.cpp</label>
+        <link refid="discrete__decpomdp_8cpp"/>
+      </node>
+      <node id="789">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+      </node>
+      <node id="798">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp</label>
+        <link refid="worlds_8hpp"/>
+        <childnode refid="779" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp</label>
+        <link refid="max__plan__vf_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1BaseBeliefState" prot="public">sdm::BaseBeliefState</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4" prot="public">std::hash&lt; sdm::BaseBeliefState&lt; TState &gt; &gt;</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="mapped__vector_8hpp" kindref="compound">sdm/utils/linear_algebra/mapped_vector.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TState&gt;</highlight></codeline>
+<codeline lineno="19" refid="classsdm_1_1BaseBeliefState" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1BaseBeliefState" kindref="compound">BaseBeliefState</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref>&lt;TState,<sp/>double&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classsdm_1_1BaseBeliefState_1a70314d939c0648dae2f975412facbd6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1BaseBeliefState_1a70314d939c0648dae2f975412facbd6f" kindref="member">state_type</ref><sp/>=<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" kindref="member">BaseBeliefState</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" kindref="member">BaseBeliefState</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>default_value);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" kindref="member">BaseBeliefState</ref>(<ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">std::size_t</ref><sp/><ref refid="classsdm_1_1MappedVector_1aa21da534045aee8330037819acc0f81b" kindref="member">size</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>default_value);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" kindref="member">BaseBeliefState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1BaseBeliefState" kindref="compound">BaseBeliefState</ref><sp/>&amp;v);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>TState<sp/><ref refid="classsdm_1_1BaseBeliefState_1a5c6fd99a2a1bb0dd0173b68cf54124c7" kindref="member">getState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TState<sp/>&amp;<ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespacesdm_1a0f879b55491e973a5c14fb31452c9a3f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1BaseBeliefState" kindref="compound">BeliefState</ref><sp/>=<sp/><ref refid="classsdm_1_1BaseBeliefState" kindref="compound">BaseBeliefState&lt;number&gt;</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sdm/core/state/belief_state.tpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TState&gt;</highlight></codeline>
+<codeline lineno="40" refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">hash&lt;<ref refid="namespacesdm" kindref="compound">sdm</ref>::<ref refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" kindref="member">BaseBeliefState</ref>&lt;TState&gt;&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4_1a69d78b0aac281a805ac4c592407c1c0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1BaseBeliefState" kindref="compound">sdm::BaseBeliefState&lt;TState&gt;</ref><sp/><ref refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4_1a69d78b0aac281a805ac4c592407c1c0c" kindref="member">argument_type</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4_1a61e2a0fe31b31d9f88f2bf1505e9bf85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">std::size_t</ref><sp/><ref refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4_1a61e2a0fe31b31d9f88f2bf1505e9bf85" kindref="member">result_type</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4_1adafc02e7a56115eed540b9c3b1ec56ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>result_type<sp/><ref refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4_1adafc02e7a56115eed540b9c3b1ec56ab" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>argument_type<sp/>&amp;in)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="45"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>seed<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;v<sp/>:<sp/>in)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Combine<sp/>the<sp/>hash<sp/>of<sp/>the<sp/>current<sp/>vector<sp/>with<sp/>the<sp/>hashes<sp/>of<sp/>the<sp/>previous<sp/>ones</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a5c1ee4aa6d86fbb14f22fd593fadd5ca" kindref="member">sdm::hash_combine</ref>(seed,<sp/>v);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>seed;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/belief_state.hpp"/>
+  </compounddef>
+</doxygen>

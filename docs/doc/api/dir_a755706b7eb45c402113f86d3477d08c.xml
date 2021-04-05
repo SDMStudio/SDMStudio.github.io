@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_a755706b7eb45c402113f86d3477d08c" kind="dir">
+    <compoundname>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging</compoundname>
+    <innerfile refid="logger_8hpp">logger.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/"/>
+  </compounddef>
+</doxygen>

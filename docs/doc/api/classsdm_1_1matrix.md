@@ -40,11 +40,11 @@
 |  [**size\_t**](namespacesdm.md#typedef-size-t) | [**cols**](classsdm_1_1matrix.md#function-cols) () <br>_Returns the size\_t of cols._  |
 |  void | [**compress**](classsdm_1_1matrix.md#function-compress) () <br>_Compress the matrix if possible._  |
 |   | [**matrix**](classsdm_1_1matrix.md#function-matrix-1-2) () <br>_This constructor allocates an uninitialized matrix that holds zero elements._  |
-|   | [**matrix**](classsdm_1_1matrix.md#function-matrix-2-2) ([**size\_t**](namespacesdm.md#typedef-size-t), [**size\_t**](namespacesdm.md#typedef-size-t)) <br>_This constructor Allocates an uninitialized matrix that holds @param1 rows of @param2 elements._  |
-|  value & | [**operator()**](classsdm_1_1matrix.md#function-operator()-1-2) ([**size\_t**](namespacesdm.md#typedef-size-t), [**size\_t**](namespacesdm.md#typedef-size-t)) <br>_Returns a reference of the @param1-th element in the @param2-th row._  |
-|  value | [**operator()**](classsdm_1_1matrix.md#function-operator()-2-2) ([**size\_t**](namespacesdm.md#typedef-size-t), [**size\_t**](namespacesdm.md#typedef-size-t)) const<br>_Returns a value of the @param1-th element in the @param2-th row._  |
-|  void | [**resize**](classsdm_1_1matrix.md#function-resize) ([**size\_t**](namespacesdm.md#typedef-size-t), [**size\_t**](namespacesdm.md#typedef-size-t)) <br>_Reallocates a matrix to hold @param1 rows of @param2 elements. The existing elements of the matrix are preseved when specified._  |
-|  [**vector**](classsdm_1_1vector.md)&lt; vtype, value &gt; | [**row**](classsdm_1_1matrix.md#function-row) ([**size\_t**](namespacesdm.md#typedef-size-t)) <br> |
+|   | [**matrix**](classsdm_1_1matrix.md#function-matrix-2-2) ([**size\_t**](namespacesdm.md#typedef-size-t) rows, [**size\_t**](namespacesdm.md#typedef-size-t) cols) <br>_This constructor Allocates an uninitialized matrix that holds @param1 rows of @param2 elements._  |
+|  value & | [**operator()**](classsdm_1_1matrix.md#function-operator()-1-2) ([**size\_t**](namespacesdm.md#typedef-size-t) row, [**size\_t**](namespacesdm.md#typedef-size-t) col) <br>_Returns a reference of the @param1-th element in the @param2-th row._  |
+|  value | [**operator()**](classsdm_1_1matrix.md#function-operator()-2-2) ([**size\_t**](namespacesdm.md#typedef-size-t) row, [**size\_t**](namespacesdm.md#typedef-size-t) col) const<br>_Returns a value of the @param1-th element in the @param2-th row._  |
+|  void | [**resize**](classsdm_1_1matrix.md#function-resize) ([**size\_t**](namespacesdm.md#typedef-size-t) rows, [**size\_t**](namespacesdm.md#typedef-size-t) cols) <br>_Reallocates a matrix to hold @param1 rows of @param2 elements. The existing elements of the matrix are preseved when specified._  |
+|  [**vector**](classsdm_1_1vector.md)&lt; vtype, value &gt; | [**row**](classsdm_1_1matrix.md#function-row) ([**size\_t**](namespacesdm.md#typedef-size-t) i) <br> |
 |  [**size\_t**](namespacesdm.md#typedef-size-t) | [**rows**](classsdm_1_1matrix.md#function-rows) () <br>_Returns the size\_t of rows._  |
 |  [**matrix**](classsdm_1_1matrix.md) | [**transpose**](classsdm_1_1matrix.md#function-transpose) () const<br> |
 |   | [**~matrix**](classsdm_1_1matrix.md#function-matrix) () <br>_This destructor destroies the matrix._  |
@@ -81,6 +81,8 @@ size_t sdm::matrix::cols ()
 ```
 
 
+Get Matrix size\_t of columns
+
 
 
 **Returns:**
@@ -115,8 +117,8 @@ sdm::matrix::matrix ()
 
 ```cpp
 sdm::matrix::matrix (
-    size_t,
-    size_t
+    size_t rows,
+    size_t cols
 ) 
 ```
 
@@ -138,11 +140,13 @@ sdm::matrix::matrix (
 
 ```cpp
 value & sdm::matrix::operator() (
-    size_t,
-    size_t
+    size_t row,
+    size_t col
 ) 
 ```
 
+
+Specialization of operator '()'
 
 
 
@@ -168,8 +172,8 @@ value&
 
 ```cpp
 value sdm::matrix::operator() (
-    size_t,
-    size_t
+    size_t row,
+    size_t col
 ) const
 ```
 
@@ -198,8 +202,8 @@ value
 
 ```cpp
 void sdm::matrix::resize (
-    size_t,
-    size_t
+    size_t rows,
+    size_t cols
 ) 
 ```
 
@@ -221,7 +225,7 @@ void sdm::matrix::resize (
 
 ```cpp
 vector < vtype, value > sdm::matrix::row (
-    size_t
+    size_t i
 ) 
 ```
 
@@ -236,6 +240,8 @@ size_t sdm::matrix::rows ()
 
 
 Returns the row at a specified index.
+
+Get Matrix size\_t of rows
 
 
 
@@ -318,4 +324,4 @@ inline friend std::ostream & sdm::matrix::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/linear_algebra/matrix.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.hpp`

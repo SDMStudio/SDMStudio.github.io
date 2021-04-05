@@ -1,0 +1,821 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacesdm_1_1parser" kind="namespace" language="C++">
+    <compoundname>sdm::parser</compoundname>
+    <innerclass refid="structsdm_1_1parser_1_1error__handler__base" prot="public">sdm::parser::error_handler_base</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1ac9a736298bb9de91173754242685484e" prot="public" static="no">
+        <type>std::string::const_iterator</type>
+        <definition>typedef std::string::const_iterator sdm::parser::iterator_type</definition>
+        <argsstring></argsstring>
+        <name>iterator_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" line="13" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1a11dba6a0b5f629a3248d0f99231579f4" prot="public" static="no">
+        <type>x3::phrase_parse_context&lt; x3::ascii::space_type &gt;::type</type>
+        <definition>typedef x3::phrase_parse_context&lt;x3::ascii::space_type&gt;::type sdm::parser::phrase_context_type</definition>
+        <argsstring></argsstring>
+        <name>phrase_context_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" line="16" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1a20ac92a14fff931b3a96291d7bcf47fe" prot="public" static="no">
+        <type><ref refid="namespacesdm_1_1parser_1afb94a1c706b7ff723af329191719743c" kindref="member">error_handler</ref>&lt; <ref refid="namespacesdm_1_1parser_1ac9a736298bb9de91173754242685484e" kindref="member">iterator_type</ref> &gt;</type>
+        <definition>typedef error_handler&lt;iterator_type&gt; sdm::parser::error_handler_type</definition>
+        <argsstring></argsstring>
+        <name>error_handler_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" line="19" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1a3650affcab201f3ae269f1e205d7420b" prot="public" static="no">
+        <type>x3::with_context&lt; <ref refid="namespacesdm_1_1parser_1afe6cf3cecc900c16fa99a2620bd50435" kindref="member">error_handler_tag</ref>, std::reference_wrapper&lt; <ref refid="namespacesdm_1_1parser_1a20ac92a14fff931b3a96291d7bcf47fe" kindref="member">error_handler_type</ref> &gt; const, <ref refid="namespacesdm_1_1parser_1a11dba6a0b5f629a3248d0f99231579f4" kindref="member">phrase_context_type</ref> &gt;::type</type>
+        <definition>typedef x3::with_context&lt;error_handler_tag, std::reference_wrapper&lt;error_handler_type&gt; const, phrase_context_type&gt;::type sdm::parser::context_type</definition>
+        <argsstring></argsstring>
+        <name>context_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" line="22" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1afb94a1c706b7ff723af329191719743c" prot="public" static="no">
+        <type>x3::error_handler&lt; Iterator &gt;</type>
+        <definition>using sdm::parser::error_handler = typedef x3::error_handler&lt;Iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>error_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1afe6cf3cecc900c16fa99a2620bd50435" prot="public" static="no">
+        <type>x3::error_handler_tag</type>
+        <definition>using sdm::parser::error_handler_tag = typedef x3::error_handler_tag</definition>
+        <argsstring></argsstring>
+        <name>error_handler_tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1_1parser_1aa065d8002ae79ff4dc84517ec63ce223" prot="public" static="no">
+        <type>x3::rule&lt; dpomdp_class, <ref refid="structsdm_1_1ast_1_1dpomdp__t" kindref="compound">ast::dpomdp_t</ref> &gt;</type>
+        <definition>typedef x3::rule&lt;dpomdp_class, ast::dpomdp_t&gt; sdm::parser::dpomdp_type</definition>
+        <argsstring></argsstring>
+        <name>dpomdp_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.hpp" line="21" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a085dfea4342e980ab09b9908db315b65" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1parser_1aa065d8002ae79ff4dc84517ec63ce223" kindref="member">dpomdp_type</ref> const</type>
+        <definition>dpomdp_type const sdm::parser::dpomdp_t</definition>
+        <argsstring></argsstring>
+        <name>dpomdp_t</name>
+        <initializer>= &quot;dpomdp_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="63" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; identifier_t_class, <ref refid="structsdm_1_1ast_1_1identifier__t" kindref="compound">ast::identifier_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;identifier_t_class, ast::identifier_t&gt; const sdm::parser::identifier_t</definition>
+        <argsstring></argsstring>
+        <name>identifier_t</name>
+        <initializer>= &quot;identifier_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="64" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aec59199c92591082ecaf2c91c761f6b8" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; identifiers_t_class, <ref refid="namespacesdm_1_1ast_1a97b6f04fc82cc52f30601adf9d1fb9bb" kindref="member">ast::identifiers_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;identifiers_t_class, ast::identifiers_t&gt; const sdm::parser::identifiers_t</definition>
+        <argsstring></argsstring>
+        <name>identifiers_t</name>
+        <initializer>= &quot;identifiers_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="65" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a80982c43d5e315bcadd10ea90f84a755" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; matrix_t_class, <ref refid="structsdm_1_1ast_1_1matrix__t" kindref="compound">ast::matrix_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;matrix_t_class, ast::matrix_t&gt; const sdm::parser::matrix_t</definition>
+        <argsstring></argsstring>
+        <name>matrix_t</name>
+        <initializer>= &quot;matrix_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="67" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a2d636da42c197f36415bba577195c2b7" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; reward_t_class, <ref refid="namespacesdm_1_1ast_1a8c8a86c73e75c95a437610f802fae30b" kindref="member">ast::reward_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;reward_t_class, ast::reward_t&gt; const sdm::parser::reward_t</definition>
+        <argsstring></argsstring>
+        <name>reward_t</name>
+        <initializer>= &quot;reward_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="69" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a77d444480f7262fcf885c90f868ffd0d" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; reward_entry_t_class, <ref refid="structsdm_1_1ast_1_1reward__entry__t" kindref="compound">ast::reward_entry_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;reward_entry_t_class, ast::reward_entry_t&gt; const sdm::parser::reward_entry_t</definition>
+        <argsstring></argsstring>
+        <name>reward_entry_t</name>
+        <initializer>= &quot;reward_entry_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="70" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1afe207ab56db929ffcd0ec19615a9136e" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; reward_entry_1_t_class, <ref refid="structsdm_1_1ast_1_1reward__entry__1__t" kindref="compound">ast::reward_entry_1_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;reward_entry_1_t_class, ast::reward_entry_1_t&gt; const sdm::parser::reward_entry_1_t</definition>
+        <argsstring></argsstring>
+        <name>reward_entry_1_t</name>
+        <initializer>= &quot;reward_entry_1_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="71" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a1432fc359d983de6ea5643472c60fb24" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; reward_entry_2_t_class, <ref refid="structsdm_1_1ast_1_1reward__entry__2__t" kindref="compound">ast::reward_entry_2_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;reward_entry_2_t_class, ast::reward_entry_2_t&gt; const sdm::parser::reward_entry_2_t</definition>
+        <argsstring></argsstring>
+        <name>reward_entry_2_t</name>
+        <initializer>= &quot;reward_entry_2_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="72" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a72b243f9389809e90a72b3ed9ea35db0" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; transition_t_class, <ref refid="namespacesdm_1_1ast_1a6c427b4931c0b86e1ea82f3f78277181" kindref="member">ast::transition_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;transition_t_class, ast::transition_t&gt; const sdm::parser::transition_t</definition>
+        <argsstring></argsstring>
+        <name>transition_t</name>
+        <initializer>= &quot;transition_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="74" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a515e5e471c6e5d0cd755e8163253bd3e" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; transition_entry_t_class, <ref refid="structsdm_1_1ast_1_1transition__entry__t" kindref="compound">ast::transition_entry_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;transition_entry_t_class, ast::transition_entry_t&gt; const sdm::parser::transition_entry_t</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_t</name>
+        <initializer>= &quot;transition_entry_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="75" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1af4f5766749e70c45ab944855695aeb0f" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; transition_entry_1_t_class, <ref refid="structsdm_1_1ast_1_1transition__entry__1__t" kindref="compound">ast::transition_entry_1_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;transition_entry_1_t_class, ast::transition_entry_1_t&gt; const sdm::parser::transition_entry_1_t</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_1_t</name>
+        <initializer>= &quot;transition_entry_1_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="76" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1acc6eb704d78ae404cca3b712b3d984f7" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; transition_entry_2_t_class, <ref refid="structsdm_1_1ast_1_1transition__entry__2__t" kindref="compound">ast::transition_entry_2_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;transition_entry_2_t_class, ast::transition_entry_2_t&gt; const sdm::parser::transition_entry_2_t</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_2_t</name>
+        <initializer>= &quot;transition_entry_2_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="77" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a75728c8f178ddca12defbaece75a6605" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; transition_entry_3_t_class, <ref refid="structsdm_1_1ast_1_1transition__entry__3__t" kindref="compound">ast::transition_entry_3_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;transition_entry_3_t_class, ast::transition_entry_3_t&gt; const sdm::parser::transition_entry_3_t</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_3_t</name>
+        <initializer>= &quot;transition_entry_3_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="78" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a0b8da8d86e154c58ec7fd0dde1b60f51" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; observation_t_class, <ref refid="namespacesdm_1_1ast_1a091008b6af233b3103bdad81d663a23c" kindref="member">ast::observation_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;observation_t_class, ast::observation_t&gt; const sdm::parser::observation_t</definition>
+        <argsstring></argsstring>
+        <name>observation_t</name>
+        <initializer>= &quot;observation_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="80" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aed2fff90c22b1c97d1a97b92220dd8b3" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; observation_entry_t_class, <ref refid="structsdm_1_1ast_1_1observation__entry__t" kindref="compound">ast::observation_entry_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;observation_entry_t_class, ast::observation_entry_t&gt; const sdm::parser::observation_entry_t</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_t</name>
+        <initializer>= &quot;observation_entry_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="81" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a646e7c03ef4b3a45fddb4d5a46ff1f35" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; observation_entry_1_t_class, <ref refid="structsdm_1_1ast_1_1observation__entry__1__t" kindref="compound">ast::observation_entry_1_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;observation_entry_1_t_class, ast::observation_entry_1_t&gt; const sdm::parser::observation_entry_1_t</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_1_t</name>
+        <initializer>= &quot;observation_entry_1_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="82" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1afe9fb6d92f84c7653b62ae068a9dab08" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; observation_entry_2_t_class, <ref refid="structsdm_1_1ast_1_1observation__entry__2__t" kindref="compound">ast::observation_entry_2_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;observation_entry_2_t_class, ast::observation_entry_2_t&gt; const sdm::parser::observation_entry_2_t</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_2_t</name>
+        <initializer>= &quot;observation_entry_2_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="83" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a880b2ecb8a8919210d53aa933f46445f" prot="public" static="no" mutable="no">
+        <type>x3::rule&lt; observation_entry_3_t_class, <ref refid="structsdm_1_1ast_1_1observation__entry__3__t" kindref="compound">ast::observation_entry_3_t</ref> &gt; const</type>
+        <definition>x3::rule&lt;observation_entry_3_t_class, ast::observation_entry_3_t&gt; const sdm::parser::observation_entry_3_t</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_3_t</name>
+        <initializer>= &quot;observation_entry_3_t&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="84" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a15bf68287c4142d5f2c020b8527f3982" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::star</definition>
+        <argsstring></argsstring>
+        <name>star</name>
+        <initializer>= +(char_(&apos;*&apos;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="89" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aeef5611c81f08da6e87118c7c4780812" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::quoted_string</definition>
+        <argsstring></argsstring>
+        <name>quoted_string</name>
+        <initializer>= lexeme[&apos;&quot;&apos; &gt;&gt; *(char_ - &apos;&quot;&apos;) &gt;&gt; &apos;&quot;&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="90" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a679716fdc134a5b6785edfbc7f006f55" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::vector_of_reals</definition>
+        <argsstring></argsstring>
+        <name>vector_of_reals</name>
+        <initializer>= lexeme[float_ % +blank]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="92" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a9043faf580e8b4c84295e743a45eb8e2" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::vector_of_numbers</definition>
+        <argsstring></argsstring>
+        <name>vector_of_numbers</name>
+        <initializer>= lexeme[ushort_ % eol]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="93" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a2d869fc950471901879c3c6190f6f74c" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::vector_of_names</definition>
+        <argsstring></argsstring>
+        <name>vector_of_names</name>
+        <initializer>= lexeme[<ref refid="namespacesdm_1_1parser_1aeef5611c81f08da6e87118c7c4780812" kindref="member">quoted_string</ref> % +blank]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="94" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a38c120b7caf76de3fd8871dbdeef54f2" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::vector_stochastic</definition>
+        <argsstring></argsstring>
+        <name>vector_stochastic</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1aeef5611c81f08da6e87118c7c4780812" kindref="member">quoted_string</ref> | <ref refid="namespacesdm_1_1parser_1a679716fdc134a5b6785edfbc7f006f55" kindref="member">vector_of_reals</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="95" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1afd7ede1d5d9d83aa161eea6ee3a51219" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::number_or_vector_of_names</definition>
+        <argsstring></argsstring>
+        <name>number_or_vector_of_names</name>
+        <initializer>= ushort_ | <ref refid="namespacesdm_1_1parser_1a2d869fc950471901879c3c6190f6f74c" kindref="member">vector_of_names</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="96" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a3c215e0e8e76fccd4e4ab6d7033c3a01" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::vector_of_vector_of_reals</definition>
+        <argsstring></argsstring>
+        <name>vector_of_vector_of_reals</name>
+        <initializer>= lexeme[<ref refid="namespacesdm_1_1parser_1a679716fdc134a5b6785edfbc7f006f55" kindref="member">vector_of_reals</ref> % eol]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="97" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a3bae4b50e702d3ad8f3c5aab0b59584a" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::vector_of_vector_of_names</definition>
+        <argsstring></argsstring>
+        <name>vector_of_vector_of_names</name>
+        <initializer>= lexeme[<ref refid="namespacesdm_1_1parser_1a2d869fc950471901879c3c6190f6f74c" kindref="member">vector_of_names</ref> % eol]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="98" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1abcf63475c8474c81cedd694bba9c86f8" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::numbers_or_names</definition>
+        <argsstring></argsstring>
+        <name>numbers_or_names</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1a9043faf580e8b4c84295e743a45eb8e2" kindref="member">vector_of_numbers</ref> | <ref refid="namespacesdm_1_1parser_1a3bae4b50e702d3ad8f3c5aab0b59584a" kindref="member">vector_of_vector_of_names</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="99" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a8a4839ca4e42a9e89f59e383cf2898c6" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::identifier_t_def</definition>
+        <argsstring></argsstring>
+        <name>identifier_t_def</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1aeef5611c81f08da6e87118c7c4780812" kindref="member">quoted_string</ref> | ushort_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="101" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1abec9b8b896c49ec29034a61379ddffa8" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::identifiers_t_def</definition>
+        <argsstring></argsstring>
+        <name>identifiers_t_def</name>
+        <initializer>= lexeme[<ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> % *blank]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="102" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a05bfa1ea29bc22d520fadd990a8f3199" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::matrix_t_def</definition>
+        <argsstring></argsstring>
+        <name>matrix_t_def</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1aeef5611c81f08da6e87118c7c4780812" kindref="member">quoted_string</ref> | <ref refid="namespacesdm_1_1parser_1a3c215e0e8e76fccd4e4ab6d7033c3a01" kindref="member">vector_of_vector_of_reals</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="104" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1ab66135521609c65237216260d03f5f95" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::reward_entry_1_t_def</definition>
+        <argsstring></argsstring>
+        <name>reward_entry_1_t_def</name>
+        <initializer>=
+        lit(&quot;R:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; float_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="107" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a4ee656cc78b3cea319b18934ceea3875" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::reward_entry_2_t_def</definition>
+        <argsstring></argsstring>
+        <name>reward_entry_2_t_def</name>
+        <initializer>=
+        lit(&quot;R:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1a38c120b7caf76de3fd8871dbdeef54f2" kindref="member">vector_stochastic</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="110" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a340fb35f7f2f641d23acabf91b7992a6" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::reward_entry_t_def</definition>
+        <argsstring></argsstring>
+        <name>reward_entry_t_def</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1afe207ab56db929ffcd0ec19615a9136e" kindref="member">reward_entry_1_t</ref> | <ref refid="namespacesdm_1_1parser_1a1432fc359d983de6ea5643472c60fb24" kindref="member">reward_entry_2_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="113" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a8549fedcafdc4127ad61e98d383dd3db" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::reward_t_def</definition>
+        <argsstring></argsstring>
+        <name>reward_t_def</name>
+        <initializer>= +<ref refid="namespacesdm_1_1parser_1a77d444480f7262fcf885c90f868ffd0d" kindref="member">reward_entry_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="115" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1ab908be0b733b9a7ec3a1e43e4fda6be9" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::transition_entry_1_t_def</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_1_t_def</name>
+        <initializer>=
+        lit(&quot;T:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; float_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="119" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a9249678c4dbeb06e17ff67474a93b693" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::transition_entry_2_t_def</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_2_t_def</name>
+        <initializer>=
+        lit(&quot;T:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1a38c120b7caf76de3fd8871dbdeef54f2" kindref="member">vector_stochastic</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="122" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a199542f0b79548e40c9cfc6c978aecd4" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::transition_entry_3_t_def</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_3_t_def</name>
+        <initializer>=
+        lit(&quot;T:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1a80982c43d5e315bcadd10ea90f84a755" kindref="member">matrix_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="125" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a471d1010bba5301ea332661aeba13225" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::transition_entry_t_def</definition>
+        <argsstring></argsstring>
+        <name>transition_entry_t_def</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1af4f5766749e70c45ab944855695aeb0f" kindref="member">transition_entry_1_t</ref> | <ref refid="namespacesdm_1_1parser_1acc6eb704d78ae404cca3b712b3d984f7" kindref="member">transition_entry_2_t</ref> | <ref refid="namespacesdm_1_1parser_1a75728c8f178ddca12defbaece75a6605" kindref="member">transition_entry_3_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="128" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a8caadfd9f624c3ef21f9f8e471f7fda6" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::transition_t_def</definition>
+        <argsstring></argsstring>
+        <name>transition_t_def</name>
+        <initializer>= +<ref refid="namespacesdm_1_1parser_1a515e5e471c6e5d0cd755e8163253bd3e" kindref="member">transition_entry_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="130" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1abecd0a8aaa10d8192e1f72c7cbb3d3b6" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::observation_entry_1_t_def</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_1_t_def</name>
+        <initializer>=
+        lit(&quot;O:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aec59199c92591082ecaf2c91c761f6b8" kindref="member">identifiers_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; float_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="134" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aafc9e1308c01bdda3a9a4c825758414c" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::observation_entry_2_t_def</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_2_t_def</name>
+        <initializer>=
+        lit(&quot;O:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1aae659dccde356137bb9f6dda5187554c" kindref="member">identifier_t</ref> &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1a38c120b7caf76de3fd8871dbdeef54f2" kindref="member">vector_stochastic</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="137" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a433db362c7bd39891860182efffd1f92" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::observation_entry_3_t_def</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_3_t_def</name>
+        <initializer>=
+        lit(&quot;O:&quot;) &gt;&gt; identifiers_t &gt;&gt; &apos;:&apos; &gt;&gt; <ref refid="namespacesdm_1_1parser_1a80982c43d5e315bcadd10ea90f84a755" kindref="member">matrix_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="140" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aef5fc274baf680b54e01d96cf10ac300" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::observation_entry_t_def</definition>
+        <argsstring></argsstring>
+        <name>observation_entry_t_def</name>
+        <initializer>= <ref refid="namespacesdm_1_1parser_1a646e7c03ef4b3a45fddb4d5a46ff1f35" kindref="member">observation_entry_1_t</ref> | <ref refid="namespacesdm_1_1parser_1afe9fb6d92f84c7653b62ae068a9dab08" kindref="member">observation_entry_2_t</ref> | <ref refid="namespacesdm_1_1parser_1a880b2ecb8a8919210d53aa933f46445f" kindref="member">observation_entry_3_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="143" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1a55c651b313b11d14494d34b75001c185" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::observation_t_def</definition>
+        <argsstring></argsstring>
+        <name>observation_t_def</name>
+        <initializer>= +<ref refid="namespacesdm_1_1parser_1aed2fff90c22b1c97d1a97b92220dd8b3" kindref="member">observation_entry_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="145" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1_1parser_1aa71092b766513234815a24077caf7749" prot="public" static="no" mutable="no">
+        <type>auto const</type>
+        <definition>auto const sdm::parser::dpomdp_t_def</definition>
+        <argsstring></argsstring>
+        <name>dpomdp_t_def</name>
+        <initializer>=
+        lit(&quot;agents&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; number_or_vector_of_names &gt;&gt; lit(&quot;discount&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; float_
+        &gt;&gt; lit(&quot;values&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; quoted_string
+        &gt;&gt; lit(&quot;states&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; number_or_vector_of_names
+        &gt;&gt; lit(&quot;start&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; vector_stochastic
+        &gt;&gt; lit(&quot;actions&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; numbers_or_names
+        &gt;&gt; lit(&quot;observations&quot;) &gt;&gt; &apos;:&apos; &gt;&gt; numbers_or_names
+        &gt;&gt; <ref refid="namespacesdm_1_1parser_1a72b243f9389809e90a72b3ed9ea35db0" kindref="member">transition_t</ref>
+        &gt;&gt; <ref refid="namespacesdm_1_1parser_1a0b8da8d86e154c58ec7fd0dde1b60f51" kindref="member">observation_t</ref>
+        &gt;&gt; <ref refid="namespacesdm_1_1parser_1a2d636da42c197f36415bba577195c2b7" kindref="member">reward_t</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" line="149" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesdm_1_1parser_1a8ff23a846a33d16a7ac775a45dc79575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">sdm::DiscreteDecPOMDP</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; sdm::DiscreteDecPOMDP &gt; sdm::parser::parse_string</definition>
+        <argsstring>(std::string storage)</argsstring>
+        <name>parse_string</name>
+        <param>
+          <type>std::string</type>
+          <declname>storage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp" bodystart="28" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1_1parser_1aa635cf8a41011ff5170266f2f6941838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">sdm::DiscreteDecPOMDP</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; sdm::DiscreteDecPOMDP &gt; sdm::parser::parse_file</definition>
+        <argsstring>(char const *filename)</argsstring>
+        <name>parse_file</name>
+        <param>
+          <type>char const *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp" line="59" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp" bodystart="59" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1_1parser_1a465dc349a3d583d07ea9d2a984c5dc87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">sdm::DiscreteDecPOMDP</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; sdm::DiscreteDecPOMDP &gt; sdm::parser::parse_file</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>parse_file</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp" line="80" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Namespace grouping all functions for parsing files. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

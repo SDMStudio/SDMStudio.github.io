@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;</compoundname>
+    <includes refid="det__decision__rule_8hpp" local="no">det_decision_rule.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename S</type>
+      </param>
+      <param>
+        <type>typename A</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1a09f2d508b87cc6718099fd0b8d35d176" prot="public" static="no">
+        <type><ref refid="classsdm_1_1DeterministicDecisionRule" kindref="compound">sdm::DeterministicDecisionRule</ref>&lt; S, A &gt;</type>
+        <definition>typedef sdm::DeterministicDecisionRule&lt;S, A&gt; std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;::argument_type</definition>
+        <argsstring></argsstring>
+        <name>argument_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="88" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1aa54050ae3f4abfbd4a9f35613261479f" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>typedef std::size_t std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="89" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1a7a1d10fc0c71b3f4b6c414335eba2d73" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1aa54050ae3f4abfbd4a9f35613261479f" kindref="member">result_type</ref></type>
+        <definition>result_type std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;::operator()</definition>
+        <argsstring>(const argument_type &amp;in) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1a09f2d508b87cc6718099fd0b8d35d176" kindref="member">argument_type</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="90" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="90" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="87" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="86" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1a09f2d508b87cc6718099fd0b8d35d176" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;</scope><name>argument_type</name></member>
+      <member refid="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1a7a1d10fc0c71b3f4b6c414335eba2d73" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;</scope><name>operator()</name></member>
+      <member refid="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4_1aa54050ae3f4abfbd4a9f35613261479f" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

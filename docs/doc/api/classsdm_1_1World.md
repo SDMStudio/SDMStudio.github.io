@@ -16,7 +16,7 @@
 
 
 
-Inherited by the following classes: [sdm::GymInterface](classsdm_1_1GymInterface.md),  [sdm::DecisionProcess](classsdm_1_1DecisionProcess.md),  [sdm::GymInterface](classsdm_1_1GymInterface.md),  [sdm::NDPOMDP](classsdm_1_1NDPOMDP.md)
+Inherited by the following classes: [sdm::NDPOMDP](classsdm_1_1NDPOMDP.md)
 
 
 
@@ -53,4 +53,4 @@ state sdm::World::internal;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/public/world.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/world.hpp`

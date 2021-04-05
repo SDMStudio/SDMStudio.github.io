@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="pomdp__initializer_8hpp" kind="file" language="C++">
+    <compoundname>pomdp_initializer.hpp</compoundname>
+    <includes refid="initializer_8hpp" local="no">sdm/utils/value_function/initializer.hpp</includes>
+    <includes local="no">sdm/utils/value_function/initializer/pomdp_initializer.tpp</includes>
+    <includedby refid="initializers_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp</includedby>
+    <incdepgraph>
+      <node id="3282">
+        <label>locale</label>
+      </node>
+      <node id="3283">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="3265">
+        <label>assert.h</label>
+      </node>
+      <node id="3253">
+        <label>sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="3254" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+      </node>
+      <node id="3259">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="3260">
+        <label>sdm/public/algorithm.hpp</label>
+        <link refid="algorithm_8hpp"/>
+      </node>
+      <node id="3271">
+        <label>cmath</label>
+      </node>
+      <node id="3288">
+        <label>sdm/utils/value_function/state_2_occupancy_vf.tpp</label>
+      </node>
+      <node id="3254">
+        <label>string</label>
+      </node>
+      <node id="3269">
+        <label>sdm/utils/linear_algebra/sdms_vector.tpp</label>
+      </node>
+      <node id="3280">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="3277">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+      </node>
+      <node id="3279">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="3275">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+      </node>
+      <node id="3270">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+        <childnode refid="3254" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+      </node>
+      <node id="3285">
+        <label>fstream</label>
+      </node>
+      <node id="3263">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="3264">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="3273">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="3272">
+        <label>vector</label>
+      </node>
+      <node id="3262">
+        <label>sdm/utils/linear_algebra/sdms_vector.hpp</label>
+        <link refid="sdms__vector_8hpp"/>
+        <childnode refid="3263" relation="include">
+        </childnode>
+        <childnode refid="3264" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3276">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+      </node>
+      <node id="3261">
+        <label>sdm/core/state/state.hpp</label>
+        <link refid="state_8hpp"/>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+      </node>
+      <node id="3268">
+        <label>sstream</label>
+      </node>
+      <node id="3289">
+        <label>sdm/utils/value_function/initializer/pomdp_initializer.tpp</label>
+      </node>
+      <node id="3281">
+        <label>sdm/utils/logging/logger.hpp</label>
+        <link refid="logger_8hpp"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3282" relation="include">
+        </childnode>
+        <childnode refid="3283" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+      </node>
+      <node id="3286">
+        <label>sdm/algorithms/hsvi.tpp</label>
+      </node>
+      <node id="3252">
+        <label>math.h</label>
+      </node>
+      <node id="3250">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp</label>
+        <link refid="pomdp__initializer_8hpp"/>
+        <childnode refid="3251" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+      </node>
+      <node id="3267">
+        <label>cstdlib</label>
+      </node>
+      <node id="3257">
+        <label>iostream</label>
+      </node>
+      <node id="3256">
+        <label>cstddef</label>
+      </node>
+      <node id="3284">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="3254" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3257" relation="include">
+        </childnode>
+      </node>
+      <node id="3258">
+        <label>unordered_map</label>
+      </node>
+      <node id="3251">
+        <label>sdm/utils/value_function/initializer.hpp</label>
+        <link refid="initializer_8hpp"/>
+        <childnode refid="3252" relation="include">
+        </childnode>
+        <childnode refid="3253" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+      </node>
+      <node id="3266">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+      </node>
+      <node id="3274">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+      </node>
+      <node id="3287">
+        <label>sdm/utils/value_function/state_2_occupancy_vf.hpp</label>
+        <link refid="state__2__occupancy__vf_8hpp"/>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3288" relation="include">
+        </childnode>
+      </node>
+      <node id="3278">
+        <label>memory</label>
+      </node>
+      <node id="3255">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="3256" relation="include">
+        </childnode>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3290">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp</label>
+        <link refid="pomdp__initializer_8hpp"/>
+        <childnode refid="3291" relation="include">
+        </childnode>
+      </node>
+      <node id="3292">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="3291">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp</label>
+        <link refid="initializers_8hpp"/>
+        <childnode refid="3292" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1POMDPInitializer" prot="public">sdm::POMDPInitializer</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="initializer_8hpp" kindref="compound">sdm/utils/value_function/initializer.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TState,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TAction&gt;</highlight></codeline>
+<codeline lineno="27" refid="classsdm_1_1POMDPInitializer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1POMDPInitializer" kindref="compound">POMDPInitializer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt;TState,<sp/>TAction&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="classsdm_1_1POMDPInitializer_1ae54914095340eac7001e1c6ae6cd5d2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classsdm_1_1POMDPInitializer_1ae54914095340eac7001e1c6ae6cd5d2b" kindref="member">algo_name_</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classsdm_1_1POMDPInitializer_1aa999758896d71868e6031364848c271e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1POMDPInitializer_1a64c69cb082c09549001ed7b02976d8a8" kindref="member">error_</ref>,<sp/><ref refid="classsdm_1_1POMDPInitializer_1aa999758896d71868e6031364848c271e" kindref="member">trials_</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1POMDPInitializer_1a9626b14a1b134d42b1d993c5f7bf3cf0" kindref="member">POMDPInitializer</ref>(std::string<sp/>algo_name,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>error<sp/>=<sp/>0.01,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>trials<sp/>=<sp/>10000);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1POMDPInitializer_1a9b9e98a2a279239c9d5e40fc249e9c02" kindref="member">init</ref>(<ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction&lt;TState, TAction&gt;</ref><sp/>*vf);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sdm/utils/value_function/initializer/pomdp_initializer.tpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp"/>
+  </compounddef>
+</doxygen>

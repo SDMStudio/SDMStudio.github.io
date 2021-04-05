@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="stochastic__process__base_8hpp" kind="file" language="C++">
+    <compoundname>stochastic_process_base.hpp</compoundname>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes refid="discrete__space_8hpp" local="no">sdm/core/space/discrete_space.hpp</includes>
+    <includes local="no">sdm/world/base/stochastic_process_base.tpp</includes>
+    <includedby refid="decision__process__base_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/decision_process_base.hpp</includedby>
+    <includedby refid="po__process__base_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/po_process_base.hpp</includedby>
+    <incdepgraph>
+      <node id="3768">
+        <label>sdm/core/space/discrete_space.tpp</label>
+      </node>
+      <node id="3756">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="3761">
+        <label>string</label>
+      </node>
+      <node id="3765">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="3766">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+      </node>
+      <node id="3763">
+        <label>fstream</label>
+      </node>
+      <node id="3769">
+        <label>sdm/world/base/stochastic_process_base.tpp</label>
+      </node>
+      <node id="3757">
+        <label>sdm/core/space/discrete_space.hpp</label>
+        <link refid="discrete__space_8hpp"/>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3759" relation="include">
+        </childnode>
+        <childnode refid="3767" relation="include">
+        </childnode>
+        <childnode refid="3768" relation="include">
+        </childnode>
+      </node>
+      <node id="3758">
+        <label>vector</label>
+      </node>
+      <node id="3767">
+        <label>sdm/core/space/space.hpp</label>
+        <link refid="space_8hpp"/>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+        <childnode refid="3752" relation="include">
+        </childnode>
+      </node>
+      <node id="3764">
+        <label>sstream</label>
+      </node>
+      <node id="3759">
+        <label>sdm/core/joint.hpp</label>
+        <link refid="joint_8hpp"/>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3760" relation="include">
+        </childnode>
+        <childnode refid="3765" relation="include">
+        </childnode>
+        <childnode refid="3766" relation="include">
+        </childnode>
+      </node>
+      <node id="3762">
+        <label>cstdlib</label>
+      </node>
+      <node id="3754">
+        <label>iostream</label>
+      </node>
+      <node id="3751">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp</label>
+        <link refid="stochastic__process__base_8hpp"/>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3769" relation="include">
+        </childnode>
+      </node>
+      <node id="3753">
+        <label>cstddef</label>
+      </node>
+      <node id="3760">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="3761" relation="include">
+        </childnode>
+        <childnode refid="3762" relation="include">
+        </childnode>
+        <childnode refid="3763" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+      </node>
+      <node id="3755">
+        <label>unordered_map</label>
+      </node>
+      <node id="3752">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="3753" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3755" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3774">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="3775" relation="include">
+        </childnode>
+        <childnode refid="3773" relation="include">
+        </childnode>
+        <childnode refid="3790" relation="include">
+        </childnode>
+        <childnode refid="3791" relation="include">
+        </childnode>
+        <childnode refid="3792" relation="include">
+        </childnode>
+        <childnode refid="3794" relation="include">
+        </childnode>
+        <childnode refid="3795" relation="include">
+        </childnode>
+        <childnode refid="3793" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3790">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="3774" relation="include">
+        </childnode>
+        <childnode refid="3784" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3789">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.cpp</label>
+        <link refid="ndpomdp_8cpp"/>
+      </node>
+      <node id="3783">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.cpp</label>
+        <link refid="discrete__mdp_8cpp"/>
+      </node>
+      <node id="3793">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp</label>
+        <link refid="serialized__occupancy__mdp_8hpp"/>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3796">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp</label>
+        <link refid="po__decision__process_8hpp"/>
+        <childnode refid="3775" relation="include">
+        </childnode>
+        <childnode refid="3791" relation="include">
+        </childnode>
+      </node>
+      <node id="3780">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="3777" relation="include">
+        </childnode>
+      </node>
+      <node id="3788">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp</label>
+        <link refid="ndpomdp_8hpp"/>
+        <childnode refid="3789" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3792">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="3775" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3771">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/decision_process_base.hpp</label>
+        <link refid="decision__process__base_8hpp"/>
+        <childnode refid="3772" relation="include">
+        </childnode>
+      </node>
+      <node id="3791">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="3785" relation="include">
+        </childnode>
+        <childnode refid="3792" relation="include">
+        </childnode>
+        <childnode refid="3793" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3795">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_mdp.hpp</label>
+        <link refid="serialized__mdp_8hpp"/>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3781">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp</label>
+        <link refid="parser__def_8hpp"/>
+        <childnode refid="3777" relation="include">
+        </childnode>
+      </node>
+      <node id="3779">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="3780" relation="include">
+        </childnode>
+        <childnode refid="3781" relation="include">
+        </childnode>
+      </node>
+      <node id="3772">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp</label>
+        <link refid="decision__process_8hpp"/>
+        <childnode refid="3773" relation="include">
+        </childnode>
+        <childnode refid="3790" relation="include">
+        </childnode>
+        <childnode refid="3796" relation="include">
+        </childnode>
+      </node>
+      <node id="3775">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="3776" relation="include">
+        </childnode>
+        <childnode refid="3778" relation="include">
+        </childnode>
+        <childnode refid="3782" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3778">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.hpp</label>
+        <link refid="parser_8hpp"/>
+        <childnode refid="3779" relation="include">
+        </childnode>
+        <childnode refid="3777" relation="include">
+        </childnode>
+        <childnode refid="3781" relation="include">
+        </childnode>
+        <childnode refid="3782" relation="include">
+        </childnode>
+        <childnode refid="3783" relation="include">
+        </childnode>
+        <childnode refid="3784" relation="include">
+        </childnode>
+        <childnode refid="3785" relation="include">
+        </childnode>
+      </node>
+      <node id="3776">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="3777" relation="include">
+        </childnode>
+      </node>
+      <node id="3785">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.cpp</label>
+        <link refid="discrete__pomdp_8cpp"/>
+      </node>
+      <node id="3770">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp</label>
+        <link refid="stochastic__process__base_8hpp"/>
+        <childnode refid="3771" relation="include">
+        </childnode>
+        <childnode refid="3797" relation="include">
+        </childnode>
+      </node>
+      <node id="3787">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="3797">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/po_process_base.hpp</label>
+        <link refid="po__process__base_8hpp"/>
+        <childnode refid="3796" relation="include">
+        </childnode>
+      </node>
+      <node id="3784">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.cpp</label>
+        <link refid="discrete__mmdp_8cpp"/>
+      </node>
+      <node id="3794">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_belief_mdp.hpp</label>
+        <link refid="serialized__belief__mdp_8hpp"/>
+      </node>
+      <node id="3773">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="3774" relation="include">
+        </childnode>
+        <childnode refid="3783" relation="include">
+        </childnode>
+        <childnode refid="3792" relation="include">
+        </childnode>
+        <childnode refid="3793" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+      </node>
+      <node id="3782">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.cpp</label>
+        <link refid="discrete__decpomdp_8cpp"/>
+      </node>
+      <node id="3777">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+      </node>
+      <node id="3786">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp</label>
+        <link refid="worlds_8hpp"/>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3788" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1StochasticProcessBase" prot="public">sdm::StochasticProcessBase</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+<para>File that contains the implementation of the Generic Stochastic process class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>David Albert (<ulink url="mailto:david.albert@insa-lyon.fr">david.albert@insa-lyon.fr</ulink>) </para></simplesect>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="date"><para>02/02/2021</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="discrete__space_8hpp" kindref="compound">sdm/core/space/discrete_space.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TStateSpace,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TDistrib&gt;</highlight></codeline>
+<codeline lineno="29" refid="classsdm_1_1StochasticProcessBase" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1StochasticProcessBase" kindref="compound">StochasticProcessBase</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classsdm_1_1StochasticProcessBase_1a44c8f655596252c3ae7d86501dbd8f8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">state_space_type</ref><sp/>=<sp/>TStateSpace;</highlight></codeline>
+<codeline lineno="33" refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TStateSpace::value_type;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StochasticProcessBase_1a292d1adb7db2763a2219154be7071604" kindref="member">StochasticProcessBase</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StochasticProcessBase_1a292d1adb7db2763a2219154be7071604" kindref="member">StochasticProcessBase</ref>(std::shared_ptr&lt;TStateSpace&gt;);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StochasticProcessBase_1a292d1adb7db2763a2219154be7071604" kindref="member">StochasticProcessBase</ref>(std::shared_ptr&lt;TStateSpace&gt;,<sp/>TDistrib);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref><sp/><ref refid="classsdm_1_1StochasticProcessBase_1a90e15c19c1d01c277c89413f122a7289" kindref="member">getInternalState</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1StochasticProcessBase_1aa7e0f42e5db9e618b9f1dfa4cb5a9e5c" kindref="member">setInternalState</ref>(<ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref><sp/>new_i_state);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TDistrib<sp/><ref refid="classsdm_1_1StochasticProcessBase_1abfc0284a6d1e969da12f24f8af891fbb" kindref="member">getStartDistrib</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1StochasticProcessBase_1a368ac22926cd10dffdfb80ef90b53956" kindref="member">setStartDistrib</ref>(TDistrib);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TStateSpace&gt;<sp/><ref refid="classsdm_1_1StochasticProcessBase_1a9dc90273591c32b94a344fef1d064ffb" kindref="member">getStateSpace</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1StochasticProcessBase_1afc32b6f464dda5cf90e9344c093939e4" kindref="member">setStateSpace</ref>(std::shared_ptr&lt;TStateSpace&gt;);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="classsdm_1_1StochasticProcessBase_1ae3f6aac1ee72344130922b00b8519d22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref><sp/><ref refid="classsdm_1_1StochasticProcessBase_1ae3f6aac1ee72344130922b00b8519d22" kindref="member">internal_state_</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58" refid="classsdm_1_1StochasticProcessBase_1ad7e5061186e3bc008ba7070722607417" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TStateSpace&gt;<sp/><ref refid="classsdm_1_1StochasticProcessBase_1ad7e5061186e3bc008ba7070722607417" kindref="member">state_space_</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classsdm_1_1StochasticProcessBase_1a9214a00a2dcd3e36b97d0bc25a810eac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TDistrib<sp/><ref refid="classsdm_1_1StochasticProcessBase_1a9214a00a2dcd3e36b97d0bc25a810eac" kindref="member">start_distrib_</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sdm/world/base/stochastic_process_base.tpp&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp"/>
+  </compounddef>
+</doxygen>

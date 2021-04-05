@@ -14,7 +14,7 @@ _Developpers use this class to raise a parsing exception._
 
 
 
-Inherits the following classes: [sdm::exception::Except](classsdm_1_1exception_1_1Except.md)
+Inherits the following classes: [sdm::exception::Exception](classsdm_1_1exception_1_1Exception.md)
 
 
 
@@ -38,14 +38,14 @@ Inherits the following classes: [sdm::exception::Except](classsdm_1_1exception_1
 |   | [**ParsingException**](classsdm_1_1exception_1_1ParsingException.md#function-parsingexception) (const std::string & line\_details\_="") <br> |
 |  std::string | [**get\_line\_details**](classsdm_1_1exception_1_1ParsingException.md#function-get-line-details) () const<br> |
 
-## Public Functions inherited from sdm::exception::Except
+## Public Functions inherited from sdm::exception::Exception
 
-See [sdm::exception::Except](classsdm_1_1exception_1_1Except.md)
+See [sdm::exception::Exception](classsdm_1_1exception_1_1Exception.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Except**](classsdm_1_1exception_1_1Except.md#function-except) (const std::string & msg\_) <br> |
-| virtual const char \* | [**what**](classsdm_1_1exception_1_1Except.md#function-what) () const<br> |
+|   | [**Exception**](classsdm_1_1exception_1_1Exception.md#function-exception) (const std::string & msg\_) <br> |
+| virtual const char \* | [**what**](classsdm_1_1exception_1_1Exception.md#function-what) () const<br> |
 
 
 
@@ -59,13 +59,13 @@ See [sdm::exception::Except](classsdm_1_1exception_1_1Except.md)
 | ---: | :--- |
 |  std::string | [**line\_details**](classsdm_1_1exception_1_1ParsingException.md#variable-line-details)  <br> |
 
-## Protected Attributes inherited from sdm::exception::Except
+## Protected Attributes inherited from sdm::exception::Exception
 
-See [sdm::exception::Except](classsdm_1_1exception_1_1Except.md)
+See [sdm::exception::Exception](classsdm_1_1exception_1_1Exception.md)
 
 | Type | Name |
 | ---: | :--- |
-|  std::string | [**error\_message**](classsdm_1_1exception_1_1Except.md#variable-error-message)  <br>_Error message._  |
+|  std::string | [**error\_message**](classsdm_1_1exception_1_1Exception.md#variable-error-message)  <br>_Error message._  |
 
 
 
@@ -118,4 +118,4 @@ std::string sdm::exception::ParsingException::line_details;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/exception.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp`

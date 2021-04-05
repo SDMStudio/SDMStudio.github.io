@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1Reward" kind="class" language="C++" prot="public">
+    <compoundname>sdm::Reward</compoundname>
+    <includes refid="reward_8hpp" local="no">reward.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1Reward_1ada928d27759f529d42b7620f693571fe" prot="public" static="no">
+        <type>double</type>
+        <definition>using sdm::Reward::value_type =  double</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1Reward_1ae8509e624b55ee6e15d8814f8f6cdee1" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Vector &gt;</type>
+        <definition>std::vector&lt;Vector&gt; sdm::Reward::rewards</definition>
+        <argsstring></argsstring>
+        <name>rewards</name>
+        <briefdescription>
+<para>model of the outcomes of the entire team of collaborative agents involved in the system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1Reward_1aa2110954bef5f4f020a52f50fa0ba450" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::Reward::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <initializer>= -999999</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1Reward_1abf48ec2fcde5e778fe6a63df78bd75e7" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::Reward::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <initializer>= +999999</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1Reward_1a71c7c6dbb0d39f8ccaf707278ebb4d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Reward::Reward</definition>
+        <argsstring>()</argsstring>
+        <name>Reward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1aca0577846b487d2af1329345565ee901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Reward::Reward</definition>
+        <argsstring>(number, number)</argsstring>
+        <name>Reward</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>num_jactions</defname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>num_states</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_jactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of joint actions </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of states </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="42" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a350953284f0ac40fb28fd324fdc437b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Reward::Reward</definition>
+        <argsstring>(Reward &amp;copy)</argsstring>
+        <name>Reward</name>
+        <param>
+          <type><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="44" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1ab0afb1e0dcd38fa94f1719b2d2e2ee28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::Reward::initReward</definition>
+        <argsstring>(number, number)</argsstring>
+        <name>initReward</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>num_jactions</defname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>num_states</defname>
+        </param>
+        <briefdescription>
+<para>Inits the reward model. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_jactions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of joint actions </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of states </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="50" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="21" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a5fb889407a2d01132c33de7c66196fec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>value sdm::Reward::getReward</definition>
+        <argsstring>(number, number) const</argsstring>
+        <name>getReward</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+<para>Returns reward. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific joint action </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reward at state s and jaction a </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="57" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1ab5318a52c4a2efaa61523c2ddaf42377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::Reward::setReward</definition>
+        <argsstring>(number, number, double)</argsstring>
+        <name>setReward</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>a</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <defname>r</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="64" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a33d0003e5c839009751185a6f5c98f62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Vector &amp;</type>
+        <definition>const Vector &amp; sdm::Reward::getReward</definition>
+        <argsstring>(number) const</argsstring>
+        <name>getReward</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="70" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a768851a46f3b72385e8f313ef55ab350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; Vector &gt; &amp;</type>
+        <definition>const std::vector&lt; Vector &gt; &amp; sdm::Reward::getReward</definition>
+        <argsstring>() const</argsstring>
+        <name>getReward</name>
+        <briefdescription>
+<para>Returns list of reward vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the entire reward function </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="75" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a57733d6880bca2573960302f8a357f16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::Reward::setReward</definition>
+        <argsstring>(number, const Vector &amp;)</argsstring>
+        <name>setReward</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <defname>a</defname>
+        </param>
+        <param>
+          <type>const Vector &amp;</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="81" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="47" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a809f460ec82bce2a57470ca0bf51086d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sdm::Reward::getMaxReward</definition>
+        <argsstring>() const</argsstring>
+        <name>getMaxReward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="83" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Reward_1a723f6a8dda8d4d1d571aa9e2d3f8901b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sdm::Reward::getMinReward</definition>
+        <argsstring>() const</argsstring>
+        <name>getMinReward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="85" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1Reward_1ae7a18f1f389b8b6858340d9d7d2a1845" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream &amp; sdm::Reward::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Reward &amp;reward_fct)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref> &amp;</type>
+          <declname>reward_fct</declname>
+        </param>
+        <briefdescription>
+<para>print the dpomdp </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::ostream&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dpomdp&amp; the individual decision rule to be printed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::ostream&amp;</para></simplesect>
+This method should produce an output of this form: </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="96" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" bodystart="96" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class provides getter and setter methods for the reward model. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" line="26" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp" bodystart="25" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1Reward_1a809f460ec82bce2a57470ca0bf51086d" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>getMaxReward</name></member>
+      <member refid="classsdm_1_1Reward_1a723f6a8dda8d4d1d571aa9e2d3f8901b" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>getMinReward</name></member>
+      <member refid="classsdm_1_1Reward_1a5fb889407a2d01132c33de7c66196fec" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>getReward</name></member>
+      <member refid="classsdm_1_1Reward_1a33d0003e5c839009751185a6f5c98f62" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>getReward</name></member>
+      <member refid="classsdm_1_1Reward_1a768851a46f3b72385e8f313ef55ab350" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>getReward</name></member>
+      <member refid="classsdm_1_1Reward_1ab0afb1e0dcd38fa94f1719b2d2e2ee28" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>initReward</name></member>
+      <member refid="classsdm_1_1Reward_1aa2110954bef5f4f020a52f50fa0ba450" prot="protected" virt="non-virtual"><scope>sdm::Reward</scope><name>max</name></member>
+      <member refid="classsdm_1_1Reward_1abf48ec2fcde5e778fe6a63df78bd75e7" prot="protected" virt="non-virtual"><scope>sdm::Reward</scope><name>min</name></member>
+      <member refid="classsdm_1_1Reward_1ae7a18f1f389b8b6858340d9d7d2a1845" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1Reward_1a71c7c6dbb0d39f8ccaf707278ebb4d1a" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>Reward</name></member>
+      <member refid="classsdm_1_1Reward_1aca0577846b487d2af1329345565ee901" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>Reward</name></member>
+      <member refid="classsdm_1_1Reward_1a350953284f0ac40fb28fd324fdc437b0" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>Reward</name></member>
+      <member refid="classsdm_1_1Reward_1ae8509e624b55ee6e15d8814f8f6cdee1" prot="protected" virt="non-virtual"><scope>sdm::Reward</scope><name>rewards</name></member>
+      <member refid="classsdm_1_1Reward_1ab5318a52c4a2efaa61523c2ddaf42377" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>setReward</name></member>
+      <member refid="classsdm_1_1Reward_1a57733d6880bca2573960302f8a357f16" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>setReward</name></member>
+      <member refid="classsdm_1_1Reward_1ada928d27759f529d42b7620f693571fe" prot="public" virt="non-virtual"><scope>sdm::Reward</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

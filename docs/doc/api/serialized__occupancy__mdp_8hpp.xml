@@ -1,0 +1,926 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="serialized__occupancy__mdp_8hpp" kind="file" language="C++">
+    <compoundname>serialized_occupancy_mdp.hpp</compoundname>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes refid="solvable__by__hsvi_8hpp" local="no">sdm/world/solvable_by_hsvi.hpp</includes>
+    <includes refid="discrete__mdp_8hpp" local="no">sdm/world/discrete_mdp.hpp</includes>
+    <includes refid="discrete__pomdp_8hpp" local="no">sdm/world/discrete_pomdp.hpp</includes>
+    <includes refid="belief__mdp_8hpp" local="no">sdm/world/belief_mdp.hpp</includes>
+    <includes refid="discrete__space_8hpp" local="no">sdm/core/space/discrete_space.hpp</includes>
+    <includes refid="serialized__occupancy__state_8hpp" local="no">sdm/core/state/serialized_occupancy_state.hpp</includes>
+    <includes refid="serialized__state_8hpp" local="no">sdm/core/state/serialized_state.hpp</includes>
+    <includes refid="linear__algebra_2vector_8hpp" local="no">sdm/utils/linear_algebra/vector.hpp</includes>
+    <includes refid="det__decision__rule_8hpp" local="no">sdm/utils/decision_rules/det_decision_rule.hpp</includes>
+    <includes local="no">sdm/world/serialized_occupancy_mdp.tpp</includes>
+    <includedby refid="worlds_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp</includedby>
+    <incdepgraph>
+      <node id="5562">
+        <label>locale</label>
+      </node>
+      <node id="5592">
+        <label>sdm/core/space/multi_space.hpp</label>
+        <link refid="multi__space_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5530" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5542" relation="include">
+        </childnode>
+        <childnode refid="5593" relation="include">
+        </childnode>
+      </node>
+      <node id="5611">
+        <label>sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5531" relation="include">
+        </childnode>
+        <childnode refid="5585" relation="include">
+        </childnode>
+        <childnode refid="5612" relation="include">
+        </childnode>
+        <childnode refid="5613" relation="include">
+        </childnode>
+      </node>
+      <node id="5565">
+        <label>sdm/world/world_type.hpp</label>
+        <link refid="world__type_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5566" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+      </node>
+      <node id="5563">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="5594">
+        <label>sdm/core/space/multi_discrete_space.tpp</label>
+      </node>
+      <node id="5612">
+        <label>sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5586" relation="include">
+        </childnode>
+        <childnode refid="5611" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5600" relation="include">
+        </childnode>
+        <childnode refid="5609" relation="include">
+        </childnode>
+      </node>
+      <node id="5550">
+        <label>assert.h</label>
+      </node>
+      <node id="5581">
+        <label>sdm/utils/decision_rules/det_decision_rule.hpp</label>
+        <link refid="det__decision__rule_8hpp"/>
+        <childnode refid="5582" relation="include">
+        </childnode>
+        <childnode refid="5540" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+      </node>
+      <node id="5566">
+        <label>sdm/core/states.hpp</label>
+        <link refid="states_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5567" relation="include">
+        </childnode>
+        <childnode refid="5575" relation="include">
+        </childnode>
+        <childnode refid="5577" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5579" relation="include">
+        </childnode>
+      </node>
+      <node id="5543">
+        <label>sdm/core/space/discrete_space.tpp</label>
+      </node>
+      <node id="5544">
+        <label>sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5545" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5558" relation="include">
+        </childnode>
+        <childnode refid="5561" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+      </node>
+      <node id="5577">
+        <label>sdm/core/state/occupancy_state.hpp</label>
+        <link refid="occupancy__state_8hpp"/>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5567" relation="include">
+        </childnode>
+        <childnode refid="5578" relation="include">
+        </childnode>
+      </node>
+      <node id="5575">
+        <label>sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5576" relation="include">
+        </childnode>
+      </node>
+      <node id="5530">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="5608">
+        <label>sdm/utils/linear_algebra/vector.hpp</label>
+        <link refid="linear__algebra_2vector_8hpp"/>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5605" relation="include">
+        </childnode>
+        <childnode refid="5606" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+      </node>
+      <node id="5545">
+        <label>sdm/public/algorithm.hpp</label>
+        <link refid="algorithm_8hpp"/>
+      </node>
+      <node id="5619">
+        <label>sdm/world/po_decision_process.tpp</label>
+      </node>
+      <node id="5574">
+        <label>sdm/core/state/jhistory_tree.tpp</label>
+      </node>
+      <node id="5554">
+        <label>cmath</label>
+      </node>
+      <node id="5525">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp</label>
+        <link refid="serialized__occupancy__mdp_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5531" relation="include">
+        </childnode>
+        <childnode refid="5585" relation="include">
+        </childnode>
+        <childnode refid="5614" relation="include">
+        </childnode>
+        <childnode refid="5611" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5579" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5608" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5620" relation="include">
+        </childnode>
+      </node>
+      <node id="5615">
+        <label>sdm/world/po_decision_process.hpp</label>
+        <link refid="po__decision__process_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5586" relation="include">
+        </childnode>
+        <childnode refid="5616" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5600" relation="include">
+        </childnode>
+        <childnode refid="5618" relation="include">
+        </childnode>
+        <childnode refid="5609" relation="include">
+        </childnode>
+        <childnode refid="5619" relation="include">
+        </childnode>
+      </node>
+      <node id="5606">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="5536">
+        <label>string</label>
+      </node>
+      <node id="5552">
+        <label>sdm/utils/linear_algebra/sdms_vector.tpp</label>
+      </node>
+      <node id="5560">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="5582">
+        <label>map</label>
+      </node>
+      <node id="5583">
+        <label>sdm/exception.hpp</label>
+        <link refid="exception_8hpp"/>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5584" relation="include">
+        </childnode>
+      </node>
+      <node id="5558">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="5559" relation="include">
+        </childnode>
+        <childnode refid="5540" relation="include">
+        </childnode>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5560" relation="include">
+        </childnode>
+      </node>
+      <node id="5570">
+        <label>unordered_set</label>
+      </node>
+      <node id="5540">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="5572">
+        <label>sdm/core/state/history_tree.tpp</label>
+      </node>
+      <node id="5618">
+        <label>sdm/core/observation_dynamics.hpp</label>
+        <link refid="observation__dynamics_8hpp"/>
+        <childnode refid="5570" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5601" relation="include">
+        </childnode>
+      </node>
+      <node id="5541">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5533" relation="include">
+        </childnode>
+      </node>
+      <node id="5578">
+        <label>sdm/core/state/occupancy_state.tpp</label>
+      </node>
+      <node id="5584">
+        <label>exception</label>
+      </node>
+      <node id="5553">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="5529" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+      </node>
+      <node id="5538">
+        <label>fstream</label>
+      </node>
+      <node id="5591">
+        <label>sdm/core/space/multi_discrete_space.hpp</label>
+        <link refid="multi__discrete__space_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5530" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5592" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5534" relation="include">
+        </childnode>
+        <childnode refid="5594" relation="include">
+        </childnode>
+      </node>
+      <node id="5573">
+        <label>sdm/core/state/jhistory_tree.hpp</label>
+        <link refid="jhistory__tree_8hpp"/>
+        <childnode refid="5568" relation="include">
+        </childnode>
+        <childnode refid="5534" relation="include">
+        </childnode>
+        <childnode refid="5574" relation="include">
+        </childnode>
+      </node>
+      <node id="5531">
+        <label>sdm/world/solvable_by_hsvi.hpp</label>
+        <link refid="solvable__by__hsvi_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5565" relation="include">
+        </childnode>
+        <childnode refid="5558" relation="include">
+        </childnode>
+        <childnode refid="5583" relation="include">
+        </childnode>
+      </node>
+      <node id="5568">
+        <label>sdm/core/state/history_tree.hpp</label>
+        <link refid="history__tree_8hpp"/>
+        <childnode refid="5569" relation="include">
+        </childnode>
+        <childnode refid="5572" relation="include">
+        </childnode>
+      </node>
+      <node id="5548">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="5596">
+        <label>sdm/world/base/decision_process_base.hpp</label>
+        <link refid="decision__process__base_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5597" relation="include">
+        </childnode>
+        <childnode refid="5599" relation="include">
+        </childnode>
+      </node>
+      <node id="5614">
+        <label>sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5615" relation="include">
+        </childnode>
+        <childnode refid="5611" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5600" relation="include">
+        </childnode>
+        <childnode refid="5609" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+      </node>
+      <node id="5549">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="5587">
+        <label>tuple</label>
+      </node>
+      <node id="5555">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="5598">
+        <label>sdm/world/base/stochastic_process_base.tpp</label>
+      </node>
+      <node id="5532">
+        <label>sdm/core/space/discrete_space.hpp</label>
+        <link refid="discrete__space_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5530" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5534" relation="include">
+        </childnode>
+        <childnode refid="5542" relation="include">
+        </childnode>
+        <childnode refid="5543" relation="include">
+        </childnode>
+      </node>
+      <node id="5593">
+        <label>sdm/core/space/multi_space.tpp</label>
+      </node>
+      <node id="5595">
+        <label>sdm/world/gym_interface.tpp</label>
+      </node>
+      <node id="5533">
+        <label>vector</label>
+      </node>
+      <node id="5586">
+        <label>sdm/world/decision_process.hpp</label>
+        <link refid="decision__process_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5587" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5583" relation="include">
+        </childnode>
+        <childnode refid="5588" relation="include">
+        </childnode>
+        <childnode refid="5596" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5592" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5600" relation="include">
+        </childnode>
+        <childnode refid="5609" relation="include">
+        </childnode>
+        <childnode refid="5610" relation="include">
+        </childnode>
+      </node>
+      <node id="5601">
+        <label>sdm/utils/linear_algebra/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="5602" relation="include">
+        </childnode>
+        <childnode refid="5603" relation="include">
+        </childnode>
+        <childnode refid="5604" relation="include">
+        </childnode>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5605" relation="include">
+        </childnode>
+        <childnode refid="5606" relation="include">
+        </childnode>
+        <childnode refid="5607" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5608" relation="include">
+        </childnode>
+      </node>
+      <node id="5547">
+        <label>sdm/utils/linear_algebra/sdms_vector.hpp</label>
+        <link refid="sdms__vector_8hpp"/>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+      </node>
+      <node id="5557">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5541" relation="include">
+        </childnode>
+      </node>
+      <node id="5603">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="5546">
+        <label>sdm/core/state/state.hpp</label>
+        <link refid="state_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5547" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+      </node>
+      <node id="5542">
+        <label>sdm/core/space/space.hpp</label>
+        <link refid="space_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5530" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+      </node>
+      <node id="5539">
+        <label>sstream</label>
+      </node>
+      <node id="5600">
+        <label>sdm/core/state_dynamics.hpp</label>
+        <link refid="state__dynamics_8hpp"/>
+        <childnode refid="5570" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5601" relation="include">
+        </childnode>
+      </node>
+      <node id="5534">
+        <label>sdm/core/joint.hpp</label>
+        <link refid="joint_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5540" relation="include">
+        </childnode>
+        <childnode refid="5541" relation="include">
+        </childnode>
+      </node>
+      <node id="5571">
+        <label>sdm/utils/struct/tree.tpp</label>
+      </node>
+      <node id="5580">
+        <label>sdm/core/state/serialized_occupancy_state.tpp</label>
+      </node>
+      <node id="5561">
+        <label>sdm/utils/logging/logger.hpp</label>
+        <link refid="logger_8hpp"/>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5562" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+      </node>
+      <node id="5609">
+        <label>sdm/core/reward.hpp</label>
+        <link refid="reward_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5608" relation="include">
+        </childnode>
+      </node>
+      <node id="5564">
+        <label>sdm/algorithms/hsvi.tpp</label>
+      </node>
+      <node id="5604">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="5537">
+        <label>cstdlib</label>
+      </node>
+      <node id="5528">
+        <label>iostream</label>
+      </node>
+      <node id="5602">
+        <label>boost/numeric/ublas/matrix_sparse.hpp</label>
+      </node>
+      <node id="5597">
+        <label>sdm/world/base/stochastic_process_base.hpp</label>
+        <link refid="stochastic__process__base_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5598" relation="include">
+        </childnode>
+      </node>
+      <node id="5527">
+        <label>cstddef</label>
+      </node>
+      <node id="5579">
+        <label>sdm/core/state/serialized_occupancy_state.hpp</label>
+        <link refid="serialized__occupancy__state_8hpp"/>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5580" relation="include">
+        </childnode>
+      </node>
+      <node id="5535">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5538" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+        <childnode refid="5528" relation="include">
+        </childnode>
+      </node>
+      <node id="5529">
+        <label>unordered_map</label>
+      </node>
+      <node id="5616">
+        <label>sdm/world/base/po_process_base.hpp</label>
+        <link refid="po__process__base_8hpp"/>
+        <childnode refid="5597" relation="include">
+        </childnode>
+        <childnode refid="5617" relation="include">
+        </childnode>
+      </node>
+      <node id="5588">
+        <label>sdm/world/gym_interface.hpp</label>
+        <link refid="gym__interface_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5587" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5589" relation="include">
+        </childnode>
+        <childnode refid="5542" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5595" relation="include">
+        </childnode>
+      </node>
+      <node id="5607">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="5599">
+        <label>sdm/world/base/decision_process_base.tpp</label>
+      </node>
+      <node id="5551">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+      </node>
+      <node id="5620">
+        <label>sdm/world/serialized_occupancy_mdp.tpp</label>
+      </node>
+      <node id="5613">
+        <label>sdm/world/belief_mdp.tpp</label>
+      </node>
+      <node id="5617">
+        <label>sdm/world/base/po_process_base.tpp</label>
+      </node>
+      <node id="5589">
+        <label>sdm/public/world.hpp</label>
+        <link refid="world_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5590" relation="include">
+        </childnode>
+      </node>
+      <node id="5610">
+        <label>sdm/world/decision_process.tpp</label>
+      </node>
+      <node id="5585">
+        <label>sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5531" relation="include">
+        </childnode>
+        <childnode refid="5586" relation="include">
+        </childnode>
+        <childnode refid="5611" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5600" relation="include">
+        </childnode>
+        <childnode refid="5609" relation="include">
+        </childnode>
+      </node>
+      <node id="5556">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5541" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+      </node>
+      <node id="5567">
+        <label>sdm/core/state/history.hpp</label>
+        <link refid="history_8hpp"/>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5568" relation="include">
+        </childnode>
+        <childnode refid="5573" relation="include">
+        </childnode>
+      </node>
+      <node id="5576">
+        <label>sdm/core/state/belief_state.tpp</label>
+      </node>
+      <node id="5590">
+        <label>sdm/public/feedback.hpp</label>
+        <link refid="feedback_8hpp"/>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5587" relation="include">
+        </childnode>
+      </node>
+      <node id="5559">
+        <label>memory</label>
+      </node>
+      <node id="5605">
+        <label>eigen3/Eigen/Sparse</label>
+      </node>
+      <node id="5569">
+        <label>sdm/utils/struct/tree.hpp</label>
+        <link refid="tree_8hpp"/>
+        <childnode refid="5570" relation="include">
+        </childnode>
+        <childnode refid="5529" relation="include">
+        </childnode>
+        <childnode refid="5559" relation="include">
+        </childnode>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5571" relation="include">
+        </childnode>
+      </node>
+      <node id="5526">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="5527" relation="include">
+        </childnode>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5529" relation="include">
+        </childnode>
+        <childnode refid="5530" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5625">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.cpp</label>
+        <link refid="ndpomdp_8cpp"/>
+      </node>
+      <node id="5621">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp</label>
+        <link refid="serialized__occupancy__mdp_8hpp"/>
+        <childnode refid="5622" relation="include">
+        </childnode>
+      </node>
+      <node id="5624">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp</label>
+        <link refid="ndpomdp_8hpp"/>
+        <childnode refid="5625" relation="include">
+        </childnode>
+        <childnode refid="5622" relation="include">
+        </childnode>
+      </node>
+      <node id="5623">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="5622">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp</label>
+        <link refid="worlds_8hpp"/>
+        <childnode refid="5623" relation="include">
+        </childnode>
+        <childnode refid="5624" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1SerializedOccupancyMDP" prot="public">sdm::SerializedOccupancyMDP</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="solvable__by__hsvi_8hpp" kindref="compound">sdm/world/solvable_by_hsvi.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="discrete__mdp_8hpp" kindref="compound">sdm/world/discrete_mdp.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="discrete__pomdp_8hpp" kindref="compound">sdm/world/discrete_pomdp.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="belief__mdp_8hpp" kindref="compound">sdm/world/belief_mdp.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="discrete__space_8hpp" kindref="compound">sdm/core/space/discrete_space.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialized__occupancy__state_8hpp" kindref="compound">sdm/core/state/serialized_occupancy_state.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialized__state_8hpp" kindref="compound">sdm/core/state/serialized_state.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="linear__algebra_2vector_8hpp" kindref="compound">sdm/utils/linear_algebra/vector.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="det__decision__rule_8hpp" kindref="compound">sdm/utils/decision_rules/det_decision_rule.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DiscreteDecPOMDP;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>oState<sp/>=<sp/>SerializedOccupancyState&lt;SerializedState,<sp/>Jo</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">HistoryTree_p&lt;number&gt;&gt;,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>oAction<sp/>=<sp/>DeterministicDecisionRule&lt;HistoryTree_p&lt;number&gt;,<sp/>number&gt;&gt;</highlight></codeline>
+<codeline lineno="31" refid="classsdm_1_1SerializedOccupancyMDP" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1SerializedOccupancyMDP" kindref="compound">SerializedOccupancyMDP</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt;oState,<sp/>oAction&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="classsdm_1_1SerializedOccupancyMDP_1a233c82f951ff63266704cafc3ce36be0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;DiscreteDecPOMDP&gt;<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a233c82f951ff63266704cafc3ce36be0" kindref="member">dpomdp_</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classsdm_1_1SerializedOccupancyMDP_1a3b8548b85f283d5477dc14bf08ea229d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oState<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a3b8548b85f283d5477dc14bf08ea229d" kindref="member">istate_</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classsdm_1_1SerializedOccupancyMDP_1ababda5a3b17d829806e86ad69c6789cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oState<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1ababda5a3b17d829806e86ad69c6789cd" kindref="member">cstate_</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classsdm_1_1SerializedOccupancyMDP_1a52279b4c489613f82dc162412d13ee4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a52279b4c489613f82dc162412d13ee4a" kindref="member">state_type</ref><sp/>=<sp/>oState;</highlight></codeline>
+<codeline lineno="40" refid="classsdm_1_1SerializedOccupancyMDP_1ac865aafb7ffd6e1d384516535a38806a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1ac865aafb7ffd6e1d384516535a38806a" kindref="member">action_type</ref><sp/>=<sp/>oAction;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>using<sp/>observation_type<sp/>=<sp/>oObservation;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a5acae209c20c8514508ed0b408b7bd6c" kindref="member">SerializedOccupancyMDP</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a5acae209c20c8514508ed0b408b7bd6c" kindref="member">SerializedOccupancyMDP</ref>(std::shared_ptr&lt;DiscreteDecPOMDP&gt;<sp/>underlying_dpomdp);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a5acae209c20c8514508ed0b408b7bd6c" kindref="member">SerializedOccupancyMDP</ref>(std::shared_ptr&lt;DiscreteDecPOMDP&gt;<sp/>underlying_dpomdp,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>hist_length);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a5acae209c20c8514508ed0b408b7bd6c" kindref="member">SerializedOccupancyMDP</ref>(std::string<sp/>underlying_dpomdp);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a5acae209c20c8514508ed0b408b7bd6c" kindref="member">SerializedOccupancyMDP</ref>(std::string<sp/>underlying_dpomdp,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>hist_length);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oState<sp/>&amp;<ref refid="classsdm_1_1SerializedOccupancyMDP_1aed9f3bd0c9394d71be954f6d8b7ecf05" kindref="member">getState</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a5c2306cae35eaefa5b0dcdd49a4c8917" kindref="member">getDiscount</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a6949c2b415d4f05292543749ef9d37d5" kindref="member">isSerialized</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref><sp/>*<ref refid="classsdm_1_1SerializedOccupancyMDP_1a15e90b4c7f38226856ae8e575feae96d" kindref="member">getUnderlyingProblem</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oState<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a68f7a1a8fa7e62ccb22e7f17375815b2" kindref="member">getInitialState</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oState<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a244fec22fe085222e64eb6150128530c" kindref="member">nextState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oState<sp/>&amp;ostate,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oAction<sp/>&amp;oaction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>0,<sp/><ref refid="classsdm_1_1HSVI" kindref="compound">HSVI&lt;oState, oAction&gt;</ref><sp/>*hsvi<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;DiscreteSpace&lt;oAction&gt;&gt;<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a08830b951da1c61bba6aecf914e1e990" kindref="member">getActionSpaceAt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oState<sp/>&amp;);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1ae9f49841d7699538ee922840db5f473d" kindref="member">getReward</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oState<sp/>&amp;ostate,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oAction<sp/>&amp;oaction)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a40c3234348616ff9058f6960115624f6" kindref="member">getExpectedNextValue</ref>(<ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction&lt;oState, oAction&gt;</ref><sp/>*value_function,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oState<sp/>&amp;ostate,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>oAction<sp/>&amp;oaction,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>0)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;SerializedMDP&lt;&gt;&gt;<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1ac44fc97db59f3d087c6f4cb14572addd" kindref="member">toMDP</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;SerializedBeliefMDP&lt;SerializedBeliefState,<sp/>number,<sp/>number&gt;&gt;<sp/><ref refid="classsdm_1_1SerializedOccupancyMDP_1a84926ade2d6519837ca45def09c3885e" kindref="member">toBeliefMDP</ref>();<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sdm/world/serialized_occupancy_mdp.tpp&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp"/>
+  </compounddef>
+</doxygen>

@@ -42,10 +42,11 @@ Inherits the following classes: [sdm::Space](classsdm_1_1Space.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-1-4) () <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object (default)_ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-2-4) (const std::vector&lt; TItem &gt; & items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object._ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-3-4) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Copy constructor._  |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-4-4) (std::initializer\_list&lt; TItem &gt; vals) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object from a list initializer._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-1-5) () <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object (default)_ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-2-5) (const std::vector&lt; TItem &gt; & items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-3-5) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Copy constructor._  |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-4-5) (std::initializer\_list&lt; TItem &gt; vals) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object from a list initializer._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-5-5) (std::enable\_if\_t&lt; TBool, int &gt; num\_items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _Base object._ |
 |  std::vector&lt; TItem &gt; | [**getAll**](classsdm_1_1DiscreteSpace.md#function-getall) () <br>_Get all items in the space._  |
 | virtual std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**getDim**](classsdm_1_1DiscreteSpace.md#function-getdim) () const<br>_Get the dimension._  |
 |  TItem | [**getItem**](classsdm_1_1DiscreteSpace.md#function-getitem) ([**number**](namespacesdm.md#typedef-number) index) const<br>_Get the item at a specific index._  |
@@ -70,6 +71,7 @@ See [sdm::Space](classsdm_1_1Space.md)
 |  bool | [**operator!=**](classsdm_1_1Space.md#function-operator) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 |  bool | [**operator==**](classsdm_1_1Space.md#function-operator-2) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 | virtual std::string | [**str**](classsdm_1_1Space.md#function-str) () const = 0<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
+| virtual  | [**~Space**](classsdm_1_1Space.md#function-space) () <br> |
 
 
 
@@ -124,7 +126,7 @@ using sdm::DiscreteSpace< TItem >::value_type =  TItem;
 ## Public Functions Documentation
 
 
-### function DiscreteSpace [1/4]
+### function DiscreteSpace [1/5]
 
 
 ```cpp
@@ -133,7 +135,7 @@ sdm::DiscreteSpace::DiscreteSpace ()
 
 
 
-### function DiscreteSpace [2/4]
+### function DiscreteSpace [2/5]
 
 
 ```cpp
@@ -148,14 +150,13 @@ sdm::DiscreteSpace::DiscreteSpace (
 **Parameters:**
 
 
-* `num_items` the number of possible items Construct a new Discrete [**Space**](classsdm_1_1Space.md) object
 * `items` a list of possible items in the space 
 
 
 
         
 
-### function DiscreteSpace [3/4]
+### function DiscreteSpace [3/5]
 
 
 ```cpp
@@ -166,12 +167,24 @@ sdm::DiscreteSpace::DiscreteSpace (
 
 
 
-### function DiscreteSpace [4/4]
+### function DiscreteSpace [4/5]
 
 
 ```cpp
 sdm::DiscreteSpace::DiscreteSpace (
     std::initializer_list< TItem > vals
+) 
+```
+
+
+
+### function DiscreteSpace [5/5]
+
+
+```cpp
+template<bool TBool>
+sdm::DiscreteSpace::DiscreteSpace (
+    std::enable_if_t< TBool, int > num_items
 ) 
 ```
 
@@ -347,4 +360,4 @@ inline friend std::ostream & sdm::DiscreteSpace::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/space/discrete_space.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp`

@@ -28,12 +28,14 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
+| namespace | [**std**](namespacestd.md) <br> |
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
-| class | [**DeterministicDecisionRule**](classsdm_1_1DeterministicDecisionRule.md) &lt;typename TState, typename TAction&gt;<br> |
+| class | [**DeterministicDecisionRule**](classsdm_1_1DeterministicDecisionRule.md) &lt;TState, TAction&gt;<br>_The deterministic decision rule class. This class is a function that maps generic states to generic actions._  |
+| struct | [**hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;**](structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4.md) &lt;typename S, typename A&gt;<br> |
 
 
 
@@ -49,4 +51,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/decision_rules/det_decision_rule.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp`

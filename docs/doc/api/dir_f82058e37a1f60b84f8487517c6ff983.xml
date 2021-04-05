@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_f82058e37a1f60b84f8487517c6ff983" kind="dir">
+    <compoundname>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base</compoundname>
+    <innerfile refid="decision__process__base_8hpp">decision_process_base.hpp</innerfile>
+    <innerfile refid="interactive__world__base_8hpp">interactive_world_base.hpp</innerfile>
+    <innerfile refid="po__process__base_8hpp">po_process_base.hpp</innerfile>
+    <innerfile refid="stochastic__process__base_8hpp">stochastic_process_base.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/"/>
+  </compounddef>
+</doxygen>

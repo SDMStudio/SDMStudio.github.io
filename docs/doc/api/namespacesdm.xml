@@ -1,0 +1,1292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacesdm" kind="namespace" language="C++">
+    <compoundname>sdm</compoundname>
+    <innerclass refid="classsdm_1_1AbstractVector" prot="public">sdm::AbstractVector</innerclass>
+    <innerclass refid="classsdm_1_1Algorithm" prot="public">sdm::Algorithm</innerclass>
+    <innerclass refid="classsdm_1_1BackupOperator" prot="public">sdm::BackupOperator</innerclass>
+    <innerclass refid="classsdm_1_1BaseBeliefState" prot="public">sdm::BaseBeliefState</innerclass>
+    <innerclass refid="classsdm_1_1BaseLogger" prot="public">sdm::BaseLogger</innerclass>
+    <innerclass refid="classsdm_1_1Belief2OccupancyValueFunction" prot="public">sdm::Belief2OccupancyValueFunction</innerclass>
+    <innerclass refid="classsdm_1_1BeliefMDP" prot="public">sdm::BeliefMDP</innerclass>
+    <innerclass refid="classsdm_1_1BinaryFunction" prot="public">sdm::BinaryFunction</innerclass>
+    <innerclass refid="classsdm_1_1BlindInitializer" prot="public">sdm::BlindInitializer</innerclass>
+    <innerclass refid="classsdm_1_1BoundInitializer" prot="public">sdm::BoundInitializer</innerclass>
+    <innerclass refid="classsdm_1_1ClassicBellmanBackupOperator" prot="public">sdm::ClassicBellmanBackupOperator</innerclass>
+    <innerclass refid="classsdm_1_1CSVLogger" prot="public">sdm::CSVLogger</innerclass>
+    <innerclass refid="classsdm_1_1DecisionProcess" prot="public">sdm::DecisionProcess</innerclass>
+    <innerclass refid="classsdm_1_1DecisionProcessBase" prot="public">sdm::DecisionProcessBase</innerclass>
+    <innerclass refid="classsdm_1_1DeterministicDecisionRule" prot="public">sdm::DeterministicDecisionRule</innerclass>
+    <innerclass refid="classsdm_1_1DiscreteAction" prot="public">sdm::DiscreteAction</innerclass>
+    <innerclass refid="classsdm_1_1DiscreteDecPOMDP" prot="public">sdm::DiscreteDecPOMDP</innerclass>
+    <innerclass refid="classsdm_1_1DiscreteMDP" prot="public">sdm::DiscreteMDP</innerclass>
+    <innerclass refid="classsdm_1_1DiscreteMMDP" prot="public">sdm::DiscreteMMDP</innerclass>
+    <innerclass refid="classsdm_1_1DiscretePOMDP" prot="public">sdm::DiscretePOMDP</innerclass>
+    <innerclass refid="classsdm_1_1DiscreteSpace" prot="public">sdm::DiscreteSpace</innerclass>
+    <innerclass refid="structsdm_1_1EpsGreedy" prot="public">sdm::EpsGreedy</innerclass>
+    <innerclass refid="classsdm_1_1feedback" prot="public">sdm::feedback</innerclass>
+    <innerclass refid="classsdm_1_1FileLogger" prot="public">sdm::FileLogger</innerclass>
+    <innerclass refid="classsdm_1_1Function" prot="public">sdm::Function</innerclass>
+    <innerclass refid="classsdm_1_1FunctionSpace" prot="public">sdm::FunctionSpace</innerclass>
+    <innerclass refid="classsdm_1_1GymInterface" prot="public">sdm::GymInterface</innerclass>
+    <innerclass refid="classsdm_1_1HistoryTree" prot="public">sdm::HistoryTree</innerclass>
+    <innerclass refid="classsdm_1_1HSVI" prot="public">sdm::HSVI</innerclass>
+    <innerclass refid="classsdm_1_1IncrementalValueFunction" prot="public">sdm::IncrementalValueFunction</innerclass>
+    <innerclass refid="classsdm_1_1Initializer" prot="public">sdm::Initializer</innerclass>
+    <innerclass refid="classsdm_1_1InitializerFactory" prot="public">sdm::InitializerFactory</innerclass>
+    <innerclass refid="classsdm_1_1InteractiveWorld" prot="public">sdm::InteractiveWorld</innerclass>
+    <innerclass refid="classsdm_1_1InteractiveWorldBase" prot="public">sdm::InteractiveWorldBase</innerclass>
+    <innerclass refid="structsdm_1_1Item" prot="public">sdm::Item</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01bool_01_4" prot="public">sdm::Item&lt; bool &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01char_01_4" prot="public">sdm::Item&lt; char &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01double_01_4" prot="public">sdm::Item&lt; double &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01float_01_4" prot="public">sdm::Item&lt; float &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01int_01_4" prot="public">sdm::Item&lt; int &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01long_01_4" prot="public">sdm::Item&lt; long &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01short_01_4" prot="public">sdm::Item&lt; short &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01unsigned_01int_01_4" prot="public">sdm::Item&lt; unsigned int &gt;</innerclass>
+    <innerclass refid="structsdm_1_1Item_3_01unsigned_01short_01_4" prot="public">sdm::Item&lt; unsigned short &gt;</innerclass>
+    <innerclass refid="classsdm_1_1Joint" prot="public">sdm::Joint</innerclass>
+    <innerclass refid="classsdm_1_1JointHistoryTree" prot="public">sdm::JointHistoryTree</innerclass>
+    <innerclass refid="classsdm_1_1LearningAlgo" prot="public">sdm::LearningAlgo</innerclass>
+    <innerclass refid="classsdm_1_1Logger" prot="public">sdm::Logger</innerclass>
+    <innerclass refid="classsdm_1_1MappedDisreteDistrib" prot="public">sdm::MappedDisreteDistrib</innerclass>
+    <innerclass refid="classsdm_1_1MappedVector" prot="public">sdm::MappedVector</innerclass>
+    <innerclass refid="classsdm_1_1matrix" prot="public">sdm::matrix</innerclass>
+    <innerclass refid="classsdm_1_1MaxInitializer" prot="public">sdm::MaxInitializer</innerclass>
+    <innerclass refid="classsdm_1_1MaxPlanValueFunction" prot="public">sdm::MaxPlanValueFunction</innerclass>
+    <innerclass refid="classsdm_1_1MDPInitializer" prot="public">sdm::MDPInitializer</innerclass>
+    <innerclass refid="classsdm_1_1MinInitializer" prot="public">sdm::MinInitializer</innerclass>
+    <innerclass refid="classsdm_1_1MultiDiscreteSpace" prot="public">sdm::MultiDiscreteSpace</innerclass>
+    <innerclass refid="classsdm_1_1MultiLogger" prot="public">sdm::MultiLogger</innerclass>
+    <innerclass refid="classsdm_1_1MultiSpace" prot="public">sdm::MultiSpace</innerclass>
+    <innerclass refid="classsdm_1_1NDPOMDP" prot="public">sdm::NDPOMDP</innerclass>
+    <innerclass refid="classsdm_1_1ObservationDynamics" prot="public">sdm::ObservationDynamics</innerclass>
+    <innerclass refid="classsdm_1_1OccupancyMDP" prot="public">sdm::OccupancyMDP</innerclass>
+    <innerclass refid="classsdm_1_1OccupancyState" prot="public">sdm::OccupancyState</innerclass>
+    <innerclass refid="classsdm_1_1PartiallyObservableDecisionProcess" prot="public">sdm::PartiallyObservableDecisionProcess</innerclass>
+    <innerclass refid="classsdm_1_1PartiallyObservableProcessBase" prot="public">sdm::PartiallyObservableProcessBase</innerclass>
+    <innerclass refid="classsdm_1_1POMDPInitializer" prot="public">sdm::POMDPInitializer</innerclass>
+    <innerclass refid="classsdm_1_1QLearning" prot="public">sdm::QLearning</innerclass>
+    <innerclass refid="classsdm_1_1RecursiveMap" prot="public">sdm::RecursiveMap</innerclass>
+    <innerclass refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4" prot="public">sdm::RecursiveMap&lt; T0, T1 &gt;</innerclass>
+    <innerclass refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_00_01T2_00_01Ts_8_8_8_01_4" prot="public">sdm::RecursiveMap&lt; T0, T1, T2, Ts... &gt;</innerclass>
+    <innerclass refid="classsdm_1_1ReplayMemory" prot="public">sdm::ReplayMemory</innerclass>
+    <innerclass refid="classsdm_1_1Reward" prot="public">sdm::Reward</innerclass>
+    <innerclass refid="classsdm_1_1sdmsVector" prot="public">sdm::sdmsVector</innerclass>
+    <innerclass refid="classsdm_1_1SerializedBeliefMDP" prot="public">sdm::SerializedBeliefMDP</innerclass>
+    <innerclass refid="classsdm_1_1SerializedBeliefState" prot="public">sdm::SerializedBeliefState</innerclass>
+    <innerclass refid="classsdm_1_1SerializedMDP" prot="public">sdm::SerializedMDP</innerclass>
+    <innerclass refid="classsdm_1_1SerializedOccupancyMDP" prot="public">sdm::SerializedOccupancyMDP</innerclass>
+    <innerclass refid="classsdm_1_1SerializedOccupancyState" prot="public">sdm::SerializedOccupancyState</innerclass>
+    <innerclass refid="classsdm_1_1SerializedState" prot="public">sdm::SerializedState</innerclass>
+    <innerclass refid="classsdm_1_1SolvableByHSVI" prot="public">sdm::SolvableByHSVI</innerclass>
+    <innerclass refid="classsdm_1_1Space" prot="public">sdm::Space</innerclass>
+    <innerclass refid="classsdm_1_1State2OccupancyValueFunction" prot="public">sdm::State2OccupancyValueFunction</innerclass>
+    <innerclass refid="classsdm_1_1StateDynamics" prot="public">sdm::StateDynamics</innerclass>
+    <innerclass refid="classsdm_1_1StdLogger" prot="public">sdm::StdLogger</innerclass>
+    <innerclass refid="classsdm_1_1StochasticProcessBase" prot="public">sdm::StochasticProcessBase</innerclass>
+    <innerclass refid="classsdm_1_1TabularValueFunction" prot="public">sdm::TabularValueFunction</innerclass>
+    <innerclass refid="classsdm_1_1Tree" prot="public">sdm::Tree</innerclass>
+    <innerclass refid="classsdm_1_1ValueFunction" prot="public">sdm::ValueFunction</innerclass>
+    <innerclass refid="classsdm_1_1ValueFunctionFactory" prot="public">sdm::ValueFunctionFactory</innerclass>
+    <innerclass refid="classsdm_1_1ValueInitializer" prot="public">sdm::ValueInitializer</innerclass>
+    <innerclass refid="classsdm_1_1Variations" prot="public">sdm::Variations</innerclass>
+    <innerclass refid="classsdm_1_1vector" prot="public">sdm::vector</innerclass>
+    <innerclass refid="classsdm_1_1VectorImpl" prot="public">sdm::VectorImpl</innerclass>
+    <innerclass refid="classsdm_1_1World" prot="public">sdm::World</innerclass>
+    <innerclass refid="structsdm_1_1WorldType" prot="public">sdm::WorldType</innerclass>
+    <innerclass refid="classsdm_1_1ZeroInitializer" prot="public">sdm::ZeroInitializer</innerclass>
+    <innernamespace refid="namespacesdm_1_1algo">sdm::algo</innernamespace>
+    <innernamespace refid="namespacesdm_1_1ast">sdm::ast</innernamespace>
+    <innernamespace refid="namespacesdm_1_1common">sdm::common</innernamespace>
+    <innernamespace refid="namespacesdm_1_1exception">sdm::exception</innernamespace>
+    <innernamespace refid="namespacesdm_1_1parser">sdm::parser</innernamespace>
+    <innernamespace refid="namespacesdm_1_1tools">sdm::tools</innernamespace>
+    <innernamespace refid="namespacesdm_1_1world">sdm::world</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5" prot="public" static="no">
+        <name>Metric</name>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5a5f5f7f902a724c49c4ec2acba70b29eb" prot="public">
+          <name>CUMULATIVE_REWARD_PER_STEP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5afde8d6d3b1071a9661f53119747336f5" prot="public">
+          <name>CUMULATIVE_REWARD_PER_EPISODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5a4bc253737a28bbbf73e0b23b53b9f49a" prot="public">
+          <name>AVERAGE_EPISODE_REWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5a176e5373339cd3365e706fce40538f95" prot="public">
+          <name>AVERAGE_EPISODE_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5af777f7d7d3e814535a6009f33bb52c29" prot="public">
+          <name>MEDIAN_EPISODE_REWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5a33afcff41d5fdd6fe11c11221e51b066" prot="public">
+          <name>CUMULATIVE_STEPS_PER_EPISODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a1ebf1b9159352c66dbca807e6e21f0a5a585ed7d3cb1b7bfdb98f8e0db872f6a7" prot="public">
+          <name>STEPS_PER_EPISODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumerator for the types of statistics that can be plotted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="55" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="54" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70" prot="public" static="no">
+        <name>Statistic</name>
+        <enumvalue id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70a86348beba48085db604bd8fc8c8ba64b" prot="public">
+          <name>MIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70acefa0869685b400a0b7bd2f1ce59da82" prot="public">
+          <name>MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70a8985f6ee5ff316d0cc16c9dfda1bd6de" prot="public">
+          <name>MEAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70a91b133d011757346458a94e5729b76e6" prot="public">
+          <name>RANGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70ae82202d1f85c3b860fe04c9365d292d7" prot="public">
+          <name>VARIANCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1afa739cb80a378cc2360f044d8db5be70a2a623a36f99b4d7c92a622343a65e424" prot="public">
+          <name>STANDARD_DEVIATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumerator for the types of statistics that can be recorded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="69" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacesdm_1a73f5d602a7ef834f041f110361892ccd" prot="public" static="no">
+        <name>TypeSoftmax</name>
+        <enumvalue id="namespacesdm_1a73f5d602a7ef834f041f110361892ccdaf396c643e0bd30d918fcabb0359713f3" prot="public">
+          <name>BELIEF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a73f5d602a7ef834f041f110361892ccdaed21be9bbfdddde8ee111f3b051f65a3" prot="public">
+          <name>BEHAVIOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1a73f5d602a7ef834f041f110361892ccda18e8262948475c274beb2f08e010a394" prot="public">
+          <name>OCCUPANCY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="79" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacesdm_1ae5dbe8bf7b73a17a74ff82cc3338e088" prot="public" static="no">
+        <name>Criterion</name>
+        <enumvalue id="namespacesdm_1ae5dbe8bf7b73a17a74ff82cc3338e088aaabb5d5ed587db1e06aa8b3b66da9a8e" prot="public">
+          <name>COST_MIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacesdm_1ae5dbe8bf7b73a17a74ff82cc3338e088a99b9c74bd98e9e2a9a009d5953bd1305" prot="public">
+          <name>REW_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="86" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="85" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacesdm_1aba488b16910a4aa58f65c361ffffebbf" prot="public" static="no">
+        <type><ref refid="classsdm_1_1Joint" kindref="compound">Joint</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;</type>
+        <definition>typedef Joint&lt;number&gt; sdm::JointItem</definition>
+        <argsstring></argsstring>
+        <name>JointItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/joint.hpp" line="87" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/joint.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a0f879b55491e973a5c14fb31452c9a3f" prot="public" static="no">
+        <type><ref refid="classsdm_1_1BaseBeliefState" kindref="compound">BaseBeliefState</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;</type>
+        <definition>using sdm::BeliefState = typedef BaseBeliefState&lt;number&gt;</definition>
+        <argsstring></argsstring>
+        <name>BeliefState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/belief_state.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/belief_state.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a79acfcf9d32940ac24ba3af9ee3c91fc" prot="public" static="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>using sdm::History = typedef std::vector&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>History</name>
+        <briefdescription>
+<para>History seq alias. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1ae9db77d59e18662b71435fd4653379c3" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a79acfcf9d32940ac24ba3af9ee3c91fc" kindref="member">History</ref>&lt; int &gt;</type>
+        <definition>using sdm::int_history = typedef History&lt;int&gt;</definition>
+        <argsstring></argsstring>
+        <name>int_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a19e8aaed24d1ead1d52d6b3039a9eb37" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a79acfcf9d32940ac24ba3af9ee3c91fc" kindref="member">History</ref>&lt; char &gt;</type>
+        <definition>using sdm::char_history = typedef History&lt;char&gt;</definition>
+        <argsstring></argsstring>
+        <name>char_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a3d3c69f530ed43dd592eb54bffdf7699" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1HistoryTree" kindref="compound">HistoryTree</ref>&lt; T &gt; &gt;</type>
+        <definition>using sdm::HistoryTree_p = typedef std::shared_ptr&lt;HistoryTree&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>HistoryTree_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="37" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1aa5e124f3febe0e2c52f3c1c3ed35cc17" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1JointHistoryTree" kindref="compound">JointHistoryTree</ref>&lt; T &gt; &gt;</type>
+        <definition>using sdm::JointHistoryTree_p = typedef std::shared_ptr&lt;JointHistoryTree&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>JointHistoryTree_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="40" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1aba66cdd55c2f733d0a3b572afec2f97e" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a3d3c69f530ed43dd592eb54bffdf7699" kindref="member">HistoryTree_p</ref>&lt; obs_t &gt;</type>
+        <definition>using sdm::ObsHistoryTree_p = typedef HistoryTree_p&lt;obs_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>ObsHistoryTree_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="43" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a76dee807e1ecd818a7fda522c0416180" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a3d3c69f530ed43dd592eb54bffdf7699" kindref="member">HistoryTree_p</ref>&lt; std::pair&lt; action_t, obs_t &gt; &gt;</type>
+        <definition>using sdm::ActObsHistoryTree_p = typedef HistoryTree_p&lt;std::pair&lt;action_t, obs_t&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>ActObsHistoryTree_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" line="46" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>typedef std::size_t sdm::size_t</definition>
+        <argsstring></argsstring>
+        <name>size_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a8a7c60fa767668fa52b349d259104595" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a1c4e36c9f0e77565cb41cdadc3a2277a" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::dtype</definition>
+        <argsstring></argsstring>
+        <name>dtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="35" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1ac1827d766698d83a834ceff9761118d3" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::agent</definition>
+        <argsstring></argsstring>
+        <name>agent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="37" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="39" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1ae21094a69e920050f2aa1c7b5c0d2677" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="41" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a5ddd53ea7e4cf65a50bc50f21441d9be" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::horizon</definition>
+        <argsstring></argsstring>
+        <name>horizon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="43" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1af59f791f3163aa7cf0dee3a7f7c408a4" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sdm::observation</definition>
+        <argsstring></argsstring>
+        <name>observation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="45" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a1e46782a275686555a581240f902e425" prot="public" static="no">
+        <type>boost::bimaps::bimap&lt; std::string, <ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">sdm::size_t</ref> &gt;</type>
+        <definition>typedef boost::bimaps::bimap&lt;std::string, sdm::size_t&gt; sdm::bimap</definition>
+        <argsstring></argsstring>
+        <name>bimap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a5dcd6b98f2c3bf42e17de4aac0679754" prot="public" static="no">
+        <type>bimap::value_type</type>
+        <definition>typedef bimap::value_type sdm::name2index</definition>
+        <argsstring></argsstring>
+        <name>name2index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="49" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1aa356bfb99c6688d291e2bdfeaeb2de89" prot="public" static="no">
+        <type><ref refid="classsdm_1_1DeterministicDecisionRule" kindref="compound">DeterministicDecisionRule</ref>&lt; TState, TAction &gt;</type>
+        <definition>using sdm::DetDecisionRule = typedef DeterministicDecisionRule&lt;TState, TAction&gt;</definition>
+        <argsstring></argsstring>
+        <name>DetDecisionRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="79" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a839d56a6bc92ba91266a926a8674e08b" prot="public" static="no">
+        <type><ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref>&lt; I, T, boost::numeric::ublas::mapped_vector&lt; T &gt; &gt;</type>
+        <definition>using sdm::SparseVector = typedef sdmsVector&lt;I, T, boost::numeric::ublas::mapped_vector&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>SparseVector</name>
+        <briefdescription>
+<para>Sparse vector are vectors that store only non-zero values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of index </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="70" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1ac6edbc001eca6b342cea6edd868f0345" prot="public" static="no">
+        <type><ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref>&lt; I, T, boost::numeric::ublas::vector&lt; T &gt; &gt;</type>
+        <definition>using sdm::DenseVector = typedef sdmsVector&lt;I, T, boost::numeric::ublas::vector&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>DenseVector</name>
+        <briefdescription>
+<para>Dense vector are standard vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of index </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="79" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1aee830b8adc29011828a9a330a8ed5b2f" prot="public" static="no">
+        <type>std::tuple&lt; <ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref>, <ref refid="namespacesdm_1ae21094a69e920050f2aa1c7b5c0d2677" kindref="member">action</ref>, double, <ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref> &gt;</type>
+        <definition>typedef std::tuple&lt;state, action, double, state&gt; sdm::sars_transition</definition>
+        <argsstring></argsstring>
+        <name>sars_transition</name>
+        <briefdescription>
+<para>Transition of state, action, reward, next_state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="21" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" prot="public" static="no">
+        <type>std::pair&lt; T, U &gt;</type>
+        <definition>using sdm::Pair = typedef std::pair&lt;T, U&gt;</definition>
+        <argsstring></argsstring>
+        <name>Pair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/pair.hpp" line="9" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/pair.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a6774522bb754110e0d35600dd34770e9" prot="public" static="no">
+        <type>typename <ref refid="classsdm_1_1RecursiveMap" kindref="compound">RecursiveMap</ref>&lt; T0, T1, Ts... &gt;::type</type>
+        <definition>using sdm::RecursiveMap_t = typedef typename RecursiveMap&lt;T0, T1, Ts...&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>RecursiveMap_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="39" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a49585d5003216378c9d9bb645ffe26bd" prot="public" static="no">
+        <type>typename <ref refid="classsdm_1_1RecursiveMap" kindref="compound">RecursiveMap</ref>&lt; T0, T1, Ts... &gt;::value_type</type>
+        <definition>using sdm::value_t = typedef typename RecursiveMap&lt;T0, T1, Ts...&gt;::value_type</definition>
+        <argsstring></argsstring>
+        <name>value_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="42" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1af5821f036e7113113615cd44824f2630" prot="public" static="no">
+        <type>std::tuple&lt; T... &gt;</type>
+        <definition>using sdm::Tuple = typedef std::tuple&lt;T...&gt;</definition>
+        <argsstring></argsstring>
+        <name>Tuple</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" line="10" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1aa136f1ca8923a8e05d11d6f2ced030fd" prot="public" static="no">
+        <type><ref refid="classsdm_1_1TabularValueFunction" kindref="compound">TabularValueFunction</ref>&lt; TState, TAction, TValue, <ref refid="classsdm_1_1ClassicBellmanBackupOperator" kindref="compound">ClassicBellmanBackupOperator</ref>, <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> &gt;</type>
+        <definition>using sdm::MappedValueFunction = typedef TabularValueFunction&lt;TState, TAction, TValue, ClassicBellmanBackupOperator, MappedVector&gt;</definition>
+        <argsstring></argsstring>
+        <name>MappedValueFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="119" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a07939499b3f33b4d1f998b1051fc532e" prot="public" static="no">
+        <type><ref refid="classsdm_1_1TabularValueFunction" kindref="compound">TabularValueFunction</ref>&lt; TState, TAction, TValue, <ref refid="classsdm_1_1ClassicBellmanBackupOperator" kindref="compound">ClassicBellmanBackupOperator</ref>, <ref refid="namespacesdm_1a839d56a6bc92ba91266a926a8674e08b" kindref="member">SparseVector</ref> &gt;</type>
+        <definition>using sdm::SparseValueFunction = typedef TabularValueFunction&lt;TState, TAction, TValue, ClassicBellmanBackupOperator, SparseVector&gt;</definition>
+        <argsstring></argsstring>
+        <name>SparseValueFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="122" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1aff407e320a8c7f131aba8f5bd0301caf" prot="public" static="no">
+        <type><ref refid="classsdm_1_1TabularValueFunction" kindref="compound">TabularValueFunction</ref>&lt; TState, TAction, TValue, <ref refid="classsdm_1_1ClassicBellmanBackupOperator" kindref="compound">ClassicBellmanBackupOperator</ref>, <ref refid="namespacesdm_1ac6edbc001eca6b342cea6edd868f0345" kindref="member">DenseVector</ref> &gt;</type>
+        <definition>using sdm::DenseValueFunction = typedef TabularValueFunction&lt;TState, TAction, TValue, ClassicBellmanBackupOperator, DenseVector&gt;</definition>
+        <argsstring></argsstring>
+        <name>DenseValueFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="125" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a4e43288db758fa680c36b6d67ab5d498" prot="public" static="no">
+        <type><ref refid="classsdm_1_1DecisionProcess" kindref="compound">DecisionProcess</ref>&lt; TStateSpace, TActionSpace, TStateSpace, TStateDynamics, TReward, TDistrib, true &gt;</type>
+        <definition>using sdm::FullyObservableDecisionProcess = typedef DecisionProcess&lt;TStateSpace, TActionSpace, TStateSpace, TStateDynamics, TReward, TDistrib, true&gt;</definition>
+        <argsstring></argsstring>
+        <name>FullyObservableDecisionProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp" line="159" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a7f81a96d0bc9af035631e6c1a96b7371" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a4e43288db758fa680c36b6d67ab5d498" kindref="member">FullyObservableDecisionProcess</ref>&lt; <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;, <ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;, <ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref>, std::vector&lt; <ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref> &gt;, std::discrete_distribution&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt; &gt;</type>
+        <definition>using sdm::DiscreteSG = typedef FullyObservableDecisionProcess&lt;DiscreteSpace&lt;number&gt;, MultiDiscreteSpace&lt;number&gt;, StateDynamics, std::vector&lt;Reward&gt;, std::discrete_distribution&lt;number&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>DiscreteSG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp" line="161" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1a255e3b02217a012bfb18760006036814" prot="public" static="no">
+        <type><ref refid="classsdm_1_1PartiallyObservableDecisionProcess" kindref="compound">PartiallyObservableDecisionProcess</ref>&lt; TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TObsDynamics, TReward, TDistrib &gt;</type>
+        <definition>using sdm::PODecisionProcess = typedef PartiallyObservableDecisionProcess&lt;TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TObsDynamics, TReward, TDistrib&gt;</definition>
+        <argsstring></argsstring>
+        <name>PODecisionProcess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp" line="111" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesdm_1ae48aa66da405e0461065606ddfd1e89c" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a255e3b02217a012bfb18760006036814" kindref="member">PODecisionProcess</ref>&lt; <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;, <ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;, <ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;, <ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref>, <ref refid="classsdm_1_1ObservationDynamics" kindref="compound">ObservationDynamics</ref>, std::vector&lt; <ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref> &gt;, std::discrete_distribution&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt; &gt;</type>
+        <definition>using sdm::DiscretePOSG = typedef PODecisionProcess&lt;DiscreteSpace&lt;number&gt;, MultiDiscreteSpace&lt;number&gt;, MultiDiscreteSpace&lt;number&gt;, StateDynamics, ObservationDynamics, std::vector&lt;Reward&gt;, std::discrete_distribution&lt;number&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>DiscretePOSG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp" line="113" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacesdm_1a05ead0ae1450dd27a8239a33c8b6e89e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">size_t</ref></type>
+        <definition>const size_t sdm::SUCCESS</definition>
+        <argsstring></argsstring>
+        <name>SUCCESS</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="27" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1abc867770bbfa62290ec05e76d3933ec3" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">size_t</ref></type>
+        <definition>const size_t sdm::ERROR_IN_COMMAND_LINE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_IN_COMMAND_LINE</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesdm_1a61b42223b174ab2ecff50a807542b80e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">size_t</ref></type>
+        <definition>const size_t sdm::ERROR_UNHANDLED_EXCEPTION</definition>
+        <argsstring></argsstring>
+        <name>ERROR_UNHANDLED_EXCEPTION</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesdm_1a5c1ee4aa6d86fbb14f22fd593fadd5ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void sdm::hash_combine</definition>
+        <argsstring>(std::size_t &amp;seed, T const &amp;v)</argsstring>
+        <name>hash_combine</name>
+        <param>
+          <type>std::size_t &amp;</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="106" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a0f76ca3691070f522ae6134492b4645a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename mtype</type>
+          </param>
+          <param>
+            <type>typename vtype</type>
+          </param>
+          <param>
+            <type>typename value</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt;</type>
+        <definition>matrix&lt; mtype, vtype, value &gt; sdm::operator*</definition>
+        <argsstring>(const matrix&lt; mtype, vtype, value &gt; &amp;arg1, const matrix&lt; mtype, vtype, value &gt; &amp;arg2)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt; &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt; &amp;</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+<para>Returns the product of two matrices. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix&lt;mtype, vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix&lt;mtype, vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>matrix&lt;mtype, vtype, value&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" line="21" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" bodystart="21" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1afc689ea904163295fd5e49db5025a4b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename mtype</type>
+          </param>
+          <param>
+            <type>typename vtype</type>
+          </param>
+          <param>
+            <type>typename value</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool sdm::operator==</definition>
+        <argsstring>(const matrix&lt; mtype, vtype, value &gt; &amp;arg1, const matrix&lt; mtype, vtype, value &gt; &amp;arg2)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt; &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt; &amp;</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the two matrices are equals and false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix&lt;mtype, vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix&lt;mtype, vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a32ff92b345c12285d77caee993cd3fde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename mtype</type>
+          </param>
+          <param>
+            <type>typename vtype</type>
+          </param>
+          <param>
+            <type>typename value</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt;</type>
+        <definition>matrix&lt; mtype, vtype, value &gt; sdm::operator^</definition>
+        <argsstring>(const vector&lt; vtype, value &gt; &amp;v, const matrix&lt; mtype, vtype, value &gt; &amp;m)</argsstring>
+        <name>operator^</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1vector" kindref="compound">vector</ref>&lt; vtype, value &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Returns a matrix that results from the point-to-point product of a vector with a matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector&lt;vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix&lt;mtype, vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>matrix&lt;mtype, vtype, value&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" bodystart="36" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1ab6f1766f5f9e828d1bd9ce0e708d89de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename mtype</type>
+          </param>
+          <param>
+            <type>typename vtype</type>
+          </param>
+          <param>
+            <type>typename value</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsdm_1_1vector" kindref="compound">vector</ref>&lt; vtype, value &gt;</type>
+        <definition>vector&lt; vtype, value &gt; sdm::operator*</definition>
+        <argsstring>(const matrix&lt; mtype, vtype, value &gt; &amp;arg1, const vector&lt; vtype, value &gt; &amp;arg2)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1matrix" kindref="compound">matrix</ref>&lt; mtype, vtype, value &gt; &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1vector" kindref="compound">vector</ref>&lt; vtype, value &gt; &amp;</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+<para>Returns a vector that results from the product of a matrix with a vector. </para>        </briefdescription>
+        <detaileddescription>
+<para>Matrix / Vector product</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrix&lt;mtype, vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector&lt;vtype, value&gt;&amp; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector&lt;vtype, value&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" line="101" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/matrix.cpp" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a8de4903980b059f1cb405ecd66a33b82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; sdm::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const sdm::Pair&lt; T, U &gt; &amp;pair)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" kindref="member">sdm::Pair</ref>&lt; T, U &gt; &amp;</type>
+          <declname>pair</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/pair.hpp" line="12" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/pair.hpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1ad25569916a52408dab7fc168b1ad0304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; sdm::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, sdm::Tuple&lt; T... &gt; const &amp;tuple)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1af5821f036e7113113615cd44824f2630" kindref="member">sdm::Tuple</ref>&lt; T... &gt; const &amp;</type>
+          <declname>tuple</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" line="13" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" bodystart="13" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1ab8041f871cb16af7fdceb08cc887115e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; sdm::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const std::vector&lt; T &gt; &amp;v)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/vector.hpp" line="12" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/vector.hpp" bodystart="12" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a021677cb937a0e95e24b116408751608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+          <param>
+            <type>template&lt; typename TS, typename TA &gt; class</type>
+            <declname>TInit</declname>
+            <defname>TInit</defname>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::createInstance</definition>
+        <argsstring>()</argsstring>
+        <name>createInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a2a4c89cf39c27c9b57e9370d3ebfccb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+          <param>
+            <type>template&lt; typename TS, typename TA &gt; class</type>
+            <declname>TInit</declname>
+            <defname>TInit</defname>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::createInstanceAlgoInit</definition>
+        <argsstring>(std::string algo_name, double error, int trials)</argsstring>
+        <name>createInstanceAlgoInit</name>
+        <param>
+          <type>std::string</type>
+          <declname>algo_name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trials</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a60278d7179221d4650ff62e4c7d19100" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::createInstanceTabMDPInit</definition>
+        <argsstring>()</argsstring>
+        <name>createInstanceTabMDPInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a1db0721c76eb371274bff8cf8bb79e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::createInstanceTabPOMDPInit</definition>
+        <argsstring>()</argsstring>
+        <name>createInstanceTabPOMDPInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1ab0c2df6332f400b5cfb0c99934df841f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::makeInitializer</definition>
+        <argsstring>(std::string init_name)</argsstring>
+        <name>makeInitializer</name>
+        <param>
+          <type>std::string</type>
+          <declname>init_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" line="105" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1aa3e64de31fc0960d8c1ec896ffb55b62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+          <param>
+            <type>template&lt; typename TS, typename TA &gt; class</type>
+            <declname>TValueFunction</declname>
+            <defname>TValueFunction</defname>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;ValueFunction&lt;TState, TAction&gt; &gt; sdm::createInstance</definition>
+        <argsstring>()</argsstring>
+        <name>createInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" line="20" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1a3aeb92dbbb36a0e9c82bbf488388bb70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TState</type>
+          </param>
+          <param>
+            <type>typename TAction</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::makeValueFunction</definition>
+        <argsstring>(std::string init_name)</argsstring>
+        <name>makeValueFunction</name>
+        <param>
+          <type>std::string</type>
+          <declname>init_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" line="75" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Namespace grouping all tools required for sequential decision making. </para>    </briefdescription>
+    <detaileddescription>
+<para>this namespace groups all tools for sdms</para><para>Namespace grouping all tools required for sequential decision making.</para><para>namespace grouping all tools required for sequential decision making. </para>    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="23" column="1"/>
+  </compounddef>
+</doxygen>

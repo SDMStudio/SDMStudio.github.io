@@ -36,7 +36,7 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**error\_handler\_base**](structsdm_1_1parser_1_1error__handler__base.md#function-error-handler-base) () <br> |
-|  x3::error\_handler\_result | [**on\_error**](structsdm_1_1parser_1_1error__handler__base.md#function-on-error) (Iterator & first, Iterator const & last, Exception const & x, Context const & context) <br> |
+|  x3::error\_handler\_result | [**on\_error**](structsdm_1_1parser_1_1error__handler__base.md#function-on-error) (Iterator &, Iterator const &, Exception const & x, Context const &) <br> |
 
 
 
@@ -74,14 +74,14 @@ inline sdm::parser::error_handler_base::error_handler_base ()
 ```cpp
 template<typename Iterator typename Iterator, typename Exception typename Exception, typename Context typename Context>
 inline x3::error_handler_result sdm::parser::error_handler_base::on_error (
-    Iterator & first,
-    Iterator const & last,
+    Iterator &,
+    Iterator const &,
     Exception const & x,
-    Context const & context
+    Context const &
 ) 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/error_handler.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp`

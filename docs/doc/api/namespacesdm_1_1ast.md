@@ -8,7 +8,7 @@
 
 
 
-
+_Namespace that is used by the parser._ 
 
 
 
@@ -74,8 +74,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**toNumberedSpace**](namespacesdm_1_1ast.md#function-tonumberedspace) ([**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; std::string &gt; & old\_sp) <br> |
-|  [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**toNumberedSpace**](namespacesdm_1_1ast.md#function-tonumberedspace) ([**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; std::string &gt; & old\_sp) <br> |
+|  std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &gt; | [**toNumberedSpace**](namespacesdm_1_1ast.md#function-tonumberedspace) ([**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; std::string &gt; & old\_sp) <br> |
+|  std::shared\_ptr&lt; [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &gt; | [**toNumberedSpace**](namespacesdm_1_1ast.md#function-tonumberedspace) ([**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; std::string &gt; & old\_sp) <br> |
 
 
 
@@ -129,7 +129,7 @@ typedef std::vector<transition_entry_t> sdm::ast::transition_t;
 
 
 ```cpp
-DiscreteSpace < number > sdm::ast::toNumberedSpace (
+std::shared_ptr< DiscreteSpace < number > > sdm::ast::toNumberedSpace (
     DiscreteSpace < std::string > & old_sp
 ) 
 ```
@@ -140,7 +140,7 @@ DiscreteSpace < number > sdm::ast::toNumberedSpace (
 
 
 ```cpp
-MultiDiscreteSpace < number > sdm::ast::toNumberedSpace (
+std::shared_ptr< MultiDiscreteSpace < number > > sdm::ast::toNumberedSpace (
     MultiDiscreteSpace < std::string > & old_sp
 ) 
 ```
@@ -148,4 +148,4 @@ MultiDiscreteSpace < number > sdm::ast::toNumberedSpace (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/ast.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp`

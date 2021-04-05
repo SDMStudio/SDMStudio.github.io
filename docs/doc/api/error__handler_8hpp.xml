@@ -1,0 +1,1036 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="error__handler_8hpp" kind="file" language="C++">
+    <compoundname>error_handler.hpp</compoundname>
+    <includes refid="parser_8hpp" local="no">sdm/parser/parser.hpp</includes>
+    <includes local="no">boost/spirit/home/x3/support/ast/position_tagged.hpp</includes>
+    <includes local="no">boost/spirit/home/x3/support/utility/error_reporting.hpp</includes>
+    <includes local="no">boost/config/warning_disable.hpp</includes>
+    <includes local="no">boost/spirit/home/x3.hpp</includes>
+    <includes local="no">boost/spirit/home/x3/support/utility/annotate_on_success.hpp</includes>
+    <includes local="no">boost/fusion/include/adapt_struct.hpp</includes>
+    <includes local="no">boost/fusion/include/io.hpp</includes>
+    <includes local="no">map</includes>
+    <includedby refid="config_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp</includedby>
+    <includedby refid="parser__def_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp</includedby>
+    <incdepgraph>
+      <node id="1773">
+        <label>locale</label>
+      </node>
+      <node id="1712">
+        <label>sdm/core/space/multi_space.hpp</label>
+        <link refid="multi__space_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1700" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1709" relation="include">
+        </childnode>
+        <childnode refid="1713" relation="include">
+        </childnode>
+      </node>
+      <node id="1785">
+        <label>sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1784" relation="include">
+        </childnode>
+        <childnode refid="1786" relation="include">
+        </childnode>
+        <childnode refid="1787" relation="include">
+        </childnode>
+      </node>
+      <node id="1776">
+        <label>sdm/world/world_type.hpp</label>
+        <link refid="world__type_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+      </node>
+      <node id="1774">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="1794">
+        <label>boost/fusion/include/adapt_struct.hpp</label>
+      </node>
+      <node id="1723">
+        <label>sdm/core/space/multi_discrete_space.tpp</label>
+      </node>
+      <node id="1786">
+        <label>sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1702" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1710" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+      </node>
+      <node id="1711">
+        <label>assert.h</label>
+      </node>
+      <node id="1782">
+        <label>sdm/utils/decision_rules/det_decision_rule.hpp</label>
+        <link refid="det__decision__rule_8hpp"/>
+        <childnode refid="1783" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1753" relation="include">
+        </childnode>
+        <childnode refid="1716" relation="include">
+        </childnode>
+      </node>
+      <node id="1777">
+        <label>sdm/core/states.hpp</label>
+        <link refid="states_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1755" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+      </node>
+      <node id="1722">
+        <label>sdm/core/space/discrete_space.tpp</label>
+      </node>
+      <node id="1768">
+        <label>sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1769" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1770" relation="include">
+        </childnode>
+        <childnode refid="1772" relation="include">
+        </childnode>
+        <childnode refid="1775" relation="include">
+        </childnode>
+      </node>
+      <node id="1793">
+        <label>boost/spirit/home/x3/support/utility/annotate_on_success.hpp</label>
+      </node>
+      <node id="1757">
+        <label>sdm/core/state/occupancy_state.hpp</label>
+        <link refid="occupancy__state_8hpp"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1766" relation="include">
+        </childnode>
+      </node>
+      <node id="1778">
+        <label>sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1753" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+      </node>
+      <node id="1700">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="1741">
+        <label>sdm/utils/linear_algebra/vector.hpp</label>
+        <link refid="linear__algebra_2vector_8hpp"/>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+        <childnode refid="1737" relation="include">
+        </childnode>
+        <childnode refid="1738" relation="include">
+        </childnode>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+      </node>
+      <node id="1769">
+        <label>sdm/public/algorithm.hpp</label>
+        <link refid="algorithm_8hpp"/>
+      </node>
+      <node id="1747">
+        <label>sdm/world/po_decision_process.tpp</label>
+      </node>
+      <node id="1690">
+        <label>sdm/parser/ast.hpp</label>
+        <link refid="ast_8hpp"/>
+        <childnode refid="1691" relation="include">
+        </childnode>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1694" relation="include">
+        </childnode>
+      </node>
+      <node id="1765">
+        <label>sdm/core/state/jhistory_tree.tpp</label>
+      </node>
+      <node id="1740">
+        <label>cmath</label>
+      </node>
+      <node id="1701">
+        <label>sdm/world/po_decision_process.hpp</label>
+        <link refid="po__decision__process_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1702" relation="include">
+        </childnode>
+        <childnode refid="1744" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1710" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1746" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+        <childnode refid="1747" relation="include">
+        </childnode>
+      </node>
+      <node id="1791">
+        <label>boost/spirit/home/x3/support/utility/error_reporting.hpp</label>
+      </node>
+      <node id="1738">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="1694">
+        <label>string</label>
+      </node>
+      <node id="1752">
+        <label>sdm/utils/linear_algebra/sdms_vector.tpp</label>
+      </node>
+      <node id="1771">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="1783">
+        <label>map</label>
+      </node>
+      <node id="1704">
+        <label>sdm/exception.hpp</label>
+        <link refid="exception_8hpp"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1705" relation="include">
+        </childnode>
+      </node>
+      <node id="1770">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="1761" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1751" relation="include">
+        </childnode>
+        <childnode refid="1771" relation="include">
+        </childnode>
+      </node>
+      <node id="1730">
+        <label>unordered_set</label>
+      </node>
+      <node id="1795">
+        <label>boost/fusion/include/io.hpp</label>
+      </node>
+      <node id="1720">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="1763">
+        <label>sdm/core/state/history_tree.tpp</label>
+      </node>
+      <node id="1746">
+        <label>sdm/core/observation_dynamics.hpp</label>
+        <link refid="observation__dynamics_8hpp"/>
+        <childnode refid="1730" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1721">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1693" relation="include">
+        </childnode>
+      </node>
+      <node id="1766">
+        <label>sdm/core/state/occupancy_state.tpp</label>
+      </node>
+      <node id="1789">
+        <label>sdm/world/occupancy_mdp.tpp</label>
+      </node>
+      <node id="1753">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="1699" relation="include">
+        </childnode>
+        <childnode refid="1740" relation="include">
+        </childnode>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1751" relation="include">
+        </childnode>
+        <childnode refid="1754" relation="include">
+        </childnode>
+      </node>
+      <node id="1705">
+        <label>exception</label>
+      </node>
+      <node id="1718">
+        <label>fstream</label>
+      </node>
+      <node id="1710">
+        <label>sdm/core/space/multi_discrete_space.hpp</label>
+        <link refid="multi__discrete__space_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1700" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1712" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1715" relation="include">
+        </childnode>
+        <childnode refid="1723" relation="include">
+        </childnode>
+      </node>
+      <node id="1764">
+        <label>sdm/core/state/jhistory_tree.hpp</label>
+        <link refid="jhistory__tree_8hpp"/>
+        <childnode refid="1759" relation="include">
+        </childnode>
+        <childnode refid="1715" relation="include">
+        </childnode>
+        <childnode refid="1765" relation="include">
+        </childnode>
+      </node>
+      <node id="1748">
+        <label>sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1715" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1784" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1741" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+        <childnode refid="1789" relation="include">
+        </childnode>
+      </node>
+      <node id="1767">
+        <label>sdm/world/solvable_by_hsvi.hpp</label>
+        <link refid="solvable__by__hsvi_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1768" relation="include">
+        </childnode>
+        <childnode refid="1776" relation="include">
+        </childnode>
+        <childnode refid="1770" relation="include">
+        </childnode>
+        <childnode refid="1704" relation="include">
+        </childnode>
+      </node>
+      <node id="1759">
+        <label>sdm/core/state/history_tree.hpp</label>
+        <link refid="history__tree_8hpp"/>
+        <childnode refid="1760" relation="include">
+        </childnode>
+        <childnode refid="1763" relation="include">
+        </childnode>
+      </node>
+      <node id="1735">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="1725">
+        <label>sdm/world/base/decision_process_base.hpp</label>
+        <link refid="decision__process__base_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1726" relation="include">
+        </childnode>
+        <childnode refid="1728" relation="include">
+        </childnode>
+      </node>
+      <node id="1788">
+        <label>sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1701" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+      </node>
+      <node id="1736">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="1754">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="1703">
+        <label>tuple</label>
+      </node>
+      <node id="1727">
+        <label>sdm/world/base/stochastic_process_base.tpp</label>
+      </node>
+      <node id="1688">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="1689" relation="include">
+        </childnode>
+        <childnode refid="1691" relation="include">
+        </childnode>
+        <childnode refid="1791" relation="include">
+        </childnode>
+        <childnode refid="1792" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1793" relation="include">
+        </childnode>
+        <childnode refid="1794" relation="include">
+        </childnode>
+        <childnode refid="1795" relation="include">
+        </childnode>
+        <childnode refid="1783" relation="include">
+        </childnode>
+      </node>
+      <node id="1714">
+        <label>sdm/core/space/discrete_space.hpp</label>
+        <link refid="discrete__space_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1700" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1715" relation="include">
+        </childnode>
+        <childnode refid="1709" relation="include">
+        </childnode>
+        <childnode refid="1722" relation="include">
+        </childnode>
+      </node>
+      <node id="1713">
+        <label>sdm/core/space/multi_space.tpp</label>
+      </node>
+      <node id="1724">
+        <label>sdm/world/gym_interface.tpp</label>
+      </node>
+      <node id="1693">
+        <label>vector</label>
+      </node>
+      <node id="1792">
+        <label>boost/config/warning_disable.hpp</label>
+      </node>
+      <node id="1702">
+        <label>sdm/world/decision_process.hpp</label>
+        <link refid="decision__process_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1703" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1704" relation="include">
+        </childnode>
+        <childnode refid="1706" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1712" relation="include">
+        </childnode>
+        <childnode refid="1710" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+        <childnode refid="1743" relation="include">
+        </childnode>
+      </node>
+      <node id="1731">
+        <label>sdm/utils/linear_algebra/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1733" relation="include">
+        </childnode>
+        <childnode refid="1734" relation="include">
+        </childnode>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+        <childnode refid="1737" relation="include">
+        </childnode>
+        <childnode refid="1738" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+        <childnode refid="1740" relation="include">
+        </childnode>
+        <childnode refid="1741" relation="include">
+        </childnode>
+      </node>
+      <node id="1750">
+        <label>sdm/utils/linear_algebra/sdms_vector.hpp</label>
+        <link refid="sdms__vector_8hpp"/>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1751" relation="include">
+        </childnode>
+        <childnode refid="1752" relation="include">
+        </childnode>
+      </node>
+      <node id="1692">
+        <label>boost/spirit/home/x3/support/ast/variant.hpp</label>
+      </node>
+      <node id="1756">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+      </node>
+      <node id="1733">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="1749">
+        <label>sdm/core/state/state.hpp</label>
+        <link refid="state_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1750" relation="include">
+        </childnode>
+        <childnode refid="1753" relation="include">
+        </childnode>
+        <childnode refid="1755" relation="include">
+        </childnode>
+      </node>
+      <node id="1709">
+        <label>sdm/core/space/space.hpp</label>
+        <link refid="space_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1700" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+      </node>
+      <node id="1719">
+        <label>sstream</label>
+      </node>
+      <node id="1729">
+        <label>sdm/core/state_dynamics.hpp</label>
+        <link refid="state__dynamics_8hpp"/>
+        <childnode refid="1730" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1731" relation="include">
+        </childnode>
+      </node>
+      <node id="1715">
+        <label>sdm/core/joint.hpp</label>
+        <link refid="joint_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+      </node>
+      <node id="1762">
+        <label>sdm/utils/struct/tree.tpp</label>
+      </node>
+      <node id="1695">
+        <label>sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1701" relation="include">
+        </childnode>
+        <childnode refid="1748" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+      </node>
+      <node id="1781">
+        <label>sdm/core/state/serialized_occupancy_state.tpp</label>
+      </node>
+      <node id="1772">
+        <label>sdm/utils/logging/logger.hpp</label>
+        <link refid="logger_8hpp"/>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1773" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1716" relation="include">
+        </childnode>
+      </node>
+      <node id="1742">
+        <label>sdm/core/reward.hpp</label>
+        <link refid="reward_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1741" relation="include">
+        </childnode>
+      </node>
+      <node id="1775">
+        <label>sdm/algorithms/hsvi.tpp</label>
+      </node>
+      <node id="1689">
+        <label>sdm/parser/parser.hpp</label>
+        <link refid="parser_8hpp"/>
+        <childnode refid="1690" relation="include">
+        </childnode>
+        <childnode refid="1695" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+      </node>
+      <node id="1734">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="1717">
+        <label>cstdlib</label>
+      </node>
+      <node id="1698">
+        <label>iostream</label>
+      </node>
+      <node id="1732">
+        <label>boost/numeric/ublas/matrix_sparse.hpp</label>
+      </node>
+      <node id="1726">
+        <label>sdm/world/base/stochastic_process_base.hpp</label>
+        <link refid="stochastic__process__base_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1727" relation="include">
+        </childnode>
+      </node>
+      <node id="1697">
+        <label>cstddef</label>
+      </node>
+      <node id="1780">
+        <label>sdm/core/state/serialized_occupancy_state.hpp</label>
+        <link refid="serialized__occupancy__state_8hpp"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1755" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1716">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1717" relation="include">
+        </childnode>
+        <childnode refid="1718" relation="include">
+        </childnode>
+        <childnode refid="1719" relation="include">
+        </childnode>
+        <childnode refid="1698" relation="include">
+        </childnode>
+      </node>
+      <node id="1699">
+        <label>unordered_map</label>
+      </node>
+      <node id="1744">
+        <label>sdm/world/base/po_process_base.hpp</label>
+        <link refid="po__process__base_8hpp"/>
+        <childnode refid="1726" relation="include">
+        </childnode>
+        <childnode refid="1745" relation="include">
+        </childnode>
+      </node>
+      <node id="1706">
+        <label>sdm/world/gym_interface.hpp</label>
+        <link refid="gym__interface_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1703" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1707" relation="include">
+        </childnode>
+        <childnode refid="1709" relation="include">
+        </childnode>
+        <childnode refid="1710" relation="include">
+        </childnode>
+        <childnode refid="1724" relation="include">
+        </childnode>
+      </node>
+      <node id="1739">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="1728">
+        <label>sdm/world/base/decision_process_base.tpp</label>
+      </node>
+      <node id="1751">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="1717" relation="include">
+        </childnode>
+        <childnode refid="1719" relation="include">
+        </childnode>
+      </node>
+      <node id="1787">
+        <label>sdm/world/belief_mdp.tpp</label>
+      </node>
+      <node id="1790">
+        <label>boost/spirit/home/x3.hpp</label>
+      </node>
+      <node id="1745">
+        <label>sdm/world/base/po_process_base.tpp</label>
+      </node>
+      <node id="1707">
+        <label>sdm/public/world.hpp</label>
+        <link refid="world_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1708" relation="include">
+        </childnode>
+      </node>
+      <node id="1743">
+        <label>sdm/world/decision_process.tpp</label>
+      </node>
+      <node id="1784">
+        <label>sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1702" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+      </node>
+      <node id="1755">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+      </node>
+      <node id="1758">
+        <label>sdm/core/state/history.hpp</label>
+        <link refid="history_8hpp"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1759" relation="include">
+        </childnode>
+        <childnode refid="1764" relation="include">
+        </childnode>
+      </node>
+      <node id="1779">
+        <label>sdm/core/state/belief_state.tpp</label>
+      </node>
+      <node id="1691">
+        <label>boost/spirit/home/x3/support/ast/position_tagged.hpp</label>
+      </node>
+      <node id="1708">
+        <label>sdm/public/feedback.hpp</label>
+        <link refid="feedback_8hpp"/>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1703" relation="include">
+        </childnode>
+      </node>
+      <node id="1761">
+        <label>memory</label>
+      </node>
+      <node id="1737">
+        <label>eigen3/Eigen/Sparse</label>
+      </node>
+      <node id="1760">
+        <label>sdm/utils/struct/tree.hpp</label>
+        <link refid="tree_8hpp"/>
+        <childnode refid="1730" relation="include">
+        </childnode>
+        <childnode refid="1699" relation="include">
+        </childnode>
+        <childnode refid="1761" relation="include">
+        </childnode>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1716" relation="include">
+        </childnode>
+        <childnode refid="1762" relation="include">
+        </childnode>
+      </node>
+      <node id="1696">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="1697" relation="include">
+        </childnode>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1699" relation="include">
+        </childnode>
+        <childnode refid="1700" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1797">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="1798" relation="include">
+        </childnode>
+      </node>
+      <node id="1799">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp</label>
+        <link refid="parser__def_8hpp"/>
+        <childnode refid="1798" relation="include">
+        </childnode>
+      </node>
+      <node id="1796">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="1797" relation="include">
+        </childnode>
+        <childnode refid="1799" relation="include">
+        </childnode>
+      </node>
+      <node id="1798">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsdm_1_1parser_1_1error__handler__base" prot="public">sdm::parser::error_handler_base</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <innernamespace refid="namespacesdm_1_1parser">sdm::parser</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*=============================================================================</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>Copyright<sp/>(c)<sp/>2016<sp/>Jilles<sp/>Steeve<sp/>Dibangoye</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">==============================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="parser_8hpp" kindref="compound">sdm/parser/parser.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3/support/ast/position_tagged.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3/support/utility/error_reporting.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/config/warning_disable.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3/support/ast/position_tagged.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3/support/utility/error_reporting.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/spirit/home/x3/support/utility/annotate_on_success.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/fusion/include/adapt_struct.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/fusion/include/io.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">parser</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">x3<sp/>=<sp/>boost::spirit::x3;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Our<sp/>error<sp/>handler</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>X3<sp/>error<sp/>handler<sp/>utility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator&gt;</highlight></codeline>
+<codeline lineno="31" refid="namespacesdm_1_1parser_1afb94a1c706b7ff723af329191719743c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1parser_1afb94a1c706b7ff723af329191719743c" kindref="member">error_handler</ref><sp/>=<sp/>x3::error_handler&lt;Iterator&gt;;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tag<sp/>used<sp/>to<sp/>get<sp/>our<sp/>error<sp/>handler<sp/>from<sp/>the<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespacesdm_1_1parser_1afe6cf3cecc900c16fa99a2620bd50435" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1parser_1afe6cf3cecc900c16fa99a2620bd50435" kindref="member">error_handler_tag</ref><sp/>=<sp/><ref refid="namespacesdm_1_1parser_1afe6cf3cecc900c16fa99a2620bd50435" kindref="member">x3::error_handler_tag</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structsdm_1_1parser_1_1error__handler__base" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1parser_1_1error__handler__base" kindref="compound">error_handler_base</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a9efc693edaf7a65ddef0f9655c13b3a8" kindref="member">error_handler_base</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Exception,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Context&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x3::error_handler_result<sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a04aee4add5b38ed390e720ba85d68b92" kindref="member">on_error</ref>(Iterator<sp/>&amp;,<sp/>Iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;,<sp/>Exception<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;,<sp/>Context<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Implementation</highlight></codeline>
+<codeline lineno="49" refid="structsdm_1_1parser_1_1error__handler__base_1a9efc693edaf7a65ddef0f9655c13b3a8" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a9efc693edaf7a65ddef0f9655c13b3a8" kindref="member">error_handler_base::error_handler_base</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;dpomdp_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sdm<sp/>model&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;matrix_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;matrix<sp/>type&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;identifier_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;identifier<sp/>name&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;identifiers_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;identifier<sp/>names&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;reward_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;reward<sp/>model&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;reward_entry_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;reward<sp/>entry&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;reward_entry_1_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;reward<sp/>entry<sp/>of<sp/>type<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;reward_entry_2_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;reward<sp/>entry<sp/>of<sp/>type<sp/>2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;transition_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;transition<sp/>model&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;transition_entry_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;transition<sp/>entry&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;transition_entry_1_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;transition<sp/>entry<sp/>of<sp/>type<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;transition_entry_2_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;transition<sp/>entry<sp/>of<sp/>type<sp/>2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;transition_entry_3_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;transition<sp/>entry<sp/>of<sp/>type<sp/>2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;observation_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;observation<sp/>model&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;observation_entry_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;observation<sp/>entry&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;observation_entry_1_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;observation<sp/>entry<sp/>of<sp/>type<sp/>1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;observation_entry_2_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;observation<sp/>entry<sp/>of<sp/>type<sp/>2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>[</highlight><highlight class="stringliteral">&quot;observation_entry_3_t&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;observation<sp/>entry<sp/>of<sp/>type<sp/>2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Iterator,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Exception,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Context&gt;</highlight></codeline>
+<codeline lineno="72" refid="structsdm_1_1parser_1_1error__handler__base_1a04aee4add5b38ed390e720ba85d68b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>x3::error_handler_result<sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a04aee4add5b38ed390e720ba85d68b92" kindref="member">error_handler_base::on_error</ref>(Iterator<sp/>&amp;,<sp/>Iterator<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;,<sp/>Exception<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;x,<sp/>Context<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>which<sp/>=<sp/>x.which();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>.find(which);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter<sp/>!=<sp/><ref refid="structsdm_1_1parser_1_1error__handler__base_1a0e0ffa37a7af169001e5430ae5f9aa09" kindref="member">id_map</ref>.end())</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>which<sp/>=<sp/>iter-&gt;second;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Error!<sp/>Expecting:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>which<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>here:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>auto&amp;<sp/>error_handler<sp/>=<sp/>x3::get&lt;error_handler_tag&gt;(context)-&gt;get();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>error_handler(x.where(),<sp/>message);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x3::error_handler_result::fail;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>parser</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp"/>
+  </compounddef>
+</doxygen>

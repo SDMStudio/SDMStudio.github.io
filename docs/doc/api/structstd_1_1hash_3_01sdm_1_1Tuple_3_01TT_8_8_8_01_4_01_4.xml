@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structstd_1_1hash_3_01sdm_1_1Tuple_3_01TT_8_8_8_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; sdm::Tuple&lt; TT... &gt; &gt;</compoundname>
+    <includes refid="tuple_8hpp" local="no">tuple.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class...</type>
+        <declname>TT</declname>
+        <defname>TT</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01sdm_1_1Tuple_3_01TT_8_8_8_01_4_01_4_1a97bd4f7334b4b979b7e4aa22a986a961" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t std::hash&lt; sdm::Tuple&lt; TT... &gt; &gt;::operator()</definition>
+        <argsstring>(sdm::Tuple&lt; TT... &gt; const &amp;tt) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="namespacesdm_1af5821f036e7113113615cd44824f2630" kindref="member">sdm::Tuple</ref>&lt; TT... &gt; const &amp;</type>
+          <declname>tt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" line="69" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" bodystart="69" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" line="67" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp" bodystart="66" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01sdm_1_1Tuple_3_01TT_8_8_8_01_4_01_4_1a97bd4f7334b4b979b7e4aa22a986a961" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::Tuple&lt; TT... &gt; &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

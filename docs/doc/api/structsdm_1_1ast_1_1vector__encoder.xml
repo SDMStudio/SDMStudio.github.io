@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1vector__encoder" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::vector_encoder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::static_visitor&lt; Vector &gt;</basecompoundref>
+    <includes refid="encoder_8hpp" local="no">encoder.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::ast::vector_encoder::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>the size of the vector vector </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="27" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1ast_1_1vector__encoder_1a6764f4e5c8d32d60c51ace49bd68a613" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::ast::vector_encoder::vector_encoder</definition>
+        <argsstring>(const number size)</argsstring>
+        <name>vector_encoder</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1ast_1_1vector__encoder_1ae908de13fa0a7d294a6da1c764d51270" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector</type>
+        <definition>Vector sdm::ast::vector_encoder::operator()</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>encodes a string into a vector of probabilities </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the way to encode the vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="36" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1ast_1_1vector__encoder_1a515226cf626a02fad6e0d707315a3abf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector</type>
+        <definition>Vector sdm::ast::vector_encoder::operator()</definition>
+        <argsstring>(const std::vector&lt; float &gt; &amp;vector) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>encodes a vector into a vector vector </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="52" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>encodes the input into a vector </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="748">
+        <label>boost::static_visitor&lt; Vector &gt;</label>
+      </node>
+      <node id="747">
+        <label>sdm::ast::vector_encoder</label>
+        <link refid="structsdm_1_1ast_1_1vector__encoder"/>
+        <childnode refid="748" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="750">
+        <label>boost::static_visitor&lt; Vector &gt;</label>
+      </node>
+      <node id="749">
+        <label>sdm::ast::vector_encoder</label>
+        <link refid="structsdm_1_1ast_1_1vector__encoder"/>
+        <childnode refid="750" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="24" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="23" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1ast_1_1vector__encoder_1ae908de13fa0a7d294a6da1c764d51270" prot="public" virt="non-virtual"><scope>sdm::ast::vector_encoder</scope><name>operator()</name></member>
+      <member refid="structsdm_1_1ast_1_1vector__encoder_1a515226cf626a02fad6e0d707315a3abf" prot="public" virt="non-virtual"><scope>sdm::ast::vector_encoder</scope><name>operator()</name></member>
+      <member refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" prot="public" virt="non-virtual"><scope>sdm::ast::vector_encoder</scope><name>size</name></member>
+      <member refid="structsdm_1_1ast_1_1vector__encoder_1a6764f4e5c8d32d60c51ace49bd68a613" prot="public" virt="non-virtual"><scope>sdm::ast::vector_encoder</scope><name>vector_encoder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -48,12 +48,6 @@
 * **observation\_t\_def** ([**sdm::parser**](namespacesdm_1_1parser.md))
 
 
-## p
-
-* **parse\_file** ([**sdm::parser**](namespacesdm_1_1parser.md))
-* **parse\_string** ([**sdm::parser**](namespacesdm_1_1parser.md))
-
-
 ## q
 
 * **quoted\_string** ([**sdm::parser**](namespacesdm_1_1parser.md))

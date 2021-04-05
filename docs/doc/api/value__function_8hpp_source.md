@@ -12,66 +12,70 @@
 
 #include <memory>
 
+#include <sdm/core/function.hpp>
 #include <sdm/utils/linear_algebra/vector_impl.hpp>
-#include <sdm/world/posg.hpp>
 
 namespace sdm
 {
+    template <typename TState, typename TAction>
+    class SolvableByHSVI;
+
     template <typename TState, typename TAction, typename TValue = double>
-    class ValueFunction
+    class ValueFunction : public BinaryFunction<TState, number, TValue>
     {
     protected:
-        std::shared_ptr<POSG> problem_;
+        std::shared_ptr<SolvableByHSVI<TState, TAction>> problem_;
+
+        std::shared_ptr<BinaryFunction<TState, number, TValue>> init_function_ = nullptr;
 
         int horizon_;
 
     public:
-        ValueFunction(std::shared_ptr<POSG> problem, int horizon) : problem_(problem), horizon_(horizon)
-        {
-        }
+        ValueFunction(std::shared_ptr<SolvableByHSVI<TState, TAction>> problem, number horizon);
 
-        virtual void updateValueAt(TState &s, int t = 0) = 0;
+        virtual ~ValueFunction() {}
+
+        std::shared_ptr<BinaryFunction<TState, number, TValue>> getInitFunction();
 
         virtual void initialize() = 0;
 
-        virtual void initialize(TValue v, int t = 0) = 0;
+        virtual void initialize(TValue v, number t = 0) = 0;
 
-        virtual TValue getValueAt(TState &state, int t = 0) = 0;
+        void initialize(std::shared_ptr<BinaryFunction<TState, number, TValue>> init_function);
 
-        virtual std::shared_ptr<VectorImpl<TAction, TValue>> getQValueAt(TState &state, int t = 0) = 0;
+        virtual TValue getValueAt(const TState &state, number t = 0) = 0;
 
-        virtual TValue getQValueAt(TState &state, TAction &action, int t = 0) = 0;
-
-        virtual TAction getBestAction(TState &state, int t = 0) = 0;
+        virtual void updateValueAt(const TState &s, number t = 0) = 0;
 
         virtual std::string str() = 0;
 
-        std::shared_ptr<POSG> getWorld()
-        {
-            return this->problem_;
-        }
+        virtual std::vector<TState> getSupport(number t) = 0;
 
-        int getHorizon() const
-        {
-            return this->horizon_;
-        }
+        TValue operator()(const TState &state, const number &t = 0);
 
-        int isFiniteHorizon() const
-        {
-            return (this->horizon_ > 0);
-        }
+        std::shared_ptr<VectorImpl<TAction, TValue>> getQValueAt(const TState &state, number t);
 
-        int isInfiniteHorizon() const
-        {
-            return !(this->isFiniteHorizon());
-        }
+        TValue getQValueAt(const TState &state, const TAction &action, number t);
+
+        TAction getBestAction(const TState &state, number t = 0);
+
+        std::shared_ptr<SolvableByHSVI<TState, TAction>> getWorld();
+
+        int getHorizon() const;
+
+        bool isFiniteHorizon() const;
+
+        bool isInfiniteHorizon() const;
 
         friend std::ostream &operator<<(std::ostream &os, ValueFunction<TState, TAction> &vf)
         {
             os << vf.str();
             return os;
         }
+
+        double getDiscount(number t);
     };
 } // namespace sdm
+#include <sdm/utils/value_function/value_function.tpp>
 ````
 

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1observation__entry__t" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::observation_entry_t</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::spirit::x3::variant&lt; observation_entry_1_t, observation_entry_2_t, observation_entry_3_t &gt;</basecompoundref>
+    <includes refid="ast_8hpp" local="no">ast.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="462">
+        <label>sdm::ast::observation_entry_t</label>
+        <link refid="structsdm_1_1ast_1_1observation__entry__t"/>
+        <childnode refid="463" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="463">
+        <label>boost::spirit::x3::variant&lt; observation_entry_1_t, observation_entry_2_t, observation_entry_3_t &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="464">
+        <label>sdm::ast::observation_entry_t</label>
+        <link refid="structsdm_1_1ast_1_1observation__entry__t"/>
+        <childnode refid="465" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="465">
+        <label>boost::spirit::x3::variant&lt; observation_entry_1_t, observation_entry_2_t, observation_entry_3_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="98" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="98" bodyend="101"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

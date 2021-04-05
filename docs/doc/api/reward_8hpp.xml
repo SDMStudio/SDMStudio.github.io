@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="reward_8hpp" kind="file" language="C++">
+    <compoundname>reward.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes refid="linear__algebra_2vector_8hpp" local="no">sdm/utils/linear_algebra/vector.hpp</includes>
+    <includedby refid="reward_8cpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp</includedby>
+    <includedby refid="interactive__world__base_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/interactive_world_base.hpp</includedby>
+    <includedby refid="decision__process_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp</includedby>
+    <includedby refid="discrete__decpomdp_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.hpp</includedby>
+    <includedby refid="discrete__mdp_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.hpp</includedby>
+    <includedby refid="discrete__mmdp_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.hpp</includedby>
+    <includedby refid="discrete__pomdp_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.hpp</includedby>
+    <includedby refid="po__decision__process_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp</includedby>
+    <incdepgraph>
+      <node id="495">
+        <label>assert.h</label>
+      </node>
+      <node id="489">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="490">
+        <label>sdm/utils/linear_algebra/vector.hpp</label>
+        <link refid="linear__algebra_2vector_8hpp"/>
+        <childnode refid="491" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="493" relation="include">
+        </childnode>
+        <childnode refid="494" relation="include">
+        </childnode>
+        <childnode refid="495" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+      </node>
+      <node id="494">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="491">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="492">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="484">
+        <label>vector</label>
+      </node>
+      <node id="483">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp</label>
+        <link refid="reward_8hpp"/>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+      </node>
+      <node id="487">
+        <label>iostream</label>
+      </node>
+      <node id="486">
+        <label>cstddef</label>
+      </node>
+      <node id="488">
+        <label>unordered_map</label>
+      </node>
+      <node id="493">
+        <label>eigen3/Eigen/Sparse</label>
+      </node>
+      <node id="485">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="501">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="516">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.cpp</label>
+        <link refid="ndpomdp_8cpp"/>
+      </node>
+      <node id="510">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.cpp</label>
+        <link refid="discrete__mdp_8cpp"/>
+      </node>
+      <node id="520">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp</label>
+        <link refid="serialized__occupancy__mdp_8hpp"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="523">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/po_decision_process.hpp</label>
+        <link refid="po__decision__process_8hpp"/>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="504" relation="include">
+        </childnode>
+      </node>
+      <node id="515">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp</label>
+        <link refid="ndpomdp_8hpp"/>
+        <childnode refid="516" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="519">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="522">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_mdp.hpp</label>
+        <link refid="serialized__mdp_8hpp"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="498">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/interactive_world_base.hpp</label>
+        <link refid="interactive__world__base_8hpp"/>
+      </node>
+      <node id="508">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp</label>
+        <link refid="parser__def_8hpp"/>
+        <childnode refid="504" relation="include">
+        </childnode>
+      </node>
+      <node id="506">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+      </node>
+      <node id="499">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp</label>
+        <link refid="decision__process_8hpp"/>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+      </node>
+      <node id="502">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="496">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp</label>
+        <link refid="reward_8hpp"/>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="499" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+      </node>
+      <node id="505">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.hpp</label>
+        <link refid="parser_8hpp"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="503">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="504" relation="include">
+        </childnode>
+      </node>
+      <node id="512">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.cpp</label>
+        <link refid="discrete__pomdp_8cpp"/>
+      </node>
+      <node id="514">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="511">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.cpp</label>
+        <link refid="discrete__mmdp_8cpp"/>
+      </node>
+      <node id="521">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_belief_mdp.hpp</label>
+        <link refid="serialized__belief__mdp_8hpp"/>
+      </node>
+      <node id="500">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="509">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.cpp</label>
+        <link refid="discrete__decpomdp_8cpp"/>
+      </node>
+      <node id="497">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.cpp</label>
+        <link refid="reward_8cpp"/>
+      </node>
+      <node id="504">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+      </node>
+      <node id="513">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp</label>
+        <link refid="worlds_8hpp"/>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1Reward" prot="public">sdm::Reward</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+<para>This file contains the implementation of the Reward model. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jilles S. Dibangoye </para></simplesect>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="date"><para>09/03/2021</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="linear__algebra_2vector_8hpp" kindref="compound">sdm/utils/linear_algebra/vector.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classsdm_1_1Reward" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classsdm_1_1Reward_1ae8509e624b55ee6e15d8814f8f6cdee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Vector&gt;<sp/><ref refid="classsdm_1_1Reward_1ae8509e624b55ee6e15d8814f8f6cdee1" kindref="member">rewards</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classsdm_1_1Reward_1abf48ec2fcde5e778fe6a63df78bd75e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1aa2110954bef5f4f020a52f50fa0ba450" kindref="member">max</ref><sp/>=<sp/>-999999,<sp/><ref refid="classsdm_1_1Reward_1abf48ec2fcde5e778fe6a63df78bd75e7" kindref="member">min</ref><sp/>=<sp/>+999999;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="classsdm_1_1Reward_1ada928d27759f529d42b7620f693571fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1ada928d27759f529d42b7620f693571fe" kindref="member">value_type</ref><sp/>=<sp/>double;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward_1a71c7c6dbb0d39f8ccaf707278ebb4d1a" kindref="member">Reward</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward_1a71c7c6dbb0d39f8ccaf707278ebb4d1a" kindref="member">Reward</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward_1a71c7c6dbb0d39f8ccaf707278ebb4d1a" kindref="member">Reward</ref>(<ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/>&amp;copy);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1ab0afb1e0dcd38fa94f1719b2d2e2ee28" kindref="member">initReward</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1a768851a46f3b72385e8f313ef55ab350" kindref="member">getReward</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1ab5318a52c4a2efaa61523c2ddaf42377" kindref="member">setReward</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Vector<sp/>&amp;<ref refid="classsdm_1_1Reward_1a768851a46f3b72385e8f313ef55ab350" kindref="member">getReward</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Vector&gt;<sp/>&amp;<ref refid="classsdm_1_1Reward_1a768851a46f3b72385e8f313ef55ab350" kindref="member">getReward</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1ab5318a52c4a2efaa61523c2ddaf42377" kindref="member">setReward</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Vector<sp/>&amp;);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1a809f460ec82bce2a57470ca0bf51086d" kindref="member">getMaxReward</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward_1a723f6a8dda8d4d1d571aa9e2d3f8901b" kindref="member">getMinReward</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classsdm_1_1Reward_1ae7a18f1f389b8b6858340d9d7d2a1845" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream<sp/>&amp;<ref refid="classsdm_1_1Reward_1ae7a18f1f389b8b6858340d9d7d2a1845" kindref="member">operator&lt;&lt;</ref>(std::ostream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/>&amp;reward_fct)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ja;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;reward&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(ja<sp/>=<sp/>0;<sp/>ja<sp/>&lt;<sp/>reward_fct.<ref refid="classsdm_1_1Reward_1ae8509e624b55ee6e15d8814f8f6cdee1" kindref="member">rewards</ref>.size();<sp/>++ja)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>reward_fct.<ref refid="classsdm_1_1Reward_1a5fb889407a2d01132c33de7c66196fec" kindref="member">getReward</ref>(ja)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&lt;/reward&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/reward.hpp"/>
+  </compounddef>
+</doxygen>

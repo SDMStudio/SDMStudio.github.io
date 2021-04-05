@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hsvi_8hpp" kind="file" language="C++">
+    <compoundname>hsvi.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes refid="algorithm_8hpp" local="no">sdm/public/algorithm.hpp</includes>
+    <includes refid="state_8hpp" local="no">sdm/core/state/state.hpp</includes>
+    <includes refid="value__function_8hpp" local="no">sdm/utils/value_function/value_function.hpp</includes>
+    <includes refid="logger_8hpp" local="no">sdm/utils/logging/logger.hpp</includes>
+    <includes local="no">sdm/algorithms/hsvi.tpp</includes>
+    <includedby refid="algorithms_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</includedby>
+    <includedby refid="initializer_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp</includedby>
+    <includedby refid="interactive__world__base_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/interactive_world_base.hpp</includedby>
+    <includedby refid="solvable__by__hsvi_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/solvable_by_hsvi.hpp</includedby>
+    <incdepgraph>
+      <node id="152">
+        <label>locale</label>
+      </node>
+      <node id="153">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="135">
+        <label>assert.h</label>
+      </node>
+      <node id="123">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="130">
+        <label>sdm/public/algorithm.hpp</label>
+        <link refid="algorithm_8hpp"/>
+      </node>
+      <node id="141">
+        <label>cmath</label>
+      </node>
+      <node id="124">
+        <label>string</label>
+      </node>
+      <node id="139">
+        <label>sdm/utils/linear_algebra/sdms_vector.tpp</label>
+      </node>
+      <node id="150">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="147">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="145">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>fstream</label>
+      </node>
+      <node id="133">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="134">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="143">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="142">
+        <label>vector</label>
+      </node>
+      <node id="132">
+        <label>sdm/utils/linear_algebra/sdms_vector.hpp</label>
+        <link refid="sdms__vector_8hpp"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>sdm/core/state/state.hpp</label>
+        <link refid="state_8hpp"/>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>sstream</label>
+      </node>
+      <node id="151">
+        <label>sdm/utils/logging/logger.hpp</label>
+        <link refid="logger_8hpp"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+      </node>
+      <node id="156">
+        <label>sdm/algorithms/hsvi.tpp</label>
+      </node>
+      <node id="137">
+        <label>cstdlib</label>
+      </node>
+      <node id="127">
+        <label>iostream</label>
+      </node>
+      <node id="126">
+        <label>cstddef</label>
+      </node>
+      <node id="154">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>unordered_map</label>
+      </node>
+      <node id="136">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>memory</label>
+      </node>
+      <node id="125">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="168">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.cpp</label>
+        <link refid="ndpomdp_8cpp"/>
+      </node>
+      <node id="177">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.cpp</label>
+        <link refid="discrete__mdp_8cpp"/>
+      </node>
+      <node id="185">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_occupancy_mdp.hpp</label>
+        <link refid="serialized__occupancy__mdp_8hpp"/>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="174">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp</label>
+        <link refid="config_8hpp"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp</label>
+        <link refid="value__functions_8hpp"/>
+      </node>
+      <node id="160">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp</label>
+        <link refid="mdp__initializer_8hpp"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp</label>
+        <link refid="ndpomdp_8hpp"/>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="184">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/solvable_by_hsvi.hpp</label>
+        <link refid="solvable__by__hsvi_8hpp"/>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_mdp.hpp</label>
+        <link refid="serialized__mdp_8hpp"/>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/interactive_world_base.hpp</label>
+        <link refid="interactive__world__base_8hpp"/>
+      </node>
+      <node id="175">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser_def.hpp</label>
+        <link refid="parser__def_8hpp"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp</label>
+        <link refid="tabular__value__function_8hpp"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/error_handler.hpp</label>
+        <link refid="error__handler_8hpp"/>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.hpp</label>
+        <link refid="parser_8hpp"/>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/pomdp_initializer.hpp</label>
+        <link refid="pomdp__initializer_8hpp"/>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_pomdp.cpp</label>
+        <link refid="discrete__pomdp_8cpp"/>
+      </node>
+      <node id="158">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="159">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp</label>
+        <link refid="initializer_8hpp"/>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+      </node>
+      <node id="178">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mmdp.cpp</label>
+        <link refid="discrete__mmdp_8cpp"/>
+      </node>
+      <node id="188">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/serialized_belief_mdp.hpp</label>
+        <link refid="serialized__belief__mdp_8hpp"/>
+      </node>
+      <node id="161">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp</label>
+        <link refid="initializers_8hpp"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/discrete_decpomdp.cpp</label>
+        <link refid="discrete__decpomdp_8cpp"/>
+      </node>
+      <node id="171">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+      </node>
+      <node id="180">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp</label>
+        <link refid="worlds_8hpp"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp</label>
+        <link refid="max__plan__vf_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1HSVI" prot="public">sdm::HSVI</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+<para>HSVI algorithm. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>David Albert (<ulink url="mailto:david.albert@insa-lyon.fr">david.albert@insa-lyon.fr</ulink>) </para></simplesect>
+<simplesect kind="version"><para>0.1 </para></simplesect>
+<simplesect kind="date"><para>22/12/2020</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2020 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="algorithm_8hpp" kindref="compound">sdm/public/algorithm.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="state_8hpp" kindref="compound">sdm/core/state/state.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="value__function_8hpp" kindref="compound">sdm/utils/value_function/value_function.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="logger_8hpp" kindref="compound">sdm/utils/logging/logger.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacesdm" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TState,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TAction&gt;</highlight></codeline>
+<codeline lineno="32" refid="classsdm_1_1HSVI" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Algorithm" kindref="compound">Algorithm</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classsdm_1_1HSVI_1ad52c19414130372a52536057e2e77396" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;SolvableByHSVI&lt;TState,<sp/>TAction&gt;&gt;<sp/><ref refid="classsdm_1_1HSVI_1ad52c19414130372a52536057e2e77396" kindref="member">world_</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classsdm_1_1HSVI_1a043fea05beeebc64485def331cc77cab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;ValueFunction&lt;TState,<sp/>TAction&gt;&gt;<sp/><ref refid="classsdm_1_1HSVI_1a043fea05beeebc64485def331cc77cab" kindref="member">lower_bound_</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classsdm_1_1HSVI_1a5da28ae607c3b5110f66ec75621a41a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;ValueFunction&lt;TState,<sp/>TAction&gt;&gt;<sp/><ref refid="classsdm_1_1HSVI_1a5da28ae607c3b5110f66ec75621a41a7" kindref="member">upper_bound_</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classsdm_1_1HSVI_1a78f817dcaaee41a74798186af8aa39be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;MultiLogger&gt;<sp/><ref refid="classsdm_1_1HSVI_1a78f817dcaaee41a74798186af8aa39be" kindref="member">logger_</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classsdm_1_1HSVI_1a5aa105ffb1eea05ee1ade6711a157fe3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1a5aa105ffb1eea05ee1ade6711a157fe3" kindref="member">trial</ref>,<sp/><ref refid="classsdm_1_1HSVI_1a8a2af5f18526c480082fb13efe1a2f3f" kindref="member">MAX_TRIALS</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classsdm_1_1HSVI_1ab405b496e4b6fb37902e9d998021a2b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1ab405b496e4b6fb37902e9d998021a2b0" kindref="member">error_</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classsdm_1_1HSVI_1aa3620f3a5e8ce90db32b81d746fe33a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/><ref refid="classsdm_1_1HSVI_1aa3620f3a5e8ce90db32b81d746fe33a5" kindref="member">planning_horizon_</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classsdm_1_1HSVI_1a3fa3c85fb9fd2207ace2f885490801d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classsdm_1_1HSVI_1a3fa3c85fb9fd2207ace2f885490801d4" kindref="member">name_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;hsvi&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1abbce33c7da0939fab18a2c118fcc48e0" kindref="member">initLogger</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1HSVI_1a5fc3819f380e170c002873c300c84b2d" kindref="member">HSVI</ref>(std::shared_ptr&lt;<ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI&lt;TState, TAction&gt;</ref>&gt;<sp/>&amp;world,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;<ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction&lt;TState, TAction&gt;</ref>&gt;<sp/>lower_bound,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;<ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction&lt;TState, TAction&gt;</ref>&gt;<sp/>upper_bound,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>planning_horizon,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>epsilon,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>num_max_trials<sp/>=<sp/>10000,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;hsvi&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1a9ae60bb126da455fbfd44646c9d91ded" kindref="member">do_initialize</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1af837c2dd9090ae2115a4e0badb24d9a7" kindref="member">do_solve</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1a43017500dd9d26064d8a3e8d464981b1" kindref="member">do_test</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1ace0e6137e0b4a700ea6fda21c3082c27" kindref="member">do_excess</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TState<sp/>&amp;s,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>h);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1a1a95e9e57be2c5a244b55f1163364ab7" kindref="member">do_stop</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TState<sp/>&amp;s,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>h);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1af73c0a490df110534390cab0ce06682c" kindref="member">do_explore</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TState<sp/>&amp;s,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>h);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>TAction<sp/><ref refid="classsdm_1_1HSVI_1a72c0492b4d2fd6008e8a3890e6bf90a4" kindref="member">selectNextAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TState<sp/>&amp;s,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>h);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>TState<sp/><ref refid="classsdm_1_1HSVI_1aaf2901ca29883b3d519e4eab0eea6d86" kindref="member">selectNextState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TState<sp/>&amp;s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TAction<sp/>&amp;a,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>h);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;ValueFunction&lt;TState,<sp/>TAction&gt;&gt;<sp/><ref refid="classsdm_1_1HSVI_1a2af0cfe134ccfdf5565911440e27f724" kindref="member">getLowerBound</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;ValueFunction&lt;TState,<sp/>TAction&gt;&gt;<sp/><ref refid="classsdm_1_1HSVI_1a66f33a2f23fdc0278b7546718234e127" kindref="member">getUpperBound</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1HSVI_1aa0398699a4ece31b3699430750c69ec6" kindref="member">getTrial</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sdm/algorithms/hsvi.tpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp"/>
+  </compounddef>
+</doxygen>

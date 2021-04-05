@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1MaxPlanValueFunction" kind="class" language="C++" prot="public">
+    <compoundname>sdm::MaxPlanValueFunction</compoundname>
+    <basecompoundref refid="classsdm_1_1ValueFunction" prot="public" virt="non-virtual">sdm::ValueFunction&lt; TVector, TAction, TValue &gt;</basecompoundref>
+    <includes refid="max__plan__vf_8hpp" local="no">max_plan_vf.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TVector</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+      <param>
+        <type>typename TValue</type>
+        <defval>double</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classsdm_1_1MaxPlanValueFunction_1ab9645ff2dde55b1849ce83833ee3a660" prot="protected" static="no">
+        <type>std::set&lt; TVector &gt;</type>
+        <definition>using sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::HyperplanSet =  std::set&lt;TVector&gt;</definition>
+        <argsstring></argsstring>
+        <name>HyperplanSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1MaxPlanValueFunction_1abd3a7b82f1cd48b7a5dd46ccaa9bef32" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classsdm_1_1MaxPlanValueFunction_1ab9645ff2dde55b1849ce83833ee3a660" kindref="member">HyperplanSet</ref> &gt;</type>
+        <definition>std::vector&lt;HyperplanSet&gt; sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::representation</definition>
+        <argsstring></argsstring>
+        <name>representation</name>
+        <briefdescription>
+<para>The value function represention. The default representation is a <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> but every class implementing <ref refid="classsdm_1_1VectorImpl" kindref="compound">VectorImpl</ref> interface can be used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="40" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1MaxPlanValueFunction_1a731469219f0178d4458bea16814d1362" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TVector, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TVector, TAction&gt; &gt; sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::initializer_</definition>
+        <argsstring></argsstring>
+        <name>initializer_</name>
+        <briefdescription>
+<para>The initializer to use for this value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="46" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a083313ca8e96c00cc972ad8e8f453a01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::MaxPlanValueFunction</definition>
+        <argsstring>()</argsstring>
+        <name>MaxPlanValueFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a2cc5461f8f34bac602004d8912702fc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::MaxPlanValueFunction</definition>
+        <argsstring>(std::shared_ptr&lt; SolvableByHSVI&lt; TVector, TAction &gt;&gt; problem, int horizon, std::shared_ptr&lt; Initializer&lt; TVector, TAction &gt;&gt; initializer)</argsstring>
+        <name>MaxPlanValueFunction</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TVector, TAction &gt;&gt;</type>
+          <declname>problem</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>horizon</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TVector, TAction &gt;&gt;</type>
+          <declname>initializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1aa236858755f742f6f0926631880e66ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::MaxPlanValueFunction</definition>
+        <argsstring>(std::shared_ptr&lt; SolvableByHSVI&lt; TVector, TAction &gt;&gt; problem, int horizon=0, TValue default_value=0.)</argsstring>
+        <name>MaxPlanValueFunction</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TVector, TAction &gt;&gt;</type>
+          <declname>problem</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>horizon</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>TValue</type>
+          <declname>default_value</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1ac105041ddd0581c5500f938c0d413022" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1ab22e87ef5a0becd1215e0aeb153ac683">initialize</reimplements>
+        <briefdescription>
+<para>Initialize the value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a785a8743b2ff797c16d0bdec0bd0cebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::initialize</definition>
+        <argsstring>(TValue default_value, int t=0)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>TValue</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a4152d456cd73be2a056fcc13bf363876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::updateValueAt</definition>
+        <argsstring>(const TVector &amp;state)</argsstring>
+        <name>updateValueAt</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Update the value function by setting the value of a specific state and updating the curves in consequence. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a91aa5c22ca684caa5d0335a22afa1b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TValue</type>
+        <definition>TValue sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::getValueAt</definition>
+        <argsstring>(const TVector &amp;state, int t=0)</argsstring>
+        <name>getValueAt</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the Value at state x. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TValue </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a0fd3abf6f6abfac4c0554d49ee9a8979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; TValue, TVector &gt;</type>
+        <definition>std::pair&lt;TValue, TVector&gt; sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::getMaxAt</definition>
+        <argsstring>(const TVector &amp;state, int t)</argsstring>
+        <name>getMaxAt</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the maximum value and hyperplan at a specific state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a specific state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the maximum value and hyperplan at a specific state (std::pair&lt;TValue, TVector&gt;) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a6c1d79f2fdce5afd63724f56cc2849d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Get the number of hyperplans. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>number </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a9b646b9d53bb8cfa257bc99baf09ee68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::prune</definition>
+        <argsstring>(int t=0)</argsstring>
+        <name>prune</name>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Prune unecessary vectors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a2091a2bd9390313b5a15ebb47417d42f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::lark_prune</definition>
+        <argsstring>(int t=0)</argsstring>
+        <name>lark_prune</name>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a48b2e14e7a164d29b2e7c7d3dfe1b751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::bounded_prune</definition>
+        <argsstring>(int t=0)</argsstring>
+        <name>bounded_prune</name>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a7f2d5f46e13fd4d426170e5c3e604288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TVector</type>
+        <definition>TVector sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::backup_bellman_operator</definition>
+        <argsstring>(std::shared_ptr&lt; POSG &gt; world, TVector belief)</argsstring>
+        <name>backup_bellman_operator</name>
+        <param>
+          <type>std::shared_ptr&lt; POSG &gt;</type>
+          <declname>world</declname>
+        </param>
+        <param>
+          <type>TVector</type>
+          <declname>belief</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1afb210c406cbe8d2fd28a4d84feb4d952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TAction</type>
+        <definition>TAction sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::getBestAction</definition>
+        <argsstring>(const TVector &amp;state, int t=0)</argsstring>
+        <name>getBestAction</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a17bdc66173be7084358b6a6f26c30f55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TValue</type>
+        <definition>TValue sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::getQValueAt</definition>
+        <argsstring>(const TVector &amp;state, const TAction &amp;action, int t=0)</argsstring>
+        <name>getQValueAt</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const TAction &amp;</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1aa874698680bfab11f3619e7c2e161df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1VectorImpl" kindref="compound">VectorImpl</ref>&lt; TAction, TValue &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;VectorImpl&lt;TAction, TValue&gt; &gt; sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::getQValueAt</definition>
+        <argsstring>(const TVector &amp;state, int t=0)</argsstring>
+        <name>getQValueAt</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a683bdda7fed203ed0c894233c572c4dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TValue</type>
+        <definition>TValue sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::operator()</definition>
+        <argsstring>(const TVector &amp;state)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a0d778a92e9752474368358bb18fffb97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::updateValueAt</definition>
+        <argsstring>(const TVector &amp;state, int t=0)</argsstring>
+        <name>updateValueAt</name>
+        <param>
+          <type>const TVector &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MaxPlanValueFunction_1a6dbb70332bb023318e8f6d3c4783e0b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;::str</definition>
+        <argsstring>()</argsstring>
+        <name>str</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1aea12cd57f79d8ec97726e26ae99a4430">str</reimplements>
+        <briefdescription>
+<para>Define this function in order to be able to display the value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="120" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" bodystart="120" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TVector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of hyperplan representation. Must implement <ref refid="classsdm_1_1VectorImpl" kindref="compound">sdm::VectorImpl</ref> interface. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value type (default : double) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="385">
+        <label>sdm::BinaryFunction&lt; TVector, number, TValue &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1MaxPlanValueFunction"/>
+        <childnode refid="384" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>sdm::ValueFunction&lt; TVector, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1ValueFunction"/>
+        <childnode refid="385" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="386">
+        <label>sdm::Function&lt; std::pair&lt; TVector, number &gt;, TValue &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="389">
+        <label>sdm::BinaryFunction&lt; TVector, number, TValue &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="387">
+        <label>sdm::MaxPlanValueFunction&lt; TVector, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1MaxPlanValueFunction"/>
+        <childnode refid="388" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="388">
+        <label>sdm::ValueFunction&lt; TVector, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1ValueFunction"/>
+        <childnode refid="389" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="390">
+        <label>sdm::Function&lt; std::pair&lt; TVector, number &gt;, TValue &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/max_plan_vf.hpp" bodystart="31" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a7f2d5f46e13fd4d426170e5c3e604288" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>backup_bellman_operator</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a48b2e14e7a164d29b2e7c7d3dfe1b751" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>bounded_prune</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1afb210c406cbe8d2fd28a4d84feb4d952" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getBestAction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a030defa0b4bdbf217d25dd57a0b46b66" prot="public" virt="non-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>getBestAction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aec0e34427cd3401b1a526872c2fd4bf6" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getDiscount</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a2fc36f24a4e6bd4b29d47c2ea1b2c5c9" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1acbc7e1960ec5ec203ea33dc0bd1964fd" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getInitFunction</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a0fd3abf6f6abfac4c0554d49ee9a8979" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getMaxAt</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a17bdc66173be7084358b6a6f26c30f55" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1aa874698680bfab11f3619e7c2e161df1" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a2494b50909d238e88cd0c67670255627" prot="public" virt="non-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1adba37ff161a36655c4ba7e070da56b34" prot="public" virt="non-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1afecd8a1aefddf6f0cb5e547035ba5bfb" prot="public" virt="pure-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getSupport</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a91aa5c22ca684caa5d0335a22afa1b3a" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aff2b1e06a111f0b682409ea9d65505af" prot="public" virt="pure-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>getValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a219e4b3d358008dc7c8b206c547caacd" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>getWorld</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ab4ee8dba95e5227658e161434c3ce5ca" prot="protected" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>horizon_</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1ab9645ff2dde55b1849ce83833ee3a660" prot="protected" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>HyperplanSet</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a9276eab90ce8e0f07d5df017d7b01768" prot="protected" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>init_function_</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1ac105041ddd0581c5500f938c0d413022" prot="public" virt="virtual"><scope>sdm::MaxPlanValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a785a8743b2ff797c16d0bdec0bd0cebb" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a3c736ed1a2975ea6f975ff90e6949a09" prot="public" virt="pure-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aeb0173f9bc30e0cc94e2a2593f5fb927" prot="public" virt="non-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a731469219f0178d4458bea16814d1362" prot="protected" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>initializer_</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a8c8a1c4d05241832cb59b053bcee63a6" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>isFiniteHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a797a7a2021ceed3348da4bdb535809d1" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>isInfiniteHorizon</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a2091a2bd9390313b5a15ebb47417d42f" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>lark_prune</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a083313ca8e96c00cc972ad8e8f453a01" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>MaxPlanValueFunction</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a2cc5461f8f34bac602004d8912702fc4" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>MaxPlanValueFunction</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1aa236858755f742f6f0926631880e66ba" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>MaxPlanValueFunction</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a683bdda7fed203ed0c894233c572c4dc" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1ValueFunction_1abd33004b2a910e321a1dc07d0c8950e0" prot="public" virt="virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a70feb6f73b43d4bcb9263bba9e23963a" prot="public" virt="virtual" ambiguityscope="BinaryFunction&lt; TVector, number, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>output_type</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ae2820dc6d523ef80d3ecf6e85e72952e" prot="protected" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>problem_</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a9b646b9d53bb8cfa257bc99baf09ee68" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>prune</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1abd3a7b82f1cd48b7a5dd46ccaa9bef32" prot="protected" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>representation</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a6c1d79f2fdce5afd63724f56cc2849d7" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>size</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a6dbb70332bb023318e8f6d3c4783e0b3" prot="public" virt="virtual"><scope>sdm::MaxPlanValueFunction</scope><name>str</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a4152d456cd73be2a056fcc13bf363876" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>updateValueAt</name></member>
+      <member refid="classsdm_1_1MaxPlanValueFunction_1a0d778a92e9752474368358bb18fffb97" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>updateValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1af3a7fc03f73a12bdcabf19e5d38008a1" prot="public" virt="pure-virtual" ambiguityscope="ValueFunction&lt; TVector, TAction, TValue &gt;::"><scope>sdm::MaxPlanValueFunction</scope><name>updateValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a53ec670f293ebeb98d2652cd6c5d11c2" prot="public" virt="non-virtual"><scope>sdm::MaxPlanValueFunction</scope><name>ValueFunction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aefaf72bc4f1588ed3eb6a858aad4f677" prot="public" virt="virtual"><scope>sdm::MaxPlanValueFunction</scope><name>~ValueFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

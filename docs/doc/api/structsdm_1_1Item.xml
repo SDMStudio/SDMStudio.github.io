@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1Item" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::Item</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">item_t</basecompoundref>
+    <includes refid="item_8hpp" local="no">item.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>item_t</declname>
+        <defname>item_t</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1Item_1a6973c05d4488a89cfc92d61484810089" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; item_t &gt;::Item</definition>
+        <argsstring>()</argsstring>
+        <name>Item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_1abacb0348e792a77e30208287cb4c0792" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; item_t &gt;::Item</definition>
+        <argsstring>(item_t item)</argsstring>
+        <name>Item</name>
+        <param>
+          <type>item_t</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structsdm_1_1Item_1acb6f576a816376842e3867aaeffe8873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Item&lt; item_t &gt; &amp;it)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsdm_1_1Item" kindref="compound">Item</ref>&lt; item_t &gt; &amp;</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="292">
+        <label>item_t</label>
+      </node>
+      <node id="291">
+        <label>sdm::Item&lt; item_t &gt;</label>
+        <link refid="structsdm_1_1Item"/>
+        <childnode refid="292" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="294">
+        <label>item_t</label>
+      </node>
+      <node id="293">
+        <label>sdm::Item&lt; item_t &gt;</label>
+        <link refid="structsdm_1_1Item"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="23" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="22" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1Item_1a6973c05d4488a89cfc92d61484810089" prot="public" virt="non-virtual"><scope>sdm::Item</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_1abacb0348e792a77e30208287cb4c0792" prot="public" virt="non-virtual"><scope>sdm::Item</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_1acb6f576a816376842e3867aaeffe8873" prot="public" virt="non-virtual"><scope>sdm::Item</scope><name>operator&lt;&lt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

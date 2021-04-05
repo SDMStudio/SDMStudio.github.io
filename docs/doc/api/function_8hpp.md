@@ -29,6 +29,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| class | [**BinaryFunction**](classsdm_1_1BinaryFunction.md) &lt;TInput1, TInput2, TOutput&gt;<br> |
 | class | [**Function**](classsdm_1_1Function.md) &lt;TInput, TOutput&gt;<br> |
 
 
@@ -45,4 +46,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/function.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp`

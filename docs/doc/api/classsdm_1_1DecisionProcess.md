@@ -3,25 +3,54 @@
 
 # Class sdm::DecisionProcess
 
+**template &lt;typename TStateSpace, typename TActionSpace, typename TObsSpace, typename TStateDynamics, typename TReward, typename TDistrib, bool is\_fully\_obs&gt;**
+
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**DecisionProcess**](classsdm_1_1DecisionProcess.md)
 
 
 
-_Decision process._ 
+_This class provides a way to instanciate multiple subclasses of decision processes._ [More...](#detailed-description)
 
 * `#include <decision_process.hpp>`
 
 
 
-Inherits the following classes: [sdm::StochasticProcess](classsdm_1_1StochasticProcess.md),  [sdm::World](classsdm_1_1World.md)
+Inherits the following classes: [sdm::DecisionProcessBase](classsdm_1_1DecisionProcessBase.md),  [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 
-Inherited by the following classes: [sdm::POSG](classsdm_1_1POSG.md)
+Inherited by the following classes: [sdm::DiscreteMDP](classsdm_1_1DiscreteMDP.md),  [sdm::DiscreteMMDP](classsdm_1_1DiscreteMMDP.md)
 
 
 
 
+
+
+## Public Types
+
+| Type | Name |
+| ---: | :--- |
+| typedef typename [**DecisionProcessBase**](classsdm_1_1DecisionProcessBase.md)&lt; TStateSpace, TActionSpace, TDistrib &gt;::[**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) | [**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type)  <br> |
+| typedef typename [**GymInterface**](classsdm_1_1GymInterface.md)&lt; TObsSpace, TActionSpace &gt;::[**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type) | [**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type)  <br> |
+| typedef typename [**DecisionProcessBase**](classsdm_1_1DecisionProcessBase.md)&lt; TStateSpace, TActionSpace, TDistrib &gt;::[**state\_type**](classsdm_1_1DecisionProcess.md#typedef-state-type) | [**state\_type**](classsdm_1_1DecisionProcess.md#typedef-state-type)  <br> |
+
+## Public Types inherited from sdm::DecisionProcessBase
+
+See [sdm::DecisionProcessBase](classsdm_1_1DecisionProcessBase.md)
+
+| Type | Name |
+| ---: | :--- |
+| typedef TActionSpace | [**action\_space\_type**](classsdm_1_1DecisionProcessBase.md#typedef-action-space-type)  <br> |
+| typedef typename TActionSpace::value\_type | [**action\_type**](classsdm_1_1DecisionProcessBase.md#typedef-action-type)  <br> |
+
+## Public Types inherited from sdm::StochasticProcessBase
+
+See [sdm::StochasticProcessBase](classsdm_1_1StochasticProcessBase.md)
+
+| Type | Name |
+| ---: | :--- |
+| typedef TStateSpace | [**state\_space\_type**](classsdm_1_1StochasticProcessBase.md#typedef-state-space-type)  <br> |
+| typedef typename TStateSpace::value\_type | [**state\_type**](classsdm_1_1StochasticProcessBase.md#typedef-state-type)  <br> |
 
 
 
@@ -40,63 +69,94 @@ Inherited by the following classes: [sdm::POSG](classsdm_1_1POSG.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-1-4) () <br> |
-|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-2-4) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &) <br> |
-|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-3-4) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const Vector &) <br> |
-|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-4-4) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const [**StateDynamics**](classsdm_1_1StateDynamics.md) &, const std::vector&lt; [**Reward**](classsdm_1_1Reward.md) &gt; &, const Vector &) <br> |
-|  const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getActionSpace**](classsdm_1_1DecisionProcess.md#function-getactionspace) () const<br>_Getter for the action spaces._  |
-|  const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getAgentSpace**](classsdm_1_1DecisionProcess.md#function-getagentspace) () const<br>_Getter for the action spaces._  |
-|  double | [**getBound**](classsdm_1_1DecisionProcess.md#function-getbound) () const<br>_Returns the bound._  |
-|  std::vector&lt; double &gt; | [**getCost**](classsdm_1_1DecisionProcess.md#function-getcost-1-2) ([**number**](namespacesdm.md#typedef-number) state, [**number**](namespacesdm.md#typedef-number) jaction) const<br> |
-|  std::vector&lt; double &gt; | [**getCost**](classsdm_1_1DecisionProcess.md#function-getcost-2-2) ([**number**](namespacesdm.md#typedef-number) state, std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; jaction) const<br> |
-|  bool | [**getCriterion**](classsdm_1_1DecisionProcess.md#function-getcriterion) () const<br>_Returns the criterion._  |
-|  double | [**getDiscount**](classsdm_1_1DecisionProcess.md#function-getdiscount) () const<br>_Returns the discount factor._  |
-|  std::string | [**getFileName**](classsdm_1_1DecisionProcess.md#function-getfilename) () <br> |
-|  [**number**](namespacesdm.md#typedef-number) | [**getNumActions**](classsdm_1_1DecisionProcess.md#function-getnumactions-1-2) ([**number**](namespacesdm.md#typedef-number)) const<br>_Get the number of actions for a specific agent._  |
-|  std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**getNumActions**](classsdm_1_1DecisionProcess.md#function-getnumactions-2-2) () const<br>_Get the number of actions for each agents._  |
-|  [**number**](namespacesdm.md#typedef-number) | [**getNumAgents**](classsdm_1_1DecisionProcess.md#function-getnumagents) () const<br>_Get the number of agents._  |
-|  [**number**](namespacesdm.md#typedef-number) | [**getNumJActions**](classsdm_1_1DecisionProcess.md#function-getnumjactions) () const<br>_Get the number of joint actions._  |
-|  [**number**](namespacesdm.md#typedef-number) | [**getPlanningHorizon**](classsdm_1_1DecisionProcess.md#function-getplanninghorizon) () const<br>_Returns the planning horizon._  |
-|  double | [**getReward**](classsdm_1_1DecisionProcess.md#function-getreward-1-2) ([**number**](namespacesdm.md#typedef-number) state, [**number**](namespacesdm.md#typedef-number) jaction, [**number**](namespacesdm.md#typedef-number) ag\_id) const<br> |
-|  double | [**getReward**](classsdm_1_1DecisionProcess.md#function-getreward-2-2) ([**number**](namespacesdm.md#typedef-number) state, std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; jaction, [**number**](namespacesdm.md#typedef-number) ag\_id) const<br> |
-|  const std::vector&lt; [**Reward**](classsdm_1_1Reward.md) &gt; & | [**getRewards**](classsdm_1_1DecisionProcess.md#function-getrewards-1-3) () const<br> |
-|  std::vector&lt; double &gt; | [**getRewards**](classsdm_1_1DecisionProcess.md#function-getrewards-2-3) ([**number**](namespacesdm.md#typedef-number) state, [**number**](namespacesdm.md#typedef-number) jaction) const<br>_Get transition probability from joint action (as a single one) for all agents._  |
-|  std::vector&lt; double &gt; | [**getRewards**](classsdm_1_1DecisionProcess.md#function-getrewards-3-3) ([**number**](namespacesdm.md#typedef-number) state, std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; jaction) const<br>_Get reward from joint action for all agents._  |
-|  const [**StateDynamics**](classsdm_1_1StateDynamics.md) & | [**getStateDynamics**](classsdm_1_1DecisionProcess.md#function-getstatedynamics) () const<br>_Get the state dynamics._  |
-|  double | [**getTransitionProba**](classsdm_1_1DecisionProcess.md#function-gettransitionproba-1-2) ([**number**](namespacesdm.md#typedef-number) cstate, std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; jaction, [**number**](namespacesdm.md#typedef-number) state) const<br>_Get transition probability from joint action._  |
-|  double | [**getTransitionProba**](classsdm_1_1DecisionProcess.md#function-gettransitionproba-2-2) ([**number**](namespacesdm.md#typedef-number) cstate, [**number**](namespacesdm.md#typedef-number) jaction, [**number**](namespacesdm.md#typedef-number) state) const<br>_Get transition probability from joint action (as a single one)_  |
-|  void | [**nextState**](classsdm_1_1DecisionProcess.md#function-nextstate-1-2) ([**number**](namespacesdm.md#typedef-number) jaction) <br>_Transit to next state given a joint action (as a single one)_  |
-|  void | [**nextState**](classsdm_1_1DecisionProcess.md#function-nextstate-2-2) (std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; jaction) <br>_Transit to next state given a joint action._  |
-|  void | [**setBound**](classsdm_1_1DecisionProcess.md#function-setbound) (double) <br>_Set the bound._  |
-|  void | [**setCriterion**](classsdm_1_1DecisionProcess.md#function-setcriterion) (bool) <br>_Sets the criterion._  |
-|  void | [**setDiscount**](classsdm_1_1DecisionProcess.md#function-setdiscount) (double) <br>_Sets the discount factor._  |
-|  void | [**setFileName**](classsdm_1_1DecisionProcess.md#function-setfilename) (std::string) <br> |
-|  void | [**setPlanningHorizon**](classsdm_1_1DecisionProcess.md#function-setplanninghorizon) ([**number**](namespacesdm.md#typedef-number)) <br>_Sets the planning horizon._  |
+|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-1-5) () <br> |
+|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-2-5) (std::shared\_ptr&lt; TStateSpace &gt; state\_sp, std::shared\_ptr&lt; TActionSpace &gt; action\_sp) <br> |
+|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-3-5) (std::shared\_ptr&lt; TStateSpace &gt; state\_sp, std::shared\_ptr&lt; TActionSpace &gt; action\_sp, TDistrib) <br> |
+|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-4-5) (std::shared\_ptr&lt; TStateSpace &gt; state\_sp, std::shared\_ptr&lt; TActionSpace &gt; action\_sp, std::shared\_ptr&lt; TStateDynamics &gt;, std::shared\_ptr&lt; TReward &gt;, TDistrib start\_distrib, [**number**](namespacesdm.md#typedef-number) planning\_horizon=0, double discount=0.9, [**Criterion**](namespacesdm.md#enum-criterion) criterion=Criterion::REW\_MAX) <br> |
+|   | [**DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess-5-5) (std::shared\_ptr&lt; TStateSpace &gt; state\_sp, std::shared\_ptr&lt; TActionSpace &gt; action\_sp, std::shared\_ptr&lt; TObsSpace &gt; obs\_sp, std::shared\_ptr&lt; TStateDynamics &gt;, std::shared\_ptr&lt; TReward &gt;, TDistrib start\_distrib, [**number**](namespacesdm.md#typedef-number) planning\_horizon=0, double discount=0.9, [**Criterion**](namespacesdm.md#enum-criterion) criterion=Criterion::REW\_MAX) <br> |
+|  std::shared\_ptr&lt; TActionSpace &gt; | [**getActionSpace**](classsdm_1_1DecisionProcess.md#function-getactionspace) () const<br> |
+|  TDistrib | [**getNextStateDistrib**](classsdm_1_1DecisionProcess.md#function-getnextstatedistrib-1-2) ([**state\_type**](classsdm_1_1DecisionProcess.md#typedef-state-type) cstate, [**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) caction) <br>_Get the distribution over next states._  |
+|  TDistrib | [**getNextStateDistrib**](classsdm_1_1DecisionProcess.md#function-getnextstatedistrib-2-2) ([**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) caction) <br>_Get the distribution over next states._  |
+|  std::enable\_if\_t&lt; TBool, [**number**](namespacesdm.md#typedef-number) &gt; | [**getNumAgents**](classsdm_1_1DecisionProcess.md#function-getnumagents-1-2) () <br> |
+|  std::enable\_if\_t&lt;!TBool, [**number**](namespacesdm.md#typedef-number) &gt; | [**getNumAgents**](classsdm_1_1DecisionProcess.md#function-getnumagents-2-2) () <br> |
+|  std::shared\_ptr&lt; TReward &gt; | [**getReward**](classsdm_1_1DecisionProcess.md#function-getreward-1-2) () const<br>_Get the reward function._  |
+|  double | [**getReward**](classsdm_1_1DecisionProcess.md#function-getreward-2-2) ([**state\_type**](classsdm_1_1DecisionProcess.md#typedef-state-type) s, [**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) a) <br> |
+|  std::shared\_ptr&lt; TStateDynamics &gt; | [**getStateDynamics**](classsdm_1_1DecisionProcess.md#function-getstatedynamics) () const<br>_Get the state dynamics._  |
+| virtual [**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type) | [**reset**](classsdm_1_1DecisionProcess.md#function-reset) () <br>_Reset the process to initial settings._  |
+|  void | [**setReward**](classsdm_1_1DecisionProcess.md#function-setreward) (std::shared\_ptr&lt; TReward &gt; reward\_function) <br>_Set the reward function._  |
+|  void | [**setStateDynamics**](classsdm_1_1DecisionProcess.md#function-setstatedynamics) (std::shared\_ptr&lt; TStateDynamics &gt; state\_dyn) <br>_Set the state dynamics._  |
+|  std::enable\_if\_t&lt; TBool &gt; | [**setupDynamicsGenerator**](classsdm_1_1DecisionProcess.md#function-setupdynamicsgenerator-1-2) () <br> |
+|  std::enable\_if\_t&lt;!TBool &gt; | [**setupDynamicsGenerator**](classsdm_1_1DecisionProcess.md#function-setupdynamicsgenerator-2-2) () <br> |
+|  std::enable\_if\_t&lt; TBool, std::tuple&lt; [**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; &gt; | [**step**](classsdm_1_1DecisionProcess.md#function-step) ([**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) a) <br> |
+|  std::enable\_if\_t&lt; TBool, [**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type) &gt; | [**updateState\_getObs**](classsdm_1_1DecisionProcess.md#function-updatestate-getobs) ([**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) a) <br> |
+| virtual  | [**~DecisionProcess**](classsdm_1_1DecisionProcess.md#function-decisionprocess) () <br> |
 
-## Public Functions inherited from sdm::StochasticProcess
+## Public Functions inherited from sdm::DecisionProcessBase
 
-See [sdm::StochasticProcess](classsdm_1_1StochasticProcess.md)
+See [sdm::DecisionProcessBase](classsdm_1_1DecisionProcessBase.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**StochasticProcess**](classsdm_1_1StochasticProcess.md#function-stochasticprocess-1-3) () <br> |
-|   | [**StochasticProcess**](classsdm_1_1StochasticProcess.md#function-stochasticprocess-2-3) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &) <br> |
-|   | [**StochasticProcess**](classsdm_1_1StochasticProcess.md#function-stochasticprocess-3-3) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; &, const Vector &) <br> |
-|  [**number**](namespacesdm.md#typedef-number) | [**getInternalState**](classsdm_1_1StochasticProcess.md#function-getinternalstate) () const<br>_Get the internal state._  |
-|  [**number**](namespacesdm.md#typedef-number) | [**getNumStates**](classsdm_1_1StochasticProcess.md#function-getnumstates) () const<br>_Returns the number of states._  |
-|  const Vector & | [**getStartDistrib**](classsdm_1_1StochasticProcess.md#function-getstartdistrib) () const<br> |
-|  const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getStateSpace**](classsdm_1_1StochasticProcess.md#function-getstatespace) () const<br> |
-|  [**number**](namespacesdm.md#typedef-number) | [**init**](classsdm_1_1StochasticProcess.md#function-init) () <br>_Init processus and return initial sampled state._  |
-|  void | [**setInternalState**](classsdm_1_1StochasticProcess.md#function-setinternalstate) ([**number**](namespacesdm.md#typedef-number)) <br>_Sets the internal state._  |
-|  void | [**setStartDistrib**](classsdm_1_1StochasticProcess.md#function-setstartdistrib-1-2) (const std::vector&lt; double &gt; &) <br> |
-|  void | [**setStartDistrib**](classsdm_1_1StochasticProcess.md#function-setstartdistrib-2-2) (const Vector &) <br> |
-|  void | [**setupStartGenerator**](classsdm_1_1StochasticProcess.md#function-setupstartgenerator) () <br> |
+|   | [**DecisionProcessBase**](classsdm_1_1DecisionProcessBase.md#function-decisionprocessbase-1-3) () <br> |
+|   | [**DecisionProcessBase**](classsdm_1_1DecisionProcessBase.md#function-decisionprocessbase-2-3) (std::shared\_ptr&lt; TStateSpace &gt; state\_sp, std::shared\_ptr&lt; TActionSpace &gt; action\_sp) <br> |
+|   | [**DecisionProcessBase**](classsdm_1_1DecisionProcessBase.md#function-decisionprocessbase-3-3) (std::shared\_ptr&lt; TStateSpace &gt; state\_sp, std::shared\_ptr&lt; TActionSpace &gt; action\_sp, TDistrib start\_distrib, [**number**](namespacesdm.md#typedef-number) planning\_horizon=0, double discount=0.9, [**Criterion**](namespacesdm.md#enum-criterion) criterion=Criterion::REW\_MAX) <br> |
+|  std::shared\_ptr&lt; TActionSpace &gt; | [**getActionSpace**](classsdm_1_1DecisionProcessBase.md#function-getactionspace) () const<br>_Getter for the action space._  |
+|  double | [**getBound**](classsdm_1_1DecisionProcessBase.md#function-getbound) () <br>_Get the bound._  |
+|  [**Criterion**](namespacesdm.md#enum-criterion) | [**getCriterion**](classsdm_1_1DecisionProcessBase.md#function-getcriterion) () <br>_Get the criterion. Can be of two types : REW\_MAX (reward maximisation) or COST\_MIN (cost minimization)._  |
+|  double | [**getDiscount**](classsdm_1_1DecisionProcessBase.md#function-getdiscount) () <br>_Get the discount factor._  |
+|  std::string | [**getFileName**](classsdm_1_1DecisionProcessBase.md#function-getfilename) () <br>_Get the filename._  |
+|  [**number**](namespacesdm.md#typedef-number) | [**getPlanningHorizon**](classsdm_1_1DecisionProcessBase.md#function-getplanninghorizon) () <br>_Get the planning horizon._  |
+|  void | [**setActionSpace**](classsdm_1_1DecisionProcessBase.md#function-setactionspace) (std::shared\_ptr&lt; TActionSpace &gt;) <br>_Set the action space._  |
+|  void | [**setBound**](classsdm_1_1DecisionProcessBase.md#function-setbound) (double bound) <br>_Set the bound._  |
+|  void | [**setCriterion**](classsdm_1_1DecisionProcessBase.md#function-setcriterion) ([**Criterion**](namespacesdm.md#enum-criterion)) <br>_Set the criterion._  |
+|  void | [**setDiscount**](classsdm_1_1DecisionProcessBase.md#function-setdiscount) (double) <br>_Set the discount factor._  |
+|  void | [**setFileName**](classsdm_1_1DecisionProcessBase.md#function-setfilename) (std::string filename) <br>_Set the filename._  |
+|  void | [**setPlanningHorizon**](classsdm_1_1DecisionProcessBase.md#function-setplanninghorizon) ([**number**](namespacesdm.md#typedef-number)) <br>_Set the planning horizon._  |
+
+## Public Functions inherited from sdm::StochasticProcessBase
+
+See [sdm::StochasticProcessBase](classsdm_1_1StochasticProcessBase.md)
+
+| Type | Name |
+| ---: | :--- |
+|   | [**StochasticProcessBase**](classsdm_1_1StochasticProcessBase.md#function-stochasticprocessbase-1-3) () <br> |
+|   | [**StochasticProcessBase**](classsdm_1_1StochasticProcessBase.md#function-stochasticprocessbase-2-3) (std::shared\_ptr&lt; TStateSpace &gt;) <br> |
+|   | [**StochasticProcessBase**](classsdm_1_1StochasticProcessBase.md#function-stochasticprocessbase-3-3) (std::shared\_ptr&lt; TStateSpace &gt;, TDistrib) <br> |
+|  [**state\_type**](classsdm_1_1StochasticProcessBase.md#typedef-state-type) | [**getInternalState**](classsdm_1_1StochasticProcessBase.md#function-getinternalstate) () const<br> |
+|  TDistrib | [**getStartDistrib**](classsdm_1_1StochasticProcessBase.md#function-getstartdistrib) () const<br> |
+|  std::shared\_ptr&lt; TStateSpace &gt; | [**getStateSpace**](classsdm_1_1StochasticProcessBase.md#function-getstatespace) () const<br> |
+|  void | [**setInternalState**](classsdm_1_1StochasticProcessBase.md#function-setinternalstate) ([**state\_type**](classsdm_1_1StochasticProcessBase.md#typedef-state-type) new\_i\_state) <br> |
+|  void | [**setStartDistrib**](classsdm_1_1StochasticProcessBase.md#function-setstartdistrib) (TDistrib) <br> |
+|  void | [**setStateSpace**](classsdm_1_1StochasticProcessBase.md#function-setstatespace) (std::shared\_ptr&lt; TStateSpace &gt;) <br> |
+
+## Public Functions inherited from sdm::GymInterface
+
+See [sdm::GymInterface](classsdm_1_1GymInterface.md)
+
+| Type | Name |
+| ---: | :--- |
+|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-1-2) () <br> |
+|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-2-2) (std::shared\_ptr&lt; TObsSpace &gt;, std::shared\_ptr&lt; TActSpace &gt;) <br> |
+|  std::shared\_ptr&lt; TActSpace &gt; | [**getActionSpace**](classsdm_1_1GymInterface.md#function-getactionspace) () const<br> |
+|  std::shared\_ptr&lt; TObsSpace &gt; | [**getObsSpace**](classsdm_1_1GymInterface.md#function-getobsspace) () const<br> |
+| virtual [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type) | [**reset**](classsdm_1_1GymInterface.md#function-reset) () = 0<br> |
+|  std::tuple&lt; [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) ([**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)) <br> |
 
 
 
 
 
 
+
+
+## Protected Types inherited from sdm::GymInterface
+
+See [sdm::GymInterface](classsdm_1_1GymInterface.md)
+
+| Type | Name |
+| ---: | :--- |
+| typedef typename TActSpace::value\_type | [**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)  <br> |
+| typedef typename TObsSpace::value\_type | [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type)  <br> |
 
 
 
@@ -106,33 +166,54 @@ See [sdm::StochasticProcess](classsdm_1_1StochasticProcess.md)
 
 | Type | Name |
 | ---: | :--- |
-|  [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**action\_space\_**](classsdm_1_1DecisionProcess.md#variable-action-space-)  <br>_Action space for each agent._  |
-|  [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**agent\_space\_**](classsdm_1_1DecisionProcess.md#variable-agent-space-)  <br>[_**Space**_](classsdm_1_1Space.md) _of agents (contain number of agents and their names)._ |
-|  double | [**bound**](classsdm_1_1DecisionProcess.md#variable-bound)  <br> |
-|  [**Criterion**](namespacesdm.md#enum-criterion) | [**criterion**](classsdm_1_1DecisionProcess.md#variable-criterion)   = = Criterion::REW\_MAX<br>_type of optimization problem, e.g., reward maximazation or cost minimization._  |
-|  double | [**discount**](classsdm_1_1DecisionProcess.md#variable-discount)   = = 1.0<br>_factor used to discount rewards (respectively costs) in the future._  |
-|  std::string | [**filename**](classsdm_1_1DecisionProcess.md#variable-filename)  <br>_name of the file that generates the environment_  |
-|  [**number**](namespacesdm.md#typedef-number) | [**planning\_horizon**](classsdm_1_1DecisionProcess.md#variable-planning-horizon)   = = 0<br>_planning horizon_  |
-|  std::vector&lt; [**Reward**](classsdm_1_1Reward.md) &gt; | [**rew\_**](classsdm_1_1DecisionProcess.md#variable-rew-)  <br>[_**Reward**_](classsdm_1_1Reward.md) _functions._ |
-|  [**StateDynamics**](classsdm_1_1StateDynamics.md) | [**s\_dynamics\_**](classsdm_1_1DecisionProcess.md#variable-s-dynamics-)  <br>_State dynamics._  |
+|  long | [**ctimestep\_**](classsdm_1_1DecisionProcess.md#variable-ctimestep-)   = = 0<br> |
+|  std::unordered\_map&lt; [**state\_type**](classsdm_1_1DecisionProcess.md#typedef-state-type), std::unordered\_map&lt; [**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type), TDistrib &gt; &gt; | [**dynamics\_generator**](classsdm_1_1DecisionProcess.md#variable-dynamics-generator)  <br>_Map (state, jaction) to probability of (next\_state, next\_observation)_  _&gt; i.e. s\_{t+1}, o\_{t+1} ~ P(S\_{t+1}, O\_{t+1} | S\_t = s, A\_t = a )_ |
+|  std::shared\_ptr&lt; TReward &gt; | [**reward\_function\_**](classsdm_1_1DecisionProcess.md#variable-reward-function-)  <br>[_**Reward**_](classsdm_1_1Reward.md) _functions._ |
+|  std::shared\_ptr&lt; TStateDynamics &gt; | [**state\_dynamics\_**](classsdm_1_1DecisionProcess.md#variable-state-dynamics-)  <br>_State dynamics._  |
 
-## Protected Attributes inherited from sdm::StochasticProcess
+## Protected Attributes inherited from sdm::DecisionProcessBase
 
-See [sdm::StochasticProcess](classsdm_1_1StochasticProcess.md)
+See [sdm::DecisionProcessBase](classsdm_1_1DecisionProcessBase.md)
 
 | Type | Name |
 | ---: | :--- |
-|  Vector | [**start\_distrib\_**](classsdm_1_1StochasticProcess.md#variable-start-distrib-)  <br>_The initial state distribution._  |
-|  std::discrete\_distribution&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**start\_generator**](classsdm_1_1StochasticProcess.md#variable-start-generator)  <br>_generator of starting state_  |
-|  [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**state\_space\_**](classsdm_1_1StochasticProcess.md#variable-state-space-)  <br>_The state space._  |
+|  std::shared\_ptr&lt; TActionSpace &gt; | [**action\_space\_**](classsdm_1_1DecisionProcessBase.md#variable-action-space-)  <br>_Action space for each agent._  |
+|  double | [**bound\_**](classsdm_1_1DecisionProcessBase.md#variable-bound-)  <br> |
+|  [**Criterion**](namespacesdm.md#enum-criterion) | [**criterion\_**](classsdm_1_1DecisionProcessBase.md#variable-criterion-)   = = Criterion::REW\_MAX<br>_type of optimization problem, e.g., reward maximazation or cost minimization._  |
+|  double | [**discount\_**](classsdm_1_1DecisionProcessBase.md#variable-discount-)   = = 1.0<br>_factor used to discount rewards (respectively costs) in the future._  |
+|  std::string | [**filename\_**](classsdm_1_1DecisionProcessBase.md#variable-filename-)  <br>_name of the file that generates the environment_  |
+|  [**number**](namespacesdm.md#typedef-number) | [**planning\_horizon\_**](classsdm_1_1DecisionProcessBase.md#variable-planning-horizon-)   = = 0<br>_planning horizon_  |
 
-## Protected Attributes inherited from sdm::World
+## Protected Attributes inherited from sdm::StochasticProcessBase
 
-See [sdm::World](classsdm_1_1World.md)
+See [sdm::StochasticProcessBase](classsdm_1_1StochasticProcessBase.md)
 
 | Type | Name |
 | ---: | :--- |
-|  [**state**](namespacesdm.md#typedef-state) | [**internal**](classsdm_1_1World.md#variable-internal)   = = 0<br> |
+|  TDistrib | [**start\_distrib\_**](classsdm_1_1StochasticProcessBase.md#variable-start-distrib-)  <br>_The initial state distribution._  |
+|  std::shared\_ptr&lt; TStateSpace &gt; | [**state\_space\_**](classsdm_1_1StochasticProcessBase.md#variable-state-space-)  <br>_The state space._  |
+
+## Protected Attributes inherited from sdm::GymInterface
+
+See [sdm::GymInterface](classsdm_1_1GymInterface.md)
+
+| Type | Name |
+| ---: | :--- |
+|  std::shared\_ptr&lt; TActSpace &gt; | [**action\_space\_**](classsdm_1_1GymInterface.md#variable-action-space-)  <br> |
+|  std::shared\_ptr&lt; TObsSpace &gt; | [**observation\_space\_**](classsdm_1_1GymInterface.md#variable-observation-space-)  <br> |
+
+
+
+
+
+## Protected Functions
+
+| Type | Name |
+| ---: | :--- |
+|  std::enable\_if\_t&lt; TBool, [**number**](namespacesdm.md#typedef-number) &gt; | [**getAction**](classsdm_1_1DecisionProcess.md#function-getaction-1-2) ([**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) a) <br> |
+|  std::enable\_if\_t&lt;!TBool, [**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) &gt; | [**getAction**](classsdm_1_1DecisionProcess.md#function-getaction-2-2) ([**action\_type**](classsdm_1_1DecisionProcess.md#typedef-action-type) a) <br> |
+|  std::enable\_if\_t&lt; TBool, [**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type) &gt; | [**resetProcess**](classsdm_1_1DecisionProcess.md#function-resetprocess-1-2) () <br> |
+|  std::enable\_if\_t&lt;!TBool, [**observation\_type**](classsdm_1_1DecisionProcess.md#typedef-observation-type) &gt; | [**resetProcess**](classsdm_1_1DecisionProcess.md#function-resetprocess-2-2) () <br> |
 
 
 
@@ -141,12 +222,57 @@ See [sdm::World](classsdm_1_1World.md)
 
 
 
+# Detailed Description
+
+
+
+
+**Template parameters:**
+
+
+* `TStateSpace` the state space type 
+* `TActionSpace` the action space type 
+* `TObsSpace` the observation space type 
+* `TStateDynamics` the state dynamics type 
+* `TReward` the reward function type 
+* `TDistrib` the type of the start distribution 
+
+
+
+    
+## Public Types Documentation
+
+
+### typedef action\_type 
+
+
+```cpp
+using sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::action_type =  typename DecisionProcessBase<TStateSpace, TActionSpace, TDistrib>::action_type;
+```
+
+
+
+### typedef observation\_type 
+
+
+```cpp
+using sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::observation_type =  typename GymInterface<TObsSpace, TActionSpace>::observation_type;
+```
+
+
+
+### typedef state\_type 
+
+
+```cpp
+using sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::state_type =  typename DecisionProcessBase<TStateSpace, TActionSpace, TDistrib>::state_type;
+```
 
 
 ## Public Functions Documentation
 
 
-### function DecisionProcess [1/4]
+### function DecisionProcess [1/5]
 
 
 ```cpp
@@ -155,44 +281,63 @@ sdm::DecisionProcess::DecisionProcess ()
 
 
 
-### function DecisionProcess [2/4]
+### function DecisionProcess [2/5]
 
 
 ```cpp
 sdm::DecisionProcess::DecisionProcess (
-    const DiscreteSpace < number > &,
-    const DiscreteSpace < number > &,
-    const MultiDiscreteSpace < number > &
+    std::shared_ptr< TStateSpace > state_sp,
+    std::shared_ptr< TActionSpace > action_sp
 ) 
 ```
 
 
 
-### function DecisionProcess [3/4]
+### function DecisionProcess [3/5]
 
 
 ```cpp
 sdm::DecisionProcess::DecisionProcess (
-    const DiscreteSpace < number > &,
-    const DiscreteSpace < number > &,
-    const MultiDiscreteSpace < number > &,
-    const Vector &
+    std::shared_ptr< TStateSpace > state_sp,
+    std::shared_ptr< TActionSpace > action_sp,
+    TDistrib
 ) 
 ```
 
 
 
-### function DecisionProcess [4/4]
+### function DecisionProcess [4/5]
 
 
 ```cpp
 sdm::DecisionProcess::DecisionProcess (
-    const DiscreteSpace < number > &,
-    const DiscreteSpace < number > &,
-    const MultiDiscreteSpace < number > &,
-    const StateDynamics &,
-    const std::vector< Reward > &,
-    const Vector &
+    std::shared_ptr< TStateSpace > state_sp,
+    std::shared_ptr< TActionSpace > action_sp,
+    std::shared_ptr< TStateDynamics >,
+    std::shared_ptr< TReward >,
+    TDistrib start_distrib,
+    number planning_horizon=0,
+    double discount=0.9,
+    Criterion criterion=Criterion::REW_MAX
+) 
+```
+
+
+
+### function DecisionProcess [5/5]
+
+
+```cpp
+sdm::DecisionProcess::DecisionProcess (
+    std::shared_ptr< TStateSpace > state_sp,
+    std::shared_ptr< TActionSpace > action_sp,
+    std::shared_ptr< TObsSpace > obs_sp,
+    std::shared_ptr< TStateDynamics >,
+    std::shared_ptr< TReward >,
+    TDistrib start_distrib,
+    number planning_horizon=0,
+    double discount=0.9,
+    Criterion criterion=Criterion::REW_MAX
 ) 
 ```
 
@@ -202,186 +347,95 @@ sdm::DecisionProcess::DecisionProcess (
 
 
 ```cpp
-const MultiDiscreteSpace < number > & sdm::DecisionProcess::getActionSpace () const
+std::shared_ptr< TActionSpace > sdm::DecisionProcess::getActionSpace () const
 ```
 
 
 
-### function getAgentSpace 
+### function getNextStateDistrib [1/2]
 
 
 ```cpp
-const DiscreteSpace < number > & sdm::DecisionProcess::getAgentSpace () const
+TDistrib sdm::DecisionProcess::getNextStateDistrib (
+    state_type cstate,
+    action_type caction
+) 
 ```
 
 
 
-### function getBound 
+
+**Parameters:**
 
 
-```cpp
-double sdm::DecisionProcess::getBound () const
-```
-
+* `cstate` the current state 
+* `caction` the current action 
 
 
 
 **Returns:**
 
-the bound 
+the distribution over next states 
 
 
 
 
         
 
-### function getCost [1/2]
+### function getNextStateDistrib [2/2]
 
 
 ```cpp
-std::vector< double > sdm::DecisionProcess::getCost (
-    number state,
-    number jaction
-) const
+TDistrib sdm::DecisionProcess::getNextStateDistrib (
+    action_type caction
+) 
 ```
 
 
 
-### function getCost [2/2]
+
+**Parameters:**
 
 
-```cpp
-std::vector< double > sdm::DecisionProcess::getCost (
-    number state,
-    std::vector< number > jaction
-) const
-```
-
-
-
-### function getCriterion 
-
-
-```cpp
-bool sdm::DecisionProcess::getCriterion () const
-```
-
+* `cstate` the current state 
+* `caction` the current action 
 
 
 
 **Returns:**
 
-bool 
+the distribution over next states 
 
 
 
 
         
 
-### function getDiscount 
+### function getNumAgents [1/2]
 
 
 ```cpp
-double sdm::DecisionProcess::getDiscount () const
+template<bool TBool>
+std::enable_if_t< TBool, number > sdm::DecisionProcess::getNumAgents () 
 ```
 
 
 
-
-**Returns:**
-
-value 
-
-
-
-
-        
-
-### function getFileName 
+### function getNumAgents [2/2]
 
 
 ```cpp
-std::string sdm::DecisionProcess::getFileName () 
+template<bool TBool>
+std::enable_if_t<!TBool, number > sdm::DecisionProcess::getNumAgents () 
 ```
 
 
-
-
-**Returns:**
-
-filename 
-
-
-
-
-        
-
-### function getNumActions [1/2]
-
-
-```cpp
-number sdm::DecisionProcess::getNumActions (
-    number
-) const
-```
-
-
-
-### function getNumActions [2/2]
-
-
-```cpp
-std::vector< number > sdm::DecisionProcess::getNumActions () const
-```
-
-
-
-### function getNumAgents 
-
-
-```cpp
-number sdm::DecisionProcess::getNumAgents () const
-```
-
-
-
-### function getNumJActions 
-
-
-```cpp
-number sdm::DecisionProcess::getNumJActions () const
-```
-
-
-
-### function getPlanningHorizon 
-
-
-```cpp
-number sdm::DecisionProcess::getPlanningHorizon () const
-```
-
-
-
-
-**Returns:**
-
-the horizon 
-
-
-
-
-        
 
 ### function getReward [1/2]
 
 
 ```cpp
-double sdm::DecisionProcess::getReward (
-    number state,
-    number jaction,
-    number ag_id
-) const
+std::shared_ptr< TReward > sdm::DecisionProcess::getReward () const
 ```
 
 
@@ -391,43 +445,9 @@ double sdm::DecisionProcess::getReward (
 
 ```cpp
 double sdm::DecisionProcess::getReward (
-    number state,
-    std::vector< number > jaction,
-    number ag_id
-) const
-```
-
-
-
-### function getRewards [1/3]
-
-
-```cpp
-const std::vector< Reward > & sdm::DecisionProcess::getRewards () const
-```
-
-
-
-### function getRewards [2/3]
-
-
-```cpp
-std::vector< double > sdm::DecisionProcess::getRewards (
-    number state,
-    number jaction
-) const
-```
-
-
-
-### function getRewards [3/3]
-
-
-```cpp
-std::vector< double > sdm::DecisionProcess::getRewards (
-    number state,
-    std::vector< number > jaction
-) const
+    state_type s,
+    action_type a
+) 
 ```
 
 
@@ -436,216 +456,190 @@ std::vector< double > sdm::DecisionProcess::getRewards (
 
 
 ```cpp
-const StateDynamics & sdm::DecisionProcess::getStateDynamics () const
+std::shared_ptr< TStateDynamics > sdm::DecisionProcess::getStateDynamics () const
 ```
 
 
 
-### function getTransitionProba [1/2]
+### function reset 
 
 
 ```cpp
-double sdm::DecisionProcess::getTransitionProba (
-    number cstate,
-    std::vector< number > jaction,
-    number state
-) const
-```
-
-
-
-### function getTransitionProba [2/2]
-
-
-```cpp
-double sdm::DecisionProcess::getTransitionProba (
-    number cstate,
-    number jaction,
-    number state
-) const
-```
-
-
-
-### function nextState [1/2]
-
-
-```cpp
-void sdm::DecisionProcess::nextState (
-    number jaction
-) 
-```
-
-
-
-### function nextState [2/2]
-
-
-```cpp
-void sdm::DecisionProcess::nextState (
-    std::vector< number > jaction
-) 
-```
-
-
-
-### function setBound 
-
-
-```cpp
-void sdm::DecisionProcess::setBound (
-    double
-) 
+virtual observation_type sdm::DecisionProcess::reset () 
 ```
 
 
 
 
-**Parameters:**
+**Returns:**
 
+the initial state (which is the internal state) 
 
-* `bound` the bound 
 
 
 
         
+Implements [*sdm::GymInterface::reset*](classsdm_1_1GymInterface.md#function-reset)
 
-### function setCriterion 
+
+### function setReward 
 
 
 ```cpp
-void sdm::DecisionProcess::setCriterion (
-    bool
+void sdm::DecisionProcess::setReward (
+    std::shared_ptr< TReward > reward_function
 ) 
 ```
 
 
 
-### function setDiscount 
+### function setStateDynamics 
 
 
 ```cpp
-void sdm::DecisionProcess::setDiscount (
-    double
+void sdm::DecisionProcess::setStateDynamics (
+    std::shared_ptr< TStateDynamics > state_dyn
 ) 
 ```
 
 
 
-### function setFileName 
+### function setupDynamicsGenerator [1/2]
 
 
 ```cpp
-void sdm::DecisionProcess::setFileName (
-    std::string
+template<bool TBool>
+std::enable_if_t< TBool > sdm::DecisionProcess::setupDynamicsGenerator () 
+```
+
+
+
+### function setupDynamicsGenerator [2/2]
+
+
+```cpp
+template<bool TBool>
+std::enable_if_t<!TBool > sdm::DecisionProcess::setupDynamicsGenerator () 
+```
+
+
+
+### function step 
+
+
+```cpp
+template<bool TBool>
+std::enable_if_t< TBool, std::tuple< observation_type , std::vector< double >, bool > > sdm::DecisionProcess::step (
+    action_type a
 ) 
 ```
 
 
 
-
-**Parameters:**
-
-
-* `filename` 
-
-
-
-        
-
-### function setPlanningHorizon 
+### function updateState\_getObs 
 
 
 ```cpp
-void sdm::DecisionProcess::setPlanningHorizon (
-    number
+template<bool TBool>
+std::enable_if_t< TBool, observation_type > sdm::DecisionProcess::updateState_getObs (
+    action_type a
 ) 
+```
+
+
+
+### function ~DecisionProcess 
+
+
+```cpp
+virtual sdm::DecisionProcess::~DecisionProcess () 
 ```
 
 
 ## Protected Attributes Documentation
 
 
-### variable action\_space\_ 
+### variable ctimestep\_ 
 
 
 ```cpp
-MultiDiscreteSpace<number> sdm::DecisionProcess::action_space_;
+long sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::ctimestep_;
 ```
 
 
 
-### variable agent\_space\_ 
+### variable dynamics\_generator 
 
 
 ```cpp
-DiscreteSpace<number> sdm::DecisionProcess::agent_space_;
+std::unordered_map<state_type, std::unordered_map<action_type, TDistrib> > sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::dynamics_generator;
 ```
 
 
 
-### variable bound 
+### variable reward\_function\_ 
 
 
 ```cpp
-double sdm::DecisionProcess::bound;
+std::shared_ptr<TReward> sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::reward_function_;
 ```
 
 
 
-### variable criterion 
+### variable state\_dynamics\_ 
 
 
 ```cpp
-Criterion sdm::DecisionProcess::criterion;
+std::shared_ptr<TStateDynamics> sdm::DecisionProcess< TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, is_fully_obs >::state_dynamics_;
+```
+
+
+## Protected Functions Documentation
+
+
+### function getAction [1/2]
+
+
+```cpp
+template<bool TBool>
+std::enable_if_t< TBool, number > sdm::DecisionProcess::getAction (
+    action_type a
+) 
 ```
 
 
 
-### variable discount 
+### function getAction [2/2]
 
 
 ```cpp
-double sdm::DecisionProcess::discount;
+template<bool TBool>
+std::enable_if_t<!TBool, action_type > sdm::DecisionProcess::getAction (
+    action_type a
+) 
 ```
 
 
 
-### variable filename 
+### function resetProcess [1/2]
 
 
 ```cpp
-std::string sdm::DecisionProcess::filename;
+template<bool TBool>
+std::enable_if_t< TBool, observation_type > sdm::DecisionProcess::resetProcess () 
 ```
 
 
 
-### variable planning\_horizon 
+### function resetProcess [2/2]
 
 
 ```cpp
-number sdm::DecisionProcess::planning_horizon;
-```
-
-
-
-### variable rew\_ 
-
-
-```cpp
-std::vector<Reward> sdm::DecisionProcess::rew_;
-```
-
-
-
-### variable s\_dynamics\_ 
-
-
-```cpp
-StateDynamics sdm::DecisionProcess::s_dynamics_;
+template<bool TBool>
+std::enable_if_t<!TBool, observation_type > sdm::DecisionProcess::resetProcess () 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/world/decision_process.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/decision_process.hpp`

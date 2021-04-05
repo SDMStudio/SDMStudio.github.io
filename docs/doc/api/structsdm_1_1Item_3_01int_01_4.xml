@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1Item_3_01int_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::Item&lt; int &gt;</compoundname>
+    <includes refid="item_8hpp" local="no">item.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structsdm_1_1Item_3_01int_01_4_1a5d4cadfa7c8020a1fc2fc2a2a489f99e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::Item&lt; int &gt;::item_</definition>
+        <argsstring></argsstring>
+        <name>item_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="44" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1Item_3_01int_01_4_1ae33257e72497c6fdfbc096896935e514" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; int &gt;::Item</definition>
+        <argsstring>()</argsstring>
+        <name>Item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01int_01_4_1a2bcc25f3ddde95c48381367831753396" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; int &gt;::Item</definition>
+        <argsstring>(int item)</argsstring>
+        <name>Item</name>
+        <param>
+          <type>int</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="51" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01int_01_4_1ad6ef906f019283c1f3b8f8c1b85f4df7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; int &gt;::operator int</definition>
+        <argsstring>()</argsstring>
+        <name>operator int</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structsdm_1_1Item_3_01int_01_4_1a79c2a13d128948b8415520785be7859a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Item&lt; int &gt; &amp;it)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsdm_1_1Item" kindref="compound">Item</ref>&lt; int &gt; &amp;</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="57" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="42" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="41" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1Item_3_01int_01_4_1ae33257e72497c6fdfbc096896935e514" prot="public" virt="non-virtual"><scope>sdm::Item&lt; int &gt;</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_3_01int_01_4_1a2bcc25f3ddde95c48381367831753396" prot="public" virt="non-virtual"><scope>sdm::Item&lt; int &gt;</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_3_01int_01_4_1a5d4cadfa7c8020a1fc2fc2a2a489f99e" prot="protected" virt="non-virtual"><scope>sdm::Item&lt; int &gt;</scope><name>item_</name></member>
+      <member refid="structsdm_1_1Item_3_01int_01_4_1ad6ef906f019283c1f3b8f8c1b85f4df7" prot="public" virt="non-virtual"><scope>sdm::Item&lt; int &gt;</scope><name>operator int</name></member>
+      <member refid="structsdm_1_1Item_3_01int_01_4_1a79c2a13d128948b8415520785be7859a" prot="public" virt="non-virtual"><scope>sdm::Item&lt; int &gt;</scope><name>operator&lt;&lt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -28,7 +28,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
-| namespace | [**ast**](namespacesdm_1_1ast.md) <br> |
+| namespace | [**ast**](namespacesdm_1_1ast.md) <br>_Namespace that is used by the parser._  |
 
 ## Classes
 
@@ -66,4 +66,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/ast.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp`

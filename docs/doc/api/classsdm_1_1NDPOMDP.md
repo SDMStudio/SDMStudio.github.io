@@ -63,33 +63,36 @@ Inherits the following classes: [sdm::World](classsdm_1_1World.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**NDPOMDP**](classsdm_1_1NDPOMDP.md#function-ndpomdp) (std::string) <br> |
+|   | [**NDPOMDP**](classsdm_1_1NDPOMDP.md#function-ndpomdp) (std::string filename) <br> |
 |  void | [**createDAG**](classsdm_1_1NDPOMDP.md#function-createdag) () <br> |
 | virtual void | [**execute**](classsdm_1_1NDPOMDP.md#function-execute) ([**action**](namespacesdm.md#typedef-action), [**feedback**](classsdm_1_1feedback.md) \*) <br> |
-|  const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getActionSpace**](classsdm_1_1NDPOMDP.md#function-getactionspace) () const<br>_Getter for the observation spaces._  |
+|  const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getActionSpace**](classsdm_1_1NDPOMDP.md#function-getactionspace) () const<br>_Getter for the action spaces._  |
 |  void | [**getData**](classsdm_1_1NDPOMDP.md#function-getdata) (std::string) <br> |
 |  double | [**getDiscount**](classsdm_1_1NDPOMDP.md#function-getdiscount) () <br> |
 |  std::tuple&lt; std::vector&lt; double &gt;, [**observation**](namespacesdm.md#typedef-observation), [**state**](namespacesdm.md#typedef-state) &gt; | [**getDynamicsGenerator**](classsdm_1_1NDPOMDP.md#function-getdynamicsgenerator-1-2) ([**number**](namespacesdm.md#typedef-number) state, [**number**](namespacesdm.md#typedef-number) jaction) <br> |
-|  std::tuple&lt; [**state**](namespacesdm.md#typedef-state), [**observation**](namespacesdm.md#typedef-observation), [**observation**](namespacesdm.md#typedef-observation) &gt; | [**getDynamicsGenerator**](classsdm_1_1NDPOMDP.md#function-getdynamicsgenerator-2-2) ([**state**](namespacesdm.md#typedef-state), [**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action)) <br> |
-|  double | [**getInitialBelief**](classsdm_1_1NDPOMDP.md#function-getinitialbelief) ([**state**](namespacesdm.md#typedef-state)) <br> |
+|  std::tuple&lt; [**state**](namespacesdm.md#typedef-state), [**observation**](namespacesdm.md#typedef-observation), [**observation**](namespacesdm.md#typedef-observation) &gt; | [**getDynamicsGenerator**](classsdm_1_1NDPOMDP.md#function-getdynamicsgenerator-2-2) ([**state**](namespacesdm.md#typedef-state) x, [**agent**](namespacesdm.md#typedef-agent) i, [**action**](namespacesdm.md#typedef-action) ui, [**agent**](namespacesdm.md#typedef-agent) j, [**action**](namespacesdm.md#typedef-action) uj) <br> |
+|  double | [**getInitialBelief**](classsdm_1_1NDPOMDP.md#function-getinitialbelief) ([**state**](namespacesdm.md#typedef-state) x) <br> |
 |  [**number**](namespacesdm.md#typedef-number) | [**getNumActions**](classsdm_1_1NDPOMDP.md#function-getnumactions-1-2) ([**number**](namespacesdm.md#typedef-number) agent) const<br>_Get the number of Actions for a specific agent._  |
 |  std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**getNumActions**](classsdm_1_1NDPOMDP.md#function-getnumactions-2-2) () const<br>_Get the number of Action for every agents._  |
 | virtual [**number**](namespacesdm.md#typedef-number) | [**getNumAgents**](classsdm_1_1NDPOMDP.md#function-getnumagents) () const<br> |
 |  [**number**](namespacesdm.md#typedef-number) | [**getNumJActions**](classsdm_1_1NDPOMDP.md#function-getnumjactions) () const<br>_Get the number of joint observations._  |
+|  [**number**](namespacesdm.md#typedef-number) | [**getNumJObservations**](classsdm_1_1NDPOMDP.md#function-getnumjobservations) () const<br>_Get the number of joint observations._  |
 | virtual [**number**](namespacesdm.md#typedef-number) | [**getNumObservations**](classsdm_1_1NDPOMDP.md#function-getnumobservations) ([**number**](namespacesdm.md#typedef-number) agent) const<br> |
 | virtual [**number**](namespacesdm.md#typedef-number) | [**getNumStates**](classsdm_1_1NDPOMDP.md#function-getnumstates) () const<br> |
-|  double | [**getObservation**](classsdm_1_1NDPOMDP.md#function-getobservation) ([**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**state**](namespacesdm.md#typedef-state), [**observation**](namespacesdm.md#typedef-observation)) <br> |
-|  std::unordered\_set&lt; [**observation**](namespacesdm.md#typedef-observation) &gt; | [**getObservationSuccessor**](classsdm_1_1NDPOMDP.md#function-getobservationsuccessor) ([**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**state**](namespacesdm.md#typedef-state)) <br> |
-|  double | [**getP**](classsdm_1_1NDPOMDP.md#function-getp) ([**state**](namespacesdm.md#typedef-state), [**action**](namespacesdm.md#typedef-action), [**state**](namespacesdm.md#typedef-state)) <br> |
-|  [**state**](namespacesdm.md#typedef-state) | [**getPGenerator**](classsdm_1_1NDPOMDP.md#function-getpgenerator) ([**state**](namespacesdm.md#typedef-state)) <br> |
-|  double | [**getQ**](classsdm_1_1NDPOMDP.md#function-getq) ([**state**](namespacesdm.md#typedef-state), [**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**observation**](namespacesdm.md#typedef-observation), [**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**observation**](namespacesdm.md#typedef-observation)) <br> |
-|  [**observation**](namespacesdm.md#typedef-observation) | [**getQGenerator**](classsdm_1_1NDPOMDP.md#function-getqgenerator) ([**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**state**](namespacesdm.md#typedef-state)) <br> |
-|  double | [**getReward**](classsdm_1_1NDPOMDP.md#function-getreward) ([**state**](namespacesdm.md#typedef-state), [**agent**](namespacesdm.md#typedef-agent), [**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**action**](namespacesdm.md#typedef-action)) <br> |
-|  std::unordered\_set&lt; [**state**](namespacesdm.md#typedef-state) &gt; | [**getStateSuccessor**](classsdm_1_1NDPOMDP.md#function-getstatesuccessor) ([**state**](namespacesdm.md#typedef-state)) <br> |
+|  const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getObsSpace**](classsdm_1_1NDPOMDP.md#function-getobsspace) () const<br>_Getter for the observation spaces._  |
+|  double | [**getObservation**](classsdm_1_1NDPOMDP.md#function-getobservation) ([**agent**](namespacesdm.md#typedef-agent) id, [**action**](namespacesdm.md#typedef-action) u, [**state**](namespacesdm.md#typedef-state) y, [**observation**](namespacesdm.md#typedef-observation) z) <br> |
+|  std::unordered\_set&lt; [**observation**](namespacesdm.md#typedef-observation) &gt; | [**getObservationSuccessor**](classsdm_1_1NDPOMDP.md#function-getobservationsuccessor) ([**agent**](namespacesdm.md#typedef-agent) id, [**action**](namespacesdm.md#typedef-action) u, [**state**](namespacesdm.md#typedef-state) x) <br> |
+|  double | [**getP**](classsdm_1_1NDPOMDP.md#function-getp) ([**state**](namespacesdm.md#typedef-state) x, [**action**](namespacesdm.md#typedef-action), [**state**](namespacesdm.md#typedef-state) y) <br> |
+|  [**state**](namespacesdm.md#typedef-state) | [**getPGenerator**](classsdm_1_1NDPOMDP.md#function-getpgenerator) ([**state**](namespacesdm.md#typedef-state) x) <br> |
+|  double | [**getQ**](classsdm_1_1NDPOMDP.md#function-getq) ([**state**](namespacesdm.md#typedef-state) x, [**agent**](namespacesdm.md#typedef-agent) id1, [**action**](namespacesdm.md#typedef-action) u1, [**observation**](namespacesdm.md#typedef-observation) z1, [**agent**](namespacesdm.md#typedef-agent) id2, [**action**](namespacesdm.md#typedef-action) u2, [**observation**](namespacesdm.md#typedef-observation) z2) <br> |
+|  [**observation**](namespacesdm.md#typedef-observation) | [**getQGenerator**](classsdm_1_1NDPOMDP.md#function-getqgenerator) ([**agent**](namespacesdm.md#typedef-agent) i, [**action**](namespacesdm.md#typedef-action) u, [**state**](namespacesdm.md#typedef-state) y) <br> |
+|  double | [**getReward**](classsdm_1_1NDPOMDP.md#function-getreward) ([**state**](namespacesdm.md#typedef-state) x, [**agent**](namespacesdm.md#typedef-agent) id1, [**agent**](namespacesdm.md#typedef-agent) id2, [**action**](namespacesdm.md#typedef-action) u1, [**action**](namespacesdm.md#typedef-action) u2) <br> |
+|  const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; [**number**](namespacesdm.md#typedef-number) &gt; & | [**getStateSpace**](classsdm_1_1NDPOMDP.md#function-getstatespace) () const<br> |
+|  std::unordered\_set&lt; [**state**](namespacesdm.md#typedef-state) &gt; | [**getStateSuccessor**](classsdm_1_1NDPOMDP.md#function-getstatesuccessor) ([**state**](namespacesdm.md#typedef-state) x) <br> |
 |  std::vector&lt; std::pair&lt; [**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number) &gt; &gt; | [**getUniqueValidNeighbors**](classsdm_1_1NDPOMDP.md#function-getuniquevalidneighbors) () <br> |
 | virtual [**state**](namespacesdm.md#typedef-state) | [**init**](classsdm_1_1NDPOMDP.md#function-init) () <br> |
-|  void | [**printDAG**](classsdm_1_1NDPOMDP.md#function-printdag) ([**agent**](namespacesdm.md#typedef-agent)) <br> |
-|  void | [**setDiscount**](classsdm_1_1NDPOMDP.md#function-setdiscount) (double) <br> |
+|  void | [**printDAG**](classsdm_1_1NDPOMDP.md#function-printdag) ([**agent**](namespacesdm.md#typedef-agent) root) <br> |
+|  void | [**setDiscount**](classsdm_1_1NDPOMDP.md#function-setdiscount) (double discount) <br> |
 |  void | [**setupDynamicsGenerator**](classsdm_1_1NDPOMDP.md#function-setupdynamicsgenerator) () <br> |
 
 
@@ -305,7 +308,7 @@ std::map<int, int> sdm::NDPOMDP::transitionmatrix;
 
 ```cpp
 sdm::NDPOMDP::NDPOMDP (
-    std::string
+    std::string filename
 ) 
 ```
 
@@ -378,11 +381,11 @@ std::tuple< std::vector< double >, observation , state > sdm::NDPOMDP::getDynami
 
 ```cpp
 std::tuple< state , observation , observation > sdm::NDPOMDP::getDynamicsGenerator (
-    state,
-    agent,
-    action,
-    agent,
-    action
+    state x,
+    agent i,
+    action ui,
+    agent j,
+    action uj
 ) 
 ```
 
@@ -393,7 +396,7 @@ std::tuple< state , observation , observation > sdm::NDPOMDP::getDynamicsGenerat
 
 ```cpp
 double sdm::NDPOMDP::getInitialBelief (
-    state
+    state x
 ) 
 ```
 
@@ -437,6 +440,15 @@ number sdm::NDPOMDP::getNumJActions () const
 
 
 
+### function getNumJObservations 
+
+
+```cpp
+number sdm::NDPOMDP::getNumJObservations () const
+```
+
+
+
 ### function getNumObservations 
 
 
@@ -457,15 +469,24 @@ virtual number sdm::NDPOMDP::getNumStates () const
 
 
 
+### function getObsSpace 
+
+
+```cpp
+const MultiDiscreteSpace < number > & sdm::NDPOMDP::getObsSpace () const
+```
+
+
+
 ### function getObservation 
 
 
 ```cpp
 double sdm::NDPOMDP::getObservation (
-    agent,
-    action,
-    state,
-    observation
+    agent id,
+    action u,
+    state y,
+    observation z
 ) 
 ```
 
@@ -476,9 +497,9 @@ double sdm::NDPOMDP::getObservation (
 
 ```cpp
 std::unordered_set< observation > sdm::NDPOMDP::getObservationSuccessor (
-    agent,
-    action,
-    state
+    agent id,
+    action u,
+    state x
 ) 
 ```
 
@@ -489,9 +510,9 @@ std::unordered_set< observation > sdm::NDPOMDP::getObservationSuccessor (
 
 ```cpp
 double sdm::NDPOMDP::getP (
-    state,
+    state x,
     action,
-    state
+    state y
 ) 
 ```
 
@@ -502,7 +523,7 @@ double sdm::NDPOMDP::getP (
 
 ```cpp
 state sdm::NDPOMDP::getPGenerator (
-    state
+    state x
 ) 
 ```
 
@@ -513,13 +534,13 @@ state sdm::NDPOMDP::getPGenerator (
 
 ```cpp
 double sdm::NDPOMDP::getQ (
-    state,
-    agent,
-    action,
-    observation,
-    agent,
-    action,
-    observation
+    state x,
+    agent id1,
+    action u1,
+    observation z1,
+    agent id2,
+    action u2,
+    observation z2
 ) 
 ```
 
@@ -530,9 +551,9 @@ double sdm::NDPOMDP::getQ (
 
 ```cpp
 observation sdm::NDPOMDP::getQGenerator (
-    agent,
-    action,
-    state
+    agent i,
+    action u,
+    state y
 ) 
 ```
 
@@ -543,12 +564,21 @@ observation sdm::NDPOMDP::getQGenerator (
 
 ```cpp
 double sdm::NDPOMDP::getReward (
-    state,
-    agent,
-    agent,
-    action,
-    action
+    state x,
+    agent id1,
+    agent id2,
+    action u1,
+    action u2
 ) 
+```
+
+
+
+### function getStateSpace 
+
+
+```cpp
+const DiscreteSpace < number > & sdm::NDPOMDP::getStateSpace () const
 ```
 
 
@@ -558,7 +588,7 @@ double sdm::NDPOMDP::getReward (
 
 ```cpp
 std::unordered_set< state > sdm::NDPOMDP::getStateSuccessor (
-    state
+    state x
 ) 
 ```
 
@@ -587,7 +617,7 @@ virtual state sdm::NDPOMDP::init ()
 
 ```cpp
 void sdm::NDPOMDP::printDAG (
-    agent
+    agent root
 ) 
 ```
 
@@ -598,7 +628,7 @@ void sdm::NDPOMDP::printDAG (
 
 ```cpp
 void sdm::NDPOMDP::setDiscount (
-    double
+    double discount
 ) 
 ```
 
@@ -614,4 +644,4 @@ void sdm::NDPOMDP::setupDynamicsGenerator ()
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/world/ndpomdp.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp`

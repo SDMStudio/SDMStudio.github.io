@@ -1,0 +1,600 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ValueFunction" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sdm::ValueFunction</compoundname>
+    <basecompoundref refid="classsdm_1_1BinaryFunction" prot="public" virt="non-virtual">sdm::BinaryFunction&lt; TState, number, TValue &gt;</basecompoundref>
+    <derivedcompoundref refid="classsdm_1_1TabularValueFunction" prot="public" virt="non-virtual">sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;</derivedcompoundref>
+    <includes refid="value__function_8hpp" local="no">value_function.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TState</declname>
+        <defname>TState</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TAction</declname>
+        <defname>TAction</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TValue</declname>
+        <defname>TValue</defname>
+        <defval>double</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1ValueFunction_1ae2820dc6d523ef80d3ecf6e85e72952e" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;SolvableByHSVI&lt;TState, TAction&gt; &gt; sdm::ValueFunction&lt; TState, TAction, TValue &gt;::problem_</definition>
+        <argsstring></argsstring>
+        <name>problem_</name>
+        <briefdescription>
+<para>The problem which incremental value function is evaluated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="43" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ValueFunction_1a9276eab90ce8e0f07d5df017d7b01768" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1BinaryFunction" kindref="compound">BinaryFunction</ref>&lt; TState, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, TValue &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;BinaryFunction&lt;TState, number, TValue&gt; &gt; sdm::ValueFunction&lt; TState, TAction, TValue &gt;::init_function_</definition>
+        <argsstring></argsstring>
+        <name>init_function_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Initialization function. If defined, algorithms on value functions will get inital values using this function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="49" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ValueFunction_1ab4ee8dba95e5227658e161434c3ce5ca" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::ValueFunction&lt; TState, TAction, TValue &gt;::horizon_</definition>
+        <argsstring></argsstring>
+        <name>horizon_</name>
+        <briefdescription>
+<para>The horizon for planning. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="54" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a53ec670f293ebeb98d2652cd6c5d11c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::ValueFunction&lt; TState, TAction, TValue &gt;::ValueFunction</definition>
+        <argsstring>(std::shared_ptr&lt; SolvableByHSVI&lt; TState, TAction &gt;&gt; problem, number horizon)</argsstring>
+        <name>ValueFunction</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt;&gt;</type>
+          <declname>problem</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>horizon</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Incremental Value <ref refid="classsdm_1_1Function" kindref="compound">Function</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>problem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1aefaf72bc4f1588ed3eb6a858aad4f677" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual sdm::ValueFunction&lt; TState, TAction, TValue &gt;::~ValueFunction</definition>
+        <argsstring>()</argsstring>
+        <name>~ValueFunction</name>
+        <briefdescription>
+<para>Destroy the value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="69" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1acbc7e1960ec5ec203ea33dc0bd1964fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1BinaryFunction" kindref="compound">BinaryFunction</ref>&lt; TState, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, TValue &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;BinaryFunction&lt;TState, number, TValue&gt; &gt; sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getInitFunction</definition>
+        <argsstring>()</argsstring>
+        <name>getInitFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1ab22e87ef5a0becd1215e0aeb153ac683" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void sdm::ValueFunction&lt; TState, TAction, TValue &gt;::initialize</definition>
+        <argsstring>()=0</argsstring>
+        <name>initialize</name>
+        <reimplementedby refid="classsdm_1_1MaxPlanValueFunction_1ac105041ddd0581c5500f938c0d413022">initialize</reimplementedby>
+        <reimplementedby refid="classsdm_1_1TabularValueFunction_1a70df94d09af95ba18628324bf683532e">initialize</reimplementedby>
+        <briefdescription>
+<para>Initialize the value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a3c736ed1a2975ea6f975ff90e6949a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void sdm::ValueFunction&lt; TState, TAction, TValue &gt;::initialize</definition>
+        <argsstring>(TValue v, number t=0)=0</argsstring>
+        <name>initialize</name>
+        <reimplementedby refid="classsdm_1_1TabularValueFunction_1af931a93515e3b75cc99ab42386f9ed8b">initialize</reimplementedby>
+        <param>
+          <type>TValue</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the value function with a default value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1aeb0173f9bc30e0cc94e2a2593f5fb927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::ValueFunction&lt; TState, TAction, TValue &gt;::initialize</definition>
+        <argsstring>(std::shared_ptr&lt; BinaryFunction&lt; TState, number, TValue &gt;&gt; init_function)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1BinaryFunction" kindref="compound">BinaryFunction</ref>&lt; TState, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, TValue &gt;&gt;</type>
+          <declname>init_function</declname>
+        </param>
+        <briefdescription>
+<para>Set a function as a interactive way to get initial values for state that are not already initialized. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>init_function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the function that enables to get initial values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1aff2b1e06a111f0b682409ea9d65505af" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>TValue</type>
+        <definition>virtual TValue sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getValueAt</definition>
+        <argsstring>(const TState &amp;state, number t=0)=0</argsstring>
+        <name>getValueAt</name>
+        <reimplementedby refid="classsdm_1_1TabularValueFunction_1a81192050ebf022c1e099cda795ee1043">getValueAt</reimplementedby>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the value at a given state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1af3a7fc03f73a12bdcabf19e5d38008a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void sdm::ValueFunction&lt; TState, TAction, TValue &gt;::updateValueAt</definition>
+        <argsstring>(const TState &amp;s, number t=0)=0</argsstring>
+        <name>updateValueAt</name>
+        <reimplementedby refid="classsdm_1_1TabularValueFunction_1a3cbdd5aa91c6a3a3228b8182ac6e2b09">updateValueAt</reimplementedby>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Update the value at a given state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1aea12cd57f79d8ec97726e26ae99a4430" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string sdm::ValueFunction&lt; TState, TAction, TValue &gt;::str</definition>
+        <argsstring>()=0</argsstring>
+        <name>str</name>
+        <reimplementedby refid="classsdm_1_1TabularValueFunction_1a59c3577f97f95e81be32cc8b37268707">str</reimplementedby>
+        <reimplementedby refid="classsdm_1_1MaxPlanValueFunction_1a6dbb70332bb023318e8f6d3c4783e0b3">str</reimplementedby>
+        <briefdescription>
+<para>Define this function in order to be able to display the value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1afecd8a1aefddf6f0cb5e547035ba5bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; TState &gt;</type>
+        <definition>virtual std::vector&lt;TState&gt; sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getSupport</definition>
+        <argsstring>(number t)=0</argsstring>
+        <name>getSupport</name>
+        <reimplementedby refid="classsdm_1_1TabularValueFunction_1a569b33c80e678547feda844125fb5681">getSupport</reimplementedby>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1abd33004b2a910e321a1dc07d0c8950e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>TValue</type>
+        <definition>TValue sdm::ValueFunction&lt; TState, TAction, TValue &gt;::operator()</definition>
+        <argsstring>(const TState &amp;state, const number &amp;t=0)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classsdm_1_1BinaryFunction_1a3d447385a4d0e78a88635b20615117c6">operator()</reimplements>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &amp;</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a2494b50909d238e88cd0c67670255627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1VectorImpl" kindref="compound">VectorImpl</ref>&lt; TAction, TValue &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;VectorImpl&lt;TAction, TValue&gt; &gt; sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getQValueAt</definition>
+        <argsstring>(const TState &amp;state, number t)</argsstring>
+        <name>getQValueAt</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the q-value at a state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the action value vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1adba37ff161a36655c4ba7e070da56b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TValue</type>
+        <definition>TValue sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getQValueAt</definition>
+        <argsstring>(const TState &amp;state, const TAction &amp;action, number t)</argsstring>
+        <name>getQValueAt</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const TAction &amp;</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the q-value given state and action. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the q-value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a030defa0b4bdbf217d25dd57a0b46b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TAction</type>
+        <definition>TAction sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getBestAction</definition>
+        <argsstring>(const TState &amp;state, number t=0)</argsstring>
+        <name>getBestAction</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the best action to do at a state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the best action </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a219e4b3d358008dc7c8b206c547caacd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;SolvableByHSVI&lt;TState, TAction&gt; &gt; sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getWorld</definition>
+        <argsstring>()</argsstring>
+        <name>getWorld</name>
+        <briefdescription>
+<para>Get the world (i.e. the problem that is solve by <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the world </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a2fc36f24a4e6bd4b29d47c2ea1b2c5c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getHorizon</definition>
+        <argsstring>() const</argsstring>
+        <name>getHorizon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a8c8a1c4d05241832cb59b053bcee63a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::ValueFunction&lt; TState, TAction, TValue &gt;::isFiniteHorizon</definition>
+        <argsstring>() const</argsstring>
+        <name>isFiniteHorizon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1a797a7a2021ceed3348da4bdb535809d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::ValueFunction&lt; TState, TAction, TValue &gt;::isInfiniteHorizon</definition>
+        <argsstring>() const</argsstring>
+        <name>isInfiniteHorizon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunction_1aec0e34427cd3401b1a526872c2fd4bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sdm::ValueFunction&lt; TState, TAction, TValue &gt;::getDiscount</definition>
+        <argsstring>(number t)</argsstring>
+        <name>getDiscount</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the discount factor. If the problem is serialized then the discount factor is equal to one for every timestep except the one where agent $n$ take an action. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timestep </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double the discount factor </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="164" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1ValueFunction_1a6a1c6b0a7472e5025c730a4707c75a05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, ValueFunction&lt; TState, TAction &gt; &amp;vf)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="152" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" bodystart="152" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is the abstract class of value function. All value function must derived this class. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the state. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the action. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="726">
+        <label>sdm::BinaryFunction&lt; TState, number, TValue &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="727" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="727">
+        <label>sdm::Function&lt; std::pair&lt; TState, number &gt;, TValue &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="728">
+        <label>sdm::TabularValueFunction&lt; TState, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1TabularValueFunction"/>
+        <childnode refid="725" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="725">
+        <label>sdm::ValueFunction&lt; TState, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1ValueFunction"/>
+        <childnode refid="726" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="730">
+        <label>sdm::BinaryFunction&lt; TState, number, TValue &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="731" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="731">
+        <label>sdm::Function&lt; std::pair&lt; TState, number &gt;, TValue &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="729">
+        <label>sdm::ValueFunction&lt; TState, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1ValueFunction"/>
+        <childnode refid="730" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" line="37" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp" bodystart="36" bodyend="165"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ValueFunction_1a030defa0b4bdbf217d25dd57a0b46b66" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getBestAction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aec0e34427cd3401b1a526872c2fd4bf6" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getDiscount</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a2fc36f24a4e6bd4b29d47c2ea1b2c5c9" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1acbc7e1960ec5ec203ea33dc0bd1964fd" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getInitFunction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a2494b50909d238e88cd0c67670255627" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1adba37ff161a36655c4ba7e070da56b34" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1afecd8a1aefddf6f0cb5e547035ba5bfb" prot="public" virt="pure-virtual"><scope>sdm::ValueFunction</scope><name>getSupport</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aff2b1e06a111f0b682409ea9d65505af" prot="public" virt="pure-virtual"><scope>sdm::ValueFunction</scope><name>getValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a219e4b3d358008dc7c8b206c547caacd" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>getWorld</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ab4ee8dba95e5227658e161434c3ce5ca" prot="protected" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>horizon_</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a9276eab90ce8e0f07d5df017d7b01768" prot="protected" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>init_function_</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ab22e87ef5a0becd1215e0aeb153ac683" prot="public" virt="pure-virtual"><scope>sdm::ValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a3c736ed1a2975ea6f975ff90e6949a09" prot="public" virt="pure-virtual"><scope>sdm::ValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aeb0173f9bc30e0cc94e2a2593f5fb927" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a8c8a1c4d05241832cb59b053bcee63a6" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>isFiniteHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a797a7a2021ceed3348da4bdb535809d1" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>isInfiniteHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1abd33004b2a910e321a1dc07d0c8950e0" prot="public" virt="virtual"><scope>sdm::ValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a70feb6f73b43d4bcb9263bba9e23963a" prot="public" virt="virtual" ambiguityscope="BinaryFunction&lt; TState, number, TValue &gt;::"><scope>sdm::ValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a6a1c6b0a7472e5025c730a4707c75a05" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>output_type</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ae2820dc6d523ef80d3ecf6e85e72952e" prot="protected" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>problem_</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aea12cd57f79d8ec97726e26ae99a4430" prot="public" virt="pure-virtual"><scope>sdm::ValueFunction</scope><name>str</name></member>
+      <member refid="classsdm_1_1ValueFunction_1af3a7fc03f73a12bdcabf19e5d38008a1" prot="public" virt="pure-virtual"><scope>sdm::ValueFunction</scope><name>updateValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a53ec670f293ebeb98d2652cd6c5d11c2" prot="public" virt="non-virtual"><scope>sdm::ValueFunction</scope><name>ValueFunction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aefaf72bc4f1588ed3eb6a858aad4f677" prot="public" virt="virtual"><scope>sdm::ValueFunction</scope><name>~ValueFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

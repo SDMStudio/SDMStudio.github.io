@@ -39,7 +39,7 @@ Inherits the following classes: TBaseVector,  [sdm::VectorImpl](classsdm_1_1Vect
 | ---: | :--- |
 | virtual I | [**argmax**](classsdm_1_1sdmsVector.md#function-argmax) () const<br> |
 | virtual I | [**argmin**](classsdm_1_1sdmsVector.md#function-argmin) () const<br> |
-| virtual T | [**at**](classsdm_1_1sdmsVector.md#function-at) (I) <br> |
+| virtual T | [**at**](classsdm_1_1sdmsVector.md#function-at) (const I &) const<br> |
 |  T | [**dot**](classsdm_1_1sdmsVector.md#function-dot) (const [**sdmsVector**](classsdm_1_1sdmsVector.md) &) const<br> |
 |  void | [**init**](classsdm_1_1sdmsVector.md#function-init) (T) <br> |
 | virtual T | [**max**](classsdm_1_1sdmsVector.md#function-max) () const<br> |
@@ -65,7 +65,7 @@ See [sdm::VectorImpl](classsdm_1_1VectorImpl.md)
 | ---: | :--- |
 | virtual I | [**argmax**](classsdm_1_1VectorImpl.md#function-argmax) () const = 0<br> |
 | virtual I | [**argmin**](classsdm_1_1VectorImpl.md#function-argmin) () const = 0<br> |
-| virtual T | [**at**](classsdm_1_1VectorImpl.md#function-at) (I) = 0<br> |
+| virtual T | [**at**](classsdm_1_1VectorImpl.md#function-at) (const I &) const = 0<br> |
 | virtual T | [**max**](classsdm_1_1VectorImpl.md#function-max) () const = 0<br> |
 | virtual T | [**min**](classsdm_1_1VectorImpl.md#function-min) () const = 0<br> |
 | virtual T | [**norm\_1**](classsdm_1_1VectorImpl.md#function-norm-1) () const = 0<br> |
@@ -137,8 +137,8 @@ Implements [*sdm::VectorImpl::argmin*](classsdm_1_1VectorImpl.md#function-argmin
 
 ```cpp
 virtual T sdm::sdmsVector::at (
-    I
-) 
+    const I &
+) const
 ```
 
 
@@ -339,4 +339,4 @@ std::pair< I, T > sdm::sdmsVector::getMin () const
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/linear_algebra/sdms_vector.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp`

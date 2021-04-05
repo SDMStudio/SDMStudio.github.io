@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1identifier__t" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::identifier_t</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::spirit::x3::variant&lt; std::string, unsigned short &gt;</basecompoundref>
+    <includes refid="ast_8hpp" local="no">ast.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="261">
+        <label>sdm::ast::identifier_t</label>
+        <link refid="structsdm_1_1ast_1_1identifier__t"/>
+        <childnode refid="262" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>boost::spirit::x3::variant&lt; std::string, unsigned short &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="263">
+        <label>sdm::ast::identifier_t</label>
+        <link refid="structsdm_1_1ast_1_1identifier__t"/>
+        <childnode refid="264" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>boost::spirit::x3::variant&lt; std::string, unsigned short &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="37" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="37" bodyend="40"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

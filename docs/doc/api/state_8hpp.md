@@ -13,7 +13,7 @@ _The file for state class._ [More...](#detailed-description)
 * `#include <sdm/types.hpp>`
 * `#include <sdm/utils/linear_algebra/sdms_vector.hpp>`
 * `#include <sdm/utils/linear_algebra/mapped_vector.hpp>`
-* `#include <sdm/utils/struct/tree.hpp>`
+* `#include <sdm/core/state/serialized_state.hpp>`
 
 
 
@@ -106,4 +106,4 @@ This class provides the states' public interface.
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/state/state.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/state.hpp`

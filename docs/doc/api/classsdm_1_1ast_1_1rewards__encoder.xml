@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ast_1_1rewards__encoder" kind="class" language="C++" prot="public">
+    <compoundname>sdm::ast::rewards_encoder</compoundname>
+    <includes refid="encoder_8hpp" local="no">encoder.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1rewards__encoder_1a9320919b573224b7aec041d91209dfea" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>DiscreteSpace&lt;std::string&gt; sdm::ast::rewards_encoder::state_space_</definition>
+        <argsstring></argsstring>
+        <name>state_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="599" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1rewards__encoder_1a91c02fd2d281f17d8789076e881220fb" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>MultiDiscreteSpace&lt;std::string&gt; sdm::ast::rewards_encoder::action_space_</definition>
+        <argsstring></argsstring>
+        <name>action_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="600" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1rewards__encoder_1a3d1f60d60c362e580e0586fc63103a40" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>DiscreteSpace&lt;std::string&gt; sdm::ast::rewards_encoder::agent_space_</definition>
+        <argsstring></argsstring>
+        <name>agent_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="601" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1ast_1_1rewards__encoder_1a203ca43fa5d4c6bb7ebda10bd3c989e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::ast::rewards_encoder::rewards_encoder</definition>
+        <argsstring>(const DiscreteSpace&lt; std::string &gt; &amp;state_space, const DiscreteSpace&lt; std::string &gt; &amp;agent_space, const MultiDiscreteSpace&lt; std::string &gt; &amp;action_space)</argsstring>
+        <name>rewards_encoder</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>state_space</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>agent_space</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>action_space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="604" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="604" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ast_1_1rewards__encoder_1a04c85041015e8f086e07fbd04612e82e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref></type>
+        <definition>Reward sdm::ast::rewards_encoder::encode</definition>
+        <argsstring>(const reward_t &amp;r)</argsstring>
+        <name>encode</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1_1ast_1a8c8a86c73e75c95a437610f802fae30b" kindref="member">reward_t</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="611" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="611" bodyend="620"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="571">
+        <label>sdm::DiscreteSpace&lt; Joint&lt; std::string &gt; &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="568" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="568">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="569">
+        <label>sdm::MultiDiscreteSpace&lt; std::string &gt;</label>
+        <link refid="classsdm_1_1MultiDiscreteSpace"/>
+        <childnode refid="570" relation="public-inheritance">
+        </childnode>
+        <childnode refid="571" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="566">
+        <label>sdm::ast::rewards_encoder</label>
+        <link refid="classsdm_1_1ast_1_1rewards__encoder"/>
+        <childnode refid="567" relation="usage">
+          <edgelabel>agent_space_</edgelabel>
+          <edgelabel>state_space_</edgelabel>
+        </childnode>
+        <childnode refid="569" relation="usage">
+          <edgelabel>action_space_</edgelabel>
+        </childnode>
+      </node>
+      <node id="570">
+        <label>sdm::MultiSpace&lt; DiscreteSpace&lt; std::string &gt; &gt;</label>
+        <link refid="classsdm_1_1MultiSpace"/>
+        <childnode refid="568" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>sdm::DiscreteSpace&lt; std::string &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="568" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="597" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="596" bodyend="621"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ast_1_1rewards__encoder_1a91c02fd2d281f17d8789076e881220fb" prot="protected" virt="non-virtual"><scope>sdm::ast::rewards_encoder</scope><name>action_space_</name></member>
+      <member refid="classsdm_1_1ast_1_1rewards__encoder_1a3d1f60d60c362e580e0586fc63103a40" prot="protected" virt="non-virtual"><scope>sdm::ast::rewards_encoder</scope><name>agent_space_</name></member>
+      <member refid="classsdm_1_1ast_1_1rewards__encoder_1a04c85041015e8f086e07fbd04612e82e" prot="public" virt="non-virtual"><scope>sdm::ast::rewards_encoder</scope><name>encode</name></member>
+      <member refid="classsdm_1_1ast_1_1rewards__encoder_1a203ca43fa5d4c6bb7ebda10bd3c989e9" prot="public" virt="non-virtual"><scope>sdm::ast::rewards_encoder</scope><name>rewards_encoder</name></member>
+      <member refid="classsdm_1_1ast_1_1rewards__encoder_1a9320919b573224b7aec041d91209dfea" prot="protected" virt="non-virtual"><scope>sdm::ast::rewards_encoder</scope><name>state_space_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

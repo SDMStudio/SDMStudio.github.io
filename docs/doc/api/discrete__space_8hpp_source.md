@@ -35,13 +35,14 @@ namespace sdm
 
         DiscreteSpace();
 
-        // DiscreteSpace(number num_items);
-
         DiscreteSpace(const std::vector<TItem> &items);
 
         DiscreteSpace(const DiscreteSpace<TItem> &copy);
-        
+
         DiscreteSpace(std::initializer_list<TItem> vals);
+
+        template <bool TBool = std::is_integral<TItem>::value>
+        DiscreteSpace(std::enable_if_t<TBool, int> num_items);
 
         bool isDiscrete() const;
 
@@ -70,6 +71,7 @@ namespace sdm
             return os;
         }
     };
+
 } // namespace sdm
 
 #include <sdm/core/space/discrete_space.tpp>

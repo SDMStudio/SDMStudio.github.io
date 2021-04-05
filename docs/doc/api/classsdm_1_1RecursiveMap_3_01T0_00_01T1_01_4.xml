@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4" kind="class" language="C++" prot="public">
+    <compoundname>sdm::RecursiveMap&lt; T0, T1 &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">map_t&lt; T0, T1 &gt;</basecompoundref>
+    <includes refid="recursive__map_8hpp" local="no">recursive_map.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T0</type>
+      </param>
+      <param>
+        <type>class T1</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1ad04b622d7defdc852c521c9a1042bd6a" prot="public" static="no">
+        <type><ref refid="classsdm_1_1RecursiveMap" kindref="compound">RecursiveMap</ref>&lt; T0, T1 &gt;</type>
+        <definition>using sdm::RecursiveMap&lt; T0, T1 &gt;::type =  RecursiveMap&lt;T0, T1&gt;</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="54" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1af8f3523912e0078b4d56f15aabfeabb2" prot="public" static="no">
+        <type>std::pair&lt; const T0, T1 &gt;</type>
+        <definition>using sdm::RecursiveMap&lt; T0, T1 &gt;::value_type =  std::pair&lt;const T0, T1&gt;</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="55" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a3cc1f628f814316dcfc51417c30d940a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::RecursiveMap&lt; T0, T1 &gt;::RecursiveMap</definition>
+        <argsstring>()</argsstring>
+        <name>RecursiveMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="57" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1ad9f6dddd42550244b5628dd0b2eefc00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::RecursiveMap&lt; T0, T1 &gt;::RecursiveMap</definition>
+        <argsstring>(const map_t&lt; T0, T1 &gt; &amp;x)</argsstring>
+        <name>RecursiveMap</name>
+        <param>
+          <type>const <ref refid="recursive__map_8hpp_1a237418513c3b75c6ae37544ccb85d4c8" kindref="member">map_t</ref>&lt; T0, T1 &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="58" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a68a393322e1422083c5b8c123fe6cf22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::RecursiveMap&lt; T0, T1 &gt;::RecursiveMap</definition>
+        <argsstring>(std::initializer_list&lt; value_type &gt; vals)</argsstring>
+        <name>RecursiveMap</name>
+        <param>
+          <type>std::initializer_list&lt; <ref refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1af8f3523912e0078b4d56f15aabfeabb2" kindref="member">value_type</ref> &gt;</type>
+          <declname>vals</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="59" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a4762d09087b37b89521b00bf3260af8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::RecursiveMap&lt; T0, T1 &gt;::recursive_emplace</definition>
+        <argsstring>(T0 v0, T1 v1)</argsstring>
+        <name>recursive_emplace</name>
+        <param>
+          <type>T0</type>
+          <declname>v0</declname>
+        </param>
+        <param>
+          <type>T1</type>
+          <declname>v1</declname>
+        </param>
+        <briefdescription>
+<para>Emplace a specific element. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a8fc0a17035c4e37c4771d14edf2ce01c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T1</type>
+        <definition>T1 sdm::RecursiveMap&lt; T0, T1 &gt;::operator()</definition>
+        <argsstring>(T0 v0)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>T0</type>
+          <declname>v0</declname>
+        </param>
+        <briefdescription>
+<para>Get a specific item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a0036e75684e3690d0616500b62168d02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, RecursiveMap&lt; T0, T1 &gt; rmap)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classsdm_1_1RecursiveMap" kindref="compound">RecursiveMap</ref>&lt; T0, T1 &gt;</type>
+          <declname>rmap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="74" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="74" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classsdm_1_1RecursiveMap" kindref="compound">RecursiveMap</ref> specialization when it is simple map. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the first map item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the second map item </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="532">
+        <label>map_t&lt; T0, T1 &gt;</label>
+      </node>
+      <node id="531">
+        <label>sdm::RecursiveMap&lt; T0, T1 &gt;</label>
+        <link refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4"/>
+        <childnode refid="532" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="534">
+        <label>map_t&lt; T0, T1 &gt;</label>
+      </node>
+      <node id="533">
+        <label>sdm::RecursiveMap&lt; T0, T1 &gt;</label>
+        <link refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4"/>
+        <childnode refid="534" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp" bodystart="51" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a8fc0a17035c4e37c4771d14edf2ce01c" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a0036e75684e3690d0616500b62168d02" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a4762d09087b37b89521b00bf3260af8f" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>recursive_emplace</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a3cc1f628f814316dcfc51417c30d940a" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>RecursiveMap</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1ad9f6dddd42550244b5628dd0b2eefc00" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>RecursiveMap</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1a68a393322e1422083c5b8c123fe6cf22" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>RecursiveMap</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1ad04b622d7defdc852c521c9a1042bd6a" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>type</name></member>
+      <member refid="classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4_1af8f3523912e0078b4d56f15aabfeabb2" prot="public" virt="non-virtual"><scope>sdm::RecursiveMap&lt; T0, T1 &gt;</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

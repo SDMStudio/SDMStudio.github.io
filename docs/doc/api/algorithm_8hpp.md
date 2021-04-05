@@ -8,10 +8,8 @@
 
 [Go to the source code of this file.](algorithm_8hpp_source.md)
 
-_algorithm class_ [More...](#detailed-description)
 
-* `#include <sdm/common.hpp>`
-* `#include <sdm/worlds.hpp>`
+
 
 
 
@@ -45,33 +43,6 @@ _algorithm class_ [More...](#detailed-description)
 
 
 
-# Detailed Description
-
-
-
-
-**Author:**
-
-Jilles S. Dibangoye 
-
-
-
-
-**Version:**
-
-1.0 
-
-
-
-
-**Date:**
-
-11 Avril 2016
-
-
-This class provides the algorithm' public interface. 
-
-    
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/public/algorithm.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/algorithm.hpp`

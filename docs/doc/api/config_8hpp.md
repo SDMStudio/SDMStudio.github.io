@@ -26,7 +26,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
-| namespace | [**parser**](namespacesdm_1_1parser.md) <br> |
+| namespace | [**parser**](namespacesdm_1_1parser.md) <br>_Namespace grouping all functions for parsing files._  |
 
 
 
@@ -43,4 +43,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/config.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp`

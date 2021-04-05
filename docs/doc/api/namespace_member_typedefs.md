@@ -23,9 +23,11 @@
 
 ## d
 
-* **DecentralizedPOMDP** ([**sdm**](namespacesdm.md))
 * **DenseValueFunction** ([**sdm**](namespacesdm.md))
 * **DenseVector** ([**sdm**](namespacesdm.md))
+* **DetDecisionRule** ([**sdm**](namespacesdm.md))
+* **DiscretePOSG** ([**sdm**](namespacesdm.md))
+* **DiscreteSG** ([**sdm**](namespacesdm.md))
 * **dtype** ([**sdm**](namespacesdm.md))
 * **dpomdp\_type** ([**sdm::parser**](namespacesdm_1_1parser.md))
 
@@ -35,6 +37,11 @@
 * **error\_handler** ([**sdm::parser**](namespacesdm_1_1parser.md))
 * **error\_handler\_tag** ([**sdm::parser**](namespacesdm_1_1parser.md))
 * **error\_handler\_type** ([**sdm::parser**](namespacesdm_1_1parser.md))
+
+
+## f
+
+* **FullyObservableDecisionProcess** ([**sdm**](namespacesdm.md))
 
 
 ## h
@@ -77,11 +84,8 @@
 
 ## p
 
-* **POProcess** ([**sdm**](namespacesdm.md))
-* **POStochasticGame** ([**sdm**](namespacesdm.md))
-* **PartObsProcess** ([**sdm**](namespacesdm.md))
-* **PartObsStochasticGame** ([**sdm**](namespacesdm.md))
-* **PartiallyObservableStochasticGame** ([**sdm**](namespacesdm.md))
+* **PODecisionProcess** ([**sdm**](namespacesdm.md))
+* **Pair** ([**sdm**](namespacesdm.md))
 * **phrase\_context\_type** ([**sdm::parser**](namespacesdm_1_1parser.md))
 
 
@@ -93,10 +97,8 @@
 
 ## s
 
-* **SG** ([**sdm**](namespacesdm.md))
 * **SparseValueFunction** ([**sdm**](namespacesdm.md))
 * **SparseVector** ([**sdm**](namespacesdm.md))
-* **StochasticGame** ([**sdm**](namespacesdm.md))
 * **sars\_transition** ([**sdm**](namespacesdm.md))
 * **size\_t** ([**sdm**](namespacesdm.md))
 * **state** ([**sdm**](namespacesdm.md))
@@ -104,15 +106,11 @@
 
 ## t
 
+* **Tuple** ([**sdm**](namespacesdm.md))
 * **transition\_t** ([**sdm::ast**](namespacesdm_1_1ast.md))
 
 
 ## v
 
 * **value\_t** ([**sdm**](namespacesdm.md))
-
-
-## z
-
-* **ZeroSumPOSG** ([**sdm**](namespacesdm.md))
 

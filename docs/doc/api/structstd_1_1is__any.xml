@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structstd_1_1is__any" kind="struct" language="C++" prot="public">
+    <compoundname>std::is_any</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::disjunction&lt; std::is_same&lt; T, Ts &gt;... &gt;</basecompoundref>
+    <includes refid="types_8hpp" local="no">types.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>class...</type>
+        <declname>Ts</declname>
+        <defname>Ts</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="287">
+        <label>std::is_any&lt; T, Ts &gt;</label>
+        <link refid="structstd_1_1is__any"/>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>std::disjunction&lt; std::is_same&lt; T, Ts &gt;... &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="289">
+        <label>std::is_any&lt; T, Ts &gt;</label>
+        <link refid="structstd_1_1is__any"/>
+        <childnode refid="290" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>std::disjunction&lt; std::is_same&lt; T, Ts &gt;... &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" line="117" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp" bodystart="116" bodyend="118"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

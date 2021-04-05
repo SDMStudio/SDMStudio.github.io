@@ -35,4 +35,4 @@ _Namespace grouping all tools required for sequential decision making._
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/state/history.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/history.hpp`

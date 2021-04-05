@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_33715f1cc09e852083918bf432e54d5e" kind="dir">
+    <compoundname>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public</compoundname>
+    <innerfile refid="algorithm_8hpp">algorithm.hpp</innerfile>
+    <innerfile refid="feedback_8cpp">feedback.cpp</innerfile>
+    <innerfile refid="feedback_8hpp">feedback.hpp</innerfile>
+    <innerfile refid="world_8cpp">world.cpp</innerfile>
+    <innerfile refid="world_8hpp">world.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/"/>
+  </compounddef>
+</doxygen>

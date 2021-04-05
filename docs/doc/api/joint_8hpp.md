@@ -14,6 +14,7 @@ _joint class_ [More...](#detailed-description)
 * `#include <sdm/types.hpp>`
 * `#include <sdm/tools.hpp>`
 * `#include <sdm/core/function.hpp>`
+* `#include <sdm/utils/struct/vector.hpp>`
 
 
 
@@ -28,12 +29,14 @@ _joint class_ [More...](#detailed-description)
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
+| namespace | [**std**](namespacestd.md) <br> |
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
 | class | [**Joint**](classsdm_1_1Joint.md) &lt;item&gt;<br>_class of joint item instances._  |
+| struct | [**hash&lt; sdm::Joint&lt; T &gt; &gt;**](structstd_1_1hash_3_01sdm_1_1Joint_3_01T_01_4_01_4.md) &lt;typename T&gt;<br> |
 
 
 
@@ -76,4 +79,4 @@ This class provides getter and setter methods for joint objects.
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/joint.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/joint.hpp`

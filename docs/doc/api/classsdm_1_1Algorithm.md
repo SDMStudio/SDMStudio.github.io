@@ -16,7 +16,7 @@
 
 
 
-Inherited by the following classes: [sdm::DQNMDP](classsdm_1_1DQNMDP.md)
+Inherited by the following classes: [sdm::HSVI](classsdm_1_1HSVI.md),  [sdm::LearningAlgo](classsdm_1_1LearningAlgo.md)
 
 
 
@@ -31,23 +31,13 @@ Inherited by the following classes: [sdm::DQNMDP](classsdm_1_1DQNMDP.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**solve**](classsdm_1_1Algorithm.md#function-solve) (const std::shared\_ptr&lt; [**POSG**](classsdm_1_1POSG.md) &gt; &, [**horizon**](namespacesdm.md#typedef-horizon), double=0.001, double=1.0) = 0<br> |
-| virtual  | [**~Algorithm**](classsdm_1_1Algorithm.md#function-algorithm) () <br> |
+| virtual void | [**do\_initialize**](classsdm_1_1Algorithm.md#function-do-initialize) () = 0<br>_Initialize the algorithm._  |
+| virtual void | [**do\_solve**](classsdm_1_1Algorithm.md#function-do-solve) () = 0<br>_Solve the problem._  |
+| virtual void | [**do\_test**](classsdm_1_1Algorithm.md#function-do-test) () = 0<br>_Test the result of the algorithm._  |
 
 
 
 
-## Protected Attributes
-
-| Type | Name |
-| ---: | :--- |
-|  double | [**eps\_decay**](classsdm_1_1Algorithm.md#variable-eps-decay)   = = 100000<br> |
-|  double | [**eps\_end**](classsdm_1_1Algorithm.md#variable-eps-end)   = = 0.0001<br> |
-|  double | [**eps\_start**](classsdm_1_1Algorithm.md#variable-eps-start)   = = 1.0<br> |
-|  double | [**epsilon**](classsdm_1_1Algorithm.md#variable-epsilon)  <br> |
-|  double | [**rate\_decay**](classsdm_1_1Algorithm.md#variable-rate-decay)   = = 100000<br> |
-|  double | [**rate\_end**](classsdm_1_1Algorithm.md#variable-rate-end)   = = 0.0001<br> |
-|  double | [**rate\_start**](classsdm_1_1Algorithm.md#variable-rate-start)   = = 1.0<br> |
 
 
 
@@ -55,93 +45,32 @@ Inherited by the following classes: [sdm::DQNMDP](classsdm_1_1DQNMDP.md)
 ## Public Functions Documentation
 
 
-### function solve 
+### function do\_initialize 
 
 
 ```cpp
-virtual void sdm::Algorithm::solve (
-    const std::shared_ptr< POSG > &,
-    horizon,
-    double=0.001,
-    double=1.0
-) = 0
+virtual void sdm::Algorithm::do_initialize () = 0
 ```
 
 
 
-### function ~Algorithm 
+### function do\_solve 
 
 
 ```cpp
-virtual sdm::Algorithm::~Algorithm () 
-```
-
-
-## Protected Attributes Documentation
-
-
-### variable eps\_decay 
-
-
-```cpp
-double sdm::Algorithm::eps_decay;
+virtual void sdm::Algorithm::do_solve () = 0
 ```
 
 
 
-### variable eps\_end 
+### function do\_test 
 
 
 ```cpp
-double sdm::Algorithm::eps_end;
-```
-
-
-
-### variable eps\_start 
-
-
-```cpp
-double sdm::Algorithm::eps_start;
-```
-
-
-
-### variable epsilon 
-
-
-```cpp
-double sdm::Algorithm::epsilon;
-```
-
-
-
-### variable rate\_decay 
-
-
-```cpp
-double sdm::Algorithm::rate_decay;
-```
-
-
-
-### variable rate\_end 
-
-
-```cpp
-double sdm::Algorithm::rate_end;
-```
-
-
-
-### variable rate\_start 
-
-
-```cpp
-double sdm::Algorithm::rate_start;
+virtual void sdm::Algorithm::do_test () = 0
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/public/algorithm.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/algorithm.hpp`

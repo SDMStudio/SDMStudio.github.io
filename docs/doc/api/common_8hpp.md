@@ -26,7 +26,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
-| namespace | [**common**](namespacesdm_1_1common.md) <br> |
+| namespace | [**common**](namespacesdm_1_1common.md) <br>_Namespace grouping all common functions to the whole project._  |
 
 
 
@@ -43,4 +43,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/common.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/common.hpp`

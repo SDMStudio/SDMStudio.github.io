@@ -33,6 +33,8 @@ namespace sdm
     public:
         ObservationDynamics();
 
+        ObservationDynamics(ObservationDynamics &copy);
+
         ObservationDynamics(number, number, number);
 
         void initDynamics(number, number, number);
@@ -54,6 +56,9 @@ namespace sdm
         const Matrix &getDynamics(number, number) const;
 
         void setDynamics(number, number, const Matrix &);
+
+        const std::vector<std::vector<Matrix>> &getDynamics() const;
+        const std::vector<Matrix> &getObservationProbabilities() const;
     };
 } // namespace sdm
 ````

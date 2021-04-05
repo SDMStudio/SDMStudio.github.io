@@ -10,7 +10,7 @@
 
 
 
-
+_Abstract class for initializer._ [More...](#detailed-description)
 
 * `#include <initializer.hpp>`
 
@@ -18,7 +18,7 @@
 
 
 
-Inherited by the following classes: [sdm::MaxInitializer](classsdm_1_1MaxInitializer.md),  [sdm::MinInitializer](classsdm_1_1MinInitializer.md),  [sdm::ValueInitializer](classsdm_1_1ValueInitializer.md)
+Inherited by the following classes: [sdm::BlindInitializer](classsdm_1_1BlindInitializer.md),  [sdm::BoundInitializer](classsdm_1_1BoundInitializer.md),  [sdm::MDPInitializer](classsdm_1_1MDPInitializer.md),  [sdm::POMDPInitializer](classsdm_1_1POMDPInitializer.md),  [sdm::ValueInitializer](classsdm_1_1ValueInitializer.md)
 
 
 
@@ -34,6 +34,7 @@ Inherited by the following classes: [sdm::MaxInitializer](classsdm_1_1MaxInitial
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**init**](classsdm_1_1Initializer.md#function-init) ([**ValueFunction**](classsdm_1_1ValueFunction.md)&lt; TState, TAction &gt; \* vf) = 0<br> |
+| virtual  | [**~Initializer**](classsdm_1_1Initializer.md#function-initializer) () <br> |
 
 
 
@@ -42,6 +43,20 @@ Inherited by the following classes: [sdm::MaxInitializer](classsdm_1_1MaxInitial
 
 
 
+# Detailed Description
+
+
+
+
+**Template parameters:**
+
+
+* `TState` the state type 
+* `TAction` the action type 
+
+
+
+    
 ## Public Functions Documentation
 
 
@@ -56,5 +71,14 @@ virtual void sdm::Initializer::init (
 
 
 
+### function ~Initializer 
+
+
+```cpp
+inline virtual sdm::Initializer::~Initializer () 
+```
+
+
+
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/value_function/initializer.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp`

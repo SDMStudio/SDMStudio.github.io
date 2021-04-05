@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1exception_1_1Exception" kind="class" language="C++" prot="public">
+    <compoundname>sdm::exception::Exception</compoundname>
+    <basecompoundref prot="public" virt="virtual">exception</basecompoundref>
+    <derivedcompoundref refid="classsdm_1_1exception_1_1FileNotFoundException" prot="public" virt="non-virtual">sdm::exception::FileNotFoundException</derivedcompoundref>
+    <derivedcompoundref refid="classsdm_1_1exception_1_1NotImplementedException" prot="public" virt="non-virtual">sdm::exception::NotImplementedException</derivedcompoundref>
+    <derivedcompoundref refid="classsdm_1_1exception_1_1ParsingException" prot="public" virt="non-virtual">sdm::exception::ParsingException</derivedcompoundref>
+    <includes refid="exception_8hpp" local="no">exception.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1exception_1_1Exception_1ac87f215eeb3a7ac15cf8f1e8fbc495eb" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sdm::exception::Exception::error_message</definition>
+        <argsstring></argsstring>
+        <name>error_message</name>
+        <briefdescription>
+<para>Error message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1exception_1_1Exception_1a9ccf2f17e2f2554ac8204c70773b5f50" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::exception::Exception::Exception</definition>
+        <argsstring>(const std::string &amp;msg_)</argsstring>
+        <name>Exception</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (C++ STL string). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" line="38" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1exception_1_1Exception_1afd84afdb4302f7192bef9aaffd6bf399" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* sdm::exception::Exception::what</definition>
+        <argsstring>() const</argsstring>
+        <name>what</name>
+        <exceptions> throw ()</exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to the (constant) error description. <simplesect kind="return"><para>A pointer to a const char*. The underlying memory is in possession of the Except object. Callers must not attempt to free the memory. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base exception class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="197">
+        <label>sdm::exception::Exception</label>
+        <link refid="classsdm_1_1exception_1_1Exception"/>
+        <childnode refid="198" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>sdm::exception::FileNotFoundException</label>
+        <link refid="classsdm_1_1exception_1_1FileNotFoundException"/>
+        <childnode refid="197" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="198">
+        <label>std::exception</label>
+      </node>
+      <node id="201">
+        <label>sdm::exception::ParsingException</label>
+        <link refid="classsdm_1_1exception_1_1ParsingException"/>
+        <childnode refid="197" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>sdm::exception::NotImplementedException</label>
+        <link refid="classsdm_1_1exception_1_1NotImplementedException"/>
+        <childnode refid="197" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="202">
+        <label>sdm::exception::Exception</label>
+        <link refid="classsdm_1_1exception_1_1Exception"/>
+        <childnode refid="203" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp" bodystart="27" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1exception_1_1Exception_1ac87f215eeb3a7ac15cf8f1e8fbc495eb" prot="protected" virt="non-virtual"><scope>sdm::exception::Exception</scope><name>error_message</name></member>
+      <member refid="classsdm_1_1exception_1_1Exception_1a9ccf2f17e2f2554ac8204c70773b5f50" prot="public" virt="non-virtual"><scope>sdm::exception::Exception</scope><name>Exception</name></member>
+      <member refid="classsdm_1_1exception_1_1Exception_1afd84afdb4302f7192bef9aaffd6bf399" prot="public" virt="virtual"><scope>sdm::exception::Exception</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

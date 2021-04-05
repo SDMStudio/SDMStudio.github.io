@@ -33,24 +33,24 @@
 | Type | Name |
 | ---: | :--- |
 |  const type & | [**getContainer**](classsdm_1_1vector.md#function-getcontainer) () const<br> |
-|  void | [**init**](classsdm_1_1vector.md#function-init) (value) <br> |
+|  void | [**init**](classsdm_1_1vector.md#function-init) (value arg) <br> |
 |  value | [**max**](classsdm_1_1vector.md#function-max) () const<br>_Returns the max of all elements in the vector._  |
 |  value | [**min**](classsdm_1_1vector.md#function-min) () const<br>_Returns the min of all elements in the vector._  |
 |  value | [**norm\_1**](classsdm_1_1vector.md#function-norm-1) () const<br>_Returns the norm\_1 of a vector._  |
 |  value | [**norm\_2**](classsdm_1_1vector.md#function-norm-2) () const<br>_Returns the norm\_2 of a vector._  |
-|  value | [**norm\_sawtooth**](classsdm_1_1vector.md#function-norm-sawtooth) (const [**vector**](classsdm_1_1vector.md) &) const<br>_Returns the norm\_sawtooth of a vector._  |
-|  bool | [**operator==**](classsdm_1_1vector.md#function-operator) (const [**vector**](classsdm_1_1vector.md)&lt; type, value &gt; &) const<br>_Returns true if both vectors are equals and false otherwise._  |
-|  value & | [**operator[]**](classsdm_1_1vector.md#function-operator-2) ([**size\_t**](namespacesdm.md#typedef-size-t)) <br>_Returns a reference of the i-th element._  |
-|  value | [**operator[]**](classsdm_1_1vector.md#function-operator-3) ([**size\_t**](namespacesdm.md#typedef-size-t)) const<br>_Returns a value of the i-th element._  |
-|  value | [**operator^**](classsdm_1_1vector.md#function-operator-4) (const [**vector**](classsdm_1_1vector.md)&lt; type, value &gt; &) const<br>_Returns the scalar product of the two vectors._  |
-|  void | [**resize**](classsdm_1_1vector.md#function-resize) ([**size\_t**](namespacesdm.md#typedef-size-t)) <br>_Reallocates a vector to hold "size\_t" elements._  |
-|  void | [**setContainer**](classsdm_1_1vector.md#function-setcontainer) (const type &) <br> |
+|  value | [**norm\_sawtooth**](classsdm_1_1vector.md#function-norm-sawtooth) (const [**vector**](classsdm_1_1vector.md) & arg) const<br>_Returns the norm\_sawtooth of a vector._  |
+|  bool | [**operator==**](classsdm_1_1vector.md#function-operator) (const [**vector**](classsdm_1_1vector.md)&lt; type, value &gt; & arg) const<br>_Returns true if both vectors are equals and false otherwise._  |
+|  value & | [**operator[]**](classsdm_1_1vector.md#function-operator-2) ([**size\_t**](namespacesdm.md#typedef-size-t) idx) <br>_Returns a reference of the i-th element._  |
+|  value | [**operator[]**](classsdm_1_1vector.md#function-operator-3) ([**size\_t**](namespacesdm.md#typedef-size-t) idx) const<br>_Returns a value of the i-th element._  |
+|  value | [**operator^**](classsdm_1_1vector.md#function-operator-4) (const [**vector**](classsdm_1_1vector.md)&lt; type, value &gt; & arg) const<br>_Returns the scalar product of the two vectors._  |
+|  void | [**resize**](classsdm_1_1vector.md#function-resize) ([**size\_t**](namespacesdm.md#typedef-size-t) \_size\_) <br>_Reallocates a vector to hold "size\_t" elements._  |
+|  void | [**setContainer**](classsdm_1_1vector.md#function-setcontainer) (const type & container) <br> |
 |  [**size\_t**](namespacesdm.md#typedef-size-t) | [**size**](classsdm_1_1vector.md#function-size) () const<br> |
 |  value | [**sum**](classsdm_1_1vector.md#function-sum) () <br>_Returns the sum of all elements in the vector._  |
 |  [**vector**](classsdm_1_1vector.md) | [**transpose**](classsdm_1_1vector.md#function-transpose) () const<br> |
 |   | [**vector**](classsdm_1_1vector.md#function-vector-1-3) () <br>_This constructor allocates an uninitialized vector that holds zero elements._  |
-|   | [**vector**](classsdm_1_1vector.md#function-vector-2-3) ([**size\_t**](namespacesdm.md#typedef-size-t)) <br>_This constructor allocates an uninitialized vector that holds "size\_t" elements._  |
-|   | [**vector**](classsdm_1_1vector.md#function-vector-3-3) (const [**vector**](classsdm_1_1vector.md) &) <br>_This is a copy constructor._  |
+|   | [**vector**](classsdm_1_1vector.md#function-vector-2-3) ([**size\_t**](namespacesdm.md#typedef-size-t) \_size\_) <br>_This constructor allocates an uninitialized vector that holds "size\_t" elements._  |
+|   | [**vector**](classsdm_1_1vector.md#function-vector-3-3) (const [**vector**](classsdm_1_1vector.md) & arg) <br>_This is a copy constructor._  |
 |   | [**~vector**](classsdm_1_1vector.md#function-vector) () <br>_This destructor destroies the vector._  |
 
 
@@ -83,7 +83,7 @@ const type & sdm::vector::getContainer () const
 
 ```cpp
 void sdm::vector::init (
-    value
+    value arg
 ) 
 ```
 
@@ -96,6 +96,8 @@ void sdm::vector::init (
 value sdm::vector::max () const
 ```
 
+
+Max of entries  using methods from parent classes.
 
 
 
@@ -123,7 +125,7 @@ value sdm::vector::min () const
 
 * `value` 
 
-
+Min of entries  using methods from parent classes. 
 
         
 
@@ -170,7 +172,7 @@ value sdm::vector::norm_2 () const
 
 ```cpp
 value sdm::vector::norm_sawtooth (
-    const vector &
+    const vector & arg
 ) const
 ```
 
@@ -191,7 +193,7 @@ value sdm::vector::norm_sawtooth (
 
 ```cpp
 bool sdm::vector::operator== (
-    const vector < type, value > &
+    const vector < type, value > & arg
 ) const
 ```
 
@@ -220,10 +222,12 @@ bool
 
 ```cpp
 value & sdm::vector::operator[] (
-    size_t
+    size_t idx
 ) 
 ```
 
+
+Array subscript operator '[]'
 
 
 
@@ -248,7 +252,7 @@ value&
 
 ```cpp
 value sdm::vector::operator[] (
-    size_t
+    size_t idx
 ) const
 ```
 
@@ -276,7 +280,7 @@ value
 
 ```cpp
 value sdm::vector::operator^ (
-    const vector < type, value > &
+    const vector < type, value > & arg
 ) const
 ```
 
@@ -305,7 +309,7 @@ bool
 
 ```cpp
 void sdm::vector::resize (
-    size_t
+    size_t _size_
 ) 
 ```
 
@@ -326,7 +330,7 @@ void sdm::vector::resize (
 
 ```cpp
 void sdm::vector::setContainer (
-    const type &
+    const type & container
 ) 
 ```
 
@@ -348,6 +352,8 @@ size_t sdm::vector::size () const
 value sdm::vector::sum () 
 ```
 
+
+Sum of entries  using methods from parent classes.
 
 
 
@@ -383,7 +389,7 @@ sdm::vector::vector ()
 
 ```cpp
 sdm::vector::vector (
-    size_t
+    size_t _size_
 ) 
 ```
 
@@ -404,7 +410,7 @@ sdm::vector::vector (
 
 ```cpp
 sdm::vector::vector (
-    const vector &
+    const vector & arg
 ) 
 ```
 
@@ -569,4 +575,4 @@ inline friend std::ostream & sdm::vector::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/linear_algebra/vector.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/vector.hpp`

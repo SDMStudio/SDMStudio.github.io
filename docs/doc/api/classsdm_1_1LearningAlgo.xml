@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1LearningAlgo" kind="class" language="C++" prot="public">
+    <compoundname>sdm::LearningAlgo</compoundname>
+    <basecompoundref refid="classsdm_1_1Algorithm" prot="public" virt="non-virtual">sdm::Algorithm</basecompoundref>
+    <derivedcompoundref refid="classsdm_1_1QLearning" prot="public" virt="non-virtual">sdm::QLearning&lt; TState, TAction, TObservation &gt;</derivedcompoundref>
+    <includes refid="learning__algo_8hpp" local="no">learning_algo.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+      <param>
+        <type>typename TObservation</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1LearningAlgo_1abf42f67bf765c5e0a82f21cb1ea2e791" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1GymInterface" kindref="compound">GymInterface</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;GymInterface&gt; sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::env_</definition>
+        <argsstring></argsstring>
+        <name>env_</name>
+        <briefdescription>
+<para>The problem to be solved. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="18" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1LearningAlgo_1ac8581e93070439c1ac264e87c4a4cad5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::trial</definition>
+        <argsstring></argsstring>
+        <name>trial</name>
+        <briefdescription>
+<para>Some variables for the algorithm. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="24" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1LearningAlgo_1aaa4834a82ca4ef3a32bf572f140de9c6" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::max_trials</definition>
+        <argsstring></argsstring>
+        <name>max_trials</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="24" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1LearningAlgo_1ace7570eebb3f69ab09e879a792909ff0" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::planning_horizon_</definition>
+        <argsstring></argsstring>
+        <name>planning_horizon_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1LearningAlgo_1ad275ce55da5af8664a25a7c05d119f6a" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::episode</definition>
+        <argsstring></argsstring>
+        <name>episode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1LearningAlgo_1a6b866d3be4456b7c84e4e48d8ffbaa35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::LearningAlgo</definition>
+        <argsstring>(number trials, std::string results)</argsstring>
+        <name>LearningAlgo</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>trials</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>results</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1LearningAlgo_1a670f6b3873eda11ded22e72303f7b7bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;::LearningAlgo</definition>
+        <argsstring>(std::shared_ptr&lt; GymInterface &gt; env, number planning_horizon, number num_max_trials=10000)</argsstring>
+        <name>LearningAlgo</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1GymInterface" kindref="compound">GymInterface</ref> &gt;</type>
+          <declname>env</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>planning_horizon</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_max_trials</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="30" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="340">
+        <label>sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1LearningAlgo"/>
+        <childnode refid="341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="341">
+        <label>sdm::Algorithm</label>
+        <link refid="classsdm_1_1Algorithm"/>
+      </node>
+      <node id="342">
+        <label>sdm::QLearning&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1QLearning"/>
+        <childnode refid="340" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="343">
+        <label>sdm::LearningAlgo&lt; TState, TAction, TObservation &gt;</label>
+        <link refid="classsdm_1_1LearningAlgo"/>
+        <childnode refid="344" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="344">
+        <label>sdm::Algorithm</label>
+        <link refid="classsdm_1_1Algorithm"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" line="12" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/learning_algo.hpp" bodystart="11" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1Algorithm_1ac7416e15657922c542ec865b71845500" prot="public" virt="pure-virtual"><scope>sdm::LearningAlgo</scope><name>do_initialize</name></member>
+      <member refid="classsdm_1_1Algorithm_1a1c9dad65b7cb1b03bd0a3c11e8a1cf24" prot="public" virt="pure-virtual"><scope>sdm::LearningAlgo</scope><name>do_solve</name></member>
+      <member refid="classsdm_1_1Algorithm_1abf4f9b267c62bc80c30a39d0023ef445" prot="public" virt="pure-virtual"><scope>sdm::LearningAlgo</scope><name>do_test</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1abf42f67bf765c5e0a82f21cb1ea2e791" prot="protected" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>env_</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1ad275ce55da5af8664a25a7c05d119f6a" prot="protected" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>episode</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1a6b866d3be4456b7c84e4e48d8ffbaa35" prot="public" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>LearningAlgo</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1a670f6b3873eda11ded22e72303f7b7bf" prot="public" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>LearningAlgo</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1aaa4834a82ca4ef3a32bf572f140de9c6" prot="protected" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>max_trials</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1ace7570eebb3f69ab09e879a792909ff0" prot="protected" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>planning_horizon_</name></member>
+      <member refid="classsdm_1_1LearningAlgo_1ac8581e93070439c1ac264e87c4a4cad5" prot="protected" virt="non-virtual"><scope>sdm::LearningAlgo</scope><name>trial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

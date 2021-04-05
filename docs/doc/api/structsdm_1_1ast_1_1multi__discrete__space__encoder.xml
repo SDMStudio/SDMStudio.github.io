@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1multi__discrete__space__encoder" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::multi_discrete_space_encoder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::static_visitor&lt; MultiDiscreteSpace&lt; std::string &gt; &gt;</basecompoundref>
+    <includes refid="encoder_8hpp" local="no">encoder.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1ast_1_1multi__discrete__space__encoder_1a03f284826cf99b4c947d0ec9c5cabf9d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>MultiDiscreteSpace&lt;std::string&gt; sdm::ast::multi_discrete_space_encoder::operator()</definition>
+        <argsstring>(const std::vector&lt; number &gt; &amp;dim_spaces) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt; &amp;</type>
+          <declname>dim_spaces</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="260" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="260" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1ast_1_1multi__discrete__space__encoder_1aaa01ceb91aadd76d5d6d9aec989576ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>MultiDiscreteSpace&lt;std::string&gt; sdm::ast::multi_discrete_space_encoder::operator()</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;names) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="276" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="276" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>encodes the input into a multi discrete space class </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="402">
+        <label>boost::static_visitor&lt; MultiDiscreteSpace&lt; std::string &gt; &gt;</label>
+      </node>
+      <node id="401">
+        <label>sdm::ast::multi_discrete_space_encoder</label>
+        <link refid="structsdm_1_1ast_1_1multi__discrete__space__encoder"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="404">
+        <label>boost::static_visitor&lt; MultiDiscreteSpace&lt; std::string &gt; &gt;</label>
+      </node>
+      <node id="403">
+        <label>sdm::ast::multi_discrete_space_encoder</label>
+        <link refid="structsdm_1_1ast_1_1multi__discrete__space__encoder"/>
+        <childnode refid="404" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="259" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="258" bodyend="281"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1ast_1_1multi__discrete__space__encoder_1a03f284826cf99b4c947d0ec9c5cabf9d" prot="public" virt="non-virtual"><scope>sdm::ast::multi_discrete_space_encoder</scope><name>operator()</name></member>
+      <member refid="structsdm_1_1ast_1_1multi__discrete__space__encoder_1aaa01ceb91aadd76d5d6d9aec989576ae" prot="public" virt="non-virtual"><scope>sdm::ast::multi_discrete_space_encoder</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

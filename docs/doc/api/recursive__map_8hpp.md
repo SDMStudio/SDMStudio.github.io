@@ -66,4 +66,4 @@ using map_t =  std::map<K, V>;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/struct/recursive_map.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp`

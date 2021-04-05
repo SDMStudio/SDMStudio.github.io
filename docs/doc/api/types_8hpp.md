@@ -28,13 +28,15 @@ _defining several types_ [More...](#detailed-description)
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
+| namespace | [**std**](namespacestd.md) <br> |
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
-| class | [**BinaryFunction**](classsdm_1_1BinaryFunction.md) &lt;typename S, typename A&gt;<br> |
-| class | [**UnaryFunction**](classsdm_1_1UnaryFunction.md) &lt;typename S, typename A&gt;<br> |
+| class | [**SolvableByHSVI**](classsdm_1_1SolvableByHSVI.md) &lt;TState, TAction&gt;<br>_Public interface that must be implemented by all transformed problems that can be solved using_ [_**HSVI**_](classsdm_1_1HSVI.md) _(i.e. beliefMDP, occupancyMDP, occupancyGame, etc)._ |
+| struct | [**WorldType**](structsdm_1_1WorldType.md) &lt;TState, TAction&gt;<br>_Allows developers to get access to the type of underlying problem that is solved when dealing with a kind of state and action in_ [_**HSVI**_](classsdm_1_1HSVI.md) _. Usage Example :_`WorldType <BeliefState, number>::type` _will return the type_`DiscretePOMDP` _._ |
+| struct | [**is\_any**](structstd_1_1is__any.md) &lt;class T, Ts&gt;<br> |
 
 
 
@@ -77,4 +79,4 @@ This class provides basic type alias for dpomdp.
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/types.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/types.hpp`

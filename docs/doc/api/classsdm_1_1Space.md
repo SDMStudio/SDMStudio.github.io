@@ -37,6 +37,7 @@ Inherited by the following classes: [sdm::DiscreteSpace](classsdm_1_1DiscreteSpa
 |  bool | [**operator!=**](classsdm_1_1Space.md#function-operator) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 |  bool | [**operator==**](classsdm_1_1Space.md#function-operator-2) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 | virtual std::string | [**str**](classsdm_1_1Space.md#function-str) () const = 0<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
+| virtual  | [**~Space**](classsdm_1_1Space.md#function-space) () <br> |
 
 
 
@@ -106,5 +107,14 @@ virtual std::string sdm::Space::str () const = 0
 
 
 
+### function ~Space 
+
+
+```cpp
+inline virtual sdm::Space::~Space () 
+```
+
+
+
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/space/space.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/space.hpp`

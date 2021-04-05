@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="serialized__belief__state_8cpp" kind="file" language="C++">
+    <compoundname>serialized_belief_state.cpp</compoundname>
+    <includes refid="serialized__belief__state_8hpp" local="no">sdm/core/state/serialized_belief_state.hpp</includes>
+    <incdepgraph>
+      <node id="1059">
+        <label>assert.h</label>
+      </node>
+      <node id="1054">
+        <label>sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="1049" relation="include">
+        </childnode>
+        <childnode refid="1055" relation="include">
+        </childnode>
+        <childnode refid="1064" relation="include">
+        </childnode>
+      </node>
+      <node id="1053">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="1048">
+        <label>sdm/core/state/serialized_belief_state.hpp</label>
+        <link refid="serialized__belief__state_8hpp"/>
+        <childnode refid="1049" relation="include">
+        </childnode>
+        <childnode refid="1054" relation="include">
+        </childnode>
+        <childnode refid="1065" relation="include">
+        </childnode>
+      </node>
+      <node id="1056">
+        <label>cmath</label>
+      </node>
+      <node id="1057">
+        <label>string</label>
+      </node>
+      <node id="1066">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1058" relation="include">
+        </childnode>
+      </node>
+      <node id="1055">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1056" relation="include">
+        </childnode>
+        <childnode refid="1057" relation="include">
+        </childnode>
+        <childnode refid="1058" relation="include">
+        </childnode>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1059" relation="include">
+        </childnode>
+        <childnode refid="1049" relation="include">
+        </childnode>
+        <childnode refid="1060" relation="include">
+        </childnode>
+        <childnode refid="1063" relation="include">
+        </childnode>
+      </node>
+      <node id="1047">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp</label>
+        <link refid="serialized__belief__state_8cpp"/>
+        <childnode refid="1048" relation="include">
+        </childnode>
+      </node>
+      <node id="1063">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="1058">
+        <label>vector</label>
+      </node>
+      <node id="1067">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1066" relation="include">
+        </childnode>
+      </node>
+      <node id="1062">
+        <label>sstream</label>
+      </node>
+      <node id="1061">
+        <label>cstdlib</label>
+      </node>
+      <node id="1051">
+        <label>iostream</label>
+      </node>
+      <node id="1050">
+        <label>cstddef</label>
+      </node>
+      <node id="1052">
+        <label>unordered_map</label>
+      </node>
+      <node id="1060">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="1061" relation="include">
+        </childnode>
+        <childnode refid="1062" relation="include">
+        </childnode>
+      </node>
+      <node id="1065">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="1049" relation="include">
+        </childnode>
+        <childnode refid="1066" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+      </node>
+      <node id="1064">
+        <label>sdm/core/state/belief_state.tpp</label>
+      </node>
+      <node id="1049">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="1050" relation="include">
+        </childnode>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1053" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="serialized__belief__state_8hpp" kindref="compound">sdm/core/state/serialized_belief_state.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedBeliefState_1a6ad4b225e26fc7e7179a00c1c3f358f0" kindref="member">SerializedBeliefState::SerializedBeliefState</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1SerializedBeliefState_1a6ad4b225e26fc7e7179a00c1c3f358f0" kindref="member">SerializedBeliefState::SerializedBeliefState</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>default_value)<sp/>:<sp/><ref refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" kindref="member">BaseBeliefState</ref>&lt;SerializedState&gt;(default_value)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>SerializedBeliefState::SerializedBeliefState(<ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">std::size_t</ref><sp/>size,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>default_value)<sp/>:<sp/>BaseBeliefState&lt;SerializedState&gt;(size,<sp/>default_value)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>SerializedBeliefState::SerializedBeliefState(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SerializedBeliefState<sp/>&amp;v)<sp/>:<sp/>BaseBeliefState&lt;SerializedState&gt;(v)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp"/>
+  </compounddef>
+</doxygen>

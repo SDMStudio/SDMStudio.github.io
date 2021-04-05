@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1MappedVector" kind="class" language="C++" prot="public">
+    <compoundname>sdm::MappedVector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::unordered_map&lt; TIndex, T &gt;</basecompoundref>
+    <basecompoundref refid="classsdm_1_1VectorImpl" prot="public" virt="non-virtual">sdm::VectorImpl&lt; TIndex, T &gt;</basecompoundref>
+    <includes refid="mapped__vector_8hpp" local="no">mapped_vector.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TIndex</declname>
+        <defname>TIndex</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+        <defval>double</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1MappedVector_1abf4654c82755bb1ac5f4f467493a386a" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::default_value_</definition>
+        <argsstring></argsstring>
+        <name>default_value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="38" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1MappedVector_1a192fe86ee506a233d165d30a8a920f7e" prot="protected" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t sdm::MappedVector&lt; TIndex, T &gt;::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="39" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1af1eb71be40525bd7824b1fdf3e0efb9f" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; TIndex, T &gt;</type>
+        <definition>std::pair&lt;TIndex, T&gt; sdm::MappedVector&lt; TIndex, T &gt;::getMin</definition>
+        <argsstring>() const</argsstring>
+        <name>getMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ac2a3d3f154eabb04e8800f503659700e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; TIndex, T &gt;</type>
+        <definition>std::pair&lt;TIndex, T&gt; sdm::MappedVector&lt; TIndex, T &gt;::getMax</definition>
+        <argsstring>() const</argsstring>
+        <name>getMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1a72b3cae7f43436d899c9da8a8bfa240e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MappedVector&lt; TIndex, T &gt;::MappedVector</definition>
+        <argsstring>()</argsstring>
+        <name>MappedVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ae0a56f79ba91a9f440ec791b4a14da29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MappedVector&lt; TIndex, T &gt;::MappedVector</definition>
+        <argsstring>(T default_value)</argsstring>
+        <name>MappedVector</name>
+        <param>
+          <type>T</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ace7faa27b1ab644fb1480a45721329af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MappedVector&lt; TIndex, T &gt;::MappedVector</definition>
+        <argsstring>(std::size_t size, T default_value)</argsstring>
+        <name>MappedVector</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1a0f29af90b5165693a18cabee3a5819f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MappedVector&lt; TIndex, T &gt;::MappedVector</definition>
+        <argsstring>(const MappedVector &amp;v)</argsstring>
+        <name>MappedVector</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1a667ed798b386ca4aadaf5c5998a34cf3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::norm_1</definition>
+        <argsstring>() const</argsstring>
+        <name>norm_1</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1ab9315c66b5c31de1ff3ebfbc9760f9bc">norm_1</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ad9d78194308798445099a2fecc330293" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::norm_2</definition>
+        <argsstring>() const</argsstring>
+        <name>norm_2</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a9134a757b65f22e6c0e7f86f781febe0">norm_2</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ab932c60ef6b0c3cb7680229333be0c2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::min</definition>
+        <argsstring>() const</argsstring>
+        <name>min</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a308432ede40af77b126d6ad7b4c8875f">min</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ac50a5999b36c9e79e5e40f77371386d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>TIndex</type>
+        <definition>TIndex sdm::MappedVector&lt; TIndex, T &gt;::argmin</definition>
+        <argsstring>() const</argsstring>
+        <name>argmin</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a00c07bd464d78dcfb4c3a25b70c31e66">argmin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1aff4f819256fdd7b9c191b57812fca3a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::max</definition>
+        <argsstring>() const</argsstring>
+        <name>max</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a2468ecc65e0edb5deb2703a67bff2773">max</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1abd49e9817196371ee5fdb1b6078e07e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>TIndex</type>
+        <definition>TIndex sdm::MappedVector&lt; TIndex, T &gt;::argmax</definition>
+        <argsstring>() const</argsstring>
+        <name>argmax</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1ae6e469b6da349282234e8f202da3a29c">argmax</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1aeede042319cd5b014764a3bbbc09208f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::at</definition>
+        <argsstring>(const TIndex &amp;) const</argsstring>
+        <name>at</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a8ce52d012774f10da1166f9626e83234">at</reimplements>
+        <param>
+          <type>const TIndex &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ae64dd3cfae50798e49aa6903d73e82d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::operator^</definition>
+        <argsstring>(const MappedVector &amp;) const</argsstring>
+        <name>operator^</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1a52e4edbdbd67b5522d2a56f531db563d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::MappedVector&lt; TIndex, T &gt;::operator&lt;</definition>
+        <argsstring>(const MappedVector &amp;) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ad5dc5bcab2d58a6b8e198da61cc1b995" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::dot</definition>
+        <argsstring>(const MappedVector &amp;v2) const</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1aa21da534045aee8330037819acc0f81b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t sdm::MappedVector&lt; TIndex, T &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1ab072a74c6d2977c78ad8d8036a3714ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T sdm::MappedVector&lt; TIndex, T &gt;::getDefault</definition>
+        <argsstring>() const</argsstring>
+        <name>getDefault</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1a7da358973f207deaf0ce4086e4986c4c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; TIndex &gt;</type>
+        <definition>std::vector&lt;TIndex&gt; sdm::MappedVector&lt; TIndex, T &gt;::getIndexes</definition>
+        <argsstring>() const</argsstring>
+        <name>getIndexes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MappedVector_1af35decf9e63f3bedc5e7851dec30d6ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::MappedVector&lt; TIndex, T &gt;::str</definition>
+        <argsstring>() const</argsstring>
+        <name>str</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a2f6af116e9b65abd8cdd96080bf7b51a">str</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="71" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1MappedVector_1aa2913dc6cef48570608b9ad60be7f568" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const MappedVector &amp;vect)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> &amp;</type>
+          <declname>vect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="73" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="73" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mapped vectors are vectors that use map to store values of a vector. </para>    </briefdescription>
+    <detaileddescription>
+<para>Using map structure allow to store only necessary values. Moreover, it allows to see vector in another way that is not more only a mapping from integer to value but can map any type of index to values.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of index </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="361">
+        <label>std::unordered_map&lt; TIndex, T &gt;</label>
+      </node>
+      <node id="362">
+        <label>sdm::VectorImpl&lt; TIndex, T &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="360">
+        <label>sdm::MappedVector&lt; TIndex, T &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="361" relation="public-inheritance">
+        </childnode>
+        <childnode refid="362" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="366">
+        <label>T</label>
+      </node>
+      <node id="364">
+        <label>std::unordered_map&lt; TIndex, T &gt;</label>
+      </node>
+      <node id="365">
+        <label>sdm::VectorImpl&lt; TIndex, T &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="363">
+        <label>sdm::MappedVector&lt; TIndex, T &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+        <childnode refid="365" relation="public-inheritance">
+        </childnode>
+        <childnode refid="366" relation="usage">
+          <edgelabel>default_value_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="35" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1MappedVector_1abd49e9817196371ee5fdb1b6078e07e5" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>argmax</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac50a5999b36c9e79e5e40f77371386d3" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>argmin</name></member>
+      <member refid="classsdm_1_1MappedVector_1aeede042319cd5b014764a3bbbc09208f" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>at</name></member>
+      <member refid="classsdm_1_1MappedVector_1abf4654c82755bb1ac5f4f467493a386a" prot="protected" virt="non-virtual"><scope>sdm::MappedVector</scope><name>default_value_</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad5dc5bcab2d58a6b8e198da61cc1b995" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>dot</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab072a74c6d2977c78ad8d8036a3714ce" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>getDefault</name></member>
+      <member refid="classsdm_1_1MappedVector_1a7da358973f207deaf0ce4086e4986c4c" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>getIndexes</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac2a3d3f154eabb04e8800f503659700e" prot="protected" virt="non-virtual"><scope>sdm::MappedVector</scope><name>getMax</name></member>
+      <member refid="classsdm_1_1MappedVector_1af1eb71be40525bd7824b1fdf3e0efb9f" prot="protected" virt="non-virtual"><scope>sdm::MappedVector</scope><name>getMin</name></member>
+      <member refid="classsdm_1_1MappedVector_1a72b3cae7f43436d899c9da8a8bfa240e" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae0a56f79ba91a9f440ec791b4a14da29" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ace7faa27b1ab644fb1480a45721329af" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1a0f29af90b5165693a18cabee3a5819f1" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1aff4f819256fdd7b9c191b57812fca3a8" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>max</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab932c60ef6b0c3cb7680229333be0c2e" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>min</name></member>
+      <member refid="classsdm_1_1MappedVector_1a667ed798b386ca4aadaf5c5998a34cf3" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>norm_1</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad9d78194308798445099a2fecc330293" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>norm_2</name></member>
+      <member refid="classsdm_1_1MappedVector_1a52e4edbdbd67b5522d2a56f531db563d" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>operator&lt;</name></member>
+      <member refid="classsdm_1_1MappedVector_1aa2913dc6cef48570608b9ad60be7f568" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae64dd3cfae50798e49aa6903d73e82d4" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>operator^</name></member>
+      <member refid="classsdm_1_1MappedVector_1aa21da534045aee8330037819acc0f81b" prot="public" virt="non-virtual"><scope>sdm::MappedVector</scope><name>size</name></member>
+      <member refid="classsdm_1_1MappedVector_1a192fe86ee506a233d165d30a8a920f7e" prot="protected" virt="non-virtual"><scope>sdm::MappedVector</scope><name>size_</name></member>
+      <member refid="classsdm_1_1MappedVector_1af35decf9e63f3bedc5e7851dec30d6ff" prot="public" virt="virtual"><scope>sdm::MappedVector</scope><name>str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

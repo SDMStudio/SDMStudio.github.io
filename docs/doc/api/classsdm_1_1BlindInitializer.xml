@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1BlindInitializer" kind="class" language="C++" prot="public">
+    <compoundname>sdm::BlindInitializer</compoundname>
+    <basecompoundref refid="classsdm_1_1Initializer" prot="public" virt="non-virtual">sdm::Initializer&lt; TState, TAction &gt;</basecompoundref>
+    <includes refid="initializer_8hpp" local="no">initializer.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1BlindInitializer_1a814f3e768e0cb8fe4d73d06b48f265f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::BlindInitializer&lt; TState, TAction &gt;::BlindInitializer</definition>
+        <argsstring>()</argsstring>
+        <name>BlindInitializer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="187" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1BlindInitializer_1a3edba476ae31c13d9ac9ae0245b877dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::BlindInitializer&lt; TState, TAction &gt;::init</definition>
+        <argsstring>(ValueFunction&lt; TState, TAction &gt; *vf)</argsstring>
+        <name>init</name>
+        <reimplements refid="classsdm_1_1Initializer_1aa2971b496cd7b51b5abf0c79b5c19d9b">init</reimplements>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; *</type>
+          <declname>vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="192" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="192" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This initializer calculates the initial lower bound ${V}_0$ using the blind policy method [Hauskrecht, 1997]. Trey Smith and Reid Simmons used this initialization procedure in <ulink url="https://arxiv.org/pdf/1207.4166.pdf">https://arxiv.org/pdf/1207.4166.pdf</ulink> . </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="42">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="41">
+        <label>sdm::BlindInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1BlindInitializer"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="44">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="43">
+        <label>sdm::BlindInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1BlindInitializer"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="185" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="184" bodyend="229"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1BlindInitializer_1a814f3e768e0cb8fe4d73d06b48f265f5" prot="public" virt="non-virtual"><scope>sdm::BlindInitializer</scope><name>BlindInitializer</name></member>
+      <member refid="classsdm_1_1BlindInitializer_1a3edba476ae31c13d9ac9ae0245b877dd" prot="public" virt="virtual"><scope>sdm::BlindInitializer</scope><name>init</name></member>
+      <member refid="classsdm_1_1Initializer_1af228ae3e3b0ba75b3e9f82b46e029136" prot="public" virt="virtual"><scope>sdm::BlindInitializer</scope><name>~Initializer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

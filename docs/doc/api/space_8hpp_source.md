@@ -19,6 +19,7 @@ namespace sdm
   class Space
   {
   public:
+    virtual ~Space() {}
 
     virtual bool isDiscrete() const = 0;
 

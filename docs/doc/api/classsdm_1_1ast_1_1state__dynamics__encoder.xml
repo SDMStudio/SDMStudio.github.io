@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ast_1_1state__dynamics__encoder" kind="class" language="C++" prot="public">
+    <compoundname>sdm::ast::state_dynamics_encoder</compoundname>
+    <includes refid="encoder_8hpp" local="no">encoder.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1state__dynamics__encoder_1a3ac12ab8fddbe96f80bc018faa2791cd" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>DiscreteSpace&lt;std::string&gt; sdm::ast::state_dynamics_encoder::state_space_</definition>
+        <argsstring></argsstring>
+        <name>state_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="378" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1state__dynamics__encoder_1af59571569182740f56b69d7c3f0e21af" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>DiscreteSpace&lt;std::string&gt; sdm::ast::state_dynamics_encoder::agent_space_</definition>
+        <argsstring></argsstring>
+        <name>agent_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="379" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1state__dynamics__encoder_1a493c3ba06553a39209c5cc42dc4304bb" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>MultiDiscreteSpace&lt;std::string&gt; sdm::ast::state_dynamics_encoder::action_space_</definition>
+        <argsstring></argsstring>
+        <name>action_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="380" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1ast_1_1state__dynamics__encoder_1a3349dd44e548753f4a94023175a00048" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::ast::state_dynamics_encoder::state_dynamics_encoder</definition>
+        <argsstring>(const DiscreteSpace&lt; std::string &gt; &amp;state_space, const DiscreteSpace&lt; std::string &gt; &amp;agent_space, const MultiDiscreteSpace&lt; std::string &gt; &amp;action_space)</argsstring>
+        <name>state_dynamics_encoder</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>state_space</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>agent_space</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>action_space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="383" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="383" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ast_1_1state__dynamics__encoder_1ac30d4a726a720b5d1683187089c5403e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref></type>
+        <definition>StateDynamics sdm::ast::state_dynamics_encoder::encode</definition>
+        <argsstring>(const transition_t &amp;transits)</argsstring>
+        <name>encode</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1_1ast_1a6c427b4931c0b86e1ea82f3f78277181" kindref="member">transition_t</ref> &amp;</type>
+          <declname>transits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="390" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="390" bodyend="400"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="652">
+        <label>sdm::DiscreteSpace&lt; Joint&lt; std::string &gt; &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="649" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="649">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="650">
+        <label>sdm::MultiDiscreteSpace&lt; std::string &gt;</label>
+        <link refid="classsdm_1_1MultiDiscreteSpace"/>
+        <childnode refid="651" relation="public-inheritance">
+        </childnode>
+        <childnode refid="652" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>sdm::MultiSpace&lt; DiscreteSpace&lt; std::string &gt; &gt;</label>
+        <link refid="classsdm_1_1MultiSpace"/>
+        <childnode refid="649" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="648">
+        <label>sdm::DiscreteSpace&lt; std::string &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="649" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="647">
+        <label>sdm::ast::state_dynamics_encoder</label>
+        <link refid="classsdm_1_1ast_1_1state__dynamics__encoder"/>
+        <childnode refid="648" relation="usage">
+          <edgelabel>agent_space_</edgelabel>
+          <edgelabel>state_space_</edgelabel>
+        </childnode>
+        <childnode refid="650" relation="usage">
+          <edgelabel>action_space_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="376" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="375" bodyend="401"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a493c3ba06553a39209c5cc42dc4304bb" prot="protected" virt="non-virtual"><scope>sdm::ast::state_dynamics_encoder</scope><name>action_space_</name></member>
+      <member refid="classsdm_1_1ast_1_1state__dynamics__encoder_1af59571569182740f56b69d7c3f0e21af" prot="protected" virt="non-virtual"><scope>sdm::ast::state_dynamics_encoder</scope><name>agent_space_</name></member>
+      <member refid="classsdm_1_1ast_1_1state__dynamics__encoder_1ac30d4a726a720b5d1683187089c5403e" prot="public" virt="non-virtual"><scope>sdm::ast::state_dynamics_encoder</scope><name>encode</name></member>
+      <member refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a3349dd44e548753f4a94023175a00048" prot="public" virt="non-virtual"><scope>sdm::ast::state_dynamics_encoder</scope><name>state_dynamics_encoder</name></member>
+      <member refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a3ac12ab8fddbe96f80bc018faa2791cd" prot="protected" virt="non-virtual"><scope>sdm::ast::state_dynamics_encoder</scope><name>state_space_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

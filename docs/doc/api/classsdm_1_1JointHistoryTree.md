@@ -25,12 +25,22 @@ Inherits the following classes: [sdm::HistoryTree](classsdm_1_1HistoryTree.md)
 
 
 
+## Public Types
+
+| Type | Name |
+| ---: | :--- |
+| typedef std::shared\_ptr&lt; [**HistoryTree**](classsdm_1_1HistoryTree.md)&lt; T &gt; &gt; | [**ihistory\_type**](classsdm_1_1JointHistoryTree.md#typedef-ihistory-type)  <br> |
 
 
 
 
 
 
+## Public Attributes
+
+| Type | Name |
+| ---: | :--- |
+|  [**Joint**](classsdm_1_1Joint.md)&lt; std::shared\_ptr&lt; [**HistoryTree**](classsdm_1_1HistoryTree.md)&lt; T &gt; &gt; &gt; | [**indiv\_hist**](classsdm_1_1JointHistoryTree.md#variable-indiv-hist)  <br> |
 
 
 
@@ -42,11 +52,12 @@ Inherits the following classes: [sdm::HistoryTree](classsdm_1_1HistoryTree.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md#function-jointhistorytree-1-4) () <br>_Default constructor. This constructor builds a default and empty tree._  |
-|   | [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md#function-jointhistorytree-2-4) ([**number**](namespacesdm.md#typedef-number) max\_depth) <br>_Construct a new joint history tree object (the origin)_  |
+|   | [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md#function-jointhistorytree-2-4) ([**number**](namespacesdm.md#typedef-number) n\_agents) <br>_Construct a new joint history tree object (the origin)_  |
 |   | [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md#function-jointhistorytree-3-4) ([**number**](namespacesdm.md#typedef-number) n\_agents, [**number**](namespacesdm.md#typedef-number) max\_depth) <br> |
 |   | [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md#function-jointhistorytree-4-4) (std::shared\_ptr&lt; [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md)&lt; T &gt;&gt; parent, const [**Joint**](classsdm_1_1Joint.md)&lt; T &gt; & item) <br> |
 |  std::shared\_ptr&lt; [**JointHistoryTree**](classsdm_1_1JointHistoryTree.md)&lt; T &gt; &gt; | [**expand**](classsdm_1_1JointHistoryTree.md#function-expand) (const [**Joint**](classsdm_1_1Joint.md)&lt; T &gt; & data, bool backup=true) <br>_Expands the tree._  |
-|  std::shared\_ptr&lt; [**HistoryTree**](classsdm_1_1HistoryTree.md)&lt; T &gt; &gt; | [**getIndividualHistory**](classsdm_1_1JointHistoryTree.md#function-getindividualhistory) ([**number**](namespacesdm.md#typedef-number) ag\_id) <br> |
+|  std::vector&lt; std::shared\_ptr&lt; [**HistoryTree**](classsdm_1_1HistoryTree.md)&lt; T &gt; &gt; &gt; | [**getIndividualHistories**](classsdm_1_1JointHistoryTree.md#function-getindividualhistories) () const<br> |
+|  std::shared\_ptr&lt; [**HistoryTree**](classsdm_1_1HistoryTree.md)&lt; T &gt; &gt; | [**getIndividualHistory**](classsdm_1_1JointHistoryTree.md#function-getindividualhistory) ([**number**](namespacesdm.md#typedef-number) ag\_id) const<br> |
 
 ## Public Functions inherited from sdm::HistoryTree
 
@@ -92,11 +103,6 @@ See [sdm::Tree](classsdm_1_1Tree.md)
 
 
 
-## Protected Attributes
-
-| Type | Name |
-| ---: | :--- |
-|  [**Joint**](classsdm_1_1Joint.md)&lt; std::shared\_ptr&lt; [**HistoryTree**](classsdm_1_1HistoryTree.md)&lt; T &gt; &gt; &gt; | [**indiv\_hist**](classsdm_1_1JointHistoryTree.md#variable-indiv-hist)  <br> |
 
 
 ## Protected Attributes inherited from sdm::Tree
@@ -147,6 +153,28 @@ See [sdm::HistoryTree](classsdm_1_1HistoryTree.md)
 
 
     
+## Public Types Documentation
+
+
+### typedef ihistory\_type 
+
+
+```cpp
+using sdm::JointHistoryTree< T >::ihistory_type =  std::shared_ptr<HistoryTree<T> >;
+```
+
+
+## Public Attributes Documentation
+
+
+### variable indiv\_hist 
+
+
+```cpp
+Joint<std::shared_ptr<HistoryTree<T> > > sdm::JointHistoryTree< T >::indiv_hist;
+```
+
+
 ## Public Functions Documentation
 
 
@@ -164,7 +192,7 @@ sdm::JointHistoryTree::JointHistoryTree ()
 
 ```cpp
 sdm::JointHistoryTree::JointHistoryTree (
-    number max_depth
+    number n_agents
 ) 
 ```
 
@@ -174,7 +202,7 @@ sdm::JointHistoryTree::JointHistoryTree (
 **Parameters:**
 
 
-* `max_depth` the maximum depth allowed 
+* `n_agents` the number of agent 
 
 
 
@@ -233,24 +261,22 @@ If child leading from the item previously exists, the method return that child. 
 
         
 
+### function getIndividualHistories 
+
+
+```cpp
+std::vector< std::shared_ptr< HistoryTree < T > > > sdm::JointHistoryTree::getIndividualHistories () const
+```
+
+
+
 ### function getIndividualHistory 
 
 
 ```cpp
 std::shared_ptr< HistoryTree < T > > sdm::JointHistoryTree::getIndividualHistory (
     number ag_id
-) 
-```
-
-
-## Protected Attributes Documentation
-
-
-### variable indiv\_hist 
-
-
-```cpp
-Joint<std::shared_ptr<HistoryTree<T> > > sdm::JointHistoryTree< T >::indiv_hist;
+) const
 ```
 
 
@@ -283,4 +309,4 @@ inline friend std::ostream & sdm::JointHistoryTree::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/state/jhistory_tree.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/jhistory_tree.hpp`

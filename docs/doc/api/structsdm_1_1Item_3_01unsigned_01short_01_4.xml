@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1Item_3_01unsigned_01short_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::Item&lt; unsigned short &gt;</compoundname>
+    <includes refid="item_8hpp" local="no">item.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structsdm_1_1Item_3_01unsigned_01short_01_4_1af3da275fe087294f0ea7a9e70aa7c565" prot="protected" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short sdm::Item&lt; unsigned short &gt;::item_</definition>
+        <argsstring></argsstring>
+        <name>item_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="93" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1Item_3_01unsigned_01short_01_4_1afd6a9e77de8f4f405c32b8004cf2eaa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; unsigned short &gt;::Item</definition>
+        <argsstring>()</argsstring>
+        <name>Item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="96" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01unsigned_01short_01_4_1a03b1933f061a008a46feef9c680e358e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; unsigned short &gt;::Item</definition>
+        <argsstring>(unsigned short item)</argsstring>
+        <name>Item</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="100" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01unsigned_01short_01_4_1a2d976e1f9a2a751303fa057bc4a24a9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; unsigned short &gt;::operator unsigned short</definition>
+        <argsstring>()</argsstring>
+        <name>operator unsigned short</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="102" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01unsigned_01short_01_4_1abf67f4c9e9b3e2f0d504449de041dfe7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::Item&lt; unsigned short &gt;::operator&lt;</definition>
+        <argsstring>(const Item &amp;v2) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="structsdm_1_1Item" kindref="compound">Item</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="113" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structsdm_1_1Item_3_01unsigned_01short_01_4_1a247f03984d02ccdc498180b405e2bdc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Item&lt; unsigned short &gt; &amp;it)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsdm_1_1Item" kindref="compound">Item</ref>&lt; unsigned short &gt; &amp;</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="107" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="91" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="90" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1Item_3_01unsigned_01short_01_4_1afd6a9e77de8f4f405c32b8004cf2eaa2" prot="public" virt="non-virtual"><scope>sdm::Item&lt; unsigned short &gt;</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_3_01unsigned_01short_01_4_1a03b1933f061a008a46feef9c680e358e" prot="public" virt="non-virtual"><scope>sdm::Item&lt; unsigned short &gt;</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_3_01unsigned_01short_01_4_1af3da275fe087294f0ea7a9e70aa7c565" prot="protected" virt="non-virtual"><scope>sdm::Item&lt; unsigned short &gt;</scope><name>item_</name></member>
+      <member refid="structsdm_1_1Item_3_01unsigned_01short_01_4_1a2d976e1f9a2a751303fa057bc4a24a9c" prot="public" virt="non-virtual"><scope>sdm::Item&lt; unsigned short &gt;</scope><name>operator unsigned short</name></member>
+      <member refid="structsdm_1_1Item_3_01unsigned_01short_01_4_1abf67f4c9e9b3e2f0d504449de041dfe7" prot="public" virt="non-virtual"><scope>sdm::Item&lt; unsigned short &gt;</scope><name>operator&lt;</name></member>
+      <member refid="structsdm_1_1Item_3_01unsigned_01short_01_4_1a247f03984d02ccdc498180b405e2bdc7" prot="public" virt="non-virtual"><scope>sdm::Item&lt; unsigned short &gt;</scope><name>operator&lt;&lt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

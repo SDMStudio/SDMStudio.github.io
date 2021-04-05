@@ -13,7 +13,7 @@
 * `#include <sdm/parser/ast.hpp>`
 * `#include <sdm/core/space/discrete_space.hpp>`
 * `#include <sdm/core/space/multi_discrete_space.hpp>`
-* `#include <sdm/world/decpomdp.hpp>`
+* `#include <sdm/world/discrete_decpomdp.hpp>`
 * `#include <sdm/utils/linear_algebra/vector.hpp>`
 * `#include <sdm/utils/linear_algebra/matrix.hpp>`
 
@@ -30,7 +30,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
-| namespace | [**ast**](namespacesdm_1_1ast.md) <br> |
+| namespace | [**ast**](namespacesdm_1_1ast.md) <br>_Namespace that is used by the parser._  |
 
 ## Classes
 
@@ -66,4 +66,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`

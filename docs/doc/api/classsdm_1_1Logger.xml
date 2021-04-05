@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1Logger" kind="class" language="C++" prot="public">
+    <compoundname>sdm::Logger</compoundname>
+    <basecompoundref refid="classsdm_1_1BaseLogger" prot="public" virt="non-virtual">sdm::BaseLogger</basecompoundref>
+    <derivedcompoundref refid="classsdm_1_1FileLogger" prot="public" virt="non-virtual">sdm::FileLogger</derivedcompoundref>
+    <derivedcompoundref refid="classsdm_1_1StdLogger" prot="public" virt="non-virtual">sdm::StdLogger</derivedcompoundref>
+    <includes refid="logger_8hpp" local="no">logger.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1Logger_1a4f5e9e8860c5c148990a3a95db15b083" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::ostream &gt;</type>
+        <definition>std::shared_ptr&lt;std::ostream&gt; sdm::Logger::output_stream_</definition>
+        <argsstring></argsstring>
+        <name>output_stream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1Logger_1a9aca04cf422cf0387ac2189b7f94f4f4" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sdm::Logger::format_</definition>
+        <argsstring></argsstring>
+        <name>format_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="48" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1Logger_1ae8de458917175c0dac5f0e8ce4437d12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Logger::Logger</definition>
+        <argsstring>()</argsstring>
+        <name>Logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="22" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Logger_1a165b8cd08827e4508cfee709f7dfd3cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Logger::Logger</definition>
+        <argsstring>(std::ostream *os, const std::string &amp;format=&quot;&quot;)</argsstring>
+        <name>Logger</name>
+        <param>
+          <type>std::ostream *</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="26" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Logger_1ac531362656b84a255985c8e83d02bc7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Logger::Logger</definition>
+        <argsstring>(std::shared_ptr&lt; std::ostream &gt; os, const std::string &amp;format=&quot;&quot;)</argsstring>
+        <name>Logger</name>
+        <param>
+          <type>std::shared_ptr&lt; std::ostream &gt;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Logger_1af468e245a8d49fc94c98fd4aba893898" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::Logger::setFormat</definition>
+        <argsstring>(const std::string &amp;format)</argsstring>
+        <name>setFormat</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Logger_1ad76c4adfd85659f70b4aec318f539748" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>TData</declname>
+            <defname>TData</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void sdm::Logger::log</definition>
+        <argsstring>(TData... vals)</argsstring>
+        <name>log</name>
+        <param>
+          <type>TData...</type>
+          <declname>vals</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="40" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="346">
+        <label>sdm::BaseLogger</label>
+        <link refid="classsdm_1_1BaseLogger"/>
+      </node>
+      <node id="348">
+        <label>sdm::CSVLogger</label>
+        <link refid="classsdm_1_1CSVLogger"/>
+        <childnode refid="347" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="347">
+        <label>sdm::FileLogger</label>
+        <link refid="classsdm_1_1FileLogger"/>
+        <childnode refid="345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="349">
+        <label>sdm::StdLogger</label>
+        <link refid="classsdm_1_1StdLogger"/>
+        <childnode refid="345" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="345">
+        <label>sdm::Logger</label>
+        <link refid="classsdm_1_1Logger"/>
+        <childnode refid="346" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="351">
+        <label>sdm::BaseLogger</label>
+        <link refid="classsdm_1_1BaseLogger"/>
+      </node>
+      <node id="350">
+        <label>sdm::Logger</label>
+        <link refid="classsdm_1_1Logger"/>
+        <childnode refid="351" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="20" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="19" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1Logger_1a9aca04cf422cf0387ac2189b7f94f4f4" prot="protected" virt="non-virtual"><scope>sdm::Logger</scope><name>format_</name></member>
+      <member refid="classsdm_1_1Logger_1ad76c4adfd85659f70b4aec318f539748" prot="public" virt="non-virtual"><scope>sdm::Logger</scope><name>log</name></member>
+      <member refid="classsdm_1_1Logger_1ae8de458917175c0dac5f0e8ce4437d12" prot="public" virt="non-virtual"><scope>sdm::Logger</scope><name>Logger</name></member>
+      <member refid="classsdm_1_1Logger_1a165b8cd08827e4508cfee709f7dfd3cb" prot="public" virt="non-virtual"><scope>sdm::Logger</scope><name>Logger</name></member>
+      <member refid="classsdm_1_1Logger_1ac531362656b84a255985c8e83d02bc7b" prot="public" virt="non-virtual"><scope>sdm::Logger</scope><name>Logger</name></member>
+      <member refid="classsdm_1_1Logger_1a4f5e9e8860c5c148990a3a95db15b083" prot="protected" virt="non-virtual"><scope>sdm::Logger</scope><name>output_stream_</name></member>
+      <member refid="classsdm_1_1Logger_1af468e245a8d49fc94c98fd4aba893898" prot="public" virt="non-virtual"><scope>sdm::Logger</scope><name>setFormat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -3,7 +3,7 @@
 
 # Class sdm::MappedVector
 
-**template &lt;typename TIndex typename TIndex, typename T typename T&gt;**
+**template &lt;typename TIndex, typename T&gt;**
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**MappedVector**](classsdm_1_1MappedVector.md)
@@ -16,7 +16,7 @@ _Mapped vectors are vectors that use map to store values of a vector._ [More...]
 
 
 
-Inherits the following classes: std::map< TIndex, T >,  [sdm::VectorImpl](classsdm_1_1VectorImpl.md)
+Inherits the following classes: std::unordered_map< TIndex, T >,  [sdm::VectorImpl](classsdm_1_1VectorImpl.md)
 
 
 
@@ -39,18 +39,19 @@ Inherits the following classes: std::map< TIndex, T >,  [sdm::VectorImpl](classs
 | ---: | :--- |
 |   | [**MappedVector**](classsdm_1_1MappedVector.md#function-mappedvector-1-4) () <br> |
 |   | [**MappedVector**](classsdm_1_1MappedVector.md#function-mappedvector-2-4) (T default\_value) <br> |
-|   | [**MappedVector**](classsdm_1_1MappedVector.md#function-mappedvector-3-4) (TIndex size, T default\_value) <br> |
+|   | [**MappedVector**](classsdm_1_1MappedVector.md#function-mappedvector-3-4) (std::size\_t size, T default\_value) <br> |
 |   | [**MappedVector**](classsdm_1_1MappedVector.md#function-mappedvector-4-4) (const [**MappedVector**](classsdm_1_1MappedVector.md) & v) <br> |
 | virtual TIndex | [**argmax**](classsdm_1_1MappedVector.md#function-argmax) () const<br> |
 | virtual TIndex | [**argmin**](classsdm_1_1MappedVector.md#function-argmin) () const<br> |
-| virtual T | [**at**](classsdm_1_1MappedVector.md#function-at) (TIndex) <br> |
+| virtual T | [**at**](classsdm_1_1MappedVector.md#function-at) (const TIndex &) const<br> |
 |  T | [**dot**](classsdm_1_1MappedVector.md#function-dot) (const [**MappedVector**](classsdm_1_1MappedVector.md) & v2) const<br> |
 |  T | [**getDefault**](classsdm_1_1MappedVector.md#function-getdefault) () const<br> |
+|  std::vector&lt; TIndex &gt; | [**getIndexes**](classsdm_1_1MappedVector.md#function-getindexes) () const<br> |
 | virtual T | [**max**](classsdm_1_1MappedVector.md#function-max) () const<br> |
 | virtual T | [**min**](classsdm_1_1MappedVector.md#function-min) () const<br> |
 | virtual T | [**norm\_1**](classsdm_1_1MappedVector.md#function-norm-1) () const<br> |
 | virtual T | [**norm\_2**](classsdm_1_1MappedVector.md#function-norm-2) () const<br> |
-|  bool | [**operator&lt;**](classsdm_1_1MappedVector.md#function-operator) (const [**MappedVector**](classsdm_1_1MappedVector.md) &) <br> |
+|  bool | [**operator&lt;**](classsdm_1_1MappedVector.md#function-operator) (const [**MappedVector**](classsdm_1_1MappedVector.md) &) const<br> |
 |  T | [**operator^**](classsdm_1_1MappedVector.md#function-operator-2) (const [**MappedVector**](classsdm_1_1MappedVector.md) &) const<br> |
 |  std::size\_t | [**size**](classsdm_1_1MappedVector.md#function-size) () const<br> |
 | virtual std::string | [**str**](classsdm_1_1MappedVector.md#function-str) () const<br> |
@@ -63,7 +64,7 @@ See [sdm::VectorImpl](classsdm_1_1VectorImpl.md)
 | ---: | :--- |
 | virtual I | [**argmax**](classsdm_1_1VectorImpl.md#function-argmax) () const = 0<br> |
 | virtual I | [**argmin**](classsdm_1_1VectorImpl.md#function-argmin) () const = 0<br> |
-| virtual T | [**at**](classsdm_1_1VectorImpl.md#function-at) (I) = 0<br> |
+| virtual T | [**at**](classsdm_1_1VectorImpl.md#function-at) (const I &) const = 0<br> |
 | virtual T | [**max**](classsdm_1_1VectorImpl.md#function-max) () const = 0<br> |
 | virtual T | [**min**](classsdm_1_1VectorImpl.md#function-min) () const = 0<br> |
 | virtual T | [**norm\_1**](classsdm_1_1VectorImpl.md#function-norm-1) () const = 0<br> |
@@ -81,7 +82,7 @@ See [sdm::VectorImpl](classsdm_1_1VectorImpl.md)
 | Type | Name |
 | ---: | :--- |
 |  T | [**default\_value\_**](classsdm_1_1MappedVector.md#variable-default-value-)  <br> |
-|  std::size\_t | [**size\_**](classsdm_1_1MappedVector.md#variable-size-)  <br> |
+|  std::size\_t | [**size\_**](classsdm_1_1MappedVector.md#variable-size-)   = = -1<br> |
 
 
 
@@ -140,7 +141,7 @@ sdm::MappedVector::MappedVector (
 
 ```cpp
 sdm::MappedVector::MappedVector (
-    TIndex size,
+    std::size_t size,
     T default_value
 ) 
 ```
@@ -185,8 +186,8 @@ Implements [*sdm::VectorImpl::argmin*](classsdm_1_1VectorImpl.md#function-argmin
 
 ```cpp
 virtual T sdm::MappedVector::at (
-    TIndex
-) 
+    const TIndex &
+) const
 ```
 
 
@@ -209,6 +210,15 @@ T sdm::MappedVector::dot (
 
 ```cpp
 T sdm::MappedVector::getDefault () const
+```
+
+
+
+### function getIndexes 
+
+
+```cpp
+std::vector< TIndex > sdm::MappedVector::getIndexes () const
 ```
 
 
@@ -263,7 +273,7 @@ Implements [*sdm::VectorImpl::norm\_2*](classsdm_1_1VectorImpl.md#function-norm-
 ```cpp
 bool sdm::MappedVector::operator< (
     const MappedVector &
-) 
+) const
 ```
 
 
@@ -354,4 +364,4 @@ inline friend std::ostream & sdm::MappedVector::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/linear_algebra/mapped_vector.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp`

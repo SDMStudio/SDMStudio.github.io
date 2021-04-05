@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1MDPInitializer" kind="class" language="C++" prot="public">
+    <compoundname>sdm::MDPInitializer</compoundname>
+    <basecompoundref refid="classsdm_1_1Initializer" prot="public" virt="non-virtual">sdm::Initializer&lt; TState, TAction &gt;</basecompoundref>
+    <includes refid="mdp__initializer_8hpp" local="no">mdp_initializer.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsdm_1_1MDPInitializer_1a6a98f630cfe20eef5bbf5da47d29be12" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sdm::MDPInitializer&lt; TState, TAction &gt;::algo_name_</definition>
+        <argsstring></argsstring>
+        <name>algo_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1MDPInitializer_1a1c320ef408c8807b9fa3b229352c72e1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::MDPInitializer&lt; TState, TAction &gt;::error_</definition>
+        <argsstring></argsstring>
+        <name>error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1MDPInitializer_1a3eb3c151d79272929e4db330066f0b6c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::MDPInitializer&lt; TState, TAction &gt;::trials_</definition>
+        <argsstring></argsstring>
+        <name>trials_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1MDPInitializer_1a082bb0ca23da32d02d1fa24cdd375d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MDPInitializer&lt; TState, TAction &gt;::MDPInitializer</definition>
+        <argsstring>(std::string algo_name, double error=0.01, int trials=10000)</argsstring>
+        <name>MDPInitializer</name>
+        <param>
+          <type>std::string</type>
+          <declname>algo_name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>error</declname>
+          <defval>0.01</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trials</declname>
+          <defval>10000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MDPInitializer_1a233649c5219732f5daaa3f21b27ef267" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::MDPInitializer&lt; TState, TAction &gt;::init</definition>
+        <argsstring>(ValueFunction&lt; TState, TAction &gt; *vf)</argsstring>
+        <name>init</name>
+        <reimplements refid="classsdm_1_1Initializer_1aa2971b496cd7b51b5abf0c79b5c19d9b">init</reimplements>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; *</type>
+          <declname>vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The MDP initializer enables to initialize the upper bound in <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref> with the underlying MDP optimal value function. This is a common usage in <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref> to use the solution of a relaxation of the problem in order to get a accurate upper bound (see also the class <ref refid="classsdm_1_1POMDPInitializer" kindref="compound">POMDPInitializer</ref> ). </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="392">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="391">
+        <label>sdm::MDPInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1MDPInitializer"/>
+        <childnode refid="392" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="394">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="393">
+        <label>sdm::MDPInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1MDPInitializer"/>
+        <childnode refid="394" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" line="26" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer/mdp_initializer.hpp" bodystart="25" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1MDPInitializer_1a6a98f630cfe20eef5bbf5da47d29be12" prot="public" virt="non-virtual"><scope>sdm::MDPInitializer</scope><name>algo_name_</name></member>
+      <member refid="classsdm_1_1MDPInitializer_1a1c320ef408c8807b9fa3b229352c72e1" prot="public" virt="non-virtual"><scope>sdm::MDPInitializer</scope><name>error_</name></member>
+      <member refid="classsdm_1_1MDPInitializer_1a233649c5219732f5daaa3f21b27ef267" prot="public" virt="virtual"><scope>sdm::MDPInitializer</scope><name>init</name></member>
+      <member refid="classsdm_1_1MDPInitializer_1a082bb0ca23da32d02d1fa24cdd375d5e" prot="public" virt="non-virtual"><scope>sdm::MDPInitializer</scope><name>MDPInitializer</name></member>
+      <member refid="classsdm_1_1MDPInitializer_1a3eb3c151d79272929e4db330066f0b6c" prot="public" virt="non-virtual"><scope>sdm::MDPInitializer</scope><name>trials_</name></member>
+      <member refid="classsdm_1_1Initializer_1af228ae3e3b0ba75b3e9f82b46e029136" prot="public" virt="virtual"><scope>sdm::MDPInitializer</scope><name>~Initializer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

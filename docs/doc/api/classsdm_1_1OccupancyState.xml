@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1OccupancyState" kind="class" language="C++" prot="public">
+    <compoundname>sdm::OccupancyState</compoundname>
+    <basecompoundref refid="classsdm_1_1MappedVector" prot="public" virt="non-virtual">sdm::MappedVector&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</basecompoundref>
+    <derivedcompoundref refid="classsdm_1_1SerializedOccupancyState" prot="public" virt="non-virtual">sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;</derivedcompoundref>
+    <includes refid="occupancy__state_8hpp" local="no">occupancy_state.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TState</declname>
+        <defname>TState</defname>
+        <defval><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></defval>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TJointHistory_p</declname>
+        <defname>TJointHistory_p</defname>
+        <defval><ref refid="namespacesdm_1aa5e124f3febe0e2c52f3c1c3ed35cc17" kindref="member">JointHistoryTree_p</ref>&lt;<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1OccupancyState_1ad4775d97c3ead3b8b02a069a7d453fa5" prot="public" static="no">
+        <type>TJointHistory_p</type>
+        <definition>using sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::jhistory_type =  TJointHistory_p</definition>
+        <argsstring></argsstring>
+        <name>jhistory_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1OccupancyState_1ad464428f8c617597dafd4b7b2fdd2166" prot="public" static="no">
+        <type>TState</type>
+        <definition>using sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::state_type =  TState</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1ad9a37f911686e927bfc150e814f63d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::OccupancyState</definition>
+        <argsstring>()</argsstring>
+        <name>OccupancyState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1a5084abf584d221d305a4e432d2010614" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::OccupancyState</definition>
+        <argsstring>(double default_value)</argsstring>
+        <name>OccupancyState</name>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1a5600893df42377191a73bd196ec3c468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::OccupancyState</definition>
+        <argsstring>(std::size_t size, double default_value)</argsstring>
+        <name>OccupancyState</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1a19ef810f39448053bce754166317869f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::OccupancyState</definition>
+        <argsstring>(const OccupancyState &amp;v)</argsstring>
+        <name>OccupancyState</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1OccupancyState" kindref="compound">OccupancyState</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1a2a0c58eb2a34eb1a57cbbddc4a377a2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; <ref refid="classsdm_1_1OccupancyState_1ad464428f8c617597dafd4b7b2fdd2166" kindref="member">state_type</ref> &gt;</type>
+        <definition>std::set&lt;state_type&gt; sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getStates</definition>
+        <argsstring>() const</argsstring>
+        <name>getStates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1ae116add500b36b10fd833784d48dc6f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; <ref refid="classsdm_1_1OccupancyState_1ad4775d97c3ead3b8b02a069a7d453fa5" kindref="member">jhistory_type</ref> &gt;</type>
+        <definition>std::set&lt;jhistory_type&gt; sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getJointHistories</definition>
+        <argsstring>() const</argsstring>
+        <name>getJointHistories</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1ab6830499b2a955eccd0f2dde2ba3e956" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::set&lt; typename jhistory_type::element_type::ihistory_type &gt; &gt;</type>
+        <definition>std::vector&lt;std::set&lt;typename jhistory_type::element_type::ihistory_type&gt; &gt; sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getAllIndividualHistories</definition>
+        <argsstring>() const</argsstring>
+        <name>getAllIndividualHistories</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1ad6cf516a31924aec632d6b38cae97c1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; typename jhistory_type::element_type::ihistory_type &gt;</type>
+        <definition>std::set&lt;typename jhistory_type::element_type::ihistory_type&gt; sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getIndividualHistories</definition>
+        <argsstring>(number ag_id) const</argsstring>
+        <name>getIndividualHistories</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>ag_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1af465a6d90c6d9171b6610019a3b20eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getProbability</definition>
+        <argsstring>(const Pair&lt; TState, TJointHistory_p &gt; &amp;pair_state_hist)</argsstring>
+        <name>getProbability</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" kindref="member">Pair</ref>&lt; TState, TJointHistory_p &gt; &amp;</type>
+          <declname>pair_state_hist</declname>
+        </param>
+        <briefdescription>
+<para>Return the probability of a precise occupancy state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pair_state_hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>refers to a precise occupancy state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double refers to the probability returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1ac69d5305f3e3272c09610fdb8ec3df2f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TState</type>
+        <definition>static TState sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getState</definition>
+        <argsstring>(const Pair&lt; TState, TJointHistory_p &gt; &amp;pair_state_hist)</argsstring>
+        <name>getState</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" kindref="member">Pair</ref>&lt; TState, TJointHistory_p &gt; &amp;</type>
+          <declname>pair_state_hist</declname>
+        </param>
+        <briefdescription>
+<para>Return the hidden state of a precise occupancy state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pair_state_hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>refers to a precise occupancy state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TState refers to the hidden state returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyState_1aa5ebec0388c6a6caacad076ba7f71255" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TJointHistory_p</type>
+        <definition>static TJointHistory_p sdm::OccupancyState&lt; TState, TJointHistory_p &gt;::getHistory</definition>
+        <argsstring>(const Pair&lt; TState, TJointHistory_p &gt; &amp;pair_state_hist)</argsstring>
+        <name>getHistory</name>
+        <param>
+          <type>const <ref refid="namespacesdm_1a22765c0f9b9c51c9bf84e46ff746295e" kindref="member">Pair</ref>&lt; TState, TJointHistory_p &gt; &amp;</type>
+          <declname>pair_state_hist</declname>
+        </param>
+        <briefdescription>
+<para>Return the hidden <ref refid="classsdm_1_1Joint" kindref="compound">Joint</ref> history of a precise occupancy state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pair_state_hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>refers to a precise occupancy state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TJointHistory_p refers to the hidden <ref refid="classsdm_1_1Joint" kindref="compound">Joint</ref> history returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="61" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A state of occupancy refers to a state in which all the knowledge is known by a central planner and which it relies on to make a decision. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>refers to a number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TJointHistory_p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>refers to a joint histories </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="484">
+        <label>sdm::VectorImpl&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="482">
+        <label>sdm::MappedVector&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="483" relation="public-inheritance">
+        </childnode>
+        <childnode refid="484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="483">
+        <label>std::unordered_map&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+      </node>
+      <node id="481">
+        <label>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1OccupancyState"/>
+        <childnode refid="482" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>sdm::SerializedOccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1SerializedOccupancyState"/>
+        <childnode refid="481" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="489">
+        <label>sdm::VectorImpl&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="487">
+        <label>sdm::MappedVector&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="488" relation="public-inheritance">
+        </childnode>
+        <childnode refid="489" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>std::unordered_map&lt; Pair&lt; TState, TJointHistory_p &gt;, double &gt;</label>
+      </node>
+      <node id="486">
+        <label>sdm::OccupancyState&lt; TState, TJointHistory_p &gt;</label>
+        <link refid="classsdm_1_1OccupancyState"/>
+        <childnode refid="487" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/occupancy_state.hpp" bodystart="30" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1MappedVector_1abd49e9817196371ee5fdb1b6078e07e5" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>argmax</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac50a5999b36c9e79e5e40f77371386d3" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>argmin</name></member>
+      <member refid="classsdm_1_1MappedVector_1aeede042319cd5b014764a3bbbc09208f" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>at</name></member>
+      <member refid="classsdm_1_1MappedVector_1abf4654c82755bb1ac5f4f467493a386a" prot="protected" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>default_value_</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad5dc5bcab2d58a6b8e198da61cc1b995" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>dot</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ab6830499b2a955eccd0f2dde2ba3e956" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getAllIndividualHistories</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab072a74c6d2977c78ad8d8036a3714ce" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getDefault</name></member>
+      <member refid="classsdm_1_1OccupancyState_1aa5ebec0388c6a6caacad076ba7f71255" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getHistory</name></member>
+      <member refid="classsdm_1_1MappedVector_1a7da358973f207deaf0ce4086e4986c4c" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getIndexes</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ad6cf516a31924aec632d6b38cae97c1f" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getIndividualHistories</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ae116add500b36b10fd833784d48dc6f4" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getJointHistories</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac2a3d3f154eabb04e8800f503659700e" prot="protected" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getMax</name></member>
+      <member refid="classsdm_1_1MappedVector_1af1eb71be40525bd7824b1fdf3e0efb9f" prot="protected" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getMin</name></member>
+      <member refid="classsdm_1_1OccupancyState_1af465a6d90c6d9171b6610019a3b20eed" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getProbability</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ac69d5305f3e3272c09610fdb8ec3df2f" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a2a0c58eb2a34eb1a57cbbddc4a377a2c" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>getStates</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ad4775d97c3ead3b8b02a069a7d453fa5" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>jhistory_type</name></member>
+      <member refid="classsdm_1_1MappedVector_1a72b3cae7f43436d899c9da8a8bfa240e" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae0a56f79ba91a9f440ec791b4a14da29" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ace7faa27b1ab644fb1480a45721329af" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1a0f29af90b5165693a18cabee3a5819f1" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1aff4f819256fdd7b9c191b57812fca3a8" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>max</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab932c60ef6b0c3cb7680229333be0c2e" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>min</name></member>
+      <member refid="classsdm_1_1MappedVector_1a667ed798b386ca4aadaf5c5998a34cf3" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>norm_1</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad9d78194308798445099a2fecc330293" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>norm_2</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ad9a37f911686e927bfc150e814f63d11" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a5084abf584d221d305a4e432d2010614" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a5600893df42377191a73bd196ec3c468" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1OccupancyState_1a19ef810f39448053bce754166317869f" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>OccupancyState</name></member>
+      <member refid="classsdm_1_1MappedVector_1a52e4edbdbd67b5522d2a56f531db563d" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>operator&lt;</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae64dd3cfae50798e49aa6903d73e82d4" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>operator^</name></member>
+      <member refid="classsdm_1_1MappedVector_1aa21da534045aee8330037819acc0f81b" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>size</name></member>
+      <member refid="classsdm_1_1MappedVector_1a192fe86ee506a233d165d30a8a920f7e" prot="protected" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>size_</name></member>
+      <member refid="classsdm_1_1OccupancyState_1ad464428f8c617597dafd4b7b2fdd2166" prot="public" virt="non-virtual"><scope>sdm::OccupancyState</scope><name>state_type</name></member>
+      <member refid="classsdm_1_1MappedVector_1af35decf9e63f3bedc5e7851dec30d6ff" prot="public" virt="virtual"><scope>sdm::OccupancyState</scope><name>str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

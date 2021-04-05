@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1reward__entry__1__t" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::reward_entry_1_t</compoundname>
+    <includes refid="ast_8hpp" local="no">ast.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1reward__entry__1__t_1a192ff09faf353fd7b50233781d5cd3e0" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1ast_1a97b6f04fc82cc52f30601adf9d1fb9bb" kindref="member">identifiers_t</ref></type>
+        <definition>identifiers_t sdm::ast::reward_entry_1_t::jaction</definition>
+        <argsstring></argsstring>
+        <name>jaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="109" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1reward__entry__1__t_1aaf77049ee96c95884041d8674138ff30" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1identifier__t" kindref="compound">identifier_t</ref></type>
+        <definition>identifier_t sdm::ast::reward_entry_1_t::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="110" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1reward__entry__1__t_1ab8486979d0aff6187d59f6dcbde8ed60" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sdm::ast::reward_entry_1_t::reward</definition>
+        <argsstring></argsstring>
+        <name>reward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="111" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="554">
+        <label>sdm::ast::reward_entry_1_t</label>
+        <link refid="structsdm_1_1ast_1_1reward__entry__1__t"/>
+        <childnode refid="555" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+      </node>
+      <node id="555">
+        <label>sdm::ast::identifier_t</label>
+        <link refid="structsdm_1_1ast_1_1identifier__t"/>
+        <childnode refid="556" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="556">
+        <label>boost::spirit::x3::variant&lt; std::string, unsigned short &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="108" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="108" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1ast_1_1reward__entry__1__t_1a192ff09faf353fd7b50233781d5cd3e0" prot="public" virt="non-virtual"><scope>sdm::ast::reward_entry_1_t</scope><name>jaction</name></member>
+      <member refid="structsdm_1_1ast_1_1reward__entry__1__t_1ab8486979d0aff6187d59f6dcbde8ed60" prot="public" virt="non-virtual"><scope>sdm::ast::reward_entry_1_t</scope><name>reward</name></member>
+      <member refid="structsdm_1_1ast_1_1reward__entry__1__t_1aaf77049ee96c95884041d8674138ff30" prot="public" virt="non-virtual"><scope>sdm::ast::reward_entry_1_t</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

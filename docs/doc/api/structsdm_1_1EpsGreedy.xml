@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1EpsGreedy" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::EpsGreedy</compoundname>
+    <includes refid="eps__greedy_8hpp" local="no">eps_greedy.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsdm_1_1EpsGreedy_1ab9eb678b85a381950e24bb8ce8382fee" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sdm::EpsGreedy::epsilon_start</definition>
+        <argsstring></argsstring>
+        <name>epsilon_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" line="9" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1EpsGreedy_1a17fdbd3c093b2b91dd0911381c6eaddb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sdm::EpsGreedy::epsilon_end</definition>
+        <argsstring></argsstring>
+        <name>epsilon_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" line="10" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1EpsGreedy_1a03c964d4862d095843af9dcaf8dec287" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sdm::EpsGreedy::epsilon_decay</definition>
+        <argsstring></argsstring>
+        <name>epsilon_decay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" line="11" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1EpsGreedy_1a5a456e3f495dafc4752352d38efaf400" prot="public" static="no" mutable="no">
+        <type>std::uniform_real_distribution&lt; double &gt;</type>
+        <definition>std::uniform_real_distribution&lt;double&gt; sdm::EpsGreedy::eps_distrib</definition>
+        <argsstring></argsstring>
+        <name>eps_distrib</name>
+        <initializer>= std::uniform_real_distribution&lt;double&gt;(0.0, 1.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" line="12" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1EpsGreedy_1a9951d55bc08003cac9afacf61fa2bb86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::EpsGreedy::EpsGreedy</definition>
+        <argsstring>(number eps_start, number eps_end, number eps_decay)</argsstring>
+        <name>EpsGreedy</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>eps_start</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>eps_end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>eps_decay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" line="14" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" line="8" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/eps_greedy.hpp" bodystart="7" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1EpsGreedy_1a5a456e3f495dafc4752352d38efaf400" prot="public" virt="non-virtual"><scope>sdm::EpsGreedy</scope><name>eps_distrib</name></member>
+      <member refid="structsdm_1_1EpsGreedy_1a9951d55bc08003cac9afacf61fa2bb86" prot="public" virt="non-virtual"><scope>sdm::EpsGreedy</scope><name>EpsGreedy</name></member>
+      <member refid="structsdm_1_1EpsGreedy_1a03c964d4862d095843af9dcaf8dec287" prot="public" virt="non-virtual"><scope>sdm::EpsGreedy</scope><name>epsilon_decay</name></member>
+      <member refid="structsdm_1_1EpsGreedy_1a17fdbd3c093b2b91dd0911381c6eaddb" prot="public" virt="non-virtual"><scope>sdm::EpsGreedy</scope><name>epsilon_end</name></member>
+      <member refid="structsdm_1_1EpsGreedy_1ab9eb678b85a381950e24bb8ce8382fee" prot="public" virt="non-virtual"><scope>sdm::EpsGreedy</scope><name>epsilon_start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

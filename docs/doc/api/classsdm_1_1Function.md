@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  TOutput | [**operator()**](classsdm_1_1Function.md#function-operator()) (const TInput &) <br> |
+| virtual [**output\_type**](classsdm_1_1Function.md#typedef-output-type) | [**operator()**](classsdm_1_1Function.md#function-operator()) (const [**input\_type**](classsdm_1_1Function.md#typedef-input-type) &) = 0<br> |
 
 
 
@@ -74,12 +74,12 @@ using sdm::Function< TInput, TOutput >::output_type =  TOutput;
 
 
 ```cpp
-TOutput sdm::Function::operator() (
-    const TInput &
-) 
+virtual output_type sdm::Function::operator() (
+    const input_type &
+) = 0
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/function.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp`

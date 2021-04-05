@@ -1,0 +1,506 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1OccupancyMDP" kind="class" language="C++" prot="public">
+    <compoundname>sdm::OccupancyMDP</compoundname>
+    <basecompoundref refid="classsdm_1_1SolvableByHSVI" prot="public" virt="non-virtual">sdm::SolvableByHSVI&lt; oState, oAction &gt;</basecompoundref>
+    <includes refid="occupancy__mdp_8hpp" local="no">occupancy_mdp.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>oState</declname>
+        <defname>oState</defname>
+        <defval><ref refid="classsdm_1_1OccupancyState" kindref="compound">OccupancyState</ref>&lt;<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, <ref refid="namespacesdm_1aa5e124f3febe0e2c52f3c1c3ed35cc17" kindref="member">JointHistoryTree_p</ref>&lt;<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>&gt;&gt;</defval>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>oAction</declname>
+        <defname>oAction</defname>
+        <defval><ref refid="classsdm_1_1Joint" kindref="compound">Joint</ref>&lt;<ref refid="classsdm_1_1DeterministicDecisionRule" kindref="compound">DeterministicDecisionRule</ref>&lt;<ref refid="namespacesdm_1a3d3c69f530ed43dd592eb54bffdf7699" kindref="member">HistoryTree_p</ref>&lt;<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>&gt;, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>&gt;&gt;</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1OccupancyMDP_1af7885454f91f4272ce06596b8f4bdb96" prot="public" static="no">
+        <type>oState</type>
+        <definition>using sdm::OccupancyMDP&lt; oState, oAction &gt;::state_type =  oState</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="50" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1OccupancyMDP_1a17aecd185602ec8b3ebab1389e2b96a9" prot="public" static="no">
+        <type>oAction</type>
+        <definition>using sdm::OccupancyMDP&lt; oState, oAction &gt;::action_type =  oAction</definition>
+        <argsstring></argsstring>
+        <name>action_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="51" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1OccupancyMDP_1ab6bc2dfc65b80efd20617ef2c568917b" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;DiscreteDecPOMDP&gt; sdm::OccupancyMDP&lt; oState, oAction &gt;::dpomdp_</definition>
+        <argsstring></argsstring>
+        <name>dpomdp_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="45" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1OccupancyMDP_1af0dc14a0ae2752518e9a5ee80c7eed6d" prot="protected" static="no" mutable="no">
+        <type>oState</type>
+        <definition>oState sdm::OccupancyMDP&lt; oState, oAction &gt;::istate_</definition>
+        <argsstring></argsstring>
+        <name>istate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="46" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1OccupancyMDP_1a0e39a5558012a50b09d86d1e7219c8d7" prot="protected" static="no" mutable="no">
+        <type>oState</type>
+        <definition>oState sdm::OccupancyMDP&lt; oState, oAction &gt;::cstate_</definition>
+        <argsstring></argsstring>
+        <name>cstate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a864de8c28f9ded59f9b88f80f1d303ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyMDP&lt; oState, oAction &gt;::OccupancyMDP</definition>
+        <argsstring>()</argsstring>
+        <name>OccupancyMDP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a0a4ec6f86a764622523a0f907219dc63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyMDP&lt; oState, oAction &gt;::OccupancyMDP</definition>
+        <argsstring>(std::shared_ptr&lt; DiscreteDecPOMDP &gt; underlying_dpomdp)</argsstring>
+        <name>OccupancyMDP</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref> &gt;</type>
+          <declname>underlying_dpomdp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1af83434d52807fc8744b35131e9bc0b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyMDP&lt; oState, oAction &gt;::OccupancyMDP</definition>
+        <argsstring>(std::shared_ptr&lt; DiscreteDecPOMDP &gt; underlying_dpomdp, number hist_length)</argsstring>
+        <name>OccupancyMDP</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref> &gt;</type>
+          <declname>underlying_dpomdp</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>hist_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a1b5fb5d1d6b546956318ac77a15e90b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyMDP&lt; oState, oAction &gt;::OccupancyMDP</definition>
+        <argsstring>(std::string underlying_dpomdp)</argsstring>
+        <name>OccupancyMDP</name>
+        <param>
+          <type>std::string</type>
+          <declname>underlying_dpomdp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1aff798f5da3cfe59f112d324da0188097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::OccupancyMDP&lt; oState, oAction &gt;::OccupancyMDP</definition>
+        <argsstring>(std::string underlying_dpomdp, number hist_length)</argsstring>
+        <name>OccupancyMDP</name>
+        <param>
+          <type>std::string</type>
+          <declname>underlying_dpomdp</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>hist_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a818cec7fdd5d40da54deddddaba80ffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>oState &amp;</type>
+        <definition>oState&amp; sdm::OccupancyMDP&lt; oState, oAction &gt;::getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1af1129f27c535040f6b12258e4190fa6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool sdm::OccupancyMDP&lt; oState, oAction &gt;::isSerialized</definition>
+        <argsstring>() const</argsstring>
+        <name>isSerialized</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1aa99d7d6e88cbf175137ca5c4412f0d12">isSerialized</reimplements>
+        <briefdescription>
+<para>Check if the problem is serialized. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the problem is serialized. </para></simplesect>
+<simplesect kind="return"><para>false if the problem is not serialized. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1aff2cc4862ab63c1f41ec740fd2c61c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref> *</type>
+        <definition>DiscreteDecPOMDP* sdm::OccupancyMDP&lt; oState, oAction &gt;::getUnderlyingProblem</definition>
+        <argsstring>()</argsstring>
+        <name>getUnderlyingProblem</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1a55a1920c31c0b74fa1edc954190ab820">getUnderlyingProblem</reimplements>
+        <briefdescription>
+<para>Get the underlying problem. For instance the underlying DecPOMDP of the <ref refid="classsdm_1_1OccupancyMDP" kindref="compound">OccupancyMDP</ref> or the underlying POMDP of the current <ref refid="classsdm_1_1BeliefMDP" kindref="compound">BeliefMDP</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the underlying problem </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a06dcea9376c769ee86ec25c7220372fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>oState</type>
+        <definition>oState sdm::OccupancyMDP&lt; oState, oAction &gt;::getInitialState</definition>
+        <argsstring>()</argsstring>
+        <name>getInitialState</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1ac0a1fff056c61d42da7fe9aad571771d">getInitialState</reimplements>
+        <briefdescription>
+<para>Get the initial state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1ab5e5b453076ed6ad60ff2654f3d2fcd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>oState</type>
+        <definition>oState sdm::OccupancyMDP&lt; oState, oAction &gt;::nextState</definition>
+        <argsstring>(const oState &amp;ostate, const oAction &amp;oaction, int t=0, HSVI&lt; oState, oAction &gt; *hsvi=nullptr) const</argsstring>
+        <name>nextState</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1a6c4d6cfdb1211ed8a0a8a591f96cb551">nextState</reimplements>
+        <param>
+          <type>const oState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const oAction &amp;</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref>&lt; oState, oAction &gt; *</type>
+          <declname>hsvi</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Get the next occupancy state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the occupancy state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timestep </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hsvi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer on the algorithm that makes the call </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the next occupancy state </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a701d5238ba576659783b971c1999f70a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; oAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;DiscreteSpace&lt;oAction&gt; &gt; sdm::OccupancyMDP&lt; oState, oAction &gt;::getActionSpaceAt</definition>
+        <argsstring>(const oState &amp;)</argsstring>
+        <name>getActionSpaceAt</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1a0534ed754224f9b7bc87edb08ba62d6a">getActionSpaceAt</reimplements>
+        <param>
+          <type>const oState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Get the actions availables at a specific state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the action space </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1af338f34008cfbf1c26c0c9c76b0a12fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double sdm::OccupancyMDP&lt; oState, oAction &gt;::getReward</definition>
+        <argsstring>(const oState &amp;ostate, const oAction &amp;oaction) const</argsstring>
+        <name>getReward</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1a02c997720580a7c9c49784addf3ffee0">getReward</reimplements>
+        <param>
+          <type>const oState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const oAction &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Get the reward at a given occupancy state and occupancy action. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a1ca580d4bfc44d8f1e89253db12fc767" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double sdm::OccupancyMDP&lt; oState, oAction &gt;::getExpectedNextValue</definition>
+        <argsstring>(ValueFunction&lt; oState, oAction &gt; *value_function, const oState &amp;ostate, const oAction &amp;oaction, int t=0) const</argsstring>
+        <name>getExpectedNextValue</name>
+        <reimplements refid="classsdm_1_1SolvableByHSVI_1a8ef08843154d1145054256bd981a5b0b">getExpectedNextValue</reimplements>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; oState, oAction &gt; *</type>
+          <declname>value_function</declname>
+        </param>
+        <param>
+          <type>const oState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const oAction &amp;</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Get the expected next value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value_function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer on the value function to use to perform the calculus. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state on which to evaluate the next expected value * </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1aff914796a135a8966be3252c0aa96309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1DiscreteMDP" kindref="compound">DiscreteMDP</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;DiscreteMDP&gt; sdm::OccupancyMDP&lt; oState, oAction &gt;::toMDP</definition>
+        <argsstring>()</argsstring>
+        <name>toMDP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1OccupancyMDP_1a3e0b36a6b6c11336478fe294b35a1680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1BeliefMDP" kindref="compound">BeliefMDP</ref>&lt; <ref refid="namespacesdm_1a0f879b55491e973a5c14fb31452c9a3f" kindref="member">BeliefState</ref>, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;BeliefMDP&lt;BeliefState, number, number&gt; &gt; sdm::OccupancyMDP&lt; oState, oAction &gt;::toBeliefMDP</definition>
+        <argsstring>()</argsstring>
+        <name>toBeliefMDP</name>
+        <briefdescription>
+<para>Get the corresponding Belief Markov Decision Process. Unfortunately, in this situation it isn&apos;t possible to transform a MMDP to a belief MDP. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a belief MDP </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An occupancy MDP is a subclass of continuous state MDP where states are occupancy states. In the general case, an occupancy state refers to the whole knowledge that a central planner can have access to take decisions. But in this implementation we call occupancy state are distribution over state and joint histories . </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>oState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the occupancy state type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the occupancy action type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="477">
+        <label>sdm::OccupancyMDP&lt; oState, oAction &gt;</label>
+        <link refid="classsdm_1_1OccupancyMDP"/>
+        <childnode refid="478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>sdm::SolvableByHSVI&lt; oState, oAction &gt;</label>
+        <link refid="classsdm_1_1SolvableByHSVI"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="479">
+        <label>sdm::OccupancyMDP&lt; oState, oAction &gt;</label>
+        <link refid="classsdm_1_1OccupancyMDP"/>
+        <childnode refid="480" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>sdm::SolvableByHSVI&lt; oState, oAction &gt;</label>
+        <link refid="classsdm_1_1SolvableByHSVI"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" line="43" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/occupancy_mdp.hpp" bodystart="42" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1OccupancyMDP_1a17aecd185602ec8b3ebab1389e2b96a9" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>action_type</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a0e39a5558012a50b09d86d1e7219c8d7" prot="protected" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>cstate_</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1ab6bc2dfc65b80efd20617ef2c568917b" prot="protected" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>dpomdp_</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a701d5238ba576659783b971c1999f70a" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>getActionSpaceAt</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a1ca580d4bfc44d8f1e89253db12fc767" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>getExpectedNextValue</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a06dcea9376c769ee86ec25c7220372fc" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>getInitialState</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1af338f34008cfbf1c26c0c9c76b0a12fe" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>getReward</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a818cec7fdd5d40da54deddddaba80ffa" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>getState</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1aff2cc4862ab63c1f41ec740fd2c61c45" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>getUnderlyingProblem</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1af1129f27c535040f6b12258e4190fa6f" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>isSerialized</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1af0dc14a0ae2752518e9a5ee80c7eed6d" prot="protected" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>istate_</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1ab5e5b453076ed6ad60ff2654f3d2fcd5" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>nextState</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a864de8c28f9ded59f9b88f80f1d303ea" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>OccupancyMDP</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a0a4ec6f86a764622523a0f907219dc63" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>OccupancyMDP</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1af83434d52807fc8744b35131e9bc0b30" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>OccupancyMDP</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a1b5fb5d1d6b546956318ac77a15e90b2" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>OccupancyMDP</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1aff798f5da3cfe59f112d324da0188097" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>OccupancyMDP</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1af7885454f91f4272ce06596b8f4bdb96" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>state_type</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1a3e0b36a6b6c11336478fe294b35a1680" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>toBeliefMDP</name></member>
+      <member refid="classsdm_1_1OccupancyMDP_1aff914796a135a8966be3252c0aa96309" prot="public" virt="non-virtual"><scope>sdm::OccupancyMDP</scope><name>toMDP</name></member>
+      <member refid="classsdm_1_1SolvableByHSVI_1a83b0c3e1bff936e75cc312575fb6538e" prot="public" virt="virtual"><scope>sdm::OccupancyMDP</scope><name>~SolvableByHSVI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

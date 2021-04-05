@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacestd" kind="namespace" language="C++">
+    <compoundname>std</compoundname>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1BaseBeliefState_3_01TState_01_4_01_4" prot="public">std::hash&lt; sdm::BaseBeliefState&lt; TState &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4" prot="public">std::hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1Joint_3_01T_01_4_01_4" prot="public">std::hash&lt; sdm::Joint&lt; T &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4" prot="public">std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1OccupancyState_3_01S_00_01V_01_4_01_4" prot="public">std::hash&lt; sdm::OccupancyState&lt; S, V &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1Pair_3_01T_00_01U_01_4_01_4" prot="public">std::hash&lt; sdm::Pair&lt; T, U &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1SerializedOccupancyState_3_01S_00_01V_01_4_01_4" prot="public">std::hash&lt; sdm::SerializedOccupancyState&lt; S, V &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1SerializedState_01_4" prot="public">std::hash&lt; sdm::SerializedState &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01sdm_1_1Tuple_3_01TT_8_8_8_01_4_01_4" prot="public">std::hash&lt; sdm::Tuple&lt; TT... &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01std_1_1vector_3_01T_01_4_01_4" prot="public">std::hash&lt; std::vector&lt; T &gt; &gt;</innerclass>
+    <innerclass refid="structstd_1_1is__any" prot="public">std::is_any</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/joint.hpp" line="91" column="1"/>
+  </compounddef>
+</doxygen>

@@ -29,7 +29,7 @@ _A set a tools for SDMS platform._ [More...](#detailed-description)
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
-| namespace | [**tools**](namespacesdm_1_1tools.md) <br> |
+| namespace | [**tools**](namespacesdm_1_1tools.md) <br>_Namespace grouping other tools._  |
 
 
 
@@ -80,4 +80,4 @@ Copyright (c) 2020
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/tools.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.hpp`

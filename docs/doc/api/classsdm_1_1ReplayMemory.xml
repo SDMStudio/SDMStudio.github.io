@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ReplayMemory" kind="class" language="C++" prot="public">
+    <compoundname>sdm::ReplayMemory</compoundname>
+    <includes refid="replay__memory_8hpp" local="no">replay_memory.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1ReplayMemory_1ad4c33b2411936d69e06b7d082a270dfa" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::ReplayMemory::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="26" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ReplayMemory_1ac2fdd8b75068d8b52c76617282e96715" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacesdm_1aee830b8adc29011828a9a330a8ed5b2f" kindref="member">sars_transition</ref> &gt;</type>
+        <definition>std::vector&lt;sars_transition&gt; sdm::ReplayMemory::memory</definition>
+        <argsstring></argsstring>
+        <name>memory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="27" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ReplayMemory_1abf98dd37eb81dfc1b94c9d8e60f4b13a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::ReplayMemory::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1ReplayMemory_1ae6d2dbba41cf5f7700fac2b5335814ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::ReplayMemory::ReplayMemory</definition>
+        <argsstring>(int capacity)</argsstring>
+        <name>ReplayMemory</name>
+        <param>
+          <type>int</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ReplayMemory_1ae30e1d0ecc9861717a03241f0d06b20f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::ReplayMemory::push</definition>
+        <argsstring>(sars_transition t)</argsstring>
+        <name>push</name>
+        <param>
+          <type><ref refid="namespacesdm_1aee830b8adc29011828a9a330a8ed5b2f" kindref="member">sars_transition</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="37" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ReplayMemory_1a2c5ab925ddc264682ecd3ad57a121b2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacesdm_1aee830b8adc29011828a9a330a8ed5b2f" kindref="member">sars_transition</ref> &gt;</type>
+        <definition>std::vector&lt;sars_transition&gt; sdm::ReplayMemory::sample</definition>
+        <argsstring>(int n)</argsstring>
+        <name>sample</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ReplayMemory_1ac3f277cb9e7c11bb558f382eebd44a4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int sdm::ReplayMemory::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="54" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" line="24" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp" bodystart="23" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ReplayMemory_1ad4c33b2411936d69e06b7d082a270dfa" prot="protected" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>capacity</name></member>
+      <member refid="classsdm_1_1ReplayMemory_1ac2fdd8b75068d8b52c76617282e96715" prot="protected" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>memory</name></member>
+      <member refid="classsdm_1_1ReplayMemory_1abf98dd37eb81dfc1b94c9d8e60f4b13a" prot="protected" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>position</name></member>
+      <member refid="classsdm_1_1ReplayMemory_1ae30e1d0ecc9861717a03241f0d06b20f" prot="public" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>push</name></member>
+      <member refid="classsdm_1_1ReplayMemory_1ae6d2dbba41cf5f7700fac2b5335814ea" prot="public" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>ReplayMemory</name></member>
+      <member refid="classsdm_1_1ReplayMemory_1a2c5ab925ddc264682ecd3ad57a121b2b" prot="public" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>sample</name></member>
+      <member refid="classsdm_1_1ReplayMemory_1ac3f277cb9e7c11bb558f382eebd44a4e" prot="public" virt="non-virtual"><scope>sdm::ReplayMemory</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

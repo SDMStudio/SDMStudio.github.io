@@ -12,9 +12,11 @@ _HSVI algorithm._ [More...](#detailed-description)
 
 * `#include <string>`
 * `#include <sdm/types.hpp>`
-* `#include <sdm/world/posg.hpp>`
-* `#include <sdm/utils/value_function/value_function.hpp>`
+* `#include <sdm/public/algorithm.hpp>`
 * `#include <sdm/core/state/state.hpp>`
+* `#include <sdm/utils/value_function/value_function.hpp>`
+* `#include <sdm/utils/logging/logger.hpp>`
+* `#include <sdm/algorithms/hsvi.tpp>`
 
 
 
@@ -84,4 +86,4 @@ Copyright (c) 2020
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/algorithms/hsvi.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp`

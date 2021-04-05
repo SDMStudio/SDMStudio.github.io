@@ -16,9 +16,34 @@ _This class is the abstract class of value function. All value function must der
 
 
 
+Inherits the following classes: [sdm::BinaryFunction](classsdm_1_1BinaryFunction.md)
 
 
 Inherited by the following classes: [sdm::TabularValueFunction](classsdm_1_1TabularValueFunction.md)
+
+
+
+
+
+
+
+## Public Types inherited from sdm::BinaryFunction
+
+See [sdm::BinaryFunction](classsdm_1_1BinaryFunction.md)
+
+| Type | Name |
+| ---: | :--- |
+| typedef std::pair&lt; TInput1, TInput2 &gt; | [**input\_type**](classsdm_1_1BinaryFunction.md#typedef-input-type)  <br> |
+| typedef TOutput | [**output\_type**](classsdm_1_1BinaryFunction.md#typedef-output-type)  <br> |
+
+## Public Types inherited from sdm::Function
+
+See [sdm::Function](classsdm_1_1Function.md)
+
+| Type | Name |
+| ---: | :--- |
+| typedef TInput | [**input\_type**](classsdm_1_1Function.md#typedef-input-type)  <br> |
+| typedef TOutput | [**output\_type**](classsdm_1_1Function.md#typedef-output-type)  <br> |
 
 
 
@@ -33,19 +58,48 @@ Inherited by the following classes: [sdm::TabularValueFunction](classsdm_1_1Tabu
 
 | Type | Name |
 | ---: | :--- |
-|   | [**ValueFunction**](classsdm_1_1ValueFunction.md#function-valuefunction) (std::shared\_ptr&lt; [**POSG**](classsdm_1_1POSG.md) &gt; problem, int horizon) <br>_Construct a new Incremental Value_ [_**Function**_](classsdm_1_1Function.md) _object._ |
-| virtual TAction | [**getBestAction**](classsdm_1_1ValueFunction.md#function-getbestaction) (TState & state, int t=0) = 0<br>_Get the next action to do._  |
+|   | [**ValueFunction**](classsdm_1_1ValueFunction.md#function-valuefunction) (std::shared\_ptr&lt; [**SolvableByHSVI**](classsdm_1_1SolvableByHSVI.md)&lt; TState, TAction &gt;&gt; problem, [**number**](namespacesdm.md#typedef-number) horizon) <br>_Construct a new Incremental Value_ [_**Function**_](classsdm_1_1Function.md) _object._ |
+|  TAction | [**getBestAction**](classsdm_1_1ValueFunction.md#function-getbestaction) (const TState & state, [**number**](namespacesdm.md#typedef-number) t=0) <br>_Get the best action to do at a state._  |
+|  double | [**getDiscount**](classsdm_1_1ValueFunction.md#function-getdiscount) ([**number**](namespacesdm.md#typedef-number) t) <br>_Get the discount factor. If the problem is serialized then the discount factor is equal to one for every timestep except the one where agent $n$ take an action._  |
 |  int | [**getHorizon**](classsdm_1_1ValueFunction.md#function-gethorizon) () const<br> |
-| virtual std::shared\_ptr&lt; [**VectorImpl**](classsdm_1_1VectorImpl.md)&lt; TAction, TValue &gt; &gt; | [**getQValueAt**](classsdm_1_1ValueFunction.md#function-getqvalueat-1-2) (TState & state, int t=0) = 0<br>_Get the q value on a state._  |
-| virtual TValue | [**getQValueAt**](classsdm_1_1ValueFunction.md#function-getqvalueat-2-2) (TState & state, TAction & action, int t=0) = 0<br>_Get the q value on one couple (state, action)_  |
-| virtual TValue | [**getValueAt**](classsdm_1_1ValueFunction.md#function-getvalueat) (TState & state, int t=0) = 0<br>_Get the value of the function on one point._  |
-|  std::shared\_ptr&lt; [**POSG**](classsdm_1_1POSG.md) &gt; | [**getWorld**](classsdm_1_1ValueFunction.md#function-getworld) () <br> |
-| virtual void | [**initialize**](classsdm_1_1ValueFunction.md#function-initialize-1-2) () = 0<br>_Initialize the value function._  |
-| virtual void | [**initialize**](classsdm_1_1ValueFunction.md#function-initialize-2-2) (TValue v, int t=0) = 0<br>_Initialize the value function._  |
-|  int | [**isFiniteHorizon**](classsdm_1_1ValueFunction.md#function-isfinitehorizon) () const<br> |
-|  int | [**isInfiniteHorizon**](classsdm_1_1ValueFunction.md#function-isinfinitehorizon) () const<br> |
-| virtual std::string | [**str**](classsdm_1_1ValueFunction.md#function-str) () = 0<br> |
-| virtual void | [**updateValueAt**](classsdm_1_1ValueFunction.md#function-updatevalueat) (TState & s, int t=0) = 0<br> |
+|  std::shared\_ptr&lt; [**BinaryFunction**](classsdm_1_1BinaryFunction.md)&lt; TState, [**number**](namespacesdm.md#typedef-number), TValue &gt; &gt; | [**getInitFunction**](classsdm_1_1ValueFunction.md#function-getinitfunction) () <br> |
+|  std::shared\_ptr&lt; [**VectorImpl**](classsdm_1_1VectorImpl.md)&lt; TAction, TValue &gt; &gt; | [**getQValueAt**](classsdm_1_1ValueFunction.md#function-getqvalueat-1-2) (const TState & state, [**number**](namespacesdm.md#typedef-number) t) <br>_Get the q-value at a state._  |
+|  TValue | [**getQValueAt**](classsdm_1_1ValueFunction.md#function-getqvalueat-2-2) (const TState & state, const TAction & action, [**number**](namespacesdm.md#typedef-number) t) <br>_Get the q-value given state and action._  |
+| virtual std::vector&lt; TState &gt; | [**getSupport**](classsdm_1_1ValueFunction.md#function-getsupport) ([**number**](namespacesdm.md#typedef-number) t) = 0<br> |
+| virtual TValue | [**getValueAt**](classsdm_1_1ValueFunction.md#function-getvalueat) (const TState & state, [**number**](namespacesdm.md#typedef-number) t=0) = 0<br>_Get the value at a given state._  |
+|  std::shared\_ptr&lt; [**SolvableByHSVI**](classsdm_1_1SolvableByHSVI.md)&lt; TState, TAction &gt; &gt; | [**getWorld**](classsdm_1_1ValueFunction.md#function-getworld) () <br>_Get the world (i.e. the problem that is solve by_ [_**HSVI**_](classsdm_1_1HSVI.md) _)._ |
+| virtual void | [**initialize**](classsdm_1_1ValueFunction.md#function-initialize-1-3) () = 0<br>_Initialize the value function._  |
+| virtual void | [**initialize**](classsdm_1_1ValueFunction.md#function-initialize-2-3) (TValue v, [**number**](namespacesdm.md#typedef-number) t=0) = 0<br>_Initialize the value function with a default value._  |
+|  void | [**initialize**](classsdm_1_1ValueFunction.md#function-initialize-3-3) (std::shared\_ptr&lt; [**BinaryFunction**](classsdm_1_1BinaryFunction.md)&lt; TState, [**number**](namespacesdm.md#typedef-number), TValue &gt;&gt; init\_function) <br>_Set a function as a interactive way to get initial values for state that are not already initialized._  |
+|  bool | [**isFiniteHorizon**](classsdm_1_1ValueFunction.md#function-isfinitehorizon) () const<br> |
+|  bool | [**isInfiniteHorizon**](classsdm_1_1ValueFunction.md#function-isinfinitehorizon) () const<br> |
+| virtual TValue | [**operator()**](classsdm_1_1ValueFunction.md#function-operator()) (const TState & state, const [**number**](namespacesdm.md#typedef-number) & t=0) <br> |
+| virtual std::string | [**str**](classsdm_1_1ValueFunction.md#function-str) () = 0<br>_Define this function in order to be able to display the value function._  |
+| virtual void | [**updateValueAt**](classsdm_1_1ValueFunction.md#function-updatevalueat) (const TState & s, [**number**](namespacesdm.md#typedef-number) t=0) = 0<br>_Update the value at a given state._  |
+| virtual  | [**~ValueFunction**](classsdm_1_1ValueFunction.md#function-valuefunction) () <br>_Destroy the value function._  |
+
+## Public Functions inherited from sdm::BinaryFunction
+
+See [sdm::BinaryFunction](classsdm_1_1BinaryFunction.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual [**output\_type**](classsdm_1_1BinaryFunction.md#typedef-output-type) | [**operator()**](classsdm_1_1BinaryFunction.md#function-operator()-1-2) (const TInput1 &, const TInput2 &) = 0<br> |
+| virtual [**output\_type**](classsdm_1_1BinaryFunction.md#typedef-output-type) | [**operator()**](classsdm_1_1BinaryFunction.md#function-operator()-2-2) (const [**input\_type**](classsdm_1_1BinaryFunction.md#typedef-input-type) & p\_input) <br> |
+
+## Public Functions inherited from sdm::Function
+
+See [sdm::Function](classsdm_1_1Function.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual [**output\_type**](classsdm_1_1Function.md#typedef-output-type) | [**operator()**](classsdm_1_1Function.md#function-operator()) (const [**input\_type**](classsdm_1_1Function.md#typedef-input-type) &) = 0<br> |
+
+
+
+
+
+
 
 
 
@@ -55,7 +109,16 @@ Inherited by the following classes: [sdm::TabularValueFunction](classsdm_1_1Tabu
 | Type | Name |
 | ---: | :--- |
 |  int | [**horizon\_**](classsdm_1_1ValueFunction.md#variable-horizon-)  <br>_The horizon for planning._  |
-|  std::shared\_ptr&lt; [**POSG**](classsdm_1_1POSG.md) &gt; | [**problem\_**](classsdm_1_1ValueFunction.md#variable-problem-)  <br>_The problem which incremental value function is evaluated._  |
+|  std::shared\_ptr&lt; [**BinaryFunction**](classsdm_1_1BinaryFunction.md)&lt; TState, [**number**](namespacesdm.md#typedef-number), TValue &gt; &gt; | [**init\_function\_**](classsdm_1_1ValueFunction.md#variable-init-function-)   = = nullptr<br>_Initialization function. If defined, algorithms on value functions will get inital values using this function._  |
+|  std::shared\_ptr&lt; [**SolvableByHSVI**](classsdm_1_1SolvableByHSVI.md)&lt; TState, TAction &gt; &gt; | [**problem\_**](classsdm_1_1ValueFunction.md#variable-problem-)  <br>_The problem which incremental value function is evaluated._  |
+
+
+
+
+
+
+
+
 
 
 
@@ -82,9 +145,9 @@ Inherited by the following classes: [sdm::TabularValueFunction](classsdm_1_1Tabu
 
 
 ```cpp
-inline sdm::ValueFunction::ValueFunction (
-    std::shared_ptr< POSG > problem,
-    int horizon
+sdm::ValueFunction::ValueFunction (
+    std::shared_ptr< SolvableByHSVI < TState, TAction >> problem,
+    number horizon
 ) 
 ```
 
@@ -105,10 +168,10 @@ inline sdm::ValueFunction::ValueFunction (
 
 
 ```cpp
-virtual TAction sdm::ValueFunction::getBestAction (
-    TState & state,
-    int t=0
-) = 0
+TAction sdm::ValueFunction::getBestAction (
+    const TState & state,
+    number t=0
+) 
 ```
 
 
@@ -117,13 +180,41 @@ virtual TAction sdm::ValueFunction::getBestAction (
 **Parameters:**
 
 
-* `state` The point where we want the best action 
+* `state` the state 
 
 
 
 **Returns:**
 
-The next action 
+the best action 
+
+
+
+
+        
+
+### function getDiscount 
+
+
+```cpp
+double sdm::ValueFunction::getDiscount (
+    number t
+) 
+```
+
+
+
+
+**Parameters:**
+
+
+* `t` the timestep 
+
+
+
+**Returns:**
+
+double the discount factor 
 
 
 
@@ -134,7 +225,16 @@ The next action
 
 
 ```cpp
-inline int sdm::ValueFunction::getHorizon () const
+int sdm::ValueFunction::getHorizon () const
+```
+
+
+
+### function getInitFunction 
+
+
+```cpp
+std::shared_ptr< BinaryFunction < TState, number , TValue > > sdm::ValueFunction::getInitFunction () 
 ```
 
 
@@ -143,10 +243,10 @@ inline int sdm::ValueFunction::getHorizon () const
 
 
 ```cpp
-virtual std::shared_ptr< VectorImpl < TAction, TValue > > sdm::ValueFunction::getQValueAt (
-    TState & state,
-    int t=0
-) = 0
+std::shared_ptr< VectorImpl < TAction, TValue > > sdm::ValueFunction::getQValueAt (
+    const TState & state,
+    number t
+) 
 ```
 
 
@@ -155,13 +255,13 @@ virtual std::shared_ptr< VectorImpl < TAction, TValue > > sdm::ValueFunction::ge
 **Parameters:**
 
 
-* `state` The state where we want to evaluate q-value 
+* `state` the state 
 
 
 
 **Returns:**
 
-The Q Value at this state 
+the action value vector 
 
 
 
@@ -172,11 +272,11 @@ The Q Value at this state
 
 
 ```cpp
-virtual TValue sdm::ValueFunction::getQValueAt (
-    TState & state,
-    TAction & action,
-    int t=0
-) = 0
+TValue sdm::ValueFunction::getQValueAt (
+    const TState & state,
+    const TAction & action,
+    number t
+) 
 ```
 
 
@@ -185,14 +285,35 @@ virtual TValue sdm::ValueFunction::getQValueAt (
 **Parameters:**
 
 
-* `state` The state where we want the value 
-* `action` The action where we want the value 
+* `state` the state 
+* `action` the action 
 
 
 
 **Returns:**
 
-The Q Value 
+the q-value 
+
+
+
+
+        
+
+### function getSupport 
+
+
+```cpp
+virtual std::vector< TState > sdm::ValueFunction::getSupport (
+    number t
+) = 0
+```
+
+
+
+
+**Returns:**
+
+std::string 
 
 
 
@@ -204,40 +325,33 @@ The Q Value
 
 ```cpp
 virtual TValue sdm::ValueFunction::getValueAt (
-    TState & state,
-    int t=0
+    const TState & state,
+    number t=0
 ) = 0
 ```
 
 
 
+### function getWorld 
 
-**Parameters:**
 
+```cpp
+std::shared_ptr< SolvableByHSVI < TState, TAction > > sdm::ValueFunction::getWorld () 
+```
 
-* `state` The point where we want the value 
 
 
 
 **Returns:**
 
-The value of the bound on that point 
+the world 
 
 
 
 
         
 
-### function getWorld 
-
-
-```cpp
-inline std::shared_ptr< POSG > sdm::ValueFunction::getWorld () 
-```
-
-
-
-### function initialize [1/2]
+### function initialize [1/3]
 
 
 ```cpp
@@ -246,23 +360,44 @@ virtual void sdm::ValueFunction::initialize () = 0
 
 
 
-### function initialize [2/2]
+### function initialize [2/3]
 
 
 ```cpp
 virtual void sdm::ValueFunction::initialize (
     TValue v,
-    int t=0
+    number t=0
 ) = 0
 ```
 
 
 
+### function initialize [3/3]
+
+
+```cpp
+void sdm::ValueFunction::initialize (
+    std::shared_ptr< BinaryFunction < TState, number , TValue >> init_function
+) 
+```
+
+
+
+
+**Parameters:**
+
+
+* `init_function` the function that enables to get initial values 
+
+
+
+        
+
 ### function isFiniteHorizon 
 
 
 ```cpp
-inline int sdm::ValueFunction::isFiniteHorizon () const
+bool sdm::ValueFunction::isFiniteHorizon () const
 ```
 
 
@@ -271,9 +406,23 @@ inline int sdm::ValueFunction::isFiniteHorizon () const
 
 
 ```cpp
-inline int sdm::ValueFunction::isInfiniteHorizon () const
+bool sdm::ValueFunction::isInfiniteHorizon () const
 ```
 
+
+
+### function operator() 
+
+
+```cpp
+virtual TValue sdm::ValueFunction::operator() (
+    const TState & state,
+    const number & t=0
+) 
+```
+
+
+Implements [*sdm::BinaryFunction::operator()*](classsdm_1_1BinaryFunction.md#function-operator()-1-2)
 
 
 ### function str 
@@ -290,9 +439,18 @@ virtual std::string sdm::ValueFunction::str () = 0
 
 ```cpp
 virtual void sdm::ValueFunction::updateValueAt (
-    TState & s,
-    int t=0
+    const TState & s,
+    number t=0
 ) = 0
+```
+
+
+
+### function ~ValueFunction 
+
+
+```cpp
+inline virtual sdm::ValueFunction::~ValueFunction () 
 ```
 
 
@@ -308,11 +466,20 @@ int sdm::ValueFunction< TState, TAction, TValue >::horizon_;
 
 
 
+### variable init\_function\_ 
+
+
+```cpp
+std::shared_ptr<BinaryFunction<TState, number, TValue> > sdm::ValueFunction< TState, TAction, TValue >::init_function_;
+```
+
+
+
 ### variable problem\_ 
 
 
 ```cpp
-std::shared_ptr<POSG> sdm::ValueFunction< TState, TAction, TValue >::problem_;
+std::shared_ptr<SolvableByHSVI<TState, TAction> > sdm::ValueFunction< TState, TAction, TValue >::problem_;
 ```
 
 ## Friends Documentation
@@ -332,4 +499,4 @@ inline friend std::ostream & sdm::ValueFunction::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/value_function/value_function.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp`

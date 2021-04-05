@@ -17,6 +17,7 @@ Copyright (c) 2016 Jilles Steeve Dibangoye, Olivier Buffet, Charles Bessonet
 #include <sdm/types.hpp>
 #include <sdm/tools.hpp>
 #include <sdm/core/function.hpp>
+#include <sdm/utils/struct/vector.hpp>
 
 
 namespace sdm
@@ -28,9 +29,11 @@ namespace sdm
     number num_agents_;
 
   public:
+    using value_type = item;
+
     Joint() : std::vector<item>() {}
     Joint(const std::vector<item> &joint_item) : std::vector<item>(joint_item), num_agents_(joint_item.size()) {}
-    Joint(const std::vector<number> &num_agents, const std::vector<item> &joint_item) : std::vector<item>(joint_item), num_agents_(joint_item.size()) {}
+    Joint(const std::vector<number> &, const std::vector<item> &joint_item) : std::vector<item>(joint_item), num_agents_(joint_item.size()) {}
 
     number getNumAgents() const
     {
@@ -66,5 +69,24 @@ namespace sdm
 
   typedef Joint<number> JointItem;
 } // namespace sdm
+
+namespace std
+{
+  template <typename T>
+  struct hash<sdm::Joint<T>>
+  {
+    typedef sdm::Joint<T> argument_type;
+    typedef std::size_t result_type;
+    result_type operator()(argument_type const &in) const
+    {
+      size_t size = in.size();
+      size_t seed = 0;
+      for (size_t i = 0; i < size; i++)
+        //Combine the hash of the current vector with the hashes of the previous ones
+        sdm::hash_combine(seed, in[i]);
+      return seed;
+    }
+  };
+}
 ````
 

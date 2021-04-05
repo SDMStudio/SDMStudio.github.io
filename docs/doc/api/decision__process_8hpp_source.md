@@ -7,112 +7,109 @@
 
 
 ````cpp
-/*=============================================================================
-  Copyright (c) 2020 David Albert
-==============================================================================*/
+
 #pragma once
 
 #include <vector>
+#include <tuple>
 
 #include <sdm/types.hpp>
+#include <sdm/exception.hpp>
+#include <sdm/world/gym_interface.hpp>
+#include <sdm/world/base/decision_process_base.hpp>
 
+#include <sdm/core/space/discrete_space.hpp>
+#include <sdm/core/space/multi_space.hpp>
 #include <sdm/core/space/multi_discrete_space.hpp>
 #include <sdm/core/state_dynamics.hpp>
 #include <sdm/core/reward.hpp>
 
-#include <sdm/public/world.hpp>
-#include <sdm/world/stochastic_process.hpp>
-
-
 namespace sdm
 {
-    class DecisionProcess : public virtual StochasticProcess, public World
+
+    template <typename TStateSpace, typename TActionSpace, typename TObsSpace, typename TStateDynamics, typename TReward, typename TDistrib, bool is_fully_obs = true>
+    class DecisionProcess : public DecisionProcessBase<TStateSpace, TActionSpace, TDistrib>,
+                            public GymInterface<TObsSpace, TActionSpace>
     {
-    protected:
-        DiscreteSpace<number> agent_space_;
-
-        MultiDiscreteSpace<number> action_space_;
-
-        StateDynamics s_dynamics_;
-
-        std::vector<Reward> rew_;
-
-        Criterion criterion = Criterion::REW_MAX;
-
-        double discount = 1.0, bound;
-
-        number planning_horizon = 0;
-
-        std::string filename;
-
     public:
+        using state_type = typename DecisionProcessBase<TStateSpace, TActionSpace, TDistrib>::state_type;
+        using observation_type = typename GymInterface<TObsSpace, TActionSpace>::observation_type;
+        using action_type = typename DecisionProcessBase<TStateSpace, TActionSpace, TDistrib>::action_type;
+
         DecisionProcess();
-        // DecisionProcess(number, number, const std::vector<number> &);
-        // DecisionProcess(number, number, const std::vector<number> &, const Vector &);
-        DecisionProcess(const DiscreteSpace<number> &, const DiscreteSpace<number> &, const MultiDiscreteSpace<number> &);
-        DecisionProcess(const DiscreteSpace<number> &, const DiscreteSpace<number> &, const MultiDiscreteSpace<number> &, const Vector &);
-        DecisionProcess(const DiscreteSpace<number> &, const DiscreteSpace<number> &, const MultiDiscreteSpace<number> &, const StateDynamics &, const std::vector<Reward> &, const Vector &);
+        DecisionProcess(std::shared_ptr<TStateSpace> state_sp, std::shared_ptr<TActionSpace> action_sp);
+        DecisionProcess(std::shared_ptr<TStateSpace> state_sp, std::shared_ptr<TActionSpace> action_sp, TDistrib);
+        DecisionProcess(std::shared_ptr<TStateSpace> state_sp, std::shared_ptr<TActionSpace> action_sp, std::shared_ptr<TStateDynamics>, std::shared_ptr<TReward>, TDistrib start_distrib, number planning_horizon = 0, double discount = 0.9, Criterion criterion = Criterion::REW_MAX);
+        DecisionProcess(std::shared_ptr<TStateSpace> state_sp, std::shared_ptr<TActionSpace> action_sp, std::shared_ptr<TObsSpace> obs_sp, std::shared_ptr<TStateDynamics>, std::shared_ptr<TReward>, TDistrib start_distrib, number planning_horizon = 0, double discount = 0.9, Criterion criterion = Criterion::REW_MAX);
+        virtual ~DecisionProcess();
 
-        void setFileName(std::string);
+        std::shared_ptr<TStateDynamics> getStateDynamics() const;
 
-        std::string getFileName();
+        void setStateDynamics(std::shared_ptr<TStateDynamics> state_dyn);
 
-        double getBound() const;
+        std::shared_ptr<TReward> getReward() const;
 
-        void setBound(double);
+        double getReward(state_type s, action_type a);
 
-        bool getCriterion() const;
+        void setReward(std::shared_ptr<TReward> reward_function);
 
-        void setCriterion(bool);
+        observation_type reset();
 
-        double getDiscount() const;
+        TDistrib getNextStateDistrib(state_type cstate, action_type caction);
 
-        void setDiscount(double);
+        TDistrib getNextStateDistrib(action_type caction);
 
-        number getPlanningHorizon() const;
+        template <bool TBool = is_fully_obs>
+        std::enable_if_t<TBool, observation_type> updateState_getObs(action_type a);
 
-        void setPlanningHorizon(number);
+        template <bool TBool = is_fully_obs>
+        std::enable_if_t<TBool, std::tuple<observation_type, std::vector<double>, bool>> step(action_type a);
 
-        const StateDynamics &getStateDynamics() const;
+        template <bool TBool = std::is_same<TDistrib, std::discrete_distribution<number>>::value>
+        std::enable_if_t<TBool> setupDynamicsGenerator();
 
-        double getTransitionProba(number cstate, std::vector<number> jaction, number state) const;
+        template <bool TBool = std::is_same<TDistrib, std::discrete_distribution<number>>::value>
+        std::enable_if_t<!TBool> setupDynamicsGenerator();
 
-        double getTransitionProba(number cstate, number jaction, number state) const;
+        std::shared_ptr<TActionSpace> getActionSpace() const;
 
-        void nextState(number jaction);
+        template <bool TBool = std::is_base_of<MultiSpace<DiscreteSpace<number>>, TActionSpace>::value>
+        std::enable_if_t<TBool, number> getNumAgents();
 
-        void nextState(std::vector<number> jaction);
+        template <bool TBool = std::is_base_of<MultiSpace<DiscreteSpace<number>>, TActionSpace>::value>
+        std::enable_if_t<!TBool, number> getNumAgents();
 
-        const std::vector<Reward> &getRewards() const;
+    protected:
+        long ctimestep_ = 0;
 
-        std::vector<double> getRewards(number state, number jaction) const;
+        std::shared_ptr<TStateDynamics> state_dynamics_;
 
-        std::vector<double> getRewards(number state, std::vector<number> jaction) const;
+        std::shared_ptr<TReward> reward_function_;
 
-        double getReward(number state, number jaction, number ag_id) const;
+        std::unordered_map<state_type, std::unordered_map<action_type, TDistrib>> dynamics_generator;
 
-        double getReward(number state, std::vector<number> jaction, number ag_id) const;
+        template <bool TBool = std::is_same<TActionSpace, MultiDiscreteSpace<number>>::value>
+        std::enable_if_t<TBool, number>
+        getAction(action_type a);
 
-        std::vector<double> getCost(number state, number jaction) const;
+        template <bool TBool = std::is_same<TActionSpace, MultiDiscreteSpace<number>>::value>
+        std::enable_if_t<!TBool, action_type>
+        getAction(action_type a);
 
-        std::vector<double> getCost(number state, std::vector<number> jaction) const;
+        template <bool TBool = is_fully_obs> //std::is_same<TStateSpace, TObsSpace>::value>
+        std::enable_if_t<TBool, observation_type>
+        resetProcess();
 
-        const DiscreteSpace<number> &getAgentSpace() const;
-
-        const MultiDiscreteSpace<number> &getActionSpace() const;
-
-        number getNumJActions() const;
-
-        number getNumActions(number) const;
-
-        std::vector<number> getNumActions() const;
-
-        number getNumAgents() const;
-
+        template <bool TBool = is_fully_obs> //std::is_same<TStateSpace, TObsSpace>::value>
+        std::enable_if_t<!TBool, observation_type>
+        resetProcess();
     };
 
-    typedef DecisionProcess SG;
-    typedef DecisionProcess StochasticGame;
+    template <typename TStateSpace, typename TActionSpace, typename TStateDynamics, typename TReward, typename TDistrib>
+    using FullyObservableDecisionProcess = DecisionProcess<TStateSpace, TActionSpace, TStateSpace, TStateDynamics, TReward, TDistrib, true>;
+
+    using DiscreteSG = FullyObservableDecisionProcess<DiscreteSpace<number>, MultiDiscreteSpace<number>, StateDynamics, std::vector<Reward>, std::discrete_distribution<number>>;
 } // namespace sdm
+#include <sdm/world/decision_process.tpp>
 ````
 

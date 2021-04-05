@@ -7,22 +7,20 @@
 
 
 ````cpp
-/*=============================================================================
-  Copyright (c) 2020 David Albert
-==============================================================================*/
+
 #pragma once
 
 #include <vector>
+#include <tuple>
 #include <sdm/types.hpp>
 #include <sdm/public/world.hpp>
 #include <sdm/core/space/space.hpp>
 #include <sdm/core/space/multi_discrete_space.hpp>
 
-
 namespace sdm
 {
-    template <typename TObsSpace = Space, typename TActSpace = Space>
-    class GymInterface : public World
+    template <typename TObsSpace = Space, typename TActSpace = Space, bool is_multi_agent = false>
+    class GymInterface
     {
     protected:
         using observation_type = typename TObsSpace::value_type;
@@ -30,16 +28,28 @@ namespace sdm
 
         std::shared_ptr<TObsSpace> observation_space_;
         std::shared_ptr<TActSpace> action_space_;
+
     public:
-        GymInterface(std::shared_ptr<TObsSpace> , std::shared_ptr<TActSpace> );
+        GymInterface();
+        GymInterface(std::shared_ptr<TObsSpace>, std::shared_ptr<TActSpace>);
         // GymInterface(TObsSpace, TActSpace);
 
         std::shared_ptr<TObsSpace> getObsSpace() const;
         std::shared_ptr<TActSpace> getActionSpace() const;
 
         virtual observation_type reset() = 0;
-        virtual std::tuple<observation_type, std::vector<double>, bool> step(action_type a) = 0; // std::tuple<Observation, Reward, bool, map>
+        std::tuple<observation_type, std::vector<double>, bool> step(action_type) {}
+
+        // template <bool TBool = is_multi_agent>
+        // std::enable_if_t<TBool, std::tuple<observation_type, std::vector<double>, bool>>
+        // step(action_type a);
+
+        // template <bool TBool = is_multi_agent>
+        // std::enable_if_t<!TBool, std::tuple<observation_type, double, bool>>
+        // step(action_type a);
     };
 } // namespace sdm
+
+#include <sdm/world/gym_interface.tpp>
 ````
 

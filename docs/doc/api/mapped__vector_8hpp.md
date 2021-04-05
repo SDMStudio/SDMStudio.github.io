@@ -10,11 +10,13 @@
 
 [More...](#detailed-description)
 
-* `#include <map>`
+* `#include <unordered_map>`
 * `#include <cmath>`
 * `#include <string>`
+* `#include <vector>`
 * `#include <iostream>`
 * `#include <assert.h>`
+* `#include <sdm/types.hpp>`
 * `#include <sdm/utils/linear_algebra/vector_impl.hpp>`
 * `#include <sdm/utils/linear_algebra/mapped_vector.tpp>`
 
@@ -31,12 +33,14 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
+| namespace | [**std**](namespacestd.md) <br> |
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
-| class | [**MappedVector**](classsdm_1_1MappedVector.md) &lt;typename TIndex, typename T&gt;<br>_Mapped vectors are vectors that use map to store values of a vector._  |
+| class | [**MappedVector**](classsdm_1_1MappedVector.md) &lt;TIndex, T&gt;<br>_Mapped vectors are vectors that use map to store values of a vector._  |
+| struct | [**hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;**](structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4.md) &lt;typename S, typename V&gt;<br> |
 
 
 
@@ -86,4 +90,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/linear_algebra/mapped_vector.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp`

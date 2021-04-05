@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_92216a09053680f71034e5e26026ee62" kind="dir">
+    <compoundname>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core</compoundname>
+    <innerdir refid="dir_da22f131ef310b227029eb4cfbb3e75b">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/action</innerdir>
+    <innerdir refid="dir_4382197029a4717686416170aae3e90a">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space</innerdir>
+    <innerdir refid="dir_d0d8dc666ec4ca9b544d63f25347f269">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state</innerdir>
+    <innerfile refid="function_8hpp">function.hpp</innerfile>
+    <innerfile refid="item_8hpp">item.hpp</innerfile>
+    <innerfile refid="joint_8hpp">joint.hpp</innerfile>
+    <innerfile refid="observation__dynamics_8cpp">observation_dynamics.cpp</innerfile>
+    <innerfile refid="observation__dynamics_8hpp">observation_dynamics.hpp</innerfile>
+    <innerfile refid="reward_8cpp">reward.cpp</innerfile>
+    <innerfile refid="reward_8hpp">reward.hpp</innerfile>
+    <innerfile refid="state__dynamics_8cpp">state_dynamics.cpp</innerfile>
+    <innerfile refid="state__dynamics_8hpp">state_dynamics.hpp</innerfile>
+    <innerfile refid="states_8hpp">states.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/"/>
+  </compounddef>
+</doxygen>

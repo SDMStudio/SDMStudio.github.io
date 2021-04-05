@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1DeterministicDecisionRule" kind="class" language="C++" prot="public">
+    <compoundname>sdm::DeterministicDecisionRule</compoundname>
+    <basecompoundref refid="classsdm_1_1Function" prot="public" virt="non-virtual">sdm::Function&lt; TState, TAction &gt;</basecompoundref>
+    <includes refid="det__decision__rule_8hpp" local="no">det_decision_rule.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TState</declname>
+        <defname>TState</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TAction</declname>
+        <defname>TAction</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsdm_1_1DeterministicDecisionRule_1a6850e0866255014ff668712bc2aeda80" prot="public" static="no" mutable="no">
+        <type>std::map&lt; TState, TAction &gt;</type>
+        <definition>std::map&lt;TState, TAction&gt; sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::container_</definition>
+        <argsstring></argsstring>
+        <name>container_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1DeterministicDecisionRule_1aec517377d0a48a8977168a54e35fd8d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::DeterministicDecisionRule</definition>
+        <argsstring>()</argsstring>
+        <name>DeterministicDecisionRule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="29" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DeterministicDecisionRule_1a236c6518b5e44617107a1a1bc338b52a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::DeterministicDecisionRule</definition>
+        <argsstring>(std::vector&lt; TState &gt; acc_states, std::vector&lt; TAction &gt; n_actions)</argsstring>
+        <name>DeterministicDecisionRule</name>
+        <param>
+          <type>std::vector&lt; TState &gt;</type>
+          <declname>acc_states</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; TAction &gt;</type>
+          <declname>n_actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DeterministicDecisionRule_1a081cd942441fbd00b9392fcf9609d547" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>TAction</type>
+        <definition>TAction sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::act</definition>
+        <argsstring>(const TState &amp;s) const</argsstring>
+        <name>act</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="40" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DeterministicDecisionRule_1a85d57fd49bb646c7c7e257038c3b4859" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>TAction</type>
+        <definition>TAction sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::operator()</definition>
+        <argsstring>(const TState &amp;s)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classsdm_1_1Function_1a4bc2d0074a496bc371d4064d7a4b1268">operator()</reimplements>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="45" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DeterministicDecisionRule_1abd8b04d75f1c039bc4497cc68fe69b7f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::operator&lt;</definition>
+        <argsstring>(const DeterministicDecisionRule &amp;v2) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DeterministicDecisionRule" kindref="compound">DeterministicDecisionRule</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="50" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DeterministicDecisionRule_1a7253b9a7f420849aacc2f09a6355a83e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::DeterministicDecisionRule&lt; TState, TAction &gt;::operator==</definition>
+        <argsstring>(const DeterministicDecisionRule &amp;v2) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DeterministicDecisionRule" kindref="compound">DeterministicDecisionRule</ref> &amp;</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="56" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1DeterministicDecisionRule_1ac16fc7c7b809e762e4160cf149ee1d9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const DeterministicDecisionRule&lt; TState, TAction &gt; &amp;dr)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1DeterministicDecisionRule" kindref="compound">DeterministicDecisionRule</ref>&lt; TState, TAction &gt; &amp;</type>
+          <declname>dr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="61" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="61" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The deterministic decision rule class. This class is a function that maps generic states to generic actions. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="84">
+        <label>sdm::DeterministicDecisionRule&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1DeterministicDecisionRule"/>
+        <childnode refid="85" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>sdm::Function&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="86">
+        <label>sdm::DeterministicDecisionRule&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1DeterministicDecisionRule"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>sdm::Function&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp" bodystart="24" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1a081cd942441fbd00b9392fcf9609d547" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>act</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1a6850e0866255014ff668712bc2aeda80" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>container_</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1aec517377d0a48a8977168a54e35fd8d4" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>DeterministicDecisionRule</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1a236c6518b5e44617107a1a1bc338b52a" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>DeterministicDecisionRule</name></member>
+      <member refid="classsdm_1_1Function_1ad8b7366c0936f8f20c182a24d9d33ea8" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1a85d57fd49bb646c7c7e257038c3b4859" prot="public" virt="virtual"><scope>sdm::DeterministicDecisionRule</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1abd8b04d75f1c039bc4497cc68fe69b7f" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>operator&lt;</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1ac16fc7c7b809e762e4160cf149ee1d9b" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1DeterministicDecisionRule_1a7253b9a7f420849aacc2f09a6355a83e" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>operator==</name></member>
+      <member refid="classsdm_1_1Function_1a84213c27792a48918c72b382897f34fa" prot="public" virt="non-virtual"><scope>sdm::DeterministicDecisionRule</scope><name>output_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -43,7 +43,7 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**Node**](classsdm_1_1NDPOMDP_1_1Node.md#function-node-1-2) () <br> |
-|   | [**Node**](classsdm_1_1NDPOMDP_1_1Node.md#function-node-2-2) ([**agent**](namespacesdm.md#typedef-agent) id, std::unordered\_set&lt; [**agent**](namespacesdm.md#typedef-agent) &gt;) <br> |
+|   | [**Node**](classsdm_1_1NDPOMDP_1_1Node.md#function-node-2-2) ([**agent**](namespacesdm.md#typedef-agent) id, std::unordered\_set&lt; [**agent**](namespacesdm.md#typedef-agent) &gt; neighbors) <br> |
 
 
 
@@ -144,11 +144,11 @@ sdm::NDPOMDP::Node::Node ()
 ```cpp
 sdm::NDPOMDP::Node::Node (
     agent id,
-    std::unordered_set< agent >
+    std::unordered_set< agent > neighbors
 ) 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/world/ndpomdp.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/ndpomdp.hpp`

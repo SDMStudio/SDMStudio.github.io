@@ -1,0 +1,1589 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="encoder_8hpp" kind="file" language="C++">
+    <compoundname>encoder.hpp</compoundname>
+    <includes refid="ast_8hpp" local="no">sdm/parser/ast.hpp</includes>
+    <includes refid="discrete__space_8hpp" local="no">sdm/core/space/discrete_space.hpp</includes>
+    <includes refid="multi__discrete__space_8hpp" local="no">sdm/core/space/multi_discrete_space.hpp</includes>
+    <includes refid="discrete__decpomdp_8hpp" local="no">sdm/world/discrete_decpomdp.hpp</includes>
+    <includes refid="linear__algebra_2vector_8hpp" local="no">sdm/utils/linear_algebra/vector.hpp</includes>
+    <includes refid="matrix_8hpp" local="no">sdm/utils/linear_algebra/matrix.hpp</includes>
+    <includedby refid="parser_8cpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</includedby>
+    <incdepgraph>
+      <node id="1669">
+        <label>locale</label>
+      </node>
+      <node id="1608">
+        <label>sdm/core/space/multi_space.hpp</label>
+        <link refid="multi__space_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1604" relation="include">
+        </childnode>
+        <childnode refid="1609" relation="include">
+        </childnode>
+      </node>
+      <node id="1681">
+        <label>sdm/world/belief_mdp.hpp</label>
+        <link refid="belief__mdp_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1663" relation="include">
+        </childnode>
+        <childnode refid="1680" relation="include">
+        </childnode>
+        <childnode refid="1682" relation="include">
+        </childnode>
+        <childnode refid="1683" relation="include">
+        </childnode>
+      </node>
+      <node id="1672">
+        <label>sdm/world/world_type.hpp</label>
+        <link refid="world__type_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1673" relation="include">
+        </childnode>
+        <childnode refid="1678" relation="include">
+        </childnode>
+      </node>
+      <node id="1670">
+        <label>fmt/format.h</label>
+      </node>
+      <node id="1610">
+        <label>sdm/core/space/multi_discrete_space.tpp</label>
+      </node>
+      <node id="1682">
+        <label>sdm/world/discrete_mmdp.hpp</label>
+        <link refid="discrete__mmdp_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1613" relation="include">
+        </childnode>
+        <childnode refid="1681" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+        <childnode refid="1625" relation="include">
+        </childnode>
+        <childnode refid="1638" relation="include">
+        </childnode>
+      </node>
+      <node id="1607">
+        <label>assert.h</label>
+      </node>
+      <node id="1678">
+        <label>sdm/utils/decision_rules/det_decision_rule.hpp</label>
+        <link refid="det__decision__rule_8hpp"/>
+        <childnode refid="1679" relation="include">
+        </childnode>
+        <childnode refid="1602" relation="include">
+        </childnode>
+        <childnode refid="1649" relation="include">
+        </childnode>
+        <childnode refid="1598" relation="include">
+        </childnode>
+      </node>
+      <node id="1673">
+        <label>sdm/core/states.hpp</label>
+        <link refid="states_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1654" relation="include">
+        </childnode>
+        <childnode refid="1674" relation="include">
+        </childnode>
+        <childnode refid="1653" relation="include">
+        </childnode>
+        <childnode refid="1651" relation="include">
+        </childnode>
+        <childnode refid="1676" relation="include">
+        </childnode>
+      </node>
+      <node id="1605">
+        <label>sdm/core/space/discrete_space.tpp</label>
+      </node>
+      <node id="1664">
+        <label>sdm/algorithms/hsvi.hpp</label>
+        <link refid="hsvi_8hpp"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1665" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1666" relation="include">
+        </childnode>
+        <childnode refid="1668" relation="include">
+        </childnode>
+        <childnode refid="1671" relation="include">
+        </childnode>
+      </node>
+      <node id="1653">
+        <label>sdm/core/state/occupancy_state.hpp</label>
+        <link refid="occupancy__state_8hpp"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1652" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1654" relation="include">
+        </childnode>
+        <childnode refid="1662" relation="include">
+        </childnode>
+      </node>
+      <node id="1674">
+        <label>sdm/core/state/belief_state.hpp</label>
+        <link refid="belief__state_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1649" relation="include">
+        </childnode>
+        <childnode refid="1675" relation="include">
+        </childnode>
+      </node>
+      <node id="1592">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="1637">
+        <label>sdm/utils/linear_algebra/vector.hpp</label>
+        <link refid="linear__algebra_2vector_8hpp"/>
+        <childnode refid="1631" relation="include">
+        </childnode>
+        <childnode refid="1632" relation="include">
+        </childnode>
+        <childnode refid="1633" relation="include">
+        </childnode>
+        <childnode refid="1634" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+      </node>
+      <node id="1665">
+        <label>sdm/public/algorithm.hpp</label>
+        <link refid="algorithm_8hpp"/>
+      </node>
+      <node id="1643">
+        <label>sdm/world/po_decision_process.tpp</label>
+      </node>
+      <node id="1586">
+        <label>sdm/parser/ast.hpp</label>
+        <link refid="ast_8hpp"/>
+        <childnode refid="1587" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1590" relation="include">
+        </childnode>
+      </node>
+      <node id="1661">
+        <label>sdm/core/state/jhistory_tree.tpp</label>
+      </node>
+      <node id="1636">
+        <label>cmath</label>
+      </node>
+      <node id="1612">
+        <label>sdm/world/po_decision_process.hpp</label>
+        <link refid="po__decision__process_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1613" relation="include">
+        </childnode>
+        <childnode refid="1640" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+        <childnode refid="1625" relation="include">
+        </childnode>
+        <childnode refid="1642" relation="include">
+        </childnode>
+        <childnode refid="1638" relation="include">
+        </childnode>
+        <childnode refid="1643" relation="include">
+        </childnode>
+      </node>
+      <node id="1634">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="1590">
+        <label>string</label>
+      </node>
+      <node id="1648">
+        <label>sdm/utils/linear_algebra/sdms_vector.tpp</label>
+      </node>
+      <node id="1667">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="1679">
+        <label>map</label>
+      </node>
+      <node id="1615">
+        <label>sdm/exception.hpp</label>
+        <link refid="exception_8hpp"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1616" relation="include">
+        </childnode>
+      </node>
+      <node id="1666">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="1657" relation="include">
+        </childnode>
+        <childnode refid="1602" relation="include">
+        </childnode>
+        <childnode refid="1647" relation="include">
+        </childnode>
+        <childnode refid="1667" relation="include">
+        </childnode>
+      </node>
+      <node id="1626">
+        <label>unordered_set</label>
+      </node>
+      <node id="1602">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="1659">
+        <label>sdm/core/state/history_tree.tpp</label>
+      </node>
+      <node id="1642">
+        <label>sdm/core/observation_dynamics.hpp</label>
+        <link refid="observation__dynamics_8hpp"/>
+        <childnode refid="1626" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1627" relation="include">
+        </childnode>
+      </node>
+      <node id="1603">
+        <label>sdm/utils/struct/vector.hpp</label>
+        <link refid="struct_2vector_8hpp"/>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1589" relation="include">
+        </childnode>
+      </node>
+      <node id="1662">
+        <label>sdm/core/state/occupancy_state.tpp</label>
+      </node>
+      <node id="1685">
+        <label>sdm/world/occupancy_mdp.tpp</label>
+      </node>
+      <node id="1649">
+        <label>sdm/utils/linear_algebra/mapped_vector.hpp</label>
+        <link refid="mapped__vector_8hpp"/>
+        <childnode refid="1596" relation="include">
+        </childnode>
+        <childnode refid="1636" relation="include">
+        </childnode>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1647" relation="include">
+        </childnode>
+        <childnode refid="1650" relation="include">
+        </childnode>
+      </node>
+      <node id="1616">
+        <label>exception</label>
+      </node>
+      <node id="1600">
+        <label>fstream</label>
+      </node>
+      <node id="1606">
+        <label>sdm/core/space/multi_discrete_space.hpp</label>
+        <link refid="multi__discrete__space_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1608" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+        <childnode refid="1610" relation="include">
+        </childnode>
+      </node>
+      <node id="1660">
+        <label>sdm/core/state/jhistory_tree.hpp</label>
+        <link refid="jhistory__tree_8hpp"/>
+        <childnode refid="1655" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+        <childnode refid="1661" relation="include">
+        </childnode>
+      </node>
+      <node id="1644">
+        <label>sdm/world/occupancy_mdp.hpp</label>
+        <link refid="occupancy__mdp_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1653" relation="include">
+        </childnode>
+        <childnode refid="1663" relation="include">
+        </childnode>
+        <childnode refid="1680" relation="include">
+        </childnode>
+        <childnode refid="1684" relation="include">
+        </childnode>
+        <childnode refid="1681" relation="include">
+        </childnode>
+        <childnode refid="1637" relation="include">
+        </childnode>
+        <childnode refid="1678" relation="include">
+        </childnode>
+        <childnode refid="1685" relation="include">
+        </childnode>
+      </node>
+      <node id="1663">
+        <label>sdm/world/solvable_by_hsvi.hpp</label>
+        <link refid="solvable__by__hsvi_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1664" relation="include">
+        </childnode>
+        <childnode refid="1672" relation="include">
+        </childnode>
+        <childnode refid="1666" relation="include">
+        </childnode>
+        <childnode refid="1615" relation="include">
+        </childnode>
+      </node>
+      <node id="1655">
+        <label>sdm/core/state/history_tree.hpp</label>
+        <link refid="history__tree_8hpp"/>
+        <childnode refid="1656" relation="include">
+        </childnode>
+        <childnode refid="1659" relation="include">
+        </childnode>
+      </node>
+      <node id="1631">
+        <label>boost/numeric/ublas/vector.hpp</label>
+      </node>
+      <node id="1621">
+        <label>sdm/world/base/decision_process_base.hpp</label>
+        <link refid="decision__process__base_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1622" relation="include">
+        </childnode>
+        <childnode refid="1624" relation="include">
+        </childnode>
+      </node>
+      <node id="1684">
+        <label>sdm/world/discrete_pomdp.hpp</label>
+        <link refid="discrete__pomdp_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1612" relation="include">
+        </childnode>
+        <childnode refid="1681" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1625" relation="include">
+        </childnode>
+        <childnode refid="1638" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+      </node>
+      <node id="1632">
+        <label>boost/numeric/ublas/io.hpp</label>
+      </node>
+      <node id="1650">
+        <label>sdm/utils/linear_algebra/mapped_vector.tpp</label>
+      </node>
+      <node id="1614">
+        <label>tuple</label>
+      </node>
+      <node id="1623">
+        <label>sdm/world/base/stochastic_process_base.tpp</label>
+      </node>
+      <node id="1591">
+        <label>sdm/core/space/discrete_space.hpp</label>
+        <link refid="discrete__space_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+        <childnode refid="1604" relation="include">
+        </childnode>
+        <childnode refid="1605" relation="include">
+        </childnode>
+      </node>
+      <node id="1609">
+        <label>sdm/core/space/multi_space.tpp</label>
+      </node>
+      <node id="1620">
+        <label>sdm/world/gym_interface.tpp</label>
+      </node>
+      <node id="1589">
+        <label>vector</label>
+      </node>
+      <node id="1613">
+        <label>sdm/world/decision_process.hpp</label>
+        <link refid="decision__process_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1614" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1615" relation="include">
+        </childnode>
+        <childnode refid="1617" relation="include">
+        </childnode>
+        <childnode refid="1621" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1608" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+        <childnode refid="1625" relation="include">
+        </childnode>
+        <childnode refid="1638" relation="include">
+        </childnode>
+        <childnode refid="1639" relation="include">
+        </childnode>
+      </node>
+      <node id="1627">
+        <label>sdm/utils/linear_algebra/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="1628" relation="include">
+        </childnode>
+        <childnode refid="1629" relation="include">
+        </childnode>
+        <childnode refid="1630" relation="include">
+        </childnode>
+        <childnode refid="1631" relation="include">
+        </childnode>
+        <childnode refid="1632" relation="include">
+        </childnode>
+        <childnode refid="1633" relation="include">
+        </childnode>
+        <childnode refid="1634" relation="include">
+        </childnode>
+        <childnode refid="1635" relation="include">
+        </childnode>
+        <childnode refid="1636" relation="include">
+        </childnode>
+        <childnode refid="1637" relation="include">
+        </childnode>
+      </node>
+      <node id="1646">
+        <label>sdm/utils/linear_algebra/sdms_vector.hpp</label>
+        <link refid="sdms__vector_8hpp"/>
+        <childnode refid="1631" relation="include">
+        </childnode>
+        <childnode refid="1632" relation="include">
+        </childnode>
+        <childnode refid="1607" relation="include">
+        </childnode>
+        <childnode refid="1647" relation="include">
+        </childnode>
+        <childnode refid="1648" relation="include">
+        </childnode>
+      </node>
+      <node id="1588">
+        <label>boost/spirit/home/x3/support/ast/variant.hpp</label>
+      </node>
+      <node id="1652">
+        <label>sdm/utils/struct/pair.hpp</label>
+        <link refid="pair_8hpp"/>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1629">
+        <label>boost/numeric/ublas/matrix_proxy.hpp</label>
+      </node>
+      <node id="1645">
+        <label>sdm/core/state/state.hpp</label>
+        <link refid="state_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1646" relation="include">
+        </childnode>
+        <childnode refid="1649" relation="include">
+        </childnode>
+        <childnode refid="1651" relation="include">
+        </childnode>
+      </node>
+      <node id="1604">
+        <label>sdm/core/space/space.hpp</label>
+        <link refid="space_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+      </node>
+      <node id="1601">
+        <label>sstream</label>
+      </node>
+      <node id="1625">
+        <label>sdm/core/state_dynamics.hpp</label>
+        <link refid="state__dynamics_8hpp"/>
+        <childnode refid="1626" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1627" relation="include">
+        </childnode>
+      </node>
+      <node id="1597">
+        <label>sdm/core/joint.hpp</label>
+        <link refid="joint_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1598" relation="include">
+        </childnode>
+        <childnode refid="1602" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+      </node>
+      <node id="1658">
+        <label>sdm/utils/struct/tree.tpp</label>
+      </node>
+      <node id="1611">
+        <label>sdm/world/discrete_decpomdp.hpp</label>
+        <link refid="discrete__decpomdp_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1612" relation="include">
+        </childnode>
+        <childnode refid="1644" relation="include">
+        </childnode>
+        <childnode refid="1681" relation="include">
+        </childnode>
+        <childnode refid="1653" relation="include">
+        </childnode>
+        <childnode refid="1654" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1625" relation="include">
+        </childnode>
+        <childnode refid="1638" relation="include">
+        </childnode>
+        <childnode refid="1678" relation="include">
+        </childnode>
+      </node>
+      <node id="1677">
+        <label>sdm/core/state/serialized_occupancy_state.tpp</label>
+      </node>
+      <node id="1668">
+        <label>sdm/utils/logging/logger.hpp</label>
+        <link refid="logger_8hpp"/>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1669" relation="include">
+        </childnode>
+        <childnode refid="1670" relation="include">
+        </childnode>
+        <childnode refid="1598" relation="include">
+        </childnode>
+      </node>
+      <node id="1638">
+        <label>sdm/core/reward.hpp</label>
+        <link refid="reward_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1637" relation="include">
+        </childnode>
+      </node>
+      <node id="1671">
+        <label>sdm/algorithms/hsvi.tpp</label>
+      </node>
+      <node id="1630">
+        <label>boost/numeric/ublas/matrix.hpp</label>
+      </node>
+      <node id="1599">
+        <label>cstdlib</label>
+      </node>
+      <node id="1585">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+        <childnode refid="1611" relation="include">
+        </childnode>
+        <childnode refid="1637" relation="include">
+        </childnode>
+        <childnode refid="1627" relation="include">
+        </childnode>
+      </node>
+      <node id="1595">
+        <label>iostream</label>
+      </node>
+      <node id="1628">
+        <label>boost/numeric/ublas/matrix_sparse.hpp</label>
+      </node>
+      <node id="1622">
+        <label>sdm/world/base/stochastic_process_base.hpp</label>
+        <link refid="stochastic__process__base_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1623" relation="include">
+        </childnode>
+      </node>
+      <node id="1594">
+        <label>cstddef</label>
+      </node>
+      <node id="1676">
+        <label>sdm/core/state/serialized_occupancy_state.hpp</label>
+        <link refid="serialized__occupancy__state_8hpp"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1652" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1651" relation="include">
+        </childnode>
+        <childnode refid="1677" relation="include">
+        </childnode>
+      </node>
+      <node id="1598">
+        <label>sdm/tools.hpp</label>
+        <link refid="tools_8hpp"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1599" relation="include">
+        </childnode>
+        <childnode refid="1600" relation="include">
+        </childnode>
+        <childnode refid="1601" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+      </node>
+      <node id="1596">
+        <label>unordered_map</label>
+      </node>
+      <node id="1640">
+        <label>sdm/world/base/po_process_base.hpp</label>
+        <link refid="po__process__base_8hpp"/>
+        <childnode refid="1622" relation="include">
+        </childnode>
+        <childnode refid="1641" relation="include">
+        </childnode>
+      </node>
+      <node id="1617">
+        <label>sdm/world/gym_interface.hpp</label>
+        <link refid="gym__interface_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1614" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1618" relation="include">
+        </childnode>
+        <childnode refid="1604" relation="include">
+        </childnode>
+        <childnode refid="1606" relation="include">
+        </childnode>
+        <childnode refid="1620" relation="include">
+        </childnode>
+      </node>
+      <node id="1635">
+        <label>eigen3/Eigen/Core</label>
+      </node>
+      <node id="1624">
+        <label>sdm/world/base/decision_process_base.tpp</label>
+      </node>
+      <node id="1647">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="1599" relation="include">
+        </childnode>
+        <childnode refid="1601" relation="include">
+        </childnode>
+      </node>
+      <node id="1683">
+        <label>sdm/world/belief_mdp.tpp</label>
+      </node>
+      <node id="1641">
+        <label>sdm/world/base/po_process_base.tpp</label>
+      </node>
+      <node id="1618">
+        <label>sdm/public/world.hpp</label>
+        <link refid="world_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1619" relation="include">
+        </childnode>
+      </node>
+      <node id="1639">
+        <label>sdm/world/decision_process.tpp</label>
+      </node>
+      <node id="1680">
+        <label>sdm/world/discrete_mdp.hpp</label>
+        <link refid="discrete__mdp_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1663" relation="include">
+        </childnode>
+        <childnode refid="1613" relation="include">
+        </childnode>
+        <childnode refid="1681" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1625" relation="include">
+        </childnode>
+        <childnode refid="1638" relation="include">
+        </childnode>
+      </node>
+      <node id="1651">
+        <label>sdm/core/state/serialized_state.hpp</label>
+        <link refid="serialized__state_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1603" relation="include">
+        </childnode>
+        <childnode refid="1652" relation="include">
+        </childnode>
+      </node>
+      <node id="1654">
+        <label>sdm/core/state/history.hpp</label>
+        <link refid="history_8hpp"/>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1645" relation="include">
+        </childnode>
+        <childnode refid="1655" relation="include">
+        </childnode>
+        <childnode refid="1660" relation="include">
+        </childnode>
+      </node>
+      <node id="1675">
+        <label>sdm/core/state/belief_state.tpp</label>
+      </node>
+      <node id="1587">
+        <label>boost/spirit/home/x3/support/ast/position_tagged.hpp</label>
+      </node>
+      <node id="1619">
+        <label>sdm/public/feedback.hpp</label>
+        <link refid="feedback_8hpp"/>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1614" relation="include">
+        </childnode>
+      </node>
+      <node id="1657">
+        <label>memory</label>
+      </node>
+      <node id="1633">
+        <label>eigen3/Eigen/Sparse</label>
+      </node>
+      <node id="1656">
+        <label>sdm/utils/struct/tree.hpp</label>
+        <link refid="tree_8hpp"/>
+        <childnode refid="1626" relation="include">
+        </childnode>
+        <childnode refid="1596" relation="include">
+        </childnode>
+        <childnode refid="1657" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+        <childnode refid="1598" relation="include">
+        </childnode>
+        <childnode refid="1658" relation="include">
+        </childnode>
+      </node>
+      <node id="1593">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="1594" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+        <childnode refid="1596" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1686">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp</label>
+        <link refid="encoder_8hpp"/>
+        <childnode refid="1687" relation="include">
+        </childnode>
+      </node>
+      <node id="1687">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/parser.cpp</label>
+        <link refid="parser_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsdm_1_1ast_1_1vector__encoder" prot="public">sdm::ast::vector_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1matrix__encoder" prot="public">sdm::ast::matrix_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1element__encoder" prot="public">sdm::ast::element_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1str__visitor" prot="public">sdm::ast::str_visitor</innerclass>
+    <innerclass refid="classsdm_1_1ast_1_1joint__element__encoder" prot="public">sdm::ast::joint_element_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1state__encoder" prot="public">sdm::ast::state_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1discrete__space__encoder" prot="public">sdm::ast::discrete_space_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1multi__discrete__space__encoder" prot="public">sdm::ast::multi_discrete_space_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1state__transition__encoder" prot="public">sdm::ast::state_transition_encoder</innerclass>
+    <innerclass refid="classsdm_1_1ast_1_1state__dynamics__encoder" prot="public">sdm::ast::state_dynamics_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1observation__transition__encoder" prot="public">sdm::ast::observation_transition_encoder</innerclass>
+    <innerclass refid="classsdm_1_1ast_1_1obs__dynamics__encoder" prot="public">sdm::ast::obs_dynamics_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1reward__encoder" prot="public">sdm::ast::reward_encoder</innerclass>
+    <innerclass refid="classsdm_1_1ast_1_1rewards__encoder" prot="public">sdm::ast::rewards_encoder</innerclass>
+    <innerclass refid="structsdm_1_1ast_1_1dpomdp__encoder" prot="public">sdm::ast::dpomdp_encoder</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <innernamespace refid="namespacesdm_1_1ast">sdm::ast</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*=============================================================================</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>(c)<sp/>2016<sp/>Jilles<sp/>Steeve<sp/>Dibangoye</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">==============================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ast_8hpp" kindref="compound">sdm/parser/ast.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="discrete__space_8hpp" kindref="compound">sdm/core/space/discrete_space.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="multi__discrete__space_8hpp" kindref="compound">sdm/core/space/multi_discrete_space.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="discrete__decpomdp_8hpp" kindref="compound">sdm/world/discrete_decpomdp.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="linear__algebra_2vector_8hpp" kindref="compound">sdm/utils/linear_algebra/vector.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="matrix_8hpp" kindref="compound">sdm/utils/linear_algebra/matrix.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">//<sp/><sp/>AST<sp/>processing</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ast</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structsdm_1_1ast_1_1vector__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1vector__encoder" kindref="compound">vector_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;Vector&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structsdm_1_1ast_1_1vector__encoder_1a6764f4e5c8d32d60c51ace49bd68a613" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a6764f4e5c8d32d60c51ace49bd68a613" kindref="member">vector_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>size)<sp/>:<sp/>boost::static_visitor&lt;Vector&gt;()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;size<sp/>=<sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structsdm_1_1ast_1_1vector__encoder_1ae908de13fa0a7d294a6da1c764d51270" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1ae908de13fa0a7d294a6da1c764d51270" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="37"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/>v(size);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;uniform&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" kindref="member">size</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v[i]<sp/>=<sp/>1.0<sp/>/<sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structsdm_1_1ast_1_1vector__encoder_1a515226cf626a02fad6e0d707315a3abf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a515226cf626a02fad6e0d707315a3abf" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;float&gt;<sp/>&amp;<ref refid="classsdm_1_1vector" kindref="compound">vector</ref>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="53"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/>v(size);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="structsdm_1_1ast_1_1vector__encoder_1a70cb9ba6cf37fcbd208cead607c8299b" kindref="member">size</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v[i]<sp/>=<sp/>vector[i];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structsdm_1_1ast_1_1matrix__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1matrix__encoder" kindref="compound">matrix_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;Matrix&gt;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="structsdm_1_1ast_1_1matrix__encoder_1ac8488351b2fb6c6f11022f60f5e9aa41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/><ref refid="structsdm_1_1ast_1_1matrix__encoder_1ac8488351b2fb6c6f11022f60f5e9aa41" kindref="member">rows</ref>,<sp/>cols;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="structsdm_1_1ast_1_1matrix__encoder_1a004d08d15455357e46862944ead66e4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1matrix__encoder_1a004d08d15455357e46862944ead66e4d" kindref="member">matrix_encoder</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>rows,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>cols)<sp/>:<sp/>rows(rows),<sp/>cols(cols)<sp/>{}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structsdm_1_1ast_1_1matrix__encoder_1a6a34e9f163500debf34a9091417e7705" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/><ref refid="structsdm_1_1ast_1_1matrix__encoder_1a6a34e9f163500debf34a9091417e7705" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;str)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="75"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>s,<sp/>s_;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/>m(rows,<sp/>cols);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(str<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;uniform&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(s<sp/>=<sp/>0;<sp/>s<sp/>&lt;<sp/>rows;<sp/>++s)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(s_<sp/>=<sp/>0;<sp/>s_<sp/>&lt;<sp/>cols;<sp/>++s_)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m(s,<sp/>s_)<sp/>=<sp/>1.0<sp/>/<sp/>cols;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(str<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;identity&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(s<sp/>=<sp/>0;<sp/>s<sp/>&lt;<sp/>rows;<sp/>++s)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(s_<sp/>=<sp/>0;<sp/>s_<sp/>&lt;<sp/>cols;<sp/>++s_)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m(s,<sp/>s_)<sp/>=<sp/>s<sp/>==<sp/>s_<sp/>?<sp/>1.0<sp/>:<sp/>0.0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structsdm_1_1ast_1_1matrix__encoder_1a2278025fa67e86b3749d45a6cf44208d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/><ref refid="structsdm_1_1ast_1_1matrix__encoder_1a2278025fa67e86b3749d45a6cf44208d" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;float&gt;&gt;<sp/>&amp;v)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="107"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref><sp/>s,<sp/>s_;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/>m(rows,<sp/>cols);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(s<sp/>=<sp/>0;<sp/>s<sp/>&lt;<sp/>rows;<sp/>++s)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(s_<sp/>=<sp/>0;<sp/>s_<sp/>&lt;<sp/>cols;<sp/>++s_)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m(s,<sp/>s_)<sp/>=<sp/>v[s][s_];</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structsdm_1_1ast_1_1element__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1element__encoder" kindref="compound">element_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;std::string&gt;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127" refid="structsdm_1_1ast_1_1element__encoder_1ac4b8485921fee54b9477ea0747e36e02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1element__encoder_1ac4b8485921fee54b9477ea0747e36e02" kindref="member">md_space_</ref>;</highlight></codeline>
+<codeline lineno="128" refid="structsdm_1_1ast_1_1element__encoder_1ae8c8ff194d3e58c71915338b6301fa55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/><ref refid="structsdm_1_1ast_1_1element__encoder_1ae8c8ff194d3e58c71915338b6301fa55" kindref="member">ag</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="structsdm_1_1ast_1_1element__encoder_1a4d35e0db890f3a15cb335ff50e1aaf16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1element__encoder_1a4d35e0db890f3a15cb335ff50e1aaf16" kindref="member">element_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;md_space,<sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ag)<sp/>:<sp/>boost::static_visitor&lt;<ref refid="namespacestd" kindref="compound">std</ref>::string&gt;()</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;ag<sp/>=<sp/>ag;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;md_space_<sp/>=<sp/>md_space;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="structsdm_1_1ast_1_1element__encoder_1aaaa36d7c9bb8fd8b6f694b40919f802a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structsdm_1_1ast_1_1element__encoder_1aaaa36d7c9bb8fd8b6f694b40919f802a" kindref="member">operator()</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>a)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="137"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;md_space_.<ref refid="classsdm_1_1MultiSpace_1a2e1629e83c7fe9cd636038032b83869e" kindref="member">getSpace</ref>(this-&gt;ag)-&gt;getItem(a);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structsdm_1_1ast_1_1element__encoder_1a21d8cd734b335e6be90e5815d86cb69e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structsdm_1_1ast_1_1element__encoder_1a21d8cd734b335e6be90e5815d86cb69e" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;a_str)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="142"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a_str;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="structsdm_1_1ast_1_1str__visitor" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1str__visitor" kindref="compound">str_visitor</ref></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="149" refid="structsdm_1_1ast_1_1str__visitor_1a2b4bcd4ce659f55e980bdbf514ed2763" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1str__visitor_1a2b4bcd4ce659f55e980bdbf514ed2763" kindref="member">result_type</ref><sp/>=<sp/>std::string;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="structsdm_1_1ast_1_1str__visitor_1a2a02111caab190f32aec78192bf3c6e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1str__visitor_1a2b4bcd4ce659f55e980bdbf514ed2763" kindref="member">result_type</ref><sp/><ref refid="structsdm_1_1ast_1_1str__visitor_1a2a02111caab190f32aec78192bf3c6e4" kindref="member">operator()</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>v)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::to_string(v);<sp/>}</highlight></codeline>
+<codeline lineno="152" refid="structsdm_1_1ast_1_1str__visitor_1af77821cf5596cbe664f29dd245fe8583" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1str__visitor_1a2b4bcd4ce659f55e980bdbf514ed2763" kindref="member">result_type</ref><sp/><ref refid="structsdm_1_1ast_1_1str__visitor_1af77821cf5596cbe664f29dd245fe8583" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;v)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;<sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="classsdm_1_1ast_1_1joint__element__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="160" refid="classsdm_1_1ast_1_1joint__element__encoder_1a0d89fd8b2e63fc246d62d5b0b2794f50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0d89fd8b2e63fc246d62d5b0b2794f50" kindref="member">element_space_</ref>;</highlight></codeline>
+<codeline lineno="161" refid="classsdm_1_1ast_1_1joint__element__encoder_1a3a2904e59adfcb8337357b0cad7c90a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a3a2904e59adfcb8337357b0cad7c90a2" kindref="member">ag_space_</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164" refid="classsdm_1_1ast_1_1joint__element__encoder_1a1a0048a6b92a19e0137bb623271e18b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a1a0048a6b92a19e0137bb623271e18b7" kindref="member">joint_element_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;element_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;ag_space)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;ag_space_<sp/>=<sp/>ag_space;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;element_space_<sp/>=<sp/>element_space;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;identifier_t&gt;<sp/>&amp;as)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="171"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>a_vec;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1str__visitor" kindref="compound">str_visitor</ref><sp/>str_vis;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(as.size()<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>boost::apply_visitor(str_vis,<sp/>as[0])<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>a<sp/>=<sp/>0;<sp/>a<sp/>&lt;<sp/>this-&gt;element_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++a)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a_vec.push_back(this-&gt;element_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a2c207880a613066a07c9101b797e79e6" kindref="member">single2joint</ref>(a));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>ja;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1ac1827d766698d83a834ceff9761118d3" kindref="member">agent</ref><sp/>ag<sp/>=<sp/>0;<sp/>ag<sp/>&lt;<sp/>this-&gt;ag_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++ag)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1element__encoder" kindref="compound">element_encoder</ref><sp/>a_encoder(this-&gt;element_space_,<sp/>ag);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>a_<sp/>=<sp/>boost::apply_visitor(a_encoder,<sp/>as[ag]);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ja.push_back(a_);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a_vec.push_back(ja);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a_vec;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="structsdm_1_1ast_1_1state__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1state__encoder" kindref="compound">state_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;std::vector&lt;std::string&gt;&gt;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="structsdm_1_1ast_1_1state__encoder_1a38d75407e2f2c1e499097fda6f1d6400" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1state__encoder_1a38d75407e2f2c1e499097fda6f1d6400" kindref="member">state_space_</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="structsdm_1_1ast_1_1state__encoder_1a77978d67807c25f1466c43dc4d8be43f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__encoder_1a77978d67807c25f1466c43dc4d8be43f" kindref="member">state_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;state_space)<sp/>:<sp/>boost::static_visitor&lt;<ref refid="namespacestd" kindref="compound">std</ref>::<ref refid="classsdm_1_1vector" kindref="compound">vector</ref>&lt;<ref refid="namespacestd" kindref="compound">std</ref>::string&gt;&gt;()</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;state_space_<sp/>=<sp/>state_space;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="structsdm_1_1ast_1_1state__encoder_1af8a58acfdf92a229f721360abd7ce16f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structsdm_1_1ast_1_1state__encoder_1af8a58acfdf92a229f721360abd7ce16f" kindref="member">operator()</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>s)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="213"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a26177c3f23208b6c332610308160c253" kindref="member">getItem</ref>(s)};</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="structsdm_1_1ast_1_1state__encoder_1a431ad7d644f69233e8213ee95a17fb30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="structsdm_1_1ast_1_1state__encoder_1a431ad7d644f69233e8213ee95a17fb30" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;s_str)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="218"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>st_ptr;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s_str<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>s<sp/>=<sp/>0;<sp/>s<sp/>&lt;<sp/>this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++s)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>st_ptr.push_back(this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a26177c3f23208b6c332610308160c253" kindref="member">getItem</ref>(s));</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>st_ptr.push_back(s_str);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>st_ptr;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="structsdm_1_1ast_1_1discrete__space__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1discrete__space__encoder" kindref="compound">discrete_space_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;DiscreteSpace&lt;std::string&gt;&gt;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="240" refid="structsdm_1_1ast_1_1discrete__space__encoder_1a941c6f9fe2d3433ebe21ba6bd985a0ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1discrete__space__encoder_1a941c6f9fe2d3433ebe21ba6bd985a0ea" kindref="member">operator()</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ag)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="241"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>values;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ag;<sp/>i++)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>values.push_back(std::to_string(i));</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref>(values);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="structsdm_1_1ast_1_1discrete__space__encoder_1a3501da6f39f6ba6914142a8738ce4c91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1discrete__space__encoder_1a3501da6f39f6ba6914142a8738ce4c91" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/>&amp;ags)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="251"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref>(ags);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="structsdm_1_1ast_1_1multi__discrete__space__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1multi__discrete__space__encoder" kindref="compound">multi_discrete_space_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;MultiDiscreteSpace&lt;std::string&gt;&gt;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260" refid="structsdm_1_1ast_1_1multi__discrete__space__encoder_1a03f284826cf99b4c947d0ec9c5cabf9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1multi__discrete__space__encoder_1a03f284826cf99b4c947d0ec9c5cabf9d" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;number&gt;<sp/>&amp;dim_spaces)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="261"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>vv_values;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;dim<sp/>:<sp/>dim_spaces)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>values;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dim;<sp/>i++)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>values.push_back(std::to_string(i));</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vv_values.push_back(values);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>act_space(vv_values);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>act_space;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="structsdm_1_1ast_1_1multi__discrete__space__encoder_1aaa01ceb91aadd76d5d6d9aec989576ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1multi__discrete__space__encoder_1aaa01ceb91aadd76d5d6d9aec989576ae" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>&amp;names)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="277"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>act_space(names);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>act_space;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="structsdm_1_1ast_1_1state__transition__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1state__transition__encoder" kindref="compound">state_transition_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;&gt;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="287" refid="structsdm_1_1ast_1_1state__transition__encoder_1ad5751a5b6e2e798f7ec0561272535405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Matrix&gt;<sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1ad5751a5b6e2e798f7ec0561272535405" kindref="member">t_model</ref>;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="structsdm_1_1ast_1_1state__transition__encoder_1ae61ac3127ec87f9190317045fde4a878" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1ae61ac3127ec87f9190317045fde4a878" kindref="member">st_space_</ref>;</highlight></codeline>
+<codeline lineno="290" refid="structsdm_1_1ast_1_1state__transition__encoder_1aa1603c96369d10646d1150adccd650c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1aa1603c96369d10646d1150adccd650c1" kindref="member">ag_space_</ref>;</highlight></codeline>
+<codeline lineno="291" refid="structsdm_1_1ast_1_1state__transition__encoder_1af6264d0a042f1002deae1b44e40a1382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1af6264d0a042f1002deae1b44e40a1382" kindref="member">act_space_</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="structsdm_1_1ast_1_1state__transition__encoder_1a21e53cb00428cee72b9c216a75c9e7a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1a21e53cb00428cee72b9c216a75c9e7a2" kindref="member">state_transition_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;st_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;ag_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;act_space)<sp/>:<sp/>boost::static_visitor&lt;&gt;(),<sp/>st_space_(st_space),<sp/>ag_space_(ag_space),<sp/>act_space_(act_space)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>a<sp/>=<sp/>0;<sp/>a<sp/>&lt;<sp/>this-&gt;act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++a)</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>Matrix(this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>(),<sp/>this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++x)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++y)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t(x,<sp/>y)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;t_model.push_back(t);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="structsdm_1_1ast_1_1state__transition__encoder_1a9c9d27bb2d9dfb42d76b11c6b49fa419" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1a9c9d27bb2d9dfb42d76b11c6b49fa419" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1transition__entry__3__t" kindref="compound">transition_entry_3_t</ref><sp/>&amp;t3)</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;act_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(t3.<ref refid="structsdm_1_1ast_1_1transition__entry__3__t_1af28e6f3ed150294e08b96b68606c198f" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1matrix__encoder" kindref="compound">matrix_encoder</ref><sp/>m_encoder(this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>(),<sp/>this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/>prob<sp/>=<sp/>boost::apply_visitor(m_encoder,<sp/>t3.<ref refid="structsdm_1_1ast_1_1transition__entry__3__t_1a4e78ee8113a19ec956b1f5363bdf1c9d" kindref="member">transitions</ref>);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;t_model[ind_ja]<sp/>=<sp/>prob;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="structsdm_1_1ast_1_1state__transition__encoder_1a71705a440a43ba996c0fb77d61b1ed3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1a71705a440a43ba996c0fb77d61b1ed3d" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1transition__entry__2__t" kindref="compound">transition_entry_2_t</ref><sp/>&amp;t2)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1vector__encoder" kindref="compound">vector_encoder</ref><sp/>bl_encoder(this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/>prob<sp/>=<sp/>boost::apply_visitor(bl_encoder,<sp/>t2.<ref refid="structsdm_1_1ast_1_1transition__entry__2__t_1aaa9998d443062d137e4dfaa186ada73e" kindref="member">probabilities</ref>);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;act_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(t2.<ref refid="structsdm_1_1ast_1_1transition__entry__2__t_1a60bd10e8f8d55c87180374d4163a2e7e" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__encoder" kindref="compound">state_encoder</ref><sp/>x_encoder(this-&gt;st_space_);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>x_space<sp/>=<sp/>boost::apply_visitor(x_encoder,<sp/>t2.<ref refid="structsdm_1_1ast_1_1transition__entry__2__t_1a101c7b732171fcde13c757fe30fd43f7" kindref="member">current_state</ref>);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::string<sp/>&amp;x<sp/>:<sp/>x_space)</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_state<sp/>=<sp/>st_space_.<ref refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" kindref="member">getItemIndex</ref>(x);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++y)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;t_model[ind_ja](ind_state,<sp/>y)<sp/>=<sp/>prob[y];</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351" refid="structsdm_1_1ast_1_1state__transition__encoder_1a4c225ba72329e68e83e18fab0938b06a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder_1a4c225ba72329e68e83e18fab0938b06a" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1transition__entry__1__t" kindref="compound">transition_entry_1_t</ref><sp/>&amp;t1)</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__encoder" kindref="compound">state_encoder</ref><sp/>s_encoder(this-&gt;st_space_);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y_space<sp/>=<sp/>boost::apply_visitor(s_encoder,<sp/>t1.<ref refid="structsdm_1_1ast_1_1transition__entry__1__t_1adf9abbf6911600d16a18e964997f6b20" kindref="member">next_state</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>x_space<sp/>=<sp/>boost::apply_visitor(s_encoder,<sp/>t1.<ref refid="structsdm_1_1ast_1_1transition__entry__1__t_1aa0d8affe231157afeb9dd07ad3e2b745" kindref="member">current_state</ref>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;act_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(t1.<ref refid="structsdm_1_1ast_1_1transition__entry__1__t_1a4e67f8306a3cef628c0c1b49894947d8" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prob<sp/>=<sp/>t1.<ref refid="structsdm_1_1ast_1_1transition__entry__1__t_1ad0032af9a6c306cc2a5b6763b926d3e1" kindref="member">probability</ref>;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::string<sp/>&amp;x<sp/>:<sp/>x_space)</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_state<sp/>=<sp/>st_space_.<ref refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" kindref="member">getItemIndex</ref>(x);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::string<sp/>&amp;y<sp/>:<sp/>y_space)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_state_y<sp/>=<sp/>st_space_.<ref refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" kindref="member">getItemIndex</ref>(y);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;t_model[ind_ja](ind_state,<sp/>ind_state_y)<sp/>=<sp/>prob;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="classsdm_1_1ast_1_1state__dynamics__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder" kindref="compound">state_dynamics_encoder</ref></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="378" refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a3ac12ab8fddbe96f80bc018faa2791cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a3ac12ab8fddbe96f80bc018faa2791cd" kindref="member">state_space_</ref>;</highlight></codeline>
+<codeline lineno="379" refid="classsdm_1_1ast_1_1state__dynamics__encoder_1af59571569182740f56b69d7c3f0e21af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder_1af59571569182740f56b69d7c3f0e21af" kindref="member">agent_space_</ref>;</highlight></codeline>
+<codeline lineno="380" refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a493c3ba06553a39209c5cc42dc4304bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a493c3ba06553a39209c5cc42dc4304bb" kindref="member">action_space_</ref>;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="383" refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a3349dd44e548753f4a94023175a00048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder_1a3349dd44e548753f4a94023175a00048" kindref="member">state_dynamics_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;state_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;agent_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;action_space)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;state_space_<sp/>=<sp/>state_space;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;agent_space_<sp/>=<sp/>agent_space;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;action_space_<sp/>=<sp/>action_space;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390" refid="classsdm_1_1ast_1_1state__dynamics__encoder_1ac30d4a726a720b5d1683187089c5403e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref><sp/><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder_1ac30d4a726a720b5d1683187089c5403e" kindref="member">encode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1ast_1a6c427b4931c0b86e1ea82f3f78277181" kindref="member">transition_t</ref><sp/>&amp;transits)</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref><sp/>s_dyn(this-&gt;action_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>(),<sp/>this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__transition__encoder" kindref="compound">state_transition_encoder</ref><sp/>state_d_encoder(this-&gt;state_space_,<sp/>this-&gt;agent_space_,<sp/>this-&gt;action_space_);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structsdm_1_1ast_1_1transition__entry__t" kindref="compound">transition_entry_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;tr<sp/>:<sp/>transits)</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::apply_visitor(state_d_encoder,<sp/>tr);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s_dyn.setTransitions(state_d_encoder.t_model);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_dyn;</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="structsdm_1_1ast_1_1observation__transition__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1observation__transition__encoder" kindref="compound">observation_transition_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;&gt;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="407" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a96bf444e5e12ab7c31ea1ce0deafd4cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Matrix&gt;<sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a96bf444e5e12ab7c31ea1ce0deafd4cb" kindref="member">o_model</ref>;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a1940c94d6307077a431854dfbb4fc52a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a1940c94d6307077a431854dfbb4fc52a" kindref="member">st_space_</ref>;</highlight></codeline>
+<codeline lineno="410" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a487c782b9466026396a78d6cc96bc372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a487c782b9466026396a78d6cc96bc372" kindref="member">ag_space_</ref>;</highlight></codeline>
+<codeline lineno="411" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a82ce637be4b716fe0e9d56603ee774ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a82ce637be4b716fe0e9d56603ee774ff" kindref="member">act_space_</ref>;</highlight></codeline>
+<codeline lineno="412" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a5e17d2e953d453778796a6e9903f04c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a5e17d2e953d453778796a6e9903f04c7" kindref="member">obs_space_</ref>;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a32485e6fe6d499fefba16f7d677e062a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a32485e6fe6d499fefba16f7d677e062a" kindref="member">observation_transition_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;st_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;ag_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;act_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;obs_space)<sp/>:<sp/>boost::static_visitor&lt;&gt;(),<sp/>st_space_(st_space),<sp/>ag_space_(ag_space),<sp/>act_space_(act_space),<sp/>obs_space_(obs_space)</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>a<sp/>=<sp/>0;<sp/>a<sp/>&lt;<sp/>this-&gt;act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++a)</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>o<sp/>=<sp/>Matrix(this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>(),<sp/>this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>());</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++x)</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>z<sp/>=<sp/>0;<sp/>z<sp/>&lt;<sp/>this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++z)</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o(x,<sp/>z)<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;o_model.push_back(o);</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432" refid="structsdm_1_1ast_1_1observation__transition__encoder_1ab8331f77743d9485db81a3cd45746a62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1ab8331f77743d9485db81a3cd45746a62" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1observation__entry__3__t" kindref="compound">observation_entry_3_t</ref><sp/>&amp;z3)</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;act_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(z3.<ref refid="structsdm_1_1ast_1_1observation__entry__3__t_1a42b9ca2feb51946cf34b1f5058aa2e4a" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1matrix__encoder" kindref="compound">matrix_encoder</ref><sp/>m_encoder(this-&gt;st_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>(),<sp/>this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>());</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix<sp/>prob<sp/>=<sp/>boost::apply_visitor(m_encoder,<sp/>z3.<ref refid="structsdm_1_1ast_1_1observation__entry__3__t_1a6bf3fe48c46547fa1c61c04edfe6cd0a" kindref="member">probabilities</ref>);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;o_model[ind_ja]<sp/>=<sp/>prob;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a01fa135e7f5595067a9369091fc0ce34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a01fa135e7f5595067a9369091fc0ce34" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1observation__entry__2__t" kindref="compound">observation_entry_2_t</ref><sp/>&amp;z2)</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1vector__encoder" kindref="compound">vector_encoder</ref><sp/>bl_encoder(this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>());</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/>prob<sp/>=<sp/>boost::apply_visitor(bl_encoder,<sp/>z2.<ref refid="structsdm_1_1ast_1_1observation__entry__2__t_1af96d08f53c9db652c145a2f65405c5cf" kindref="member">probabilities</ref>);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;act_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(z2.<ref refid="structsdm_1_1ast_1_1observation__entry__2__t_1a5228af92affe8f53a463267c8bf128e1" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__encoder" kindref="compound">state_encoder</ref><sp/>s_encoder(this-&gt;st_space_);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>s_space<sp/>=<sp/>boost::apply_visitor(s_encoder,<sp/>z2.<ref refid="structsdm_1_1ast_1_1observation__entry__2__t_1aa3f8c8884a24b795065d2e91973f6047" kindref="member">next_state</ref>);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>z<sp/>=<sp/>0;<sp/>z<sp/>&lt;<sp/>this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++z)</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::string<sp/>&amp;y<sp/>:<sp/>s_space)</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_state_y<sp/>=<sp/>st_space_.<ref refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" kindref="member">getItemIndex</ref>(y);</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;o_model[ind_ja](ind_state_y,<sp/>z)<sp/>=<sp/>prob[z];</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472" refid="structsdm_1_1ast_1_1observation__transition__encoder_1a2c101981af57ee113eee26ca65666099" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder_1a2c101981af57ee113eee26ca65666099" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1observation__entry__1__t" kindref="compound">observation_entry_1_t</ref><sp/>&amp;z1)</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;act_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(z1.<ref refid="structsdm_1_1ast_1_1observation__entry__1__t_1a33e2825a5a68fb13f3d64965c74232ae" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>jz_encoder(this-&gt;obs_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jz<sp/>=<sp/>jz_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(z1.<ref refid="structsdm_1_1ast_1_1observation__entry__1__t_1a2236937fa03c45531940473787bb04d5" kindref="member">next_observation</ref>);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__encoder" kindref="compound">state_encoder</ref><sp/>s_encoder(this-&gt;st_space_);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y_space<sp/>=<sp/>boost::apply_visitor(s_encoder,<sp/>z1.<ref refid="structsdm_1_1ast_1_1observation__entry__1__t_1a4670ea41e449e306e6db9ac87e0dec96" kindref="member">next_state</ref>);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prob<sp/>=<sp/>z1.<ref refid="structsdm_1_1ast_1_1observation__entry__1__t_1a0f4c50a51c47685dbf40cd5738d1f18f" kindref="member">probability</ref>;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>act_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;z<sp/>:<sp/>jz)</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_jobs<sp/>=<sp/>obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(z);</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::string<sp/>&amp;y<sp/>:<sp/>y_space)</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_state_y<sp/>=<sp/>st_space_.<ref refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" kindref="member">getItemIndex</ref>(y);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;o_model[ind_ja](ind_state_y,<sp/>ind_jobs)<sp/>=<sp/>prob;</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500" refid="classsdm_1_1ast_1_1obs__dynamics__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder" kindref="compound">obs_dynamics_encoder</ref></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="503" refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a058b1b2fff1bb9191650bfb95afe1be1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a058b1b2fff1bb9191650bfb95afe1be1" kindref="member">state_space_</ref>;</highlight></codeline>
+<codeline lineno="504" refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a7ad22e7d3b2096820ca1506b1b76c972" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a7ad22e7d3b2096820ca1506b1b76c972" kindref="member">agent_space_</ref>;</highlight></codeline>
+<codeline lineno="505" refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1adc447296951e481070018742753bee33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1adc447296951e481070018742753bee33" kindref="member">action_space_</ref>;</highlight></codeline>
+<codeline lineno="506" refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a171f1b177e6d300e98b2ad8c88bc98c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a171f1b177e6d300e98b2ad8c88bc98c7" kindref="member">obs_space_</ref>;</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="509" refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1adc67e3de6483b2e59c4809b78872f029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1adc67e3de6483b2e59c4809b78872f029" kindref="member">obs_dynamics_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;state_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;agent_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;action_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;obs_space)</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;state_space_<sp/>=<sp/>state_space;</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;agent_space_<sp/>=<sp/>agent_space;</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;action_space_<sp/>=<sp/>action_space;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;obs_space_<sp/>=<sp/>obs_space;</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="517" refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a375a6cd8e660293a336f12ad56fa3183" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ObservationDynamics" kindref="compound">ObservationDynamics</ref><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder_1a375a6cd8e660293a336f12ad56fa3183" kindref="member">encode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1ast_1a091008b6af233b3103bdad81d663a23c" kindref="member">observation_t</ref><sp/>&amp;observs,<sp/><ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref><sp/>st_dyn)</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ObservationDynamics" kindref="compound">ObservationDynamics</ref><sp/><ref refid="classdynamics" kindref="compound">dynamics</ref>(this-&gt;action_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>(),<sp/>this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>(),<sp/>this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1observation__transition__encoder" kindref="compound">observation_transition_encoder</ref><sp/>obs_d_encoder(this-&gt;state_space_,<sp/>this-&gt;agent_space_,<sp/>this-&gt;action_space_,<sp/>this-&gt;obs_space_);</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structsdm_1_1ast_1_1observation__entry__t" kindref="compound">observation_entry_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;obs<sp/>:<sp/>observs)</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::apply_visitor(obs_d_encoder,<sp/>obs);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdynamics" kindref="compound">dynamics</ref>.setObservations(obs_d_encoder.o_model);</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>u<sp/>=<sp/>0;<sp/>u<sp/>&lt;<sp/>this-&gt;action_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++u)</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++x)</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>();<sp/>++y)</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>z<sp/>=<sp/>0;<sp/>z<sp/>&lt;<sp/>this-&gt;obs_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>();<sp/>++z)</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdynamics" kindref="compound">dynamics</ref>.setDynamics(x,<sp/>u,<sp/>z,<sp/>y,<sp/>st_dyn.<ref refid="classsdm_1_1StateDynamics_1a7cafa0e372d5538416aebf6405bd65f9" kindref="member">getTransitionProbability</ref>(x,<sp/>u,<sp/>y)<sp/>*<sp/>obs_d_encoder.o_model[u](y,<sp/>z));</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdynamics" kindref="compound">dynamics</ref>;</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545" refid="structsdm_1_1ast_1_1reward__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1reward__encoder" kindref="compound">reward_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;&gt;</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="547" refid="structsdm_1_1ast_1_1reward__encoder_1ac6a3a07ced8287a4e1998de74151d2dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder_1ac6a3a07ced8287a4e1998de74151d2dc" kindref="member">state_space_</ref>;</highlight></codeline>
+<codeline lineno="548" refid="structsdm_1_1ast_1_1reward__encoder_1a3e7d5233b6215b2efd115c6e95f0b0a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder_1a3e7d5233b6215b2efd115c6e95f0b0a8" kindref="member">ag_space_</ref>;</highlight></codeline>
+<codeline lineno="549" refid="structsdm_1_1ast_1_1reward__encoder_1a246f96b25c2c3fbe300aed3b7a781044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder_1a246f96b25c2c3fbe300aed3b7a781044" kindref="member">action_space_</ref>;</highlight></codeline>
+<codeline lineno="550" refid="structsdm_1_1ast_1_1reward__encoder_1a3e7be0d696a91373a9e837297aca6e95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/>*<ref refid="structsdm_1_1ast_1_1reward__encoder_1a3e7be0d696a91373a9e837297aca6e95" kindref="member">rewards_</ref>;</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552" refid="structsdm_1_1ast_1_1reward__encoder_1a034bedfa17f07badbdf322ee42e8e126" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder_1a034bedfa17f07badbdf322ee42e8e126" kindref="member">reward_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;state_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;ag_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;action_space,<sp/><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/>*rewards)<sp/>:<sp/>boost::static_visitor&lt;&gt;()</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;state_space_<sp/>=<sp/>state_space;</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;ag_space_<sp/>=<sp/>ag_space;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;action_space_<sp/>=<sp/>action_space;</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;rewards_<sp/>=<sp/>rewards;</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="560" refid="structsdm_1_1ast_1_1reward__encoder_1aaf494177ebba14b98f3c2d84f6860c93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder_1aaf494177ebba14b98f3c2d84f6860c93" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1reward__entry__1__t" kindref="compound">reward_entry_1_t</ref><sp/>&amp;r1)</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>r1.<ref refid="structsdm_1_1ast_1_1reward__entry__1__t_1ab8486979d0aff6187d59f6dcbde8ed60" kindref="member">reward</ref>;</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1state__encoder" kindref="compound">state_encoder</ref><sp/>s_encoder(this-&gt;state_space_);</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>s_ptr<sp/>=<sp/>boost::apply_visitor(s_encoder,<sp/>r1.<ref refid="structsdm_1_1ast_1_1reward__entry__1__t_1aaf77049ee96c95884041d8674138ff30" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;action_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(r1.<ref refid="structsdm_1_1ast_1_1reward__entry__1__t_1a192ff09faf353fd7b50233781d5cd3e0" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::string<sp/>&amp;s<sp/>:<sp/>s_ptr)</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_state<sp/>=<sp/>state_space_.<ref refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" kindref="member">getItemIndex</ref>(s);</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>action_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(<ref refid="classsdm_1_1Joint" kindref="compound">Joint&lt;std::string&gt;</ref>(a));</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;rewards_-&gt;<ref refid="classsdm_1_1Reward_1ab5318a52c4a2efaa61523c2ddaf42377" kindref="member">setReward</ref>(ind_state,<sp/>ind_ja,<sp/>r);</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight></codeline>
+<codeline lineno="580" refid="structsdm_1_1ast_1_1reward__encoder_1a83a7ee0357b9819d83d55cbbab540fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder_1a83a7ee0357b9819d83d55cbbab540fd9" kindref="member">operator()</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1ast_1_1reward__entry__2__t" kindref="compound">reward_entry_2_t</ref><sp/>&amp;r2)</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1vector__encoder" kindref="compound">vector_encoder</ref><sp/>bl_encoder(this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/>v<sp/>=<sp/>boost::apply_visitor(bl_encoder,<sp/>r2.<ref refid="structsdm_1_1ast_1_1reward__entry__2__t_1acff91dcf16a333f3c8f45ec6347d59bd" kindref="member">rewards</ref>);</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"></highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1joint__element__encoder" kindref="compound">joint_element_encoder</ref><sp/>ja_encoder(this-&gt;action_space_,<sp/>this-&gt;ag_space_);</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;std::string&gt;&gt;<sp/>ja<sp/>=<sp/>ja_encoder.<ref refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" kindref="member">encode</ref>(r2.<ref refid="structsdm_1_1ast_1_1reward__entry__2__t_1ad6a119a0b313239edd02a0a5f9f347f5" kindref="member">jaction</ref>);</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;<sp/>&amp;a<sp/>:<sp/>ja)</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>ind_ja<sp/>=<sp/>action_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a57809d15777a142984b0e8c5bc9e6d87" kindref="member">joint2single</ref>(a);</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;rewards_-&gt;<ref refid="classsdm_1_1Reward_1ab5318a52c4a2efaa61523c2ddaf42377" kindref="member">setReward</ref>(ind_ja,<sp/>v);</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="596" refid="classsdm_1_1ast_1_1rewards__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1ast_1_1rewards__encoder" kindref="compound">rewards_encoder</ref></highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="599" refid="classsdm_1_1ast_1_1rewards__encoder_1a9320919b573224b7aec041d91209dfea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1rewards__encoder_1a9320919b573224b7aec041d91209dfea" kindref="member">state_space_</ref>;</highlight></codeline>
+<codeline lineno="600" refid="classsdm_1_1ast_1_1rewards__encoder_1a91c02fd2d281f17d8789076e881220fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1rewards__encoder_1a91c02fd2d281f17d8789076e881220fb" kindref="member">action_space_</ref>;</highlight></codeline>
+<codeline lineno="601" refid="classsdm_1_1ast_1_1rewards__encoder_1a3d1f60d60c362e580e0586fc63103a40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/><ref refid="classsdm_1_1ast_1_1rewards__encoder_1a3d1f60d60c362e580e0586fc63103a40" kindref="member">agent_space_</ref>;</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="604" refid="classsdm_1_1ast_1_1rewards__encoder_1a203ca43fa5d4c6bb7ebda10bd3c989e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1rewards__encoder_1a203ca43fa5d4c6bb7ebda10bd3c989e9" kindref="member">rewards_encoder</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;state_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;agent_space,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;action_space)</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;state_space_<sp/>=<sp/>state_space;</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;agent_space_<sp/>=<sp/>agent_space;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;action_space_<sp/>=<sp/>action_space;</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"></highlight></codeline>
+<codeline lineno="611" refid="classsdm_1_1ast_1_1rewards__encoder_1a04c85041015e8f086e07fbd04612e82e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/><ref refid="classsdm_1_1ast_1_1rewards__encoder_1a04c85041015e8f086e07fbd04612e82e" kindref="member">encode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1_1ast_1a8c8a86c73e75c95a437610f802fae30b" kindref="member">reward_t</ref><sp/>&amp;r)</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/>rewards(this-&gt;action_space_.<ref refid="classsdm_1_1MultiDiscreteSpace_1a185460a36a5cc657b7114b4a893c64f2" kindref="member">getNumJointItems</ref>(),<sp/>this-&gt;state_space_.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1reward__encoder" kindref="compound">reward_encoder</ref><sp/>r_encoder(this-&gt;state_space_,<sp/>this-&gt;agent_space_,<sp/>this-&gt;action_space_,<sp/>&amp;rewards);</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="structsdm_1_1ast_1_1reward__entry__t" kindref="compound">reward_entry_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;rew<sp/>:<sp/>r)</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::apply_visitor(r_encoder,<sp/>rew);</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rewards;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"></highlight></codeline>
+<codeline lineno="623" refid="namespacesdm_1_1ast_1ad49a7a2d4d13398fea03ac5c441174b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;DiscreteSpace&lt;number&gt;&gt;<sp/><ref refid="namespacesdm_1_1ast_1ad49a7a2d4d13398fea03ac5c441174b3" kindref="member">toNumberedSpace</ref>(<ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;old_sp)</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_shared&lt;DiscreteSpace&lt;number&gt;&gt;(old_sp.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight></codeline>
+<codeline lineno="628" refid="namespacesdm_1_1ast_1a69337c4da5436b763bf95723f36f0aa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;MultiDiscreteSpace&lt;number&gt;&gt;<sp/><ref refid="namespacesdm_1_1ast_1ad49a7a2d4d13398fea03ac5c441174b3" kindref="member">toNumberedSpace</ref>(<ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>&amp;old_sp)</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;number&gt;<sp/>vvtmp;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;dsp<sp/>:<sp/>old_sp.<ref refid="classsdm_1_1MultiSpace_1a5ac3958538f1d61ff9b479888382c04c" kindref="member">getSpaces</ref>())</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vvtmp.push_back(dsp-&gt;getNumItems());</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_shared&lt;MultiDiscreteSpace&lt;number&gt;&gt;(vvtmp);</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638" refid="structsdm_1_1ast_1_1dpomdp__encoder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsdm_1_1ast_1_1dpomdp__encoder" kindref="compound">dpomdp_encoder</ref><sp/>:<sp/>boost::static_visitor&lt;sdm::DiscreteDecPOMDP&gt;</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DecPOMDP<sp/>encoder</highlight></codeline>
+<codeline lineno="643"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="644" refid="structsdm_1_1ast_1_1dpomdp__encoder_1a539ef4f49e47059c130f26ebd64d39cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;sdm::DiscreteDecPOMDP&gt;<sp/><ref refid="structsdm_1_1ast_1_1dpomdp__encoder_1a539ef4f49e47059c130f26ebd64d39cd" kindref="member">operator()</ref>(<ref refid="structsdm_1_1ast_1_1dpomdp__t" kindref="compound">dpomdp_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;ast)</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1discrete__space__encoder" kindref="compound">discrete_space_encoder</ref><sp/>ds_encoder;</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1multi__discrete__space__encoder" kindref="compound">multi_discrete_space_encoder</ref><sp/>mds_encoder;</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"></highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>agent<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>agent_space<sp/>=<sp/>boost::apply_visitor(ds_encoder,<sp/>ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a3b3cd0d7e11b726b1af40d9df46cb720" kindref="member">agent_param</ref>);</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>state<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace&lt;std::string&gt;</ref><sp/>state_space<sp/>=<sp/>boost::apply_visitor(ds_encoder,<sp/>ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1aa36f02706ffd1075192604d81a4d5032" kindref="member">state_param</ref>);</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>action<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>action_space<sp/>=<sp/>boost::apply_visitor(mds_encoder,<sp/>ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a3db2979262d49b10764610b7f8da8100" kindref="member">action_param</ref>);</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>observation<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace&lt;std::string&gt;</ref><sp/>obs_space<sp/>=<sp/>boost::apply_visitor(mds_encoder,<sp/>ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a0d99b8ceff62b1e293873b0416f83b2b" kindref="member">observation_param</ref>);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>the<sp/>reward<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1rewards__encoder" kindref="compound">rewards_encoder</ref><sp/>rews_encoder(state_space,<sp/>agent_space,<sp/>action_space);</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Reward" kindref="compound">Reward</ref><sp/>rew__<sp/>=<sp/>rews_encoder.<ref refid="classsdm_1_1ast_1_1rewards__encoder_1a04c85041015e8f086e07fbd04612e82e" kindref="member">encode</ref>(ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1ad694fd4ba9ae64b98a46d36ae6103571" kindref="member">reward_spec</ref>);</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rew<sp/>=<sp/>std::make_shared&lt;Reward&gt;(rew__);</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>start<sp/>probabilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsdm_1_1ast_1_1vector__encoder" kindref="compound">vector_encoder</ref><sp/>bl_encoder(state_space.<ref refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" kindref="member">getNumItems</ref>());</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>auto<sp/>start_distrib<sp/>=<sp/>std::make_shared&lt;Vector&gt;(state_space.getNumItems());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector<sp/>start_distrib__<sp/>=<sp/>boost::apply_visitor(bl_encoder,<sp/>ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a6010175697e18e17213e3162f164056c" kindref="member">start_param</ref>);</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>start_vector;</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">sdm::size_t</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>start_distrib__.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start_vector.push_back(start_distrib__[i]);</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::discrete_distribution&lt;number&gt;<sp/>start_distrib(start_vector.begin(),<sp/>start_vector.end());</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>the<sp/>state<sp/>dynamics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1state__dynamics__encoder" kindref="compound">state_dynamics_encoder</ref><sp/>state_dyn_enc(state_space,<sp/>agent_space,<sp/>action_space);</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref><sp/>state_dyn__<sp/>=<sp/>state_dyn_enc.encode(ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a239367b0d72c8f126832170691293794" kindref="member">transition_spec</ref>);</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>state_dyn<sp/>=<sp/>std::make_shared&lt;StateDynamics&gt;(state_dyn__);</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Encodes<sp/>the<sp/>observation<sp/>dynamics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ast_1_1obs__dynamics__encoder" kindref="compound">obs_dynamics_encoder</ref><sp/>d_encoder(state_space,<sp/>agent_space,<sp/>action_space,<sp/>obs_space);</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1ObservationDynamics" kindref="compound">ObservationDynamics</ref><sp/>obs_dyn__<sp/>=<sp/>d_encoder.encode(ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a2c83ed3b5c361a454d60104df9befb83" kindref="member">observation_spec</ref>,<sp/>*state_dyn);</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>obs_dyn<sp/>=<sp/>std::make_shared&lt;ObservationDynamics&gt;(obs_dyn__);</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sdm::DecPOMDP<sp/>parsed_model(toNumberedSpace(state_space),<sp/>toNumberedSpace(agent_space),<sp/>toNumberedSpace(action_space),<sp/>toNumberedSpace(obs_space),<sp/>state_dyn,<sp/>obs_dyn,<sp/>rew,<sp/>start_distrib);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>parsed_model<sp/>=<sp/>std::make_shared&lt;sdm::DiscreteDecPOMDP&gt;(<ref refid="namespacesdm_1_1ast_1ad49a7a2d4d13398fea03ac5c441174b3" kindref="member">toNumberedSpace</ref>(state_space),<sp/><ref refid="namespacesdm_1_1ast_1ad49a7a2d4d13398fea03ac5c441174b3" kindref="member">toNumberedSpace</ref>(action_space),<sp/><ref refid="namespacesdm_1_1ast_1ad49a7a2d4d13398fea03ac5c441174b3" kindref="member">toNumberedSpace</ref>(obs_space),<sp/>state_dyn,<sp/>obs_dyn,<sp/>rew,<sp/>start_distrib);</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sdm::DecPOMDP<sp/>parsed_model;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parsed_model-&gt;setDiscount(ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a3a336e92f1680067c5aae31bc4752169" kindref="member">discount_param</ref>);</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parsed_model-&gt;setCriterion((<ref refid="namespacesdm_1ae5dbe8bf7b73a17a74ff82cc3338e088" kindref="member">Criterion</ref>)(ast.<ref refid="structsdm_1_1ast_1_1dpomdp__t_1a03264fe6a24bedef92b13ebe594a91e5" kindref="member">value_param</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;reward&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="695"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Model<sp/>Soundness=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(parsed_model-&gt;isSound()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;yes&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;no&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>VERBOSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Print<sp/>model&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>parsed_model<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>parsed_model;</highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>ast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp"/>
+  </compounddef>
+</doxygen>

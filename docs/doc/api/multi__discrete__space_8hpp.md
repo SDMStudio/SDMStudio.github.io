@@ -37,7 +37,7 @@ _File for MultiDiscreteSpace class._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &lt;TItem&gt;<br>_This class provide a way to instantiate multi discrete space (i.e. list of discrete spaces). Typically it is used to store a set of spaces, one by agent (i.e. action\_spaces in_ [_**POSG**_](classsdm_1_1POSG.md) _). This can be view as a set of discrete spaces or as a discrete space of joint items._ |
+| class | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &lt;TItem&gt;<br>_This class provide a way to instantiate multi discrete space (i.e. list of discrete spaces). Typically it is used to store a set of spaces, one by agent (i.e. action\_spaces in POSG). This can be view as a set of discrete spaces or as a discrete space of joint items._  |
 
 
 
@@ -87,4 +87,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/space/multi_discrete_space.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/multi_discrete_space.hpp`

@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="backup__operator_8hpp" kind="file" language="C++">
+    <compoundname>backup_operator.hpp</compoundname>
+    <includes local="no">math.h</includes>
+    <includes refid="value__function_8hpp" local="no">sdm/utils/value_function/value_function.hpp</includes>
+    <includedby refid="tabular__value__function_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp</includedby>
+    <incdepgraph>
+      <node id="2486">
+        <label>sdm/utils/value_function/value_function.tpp</label>
+      </node>
+      <node id="2480">
+        <label>sdm/utils/value_function/value_function.hpp</label>
+        <link refid="value__function_8hpp"/>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2486" relation="include">
+        </childnode>
+      </node>
+      <node id="2482">
+        <label>sdm/core/function.hpp</label>
+        <link refid="function_8hpp"/>
+      </node>
+      <node id="2485">
+        <label>sstream</label>
+      </node>
+      <node id="2479">
+        <label>math.h</label>
+      </node>
+      <node id="2484">
+        <label>cstdlib</label>
+      </node>
+      <node id="2483">
+        <label>sdm/utils/linear_algebra/vector_impl.hpp</label>
+        <link refid="vector__impl_8hpp"/>
+        <childnode refid="2484" relation="include">
+        </childnode>
+        <childnode refid="2485" relation="include">
+        </childnode>
+      </node>
+      <node id="2478">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp</label>
+        <link refid="backup__operator_8hpp"/>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2490">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp</label>
+        <link refid="value__functions_8hpp"/>
+      </node>
+      <node id="2488">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp</label>
+        <link refid="tabular__value__function_8hpp"/>
+        <childnode refid="2489" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+      </node>
+      <node id="2489">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp</label>
+        <link refid="algorithms_8hpp"/>
+      </node>
+      <node id="2487">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp</label>
+        <link refid="backup__operator_8hpp"/>
+        <childnode refid="2488" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1BackupOperator" prot="public">sdm::BackupOperator</innerclass>
+    <innerclass refid="classsdm_1_1ClassicBellmanBackupOperator" prot="public">sdm::ClassicBellmanBackupOperator</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="value__function_8hpp" kindref="compound">sdm/utils/value_function/value_function.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TState,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TAction,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TData&gt;</highlight></codeline>
+<codeline lineno="9" refid="classsdm_1_1BackupOperator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1BackupOperator" kindref="compound">BackupOperator</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12" refid="classsdm_1_1BackupOperator_1a7724ecbd44d3f6867d9d511757bb5450" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1BackupOperator_1a7724ecbd44d3f6867d9d511757bb5450" kindref="member">data_type</ref><sp/>=<sp/>TData;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>TData<sp/><ref refid="classsdm_1_1BackupOperator_1ac815fd744ce4fbf081ecb8686c783cc9" kindref="member">backup</ref>(<ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction&lt;TState, TAction&gt;</ref><sp/>*vf,<sp/>TState<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TState,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TAction&gt;</highlight></codeline>
+<codeline lineno="18" refid="classsdm_1_1ClassicBellmanBackupOperator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1ClassicBellmanBackupOperator" kindref="compound">ClassicBellmanBackupOperator</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1BackupOperator" kindref="compound">BackupOperator</ref>&lt;TState,<sp/>TAction,<sp/>double&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classsdm_1_1ClassicBellmanBackupOperator_1a9808b6165b302514859c9be1ab551d54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1ClassicBellmanBackupOperator_1a9808b6165b302514859c9be1ab551d54" kindref="member">backup</ref>(<ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction&lt;TState, TAction&gt;</ref><sp/>*vf,<sp/>TState<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vf-&gt;<ref refid="classsdm_1_1ValueFunction_1a2494b50909d238e88cd0c67670255627" kindref="member">getQValueAt</ref>(s,<sp/>t)-&gt;max();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp"/>
+  </compounddef>
+</doxygen>

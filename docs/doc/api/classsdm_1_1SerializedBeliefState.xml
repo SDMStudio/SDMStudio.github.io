@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1SerializedBeliefState" kind="class" language="C++" prot="public">
+    <compoundname>sdm::SerializedBeliefState</compoundname>
+    <basecompoundref refid="classsdm_1_1BaseBeliefState" prot="public" virt="non-virtual">sdm::BaseBeliefState&lt; SerializedState &gt;</basecompoundref>
+    <includes refid="serialized__belief__state_8hpp" local="no">serialized_belief_state.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1SerializedBeliefState_1afb9fd0ab41005c570c8758ed9c43fc31" prot="public" static="no">
+        <type><ref refid="classsdm_1_1SerializedState" kindref="compound">SerializedState</ref></type>
+        <definition>using sdm::SerializedBeliefState::state_type =  SerializedState</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="12" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1SerializedBeliefState_1a3454fc16e1b30ad2157bec97bffd9dbc" prot="public" static="no">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>using sdm::SerializedBeliefState::action_type =  number</definition>
+        <argsstring></argsstring>
+        <name>action_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="13" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1SerializedBeliefState_1a6ad4b225e26fc7e7179a00c1c3f358f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedBeliefState::SerializedBeliefState</definition>
+        <argsstring>()</argsstring>
+        <name>SerializedBeliefState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="15" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedBeliefState_1ab43033efd27c7a62b1455d407e70dd00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedBeliefState::SerializedBeliefState</definition>
+        <argsstring>(double default_value)</argsstring>
+        <name>SerializedBeliefState</name>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="16" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedBeliefState_1aff47ef54ad1884e5d10f4ee2caf30408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedBeliefState::SerializedBeliefState</definition>
+        <argsstring>(std::size_t size, double default_value)</argsstring>
+        <name>SerializedBeliefState</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="17" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1SerializedBeliefState_1aca769cdf6d90c8f47fe8b4a9badfe172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::SerializedBeliefState::SerializedBeliefState</definition>
+        <argsstring>(const SerializedBeliefState &amp;v)</argsstring>
+        <name>SerializedBeliefState</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1SerializedBeliefState" kindref="compound">SerializedBeliefState</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="18" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="590">
+        <label>sdm::VectorImpl&lt; SerializedState, double &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="589">
+        <label>std::unordered_map&lt; SerializedState , double  &gt;</label>
+      </node>
+      <node id="587">
+        <label>sdm::BaseBeliefState&lt; SerializedState &gt;</label>
+        <link refid="classsdm_1_1BaseBeliefState"/>
+        <childnode refid="588" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="586">
+        <label>sdm::SerializedBeliefState</label>
+        <link refid="classsdm_1_1SerializedBeliefState"/>
+        <childnode refid="587" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="588">
+        <label>sdm::MappedVector&lt; SerializedState, double &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="589" relation="public-inheritance">
+        </childnode>
+        <childnode refid="590" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="595">
+        <label>sdm::VectorImpl&lt; SerializedState, double &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+      <node id="594">
+        <label>std::unordered_map&lt; SerializedState , double  &gt;</label>
+      </node>
+      <node id="592">
+        <label>sdm::BaseBeliefState&lt; SerializedState &gt;</label>
+        <link refid="classsdm_1_1BaseBeliefState"/>
+        <childnode refid="593" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="591">
+        <label>sdm::SerializedBeliefState</label>
+        <link refid="classsdm_1_1SerializedBeliefState"/>
+        <childnode refid="592" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="593">
+        <label>sdm::MappedVector&lt; SerializedState, double &gt;</label>
+        <link refid="classsdm_1_1MappedVector"/>
+        <childnode refid="594" relation="public-inheritance">
+        </childnode>
+        <childnode refid="595" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" line="10" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/serialized_belief_state.hpp" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1SerializedBeliefState_1a3454fc16e1b30ad2157bec97bffd9dbc" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>action_type</name></member>
+      <member refid="classsdm_1_1MappedVector_1abd49e9817196371ee5fdb1b6078e07e5" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>argmax</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac50a5999b36c9e79e5e40f77371386d3" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>argmin</name></member>
+      <member refid="classsdm_1_1MappedVector_1aeede042319cd5b014764a3bbbc09208f" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>at</name></member>
+      <member refid="classsdm_1_1BaseBeliefState_1a148e3892b25167d823c6d26f4a973282" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>BaseBeliefState</name></member>
+      <member refid="classsdm_1_1BaseBeliefState_1a60be4a0dc150afca9dde5ba5cb874199" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>BaseBeliefState</name></member>
+      <member refid="classsdm_1_1BaseBeliefState_1a61f011c21615ac1d495ad7e47d8df2a4" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>BaseBeliefState</name></member>
+      <member refid="classsdm_1_1BaseBeliefState_1a3922bd632c753a315cc3720d0c509d29" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>BaseBeliefState</name></member>
+      <member refid="classsdm_1_1MappedVector_1abf4654c82755bb1ac5f4f467493a386a" prot="protected" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>default_value_</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad5dc5bcab2d58a6b8e198da61cc1b995" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>dot</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab072a74c6d2977c78ad8d8036a3714ce" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>getDefault</name></member>
+      <member refid="classsdm_1_1MappedVector_1a7da358973f207deaf0ce4086e4986c4c" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>getIndexes</name></member>
+      <member refid="classsdm_1_1MappedVector_1ac2a3d3f154eabb04e8800f503659700e" prot="protected" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>getMax</name></member>
+      <member refid="classsdm_1_1MappedVector_1af1eb71be40525bd7824b1fdf3e0efb9f" prot="protected" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>getMin</name></member>
+      <member refid="classsdm_1_1BaseBeliefState_1a5c6fd99a2a1bb0dd0173b68cf54124c7" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>getState</name></member>
+      <member refid="classsdm_1_1MappedVector_1a72b3cae7f43436d899c9da8a8bfa240e" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae0a56f79ba91a9f440ec791b4a14da29" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1ace7faa27b1ab644fb1480a45721329af" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1a0f29af90b5165693a18cabee3a5819f1" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>MappedVector</name></member>
+      <member refid="classsdm_1_1MappedVector_1aff4f819256fdd7b9c191b57812fca3a8" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>max</name></member>
+      <member refid="classsdm_1_1MappedVector_1ab932c60ef6b0c3cb7680229333be0c2e" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>min</name></member>
+      <member refid="classsdm_1_1MappedVector_1a667ed798b386ca4aadaf5c5998a34cf3" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>norm_1</name></member>
+      <member refid="classsdm_1_1MappedVector_1ad9d78194308798445099a2fecc330293" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>norm_2</name></member>
+      <member refid="classsdm_1_1MappedVector_1a52e4edbdbd67b5522d2a56f531db563d" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>operator&lt;</name></member>
+      <member refid="classsdm_1_1MappedVector_1ae64dd3cfae50798e49aa6903d73e82d4" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>operator^</name></member>
+      <member refid="classsdm_1_1SerializedBeliefState_1a6ad4b225e26fc7e7179a00c1c3f358f0" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>SerializedBeliefState</name></member>
+      <member refid="classsdm_1_1SerializedBeliefState_1ab43033efd27c7a62b1455d407e70dd00" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>SerializedBeliefState</name></member>
+      <member refid="classsdm_1_1SerializedBeliefState_1aff47ef54ad1884e5d10f4ee2caf30408" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>SerializedBeliefState</name></member>
+      <member refid="classsdm_1_1SerializedBeliefState_1aca769cdf6d90c8f47fe8b4a9badfe172" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>SerializedBeliefState</name></member>
+      <member refid="classsdm_1_1MappedVector_1aa21da534045aee8330037819acc0f81b" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>size</name></member>
+      <member refid="classsdm_1_1MappedVector_1a192fe86ee506a233d165d30a8a920f7e" prot="protected" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>size_</name></member>
+      <member refid="classsdm_1_1SerializedBeliefState_1afb9fd0ab41005c570c8758ed9c43fc31" prot="public" virt="non-virtual"><scope>sdm::SerializedBeliefState</scope><name>state_type</name></member>
+      <member refid="classsdm_1_1MappedVector_1af35decf9e63f3bedc5e7851dec30d6ff" prot="public" virt="virtual"><scope>sdm::SerializedBeliefState</scope><name>str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

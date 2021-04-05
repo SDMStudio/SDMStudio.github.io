@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1TabularValueFunction" kind="class" language="C++" prot="public">
+    <compoundname>sdm::TabularValueFunction</compoundname>
+    <basecompoundref refid="classsdm_1_1ValueFunction" prot="public" virt="non-virtual">sdm::ValueFunction&lt; TState, TAction, TValue &gt;</basecompoundref>
+    <includes refid="tabular__value__function_8hpp" local="no">tabular_value_function.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+      <param>
+        <type>typename TValue</type>
+        <defval>double</defval>
+      </param>
+      <param>
+        <type>template&lt; typename TI, typename TV &gt; class</type>
+        <declname>TBackupOperator</declname>
+        <defname>TBackupOperator</defname>
+        <defval><ref refid="classsdm_1_1ClassicBellmanBackupOperator" kindref="compound">ClassicBellmanBackupOperator</ref></defval>
+      </param>
+      <param>
+        <type>template&lt; typename TI, typename TV &gt; class</type>
+        <declname>TStruct</declname>
+        <defname>TStruct</defname>
+        <defval><ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classsdm_1_1TabularValueFunction_1aa6c5a44b9f73a4781baa1927dfaf7c12" prot="protected" static="no">
+        <type>TStruct&lt; TState, TValue &gt;</type>
+        <definition>using sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::Container =  TStruct&lt;TState, TValue&gt;</definition>
+        <argsstring></argsstring>
+        <name>Container</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1TabularValueFunction_1a39662c6d4044fbb88f3b3f2ec9ad6e5d" prot="protected" static="no">
+        <type>TBackupOperator&lt; TState, TAction &gt;</type>
+        <definition>using sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::backup_operator_type =  TBackupOperator&lt;TState, TAction&gt;</definition>
+        <argsstring></argsstring>
+        <name>backup_operator_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="48" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1TabularValueFunction_1ab9893d2873bf561737f0bfebb91b0ec0" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classsdm_1_1TabularValueFunction_1aa6c5a44b9f73a4781baa1927dfaf7c12" kindref="member">Container</ref> &gt;</type>
+        <definition>std::vector&lt;Container&gt; sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::representation</definition>
+        <argsstring></argsstring>
+        <name>representation</name>
+        <briefdescription>
+<para>The value function represention. The default representation is a <ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref> but every class implementing <ref refid="classsdm_1_1VectorImpl" kindref="compound">VectorImpl</ref> interface can be used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="54" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1TabularValueFunction_1aa2e7c360629073923c1319e3d09e57ce" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1TabularValueFunction_1a39662c6d4044fbb88f3b3f2ec9ad6e5d" kindref="member">backup_operator_type</ref></type>
+        <definition>backup_operator_type sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::backup_op_</definition>
+        <argsstring></argsstring>
+        <name>backup_op_</name>
+        <briefdescription>
+<para>The backup operator used in order to update this value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="60" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1TabularValueFunction_1ac9a43f891ac3c976124fcb2a82995f9b" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::initializer_</definition>
+        <argsstring></argsstring>
+        <name>initializer_</name>
+        <briefdescription>
+<para>The initializer to use for this value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="66" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a840c7e662a4d7ad26eea3d8691b0afad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::TabularValueFunction</definition>
+        <argsstring>(std::shared_ptr&lt; SolvableByHSVI&lt; TState, TAction &gt;&gt; problem, number horizon, std::shared_ptr&lt; Initializer&lt; TState, TAction &gt;&gt; initializer)</argsstring>
+        <name>TabularValueFunction</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt;&gt;</type>
+          <declname>problem</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>horizon</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt;&gt;</type>
+          <declname>initializer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a386361a78ea59ba658dd46e5e7f0991f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::TabularValueFunction</definition>
+        <argsstring>(std::shared_ptr&lt; SolvableByHSVI&lt; TState, TAction &gt;&gt; problem, number horizon=0, TValue default_value=0.)</argsstring>
+        <name>TabularValueFunction</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt;&gt;</type>
+          <declname>problem</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>horizon</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>TValue</type>
+          <declname>default_value</declname>
+          <defval>0.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a70df94d09af95ba18628324bf683532e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1ab22e87ef5a0becd1215e0aeb153ac683">initialize</reimplements>
+        <briefdescription>
+<para>Initialize the value function according using initializer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1af931a93515e3b75cc99ab42386f9ed8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::initialize</definition>
+        <argsstring>(TValue default_value, number t=0)</argsstring>
+        <name>initialize</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1a3c736ed1a2975ea6f975ff90e6949a09">initialize</reimplements>
+        <param>
+          <type>TValue</type>
+          <declname>default_value</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Set all values of the vector to a default value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>default_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the default value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a81192050ebf022c1e099cda795ee1043" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>TValue</type>
+        <definition>TValue sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::getValueAt</definition>
+        <argsstring>(const TState &amp;state, number t=0)</argsstring>
+        <name>getValueAt</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1aff2b1e06a111f0b682409ea9d65505af">getValueAt</reimplements>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Evaluate the value at a state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state where we want to evaluate the function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1aa4be44d243e6f4056d2c0dd2148b1f74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsdm_1_1TabularValueFunction_1aa6c5a44b9f73a4781baa1927dfaf7c12" kindref="member">Container</ref></type>
+        <definition>Container sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::getValueAt</definition>
+        <argsstring>(number t=0)</argsstring>
+        <name>getValueAt</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a3cbdd5aa91c6a3a3228b8182ac6e2b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::updateValueAt</definition>
+        <argsstring>(const TState &amp;state, number t=0)</argsstring>
+        <name>updateValueAt</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1af3a7fc03f73a12bdcabf19e5d38008a1">updateValueAt</reimplements>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Update the value at a specific state and timestep. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timestep. Must be less than the horizon, $t &lt; h$. Except in serialized problem solving where real timesteps are serialized and thus we need $t &lt; h  n$. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a16bd2306aa76f41c3a7a0a0edd55fe37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::updateValueAt</definition>
+        <argsstring>(const TState &amp;state, number t, TValue target)</argsstring>
+        <name>updateValueAt</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>TValue</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a59c3577f97f95e81be32cc8b37268707" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::str</definition>
+        <argsstring>()</argsstring>
+        <name>str</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1aea12cd57f79d8ec97726e26ae99a4430">str</reimplements>
+        <briefdescription>
+<para>Define this function in order to be able to display the value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a569b33c80e678547feda844125fb5681" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; TState &gt;</type>
+        <definition>std::vector&lt;TState&gt; sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::getSupport</definition>
+        <argsstring>(number t)</argsstring>
+        <name>getSupport</name>
+        <reimplements refid="classsdm_1_1ValueFunction_1afecd8a1aefddf6f0cb5e547035ba5bfb">getSupport</reimplements>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1TabularValueFunction_1a04b5e2a1d2847260ec4da609a04b3f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsdm_1_1TabularValueFunction_1a39662c6d4044fbb88f3b3f2ec9ad6e5d" kindref="member">backup_operator_type</ref></type>
+        <definition>backup_operator_type sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;::getBackupOperator</definition>
+        <argsstring>()</argsstring>
+        <name>getBackupOperator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="109" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1TabularValueFunction_1a0c3aa7f2a9289bf0148445ff22eddeeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, TabularValueFunction&lt; TState, TAction &gt; &amp;vf)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="classsdm_1_1TabularValueFunction" kindref="compound">TabularValueFunction</ref>&lt; TState, TAction &gt; &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="111" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="111" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tabular value function are functions of state and action that use a vector representation to store the values. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the states </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the states </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the values (must be primitive type) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TStruct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of vector container (<ref refid="classsdm_1_1MappedVector" kindref="compound">MappedVector</ref>, DenseVector and SparseVector are common type) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="691">
+        <label>sdm::BinaryFunction&lt; TState, number, TValue &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="692" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="692">
+        <label>sdm::Function&lt; std::pair&lt; TState, number &gt;, TValue &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="690">
+        <label>sdm::ValueFunction&lt; TState, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1ValueFunction"/>
+        <childnode refid="691" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="689">
+        <label>sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;</label>
+        <link refid="classsdm_1_1TabularValueFunction"/>
+        <childnode refid="690" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="695">
+        <label>sdm::BinaryFunction&lt; TState, number, TValue &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="696" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="696">
+        <label>sdm::Function&lt; std::pair&lt; TState, number &gt;, TValue &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="694">
+        <label>sdm::ValueFunction&lt; TState, TAction, TValue &gt;</label>
+        <link refid="classsdm_1_1ValueFunction"/>
+        <childnode refid="695" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="693">
+        <label>sdm::TabularValueFunction&lt; TState, TAction, TValue, TBackupOperator, TStruct &gt;</label>
+        <link refid="classsdm_1_1TabularValueFunction"/>
+        <childnode refid="694" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" line="45" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp" bodystart="44" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1TabularValueFunction_1aa2e7c360629073923c1319e3d09e57ce" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>backup_op_</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a39662c6d4044fbb88f3b3f2ec9ad6e5d" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>backup_operator_type</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1aa6c5a44b9f73a4781baa1927dfaf7c12" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>Container</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a04b5e2a1d2847260ec4da609a04b3f8c" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getBackupOperator</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a030defa0b4bdbf217d25dd57a0b46b66" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getBestAction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aec0e34427cd3401b1a526872c2fd4bf6" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getDiscount</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a2fc36f24a4e6bd4b29d47c2ea1b2c5c9" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1acbc7e1960ec5ec203ea33dc0bd1964fd" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getInitFunction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a2494b50909d238e88cd0c67670255627" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1adba37ff161a36655c4ba7e070da56b34" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getQValueAt</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a569b33c80e678547feda844125fb5681" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>getSupport</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a81192050ebf022c1e099cda795ee1043" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>getValueAt</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1aa4be44d243e6f4056d2c0dd2148b1f74" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a219e4b3d358008dc7c8b206c547caacd" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>getWorld</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ab4ee8dba95e5227658e161434c3ce5ca" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>horizon_</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a9276eab90ce8e0f07d5df017d7b01768" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>init_function_</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a70df94d09af95ba18628324bf683532e" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1af931a93515e3b75cc99ab42386f9ed8b" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aeb0173f9bc30e0cc94e2a2593f5fb927" prot="public" virt="non-virtual" ambiguityscope="sdm::ValueFunction::"><scope>sdm::TabularValueFunction</scope><name>initialize</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1ac9a43f891ac3c976124fcb2a82995f9b" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>initializer_</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a8c8a1c4d05241832cb59b053bcee63a6" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>isFiniteHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a797a7a2021ceed3348da4bdb535809d1" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>isInfiniteHorizon</name></member>
+      <member refid="classsdm_1_1ValueFunction_1abd33004b2a910e321a1dc07d0c8950e0" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a70feb6f73b43d4bcb9263bba9e23963a" prot="public" virt="virtual" ambiguityscope="BinaryFunction&lt; TState, number, TValue &gt;::"><scope>sdm::TabularValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a0c3aa7f2a9289bf0148445ff22eddeeb" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>output_type</name></member>
+      <member refid="classsdm_1_1ValueFunction_1ae2820dc6d523ef80d3ecf6e85e72952e" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>problem_</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1ab9893d2873bf561737f0bfebb91b0ec0" prot="protected" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>representation</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a59c3577f97f95e81be32cc8b37268707" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>str</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a840c7e662a4d7ad26eea3d8691b0afad" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>TabularValueFunction</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a386361a78ea59ba658dd46e5e7f0991f" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>TabularValueFunction</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a3cbdd5aa91c6a3a3228b8182ac6e2b09" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>updateValueAt</name></member>
+      <member refid="classsdm_1_1TabularValueFunction_1a16bd2306aa76f41c3a7a0a0edd55fe37" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>updateValueAt</name></member>
+      <member refid="classsdm_1_1ValueFunction_1a53ec670f293ebeb98d2652cd6c5d11c2" prot="public" virt="non-virtual"><scope>sdm::TabularValueFunction</scope><name>ValueFunction</name></member>
+      <member refid="classsdm_1_1ValueFunction_1aefaf72bc4f1588ed3eb6a858aad4f677" prot="public" virt="virtual"><scope>sdm::TabularValueFunction</scope><name>~ValueFunction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

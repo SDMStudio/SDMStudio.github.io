@@ -8,7 +8,7 @@
 
 
 
-
+_Namespace grouping all common functions to the whole project._ 
 
 
 
@@ -29,8 +29,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  std::string | [**getAgentActionState**](namespacesdm_1_1common.md#function-getagentactionstate) ([**agent**](namespacesdm.md#typedef-agent), [**action**](namespacesdm.md#typedef-action), [**state**](namespacesdm.md#typedef-state)) <br> |
-|  std::string | [**getState**](namespacesdm_1_1common.md#function-getstate) ([**state**](namespacesdm.md#typedef-state)) <br> |
+|  std::string | [**getAgentActionState**](namespacesdm_1_1common.md#function-getagentactionstate) ([**agent**](namespacesdm.md#typedef-agent) i, [**action**](namespacesdm.md#typedef-action) ui, [**state**](namespacesdm.md#typedef-state) x) <br> |
+|  std::string | [**getState**](namespacesdm_1_1common.md#function-getstate) ([**state**](namespacesdm.md#typedef-state) x) <br> |
 |  std::default\_random\_engine & | [**global\_urng**](namespacesdm_1_1common.md#function-global-urng) () <br> |
 |  void | [**logo**](namespacesdm_1_1common.md#function-logo) () <br> |
 
@@ -49,9 +49,9 @@
 
 ```cpp
 std::string sdm::common::getAgentActionState (
-    agent,
-    action,
-    state
+    agent i,
+    action ui,
+    state x
 ) 
 ```
 
@@ -62,7 +62,7 @@ std::string sdm::common::getAgentActionState (
 
 ```cpp
 std::string sdm::common::getState (
-    state
+    state x
 ) 
 ```
 
@@ -87,4 +87,4 @@ void sdm::common::logo ()
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/common.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/common.cpp`

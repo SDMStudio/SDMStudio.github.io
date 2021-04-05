@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1GymInterface" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sdm::GymInterface</compoundname>
+    <includes refid="gym__interface_8hpp" local="no">gym_interface.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TObsSpace</declname>
+        <defname>TObsSpace</defname>
+        <defval><ref refid="classsdm_1_1Space" kindref="compound">Space</ref></defval>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TActSpace</declname>
+        <defname>TActSpace</defname>
+        <defval><ref refid="classsdm_1_1Space" kindref="compound">Space</ref></defval>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>is_multi_agent</declname>
+        <defname>is_multi_agent</defname>
+        <defval>false</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classsdm_1_1GymInterface_1a2a350aec71f38f5cbb5e8fe42a7a7dca" prot="protected" static="no">
+        <type>typename TObsSpace::value_type</type>
+        <definition>using sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::observation_type =  typename TObsSpace::value_type</definition>
+        <argsstring></argsstring>
+        <name>observation_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1GymInterface_1a309ed7021a55ef7819986f13e429561e" prot="protected" static="no">
+        <type>typename TActSpace::value_type</type>
+        <definition>using sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::action_type =  typename TActSpace::value_type</definition>
+        <argsstring></argsstring>
+        <name>action_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1GymInterface_1a7ea98cfed78b732d9cf7e479d1bf574a" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; TObsSpace &gt;</type>
+        <definition>std::shared_ptr&lt;TObsSpace&gt; sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::observation_space_</definition>
+        <argsstring></argsstring>
+        <name>observation_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="35" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1GymInterface_1aae899a97e8aa135a4a721f492dba49c6" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; TActSpace &gt;</type>
+        <definition>std::shared_ptr&lt;TActSpace&gt; sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::action_space_</definition>
+        <argsstring></argsstring>
+        <name>action_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1GymInterface_1ab09a1f16238e32e4c7eb0f3a21a31994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::GymInterface</definition>
+        <argsstring>()</argsstring>
+        <name>GymInterface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1GymInterface_1a1b7fabd846221aef6181e1f912fb139c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::GymInterface</definition>
+        <argsstring>(std::shared_ptr&lt; TObsSpace &gt;, std::shared_ptr&lt; TActSpace &gt;)</argsstring>
+        <name>GymInterface</name>
+        <param>
+          <type>std::shared_ptr&lt; TObsSpace &gt;</type>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; TActSpace &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1GymInterface_1a88a433a54b817f6d8b269f0d72a140f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; TObsSpace &gt;</type>
+        <definition>std::shared_ptr&lt;TObsSpace&gt; sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::getObsSpace</definition>
+        <argsstring>() const</argsstring>
+        <name>getObsSpace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1GymInterface_1afe2a50de390128d95b37d452b1e303f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; TActSpace &gt;</type>
+        <definition>std::shared_ptr&lt;TActSpace&gt; sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::getActionSpace</definition>
+        <argsstring>() const</argsstring>
+        <name>getActionSpace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1GymInterface_1a5851381b72130c3e764e2a3f4b4cf428" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classsdm_1_1GymInterface_1a2a350aec71f38f5cbb5e8fe42a7a7dca" kindref="member">observation_type</ref></type>
+        <definition>virtual observation_type sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>reset</name>
+        <reimplementedby refid="classsdm_1_1BeliefMDP_1a95b65622d3a3c652dc0de2077f24b66b">reset</reimplementedby>
+        <reimplementedby refid="classsdm_1_1InteractiveWorld_1a41e771ec429deae5cd7ab8fe6553c88a">reset</reimplementedby>
+        <reimplementedby refid="classsdm_1_1DecisionProcess_1a3320d30ba06078bdb1277cedebe94aa4">reset</reimplementedby>
+        <reimplementedby refid="classsdm_1_1DecisionProcess_1a3320d30ba06078bdb1277cedebe94aa4">reset</reimplementedby>
+        <reimplementedby refid="classsdm_1_1DecisionProcess_1a3320d30ba06078bdb1277cedebe94aa4">reset</reimplementedby>
+        <reimplementedby refid="classsdm_1_1DecisionProcess_1a3320d30ba06078bdb1277cedebe94aa4">reset</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1GymInterface_1a78aa80d55b7efe06c82370e3a13f5ca7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::tuple&lt; <ref refid="classsdm_1_1GymInterface_1a2a350aec71f38f5cbb5e8fe42a7a7dca" kindref="member">observation_type</ref>, std::vector&lt; double &gt;, bool &gt;</type>
+        <definition>std::tuple&lt;observation_type, std::vector&lt;double&gt;, bool&gt; sdm::GymInterface&lt; TObsSpace, TActSpace, is_multi_agent &gt;::step</definition>
+        <argsstring>(action_type)</argsstring>
+        <name>step</name>
+        <param>
+          <type><ref refid="classsdm_1_1GymInterface_1a309ed7021a55ef7819986f13e429561e" kindref="member">action_type</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="47" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The interface that must be implemented by reinforcement learning environment. The interface is inspired by <ulink url="https://gym.openai.com/">OpenAI Gym environments</ulink>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Provides a Gym like interface.</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TObsSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of observation space </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TActSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type of action space </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp" bodystart="29" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1GymInterface_1aae899a97e8aa135a4a721f492dba49c6" prot="protected" virt="non-virtual"><scope>sdm::GymInterface</scope><name>action_space_</name></member>
+      <member refid="classsdm_1_1GymInterface_1a309ed7021a55ef7819986f13e429561e" prot="protected" virt="non-virtual"><scope>sdm::GymInterface</scope><name>action_type</name></member>
+      <member refid="classsdm_1_1GymInterface_1afe2a50de390128d95b37d452b1e303f8" prot="public" virt="non-virtual"><scope>sdm::GymInterface</scope><name>getActionSpace</name></member>
+      <member refid="classsdm_1_1GymInterface_1a88a433a54b817f6d8b269f0d72a140f5" prot="public" virt="non-virtual"><scope>sdm::GymInterface</scope><name>getObsSpace</name></member>
+      <member refid="classsdm_1_1GymInterface_1ab09a1f16238e32e4c7eb0f3a21a31994" prot="public" virt="non-virtual"><scope>sdm::GymInterface</scope><name>GymInterface</name></member>
+      <member refid="classsdm_1_1GymInterface_1a1b7fabd846221aef6181e1f912fb139c" prot="public" virt="non-virtual"><scope>sdm::GymInterface</scope><name>GymInterface</name></member>
+      <member refid="classsdm_1_1GymInterface_1a7ea98cfed78b732d9cf7e479d1bf574a" prot="protected" virt="non-virtual"><scope>sdm::GymInterface</scope><name>observation_space_</name></member>
+      <member refid="classsdm_1_1GymInterface_1a2a350aec71f38f5cbb5e8fe42a7a7dca" prot="protected" virt="non-virtual"><scope>sdm::GymInterface</scope><name>observation_type</name></member>
+      <member refid="classsdm_1_1GymInterface_1a5851381b72130c3e764e2a3f4b4cf428" prot="public" virt="pure-virtual"><scope>sdm::GymInterface</scope><name>reset</name></member>
+      <member refid="classsdm_1_1GymInterface_1a78aa80d55b7efe06c82370e3a13f5ca7" prot="public" virt="non-virtual"><scope>sdm::GymInterface</scope><name>step</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

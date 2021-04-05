@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1dpomdp__t" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::dpomdp_t</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">position_tagged</basecompoundref>
+    <includes refid="ast_8hpp" local="no">ast.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a3b3cd0d7e11b726b1af40d9df46cb720" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1value__t" kindref="compound">value_t</ref></type>
+        <definition>value_t sdm::ast::dpomdp_t::agent_param</definition>
+        <argsstring></argsstring>
+        <name>agent_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="151" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a3a336e92f1680067c5aae31bc4752169" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sdm::ast::dpomdp_t::discount_param</definition>
+        <argsstring></argsstring>
+        <name>discount_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="152" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a03264fe6a24bedef92b13ebe594a91e5" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sdm::ast::dpomdp_t::value_param</definition>
+        <argsstring></argsstring>
+        <name>value_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="153" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1aa36f02706ffd1075192604d81a4d5032" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1value__t" kindref="compound">value_t</ref></type>
+        <definition>value_t sdm::ast::dpomdp_t::state_param</definition>
+        <argsstring></argsstring>
+        <name>state_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="154" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a6010175697e18e17213e3162f164056c" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1real__vector__t" kindref="compound">real_vector_t</ref></type>
+        <definition>real_vector_t sdm::ast::dpomdp_t::start_param</definition>
+        <argsstring></argsstring>
+        <name>start_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="155" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a3db2979262d49b10764610b7f8da8100" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1values__t" kindref="compound">values_t</ref></type>
+        <definition>values_t sdm::ast::dpomdp_t::action_param</definition>
+        <argsstring></argsstring>
+        <name>action_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="156" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a0d99b8ceff62b1e293873b0416f83b2b" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1values__t" kindref="compound">values_t</ref></type>
+        <definition>values_t sdm::ast::dpomdp_t::observation_param</definition>
+        <argsstring></argsstring>
+        <name>observation_param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="157" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a239367b0d72c8f126832170691293794" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1ast_1a6c427b4931c0b86e1ea82f3f78277181" kindref="member">transition_t</ref></type>
+        <definition>transition_t sdm::ast::dpomdp_t::transition_spec</definition>
+        <argsstring></argsstring>
+        <name>transition_spec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="158" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1a2c83ed3b5c361a454d60104df9befb83" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1ast_1a091008b6af233b3103bdad81d663a23c" kindref="member">observation_t</ref></type>
+        <definition>observation_t sdm::ast::dpomdp_t::observation_spec</definition>
+        <argsstring></argsstring>
+        <name>observation_spec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="159" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1dpomdp__t_1ad694fd4ba9ae64b98a46d36ae6103571" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1ast_1a8c8a86c73e75c95a437610f802fae30b" kindref="member">reward_t</ref></type>
+        <definition>reward_t sdm::ast::dpomdp_t::reward_spec</definition>
+        <argsstring></argsstring>
+        <name>reward_spec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="160" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="170">
+        <label>sdm::ast::dpomdp_t</label>
+        <link refid="structsdm_1_1ast_1_1dpomdp__t"/>
+        <childnode refid="171" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>x3::position_tagged</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="172">
+        <label>sdm::ast::dpomdp_t</label>
+        <link refid="structsdm_1_1ast_1_1dpomdp__t"/>
+        <childnode refid="173" relation="public-inheritance">
+        </childnode>
+        <childnode refid="174" relation="usage">
+          <edgelabel>state_param</edgelabel>
+          <edgelabel>agent_param</edgelabel>
+        </childnode>
+        <childnode refid="175" relation="usage">
+          <edgelabel>start_param</edgelabel>
+        </childnode>
+        <childnode refid="177" relation="usage">
+          <edgelabel>action_param</edgelabel>
+          <edgelabel>observation_param</edgelabel>
+        </childnode>
+      </node>
+      <node id="177">
+        <label>sdm::ast::values_t</label>
+        <link refid="structsdm_1_1ast_1_1values__t"/>
+        <childnode refid="178" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>x3::position_tagged</label>
+      </node>
+      <node id="178">
+        <label>x3::variant&lt; std::vector&lt; unsigned short &gt;, std::vector&lt; std::vector&lt; std::string &gt; &gt; &gt;</label>
+      </node>
+      <node id="174">
+        <label>sdm::RecursiveMap&lt; T0, T1, Ts... &gt;</label>
+        <link refid="classsdm_1_1RecursiveMap"/>
+      </node>
+      <node id="176">
+        <label>boost::spirit::x3::variant&lt; std::string, std::vector&lt; float &gt; &gt;</label>
+      </node>
+      <node id="175">
+        <label>sdm::ast::real_vector_t</label>
+        <link refid="structsdm_1_1ast_1_1real__vector__t"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="150" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="150" bodyend="161"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a3db2979262d49b10764610b7f8da8100" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>action_param</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a3b3cd0d7e11b726b1af40d9df46cb720" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>agent_param</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a3a336e92f1680067c5aae31bc4752169" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>discount_param</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a0d99b8ceff62b1e293873b0416f83b2b" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>observation_param</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a2c83ed3b5c361a454d60104df9befb83" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>observation_spec</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1ad694fd4ba9ae64b98a46d36ae6103571" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>reward_spec</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a6010175697e18e17213e3162f164056c" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>start_param</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1aa36f02706ffd1075192604d81a4d5032" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>state_param</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a239367b0d72c8f126832170691293794" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>transition_spec</name></member>
+      <member refid="structsdm_1_1ast_1_1dpomdp__t_1a03264fe6a24bedef92b13ebe594a91e5" prot="public" virt="non-virtual"><scope>sdm::ast::dpomdp_t</scope><name>value_param</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

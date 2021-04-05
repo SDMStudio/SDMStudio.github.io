@@ -82,4 +82,4 @@ inline result_type sdm::ast::str_visitor::operator() (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`

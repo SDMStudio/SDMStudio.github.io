@@ -8,13 +8,15 @@
 
 [Go to the source code of this file.](gym__interface_8hpp_source.md)
 
-_GymInterface class._ [More...](#detailed-description)
+[More...](#detailed-description)
 
 * `#include <vector>`
+* `#include <tuple>`
 * `#include <sdm/types.hpp>`
 * `#include <sdm/public/world.hpp>`
 * `#include <sdm/core/space/space.hpp>`
 * `#include <sdm/core/space/multi_discrete_space.hpp>`
+* `#include <sdm/world/gym_interface.tpp>`
 
 
 
@@ -34,7 +36,7 @@ _GymInterface class._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GymInterface**](classsdm_1_1GymInterface.md) &lt;TObsSpace, TActSpace&gt;<br>_Provides a Gym like interface._  |
+| class | [**GymInterface**](classsdm_1_1GymInterface.md) &lt;TObsSpace, TActSpace, is\_multi\_agent&gt;<br>_The interface that must be implemented by reinforcement learning environment. The interface is inspired by_ [OpenAI Gym environments](https://gym.openai.com/) _._ |
 
 
 
@@ -55,7 +57,7 @@ _GymInterface class._ [More...](#detailed-description)
 
 **Author:**
 
-David Albert 
+David Albert ([david.albert@insa-lyon.fr](mailto:david.albert@insa-lyon.fr)) 
 
 
 
@@ -69,12 +71,19 @@ David Albert
 
 **Date:**
 
-24 novembre 2020
+04/03/2021
 
 
-This abstract class provide an interface based on gym environment. 
+
+
+**Copyright:**
+
+Copyright (c) 2021 
+
+
+
 
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/world/gym_interface.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp`

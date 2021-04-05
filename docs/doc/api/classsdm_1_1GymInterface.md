@@ -3,21 +3,16 @@
 
 # Class sdm::GymInterface
 
-**template &lt;typename TObsSpace, typename TActSpace&gt;**
+**template &lt;typename TObsSpace, typename TActSpace, bool is\_multi\_agent&gt;**
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**GymInterface**](classsdm_1_1GymInterface.md)
 
 
 
-_Provides a Gym like interface._ 
+_The interface that must be implemented by reinforcement learning environment. The interface is inspired by_ [OpenAI Gym environments](https://gym.openai.com/) _._[More...](#detailed-description)
 
 * `#include <gym_interface.hpp>`
-
-
-
-Inherits the following classes: [sdm::World](classsdm_1_1World.md)
-
 
 
 
@@ -37,13 +32,12 @@ Inherits the following classes: [sdm::World](classsdm_1_1World.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface) (std::shared\_ptr&lt; TObsSpace &gt;, std::shared\_ptr&lt; TActSpace &gt;) <br> |
+|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-1-2) () <br> |
+|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-2-2) (std::shared\_ptr&lt; TObsSpace &gt;, std::shared\_ptr&lt; TActSpace &gt;) <br> |
 |  std::shared\_ptr&lt; TActSpace &gt; | [**getActionSpace**](classsdm_1_1GymInterface.md#function-getactionspace) () const<br> |
 |  std::shared\_ptr&lt; TObsSpace &gt; | [**getObsSpace**](classsdm_1_1GymInterface.md#function-getobsspace) () const<br> |
 | virtual [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type) | [**reset**](classsdm_1_1GymInterface.md#function-reset) () = 0<br> |
-| virtual std::tuple&lt; [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) ([**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type) a) = 0<br> |
-
-
+|  std::tuple&lt; [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) ([**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)) <br> |
 
 
 ## Protected Types
@@ -54,8 +48,6 @@ Inherits the following classes: [sdm::World](classsdm_1_1World.md)
 | typedef typename TObsSpace::value\_type | [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type)  <br> |
 
 
-
-
 ## Protected Attributes
 
 | Type | Name |
@@ -63,24 +55,38 @@ Inherits the following classes: [sdm::World](classsdm_1_1World.md)
 |  std::shared\_ptr&lt; TActSpace &gt; | [**action\_space\_**](classsdm_1_1GymInterface.md#variable-action-space-)  <br> |
 |  std::shared\_ptr&lt; TObsSpace &gt; | [**observation\_space\_**](classsdm_1_1GymInterface.md#variable-observation-space-)  <br> |
 
-## Protected Attributes inherited from sdm::World
-
-See [sdm::World](classsdm_1_1World.md)
-
-| Type | Name |
-| ---: | :--- |
-|  [**state**](namespacesdm.md#typedef-state) | [**internal**](classsdm_1_1World.md#variable-internal)   = = 0<br> |
 
 
 
+# Detailed Description
+
+
+Provides a Gym like interface.
 
 
 
+**Template parameters:**
 
+
+* `TObsSpace` type of observation space 
+* `TActSpace` type of action space 
+
+
+
+    
 ## Public Functions Documentation
 
 
-### function GymInterface 
+### function GymInterface [1/2]
+
+
+```cpp
+sdm::GymInterface::GymInterface () 
+```
+
+
+
+### function GymInterface [2/2]
 
 
 ```cpp
@@ -123,9 +129,9 @@ virtual observation_type sdm::GymInterface::reset () = 0
 
 
 ```cpp
-virtual std::tuple< observation_type , std::vector< double >, bool > sdm::GymInterface::step (
-    action_type a
-) = 0
+inline std::tuple< observation_type , std::vector< double >, bool > sdm::GymInterface::step (
+    action_type
+) 
 ```
 
 
@@ -136,7 +142,7 @@ virtual std::tuple< observation_type , std::vector< double >, bool > sdm::GymInt
 
 
 ```cpp
-using sdm::GymInterface< TObsSpace, TActSpace >::action_type =  typename TActSpace::value_type;
+using sdm::GymInterface< TObsSpace, TActSpace, is_multi_agent >::action_type =  typename TActSpace::value_type;
 ```
 
 
@@ -145,7 +151,7 @@ using sdm::GymInterface< TObsSpace, TActSpace >::action_type =  typename TActSpa
 
 
 ```cpp
-using sdm::GymInterface< TObsSpace, TActSpace >::observation_type =  typename TObsSpace::value_type;
+using sdm::GymInterface< TObsSpace, TActSpace, is_multi_agent >::observation_type =  typename TObsSpace::value_type;
 ```
 
 
@@ -156,7 +162,7 @@ using sdm::GymInterface< TObsSpace, TActSpace >::observation_type =  typename TO
 
 
 ```cpp
-std::shared_ptr<TActSpace> sdm::GymInterface< TObsSpace, TActSpace >::action_space_;
+std::shared_ptr<TActSpace> sdm::GymInterface< TObsSpace, TActSpace, is_multi_agent >::action_space_;
 ```
 
 
@@ -165,10 +171,10 @@ std::shared_ptr<TActSpace> sdm::GymInterface< TObsSpace, TActSpace >::action_spa
 
 
 ```cpp
-std::shared_ptr<TObsSpace> sdm::GymInterface< TObsSpace, TActSpace >::observation_space_;
+std::shared_ptr<TObsSpace> sdm::GymInterface< TObsSpace, TActSpace, is_multi_agent >::observation_space_;
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/world/gym_interface.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp`

@@ -8,6 +8,8 @@
 
 ````cpp
 
+#pragma once
+
 #include <string>
 #include <exception>
 
@@ -16,14 +18,14 @@ namespace sdm
     namespace exception
     {
 
-        class Except : virtual public std::exception
+        class Exception : virtual public std::exception
         {
 
         protected:
             std::string error_message;
 
         public:
-            explicit Except(const std::string &msg_) : error_message(msg_)
+            explicit Exception(const std::string &msg_) : error_message(msg_)
             {
             }
 
@@ -33,30 +35,30 @@ namespace sdm
             }
         };
 
-        class NotImplementedException : public Except
+        class NotImplementedException : public Exception
         {
         public:
-            explicit NotImplementedException() : Except("Not Implemented Exception") {}
+            explicit NotImplementedException() : Exception("Not Implemented Exception") {}
         };
 
-        class FileNotFoundException : public Except
+        class FileNotFoundException : public Exception
         {
         private:
             std::string file;
 
         public:
-            explicit FileNotFoundException(std::string file_) : Except("File \"" + file_ + "\" does not seem to exists."),
+            explicit FileNotFoundException(std::string file_) : Exception("File \"" + file_ + "\" does not seem to exists."),
                                                                 file(file_) {}
             std::string get_file() const { return file; }
         };
 
-        class ParsingException : public Except
+        class ParsingException : public Exception
         {
         protected:
             std::string line_details;
 
         public:
-            explicit ParsingException(const std::string &line_details_ = "") : Except("Parsing failed -> Stopped at: \"" + line_details_ + "\"\n"),
+            explicit ParsingException(const std::string &line_details_ = "") : Exception("Parsing failed -> Stopped at: \"" + line_details_ + "\"\n"),
                                                                                line_details(line_details_) {}
             std::string get_line_details() const { return line_details; }
         };

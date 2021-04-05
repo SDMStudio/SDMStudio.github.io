@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1StochasticProcessBase" kind="class" language="C++" prot="public">
+    <compoundname>sdm::StochasticProcessBase</compoundname>
+    <derivedcompoundref refid="classsdm_1_1DecisionProcessBase" prot="public" virt="virtual">sdm::DecisionProcessBase&lt; TStateSpace, TActionSpace, TDistrib &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classsdm_1_1PartiallyObservableProcessBase" prot="public" virt="virtual">sdm::PartiallyObservableProcessBase&lt; TStateSpace, TObsSpace, TDistrib &gt;</derivedcompoundref>
+    <includes refid="stochastic__process__base_8hpp" local="no">stochastic_process_base.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TStateSpace</declname>
+        <defname>TStateSpace</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>TDistrib</declname>
+        <defname>TDistrib</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1StochasticProcessBase_1a44c8f655596252c3ae7d86501dbd8f8a" prot="public" static="no">
+        <type>TStateSpace</type>
+        <definition>using sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::state_space_type =  TStateSpace</definition>
+        <argsstring></argsstring>
+        <name>state_space_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" prot="public" static="no">
+        <type>typename TStateSpace::value_type</type>
+        <definition>using sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::state_type =  typename TStateSpace::value_type</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsdm_1_1StochasticProcessBase_1ae3f6aac1ee72344130922b00b8519d22" prot="private" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref></type>
+        <definition>state_type sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::internal_state_</definition>
+        <argsstring></argsstring>
+        <name>internal_state_</name>
+        <briefdescription>
+<para>The internal state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1StochasticProcessBase_1ad7e5061186e3bc008ba7070722607417" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; TStateSpace &gt;</type>
+        <definition>std::shared_ptr&lt;TStateSpace&gt; sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::state_space_</definition>
+        <argsstring></argsstring>
+        <name>state_space_</name>
+        <briefdescription>
+<para>The state space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="58" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1StochasticProcessBase_1a9214a00a2dcd3e36b97d0bc25a810eac" prot="protected" static="no" mutable="no">
+        <type>TDistrib</type>
+        <definition>TDistrib sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::start_distrib_</definition>
+        <argsstring></argsstring>
+        <name>start_distrib_</name>
+        <briefdescription>
+<para>The initial state distribution. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="63" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1a292d1adb7db2763a2219154be7071604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::StochasticProcessBase</definition>
+        <argsstring>()</argsstring>
+        <name>StochasticProcessBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1ad84c54a9bc25f326b3d3b1f4aa80d833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::StochasticProcessBase</definition>
+        <argsstring>(std::shared_ptr&lt; TStateSpace &gt;)</argsstring>
+        <name>StochasticProcessBase</name>
+        <param>
+          <type>std::shared_ptr&lt; TStateSpace &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1a726d046dafd94ba58564d84c561c56a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::StochasticProcessBase</definition>
+        <argsstring>(std::shared_ptr&lt; TStateSpace &gt;, TDistrib)</argsstring>
+        <name>StochasticProcessBase</name>
+        <param>
+          <type>std::shared_ptr&lt; TStateSpace &gt;</type>
+        </param>
+        <param>
+          <type>TDistrib</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1a90e15c19c1d01c277c89413f122a7289" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref></type>
+        <definition>state_type sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::getInternalState</definition>
+        <argsstring>() const</argsstring>
+        <name>getInternalState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1aa7e0f42e5db9e618b9f1dfa4cb5a9e5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::setInternalState</definition>
+        <argsstring>(state_type new_i_state)</argsstring>
+        <name>setInternalState</name>
+        <param>
+          <type><ref refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" kindref="member">state_type</ref></type>
+          <declname>new_i_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1abfc0284a6d1e969da12f24f8af891fbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TDistrib</type>
+        <definition>TDistrib sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::getStartDistrib</definition>
+        <argsstring>() const</argsstring>
+        <name>getStartDistrib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1a368ac22926cd10dffdfb80ef90b53956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::setStartDistrib</definition>
+        <argsstring>(TDistrib)</argsstring>
+        <name>setStartDistrib</name>
+        <param>
+          <type>TDistrib</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1a9dc90273591c32b94a344fef1d064ffb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; TStateSpace &gt;</type>
+        <definition>std::shared_ptr&lt;TStateSpace&gt; sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::getStateSpace</definition>
+        <argsstring>() const</argsstring>
+        <name>getStateSpace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StochasticProcessBase_1afc32b6f464dda5cf90e9344c093939e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;::setStateSpace</definition>
+        <argsstring>(std::shared_ptr&lt; TStateSpace &gt;)</argsstring>
+        <name>setStateSpace</name>
+        <param>
+          <type>std::shared_ptr&lt; TStateSpace &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="46" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is the base class for stochastic processes including StochasticProcess class and <ref refid="classsdm_1_1DecisionProcess" kindref="compound">DecisionProcess</ref> class. This class is usually used to have a base interface that provide required data structure as StateSpace. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TStateSpace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of StateSpace to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TDistrib</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of start distribution to be used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="679">
+        <label>sdm::PartiallyObservableDecisionProcess&lt; TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TObsDynamics, TReward, TDistrib &gt;</label>
+        <link refid="classsdm_1_1PartiallyObservableDecisionProcess"/>
+        <childnode refid="678" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="677">
+        <label>sdm::DecisionProcessBase&lt; TStateSpace, TDistrib &gt;</label>
+        <link refid="classsdm_1_1DecisionProcessBase"/>
+        <childnode refid="676" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="678">
+        <label>DecisionProcess&lt; TStateSpace, TActionSpace, TObsSpace, TStateDynamics, TReward, TDistrib, false &gt;</label>
+        <link refid="classsdm_1_1DecisionProcess"/>
+        <childnode refid="677" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="683">
+        <label>sdm::PartiallyObservableProcessBase&lt; TStateSpace, TDistrib &gt;</label>
+        <link refid="classsdm_1_1PartiallyObservableProcessBase"/>
+        <childnode refid="676" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="676">
+        <label>sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;</label>
+        <link refid="classsdm_1_1StochasticProcessBase"/>
+      </node>
+      <node id="680">
+        <label>sdm::DecisionProcess&lt; TStateSpace, TActionSpace, TDistrib &gt;</label>
+        <link refid="classsdm_1_1DecisionProcess"/>
+        <childnode refid="677" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="682">
+        <label>sdm::DiscreteMMDP&lt; DiscreteSpace&lt; number &gt;, MultiDiscreteSpace&lt; number &gt;, StateDynamics, Reward, std::discrete_distribution&lt; number &gt; &gt;</label>
+        <link refid="classsdm_1_1DiscreteMMDP"/>
+        <childnode refid="680" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="681">
+        <label>sdm::DiscreteMDP&lt; DiscreteSpace&lt; number &gt;, DiscreteSpace&lt; number &gt;, StateDynamics, Reward, std::discrete_distribution&lt; number &gt; &gt;</label>
+        <link refid="classsdm_1_1DiscreteMDP"/>
+        <childnode refid="680" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>sdm::PartiallyObservableDecisionProcess&lt; TStateSpace, TObsSpace, TDistrib &gt;</label>
+        <link refid="classsdm_1_1PartiallyObservableDecisionProcess"/>
+        <childnode refid="683" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="685">
+        <label>sdm::StochasticProcessBase&lt; TStateSpace, TDistrib &gt;</label>
+        <link refid="classsdm_1_1StochasticProcessBase"/>
+        <childnode refid="686" relation="usage">
+          <edgelabel>start_distrib_</edgelabel>
+        </childnode>
+      </node>
+      <node id="686">
+        <label>TDistrib</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/stochastic_process_base.hpp" bodystart="29" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1StochasticProcessBase_1a90e15c19c1d01c277c89413f122a7289" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>getInternalState</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1abfc0284a6d1e969da12f24f8af891fbb" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>getStartDistrib</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1a9dc90273591c32b94a344fef1d064ffb" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>getStateSpace</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1ae3f6aac1ee72344130922b00b8519d22" prot="private" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>internal_state_</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1aa7e0f42e5db9e618b9f1dfa4cb5a9e5c" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>setInternalState</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1a368ac22926cd10dffdfb80ef90b53956" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>setStartDistrib</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1afc32b6f464dda5cf90e9344c093939e4" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>setStateSpace</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1a9214a00a2dcd3e36b97d0bc25a810eac" prot="protected" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>start_distrib_</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1ad7e5061186e3bc008ba7070722607417" prot="protected" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>state_space_</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1a44c8f655596252c3ae7d86501dbd8f8a" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>state_space_type</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1abc3047d5cee6909bd4b73a527c3f19f0" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>state_type</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1a292d1adb7db2763a2219154be7071604" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>StochasticProcessBase</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1ad84c54a9bc25f326b3d3b1f4aa80d833" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>StochasticProcessBase</name></member>
+      <member refid="classsdm_1_1StochasticProcessBase_1a726d046dafd94ba58564d84c561c56a4" prot="public" virt="non-virtual"><scope>sdm::StochasticProcessBase</scope><name>StochasticProcessBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

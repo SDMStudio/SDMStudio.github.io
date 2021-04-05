@@ -93,4 +93,4 @@ MultiDiscreteSpace<std::string> sdm::ast::joint_element_encoder::element_space_;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`

@@ -110,11 +110,16 @@ namespace sdm
         void setDiscount(double);
         double getDiscount();
 
-        virtual number getNumObservations(number agent) const;
+        virtual number getNumAgents() const;
 
+        const DiscreteSpace<number> &getStateSpace() const;
         virtual number getNumStates() const;
 
-        virtual number getNumAgents() const;
+        const MultiDiscreteSpace<number> &getObsSpace() const;
+
+        number getNumJObservations() const;
+
+        virtual number getNumObservations(number agent) const;
 
         const MultiDiscreteSpace<number> &getActionSpace() const;
 

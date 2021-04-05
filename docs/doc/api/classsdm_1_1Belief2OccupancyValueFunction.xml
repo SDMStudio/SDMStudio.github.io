@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1Belief2OccupancyValueFunction" kind="class" language="C++" prot="public">
+    <compoundname>sdm::Belief2OccupancyValueFunction</compoundname>
+    <basecompoundref refid="classsdm_1_1BinaryFunction" prot="public" virt="non-virtual">sdm::BinaryFunction&lt; TOccupancyState, number, double &gt;</basecompoundref>
+    <includes refid="belief__2__occupancy__vf_8hpp" local="no">belief_2_occupancy_vf.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TBelief</type>
+      </param>
+      <param>
+        <type>typename TOccupancyState</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1Belief2OccupancyValueFunction_1ad677487c1edc6d09ce5f10a0ee5d5858" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TBelief, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;ValueFunction&lt;TBelief, number&gt; &gt; sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;::pomdp_vf_</definition>
+        <argsstring></argsstring>
+        <name>pomdp_vf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="16" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1Belief2OccupancyValueFunction_1a3e7c9b9799725591ae1e3aca93f284e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;::Belief2OccupancyValueFunction</definition>
+        <argsstring>(std::shared_ptr&lt; ValueFunction&lt; TBelief, number &gt;&gt; pomdp_vf)</argsstring>
+        <name>Belief2OccupancyValueFunction</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TBelief, <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;&gt;</type>
+          <declname>pomdp_vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Belief2OccupancyValueFunction_1a27b3e1ad602fbdff68d89cd95985aa30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>is_solving_dpomdp</declname>
+            <defname>is_solving_dpomdp</defname>
+            <defval><ref refid="structstd_1_1is__any" kindref="compound">std::is_any</ref>&lt;typename <ref refid="structsdm_1_1WorldType" kindref="compound">WorldType</ref>&lt;TOccupancyState&gt;::underlying_problem_type, <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref>&gt;::value</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if_t&lt; is_solving_dpomdp, double &gt;</type>
+        <definition>std::enable_if_t&lt;is_solving_dpomdp, double&gt; sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;::sawtooth</definition>
+        <argsstring>(const TBelief &amp;bstate, const number &amp;tau)</argsstring>
+        <name>sawtooth</name>
+        <param>
+          <type>const TBelief &amp;</type>
+          <declname>bstate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &amp;</type>
+          <declname>tau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Belief2OccupancyValueFunction_1afc29f518544fd422ced214f149d69389" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>is_solving_dpomdp</declname>
+            <defname>is_solving_dpomdp</defname>
+            <defval><ref refid="structstd_1_1is__any" kindref="compound">std::is_any</ref>&lt;typename <ref refid="structsdm_1_1WorldType" kindref="compound">WorldType</ref>&lt;TOccupancyState&gt;::underlying_problem_type, <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref>&gt;::value</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if_t&lt; is_solving_dpomdp, double &gt;</type>
+        <definition>std::enable_if_t&lt;is_solving_dpomdp, double&gt; sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;::operator()</definition>
+        <argsstring>(const TOccupancyState &amp;ostate, const number &amp;tau)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classsdm_1_1BinaryFunction_1a3d447385a4d0e78a88635b20615117c6">operator()</reimplements>
+        <param>
+          <type>const TOccupancyState &amp;</type>
+          <declname>ostate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &amp;</type>
+          <declname>tau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Belief2OccupancyValueFunction_1a4271b76f71755d74c6e0390859035e40" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>is_solving_dpomdp</declname>
+            <defname>is_solving_dpomdp</defname>
+            <defval><ref refid="structstd_1_1is__any" kindref="compound">std::is_any</ref>&lt;typename <ref refid="structsdm_1_1WorldType" kindref="compound">WorldType</ref>&lt;TOccupancyState&gt;::underlying_problem_type, <ref refid="classsdm_1_1DiscreteDecPOMDP" kindref="compound">DiscreteDecPOMDP</ref>&gt;::value</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if_t&lt;!is_solving_dpomdp, double &gt;</type>
+        <definition>std::enable_if_t&lt;!is_solving_dpomdp, double&gt; sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;::operator()</definition>
+        <argsstring>(const TOccupancyState &amp;ostate, const number &amp;tau)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classsdm_1_1BinaryFunction_1a3d447385a4d0e78a88635b20615117c6">operator()</reimplements>
+        <param>
+          <type>const TOccupancyState &amp;</type>
+          <declname>ostate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &amp;</type>
+          <declname>tau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1Belief2OccupancyValueFunction_1ab47ca51b27ce6fdf4b0f3b5f66a6fc73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;::operator()</definition>
+        <argsstring>(const TOccupancyState &amp;ostate, const number &amp;tau)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classsdm_1_1BinaryFunction_1a3d447385a4d0e78a88635b20615117c6">operator()</reimplements>
+        <param>
+          <type>const TOccupancyState &amp;</type>
+          <declname>ostate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &amp;</type>
+          <declname>tau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="26">
+        <label>sdm::Function&lt; std::pair&lt; TOccupancyState, number &gt;, double &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="25">
+        <label>sdm::BinaryFunction&lt; TOccupancyState, number, double &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;</label>
+        <link refid="classsdm_1_1Belief2OccupancyValueFunction"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>sdm::Function&lt; std::pair&lt; TOccupancyState, number &gt;, double &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="28">
+        <label>sdm::BinaryFunction&lt; TOccupancyState, number, double &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>sdm::Belief2OccupancyValueFunction&lt; TBelief, TOccupancyState &gt;</label>
+        <link refid="classsdm_1_1Belief2OccupancyValueFunction"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" line="14" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp" bodystart="13" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1Belief2OccupancyValueFunction_1a3e7c9b9799725591ae1e3aca93f284e1" prot="public" virt="non-virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>Belief2OccupancyValueFunction</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" prot="public" virt="non-virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1Belief2OccupancyValueFunction_1afc29f518544fd422ced214f149d69389" prot="public" virt="virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1Belief2OccupancyValueFunction_1a4271b76f71755d74c6e0390859035e40" prot="public" virt="virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1Belief2OccupancyValueFunction_1ab47ca51b27ce6fdf4b0f3b5f66a6fc73" prot="public" virt="virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a70feb6f73b43d4bcb9263bba9e23963a" prot="public" virt="virtual" ambiguityscope="BinaryFunction&lt; TOccupancyState, number, double &gt;::"><scope>sdm::Belief2OccupancyValueFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" prot="public" virt="non-virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>output_type</name></member>
+      <member refid="classsdm_1_1Belief2OccupancyValueFunction_1ad677487c1edc6d09ce5f10a0ee5d5858" prot="protected" virt="non-virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>pomdp_vf_</name></member>
+      <member refid="classsdm_1_1Belief2OccupancyValueFunction_1a27b3e1ad602fbdff68d89cd95985aa30" prot="public" virt="non-virtual"><scope>sdm::Belief2OccupancyValueFunction</scope><name>sawtooth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

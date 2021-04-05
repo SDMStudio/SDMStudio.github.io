@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ClassicBellmanBackupOperator" kind="class" language="C++" prot="public">
+    <compoundname>sdm::ClassicBellmanBackupOperator</compoundname>
+    <basecompoundref refid="classsdm_1_1BackupOperator" prot="public" virt="non-virtual">sdm::BackupOperator&lt; TState, TAction, double &gt;</basecompoundref>
+    <includes refid="backup__operator_8hpp" local="no">backup_operator.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1ClassicBellmanBackupOperator_1a9808b6165b302514859c9be1ab551d54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double sdm::ClassicBellmanBackupOperator&lt; TState, TAction &gt;::backup</definition>
+        <argsstring>(ValueFunction&lt; TState, TAction &gt; *vf, TState s, int t)</argsstring>
+        <name>backup</name>
+        <reimplements refid="classsdm_1_1BackupOperator_1ac815fd744ce4fbf081ecb8686c783cc9">backup</reimplements>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; *</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>TState</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp" line="21" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="51">
+        <label>sdm::ClassicBellmanBackupOperator&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1ClassicBellmanBackupOperator"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>sdm::BackupOperator&lt; TState, TAction, double &gt;</label>
+        <link refid="classsdm_1_1BackupOperator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="53">
+        <label>sdm::ClassicBellmanBackupOperator&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1ClassicBellmanBackupOperator"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>sdm::BackupOperator&lt; TState, TAction, double &gt;</label>
+        <link refid="classsdm_1_1BackupOperator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp" line="19" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/backup_operator/backup_operator.hpp" bodystart="18" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ClassicBellmanBackupOperator_1a9808b6165b302514859c9be1ab551d54" prot="public" virt="virtual"><scope>sdm::ClassicBellmanBackupOperator</scope><name>backup</name></member>
+      <member refid="classsdm_1_1BackupOperator_1a7724ecbd44d3f6867d9d511757bb5450" prot="public" virt="non-virtual"><scope>sdm::ClassicBellmanBackupOperator</scope><name>data_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

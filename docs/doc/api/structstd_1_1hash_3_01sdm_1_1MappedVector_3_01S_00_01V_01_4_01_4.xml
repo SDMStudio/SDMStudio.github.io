@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;</compoundname>
+    <includes refid="mapped__vector_8hpp" local="no">mapped_vector.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename S</type>
+      </param>
+      <param>
+        <type>typename V</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1a77ae9ac07503101c68be36f1b9a11a47" prot="public" static="no">
+        <type><ref refid="classsdm_1_1MappedVector" kindref="compound">sdm::MappedVector</ref>&lt; S, V &gt;</type>
+        <definition>typedef sdm::MappedVector&lt;S, V&gt; std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;::argument_type</definition>
+        <argsstring></argsstring>
+        <name>argument_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="87" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1a81d6a3518989dcf2064045f96e8d1327" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>typedef std::size_t std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="88" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1aee44a363cd8e1864dc3f034577cf9b38" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1a81d6a3518989dcf2064045f96e8d1327" kindref="member">result_type</ref></type>
+        <definition>result_type std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;::operator()</definition>
+        <argsstring>(const argument_type &amp;in) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1a77ae9ac07503101c68be36f1b9a11a47" kindref="member">argument_type</ref> &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="89" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="89" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" line="86" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/mapped_vector.hpp" bodystart="85" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1a77ae9ac07503101c68be36f1b9a11a47" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;</scope><name>argument_type</name></member>
+      <member refid="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1aee44a363cd8e1864dc3f034577cf9b38" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;</scope><name>operator()</name></member>
+      <member refid="structstd_1_1hash_3_01sdm_1_1MappedVector_3_01S_00_01V_01_4_01_4_1a81d6a3518989dcf2064045f96e8d1327" prot="public" virt="non-virtual"><scope>std::hash&lt; sdm::MappedVector&lt; S, V &gt; &gt;</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

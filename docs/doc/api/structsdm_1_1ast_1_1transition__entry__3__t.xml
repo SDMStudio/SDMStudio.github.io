@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1transition__entry__3__t" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::transition_entry_3_t</compoundname>
+    <includes refid="ast_8hpp" local="no">ast.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1transition__entry__3__t_1af28e6f3ed150294e08b96b68606c198f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1ast_1a97b6f04fc82cc52f30601adf9d1fb9bb" kindref="member">identifiers_t</ref></type>
+        <definition>identifiers_t sdm::ast::transition_entry_3_t::jaction</definition>
+        <argsstring></argsstring>
+        <name>jaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="66" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1transition__entry__3__t_1a4e78ee8113a19ec956b1f5363bdf1c9d" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1matrix__t" kindref="compound">matrix_t</ref></type>
+        <definition>matrix_t sdm::ast::transition_entry_3_t::transitions</definition>
+        <argsstring></argsstring>
+        <name>transitions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="67" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="708">
+        <label>sdm::ast::transition_entry_3_t</label>
+        <link refid="structsdm_1_1ast_1_1transition__entry__3__t"/>
+        <childnode refid="709" relation="usage">
+          <edgelabel>transitions</edgelabel>
+        </childnode>
+      </node>
+      <node id="709">
+        <label>sdm::ast::matrix_t</label>
+        <link refid="structsdm_1_1ast_1_1matrix__t"/>
+        <childnode refid="710" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="710">
+        <label>boost::spirit::x3::variant&lt; std::string, std::vector&lt; std::vector&lt; float &gt; &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="65" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="65" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1ast_1_1transition__entry__3__t_1af28e6f3ed150294e08b96b68606c198f" prot="public" virt="non-virtual"><scope>sdm::ast::transition_entry_3_t</scope><name>jaction</name></member>
+      <member refid="structsdm_1_1ast_1_1transition__entry__3__t_1a4e78ee8113a19ec956b1f5363bdf1c9d" prot="public" virt="non-virtual"><scope>sdm::ast::transition_entry_3_t</scope><name>transitions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1BoundInitializer" kind="class" language="C++" prot="public">
+    <compoundname>sdm::BoundInitializer</compoundname>
+    <basecompoundref refid="classsdm_1_1Initializer" prot="public" virt="non-virtual">sdm::Initializer&lt; TState, TAction &gt;</basecompoundref>
+    <derivedcompoundref refid="classsdm_1_1MaxInitializer" prot="public" virt="non-virtual">sdm::MaxInitializer&lt; TState, TAction &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classsdm_1_1MinInitializer" prot="public" virt="non-virtual">sdm::MinInitializer&lt; TState, TAction &gt;</derivedcompoundref>
+    <includes refid="initializer_8hpp" local="no">initializer.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1BoundInitializer_1ac9b5ca3713ee80c55e1259b1f95ede85" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::BoundInitializer&lt; TState, TAction &gt;::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="92" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1BoundInitializer_1a86f67df4f0447c2542033edb63cc8452" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::BoundInitializer&lt; TState, TAction &gt;::BoundInitializer</definition>
+        <argsstring>()</argsstring>
+        <name>BoundInitializer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="95" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1BoundInitializer_1aaa48d9afe02a4df7231ff72e5ca519d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::BoundInitializer&lt; TState, TAction &gt;::BoundInitializer</definition>
+        <argsstring>(double value)</argsstring>
+        <name>BoundInitializer</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="96" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1BoundInitializer_1a554649ada95b4c2c5368376d0871fb37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::BoundInitializer&lt; TState, TAction &gt;::init</definition>
+        <argsstring>(ValueFunction&lt; TState, TAction &gt; *vf)</argsstring>
+        <name>init</name>
+        <reimplements refid="classsdm_1_1Initializer_1aa2971b496cd7b51b5abf0c79b5c19d9b">init</reimplements>
+        <reimplementedby refid="classsdm_1_1MinInitializer_1a5657140c7337bd0c2419abc4ca1340e3">init</reimplementedby>
+        <reimplementedby refid="classsdm_1_1MaxInitializer_1a43b3cb855bb0abc117593f63ab1c008a">init</reimplementedby>
+        <param>
+          <type><ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; *</type>
+          <declname>vf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="98" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="98" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This initializer initializes a value function to the estimation of the value if if we get a constant reward at every timestep. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="45">
+        <label>sdm::BoundInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1BoundInitializer"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+      <node id="48">
+        <label>sdm::MinInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1MinInitializer"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>sdm::MaxInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1MaxInitializer"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="49">
+        <label>sdm::BoundInitializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1BoundInitializer"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>sdm::Initializer&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1Initializer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" line="90" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp" bodystart="89" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1BoundInitializer_1a86f67df4f0447c2542033edb63cc8452" prot="public" virt="non-virtual"><scope>sdm::BoundInitializer</scope><name>BoundInitializer</name></member>
+      <member refid="classsdm_1_1BoundInitializer_1aaa48d9afe02a4df7231ff72e5ca519d9" prot="public" virt="non-virtual"><scope>sdm::BoundInitializer</scope><name>BoundInitializer</name></member>
+      <member refid="classsdm_1_1BoundInitializer_1a554649ada95b4c2c5368376d0871fb37" prot="public" virt="virtual"><scope>sdm::BoundInitializer</scope><name>init</name></member>
+      <member refid="classsdm_1_1BoundInitializer_1ac9b5ca3713ee80c55e1259b1f95ede85" prot="protected" virt="non-virtual"><scope>sdm::BoundInitializer</scope><name>value_</name></member>
+      <member refid="classsdm_1_1Initializer_1af228ae3e3b0ba75b3e9f82b46e029136" prot="public" virt="virtual"><scope>sdm::BoundInitializer</scope><name>~Initializer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

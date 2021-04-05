@@ -7,18 +7,16 @@
 
 
 ````cpp
-/*=============================================================================
-Copyright (c) 2016 Jilles Steeve Dibangoye
-==============================================================================*/
+
 #pragma once
 
 #include <vector>
 
 #include <sdm/types.hpp>
 
-
 namespace sdm
 {
+
   template <typename TFunction>
   class Variations
   {

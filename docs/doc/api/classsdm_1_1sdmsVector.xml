@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1sdmsVector" kind="class" language="C++" prot="public">
+    <compoundname>sdm::sdmsVector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TBaseVector</basecompoundref>
+    <basecompoundref refid="classsdm_1_1VectorImpl" prot="public" virt="non-virtual">sdm::VectorImpl&lt; I, T &gt;</basecompoundref>
+    <includes refid="sdms__vector_8hpp" local="no">sdms_vector.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class I</type>
+      </param>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>class TBaseVector</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a184062da2477364ba58686053bf30a77" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; I, T &gt;</type>
+        <definition>std::pair&lt;I, T&gt; sdm::sdmsVector&lt; I, T, TBaseVector &gt;::getMin</definition>
+        <argsstring>() const</argsstring>
+        <name>getMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1afcdb95d7b1c210bdf06d6c8ec1b8b633" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; I, T &gt;</type>
+        <definition>std::pair&lt;I, T&gt; sdm::sdmsVector&lt; I, T, TBaseVector &gt;::getMax</definition>
+        <argsstring>() const</argsstring>
+        <name>getMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a461cd265c1a92580660793bcca98c200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::sdmsVector&lt; I, T, TBaseVector &gt;::sdmsVector</definition>
+        <argsstring>()</argsstring>
+        <name>sdmsVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1aa3d80894b8e0bb3a7f0e199c227d8bcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::sdmsVector&lt; I, T, TBaseVector &gt;::sdmsVector</definition>
+        <argsstring>(I)</argsstring>
+        <name>sdmsVector</name>
+        <param>
+          <type>I</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a957ebb55c9a2ffadc5cd2c2ade282516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::sdmsVector&lt; I, T, TBaseVector &gt;::sdmsVector</definition>
+        <argsstring>(I, T)</argsstring>
+        <name>sdmsVector</name>
+        <param>
+          <type>I</type>
+        </param>
+        <param>
+          <type>T</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a48c9f0db79a2c4130356a4e3ee3f35ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::sdmsVector&lt; I, T, TBaseVector &gt;::sdmsVector</definition>
+        <argsstring>(const sdmsVector &amp;)</argsstring>
+        <name>sdmsVector</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a7c01aab484be810364649ab25c21ddb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::sdmsVector&lt; I, T, TBaseVector &gt;::init</definition>
+        <argsstring>(T)</argsstring>
+        <name>init</name>
+        <param>
+          <type>T</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a811fceaacc683ae0d74a38331f1fd6d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::at</definition>
+        <argsstring>(const I &amp;) const</argsstring>
+        <name>at</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a8ce52d012774f10da1166f9626e83234">at</reimplements>
+        <param>
+          <type>const I &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1afdfff596341ff0bd95a575b52d15f5b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::sum</definition>
+        <argsstring>()</argsstring>
+        <name>sum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a66f2eda6334c4dc1ff1d8375722f2449" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::norm_1</definition>
+        <argsstring>() const</argsstring>
+        <name>norm_1</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1ab9315c66b5c31de1ff3ebfbc9760f9bc">norm_1</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1ad9bada5dfdcddb21f5cdbb90c7c66902" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::norm_2</definition>
+        <argsstring>() const</argsstring>
+        <name>norm_2</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a9134a757b65f22e6c0e7f86f781febe0">norm_2</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a344c563eb46448bf002eef6118cc067a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::min</definition>
+        <argsstring>() const</argsstring>
+        <name>min</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a308432ede40af77b126d6ad7b4c8875f">min</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a0cfa12a72959eb9e954c06f7bdcd8e7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>I</type>
+        <definition>I sdm::sdmsVector&lt; I, T, TBaseVector &gt;::argmin</definition>
+        <argsstring>() const</argsstring>
+        <name>argmin</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a00c07bd464d78dcfb4c3a25b70c31e66">argmin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a619d19c4fc81eb414584f12f49c6279a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::max</definition>
+        <argsstring>() const</argsstring>
+        <name>max</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a2468ecc65e0edb5deb2703a67bff2773">max</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1aec8dbc0eec9fa10b3c93fad1dc758df2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>I</type>
+        <definition>I sdm::sdmsVector&lt; I, T, TBaseVector &gt;::argmax</definition>
+        <argsstring>() const</argsstring>
+        <name>argmax</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1ae6e469b6da349282234e8f202da3a29c">argmax</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a1645dcf1854c3d650943185de47076a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::sdmsVector&lt; I, T, TBaseVector &gt;::operator&lt;</definition>
+        <argsstring>(const sdmsVector &amp;) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a4cef3cc387a5834b86da72c1d398d1d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::operator^</definition>
+        <argsstring>(const sdmsVector &amp;) const</argsstring>
+        <name>operator^</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1aca0ee1018ef58ceed95f0e3909867e08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T sdm::sdmsVector&lt; I, T, TBaseVector &gt;::dot</definition>
+        <argsstring>(const sdmsVector &amp;) const</argsstring>
+        <name>dot</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1ab937e707a027d3fca1e878714c013adb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::sdmsVector&lt; I, T, TBaseVector &gt;::operator==</definition>
+        <argsstring>(const sdmsVector &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a6d1c18d1648e460ad0f85f049fac8060" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::sdmsVector&lt; I, T, TBaseVector &gt;::operator!=</definition>
+        <argsstring>(const sdmsVector &amp;) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1sdmsVector" kindref="compound">sdmsVector</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1sdmsVector_1a9ef264895d3d81c0dc00791c12bcf0bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::sdmsVector&lt; I, T, TBaseVector &gt;::str</definition>
+        <argsstring>() const</argsstring>
+        <name>str</name>
+        <reimplements refid="classsdm_1_1VectorImpl_1a2f6af116e9b65abd8cdd96080bf7b51a">str</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="60" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Vector that implement the <ref refid="classsdm_1_1VectorImpl" kindref="compound">sdm::VectorImpl</ref> interface. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of index </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TBaseVector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the base structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="572">
+        <label>sdm::sdmsVector&lt; I, T, TBaseVector &gt;</label>
+        <link refid="classsdm_1_1sdmsVector"/>
+        <childnode refid="573" relation="public-inheritance">
+        </childnode>
+        <childnode refid="574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="573">
+        <label>TBaseVector</label>
+      </node>
+      <node id="574">
+        <label>sdm::VectorImpl&lt; I, T &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="575">
+        <label>sdm::sdmsVector&lt; I, T, TBaseVector &gt;</label>
+        <link refid="classsdm_1_1sdmsVector"/>
+        <childnode refid="576" relation="public-inheritance">
+        </childnode>
+        <childnode refid="577" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="576">
+        <label>TBaseVector</label>
+      </node>
+      <node id="577">
+        <label>sdm::VectorImpl&lt; I, T &gt;</label>
+        <link refid="classsdm_1_1VectorImpl"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/sdms_vector.hpp" bodystart="29" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1sdmsVector_1aec8dbc0eec9fa10b3c93fad1dc758df2" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>argmax</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a0cfa12a72959eb9e954c06f7bdcd8e7e" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>argmin</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a811fceaacc683ae0d74a38331f1fd6d2" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>at</name></member>
+      <member refid="classsdm_1_1sdmsVector_1aca0ee1018ef58ceed95f0e3909867e08" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>dot</name></member>
+      <member refid="classsdm_1_1sdmsVector_1afcdb95d7b1c210bdf06d6c8ec1b8b633" prot="protected" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>getMax</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a184062da2477364ba58686053bf30a77" prot="protected" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>getMin</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a7c01aab484be810364649ab25c21ddb0" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>init</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a619d19c4fc81eb414584f12f49c6279a" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>max</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a344c563eb46448bf002eef6118cc067a" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>min</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a66f2eda6334c4dc1ff1d8375722f2449" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>norm_1</name></member>
+      <member refid="classsdm_1_1sdmsVector_1ad9bada5dfdcddb21f5cdbb90c7c66902" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>norm_2</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a6d1c18d1648e460ad0f85f049fac8060" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>operator!=</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a1645dcf1854c3d650943185de47076a0" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>operator&lt;</name></member>
+      <member refid="classsdm_1_1sdmsVector_1ab937e707a027d3fca1e878714c013adb" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>operator==</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a4cef3cc387a5834b86da72c1d398d1d1" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>operator^</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a461cd265c1a92580660793bcca98c200" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>sdmsVector</name></member>
+      <member refid="classsdm_1_1sdmsVector_1aa3d80894b8e0bb3a7f0e199c227d8bcf" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>sdmsVector</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a957ebb55c9a2ffadc5cd2c2ade282516" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>sdmsVector</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a48c9f0db79a2c4130356a4e3ee3f35ed" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>sdmsVector</name></member>
+      <member refid="classsdm_1_1sdmsVector_1a9ef264895d3d81c0dc00791c12bcf0bb" prot="public" virt="virtual"><scope>sdm::sdmsVector</scope><name>str</name></member>
+      <member refid="classsdm_1_1sdmsVector_1afdfff596341ff0bd95a575b52d15f5b0" prot="public" virt="non-virtual"><scope>sdm::sdmsVector</scope><name>sum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="discrete__action_8hpp" kind="file" language="C++">
+    <compoundname>discrete_action.hpp</compoundname>
+    <includes local="no">random</includes>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes refid="item_8hpp" local="no">sdm/core/item.hpp</includes>
+    <incdepgraph>
+      <node id="273">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/action/discrete_action.hpp</label>
+        <link refid="discrete__action_8hpp"/>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+      </node>
+      <node id="279">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="274">
+        <label>random</label>
+      </node>
+      <node id="280">
+        <label>sdm/core/item.hpp</label>
+        <link refid="item_8hpp"/>
+      </node>
+      <node id="277">
+        <label>iostream</label>
+      </node>
+      <node id="276">
+        <label>cstddef</label>
+      </node>
+      <node id="278">
+        <label>unordered_map</label>
+      </node>
+      <node id="275">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classsdm_1_1DiscreteAction" prot="public">sdm::DiscreteAction</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*=============================================================================</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>Copyright<sp/>(c)<sp/>2020<sp/>David<sp/>Albert</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">==============================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="item_8hpp" kindref="compound">sdm/core/item.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"></codeline>
+<codeline lineno="23"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classsdm_1_1DiscreteAction" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1DiscreteAction" kindref="compound">DiscreteAction</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structsdm_1_1Item" kindref="compound">Item</ref>&lt;number&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classsdm_1_1DiscreteAction_1a6fbd0dcb5762812c682074fd4e8fc739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteAction_1a6fbd0dcb5762812c682074fd4e8fc739" kindref="member">DiscreteAction</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classsdm_1_1DiscreteAction_1ab8a734792411a5eceffc7575e05f7229" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1DiscreteAction_1ab8a734792411a5eceffc7575e05f7229" kindref="member">DiscreteAction</ref>(<ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref><sp/>item)<sp/>:<sp/><ref refid="structsdm_1_1Item" kindref="compound">Item</ref>(item)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/action/discrete_action.hpp"/>
+  </compounddef>
+</doxygen>

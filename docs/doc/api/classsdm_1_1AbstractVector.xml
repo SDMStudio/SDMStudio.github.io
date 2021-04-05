@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1AbstractVector" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sdm::AbstractVector</compoundname>
+    <includes refid="abstract__vector_8hpp" local="no">abstract_vector.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename I</type>
+      </param>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1ac0d5c40e888302b2da70841926c3674d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T sdm::AbstractVector&lt; I, T &gt;::norm_1</definition>
+        <argsstring>() const =0</argsstring>
+        <name>norm_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1ab4e1170bff57362bac9ff3f70f5c9657" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T sdm::AbstractVector&lt; I, T &gt;::norm_2</definition>
+        <argsstring>() const =0</argsstring>
+        <name>norm_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1af085fab90377032c07c8b908d80e8f56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T sdm::AbstractVector&lt; I, T &gt;::min</definition>
+        <argsstring>() const =0</argsstring>
+        <name>min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1abf204e5589b6cb9f0f667f3ed918ff90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>I</type>
+        <definition>virtual I sdm::AbstractVector&lt; I, T &gt;::argmin</definition>
+        <argsstring>() const =0</argsstring>
+        <name>argmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1a31abaaf2f9eb830aa0f8efcf435cb91c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T sdm::AbstractVector&lt; I, T &gt;::max</definition>
+        <argsstring>() const =0</argsstring>
+        <name>max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1a99cffae107dc32a452235d13c9c2bbaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>I</type>
+        <definition>virtual I sdm::AbstractVector&lt; I, T &gt;::argmax</definition>
+        <argsstring>() const =0</argsstring>
+        <name>argmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1a7f472808e9618222f02c4ece589d041c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T sdm::AbstractVector&lt; I, T &gt;::at</definition>
+        <argsstring>(I)=0</argsstring>
+        <name>at</name>
+        <param>
+          <type>I</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1AbstractVector_1ac07b30a19819d66c9db84697b2862b2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string sdm::AbstractVector&lt; I, T &gt;::str</definition>
+        <argsstring>() const =0</argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The vector interface. To be considered as a vector in SDM&apos;Studio, a class must implement all the following functions. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>I</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the index. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the values. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/abstract_vector.hpp" bodystart="29" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1AbstractVector_1a99cffae107dc32a452235d13c9c2bbaf" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>argmax</name></member>
+      <member refid="classsdm_1_1AbstractVector_1abf204e5589b6cb9f0f667f3ed918ff90" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>argmin</name></member>
+      <member refid="classsdm_1_1AbstractVector_1a7f472808e9618222f02c4ece589d041c" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>at</name></member>
+      <member refid="classsdm_1_1AbstractVector_1a31abaaf2f9eb830aa0f8efcf435cb91c" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>max</name></member>
+      <member refid="classsdm_1_1AbstractVector_1af085fab90377032c07c8b908d80e8f56" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>min</name></member>
+      <member refid="classsdm_1_1AbstractVector_1ac0d5c40e888302b2da70841926c3674d" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>norm_1</name></member>
+      <member refid="classsdm_1_1AbstractVector_1ab4e1170bff57362bac9ff3f70f5c9657" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>norm_2</name></member>
+      <member refid="classsdm_1_1AbstractVector_1ac07b30a19819d66c9db84697b2862b2e" prot="public" virt="pure-virtual"><scope>sdm::AbstractVector</scope><name>str</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

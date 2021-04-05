@@ -10,7 +10,7 @@
 
 
 
-
+_Iterator of_ [_**Variations**_](classsdm_1_1Variations.md) _._[More...](#detailed-description)
 
 * `#include <variations.hpp>`
 
@@ -34,10 +34,10 @@
 | ---: | :--- |
 |   | [**Variations**](classsdm_1_1Variations.md#function-variations-1-3) () <br>_constructor_  |
 |   | [**Variations**](classsdm_1_1Variations.md#function-variations-2-3) (const std::vector&lt; std::vector&lt; [**TItem**](classsdm_1_1Variations.md#typedef-titem) &gt;&gt; & possible\_values) <br> |
-|   | [**Variations**](classsdm_1_1Variations.md#function-variations-3-3) (const std::vector&lt; [**TKey**](classsdm_1_1Variations.md#typedef-tkey) &gt; & possible\_keys, const std::vector&lt; std::vector&lt; [**TItem**](classsdm_1_1Variations.md#typedef-titem) &gt;&gt; & possible\_values) <br> |
-|  std::shared\_ptr&lt; TFunction &gt; | [**begin**](classsdm_1_1Variations.md#function-begin) () <br>_points to the initial variation._  |
-|  std::shared\_ptr&lt; TFunction &gt; | [**end**](classsdm_1_1Variations.md#function-end) () <br>_points to the final variation._  |
-|  std::shared\_ptr&lt; TFunction &gt; | [**make\_output**](classsdm_1_1Variations.md#function-make-output) () <br> |
+|   | [**Variations**](classsdm_1_1Variations.md#function-variations-3-3) (const std::vector&lt; [**TKey**](classsdm_1_1Variations.md#typedef-tkey) &gt; & possible\_keys, const std::vector&lt; std::vector&lt; [**TItem**](classsdm_1_1Variations.md#typedef-titem) &gt;&gt; & possible\_values) <br>_This constructor builds a default with the number of actions per agent. Notice that @key implements_ _size\_t_ _size();._ |
+|  std::shared\_ptr&lt; TFunction &gt; | [**begin**](classsdm_1_1Variations.md#function-begin) () <br>_Pointer on the initial variation._  |
+|  std::shared\_ptr&lt; TFunction &gt; | [**end**](classsdm_1_1Variations.md#function-end) () <br>_Pointer on the final variation._  |
+|  std::shared\_ptr&lt; TFunction &gt; | [**make\_output**](classsdm_1_1Variations.md#function-make-output) () <br>_destructor_  |
 |  std::shared\_ptr&lt; TFunction &gt; | [**next**](classsdm_1_1Variations.md#function-next) () <br>_Returns the next variation._  |
 |  void | [**setVariation**](classsdm_1_1Variations.md#function-setvariation) (const std::vector&lt; [**TKey**](classsdm_1_1Variations.md#typedef-tkey) &gt; & possible\_keys, const std::vector&lt; std::vector&lt; [**TItem**](classsdm_1_1Variations.md#typedef-titem) &gt;&gt; & possible\_values) <br>_Sets attributes of the variation._  |
 
@@ -66,6 +66,19 @@
 
 
 
+# Detailed Description
+
+
+
+
+**Template parameters:**
+
+
+* `TFunction` type of the output function.
+
+The public interface of output suggests that it possesses a construtor @output(arg1, arg3). In which, _arg1_ is the history keys and _arg3_ the actual decisions taken. 
+
+    
 ## Public Functions Documentation
 
 
@@ -104,6 +117,17 @@ sdm::Variations::Variations (
 
 
 
+
+**Parameters:**
+
+
+* `const` key& information, i.e., the set of keys to prescribe actions 
+* `const` std::vector&lt;action&gt;& is the number of actions per agent 
+
+
+
+        
+
 ### function begin 
 
 
@@ -116,7 +140,7 @@ std::shared_ptr< TFunction > sdm::Variations::begin ()
 
 **Returns:**
 
-const output\*& generated variation. 
+generated variation. 
 
 
 
@@ -135,7 +159,7 @@ std::shared_ptr< TFunction > sdm::Variations::end ()
 
 **Returns:**
 
-const std::shared\_ptr&lt;TFunction&gt;& generated variation. 
+generated variation. 
 
 
 
@@ -163,7 +187,7 @@ std::shared_ptr< TFunction > sdm::Variations::next ()
 
 **Returns:**
 
-const std::shared\_ptr&lt;TFunction&gt;& generated variation. 
+generated variation. 
 
 
 
@@ -288,4 +312,4 @@ std::shared_ptr<TFunction> sdm::Variations< TFunction >::vout;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/decision_rules/variations.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/variations.hpp`

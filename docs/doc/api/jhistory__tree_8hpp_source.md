@@ -20,13 +20,15 @@ namespace sdm
     class JointHistoryTree : public HistoryTree<Joint<T>>
     {
     protected:
-        Joint<std::shared_ptr<HistoryTree<T>>> indiv_hist;
 
         void addIndivHist(std::shared_ptr<HistoryTree<T>> ihist);
     public:
+        using ihistory_type = std::shared_ptr<HistoryTree<T>>;
+        Joint<std::shared_ptr<HistoryTree<T>>> indiv_hist;
+
         JointHistoryTree();
 
-        JointHistoryTree(number max_depth);
+        JointHistoryTree(number n_agents);
 
         JointHistoryTree(number n_agents, number max_depth);
 
@@ -34,7 +36,8 @@ namespace sdm
 
         std::shared_ptr<JointHistoryTree<T>> expand(const Joint<T> &data, bool backup = true);
 
-        std::shared_ptr<HistoryTree<T>> getIndividualHistory(number ag_id);
+        std::shared_ptr<HistoryTree<T>> getIndividualHistory(number ag_id) const;
+        std::vector<std::shared_ptr<HistoryTree<T>>> getIndividualHistories() const;
 
         friend std::ostream &operator<<(std::ostream &os, const JointHistoryTree &j_hist)
         {

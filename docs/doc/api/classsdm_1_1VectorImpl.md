@@ -35,7 +35,7 @@ Inherited by the following classes: [sdm::sdmsVector](classsdm_1_1sdmsVector.md)
 | ---: | :--- |
 | virtual I | [**argmax**](classsdm_1_1VectorImpl.md#function-argmax) () const = 0<br> |
 | virtual I | [**argmin**](classsdm_1_1VectorImpl.md#function-argmin) () const = 0<br> |
-| virtual T | [**at**](classsdm_1_1VectorImpl.md#function-at) (I) = 0<br> |
+| virtual T | [**at**](classsdm_1_1VectorImpl.md#function-at) (const I &) const = 0<br> |
 | virtual T | [**max**](classsdm_1_1VectorImpl.md#function-max) () const = 0<br> |
 | virtual T | [**min**](classsdm_1_1VectorImpl.md#function-min) () const = 0<br> |
 | virtual T | [**norm\_1**](classsdm_1_1VectorImpl.md#function-norm-1) () const = 0<br> |
@@ -89,8 +89,8 @@ virtual I sdm::VectorImpl::argmin () const = 0
 
 ```cpp
 virtual T sdm::VectorImpl::at (
-    I
-) = 0
+    const I &
+) const = 0
 ```
 
 
@@ -141,4 +141,4 @@ virtual std::string sdm::VectorImpl::str () const = 0
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/linear_algebra/vector_impl.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/linear_algebra/vector_impl.hpp`

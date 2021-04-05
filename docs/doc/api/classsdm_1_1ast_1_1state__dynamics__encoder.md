@@ -104,4 +104,4 @@ DiscreteSpace<std::string> sdm::ast::state_dynamics_encoder::state_space_;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`

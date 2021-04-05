@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1FunctionSpace" kind="class" language="C++" prot="public">
+    <compoundname>sdm::FunctionSpace</compoundname>
+    <basecompoundref refid="classsdm_1_1DiscreteSpace" prot="public" virt="non-virtual">sdm::DiscreteSpace&lt; TFunction &gt;</basecompoundref>
+    <includes refid="function__space_8hpp" local="no">function_space.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TFunction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1acc6c12dd4236a85d8d32ee8846c72342" prot="protected" static="no">
+        <type>boost::bimaps::bimap&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, TFunction &gt;</type>
+        <definition>typedef boost::bimaps::bimap&lt;number, TFunction&gt; sdm::FunctionSpace&lt; TFunction &gt;::funct_bimap</definition>
+        <argsstring></argsstring>
+        <name>funct_bimap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="31" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1a2f6486e0297a09e37623cbffee05917b" prot="protected" static="no">
+        <type>funct_bimap::value_type</type>
+        <definition>typedef funct_bimap::value_type sdm::FunctionSpace&lt; TFunction &gt;::funct_bimap_value</definition>
+        <argsstring></argsstring>
+        <name>funct_bimap_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1a57c1e231dca35d097222a9fb924146ad" prot="protected" static="no">
+        <type>TFunction</type>
+        <definition>using sdm::FunctionSpace&lt; TFunction &gt;::value_type =  TFunction</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1a3b599b040c1c7e404611a6777b7fe179" prot="protected" static="no">
+        <type>typename TFunction::input_type</type>
+        <definition>using sdm::FunctionSpace&lt; TFunction &gt;::input_type =  typename TFunction::input_type</definition>
+        <argsstring></argsstring>
+        <name>input_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="35" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1aa34fc8c0cc811bbe234970ad67adde69" prot="protected" static="no">
+        <type>typename TFunction::output_type</type>
+        <definition>using sdm::FunctionSpace&lt; TFunction &gt;::output_type =  typename TFunction::output_type</definition>
+        <argsstring></argsstring>
+        <name>output_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1a1c47fe9547153d16fa3a711bf9d974c0" prot="protected" static="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; <ref refid="classsdm_1_1FunctionSpace_1a3b599b040c1c7e404611a6777b7fe179" kindref="member">input_type</ref> &gt;</type>
+        <definition>using sdm::FunctionSpace&lt; TFunction &gt;::input_space =  DiscreteSpace&lt;input_type&gt;</definition>
+        <argsstring></argsstring>
+        <name>input_space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="38" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1FunctionSpace_1ae4fa9d8f8c04d76e45188e7e22bf8a7a" prot="protected" static="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; <ref refid="classsdm_1_1FunctionSpace_1aa34fc8c0cc811bbe234970ad67adde69" kindref="member">output_type</ref> &gt;</type>
+        <definition>using sdm::FunctionSpace&lt; TFunction &gt;::output_space =  DiscreteSpace&lt;output_type&gt;</definition>
+        <argsstring></argsstring>
+        <name>output_space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="39" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1FunctionSpace_1a769f68b5841fa693567e9b523f27e1c6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1FunctionSpace_1a1c47fe9547153d16fa3a711bf9d974c0" kindref="member">input_space</ref></type>
+        <definition>input_space sdm::FunctionSpace&lt; TFunction &gt;::input_space_</definition>
+        <argsstring></argsstring>
+        <name>input_space_</name>
+        <briefdescription>
+<para>The input space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="44" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1FunctionSpace_1ac2eedea6baf5b05f10d1aeb30c3307f7" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classsdm_1_1FunctionSpace_1ae4fa9d8f8c04d76e45188e7e22bf8a7a" kindref="member">output_space</ref> &gt;</type>
+        <definition>std::vector&lt;output_space&gt; sdm::FunctionSpace&lt; TFunction &gt;::output_space_</definition>
+        <argsstring></argsstring>
+        <name>output_space_</name>
+        <briefdescription>
+<para>The vector of output spaces (possibly one output space for each input space). In case output space are similar for all input, use the adequate constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="49" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1FunctionSpace_1a7aedb301174bcbbddbcecfe3b0aaf56c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::FunctionSpace&lt; TFunction &gt;::FunctionSpace</definition>
+        <argsstring>(input_space input_sp, output_space output_sp)</argsstring>
+        <name>FunctionSpace</name>
+        <param>
+          <type><ref refid="classsdm_1_1FunctionSpace_1a1c47fe9547153d16fa3a711bf9d974c0" kindref="member">input_space</ref></type>
+          <declname>input_sp</declname>
+        </param>
+        <param>
+          <type><ref refid="classsdm_1_1FunctionSpace_1ae4fa9d8f8c04d76e45188e7e22bf8a7a" kindref="member">output_space</ref></type>
+          <declname>output_sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1FunctionSpace_1a557e023bcba9ba27d8f73fd19ef5dbe6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::FunctionSpace&lt; TFunction &gt;::FunctionSpace</definition>
+        <argsstring>(std::vector&lt; input_type &gt; possible_inputs, std::vector&lt; output_type &gt; possible_outputs)</argsstring>
+        <name>FunctionSpace</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classsdm_1_1FunctionSpace_1a3b599b040c1c7e404611a6777b7fe179" kindref="member">input_type</ref> &gt;</type>
+          <declname>possible_inputs</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="classsdm_1_1FunctionSpace_1aa34fc8c0cc811bbe234970ad67adde69" kindref="member">output_type</ref> &gt;</type>
+          <declname>possible_outputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="56" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1FunctionSpace_1a7a5aa6bdc30dab5bebc80d9420f6a71f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::FunctionSpace&lt; TFunction &gt;::FunctionSpace</definition>
+        <argsstring>(input_space input_sp, std::vector&lt; output_space &gt; output_sps)</argsstring>
+        <name>FunctionSpace</name>
+        <param>
+          <type><ref refid="classsdm_1_1FunctionSpace_1a1c47fe9547153d16fa3a711bf9d974c0" kindref="member">input_space</ref></type>
+          <declname>input_sp</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="classsdm_1_1FunctionSpace_1ae4fa9d8f8c04d76e45188e7e22bf8a7a" kindref="member">output_space</ref> &gt;</type>
+          <declname>output_sps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="61" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1FunctionSpace_1a1ec9063df99843de0257c8e64ce50788" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::FunctionSpace&lt; TFunction &gt;::FunctionSpace</definition>
+        <argsstring>(std::vector&lt; input_type &gt; possible_inputs, std::vector&lt; std::vector&lt; output_type &gt;&gt; possible_outputs)</argsstring>
+        <name>FunctionSpace</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classsdm_1_1FunctionSpace_1a3b599b040c1c7e404611a6777b7fe179" kindref="member">input_type</ref> &gt;</type>
+          <declname>possible_inputs</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; <ref refid="classsdm_1_1FunctionSpace_1aa34fc8c0cc811bbe234970ad67adde69" kindref="member">output_type</ref> &gt;&gt;</type>
+          <declname>possible_outputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="66" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1FunctionSpace_1ad6e14aca75f98f3ea9a844880eb66e51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; TFunction &gt;</type>
+        <definition>std::vector&lt;TFunction&gt; sdm::FunctionSpace&lt; TFunction &gt;::getAll</definition>
+        <argsstring>()</argsstring>
+        <name>getAll</name>
+        <briefdescription>
+<para>Get all the possible function in this space. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of all possible functions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="80" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="80" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The class for function spaces. This is helpfull in case we need to enumerate all possible functions (only usable when input space and output space are <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>). </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of function to generate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="222">
+        <label>sdm::DiscreteSpace&lt; TFunction &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="221">
+        <label>sdm::FunctionSpace&lt; TFunction &gt;</label>
+        <link refid="classsdm_1_1FunctionSpace"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="225">
+        <label>sdm::DiscreteSpace&lt; TFunction &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="226" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="224">
+        <label>sdm::FunctionSpace&lt; TFunction &gt;</label>
+        <link refid="classsdm_1_1FunctionSpace"/>
+        <childnode refid="225" relation="public-inheritance">
+        </childnode>
+        <childnode refid="227" relation="usage">
+          <edgelabel>input_space_</edgelabel>
+        </childnode>
+      </node>
+      <node id="227">
+        <label>sdm::DiscreteSpace&lt; input_type &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="226" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp" bodystart="27" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1DiscreteSpace_1a925e61c7f266a9a5845856ab02f5d8db" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>all_items_</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a4b130b0931b68a00dd763eee6ced6057" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a6233e90323a3071d6b24fa7041763af2" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aced5f29459cf5f7408a865a86332b6e1" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a036c1ca3546ca017a0419f553facafe4" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a0d8243ea3e932e6fa73d88e1f5b5dece" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1acc6c12dd4236a85d8d32ee8846c72342" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>funct_bimap</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a2f6486e0297a09e37623cbffee05917b" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>funct_bimap_value</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a7aedb301174bcbbddbcecfe3b0aaf56c" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>FunctionSpace</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a557e023bcba9ba27d8f73fd19ef5dbe6" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>FunctionSpace</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a7a5aa6bdc30dab5bebc80d9420f6a71f" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>FunctionSpace</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a1ec9063df99843de0257c8e64ce50788" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>FunctionSpace</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1ad6e14aca75f98f3ea9a844880eb66e51" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>getAll</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a24ed3cc4c3618e0447863663922a5341" prot="public" virt="virtual"><scope>sdm::FunctionSpace</scope><name>getDim</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a26177c3f23208b6c332610308160c253" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>getItem</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>getItemIndex</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>getNumItems</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a1c47fe9547153d16fa3a711bf9d974c0" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>input_space</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a769f68b5841fa693567e9b523f27e1c6" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>input_space_</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a3b599b040c1c7e404611a6777b7fe179" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1Space_1a5a8df3b762f59cc9cba36ecfece29f8a" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>isContinuous</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aeaf07d8ba52b51fe8626774085f6aef0" prot="public" virt="virtual"><scope>sdm::FunctionSpace</scope><name>isDiscrete</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a38f591f0d0d84b19db479ba0a28ac240" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>items_bimap</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aeb5daea40a2295bcf3ed65f9c1773b68" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>items_bimap_value</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a2629ceba1002b2e92d3288009ea505e8" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>num_items_</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1ae065a238eb30c2a8d356ce219fb1f49f" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>operator!=</name></member>
+      <member refid="classsdm_1_1Space_1a5ae131db5ad1d8645e310be38acd6fc1" prot="public" virt="non-virtual" ambiguityscope="sdm::Space::"><scope>sdm::FunctionSpace</scope><name>operator!=</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a623e985f5eefde29051b1ee238716c4a" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>operator=</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a847aa9f985c86131fb5fe49bb72fe01a" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>operator==</name></member>
+      <member refid="classsdm_1_1Space_1a73acfdcd9dda1d32f3f99fa43a89a30c" prot="public" virt="non-virtual" ambiguityscope="sdm::Space::"><scope>sdm::FunctionSpace</scope><name>operator==</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1ae4fa9d8f8c04d76e45188e7e22bf8a7a" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>output_space</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1ac2eedea6baf5b05f10d1aeb30c3307f7" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>output_space_</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1aa34fc8c0cc811bbe234970ad67adde69" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>output_type</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a00d719e8742b65b8fde3c6e4f35b23aa" prot="public" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>sample</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a84cc73952e28f5f5ad67459f81b263e7" prot="public" virt="virtual"><scope>sdm::FunctionSpace</scope><name>str</name></member>
+      <member refid="classsdm_1_1FunctionSpace_1a57c1e231dca35d097222a9fb924146ad" prot="protected" virt="non-virtual"><scope>sdm::FunctionSpace</scope><name>value_type</name></member>
+      <member refid="classsdm_1_1Space_1af3aefac8b7852522871c8b31382f5a36" prot="public" virt="virtual"><scope>sdm::FunctionSpace</scope><name>~Space</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

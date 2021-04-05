@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1ast_1_1transition__entry__1__t" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::transition_entry_1_t</compoundname>
+    <includes refid="ast_8hpp" local="no">ast.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1transition__entry__1__t_1a4e67f8306a3cef628c0c1b49894947d8" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1_1ast_1a97b6f04fc82cc52f30601adf9d1fb9bb" kindref="member">identifiers_t</ref></type>
+        <definition>identifiers_t sdm::ast::transition_entry_1_t::jaction</definition>
+        <argsstring></argsstring>
+        <name>jaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="53" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1transition__entry__1__t_1aa0d8affe231157afeb9dd07ad3e2b745" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1identifier__t" kindref="compound">identifier_t</ref></type>
+        <definition>identifier_t sdm::ast::transition_entry_1_t::current_state</definition>
+        <argsstring></argsstring>
+        <name>current_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="54" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1transition__entry__1__t_1adf9abbf6911600d16a18e964997f6b20" prot="public" static="no" mutable="no">
+        <type><ref refid="structsdm_1_1ast_1_1identifier__t" kindref="compound">identifier_t</ref></type>
+        <definition>identifier_t sdm::ast::transition_entry_1_t::next_state</definition>
+        <argsstring></argsstring>
+        <name>next_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="55" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsdm_1_1ast_1_1transition__entry__1__t_1ad0032af9a6c306cc2a5b6763b926d3e1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sdm::ast::transition_entry_1_t::probability</definition>
+        <argsstring></argsstring>
+        <name>probability</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="56" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="698">
+        <label>sdm::ast::transition_entry_1_t</label>
+        <link refid="structsdm_1_1ast_1_1transition__entry__1__t"/>
+        <childnode refid="699" relation="usage">
+          <edgelabel>next_state</edgelabel>
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="699">
+        <label>sdm::ast::identifier_t</label>
+        <link refid="structsdm_1_1ast_1_1identifier__t"/>
+        <childnode refid="700" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>boost::spirit::x3::variant&lt; std::string, unsigned short &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp" bodystart="52" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1ast_1_1transition__entry__1__t_1aa0d8affe231157afeb9dd07ad3e2b745" prot="public" virt="non-virtual"><scope>sdm::ast::transition_entry_1_t</scope><name>current_state</name></member>
+      <member refid="structsdm_1_1ast_1_1transition__entry__1__t_1a4e67f8306a3cef628c0c1b49894947d8" prot="public" virt="non-virtual"><scope>sdm::ast::transition_entry_1_t</scope><name>jaction</name></member>
+      <member refid="structsdm_1_1ast_1_1transition__entry__1__t_1adf9abbf6911600d16a18e964997f6b20" prot="public" virt="non-virtual"><scope>sdm::ast::transition_entry_1_t</scope><name>next_state</name></member>
+      <member refid="structsdm_1_1ast_1_1transition__entry__1__t_1ad0032af9a6c306cc2a5b6763b926d3e1" prot="public" virt="non-virtual"><scope>sdm::ast::transition_entry_1_t</scope><name>probability</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

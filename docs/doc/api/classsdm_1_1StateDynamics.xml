@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1StateDynamics" kind="class" language="C++" prot="public">
+    <compoundname>sdm::StateDynamics</compoundname>
+    <includes refid="state__dynamics_8hpp" local="no">state_dynamics.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1StateDynamics_1aea8da0a092265c5741d7232b23c78be5" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; Matrix &gt;</type>
+        <definition>std::vector&lt;Matrix&gt; sdm::StateDynamics::t_model</definition>
+        <argsstring></argsstring>
+        <name>t_model</name>
+        <briefdescription>
+<para>transition and observation matrices </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="93" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1StateDynamics_1a3ed2f08c655d91a7fd0408d8a622d2cc" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref>, std::unordered_map&lt; <ref refid="namespacesdm_1ae21094a69e920050f2aa1c7b5c0d2677" kindref="member">action</ref>, std::unordered_set&lt; <ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref> &gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt;state, std::unordered_map&lt;action, std::unordered_set&lt;state&gt; &gt; &gt; sdm::StateDynamics::successor_states</definition>
+        <argsstring></argsstring>
+        <name>successor_states</name>
+        <briefdescription>
+<para>map from state, action pairs to set of next states </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="96" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1ade9cb177d1a8085b962383d2c41c0a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::StateDynamics::StateDynamics</definition>
+        <argsstring>()</argsstring>
+        <name>StateDynamics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="27" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1a976cb028a67a2f86eead7b20ed127552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::StateDynamics::StateDynamics</definition>
+        <argsstring>(StateDynamics &amp;copy)</argsstring>
+        <name>StateDynamics</name>
+        <param>
+          <type><ref refid="classsdm_1_1StateDynamics" kindref="compound">StateDynamics</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1a93ade4bfad5940929dd2b8ab5117a8e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::StateDynamics::StateDynamics</definition>
+        <argsstring>(number num_actions, number num_states)</argsstring>
+        <name>StateDynamics</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_actions</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_states</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new State Dynamics object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_actions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of (joint) action </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of states </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1a67970c75e20103a2bc094179b8503ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::StateDynamics::initDynamics</definition>
+        <argsstring>(number num_actions, number num_states)</argsstring>
+        <name>initDynamics</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_actions</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_states</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the dynamics model. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_actions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of (joint) actions </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of states </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="43" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1a469695617627389a90acecb4f48e60e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::StateDynamics::setTransitionProbability</definition>
+        <argsstring>(number x, number u, number y, double p, bool cumul=false)</argsstring>
+        <name>setTransitionProbability</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cumul</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Set the transition probability on one point. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific state (the state at timestep t) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific (joint) action </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific state (the state at timestep t+1) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>probability of the transition </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether or not we cumulate probabilities. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="53" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1a7cafa0e372d5538416aebf6405bd65f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sdm::StateDynamics::getTransitionProbability</definition>
+        <argsstring>(number x, number u, number y) const</argsstring>
+        <name>getTransitionProbability</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the transition probability on one point. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific state (the state at timestep t) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific (joint) action </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific state (the state at timestep t+1) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the transition probability </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="62" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1ac21abadc72e4b760f67f66b0b15abcf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::StateDynamics::setTransitions</definition>
+        <argsstring>(const std::vector&lt; Matrix &gt; &amp;t_model)</argsstring>
+        <name>setTransitions</name>
+        <param>
+          <type>const std::vector&lt; Matrix &gt; &amp;</type>
+          <declname>t_model</declname>
+        </param>
+        <briefdescription>
+<para>Sets probability transitions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrices of transitions, one for each (joint) action. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="68" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1ac859abe99fe141f3ed0d35fa255eb350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; Matrix &gt;</type>
+        <definition>std::vector&lt; Matrix &gt; sdm::StateDynamics::getTransitions</definition>
+        <argsstring>()</argsstring>
+        <name>getTransitions</name>
+        <briefdescription>
+<para>Sets probability transitions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrices of transitions, one for each (joint) action. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="74" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1a0baa61599b45c36227a7c53ba047be51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const Matrix &amp;</type>
+        <definition>const Matrix &amp; sdm::StateDynamics::getTransitions</definition>
+        <argsstring>(number u)</argsstring>
+        <name>getTransitions</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>Returns matrix of probability transitions for the pre-defined action. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A specific (joint) action </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="80" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1StateDynamics_1ae1954ec1449b04f2cf46d7d6c5bfd225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::unordered_set&lt; <ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref> &gt; &amp;</type>
+        <definition>const std::unordered_set&lt; state &gt; &amp; sdm::StateDynamics::getStateSuccessors</definition>
+        <argsstring>(number x, number u)</argsstring>
+        <name>getStateSuccessors</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const std::unordered_set&lt;state&gt;&amp; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="89" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class provide quick accessors to transition probability distributions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" line="25" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp" bodystart="24" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1StateDynamics_1ae1954ec1449b04f2cf46d7d6c5bfd225" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>getStateSuccessors</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a7cafa0e372d5538416aebf6405bd65f9" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>getTransitionProbability</name></member>
+      <member refid="classsdm_1_1StateDynamics_1ac859abe99fe141f3ed0d35fa255eb350" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>getTransitions</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a0baa61599b45c36227a7c53ba047be51" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>getTransitions</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a67970c75e20103a2bc094179b8503ff1" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>initDynamics</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a469695617627389a90acecb4f48e60e7" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>setTransitionProbability</name></member>
+      <member refid="classsdm_1_1StateDynamics_1ac21abadc72e4b760f67f66b0b15abcf9" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>setTransitions</name></member>
+      <member refid="classsdm_1_1StateDynamics_1ade9cb177d1a8085b962383d2c41c0a98" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>StateDynamics</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a976cb028a67a2f86eead7b20ed127552" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>StateDynamics</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a93ade4bfad5940929dd2b8ab5117a8e9" prot="public" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>StateDynamics</name></member>
+      <member refid="classsdm_1_1StateDynamics_1a3ed2f08c655d91a7fd0408d8a622d2cc" prot="protected" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>successor_states</name></member>
+      <member refid="classsdm_1_1StateDynamics_1aea8da0a092265c5741d7232b23c78be5" prot="protected" virt="non-virtual"><scope>sdm::StateDynamics</scope><name>t_model</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

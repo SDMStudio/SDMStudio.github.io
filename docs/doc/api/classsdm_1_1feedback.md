@@ -31,15 +31,15 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**feedback**](classsdm_1_1feedback.md#function-feedback-1-3) () <br> |
-|   | [**feedback**](classsdm_1_1feedback.md#function-feedback-2-3) (double, double) <br> |
-|   | [**feedback**](classsdm_1_1feedback.md#function-feedback-3-3) ([**state**](namespacesdm.md#typedef-state), [**observation**](namespacesdm.md#typedef-observation), double) <br> |
+|   | [**feedback**](classsdm_1_1feedback.md#function-feedback-2-3) (double min, double max) <br> |
+|   | [**feedback**](classsdm_1_1feedback.md#function-feedback-3-3) ([**state**](namespacesdm.md#typedef-state) s, [**observation**](namespacesdm.md#typedef-observation) z, double r) <br> |
 | virtual double | [**getNormalizedReward**](classsdm_1_1feedback.md#function-getnormalizedreward) () const<br> |
 | virtual [**observation**](namespacesdm.md#typedef-observation) | [**getObservation**](classsdm_1_1feedback.md#function-getobservation) () const<br> |
 | virtual double | [**getReward**](classsdm_1_1feedback.md#function-getreward) () const<br> |
 | virtual [**state**](namespacesdm.md#typedef-state) | [**getState**](classsdm_1_1feedback.md#function-getstate) () const<br> |
-| virtual void | [**setObservation**](classsdm_1_1feedback.md#function-setobservation) (const [**observation**](namespacesdm.md#typedef-observation) &) <br> |
-| virtual void | [**setReward**](classsdm_1_1feedback.md#function-setreward) (const double &) <br> |
-| virtual void | [**setState**](classsdm_1_1feedback.md#function-setstate) (const [**state**](namespacesdm.md#typedef-state) &) <br> |
+| virtual void | [**setObservation**](classsdm_1_1feedback.md#function-setobservation) (const [**observation**](namespacesdm.md#typedef-observation) & z) <br> |
+| virtual void | [**setReward**](classsdm_1_1feedback.md#function-setreward) (const double & r) <br> |
+| virtual void | [**setState**](classsdm_1_1feedback.md#function-setstate) (const [**state**](namespacesdm.md#typedef-state) & s) <br> |
 | virtual  | [**~feedback**](classsdm_1_1feedback.md#function-feedback) () <br> |
 
 
@@ -57,8 +57,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  double | [**rmax**](classsdm_1_1feedback.md#variable-rmax)  <br> |
-|  double | [**rmin**](classsdm_1_1feedback.md#variable-rmin)  <br> |
+|  double | [**rmax**](classsdm_1_1feedback.md#variable-rmax)   = = 1<br> |
+|  double | [**rmin**](classsdm_1_1feedback.md#variable-rmin)   = = 0<br> |
 
 
 
@@ -79,8 +79,8 @@ sdm::feedback::feedback ()
 
 ```cpp
 sdm::feedback::feedback (
-    double,
-    double
+    double min,
+    double max
 ) 
 ```
 
@@ -91,9 +91,9 @@ sdm::feedback::feedback (
 
 ```cpp
 sdm::feedback::feedback (
-    state,
-    observation,
-    double
+    state s,
+    observation z,
+    double r
 ) 
 ```
 
@@ -140,7 +140,7 @@ virtual state sdm::feedback::getState () const
 
 ```cpp
 virtual void sdm::feedback::setObservation (
-    const observation &
+    const observation & z
 ) 
 ```
 
@@ -151,7 +151,7 @@ virtual void sdm::feedback::setObservation (
 
 ```cpp
 virtual void sdm::feedback::setReward (
-    const double &
+    const double & r
 ) 
 ```
 
@@ -162,7 +162,7 @@ virtual void sdm::feedback::setReward (
 
 ```cpp
 virtual void sdm::feedback::setState (
-    const state &
+    const state & s
 ) 
 ```
 
@@ -227,4 +227,4 @@ double sdm::feedback::rmin;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/public/feedback.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/feedback.hpp`

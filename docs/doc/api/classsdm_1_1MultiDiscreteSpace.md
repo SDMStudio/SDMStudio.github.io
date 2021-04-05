@@ -10,7 +10,7 @@
 
 
 
-_This class provide a way to instantiate multi discrete space (i.e. list of discrete spaces). Typically it is used to store a set of spaces, one by agent (i.e. action\_spaces in_ [_**POSG**_](classsdm_1_1POSG.md) _). This can be view as a set of discrete spaces or as a discrete space of joint items._[More...](#detailed-description)
+_This class provide a way to instantiate multi discrete space (i.e. list of discrete spaces). Typically it is used to store a set of spaces, one by agent (i.e. action\_spaces in POSG). This can be view as a set of discrete spaces or as a discrete space of joint items._ [More...](#detailed-description)
 
 * `#include <multi_discrete_space.hpp>`
 
@@ -68,11 +68,12 @@ See [sdm::DiscreteSpace](classsdm_1_1DiscreteSpace.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-1-5) () <br>_Instantiate a default discrete space (_ [_**MultiDiscreteSpace**_](classsdm_1_1MultiDiscreteSpace.md) _class)_ |
-|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-2-5) (const std::vector&lt; std::vector&lt; TItem &gt;&gt; &) <br>_Instantiate a multi discrete space from a list of list of possible items._  |
-|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-3-5) (const std::vector&lt; std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt;&gt; &) <br>_Instantiate a multi discrete space from the list its sub-spaces (as shared pointer)._  |
-|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-4-5) (const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Cpoy constructor._  |
-|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-5-5) (const std::vector&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt; &) <br>_Instantiate a multi discrete space from the list its sub-spaces (as objects)._  |
+|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-1-6) () <br>_Instantiate a default discrete space (_ [_**MultiDiscreteSpace**_](classsdm_1_1MultiDiscreteSpace.md) _class)_ |
+|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-2-6) (const std::vector&lt; std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt;&gt; &) <br>_Instantiate a multi discrete space from the list its sub-spaces (as shared pointer)._  |
+|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-3-6) (const std::vector&lt; std::vector&lt; TItem &gt;&gt; & values) <br>_Instantiate a multi discrete space from the list its sub-spaces (as shared pointer)._  |
+|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-4-6) (const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Cpoy constructor._  |
+|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-5-6) (const std::vector&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt; &) <br>_Instantiate a multi discrete space from the list its sub-spaces (as objects)._  |
+|   | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md#function-multidiscretespace-6-6) (const std::enable\_if\_t&lt; TBool, std::vector&lt; TItem &gt;&gt; & num\_items) <br>_Instantiate a multi discrete space using a list of dimensions (one by single space). This constructor is only available for classes where TItem is an integer (long, int, short, etc)._  |
 |  std::vector&lt; [**Joint**](classsdm_1_1Joint.md)&lt; TItem &gt; &gt; | [**getAll**](classsdm_1_1MultiDiscreteSpace.md#function-getall) () <br>_Get all the joint values._  |
 |  TItem | [**getItem**](classsdm_1_1MultiDiscreteSpace.md#function-getitem-1-2) ([**number**](namespacesdm.md#typedef-number)) const<br> |
 |  TItem | [**getItem**](classsdm_1_1MultiDiscreteSpace.md#function-getitem-2-2) ([**number**](namespacesdm.md#typedef-number) ag\_id, [**number**](namespacesdm.md#typedef-number) item\_index) const<br>_Get a specific item for a given agent (from its index)_  |
@@ -83,9 +84,10 @@ See [sdm::DiscreteSpace](classsdm_1_1DiscreteSpace.md)
 |  [**number**](namespacesdm.md#typedef-number) | [**getNumJointItems**](classsdm_1_1MultiDiscreteSpace.md#function-getnumjointitems) () const<br>_Get the number of joint items._  |
 |  [**number**](namespacesdm.md#typedef-number) | [**joint2single**](classsdm_1_1MultiDiscreteSpace.md#function-joint2single) (const std::vector&lt; TItem &gt; & jitem) const<br>_Transform joint item to single one._  |
 |  [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; TItem &gt; & | [**operator=**](classsdm_1_1MultiDiscreteSpace.md#function-operator) (const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; TItem &gt; &) <br> |
-|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-1-3) (const std::vector&lt; std::vector&lt; TItem &gt;&gt; &) <br> |
-|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-2-3) (const std::vector&lt; std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt;&gt; & spaces) <br> |
-|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-3-3) (const std::vector&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt; & spaces) <br> |
+|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-1-4) (const std::enable\_if\_t&lt; TBool, std::vector&lt; TItem &gt;&gt; & num\_items) <br> |
+|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-2-4) (const std::vector&lt; std::vector&lt; TItem &gt;&gt; &) <br> |
+|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-3-4) (const std::vector&lt; std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt;&gt; & spaces) <br> |
+|  void | [**setSpaces**](classsdm_1_1MultiDiscreteSpace.md#function-setspaces-4-4) (const std::vector&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt;&gt; & spaces) <br> |
 |  std::vector&lt; TItem &gt; | [**single2joint**](classsdm_1_1MultiDiscreteSpace.md#function-single2joint) ([**number**](namespacesdm.md#typedef-number) sitem) const<br>_Transform single item to joint one._  |
 | virtual std::string | [**str**](classsdm_1_1MultiDiscreteSpace.md#function-str) () const<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
 
@@ -120,6 +122,7 @@ See [sdm::Space](classsdm_1_1Space.md)
 |  bool | [**operator!=**](classsdm_1_1Space.md#function-operator) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 |  bool | [**operator==**](classsdm_1_1Space.md#function-operator-2) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 | virtual std::string | [**str**](classsdm_1_1Space.md#function-str) () const = 0<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
+| virtual  | [**~Space**](classsdm_1_1Space.md#function-space) () <br> |
 
 ## Public Functions inherited from sdm::DiscreteSpace
 
@@ -127,10 +130,11 @@ See [sdm::DiscreteSpace](classsdm_1_1DiscreteSpace.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-1-4) () <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object (default)_ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-2-4) (const std::vector&lt; TItem &gt; & items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object._ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-3-4) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Copy constructor._  |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-4-4) (std::initializer\_list&lt; TItem &gt; vals) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object from a list initializer._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-1-5) () <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object (default)_ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-2-5) (const std::vector&lt; TItem &gt; & items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-3-5) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Copy constructor._  |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-4-5) (std::initializer\_list&lt; TItem &gt; vals) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object from a list initializer._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-5-5) (std::enable\_if\_t&lt; TBool, int &gt; num\_items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _Base object._ |
 |  std::vector&lt; TItem &gt; | [**getAll**](classsdm_1_1DiscreteSpace.md#function-getall) () <br>_Get all items in the space._  |
 | virtual std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**getDim**](classsdm_1_1DiscreteSpace.md#function-getdim) () const<br>_Get the dimension._  |
 |  TItem | [**getItem**](classsdm_1_1DiscreteSpace.md#function-getitem) ([**number**](namespacesdm.md#typedef-number) index) const<br>_Get the item at a specific index._  |
@@ -155,6 +159,7 @@ See [sdm::Space](classsdm_1_1Space.md)
 |  bool | [**operator!=**](classsdm_1_1Space.md#function-operator) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 |  bool | [**operator==**](classsdm_1_1Space.md#function-operator-2) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 | virtual std::string | [**str**](classsdm_1_1Space.md#function-str) () const = 0<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
+| virtual  | [**~Space**](classsdm_1_1Space.md#function-space) () <br> |
 
 
 
@@ -253,7 +258,7 @@ using sdm::MultiDiscreteSpace< TItem >::value_type =  Joint<TItem>;
 ## Public Functions Documentation
 
 
-### function MultiDiscreteSpace [1/5]
+### function MultiDiscreteSpace [1/6]
 
 
 ```cpp
@@ -262,18 +267,7 @@ sdm::MultiDiscreteSpace::MultiDiscreteSpace ()
 
 
 
-### function MultiDiscreteSpace [2/5]
-
-
-```cpp
-sdm::MultiDiscreteSpace::MultiDiscreteSpace (
-    const std::vector< std::vector< TItem >> &
-) 
-```
-
-
-
-### function MultiDiscreteSpace [3/5]
+### function MultiDiscreteSpace [2/6]
 
 
 ```cpp
@@ -284,7 +278,18 @@ sdm::MultiDiscreteSpace::MultiDiscreteSpace (
 
 
 
-### function MultiDiscreteSpace [4/5]
+### function MultiDiscreteSpace [3/6]
+
+
+```cpp
+sdm::MultiDiscreteSpace::MultiDiscreteSpace (
+    const std::vector< std::vector< TItem >> & values
+) 
+```
+
+
+
+### function MultiDiscreteSpace [4/6]
 
 
 ```cpp
@@ -295,7 +300,7 @@ sdm::MultiDiscreteSpace::MultiDiscreteSpace (
 
 
 
-### function MultiDiscreteSpace [5/5]
+### function MultiDiscreteSpace [5/6]
 
 
 ```cpp
@@ -305,6 +310,28 @@ sdm::MultiDiscreteSpace::MultiDiscreteSpace (
 ```
 
 
+
+### function MultiDiscreteSpace [6/6]
+
+
+```cpp
+template<bool TBool>
+sdm::MultiDiscreteSpace::MultiDiscreteSpace (
+    const std::enable_if_t< TBool, std::vector< TItem >> & num_items
+) 
+```
+
+
+
+
+**Parameters:**
+
+
+* `num_items` the number of items in each spaces. If {k\_1, k\_2} then {0, 1, ..., k\_1 - 1} are possible items in first subspace and {0, 1, ..., k\_2 - 1} in the second subspace. 
+
+
+
+        
 
 ### function getAll 
 
@@ -480,7 +507,19 @@ MultiDiscreteSpace < TItem > & sdm::MultiDiscreteSpace::operator= (
 
 
 
-### function setSpaces [1/3]
+### function setSpaces [1/4]
+
+
+```cpp
+template<bool TBool>
+void sdm::MultiDiscreteSpace::setSpaces (
+    const std::enable_if_t< TBool, std::vector< TItem >> & num_items
+) 
+```
+
+
+
+### function setSpaces [2/4]
 
 
 ```cpp
@@ -491,7 +530,7 @@ void sdm::MultiDiscreteSpace::setSpaces (
 
 
 
-### function setSpaces [2/3]
+### function setSpaces [3/4]
 
 
 ```cpp
@@ -502,7 +541,7 @@ void sdm::MultiDiscreteSpace::setSpaces (
 
 
 
-### function setSpaces [3/3]
+### function setSpaces [4/4]
 
 
 ```cpp
@@ -609,4 +648,4 @@ inline friend std::ostream & sdm::MultiDiscreteSpace::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/space/multi_discrete_space.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/multi_discrete_space.hpp`

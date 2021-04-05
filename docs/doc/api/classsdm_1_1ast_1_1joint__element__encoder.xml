@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ast_1_1joint__element__encoder" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::ast::joint_element_encoder</compoundname>
+    <includes refid="encoder_8hpp" local="no">encoder.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1joint__element__encoder_1a0d89fd8b2e63fc246d62d5b0b2794f50" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>MultiDiscreteSpace&lt;std::string&gt; sdm::ast::joint_element_encoder::element_space_</definition>
+        <argsstring></argsstring>
+        <name>element_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="160" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1ast_1_1joint__element__encoder_1a3a2904e59adfcb8337357b0cad7c90a2" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt;</type>
+        <definition>DiscreteSpace&lt;std::string&gt; sdm::ast::joint_element_encoder::ag_space_</definition>
+        <argsstring></argsstring>
+        <name>ag_space_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="161" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1ast_1_1joint__element__encoder_1a1a0048a6b92a19e0137bb623271e18b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::ast::joint_element_encoder::joint_element_encoder</definition>
+        <argsstring>(const MultiDiscreteSpace&lt; std::string &gt; &amp;element_space, const DiscreteSpace&lt; std::string &gt; &amp;ag_space)</argsstring>
+        <name>joint_element_encoder</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1MultiDiscreteSpace" kindref="compound">MultiDiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>element_space</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; std::string &gt; &amp;</type>
+          <declname>ag_space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="164" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="164" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;std::string&gt; &gt; sdm::ast::joint_element_encoder::encode</definition>
+        <argsstring>(const std::vector&lt; identifier_t &gt; &amp;as) const</argsstring>
+        <name>encode</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="structsdm_1_1ast_1_1identifier__t" kindref="compound">identifier_t</ref> &gt; &amp;</type>
+          <declname>as</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="170" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="170" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>encodes the input into a joint element (vector of number) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="325">
+        <label>sdm::DiscreteSpace&lt; Joint&lt; std::string &gt; &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="323">
+        <label>sdm::MultiDiscreteSpace&lt; std::string &gt;</label>
+        <link refid="classsdm_1_1MultiDiscreteSpace"/>
+        <childnode refid="324" relation="public-inheritance">
+        </childnode>
+        <childnode refid="325" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>sdm::MultiSpace&lt; DiscreteSpace&lt; std::string &gt; &gt;</label>
+        <link refid="classsdm_1_1MultiSpace"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>sdm::ast::joint_element_encoder</label>
+        <link refid="classsdm_1_1ast_1_1joint__element__encoder"/>
+        <childnode refid="321" relation="usage">
+          <edgelabel>ag_space_</edgelabel>
+        </childnode>
+        <childnode refid="323" relation="usage">
+          <edgelabel>element_space_</edgelabel>
+        </childnode>
+      </node>
+      <node id="321">
+        <label>sdm::DiscreteSpace&lt; std::string &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" line="158" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp" bodystart="157" bodyend="195"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ast_1_1joint__element__encoder_1a3a2904e59adfcb8337357b0cad7c90a2" prot="protected" virt="non-virtual"><scope>sdm::ast::joint_element_encoder</scope><name>ag_space_</name></member>
+      <member refid="classsdm_1_1ast_1_1joint__element__encoder_1a0d89fd8b2e63fc246d62d5b0b2794f50" prot="protected" virt="non-virtual"><scope>sdm::ast::joint_element_encoder</scope><name>element_space_</name></member>
+      <member refid="classsdm_1_1ast_1_1joint__element__encoder_1a0b6993a9ce3a8bd9e11da362d8802262" prot="public" virt="non-virtual"><scope>sdm::ast::joint_element_encoder</scope><name>encode</name></member>
+      <member refid="classsdm_1_1ast_1_1joint__element__encoder_1a1a0048a6b92a19e0137bb623271e18b7" prot="public" virt="non-virtual"><scope>sdm::ast::joint_element_encoder</scope><name>joint_element_encoder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

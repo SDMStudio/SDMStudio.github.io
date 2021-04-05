@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_baab9deb2ceef290d17fdadea9d6b69b" kind="dir">
+    <compoundname>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms</compoundname>
+    <innerfile refid="hsvi_8hpp">hsvi.hpp</innerfile>
+    <innerfile refid="learning__algo_8hpp">learning_algo.hpp</innerfile>
+    <innerfile refid="q__learning_8hpp">q_learning.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/"/>
+  </compounddef>
+</doxygen>

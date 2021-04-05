@@ -30,8 +30,8 @@
 | Type | Name |
 | ---: | :--- |
 |  std::vector&lt; std::string &gt; | [**available**](namespacesdm_1_1algo.md#function-available) () <br>_Get all available algorithms._  |
-|  auto | [**make**](namespacesdm_1_1algo.md#function-make) (std::string algo\_name, std::shared\_ptr&lt; [**POSG**](classsdm_1_1POSG.md) &gt; problem, double discount=0.99, double error=0.001, int horizon=0, int trials=1000) <br>_Build an algorithm given his name and the configurations required._  |
-|  std::shared\_ptr&lt; [**sdm::HSVI**](classsdm_1_1HSVI.md)&lt; TState, TAction &gt; &gt; | [**makeMappedHSVI**](namespacesdm_1_1algo.md#function-makemappedhsvi) (std::shared\_ptr&lt; [**POSG**](classsdm_1_1POSG.md) &gt; problem, double discount=0.99, double error=0.001, int horizon=0, int trials=1000) <br>_Build the_ [_**HSVI**_](classsdm_1_1HSVI.md) _version that use_[_**TabularValueFunction**_](classsdm_1_1TabularValueFunction.md) _Representation._ |
+|  std::shared\_ptr&lt; [**Algorithm**](classsdm_1_1Algorithm.md) &gt; | [**make**](namespacesdm_1_1algo.md#function-make) (std::string algo\_name, std::string problem\_path, std::string formalism, std::string ub\_init, std::string lb\_init, double discount=0.99, double error=0.001, int horizon=0, int trials=1000, std::string name="") <br>_Build an algorithm given his name and the configurations required._  |
+|  std::shared\_ptr&lt; [**sdm::HSVI**](classsdm_1_1HSVI.md)&lt; TState, TAction &gt; &gt; | [**makeMappedHSVI**](namespacesdm_1_1algo.md#function-makemappedhsvi) (std::shared\_ptr&lt; [**SolvableByHSVI**](classsdm_1_1SolvableByHSVI.md)&lt; TState, TAction &gt;&gt; problem, std::string ub\_init\_name, std::string lb\_init\_name, double discount, double error, int horizon, int trials, std::string name) <br>_Build the_ [_**HSVI**_](classsdm_1_1HSVI.md) _version that use_[_**TabularValueFunction**_](classsdm_1_1TabularValueFunction.md) _Representation._ |
 
 
 
@@ -66,16 +66,45 @@ the list of available algorithms.
 
 
 ```cpp
-template<typename TState typename TState, typename TAction typename TAction>
-auto sdm::algo::make (
+std::shared_ptr< Algorithm > sdm::algo::make (
     std::string algo_name,
-    std::shared_ptr< POSG > problem,
+    std::string problem_path,
+    std::string formalism,
+    std::string ub_init,
+    std::string lb_init,
     double discount=0.99,
     double error=0.001,
     int horizon=0,
-    int trials=1000
+    int trials=1000,
+    std::string name=""
 ) 
 ```
+
+
+
+
+**Template parameters:**
+
+
+* `TState` 
+* `TAction` 
+
+
+
+**Parameters:**
+
+
+* `problem` 
+* `discount` 
+* `error` 
+* `horizon` 
+* `trials` 
+
+
+
+**Returns:**
+
+std::shared\_ptr&lt;sdm::HSVI&lt;TState, TAction&gt;&gt; 
 
 
 
@@ -115,11 +144,14 @@ auto pointer on algorithm instance
 ```cpp
 template<typename TState typename TState, typename TAction typename TAction>
 std::shared_ptr< sdm::HSVI < TState, TAction > > sdm::algo::makeMappedHSVI (
-    std::shared_ptr< POSG > problem,
-    double discount=0.99,
-    double error=0.001,
-    int horizon=0,
-    int trials=1000
+    std::shared_ptr< SolvableByHSVI < TState, TAction >> problem,
+    std::string ub_init_name,
+    std::string lb_init_name,
+    double discount,
+    double error,
+    int horizon,
+    int trials,
+    std::string name
 ) 
 ```
 
@@ -154,4 +186,4 @@ pointer on [**HSVI**](classsdm_1_1HSVI.md) instance
         
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/algorithms.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp`

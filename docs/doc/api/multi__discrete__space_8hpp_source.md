@@ -36,15 +36,17 @@ namespace sdm
         using value_type = Joint<TItem>;
 
         MultiDiscreteSpace();
-        // MultiDiscreteSpace(const std::vector<number> &);
-
-        MultiDiscreteSpace(const std::vector<std::vector<TItem>> &);
-
+        
         MultiDiscreteSpace(const std::vector<std::shared_ptr<DiscreteSpace<TItem>>> &);
+
+        MultiDiscreteSpace(const std::vector<std::vector<TItem>> &values);
 
         MultiDiscreteSpace(const MultiDiscreteSpace<TItem> &copy);
 
         MultiDiscreteSpace(const std::vector<DiscreteSpace<TItem>> &);
+
+        template <bool TBool = std::is_integral<TItem>::value>
+        MultiDiscreteSpace(const std::enable_if_t<TBool, std::vector<TItem>> &num_items);
 
         number joint2single(const std::vector<TItem> &jitem) const;
 
@@ -58,10 +60,12 @@ namespace sdm
 
         TItem getItem(number ag_id, number item_index) const;
 
-        // void setSpaces(const std::vector<number> &);
+        template <bool TBool = std::is_integral<TItem>::value>
+        void setSpaces(const std::enable_if_t<TBool, std::vector<TItem>> &num_items);
         void setSpaces(const std::vector<std::vector<TItem>> &);
         void setSpaces(const std::vector<std::shared_ptr<DiscreteSpace<TItem>>> &spaces);
         void setSpaces(const std::vector<DiscreteSpace<TItem>> &spaces);
+
 
         number getJointItemIndex(Joint<TItem> &jitem) const;
         number getJointItemIndex(const std::vector<TItem> &) const;
@@ -80,6 +84,7 @@ namespace sdm
             return os;
         }
     };
+
 } // namespace sdm
 
 #include <sdm/core/space/multi_discrete_space.tpp>

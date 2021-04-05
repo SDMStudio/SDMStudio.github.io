@@ -169,4 +169,4 @@ inline friend std::ostream & sdm::RecursiveMap< T0, T1 >::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/struct/recursive_map.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp`

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1World" kind="class" language="C++" prot="public">
+    <compoundname>sdm::World</compoundname>
+    <derivedcompoundref refid="classsdm_1_1NDPOMDP" prot="public" virt="non-virtual">sdm::NDPOMDP</derivedcompoundref>
+    <includes refid="world_8hpp" local="no">world.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1World_1a3165573c5c14b4d9cfde44325bc4ed76" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref></type>
+        <definition>state sdm::World::internal</definition>
+        <argsstring></argsstring>
+        <name>internal</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/world.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/world.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="754">
+        <label>sdm::World</label>
+        <link refid="classsdm_1_1World"/>
+      </node>
+      <node id="755">
+        <label>sdm::NDPOMDP</label>
+        <link refid="classsdm_1_1NDPOMDP"/>
+        <childnode refid="754" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/world.hpp" line="26" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/world.hpp" bodystart="25" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1World_1a3165573c5c14b4d9cfde44325bc4ed76" prot="protected" virt="non-virtual"><scope>sdm::World</scope><name>internal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_a0f8f367ee5fbc480d285e7bffe42674" kind="dir">
+    <compoundname>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn</compoundname>
+    <innerfile refid="mlpnet_8cpp">mlpnet.cpp</innerfile>
+    <innerfile refid="mlpnet_8hpp">mlpnet.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/nn/"/>
+  </compounddef>
+</doxygen>

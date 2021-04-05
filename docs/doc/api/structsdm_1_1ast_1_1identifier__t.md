@@ -37,4 +37,4 @@ Inherits the following classes: boost::spirit::x3::variant< std::string, unsigne
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/ast.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp`

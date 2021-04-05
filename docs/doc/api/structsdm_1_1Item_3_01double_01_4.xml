@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structsdm_1_1Item_3_01double_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>sdm::Item&lt; double &gt;</compoundname>
+    <includes refid="item_8hpp" local="no">item.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structsdm_1_1Item_3_01double_01_4_1afae0c405a972ac73afac41afcab5d352" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::Item&lt; double &gt;::item_</definition>
+        <argsstring></argsstring>
+        <name>item_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="198" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structsdm_1_1Item_3_01double_01_4_1a509a12163d5fd74fe40d3298f7cc658a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; double &gt;::Item</definition>
+        <argsstring>()</argsstring>
+        <name>Item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="201" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01double_01_4_1a3f00fe7f5d92fed44666fb6dfafc02a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; double &gt;::Item</definition>
+        <argsstring>(double item)</argsstring>
+        <name>Item</name>
+        <param>
+          <type>double</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="205" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="205" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="structsdm_1_1Item_3_01double_01_4_1a41aaf06fe7bcafa0e5944c0e07926b4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::Item&lt; double &gt;::operator double</definition>
+        <argsstring>()</argsstring>
+        <name>operator double</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="206" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="206" bodyend="209"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structsdm_1_1Item_3_01double_01_4_1a7c80f256d8df39e97d0c7a88a63a2eb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Item&lt; double &gt; &amp;it)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsdm_1_1Item" kindref="compound">Item</ref>&lt; double &gt; &amp;</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="211" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="211" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" line="196" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/item.hpp" bodystart="195" bodyend="216"/>
+    <listofallmembers>
+      <member refid="structsdm_1_1Item_3_01double_01_4_1a509a12163d5fd74fe40d3298f7cc658a" prot="public" virt="non-virtual"><scope>sdm::Item&lt; double &gt;</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_3_01double_01_4_1a3f00fe7f5d92fed44666fb6dfafc02a3" prot="public" virt="non-virtual"><scope>sdm::Item&lt; double &gt;</scope><name>Item</name></member>
+      <member refid="structsdm_1_1Item_3_01double_01_4_1afae0c405a972ac73afac41afcab5d352" prot="protected" virt="non-virtual"><scope>sdm::Item&lt; double &gt;</scope><name>item_</name></member>
+      <member refid="structsdm_1_1Item_3_01double_01_4_1a41aaf06fe7bcafa0e5944c0e07926b4f" prot="public" virt="non-virtual"><scope>sdm::Item&lt; double &gt;</scope><name>operator double</name></member>
+      <member refid="structsdm_1_1Item_3_01double_01_4_1a7c80f256d8df39e97d0c7a88a63a2eb9" prot="public" virt="non-virtual"><scope>sdm::Item&lt; double &gt;</scope><name>operator&lt;&lt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

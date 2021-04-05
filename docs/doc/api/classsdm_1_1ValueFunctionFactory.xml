@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1ValueFunctionFactory" kind="class" language="C++" prot="public">
+    <compoundname>sdm::ValueFunctionFactory</compoundname>
+    <includes refid="value__functions_8hpp" local="no">value_functions.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classsdm_1_1ValueFunctionFactory_1a21cd7ea06b2044d28d89d75c2e9d9fd9" prot="protected" static="no">
+        <type>std::map&lt; std::string, std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt; *</type>
+        <definition>typedef std::map&lt;std::string, std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt;* sdm::ValueFunctionFactory&lt; TState, TAction &gt;::map_type() { return registry_; } static std::vector&lt; std::string &gt; available(</definition>
+        <argsstring>() { return registry_;} static std::vector&lt; std::string &gt; available(</argsstring>
+        <name>map_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" line="32" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" bodystart="39" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classsdm_1_1ValueFunctionFactory_1a3302c1e2262296c93c1390d3c0bc96df" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1Initializer" kindref="compound">Initializer</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>static std::shared_ptr&lt;Initializer&lt;TState, TAction&gt; &gt; sdm::ValueFunctionFactory&lt; TState, TAction &gt;::make</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>make</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" line="52" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1ValueFunctionFactory_1ab1f82330d7714fa417822482376bf239" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>template&lt; typename TS, typename TA &gt; class</type>
+            <declname>TValueFunction</declname>
+            <defname>TValueFunction</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void sdm::ValueFunctionFactory&lt; TState, TAction &gt;::addToRegistry</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>addToRegistry</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" line="61" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" bodystart="61" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classsdm_1_1ValueFunctionFactory" kindref="compound">ValueFunctionFactory</ref> class facilitates users to interact and instanciate value functions. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the action type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_functions.hpp" bodystart="29" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1ValueFunctionFactory_1ab1f82330d7714fa417822482376bf239" prot="protected" virt="non-virtual"><scope>sdm::ValueFunctionFactory</scope><name>addToRegistry</name></member>
+      <member refid="classsdm_1_1ValueFunctionFactory_1a3302c1e2262296c93c1390d3c0bc96df" prot="protected" virt="non-virtual"><scope>sdm::ValueFunctionFactory</scope><name>make</name></member>
+      <member refid="classsdm_1_1ValueFunctionFactory_1a21cd7ea06b2044d28d89d75c2e9d9fd9" prot="protected" virt="non-virtual"><scope>sdm::ValueFunctionFactory</scope><name>map_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

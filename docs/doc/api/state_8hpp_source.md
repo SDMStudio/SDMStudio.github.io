@@ -13,12 +13,12 @@
 #include <sdm/types.hpp>
 #include <sdm/utils/linear_algebra/sdms_vector.hpp>
 #include <sdm/utils/linear_algebra/mapped_vector.hpp>
-#include <sdm/utils/struct/tree.hpp>
+#include <sdm/core/state/serialized_state.hpp>
 
 namespace sdm
 {
-  using BeliefState = MappedVector<number, double>;
-  // using OccupancyState = MappedVector<std::pair<BeliefState, JointHistoryTree<number>*>, double>;
+  // using BeliefState = MappedVector<number, double>;
+  
 
 } // namespace sdm
 ````

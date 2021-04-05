@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="variations_8hpp" kind="file" language="C++">
+    <compoundname>variations.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="types_8hpp" local="no">sdm/types.hpp</includes>
+    <includes local="no">sdm/utils/decision_rules/variations.tpp</includes>
+    <includedby refid="function__space_8hpp" local="no">/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp</includedby>
+    <incdepgraph>
+      <node id="2546">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="2540">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/variations.hpp</label>
+        <link refid="variations_8hpp"/>
+        <childnode refid="2541" relation="include">
+        </childnode>
+        <childnode refid="2542" relation="include">
+        </childnode>
+        <childnode refid="2547" relation="include">
+        </childnode>
+      </node>
+      <node id="2547">
+        <label>sdm/utils/decision_rules/variations.tpp</label>
+      </node>
+      <node id="2541">
+        <label>vector</label>
+      </node>
+      <node id="2544">
+        <label>iostream</label>
+      </node>
+      <node id="2543">
+        <label>cstddef</label>
+      </node>
+      <node id="2545">
+        <label>unordered_map</label>
+      </node>
+      <node id="2542">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="2543" relation="include">
+        </childnode>
+        <childnode refid="2544" relation="include">
+        </childnode>
+        <childnode refid="2545" relation="include">
+        </childnode>
+        <childnode refid="2546" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2550">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/spaces.hpp</label>
+        <link refid="spaces_8hpp"/>
+        <childnode refid="2551" relation="include">
+        </childnode>
+      </node>
+      <node id="2548">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/variations.hpp</label>
+        <link refid="variations_8hpp"/>
+        <childnode refid="2549" relation="include">
+        </childnode>
+      </node>
+      <node id="2551">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/interactive_world_base.hpp</label>
+        <link refid="interactive__world__base_8hpp"/>
+      </node>
+      <node id="2549">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/function_space.hpp</label>
+        <link refid="function__space_8hpp"/>
+        <childnode refid="2550" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsdm_1_1Variations" prot="public">sdm::Variations</innerclass>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+<para>This class provides getter and setter methods for generating Variations for all kind of data including: joint actions, joint observations, joint decision rules, policy trees, etc. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jilles S. Dibangoye </para></simplesect>
+<simplesect kind="author"><para>David Albert (<ulink url="mailto:david.albert@insa-lyon.fr">david.albert@insa-lyon.fr</ulink>) </para></simplesect>
+<simplesect kind="version"><para>1.0 </para></simplesect>
+<simplesect kind="date"><para>09/03/2021</para></simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="types_8hpp" kindref="compound">sdm/types.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TFunction&gt;</highlight></codeline>
+<codeline lineno="30" refid="classsdm_1_1Variations" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsdm_1_1Variations" kindref="compound">Variations</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classsdm_1_1Variations_1a26ef06d59ed12fab746c7f8ee4efa805" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Variations_1a26ef06d59ed12fab746c7f8ee4efa805" kindref="member">TKey</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TFunction::input_type;</highlight></codeline>
+<codeline lineno="34" refid="classsdm_1_1Variations_1a9e3df398d6b04c4296c4947fb9c65b68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Variations_1a9e3df398d6b04c4296c4947fb9c65b68" kindref="member">TItem</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TFunction::output_type;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classsdm_1_1Variations_1a3434490f2eca0452585c15e1561362f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Variations_1a3434490f2eca0452585c15e1561362f6" kindref="member">iterator_t</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::vector&lt;TItem&gt;::iterator;</highlight></codeline>
+<codeline lineno="37" refid="classsdm_1_1Variations_1aad5494a0fd78944752499b3277fa6cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Variations_1aad5494a0fd78944752499b3277fa6cd7" kindref="member">super_iterator</ref><sp/>=<sp/>std::vector&lt;iterator_t&gt;;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classsdm_1_1Variations_1a72ec1d56478ee30173608664e51cdf53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Variations_1aad5494a0fd78944752499b3277fa6cd7" kindref="member">super_iterator</ref><sp/><ref refid="classsdm_1_1Variations_1a72ec1d56478ee30173608664e51cdf53" kindref="member">current</ref>;<sp/></highlight><highlight class="comment">//&lt;!<sp/>current<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classsdm_1_1Variations_1aff35d7623042a28bf2c04d9d78faf584" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;TKey&gt;<sp/><ref refid="classsdm_1_1Variations_1aff35d7623042a28bf2c04d9d78faf584" kindref="member">p_keys_</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;!<sp/>histories<sp/>to<sp/>prescribe<sp/>an<sp/>action</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classsdm_1_1Variations_1acd65b35454de7c5609a96c7f9d3a64a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;TItem&gt;&gt;<sp/><ref refid="classsdm_1_1Variations_1acd65b35454de7c5609a96c7f9d3a64a6" kindref="member">p_values_</ref>;<sp/></highlight><highlight class="comment">//&lt;!<sp/>table<sp/>of<sp/>numbers<sp/>of<sp/>actions<sp/>available<sp/>per<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classsdm_1_1Variations_1af264aa6de8606aaf8d1867ec13a405f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TFunction&gt;<sp/><ref refid="classsdm_1_1Variations_1af264aa6de8606aaf8d1867ec13a405f6" kindref="member">vout</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classsdm_1_1Variations_1a386b16b6607a362ce75014e10d5e8e61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TFunction&gt;<sp/><ref refid="classsdm_1_1Variations_1a386b16b6607a362ce75014e10d5e8e61" kindref="member">vin</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classsdm_1_1Variations_1a5ad1eb18311d8ceba5d2e3cabd85fa77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Variations_1a5ad1eb18311d8ceba5d2e3cabd85fa77" kindref="member">dimension</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Variations_1a377c08ef17dd3f542557ffd15e6697b8" kindref="member">Variations</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Variations_1a377c08ef17dd3f542557ffd15e6697b8" kindref="member">Variations</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;TItem&gt;&gt;<sp/>&amp;possible_values);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1Variations_1a377c08ef17dd3f542557ffd15e6697b8" kindref="member">Variations</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;TKey&gt;<sp/>&amp;possible_keys,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;TItem&gt;&gt;<sp/>&amp;possible_values);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1Variations_1a58ed7099af7866f7bfa1a68e80d726e4" kindref="member">setVariation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;TKey&gt;<sp/>&amp;possible_keys,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;TItem&gt;&gt;<sp/>&amp;possible_values);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TFunction&gt;<sp/><ref refid="classsdm_1_1Variations_1a663a3d572aa8ed53ab4b2993436bb461" kindref="member">make_output</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TFunction&gt;<sp/><ref refid="classsdm_1_1Variations_1adb8be9ca434ff1a9d999e0e23ee1e34c" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TFunction&gt;<sp/><ref refid="classsdm_1_1Variations_1a4aef160c3afd80ab23ef505b03b191bb" kindref="member">next</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;TFunction&gt;<sp/><ref refid="classsdm_1_1Variations_1af19c0af1a7c5818362d2b121d9b17bd7" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sdm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sdm/utils/decision_rules/variations.tpp&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/variations.hpp"/>
+  </compounddef>
+</doxygen>

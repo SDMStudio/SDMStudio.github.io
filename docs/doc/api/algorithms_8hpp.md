@@ -11,9 +11,16 @@
 
 
 * `#include <random>`
+* `#include <sdm/exception.hpp>`
+* `#include <sdm/tools.hpp>`
+* `#include <sdm/worlds.hpp>`
 * `#include <sdm/algorithms/hsvi.hpp>`
+* `#include <sdm/public/algorithm.hpp>`
+* `#include <sdm/core/states.hpp>`
+* `#include <sdm/utils/decision_rules/det_decision_rule.hpp>`
 * `#include <sdm/utils/value_function/tabular_value_function.hpp>`
-* `#include <sdm/utils/value_function/initializer.hpp>`
+* `#include <sdm/utils/value_function/initializers.hpp>`
+* `#include <sdm/utils/value_function/initializer/mdp_initializer.hpp>`
 
 
 
@@ -45,4 +52,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/algorithms.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms.hpp`

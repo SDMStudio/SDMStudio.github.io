@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1BinaryFunction" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sdm::BinaryFunction</compoundname>
+    <basecompoundref refid="classsdm_1_1Function" prot="public" virt="non-virtual">sdm::Function&lt; std::pair&lt; TInput1, TInput2 &gt;, TOutput &gt;</basecompoundref>
+    <includes refid="function_8hpp" local="no">function.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>TInput1</declname>
+        <defname>TInput1</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>TInput2</declname>
+        <defname>TInput2</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>TOutput</declname>
+        <defname>TOutput</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" prot="public" static="no">
+        <type>std::pair&lt; TInput1, TInput2 &gt;</type>
+        <definition>using sdm::BinaryFunction&lt; TInput1, TInput2, TOutput &gt;::input_type =  std::pair&lt;TInput1, TInput2&gt;</definition>
+        <argsstring></argsstring>
+        <name>input_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" line="23" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" prot="public" static="no">
+        <type>TOutput</type>
+        <definition>using sdm::BinaryFunction&lt; TInput1, TInput2, TOutput &gt;::output_type =  TOutput</definition>
+        <argsstring></argsstring>
+        <name>output_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" line="24" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1BinaryFunction_1a3d447385a4d0e78a88635b20615117c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" kindref="member">output_type</ref></type>
+        <definition>virtual output_type sdm::BinaryFunction&lt; TInput1, TInput2, TOutput &gt;::operator()</definition>
+        <argsstring>(const TInput1 &amp;, const TInput2 &amp;)=0</argsstring>
+        <name>operator()</name>
+        <reimplementedby refid="classsdm_1_1State2OccupancyValueFunction_1a6daf5dacb1986e09136727e6156f44bc">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1State2OccupancyValueFunction_1a27a4546ff65d8f6002843eea90659282">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1State2OccupancyValueFunction_1a0b4a378f8e5d59533fe46d513f28b3f5">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1Belief2OccupancyValueFunction_1afc29f518544fd422ced214f149d69389">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1Belief2OccupancyValueFunction_1a4271b76f71755d74c6e0390859035e40">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1Belief2OccupancyValueFunction_1ab47ca51b27ce6fdf4b0f3b5f66a6fc73">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1ValueFunction_1abd33004b2a910e321a1dc07d0c8950e0">operator()</reimplementedby>
+        <reimplementedby refid="classsdm_1_1ValueFunction_1abd33004b2a910e321a1dc07d0c8950e0">operator()</reimplementedby>
+        <param>
+          <type>const TInput1 &amp;</type>
+        </param>
+        <param>
+          <type>const TInput2 &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1BinaryFunction_1a70feb6f73b43d4bcb9263bba9e23963a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" kindref="member">output_type</ref></type>
+        <definition>output_type sdm::BinaryFunction&lt; TInput1, TInput2, TOutput &gt;::operator()</definition>
+        <argsstring>(const input_type &amp;p_input)</argsstring>
+        <name>operator()</name>
+        <reimplements refid="classsdm_1_1Function_1a4bc2d0074a496bc371d4064d7a4b1268">operator()</reimplements>
+        <param>
+          <type>const <ref refid="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" kindref="member">input_type</ref> &amp;</type>
+          <declname>p_input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" line="28" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="38">
+        <label>sdm::Function&lt; std::pair&lt; TInput1, TInput2 &gt;, TOutput &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="37">
+        <label>sdm::BinaryFunction&lt; TInput1, TInput2, TOutput &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="40">
+        <label>sdm::Function&lt; std::pair&lt; TInput1, TInput2 &gt;, TOutput &gt;</label>
+        <link refid="classsdm_1_1Function"/>
+      </node>
+      <node id="39">
+        <label>sdm::BinaryFunction&lt; TInput1, TInput2, TOutput &gt;</label>
+        <link refid="classsdm_1_1BinaryFunction"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" line="21" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp" bodystart="20" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1BinaryFunction_1a75d1ffc9a6fa593ad94d751e89503e6c" prot="public" virt="non-virtual"><scope>sdm::BinaryFunction</scope><name>input_type</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a3d447385a4d0e78a88635b20615117c6" prot="public" virt="pure-virtual"><scope>sdm::BinaryFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a70feb6f73b43d4bcb9263bba9e23963a" prot="public" virt="virtual"><scope>sdm::BinaryFunction</scope><name>operator()</name></member>
+      <member refid="classsdm_1_1BinaryFunction_1a1a5f0a4eba00f7e0153243cc2be273a3" prot="public" virt="non-virtual"><scope>sdm::BinaryFunction</scope><name>output_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

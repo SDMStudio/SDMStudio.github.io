@@ -8,7 +8,7 @@
 
 
 
-
+_This class provide quick accessors to transition probability distributions._ 
 
 * `#include <state_dynamics.hpp>`
 
@@ -30,14 +30,16 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**StateDynamics**](classsdm_1_1StateDynamics.md#function-statedynamics-1-2) () <br> |
-|   | [**StateDynamics**](classsdm_1_1StateDynamics.md#function-statedynamics-2-2) ([**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number)) <br>_Instantiate a transition model._  |
-|  const std::unordered\_set&lt; [**state**](namespacesdm.md#typedef-state) &gt; & | [**getStateSuccessors**](classsdm_1_1StateDynamics.md#function-getstatesuccessors) ([**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number)) <br>_Returns set of possible next states._  |
-|  double | [**getTransitionProbability**](classsdm_1_1StateDynamics.md#function-gettransitionprobability) ([**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number)) const<br>_Get transition probability._  |
-|  const Matrix & | [**getTransitions**](classsdm_1_1StateDynamics.md#function-gettransitions) ([**number**](namespacesdm.md#typedef-number)) <br>_Returns matrix of probability transitions for the pre-defined action._  |
-|  void | [**initDynamics**](classsdm_1_1StateDynamics.md#function-initdynamics) ([**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number)) <br>_Inits the dynamics model._  |
-|  void | [**setTransitionProbability**](classsdm_1_1StateDynamics.md#function-settransitionprobability) ([**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number), double, bool=false) <br> |
-|  void | [**setTransitions**](classsdm_1_1StateDynamics.md#function-settransitions) (const std::vector&lt; Matrix &gt; &) <br>_Sets probability transitions._  |
+|   | [**StateDynamics**](classsdm_1_1StateDynamics.md#function-statedynamics-1-3) () <br> |
+|   | [**StateDynamics**](classsdm_1_1StateDynamics.md#function-statedynamics-2-3) ([**StateDynamics**](classsdm_1_1StateDynamics.md) & copy) <br> |
+|   | [**StateDynamics**](classsdm_1_1StateDynamics.md#function-statedynamics-3-3) ([**number**](namespacesdm.md#typedef-number) num\_actions, [**number**](namespacesdm.md#typedef-number) num\_states) <br>_Construct a new State Dynamics object._  |
+|  const std::unordered\_set&lt; [**state**](namespacesdm.md#typedef-state) &gt; & | [**getStateSuccessors**](classsdm_1_1StateDynamics.md#function-getstatesuccessors) ([**number**](namespacesdm.md#typedef-number) x, [**number**](namespacesdm.md#typedef-number) u) <br> |
+|  double | [**getTransitionProbability**](classsdm_1_1StateDynamics.md#function-gettransitionprobability) ([**number**](namespacesdm.md#typedef-number) x, [**number**](namespacesdm.md#typedef-number) u, [**number**](namespacesdm.md#typedef-number) y) const<br>_Get the transition probability on one point._  |
+|  std::vector&lt; Matrix &gt; | [**getTransitions**](classsdm_1_1StateDynamics.md#function-gettransitions-1-2) () <br>_Sets probability transitions._  |
+|  const Matrix & | [**getTransitions**](classsdm_1_1StateDynamics.md#function-gettransitions-2-2) ([**number**](namespacesdm.md#typedef-number) u) <br>_Returns matrix of probability transitions for the pre-defined action._  |
+|  void | [**initDynamics**](classsdm_1_1StateDynamics.md#function-initdynamics) ([**number**](namespacesdm.md#typedef-number) num\_actions, [**number**](namespacesdm.md#typedef-number) num\_states) <br>_Initialize the dynamics model._  |
+|  void | [**setTransitionProbability**](classsdm_1_1StateDynamics.md#function-settransitionprobability) ([**number**](namespacesdm.md#typedef-number) x, [**number**](namespacesdm.md#typedef-number) u, [**number**](namespacesdm.md#typedef-number) y, double p, bool cumul=false) <br>_Set the transition probability on one point._  |
+|  void | [**setTransitions**](classsdm_1_1StateDynamics.md#function-settransitions) (const std::vector&lt; Matrix &gt; & t\_model) <br>_Sets probability transitions._  |
 
 
 
@@ -55,7 +57,7 @@
 ## Public Functions Documentation
 
 
-### function StateDynamics [1/2]
+### function StateDynamics [1/3]
 
 
 ```cpp
@@ -64,13 +66,24 @@ sdm::StateDynamics::StateDynamics ()
 
 
 
-### function StateDynamics [2/2]
+### function StateDynamics [2/3]
 
 
 ```cpp
 sdm::StateDynamics::StateDynamics (
-    number,
-    number
+    StateDynamics & copy
+) 
+```
+
+
+
+### function StateDynamics [3/3]
+
+
+```cpp
+sdm::StateDynamics::StateDynamics (
+    number num_actions,
+    number num_states
 ) 
 ```
 
@@ -80,7 +93,7 @@ sdm::StateDynamics::StateDynamics (
 **Parameters:**
 
 
-* `num_jactions` Number of joint actions 
+* `num_actions` Number of (joint) action 
 * `num_states` Number of states 
 
 
@@ -92,8 +105,8 @@ sdm::StateDynamics::StateDynamics (
 
 ```cpp
 const std::unordered_set< state > & sdm::StateDynamics::getStateSuccessors (
-    number,
-    number
+    number x,
+    number u
 ) 
 ```
 
@@ -103,8 +116,8 @@ const std::unordered_set< state > & sdm::StateDynamics::getStateSuccessors (
 **Parameters:**
 
 
-* `x` A specific state 
-* `jaction` A specific joint actioon 
+* `x` 
+* `u` 
 
 
 
@@ -122,9 +135,9 @@ const std::unordered\_set&lt;state&gt;&
 
 ```cpp
 double sdm::StateDynamics::getTransitionProbability (
-    number,
-    number,
-    number
+    number x,
+    number u,
+    number y
 ) const
 ```
 
@@ -135,7 +148,7 @@ double sdm::StateDynamics::getTransitionProbability (
 
 
 * `x` A specific state (the state at timestep t) 
-* `jaction` A specific joint actioon 
+* `u` A specific (joint) action 
 * `y` A specific state (the state at timestep t+1) 
 
 
@@ -149,12 +162,31 @@ the transition probability
 
         
 
-### function getTransitions 
+### function getTransitions [1/2]
+
+
+```cpp
+std::vector< Matrix > sdm::StateDynamics::getTransitions () 
+```
+
+
+
+
+**Parameters:**
+
+
+* `t_model` matrices of transitions, one for each (joint) action. 
+
+
+
+        
+
+### function getTransitions [2/2]
 
 
 ```cpp
 const Matrix & sdm::StateDynamics::getTransitions (
-    number
+    number u
 ) 
 ```
 
@@ -164,7 +196,7 @@ const Matrix & sdm::StateDynamics::getTransitions (
 **Parameters:**
 
 
-* `jaction` A specific joint action 
+* `u` A specific (joint) action 
 
 
 
@@ -175,8 +207,8 @@ const Matrix & sdm::StateDynamics::getTransitions (
 
 ```cpp
 void sdm::StateDynamics::initDynamics (
-    number,
-    number
+    number num_actions,
+    number num_states
 ) 
 ```
 
@@ -186,7 +218,7 @@ void sdm::StateDynamics::initDynamics (
 **Parameters:**
 
 
-* `num_jactions` Number of joint actions 
+* `num_actions` Number of (joint) actions 
 * `num_states` Number of states 
 
 
@@ -198,11 +230,11 @@ void sdm::StateDynamics::initDynamics (
 
 ```cpp
 void sdm::StateDynamics::setTransitionProbability (
-    number,
-    number,
-    number,
-    double,
-    bool=false
+    number x,
+    number u,
+    number y,
+    double p,
+    bool cumul=false
 ) 
 ```
 
@@ -213,7 +245,7 @@ void sdm::StateDynamics::setTransitionProbability (
 
 
 * `x` A specific state (the state at timestep t) 
-* `jaction` A specific joint action 
+* `u` A specific (joint) action 
 * `y` A specific state (the state at timestep t+1) 
 * `double` probability of the transition 
 * `bool` whether or not we cumulate probabilities. 
@@ -227,7 +259,7 @@ void sdm::StateDynamics::setTransitionProbability (
 
 ```cpp
 void sdm::StateDynamics::setTransitions (
-    const std::vector< Matrix > &
+    const std::vector< Matrix > & t_model
 ) 
 ```
 
@@ -237,7 +269,7 @@ void sdm::StateDynamics::setTransitions (
 **Parameters:**
 
 
-* `t_model` matrices of transitions, one for each action. 
+* `t_model` matrices of transitions, one for each (joint) action. 
 
 
 
@@ -264,4 +296,4 @@ std::vector<Matrix> sdm::StateDynamics::t_model;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/state_dynamics.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state_dynamics.hpp`

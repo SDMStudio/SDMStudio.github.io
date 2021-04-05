@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1HSVI" kind="class" language="C++" prot="public">
+    <compoundname>sdm::HSVI</compoundname>
+    <basecompoundref refid="classsdm_1_1Algorithm" prot="public" virt="non-virtual">sdm::Algorithm</basecompoundref>
+    <includes refid="hsvi_8hpp" local="no">hsvi.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TState</type>
+      </param>
+      <param>
+        <type>typename TAction</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1ad52c19414130372a52536057e2e77396" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;SolvableByHSVI&lt;TState, TAction&gt; &gt; sdm::HSVI&lt; TState, TAction &gt;::world_</definition>
+        <argsstring></argsstring>
+        <name>world_</name>
+        <briefdescription>
+<para>The problem to be solved. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="39" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1a043fea05beeebc64485def331cc77cab" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;ValueFunction&lt;TState, TAction&gt; &gt; sdm::HSVI&lt; TState, TAction &gt;::lower_bound_</definition>
+        <argsstring></argsstring>
+        <name>lower_bound_</name>
+        <briefdescription>
+<para>Lower Bound representation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="44" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1a5da28ae607c3b5110f66ec75621a41a7" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;ValueFunction&lt;TState, TAction&gt; &gt; sdm::HSVI&lt; TState, TAction &gt;::upper_bound_</definition>
+        <argsstring></argsstring>
+        <name>upper_bound_</name>
+        <briefdescription>
+<para>Upper Bound representation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="49" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1a78f817dcaaee41a74798186af8aa39be" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1MultiLogger" kindref="compound">MultiLogger</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;MultiLogger&gt; sdm::HSVI&lt; TState, TAction &gt;::logger_</definition>
+        <argsstring></argsstring>
+        <name>logger_</name>
+        <briefdescription>
+<para><ref refid="classsdm_1_1Logger" kindref="compound">Logger</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="55" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1a5aa105ffb1eea05ee1ade6711a157fe3" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::HSVI&lt; TState, TAction &gt;::trial</definition>
+        <argsstring></argsstring>
+        <name>trial</name>
+        <briefdescription>
+<para>Some variables for the algorithm. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="61" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1a8a2af5f18526c480082fb13efe1a2f3f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sdm::HSVI&lt; TState, TAction &gt;::MAX_TRIALS</definition>
+        <argsstring></argsstring>
+        <name>MAX_TRIALS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="61" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1ab405b496e4b6fb37902e9d998021a2b0" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sdm::HSVI&lt; TState, TAction &gt;::error_</definition>
+        <argsstring></argsstring>
+        <name>error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="62" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1aa3620f3a5e8ce90db32b81d746fe33a5" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::HSVI&lt; TState, TAction &gt;::planning_horizon_</definition>
+        <argsstring></argsstring>
+        <name>planning_horizon_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="63" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1HSVI_1a3fa3c85fb9fd2207ace2f885490801d4" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sdm::HSVI&lt; TState, TAction &gt;::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <initializer>= &quot;hsvi&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="64" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsdm_1_1HSVI_1abbce33c7da0939fab18a2c118fcc48e0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::HSVI&lt; TState, TAction &gt;::initLogger</definition>
+        <argsstring>()</argsstring>
+        <name>initLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="66" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a5fc3819f380e170c002873c300c84b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::HSVI&lt; TState, TAction &gt;::HSVI</definition>
+        <argsstring>(std::shared_ptr&lt; SolvableByHSVI&lt; TState, TAction &gt;&gt; &amp;world, std::shared_ptr&lt; ValueFunction&lt; TState, TAction &gt;&gt; lower_bound, std::shared_ptr&lt; ValueFunction&lt; TState, TAction &gt;&gt; upper_bound, number planning_horizon, double epsilon, number num_max_trials=10000, std::string name=&quot;hsvi&quot;)</argsstring>
+        <name>HSVI</name>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1SolvableByHSVI" kindref="compound">SolvableByHSVI</ref>&lt; TState, TAction &gt;&gt; &amp;</type>
+          <declname>world</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt;&gt;</type>
+          <declname>lower_bound</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt;&gt;</type>
+          <declname>upper_bound</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>planning_horizon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>num_max_trials</declname>
+          <defval>10000</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+          <defval>&quot;hsvi&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Construct the <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the problem to be solved by <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lower_bound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lower bound </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>upper_bound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the upperbound </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>planning_horizon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the planning horizon </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>epsilon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the error </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_max_trials</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the maximum number of trials before stop </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the algorithm (this name is used to save logs) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a9ae60bb126da455fbfd44646c9d91ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::HSVI&lt; TState, TAction &gt;::do_initialize</definition>
+        <argsstring>()</argsstring>
+        <name>do_initialize</name>
+        <reimplements refid="classsdm_1_1Algorithm_1ac7416e15657922c542ec865b71845500">do_initialize</reimplements>
+        <briefdescription>
+<para>Initialize the algorithm. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1af837c2dd9090ae2115a4e0badb24d9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::HSVI&lt; TState, TAction &gt;::do_solve</definition>
+        <argsstring>()</argsstring>
+        <name>do_solve</name>
+        <reimplements refid="classsdm_1_1Algorithm_1a1c9dad65b7cb1b03bd0a3c11e8a1cf24">do_solve</reimplements>
+        <briefdescription>
+<para>Solve a problem solvable by <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a43017500dd9d26064d8a3e8d464981b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void sdm::HSVI&lt; TState, TAction &gt;::do_test</definition>
+        <argsstring>()</argsstring>
+        <name>do_test</name>
+        <reimplements refid="classsdm_1_1Algorithm_1abf4f9b267c62bc80c30a39d0023ef445">do_test</reimplements>
+        <briefdescription>
+<para>Test the learnt value function on one episode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1ace0e6137e0b4a700ea6fda21c3082c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double sdm::HSVI&lt; TState, TAction &gt;::do_excess</definition>
+        <argsstring>(const TState &amp;s, number h)</argsstring>
+        <name>do_excess</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Computes the error between bounds (or excess). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timestep </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a1a95e9e57be2c5a244b55f1163364ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::HSVI&lt; TState, TAction &gt;::do_stop</definition>
+        <argsstring>(const TState &amp;s, number h)</argsstring>
+        <name>do_stop</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Check the end of <ref refid="classsdm_1_1HSVI" kindref="compound">HSVI</ref> algo. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current timestep </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if optimal is reached or number of trials is bigger than maximal number of trials </para></simplesect>
+<simplesect kind="return"><para>false elsewhere </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1af73c0a490df110534390cab0ce06682c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::HSVI&lt; TState, TAction &gt;::do_explore</definition>
+        <argsstring>(const TState &amp;s, number h)</argsstring>
+        <name>do_explore</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Explore a state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state to explore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timestep of the exploration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a72c0492b4d2fd6008e8a3890e6bf90a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TAction</type>
+        <definition>TAction sdm::HSVI&lt; TState, TAction &gt;::selectNextAction</definition>
+        <argsstring>(const TState &amp;s, number h)</argsstring>
+        <name>selectNextAction</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Select the next action. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current timestep </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TAction </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1aaf2901ca29883b3d519e4eab0eea6d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TState</type>
+        <definition>TState sdm::HSVI&lt; TState, TAction &gt;::selectNextState</definition>
+        <argsstring>(const TState &amp;s, const TAction &amp;a, number h)</argsstring>
+        <name>selectNextState</name>
+        <param>
+          <type>const TState &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const TAction &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Select the next state to explore. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current action </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current timestep </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the next state </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a2af0cfe134ccfdf5565911440e27f724" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;ValueFunction&lt;TState, TAction&gt; &gt; sdm::HSVI&lt; TState, TAction &gt;::getLowerBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getLowerBound</name>
+        <briefdescription>
+<para>Get the lower bound value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1a66f33a2f23fdc0278b7546718234e127" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classsdm_1_1ValueFunction" kindref="compound">ValueFunction</ref>&lt; TState, TAction &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;ValueFunction&lt;TState, TAction&gt; &gt; sdm::HSVI&lt; TState, TAction &gt;::getUpperBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getUpperBound</name>
+        <briefdescription>
+<para>Get the upper bound value function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1HSVI_1aa0398699a4ece31b3699430750c69ec6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sdm::HSVI&lt; TState, TAction &gt;::getTrial</definition>
+        <argsstring>() const</argsstring>
+        <name>getTrial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="160" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="257">
+        <label>sdm::HSVI&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1HSVI"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>sdm::Algorithm</label>
+        <link refid="classsdm_1_1Algorithm"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="259">
+        <label>sdm::HSVI&lt; TState, TAction &gt;</label>
+        <link refid="classsdm_1_1HSVI"/>
+        <childnode refid="260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>sdm::Algorithm</label>
+        <link refid="classsdm_1_1Algorithm"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" line="33" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp" bodystart="32" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1HSVI_1ace0e6137e0b4a700ea6fda21c3082c27" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>do_excess</name></member>
+      <member refid="classsdm_1_1HSVI_1af73c0a490df110534390cab0ce06682c" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>do_explore</name></member>
+      <member refid="classsdm_1_1HSVI_1a9ae60bb126da455fbfd44646c9d91ded" prot="public" virt="virtual"><scope>sdm::HSVI</scope><name>do_initialize</name></member>
+      <member refid="classsdm_1_1HSVI_1af837c2dd9090ae2115a4e0badb24d9a7" prot="public" virt="virtual"><scope>sdm::HSVI</scope><name>do_solve</name></member>
+      <member refid="classsdm_1_1HSVI_1a1a95e9e57be2c5a244b55f1163364ab7" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>do_stop</name></member>
+      <member refid="classsdm_1_1HSVI_1a43017500dd9d26064d8a3e8d464981b1" prot="public" virt="virtual"><scope>sdm::HSVI</scope><name>do_test</name></member>
+      <member refid="classsdm_1_1HSVI_1ab405b496e4b6fb37902e9d998021a2b0" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>error_</name></member>
+      <member refid="classsdm_1_1HSVI_1a2af0cfe134ccfdf5565911440e27f724" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>getLowerBound</name></member>
+      <member refid="classsdm_1_1HSVI_1aa0398699a4ece31b3699430750c69ec6" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>getTrial</name></member>
+      <member refid="classsdm_1_1HSVI_1a66f33a2f23fdc0278b7546718234e127" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>getUpperBound</name></member>
+      <member refid="classsdm_1_1HSVI_1a5fc3819f380e170c002873c300c84b2d" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>HSVI</name></member>
+      <member refid="classsdm_1_1HSVI_1abbce33c7da0939fab18a2c118fcc48e0" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>initLogger</name></member>
+      <member refid="classsdm_1_1HSVI_1a78f817dcaaee41a74798186af8aa39be" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>logger_</name></member>
+      <member refid="classsdm_1_1HSVI_1a043fea05beeebc64485def331cc77cab" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>lower_bound_</name></member>
+      <member refid="classsdm_1_1HSVI_1a8a2af5f18526c480082fb13efe1a2f3f" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>MAX_TRIALS</name></member>
+      <member refid="classsdm_1_1HSVI_1a3fa3c85fb9fd2207ace2f885490801d4" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>name_</name></member>
+      <member refid="classsdm_1_1HSVI_1aa3620f3a5e8ce90db32b81d746fe33a5" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>planning_horizon_</name></member>
+      <member refid="classsdm_1_1HSVI_1a72c0492b4d2fd6008e8a3890e6bf90a4" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>selectNextAction</name></member>
+      <member refid="classsdm_1_1HSVI_1aaf2901ca29883b3d519e4eab0eea6d86" prot="public" virt="non-virtual"><scope>sdm::HSVI</scope><name>selectNextState</name></member>
+      <member refid="classsdm_1_1HSVI_1a5aa105ffb1eea05ee1ade6711a157fe3" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>trial</name></member>
+      <member refid="classsdm_1_1HSVI_1a5da28ae607c3b5110f66ec75621a41a7" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>upper_bound_</name></member>
+      <member refid="classsdm_1_1HSVI_1ad52c19414130372a52536057e2e77396" prot="protected" virt="non-virtual"><scope>sdm::HSVI</scope><name>world_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

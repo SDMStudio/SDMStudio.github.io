@@ -40,4 +40,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/spaces.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/spaces.hpp`

@@ -33,10 +33,8 @@ Inherits the following classes: [sdm::GymInterface](classsdm_1_1GymInterface.md)
 | typedef typename action\_space\_type::value\_type | [**action\_type**](classsdm_1_1InteractiveWorld.md#typedef-action-type)  <br> |
 | typedef typename TDecProcess::observation\_space\_type | [**observation\_space\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-space-type)  <br> |
 | typedef typename observation\_space\_type::value\_type | [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type)  <br> |
-
-
-
-
+| typedef typename TDecProcess::reward\_type | [**reward\_function\_type**](classsdm_1_1InteractiveWorld.md#typedef-reward-function-type)  <br> |
+| typedef typename reward\_type::value\_type | [**reward\_type**](classsdm_1_1InteractiveWorld.md#typedef-reward-type)  <br> |
 
 
 
@@ -49,11 +47,11 @@ Inherits the following classes: [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-1-3) (std::shared\_ptr&lt; TDecProcess &gt;) <br> |
+|   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-1-3) (TDecProcess \* real\_world) <br> |
 |   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-2-3) (const TDecProcess &) <br> |
 |   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-3-3) (const std::string &) <br> |
 | virtual [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type) | [**reset**](classsdm_1_1InteractiveWorld.md#function-reset) () <br> |
-|  std::tuple&lt; [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1InteractiveWorld.md#function-step) ([**action\_type**](classsdm_1_1InteractiveWorld.md#typedef-action-type) ja) <br> |
+|  std::tuple&lt; [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type), [**reward\_type**](classsdm_1_1InteractiveWorld.md#typedef-reward-type), bool &gt; | [**step**](classsdm_1_1InteractiveWorld.md#function-step) ([**action\_type**](classsdm_1_1InteractiveWorld.md#typedef-action-type) ja) <br> |
 
 ## Public Functions inherited from sdm::GymInterface
 
@@ -61,13 +59,12 @@ See [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface) (std::shared\_ptr&lt; TObsSpace &gt;, std::shared\_ptr&lt; TActSpace &gt;) <br> |
+|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-1-2) () <br> |
+|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-2-2) (std::shared\_ptr&lt; TObsSpace &gt;, std::shared\_ptr&lt; TActSpace &gt;) <br> |
 |  std::shared\_ptr&lt; TActSpace &gt; | [**getActionSpace**](classsdm_1_1GymInterface.md#function-getactionspace) () const<br> |
 |  std::shared\_ptr&lt; TObsSpace &gt; | [**getObsSpace**](classsdm_1_1GymInterface.md#function-getobsspace) () const<br> |
 | virtual [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type) | [**reset**](classsdm_1_1GymInterface.md#function-reset) () = 0<br> |
-| virtual std::tuple&lt; [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) ([**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type) a) = 0<br> |
-
-
+|  std::tuple&lt; [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) ([**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)) <br> |
 
 
 
@@ -80,8 +77,6 @@ See [sdm::GymInterface](classsdm_1_1GymInterface.md)
 | ---: | :--- |
 | typedef typename TActSpace::value\_type | [**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)  <br> |
 | typedef typename TObsSpace::value\_type | [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type)  <br> |
-
-
 
 
 
@@ -100,17 +95,6 @@ See [sdm::GymInterface](classsdm_1_1GymInterface.md)
 | ---: | :--- |
 |  std::shared\_ptr&lt; TActSpace &gt; | [**action\_space\_**](classsdm_1_1GymInterface.md#variable-action-space-)  <br> |
 |  std::shared\_ptr&lt; TObsSpace &gt; | [**observation\_space\_**](classsdm_1_1GymInterface.md#variable-observation-space-)  <br> |
-
-## Protected Attributes inherited from sdm::World
-
-See [sdm::World](classsdm_1_1World.md)
-
-| Type | Name |
-| ---: | :--- |
-|  [**state**](namespacesdm.md#typedef-state) | [**internal**](classsdm_1_1World.md#variable-internal)   = = 0<br> |
-
-
-
 
 
 
@@ -156,6 +140,24 @@ using sdm::InteractiveWorld< TDecProcess >::observation_type =  typename observa
 ```
 
 
+
+### typedef reward\_function\_type 
+
+
+```cpp
+using sdm::InteractiveWorld< TDecProcess >::reward_function_type =  typename TDecProcess::reward_type;
+```
+
+
+
+### typedef reward\_type 
+
+
+```cpp
+using sdm::InteractiveWorld< TDecProcess >::reward_type =  typename reward_type::value_type;
+```
+
+
 ## Public Functions Documentation
 
 
@@ -164,7 +166,7 @@ using sdm::InteractiveWorld< TDecProcess >::observation_type =  typename observa
 
 ```cpp
 sdm::InteractiveWorld::InteractiveWorld (
-    std::shared_ptr< TDecProcess >
+    TDecProcess * real_world
 ) 
 ```
 
@@ -217,7 +219,7 @@ Implements [*sdm::GymInterface::reset*](classsdm_1_1GymInterface.md#function-res
 
 
 ```cpp
-std::tuple< observation_type , std::vector< double >, bool > sdm::InteractiveWorld::step (
+std::tuple< observation_type , reward_type , bool > sdm::InteractiveWorld::step (
     action_type ja
 ) 
 ```
@@ -245,4 +247,4 @@ std::shared_ptr<TDecProcess> sdm::InteractiveWorld< TDecProcess >::internal_form
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/world/interactive_world.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/interactive_world.hpp`

@@ -48,4 +48,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/core/state/jhistory_tree.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/state/jhistory_tree.hpp`

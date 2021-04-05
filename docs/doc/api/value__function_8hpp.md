@@ -11,8 +11,9 @@
 _Defines the value function interface._ [More...](#detailed-description)
 
 * `#include <memory>`
+* `#include <sdm/core/function.hpp>`
 * `#include <sdm/utils/linear_algebra/vector_impl.hpp>`
-* `#include <sdm/world/posg.hpp>`
+* `#include <sdm/utils/value_function/value_function.tpp>`
 
 
 
@@ -32,6 +33,7 @@ _Defines the value function interface._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
+| class | [**SolvableByHSVI**](classsdm_1_1SolvableByHSVI.md) &lt;TState, TAction&gt;<br>_Public interface that must be implemented by all transformed problems that can be solved using_ [_**HSVI**_](classsdm_1_1HSVI.md) _(i.e. beliefMDP, occupancyMDP, occupancyGame, etc)._ |
 | class | [**ValueFunction**](classsdm_1_1ValueFunction.md) &lt;TState, TAction, TValue&gt;<br>_This class is the abstract class of value function. All value function must derived this class._  |
 
 
@@ -82,4 +84,4 @@ Copyright (c) 2020
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/value_function/value_function.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/value_function.hpp`

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacesdm_1_1tools" kind="namespace" language="C++">
+    <compoundname>sdm::tools</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesdm_1_1tools_1a4870c0c7896eaadff9a29ce3aa8d7d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::tools::getPathTo</definition>
+        <argsstring>(std::string base, std::string world_name, std::string formalism_name)</argsstring>
+        <name>getPathTo</name>
+        <param>
+          <type>std::string</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>world_name</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>formalism_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" line="9" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1_1tools_1a0808124ccc4b14eff69d8f1eadf7f2e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::tools::hasExtension</definition>
+        <argsstring>(std::string filename, std::string extension)</argsstring>
+        <name>hasExtension</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>extension</declname>
+        </param>
+        <briefdescription>
+<para>Compare the extension of a file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filename </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extension</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the extension </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the filaname has the extension &apos;extension&apos; </para></simplesect>
+<simplesect kind="return"><para>false if the filaname does not have the extension &apos;extension&apos; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" line="14" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1_1tools_1abc4f9137d7cd920f73b4de363eae4100" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::tools::addIndent</definition>
+        <argsstring>(std::string s, int num_indents, std::string indent=&quot;\&quot;)</argsstring>
+        <name>addIndent</name>
+        <param>
+          <type>std::string</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_indents</declname>
+        </param>
+        <briefdescription>
+<para>Add indentation to input string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_indents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of indentations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the indentation format used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" line="19" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" bodystart="19" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1_1tools_1a5b4ea7d28ad1232b47d460a44cd6d82e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sdm::tools::indentedOutput</definition>
+        <argsstring>(std::ostream &amp;outStream, const char *message)</argsstring>
+        <name>indentedOutput</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>outStream</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Add indentation to an output stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" line="30" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" bodystart="30" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesdm_1_1tools_1a15285467261631192217481b97b03935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::tools::repeatString</definition>
+        <argsstring>(const std::string &amp;str, size_t times)</argsstring>
+        <name>repeatString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesdm_1afd54d1d7100c999633af5e7bda412b78" kindref="member">size_t</ref></type>
+          <declname>times</declname>
+        </param>
+        <briefdescription>
+<para>Repeat a string n times. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the substring to replicate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>times</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of replication </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the built string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" line="49" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Namespace grouping other tools. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/tools.cpp" line="8" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="feedback_8cpp" kind="file" language="C++">
+    <compoundname>feedback.cpp</compoundname>
+    <includes refid="feedback_8hpp" local="no">sdm/public/feedback.hpp</includes>
+    <incdepgraph>
+      <node id="2189">
+        <label>boost/bimap.hpp</label>
+      </node>
+      <node id="2190">
+        <label>tuple</label>
+      </node>
+      <node id="2183">
+        <label>/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/feedback.cpp</label>
+        <link refid="feedback_8cpp"/>
+        <childnode refid="2184" relation="include">
+        </childnode>
+      </node>
+      <node id="2187">
+        <label>iostream</label>
+      </node>
+      <node id="2186">
+        <label>cstddef</label>
+      </node>
+      <node id="2188">
+        <label>unordered_map</label>
+      </node>
+      <node id="2184">
+        <label>sdm/public/feedback.hpp</label>
+        <link refid="feedback_8hpp"/>
+        <childnode refid="2185" relation="include">
+        </childnode>
+        <childnode refid="2190" relation="include">
+        </childnode>
+      </node>
+      <node id="2185">
+        <label>sdm/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="2186" relation="include">
+        </childnode>
+        <childnode refid="2187" relation="include">
+        </childnode>
+        <childnode refid="2188" relation="include">
+        </childnode>
+        <childnode refid="2189" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesdm">sdm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="feedback_8hpp" kindref="compound">sdm/public/feedback.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesdm" kindref="compound">sdm</ref>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1a85dca9a7de75bb8c5b6300d5d5f95f1d" kindref="member">feedback::rmin</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1ab3f69eb5d98f2fafc1ea1212209131f5" kindref="member">feedback::rmax</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><ref refid="classsdm_1_1feedback_1a97a0c00305049cb49917a16a7e3746bb" kindref="member">feedback::feedback</ref>(){}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="classsdm_1_1feedback_1a97a0c00305049cb49917a16a7e3746bb" kindref="member">feedback::feedback</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1feedback_1a85dca9a7de75bb8c5b6300d5d5f95f1d" kindref="member">rmin</ref><sp/>=<sp/>min;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsdm_1_1feedback_1ab3f69eb5d98f2fafc1ea1212209131f5" kindref="member">rmax</ref><sp/>=<sp/>max;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><ref refid="classsdm_1_1feedback_1a97a0c00305049cb49917a16a7e3746bb" kindref="member">feedback::feedback</ref>(<ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref><sp/><ref refid="classsdm_1_1feedback_1ad8523a83c6ef75db7def3cc41563d6ae" kindref="member">s</ref>,<sp/><ref refid="namespacesdm_1af59f791f3163aa7cf0dee3a7f7c408a4" kindref="member">observation</ref><sp/><ref refid="classsdm_1_1feedback_1aefada782203c17a4fabcc4edae71e656" kindref="member">z</ref>,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1a0bcc438663b5777ef73a2fc4cd22f12a" kindref="member">r</ref>){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;s<sp/>=<sp/><ref refid="classsdm_1_1feedback_1ad8523a83c6ef75db7def3cc41563d6ae" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;r<sp/>=<sp/><ref refid="classsdm_1_1feedback_1a0bcc438663b5777ef73a2fc4cd22f12a" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;z<sp/>=<sp/><ref refid="classsdm_1_1feedback_1aefada782203c17a4fabcc4edae71e656" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="classsdm_1_1feedback_1a02e58cfd2c2c0354f86829cb9612d00a" kindref="member">feedback::~feedback</ref>(){}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref><sp/><ref refid="classsdm_1_1feedback_1a8a8d723ed64777dc887ce79b8447db82" kindref="member">feedback::getState</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="classsdm_1_1feedback_1ad8523a83c6ef75db7def3cc41563d6ae" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1a1564161be174f1b07b9ed97c9730f227" kindref="member">feedback::setState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1a13e6c065a1b4b44700414568be5b9586" kindref="member">state</ref>&amp;<sp/><ref refid="classsdm_1_1feedback_1ad8523a83c6ef75db7def3cc41563d6ae" kindref="member">s</ref>){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;s<sp/>=<sp/><ref refid="classsdm_1_1feedback_1ad8523a83c6ef75db7def3cc41563d6ae" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1a33e2098f59ce54792403aae6ac810d4e" kindref="member">feedback::getReward</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="classsdm_1_1feedback_1a0bcc438663b5777ef73a2fc4cd22f12a" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1ae55e52e834070ef23859e764e631b8d2" kindref="member">feedback::setReward</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/><ref refid="classsdm_1_1feedback_1a0bcc438663b5777ef73a2fc4cd22f12a" kindref="member">r</ref>){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;r<sp/>=<sp/><ref refid="classsdm_1_1feedback_1a0bcc438663b5777ef73a2fc4cd22f12a" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="namespacesdm_1af59f791f3163aa7cf0dee3a7f7c408a4" kindref="member">observation</ref><sp/><ref refid="classsdm_1_1feedback_1acfa338a4fe0e4cc32e27ce5c101537d0" kindref="member">feedback::getObservation</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="classsdm_1_1feedback_1aefada782203c17a4fabcc4edae71e656" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1a8abbf46487b173fc246dd7bd14f3ab0d" kindref="member">feedback::setObservation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesdm_1af59f791f3163aa7cf0dee3a7f7c408a4" kindref="member">observation</ref>&amp;<sp/><ref refid="classsdm_1_1feedback_1aefada782203c17a4fabcc4edae71e656" kindref="member">z</ref>){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;z<sp/>=<sp/><ref refid="classsdm_1_1feedback_1aefada782203c17a4fabcc4edae71e656" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classsdm_1_1feedback_1a2354d975ba2fc16460c8ac23600483cd" kindref="member">feedback::getNormalizedReward</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="classsdm_1_1feedback_1a0bcc438663b5777ef73a2fc4cd22f12a" kindref="member">r</ref><sp/>/<sp/><ref refid="classsdm_1_1feedback_1ab3f69eb5d98f2fafc1ea1212209131f5" kindref="member">rmax</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/feedback.cpp"/>
+  </compounddef>
+</doxygen>

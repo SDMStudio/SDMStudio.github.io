@@ -10,14 +10,16 @@
 
 
 
-* `#include <sdm/world/stochastic_process.hpp>`
-* `#include <sdm/world/po_process.hpp>`
-* `#include <sdm/world/sg.hpp>`
-* `#include <sdm/world/posg.hpp>`
-* `#include <sdm/world/decpomdp.hpp>`
-* `#include <sdm/world/zsposg.hpp>`
-* `#include <sdm/world/interactive_world.hpp>`
+* `#include <sdm/world/discrete_mdp.hpp>`
+* `#include <sdm/world/discrete_mmdp.hpp>`
+* `#include <sdm/world/discrete_pomdp.hpp>`
+* `#include <sdm/world/discrete_decpomdp.hpp>`
 * `#include <sdm/world/ndpomdp.hpp>`
+* `#include <sdm/world/solvable_by_hsvi.hpp>`
+* `#include <sdm/world/belief_mdp.hpp>`
+* `#include <sdm/world/occupancy_mdp.hpp>`
+* `#include <sdm/world/serialized_mdp.hpp>`
+* `#include <sdm/world/serialized_occupancy_mdp.hpp>`
 
 
 
@@ -27,6 +29,12 @@
 
 
 
+## Namespaces
+
+| Type | Name |
+| ---: | :--- |
+| namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
+| namespace | [**world**](namespacesdm_1_1world.md) <br> |
 
 
 
@@ -43,4 +51,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/worlds.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/worlds.hpp`

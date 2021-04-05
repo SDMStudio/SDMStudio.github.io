@@ -26,13 +26,13 @@ _This file contains implemented exception that can be throw in your code._ [More
 | Type | Name |
 | ---: | :--- |
 | namespace | [**sdm**](namespacesdm.md) <br>_Namespace grouping all tools required for sequential decision making._  |
-| namespace | [**exception**](namespacesdm_1_1exception.md) <br>_Namespace for exceptions._  |
+| namespace | [**exception**](namespacesdm_1_1exception.md) <br>_Namespace grouping all exceptions._  |
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Except**](classsdm_1_1exception_1_1Except.md) <br>_Base exception class._  |
+| class | [**Exception**](classsdm_1_1exception_1_1Exception.md) <br>_Base exception class._  |
 | class | [**FileNotFoundException**](classsdm_1_1exception_1_1FileNotFoundException.md) <br>_Developpers use this class to raise a file not found exception._  |
 | class | [**NotImplementedException**](classsdm_1_1exception_1_1NotImplementedException.md) <br> |
 | class | [**ParsingException**](classsdm_1_1exception_1_1ParsingException.md) <br>_Developpers use this class to raise a parsing exception._  |
@@ -85,4 +85,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/exception.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp`

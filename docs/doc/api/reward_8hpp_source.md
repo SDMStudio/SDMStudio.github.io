@@ -7,9 +7,7 @@
 
 
 ````cpp
-/*=============================================================================
-  Copyright (c) 2016 Jilles Steeve Dibangoye
-==============================================================================*/
+
 #pragma once
 
 #include <vector>
@@ -17,40 +15,44 @@
 #include <sdm/types.hpp>
 #include <sdm/utils/linear_algebra/vector.hpp>
 
+namespace sdm
+{
 
-namespace sdm{
+  class Reward
+  {
+  protected:
+    std::vector<Vector> rewards;
 
-  class Reward {
-    protected:
-      std::vector<Vector> rewards;
+    double max = -999999, min = +999999;
 
-      double max = -999999, min = +999999;
+  public:
+    using value_type = double;
 
-    public:
+    Reward();
 
-      Reward();
+    Reward(number, number);
 
-      Reward(number, number);
+    Reward(Reward &copy);
 
-      void initReward(number, number);
+    void initReward(number, number);
 
-      double getReward(number, number) const;
+    double getReward(number, number) const;
 
-      void setReward(number, number, double);
+    void setReward(number, number, double);
 
-      const Vector& getReward(number) const;
+    const Vector &getReward(number) const;
 
-      const std::vector<Vector>& getReward() const;
+    const std::vector<Vector> &getReward() const;
 
-      void setReward(number, const Vector&);
+    void setReward(number, const Vector &);
 
-      double getMaxReward() const;
+    double getMaxReward() const;
 
-      double getMinReward() const;
+    double getMinReward() const;
 
     friend std::ostream &operator<<(std::ostream &os, const Reward &reward_fct)
     {
-      
+
       number ja;
       os << "<reward> " << std::endl;
       for (ja = 0; ja < reward_fct.rewards.size(); ++ja)

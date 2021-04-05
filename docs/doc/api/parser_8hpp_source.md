@@ -13,14 +13,13 @@
 #pragma once
 
 #include <sdm/parser/ast.hpp>
-#include <sdm/world/decpomdp.hpp>
+#include <sdm/world/discrete_decpomdp.hpp>
 #include <boost/spirit/home/x3.hpp>
 
 namespace sdm
 {
   namespace x3 = boost::spirit::x3;
 
-  // dpomdp public interface
   namespace parser
   {
     struct dpomdp_class;
@@ -29,11 +28,11 @@ namespace sdm
 
     BOOST_SPIRIT_DECLARE(dpomdp_type)
 
-    sdm::DecPOMDP parse_string(std::string);
+    std::shared_ptr<sdm::DiscreteDecPOMDP> parse_string(std::string);
 
-    sdm::DecPOMDP parse_file(char const *);
+    std::shared_ptr<sdm::DiscreteDecPOMDP> parse_file(char const *);
     
-    sdm::DecPOMDP parse_file(std::string);
+    std::shared_ptr<sdm::DiscreteDecPOMDP> parse_file(std::string);
 
   } // namespace parser
 } // namespace sdm

@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1DiscreteSpace" kind="class" language="C++" prot="public">
+    <compoundname>sdm::DiscreteSpace</compoundname>
+    <basecompoundref refid="classsdm_1_1Space" prot="public" virt="non-virtual">sdm::Space</basecompoundref>
+    <includes refid="discrete__space_8hpp" local="no">discrete_space.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TItem</declname>
+        <defname>TItem</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classsdm_1_1DiscreteSpace_1a38f591f0d0d84b19db479ba0a28ac240" prot="protected" static="no">
+        <type>boost::bimaps::bimap&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref>, TItem &gt;</type>
+        <definition>typedef boost::bimaps::bimap&lt;number, TItem&gt; sdm::DiscreteSpace&lt; TItem &gt;::items_bimap</definition>
+        <argsstring></argsstring>
+        <name>items_bimap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="36" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsdm_1_1DiscreteSpace_1aeb5daea40a2295bcf3ed65f9c1773b68" prot="protected" static="no">
+        <type>items_bimap::value_type</type>
+        <definition>typedef items_bimap::value_type sdm::DiscreteSpace&lt; TItem &gt;::items_bimap_value</definition>
+        <argsstring></argsstring>
+        <name>items_bimap_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="37" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsdm_1_1DiscreteSpace_1a5662ea782c52d5539ab3aad4975964a5" prot="public" static="no">
+        <type>TItem</type>
+        <definition>using sdm::DiscreteSpace&lt; TItem &gt;::value_type =  TItem</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="46" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsdm_1_1DiscreteSpace_1a2629ceba1002b2e92d3288009ea505e8" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::DiscreteSpace&lt; TItem &gt;::num_items_</definition>
+        <argsstring></argsstring>
+        <name>num_items_</name>
+        <briefdescription>
+<para>number of possible items in the space (ex: [5, 12] <ndash/>&gt; 8 items) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="40" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsdm_1_1DiscreteSpace_1a925e61c7f266a9a5845856ab02f5d8db" prot="protected" static="no" mutable="no">
+        <type><ref refid="classsdm_1_1DiscreteSpace_1a38f591f0d0d84b19db479ba0a28ac240" kindref="member">items_bimap</ref></type>
+        <definition>items_bimap sdm::DiscreteSpace&lt; TItem &gt;::all_items_</definition>
+        <argsstring></argsstring>
+        <name>all_items_</name>
+        <briefdescription>
+<para>the list of possible items in the space with their index </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="43" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a4b130b0931b68a00dd763eee6ced6057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::DiscreteSpace&lt; TItem &gt;::DiscreteSpace</definition>
+        <argsstring>()</argsstring>
+        <name>DiscreteSpace</name>
+        <briefdescription>
+<para>Construct a new Discrete <ref refid="classsdm_1_1Space" kindref="compound">Space</ref> object (default) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a6233e90323a3071d6b24fa7041763af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::DiscreteSpace&lt; TItem &gt;::DiscreteSpace</definition>
+        <argsstring>(const std::vector&lt; TItem &gt; &amp;items)</argsstring>
+        <name>DiscreteSpace</name>
+        <param>
+          <type>const std::vector&lt; TItem &gt; &amp;</type>
+          <declname>items</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Discrete <ref refid="classsdm_1_1Space" kindref="compound">Space</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a list of possible items in the space </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1aced5f29459cf5f7408a865a86332b6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::DiscreteSpace&lt; TItem &gt;::DiscreteSpace</definition>
+        <argsstring>(const DiscreteSpace&lt; TItem &gt; &amp;copy)</argsstring>
+        <name>DiscreteSpace</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref>&lt; TItem &gt; &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a036c1ca3546ca017a0419f553facafe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sdm::DiscreteSpace&lt; TItem &gt;::DiscreteSpace</definition>
+        <argsstring>(std::initializer_list&lt; TItem &gt; vals)</argsstring>
+        <name>DiscreteSpace</name>
+        <param>
+          <type>std::initializer_list&lt; TItem &gt;</type>
+          <declname>vals</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Discrete <ref refid="classsdm_1_1Space" kindref="compound">Space</ref> object from a list initializer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a0d8243ea3e932e6fa73d88e1f5b5dece" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>TBool</declname>
+            <defname>TBool</defname>
+            <defval>std::is_integral&lt;TItem&gt;::value</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sdm::DiscreteSpace&lt; TItem &gt;::DiscreteSpace</definition>
+        <argsstring>(std::enable_if_t&lt; TBool, int &gt; num_items)</argsstring>
+        <name>DiscreteSpace</name>
+        <param>
+          <type>std::enable_if_t&lt; TBool, int &gt;</type>
+          <declname>num_items</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Discrete <ref refid="classsdm_1_1Space" kindref="compound">Space</ref> Base object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1aeaf07d8ba52b51fe8626774085f6aef0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool sdm::DiscreteSpace&lt; TItem &gt;::isDiscrete</definition>
+        <argsstring>() const</argsstring>
+        <name>isDiscrete</name>
+        <reimplements refid="classsdm_1_1Space_1a3f4a71b99ad6251af943e3b225cb53b4">isDiscrete</reimplements>
+        <briefdescription>
+<para>Return true because this is a discrete space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a00d719e8742b65b8fde3c6e4f35b23aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TItem</type>
+        <definition>TItem sdm::DiscreteSpace&lt; TItem &gt;::sample</definition>
+        <argsstring>() const</argsstring>
+        <name>sample</name>
+        <briefdescription>
+<para>Sample a random item from the space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a24ed3cc4c3618e0447863663922a5341" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref> &gt;</type>
+        <definition>std::vector&lt;number&gt; sdm::DiscreteSpace&lt; TItem &gt;::getDim</definition>
+        <argsstring>() const</argsstring>
+        <name>getDim</name>
+        <reimplements refid="classsdm_1_1Space_1ad0910707eae32637989524d8e41ecefa">getDim</reimplements>
+        <briefdescription>
+<para>Get the dimension. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::DiscreteSpace&lt; TItem &gt;::getNumItems</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumItems</name>
+        <briefdescription>
+<para>Get the Nummber of Items in the space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a2686886befc494fa3039ceaf662a6984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; TItem &gt;</type>
+        <definition>std::vector&lt;TItem&gt; sdm::DiscreteSpace&lt; TItem &gt;::getAll</definition>
+        <argsstring>()</argsstring>
+        <name>getAll</name>
+        <briefdescription>
+<para>Get all items in the space. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+        <definition>number sdm::DiscreteSpace&lt; TItem &gt;::getItemIndex</definition>
+        <argsstring>(const TItem &amp;item) const</argsstring>
+        <name>getItemIndex</name>
+        <param>
+          <type>const TItem &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Get the index of an item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a26177c3f23208b6c332610308160c253" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TItem</type>
+        <definition>TItem sdm::DiscreteSpace&lt; TItem &gt;::getItem</definition>
+        <argsstring>(number index) const</argsstring>
+        <name>getItem</name>
+        <param>
+          <type><ref refid="namespacesdm_1a8a7c60fa767668fa52b349d259104595" kindref="member">number</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the item at a specific index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a84cc73952e28f5f5ad67459f81b263e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string sdm::DiscreteSpace&lt; TItem &gt;::str</definition>
+        <argsstring>() const</argsstring>
+        <name>str</name>
+        <reimplements refid="classsdm_1_1Space_1a971d5e54d6e7d300cafb24997a1b6d99">str</reimplements>
+        <reimplementedby refid="classsdm_1_1MultiDiscreteSpace_1aae8fe0b5fa369810a8dd15b6077da4c6">str</reimplementedby>
+        <reimplementedby refid="classsdm_1_1MultiDiscreteSpace_1aae8fe0b5fa369810a8dd15b6077da4c6">str</reimplementedby>
+        <briefdescription>
+<para><ref refid="classsdm_1_1Space" kindref="compound">Space</ref> as a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a623e985f5eefde29051b1ee238716c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref> &amp;</type>
+        <definition>DiscreteSpace&amp; sdm::DiscreteSpace&lt; TItem &gt;::operator=</definition>
+        <argsstring>(const DiscreteSpace &amp;sp)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref> &amp;</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1a847aa9f985c86131fb5fe49bb72fe01a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::DiscreteSpace&lt; TItem &gt;::operator==</definition>
+        <argsstring>(const DiscreteSpace &amp;sp) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref> &amp;</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1DiscreteSpace_1ae065a238eb30c2a8d356ce219fb1f49f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sdm::DiscreteSpace&lt; TItem &gt;::operator!=</definition>
+        <argsstring>(const DiscreteSpace &amp;sp) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref> &amp;</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="117" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsdm_1_1DiscreteSpace_1ac0934cb44bd3948ad526357d83607d91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const DiscreteSpace &amp;sp)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsdm_1_1DiscreteSpace" kindref="compound">DiscreteSpace</ref> &amp;</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="119" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="119" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The discrete space class give a way to keep all possible values of a finite space. In order to instantiate an object of this class, you must provide the constructor method, a the list of all available values. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TItem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of each element in the space. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="161">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="160">
+        <label>sdm::DiscreteSpace&lt; TItem &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="161" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="163">
+        <label>sdm::Space</label>
+        <link refid="classsdm_1_1Space"/>
+      </node>
+      <node id="162">
+        <label>sdm::DiscreteSpace&lt; TItem &gt;</label>
+        <link refid="classsdm_1_1DiscreteSpace"/>
+        <childnode refid="163" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" line="34" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp" bodystart="33" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1DiscreteSpace_1a925e61c7f266a9a5845856ab02f5d8db" prot="protected" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>all_items_</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a4b130b0931b68a00dd763eee6ced6057" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a6233e90323a3071d6b24fa7041763af2" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aced5f29459cf5f7408a865a86332b6e1" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a036c1ca3546ca017a0419f553facafe4" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a0d8243ea3e932e6fa73d88e1f5b5dece" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>DiscreteSpace</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a2686886befc494fa3039ceaf662a6984" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>getAll</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a24ed3cc4c3618e0447863663922a5341" prot="public" virt="virtual"><scope>sdm::DiscreteSpace</scope><name>getDim</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a26177c3f23208b6c332610308160c253" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>getItem</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aa72c47fbe5a7fc4b7042b1a0daaa2c73" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>getItemIndex</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a60ff53febcd4e6d610df44c2ac0aac48" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>getNumItems</name></member>
+      <member refid="classsdm_1_1Space_1a5a8df3b762f59cc9cba36ecfece29f8a" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>isContinuous</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aeaf07d8ba52b51fe8626774085f6aef0" prot="public" virt="virtual"><scope>sdm::DiscreteSpace</scope><name>isDiscrete</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a38f591f0d0d84b19db479ba0a28ac240" prot="protected" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>items_bimap</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1aeb5daea40a2295bcf3ed65f9c1773b68" prot="protected" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>items_bimap_value</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a2629ceba1002b2e92d3288009ea505e8" prot="protected" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>num_items_</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1ae065a238eb30c2a8d356ce219fb1f49f" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>operator!=</name></member>
+      <member refid="classsdm_1_1Space_1a5ae131db5ad1d8645e310be38acd6fc1" prot="public" virt="non-virtual" ambiguityscope="sdm::Space::"><scope>sdm::DiscreteSpace</scope><name>operator!=</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1ac0934cb44bd3948ad526357d83607d91" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a623e985f5eefde29051b1ee238716c4a" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>operator=</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a847aa9f985c86131fb5fe49bb72fe01a" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>operator==</name></member>
+      <member refid="classsdm_1_1Space_1a73acfdcd9dda1d32f3f99fa43a89a30c" prot="public" virt="non-virtual" ambiguityscope="sdm::Space::"><scope>sdm::DiscreteSpace</scope><name>operator==</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a00d719e8742b65b8fde3c6e4f35b23aa" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>sample</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a84cc73952e28f5f5ad67459f81b263e7" prot="public" virt="virtual"><scope>sdm::DiscreteSpace</scope><name>str</name></member>
+      <member refid="classsdm_1_1DiscreteSpace_1a5662ea782c52d5539ab3aad4975964a5" prot="public" virt="non-virtual"><scope>sdm::DiscreteSpace</scope><name>value_type</name></member>
+      <member refid="classsdm_1_1Space_1af3aefac8b7852522871c8b31382f5a36" prot="public" virt="virtual"><scope>sdm::DiscreteSpace</scope><name>~Space</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

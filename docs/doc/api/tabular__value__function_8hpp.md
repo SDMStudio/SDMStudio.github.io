@@ -10,13 +10,17 @@
 
 _Tabular value function are functions of state and action that use a vector representation._ [More...](#detailed-description)
 
+* `#include <map>`
 * `#include <iostream>`
 * `#include <type_traits>`
-* `#include <map>`
 * `#include <sdm/utils/value_function/initializer.hpp>`
 * `#include <sdm/utils/linear_algebra/mapped_vector.hpp>`
 * `#include <sdm/utils/linear_algebra/sdms_vector.hpp>`
+* `#include <sdm/utils/backup_operator/backup_operator.hpp>`
 * `#include <sdm/core/state/state.hpp>`
+* `#include <sdm/core/function.hpp>`
+* `#include <sdm/world/solvable_by_hsvi.hpp>`
+* `#include <sdm/utils/value_function/tabular_value_function.tpp>`
 
 
 
@@ -36,7 +40,7 @@ _Tabular value function are functions of state and action that use a vector repr
 
 | Type | Name |
 | ---: | :--- |
-| class | [**TabularValueFunction**](classsdm_1_1TabularValueFunction.md) &lt;typename TState, typename TAction, typename TValue, TStruct&gt;<br>_Tabular value function are functions of state and action that use a vector representation to store the values._  |
+| class | [**TabularValueFunction**](classsdm_1_1TabularValueFunction.md) &lt;typename TState, typename TAction, typename TValue, TBackupOperator, TStruct&gt;<br>_Tabular value function are functions of state and action that use a vector representation to store the values._  |
 
 
 
@@ -86,4 +90,4 @@ Copyright (c) 2020
     
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/utils/value_function/tabular_value_function.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/tabular_value_function.hpp`

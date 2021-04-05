@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classsdm_1_1MultiLogger" kind="class" language="C++" prot="public">
+    <compoundname>sdm::MultiLogger</compoundname>
+    <basecompoundref refid="classsdm_1_1BaseLogger" prot="public" virt="non-virtual">sdm::BaseLogger</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; std::shared_ptr&lt; Logger &gt; &gt;</basecompoundref>
+    <includes refid="logger_8hpp" local="no">logger.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsdm_1_1MultiLogger_1a5d1a1abeb685570d367193dc47a6b441" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MultiLogger::MultiLogger</definition>
+        <argsstring>(const std::vector&lt; std::shared_ptr&lt; Logger &gt;&gt; &amp;loggers)</argsstring>
+        <name>MultiLogger</name>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classsdm_1_1Logger" kindref="compound">Logger</ref> &gt;&gt; &amp;</type>
+          <declname>loggers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="121" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MultiLogger_1ad9c9996ecfe585308f9341ad000ac77a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sdm::MultiLogger::MultiLogger</definition>
+        <argsstring>(const std::initializer_list&lt; std::shared_ptr&lt; Logger &gt;&gt; &amp;loggers)</argsstring>
+        <name>MultiLogger</name>
+        <param>
+          <type>const std::initializer_list&lt; std::shared_ptr&lt; <ref refid="classsdm_1_1Logger" kindref="compound">Logger</ref> &gt;&gt; &amp;</type>
+          <declname>loggers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="122" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classsdm_1_1MultiLogger_1a25911265058ed4ece672f2992b235fa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>TData</declname>
+            <defname>TData</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void sdm::MultiLogger::log</definition>
+        <argsstring>(TData... vals)</argsstring>
+        <name>log</name>
+        <param>
+          <type>TData...</type>
+          <declname>vals</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="125" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="125" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The multi logger will print logs from several loggers. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="415">
+        <label>std::vector&lt; std::shared_ptr&lt; Logger &gt; &gt;</label>
+      </node>
+      <node id="414">
+        <label>sdm::BaseLogger</label>
+        <link refid="classsdm_1_1BaseLogger"/>
+      </node>
+      <node id="413">
+        <label>sdm::MultiLogger</label>
+        <link refid="classsdm_1_1MultiLogger"/>
+        <childnode refid="414" relation="public-inheritance">
+        </childnode>
+        <childnode refid="415" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="418">
+        <label>std::vector&lt; std::shared_ptr&lt; Logger &gt; &gt;</label>
+      </node>
+      <node id="417">
+        <label>sdm::BaseLogger</label>
+        <link refid="classsdm_1_1BaseLogger"/>
+      </node>
+      <node id="416">
+        <label>sdm::MultiLogger</label>
+        <link refid="classsdm_1_1MultiLogger"/>
+        <childnode refid="417" relation="public-inheritance">
+        </childnode>
+        <childnode refid="418" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" line="119" column="1" bodyfile="/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp" bodystart="118" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classsdm_1_1MultiLogger_1a25911265058ed4ece672f2992b235fa2" prot="public" virt="non-virtual"><scope>sdm::MultiLogger</scope><name>log</name></member>
+      <member refid="classsdm_1_1MultiLogger_1a5d1a1abeb685570d367193dc47a6b441" prot="public" virt="non-virtual"><scope>sdm::MultiLogger</scope><name>MultiLogger</name></member>
+      <member refid="classsdm_1_1MultiLogger_1ad9c9996ecfe585308f9341ad000ac77a" prot="public" virt="non-virtual"><scope>sdm::MultiLogger</scope><name>MultiLogger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -37,4 +37,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `src/sdm/parser/ast_adapted.hpp`
+The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast_adapted.hpp`

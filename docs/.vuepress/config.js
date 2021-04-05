@@ -1,5 +1,6 @@
 module.exports = {
-    base: "/",
+    base: "https://chroma1.inria.io/plasma/sdms-web",
+    dest: "public",
     title: "SDM'Studio",
     description: 'Solver for sequential decision making problems.',
     head: [

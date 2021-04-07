@@ -21,8 +21,8 @@ You can then check the version of node installed.
     
     node -v
 
-> :warning:   **Tested version of node is `v10.24.0` !**
-
+> :warning: **Tested version of node is `v10.24.0` !**
+> :warning: **For example, with v8 of js, npm install and npm run fails. v14 of js works and can be downloaded here https://nodejs.org/en/**
 
 2. Clone this repository
 

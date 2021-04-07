@@ -59,6 +59,8 @@ module.exports = {
                                         children: [
                                             '/tutorials/algorithms/hsvi',  /* /foo/one.html */
                                             '/tutorials/algorithms/qlearning',  /* /foo/one.html */
+                                            '/tutorials/algorithms/(2p)-zsSG',
+                                            '/tutorials/algorithms/(2p)-zsPOSG',
                                         ]
                                     },
                                     '/tutorials/contribute',  /* /foo/one.html */

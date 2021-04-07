@@ -31,8 +31,8 @@ Le schéma algorithmique général d'HSVI nécessite de définir les notions de 
 | *MPOMDP*                   | $b_t =  p\left( x_t \mid \mathbf{o}_t \right)$                  | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                                                             |
 | *Dec-POMDP*                | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$                | $\mathbf{d}_t = (d_t^1, ... , d_t^n) =  \left(p(u^1 \mid o_t^1), p(u^2 \mid o_t^2), ... , p(u^n \mid o_t^n)\right)$ |
 | *Extensive-Form Dec-POMDP* | $\xi_t^i =  p\left( x_t, o_t, u_t^{0:i-1} \mid \iota_t \right)$ | $d_t^i =  p(u_t^i \mid o_t^i)$                                                                                      |
-| *ZS-SG*                    | $s_t$                                                              | $$                                                                                                                  |  |
-| *ZS-POSG*                    | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$              | $\mathbf{d}_t = (d_t^1, ... , d_t^n) =  \left(p(u^1 \mid o_t^1), p(u^2 \mid o_t^2), ... , p(u^n \mid o_t^n)\right)$                                                                                                                  |  |
+| *(2p)-ZS-SG*                    | $s_t$                                                              | $(p(u_t^1),p(u_t^2))$                                                                                                                  |  |
+| *(2p)-ZS-POSG*                    | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$              | $\mathbf{d}_t = (d_t^1, ... , d_t^n) =  \left(p(u^1 \mid o_t^1), p(u^2 \mid o_t^2), ... , p(u^n \mid o_t^n)\right)$                                                                                                                  |  |
 
 
 

@@ -1,6 +1,4 @@
 node_modules
-docs/doc/api
-docs/fr/doc/api
 package-lock.json
 docs/.vuepress/dist
 public

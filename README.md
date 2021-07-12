@@ -1,6 +1,11 @@
 # Website of the [SDM'Studio](https://gitlab.inria.fr/chroma1/plasma/sdms) library
+[![pipeline status](https://gitlab.inria.fr/chroma1/plasma/sdms-web/badges/master/pipeline.svg)](https://gitlab.inria.fr/chroma1/plasma/sdms-web/-/commits/master)
+
 
 SDM'Studio is a C++ librairy that provides efficient solvers for sequential decision making problems. The associated webpage provides information about how to use the library and how to contribute to it. Moreover, the website provides a full documentation of the platform and some tutorials to understand the theoritical concepts behind the platform.
+
+***Resulting website at*** :  https://chroma1.gitlabpages.inria.fr/plasma/sdms-web/
+
 
 ## Get and test the website project
 
@@ -16,8 +21,8 @@ You can then check the version of node installed.
     
     node -v
 
-> :warning:   **Tested version of node is `v10.24.0` !**
-
+> :warning: **Tested version of node is `v10.24.0` !**
+> :warning: **For example, with v8 of js, npm install and npm run fails. v14 of js works and can be downloaded here https://nodejs.org/en/**
 
 2. Clone this repository
 

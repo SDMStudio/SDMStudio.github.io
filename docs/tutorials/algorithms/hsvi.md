@@ -54,7 +54,7 @@
 | 0,02               | 7          | 0     | 5,19081  | 5,19081  | 9       | 11      | 68                   | 42            | 13,2845  |
 | 0,01               | 7          | 0     | 5,19081  | 5,19081  | 9       | 11      | 68                   | 42            | 12,1883  |
 
-### mabc (h=4, m=3)
+### tiger (h=4, m=3)
 
 | Compress Precision | Num Trials | Error  | Value LB | Value UB | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time     |
 | ------------------ | ---------- | ------ | -------- | -------- | ------- | ------- | -------------------- | ------------- | -------- |
@@ -84,10 +84,29 @@
 | 0,2                | 2          | 0     | 0,94     | 0,94     | 4       | 205     | 261                  | 16            | 4,45301  |
 | 0,1                | 2          | 0     | 0,91     | 0,91     | 4       | 211     | 331                  | 30            | 24,3367  |
 
+### GridSmall (h=4, m=3)
+
+| Compress Precision | Num Trials | Error       | Value LB | Value UB | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time    |
+| ------------------ | ---------- | ----------- | -------- | -------- | ------- | ------- | -------------------- | ------------- | ------- |
+| 0,5                | 4          | 2,05902E-05 | 1,75831  | 1,75833  | 7       | 69      | 71                   | 6             | 1,14222 |
+| 0,3                | 5          | 0           | 1,60859  | 1,60859  | 10      | 253     | 277                  | 16            | 47,214  |
+| 0,2                | 13         | 0           | 1,55666  | 1,55666  | 18      | 694     | 804                  | 20            | 324,032 |
+| 0,1                | Memory     | Memory      | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory  |
+
+### GridSmall (h=6, m=3)
+
+| Compress Precision | Num Trials | Error  | Value LB | Value UB | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time   |
+| ------------------ | ---------- | ------ | -------- | -------- | ------- | ------- | -------------------- | ------------- | ------ |
+| 0,8                | Memory     | Memory | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory |
+| 0,5                | Memory     | Memory | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory |
+| 0,3                | Memory     | Memory | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory |
+| 0,2                | Memory     | Memory | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory |
 
 
 ### BoxPushing (h=3, m=3)
 
-| Compress Precision | Num Trials | Error | Value LB | Value UB | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time     |
-| ------------------ | ---------- | ----- | -------- | -------- | ------- | ------- | -------------------- | ------------- | -------- |
-| 0,8                | Memory     | Memory | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory   |
+| Compress Precision | Num Trials | Error  | Value LB | Value UB | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time   |
+| ------------------ | ---------- | ------ | -------- | -------- | ------- | ------- | -------------------- | ------------- | ------ |
+| 0,8                | Memory     | Memory | Memory   | Memory   | Memory  | Memory  | Memory               | Memory        | Memory |
+
+

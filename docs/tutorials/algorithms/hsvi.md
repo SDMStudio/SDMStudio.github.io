@@ -282,3 +282,41 @@ oHSVI Tabulaire (T)	> 2 min	30 s	Résolution de Tiger à horizon 3 sans troncatu
 oHSVI Tabulaire (M)	Memory Used (increasing) 
 ~45%	Memory Used (increasing) 
 ~58%	Résolution de Tiger à horizon 3 sans troncature. Utilisation de la structure utilisant les belief graph. -->
+
+### Tiger 3 with `store_states=true`
+
+| NAME                           | TIME                    | PERCENT                 |
+| ------------------------------ | ----------------------- | ----------------------- |
+| TOTAL_TIME                     | 3.78899 s               | 100.00000 %             |
+| ------------------------------ | ----------------------- | ----------------------- |
+| HSVI::TIME_INITIALIZATION      | 0.00309 s               | 0.08150 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 3.62823 s               | 95.75715 %              |
+| HSVI::TIME_IN_SELECT_STATE     | 0.09426 s               | 2.48776 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 0.02600 s               | 0.68617 %               |
+| HSVI::TIME_IN_UPDATE_UB        | 0.02477 s               | 0.65387 %               |
+| ------------------------------ | ----------------------- | ----------------------- |
+| OccMDP::TIME_IN_GET_ACTION     | 0.19761 s               | 5.21535 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 0.24970 s               | 6.59012 %               |
+| OccMDP::TIME_IN_COMPRESS       | 0.13881 s               | 3.66348 %               |
+| OccMDP::TIME_IN_GET_REWARD     | 3.09008 s               | 81.55433 %              |
+| ------------------------------ | ----------------------- | ----------------------- |
+
+### Tiger 3 with `store_states=false`
+
+| NAME                           | TIME                    | PERCENT                 |
+| ------------------------------ | ----------------------- | ----------------------- |
+| TOTAL_TIME                     | 21.81457 s              | 100.00000 %             |
+| ------------------------------ | ----------------------- | ----------------------- |
+| HSVI::TIME_INITIALIZATION      | 0.00284 s               | 0.01302 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 7.24417 s               | 33.20793 %              |
+| HSVI::TIME_IN_SELECT_STATE     | 0.13929 s               | 0.63852 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 7.18607 s               | 32.94160 %              |
+| HSVI::TIME_IN_UPDATE_UB        | 7.22577 s               | 33.12361 %              |
+| ------------------------------ | ----------------------- | ----------------------- |
+| OccMDP::TIME_IN_GET_ACTION     | 0.00000 s               | 0.00000 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 4.95182 s               | 22.69962 %              |
+| OccMDP::TIME_IN_COMPRESS       | 3.08612 s               | 14.14706 %              |
+| OccMDP::TIME_IN_GET_REWARD     | 10.10381 s              | 46.31682 %              |
+| ------------------------------ | ----------------------- | ----------------------- |
+
+

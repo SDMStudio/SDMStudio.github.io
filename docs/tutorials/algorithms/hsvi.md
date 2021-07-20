@@ -358,6 +358,7 @@ oHSVI Tabulaire (M)	Memory Used (increasing)
 - BELIEF_PRECISION = 0.01;
 - OCCUPANCY_STATE_PRECISION = 0.01
 - COMPRESS_PRECISION = 0.1
+- LB_INIT = MIN, UB_INIT = MDP
 
 
 ### TABULAR & SAWTOOTH / EXHAUSTIVE
@@ -416,6 +417,52 @@ oHSVI Tabulaire (M)	Memory Used (increasing)
 | ------------------------------ | ----------------------- | ----------------------- |
 
 
+**Parameters :**
+
+- PROBLEM = mabc, h=100 
+- STOCKAGE_OCCUPANCY_STATES = True 
+- STOCKAGE_DECISION_RULES = True 
+- BELIEF_PRECISION = 0.01;
+- OCCUPANCY_STATE_PRECISION = 0.01
+- COMPRESS_PRECISION = 0.1
+- LB_INIT = MIN, UB_INIT = MDP
+
+
+### TABULAR & SAWTOOTH / EXHAUSTIVE
+
+| NAME                           | TIME                    | PERCENT                 |
+| ------------------------------ | ----------------------- | ----------------------- |
+| TOTAL_TIME                     | 73.86029 s              | 100.00000 %             |
+| ------------------------------ | ----------------------- | ----------------------- |
+| HSVI::TIME_INITIALIZATION      | 0.93803 s               | 1.27000 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 47.51947 s              | 64.33696 %              |
+| HSVI::TIME_IN_SELECT_STATE     | 0.17276 s               | 0.23389 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 1.50819 s               | 2.04196 %               |
+| HSVI::TIME_IN_UPDATE_UB        | 23.73140 s              | 32.13012 %              |
+| ------------------------------ | ----------------------- | ----------------------- |
+| OccMDP::TIME_IN_GET_ACTION     | 1.23505 s               | 1.67214 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 13.12697 s              | 17.77270 %              |
+| OccMDP::TIME_IN_COMPRESS       | 6.17419 s               | 8.35928 %               |
+| OccMDP::TIME_IN_GET_REWARD     | 1.41560 s               | 1.91660 %               |
+| ------------------------------ | ----------------------- | ----------------------- |
+
+### MAXPLAN & SAWTOOTH / LP
+
+| NAME                           | TIME                    | PERCENT                 |
+| ------------------------------ | ----------------------- | ----------------------- |
+| TOTAL_TIME                     | 1651.38171 s            | 100.00000 %             |
+| ------------------------------ | ----------------------- | ----------------------- |
+| HSVI::TIME_INITIALIZATION      | 0.97255 s               | 0.05889 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 590.64403 s             | 35.76666 %              |
+| HSVI::TIME_IN_SELECT_STATE     | 3.77463 s               | 0.22857 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 72.39404 s              | 4.38385 %               |
+| HSVI::TIME_IN_UPDATE_UB        | 984.20183 s             | 59.59869 %              |
+| ------------------------------ | ----------------------- | ----------------------- |
+| OccMDP::TIME_IN_GET_ACTION     | 0.00000 s               | 0.00000 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 6.87834 s               | 0.41652 %               |
+| OccMDP::TIME_IN_COMPRESS       | 3.13532 s               | 0.18986 %               |
+| OccMDP::TIME_IN_GET_REWARD     | 0.25612 s               | 0.01551 %               |
+| ------------------------------ | ----------------------- | ----------------------- |
 
 ### Tiger 3 with `store_states=false`
 

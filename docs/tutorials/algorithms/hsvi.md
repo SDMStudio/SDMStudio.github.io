@@ -321,13 +321,13 @@
 
 ### tiger (h=4, m=3)
 
-| Compress Precision | Num Trials | Error        | Value LB | Value UB  | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time     |
-| ------------------ | ---------- | ------------ | -------- | --------- | ------- | ------- | -------------------- | ------------- | -------- |
-| 0,8                | 5162       | 45,8859      | -34      | 11,8859   | 9       | 5       | 6                    | 1             | 1000,04  |
-| 0,5                | 755        | 7,18476      | -8       | -0,815238 | 10      | 13      | 22                   | 9             | 1000,53  |
-| 0,3                | 7          | -2,19081     | 3,19081  | 1         | 17      | 14      | 23                   | 9             | 3,47746  |
-| 0,2                | 10         | -2,19081     | 3,19081  | 1         | 12      | 21      | 38                   | 30            | 19,3783  |
-| 0,1                | 40         | -0,586922    | 3,51594  | 2,92902   | 35      | 53      | 96                   | 56            | 255,98   |
+| Compress Precision | Num Trials | Error     | Value LB | Value UB  | Size LB | Size UB | Num Occupancy States | Num Max JHist | Time    |
+| ------------------ | ---------- | --------- | -------- | --------- | ------- | ------- | -------------------- | ------------- | ------- |
+| 0,8                | 5162       | 45,8859   | -34      | 11,8859   | 9       | 5       | 6                    | 1             | 1000,04 |
+| 0,5                | 755        | 7,18476   | -8       | -0,815238 | 10      | 13      | 22                   | 9             | 1000,53 |
+| 0,3                | 7          | -2,19081  | 3,19081  | 1         | 17      | 14      | 23                   | 9             | 3,47746 |
+| 0,2                | 10         | -2,19081  | 3,19081  | 1         | 12      | 21      | 38                   | 30            | 19,3783 |
+| 0,1                | 40         | -0,586922 | 3,51594  | 2,92902   | 35      | 53      | 96                   | 56            | 255,98  |
 
 <!-- # Comparaison versions avec et sans templates
 
@@ -347,23 +347,75 @@ oHSVI Tabulaire (M)	Memory Used (increasing)
 ~45%	Memory Used (increasing) 
 ~58%	Résolution de Tiger à horizon 3 sans troncature. Utilisation de la structure utilisant les belief graph. -->
 
-### Tiger 3 with `store_states=true`
+
+# PROFILING
+
+**Parameters :**
+
+- PROBLEM = Tiger, h=3 
+- STOCKAGE_OCCUPANCY_STATES = True 
+- STOCKAGE_DECISION_RULES = True 
+- BELIEF_PRECISION = 0.01;
+- OCCUPANCY_STATE_PRECISION = 0.01
+- COMPRESS_PRECISION = 0.1
+
+
+### TABULAR & SAWTOOTH / EXHAUSTIVE
 
 | NAME                           | TIME                    | PERCENT                 |
 | ------------------------------ | ----------------------- | ----------------------- |
-| TOTAL_TIME                     | 3.78899 s               | 100.00000 %             |
+| TOTAL_TIME                     | 3.96201 s               | 100.00000 %             |
 | ------------------------------ | ----------------------- | ----------------------- |
-| HSVI::TIME_INITIALIZATION      | 0.00309 s               | 0.08150 %               |
-| HSVI::TIME_IN_SELECT_ACTION    | 3.62823 s               | 95.75715 %              |
-| HSVI::TIME_IN_SELECT_STATE     | 0.09426 s               | 2.48776 %               |
-| HSVI::TIME_IN_UPDATE_LB        | 0.02600 s               | 0.68617 %               |
-| HSVI::TIME_IN_UPDATE_UB        | 0.02477 s               | 0.65387 %               |
+| HSVI::TIME_INITIALIZATION      | 0.00293 s               | 0.07400 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 3.66150 s               | 92.41528 %              |
+| HSVI::TIME_IN_SELECT_STATE     | 0.08857 s               | 2.23553 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 0.02557 s               | 0.64533 %               |
+| HSVI::TIME_IN_UPDATE_UB        | 0.16753 s               | 4.22849 %               |
 | ------------------------------ | ----------------------- | ----------------------- |
-| OccMDP::TIME_IN_GET_ACTION     | 0.19761 s               | 5.21535 %               |
-| OccMDP::TIME_IN_NEXT_STATE     | 0.24970 s               | 6.59012 %               |
-| OccMDP::TIME_IN_COMPRESS       | 0.13881 s               | 3.66348 %               |
-| OccMDP::TIME_IN_GET_REWARD     | 3.09008 s               | 81.55433 %              |
+| OccMDP::TIME_IN_GET_ACTION     | 0.19639 s               | 4.95673 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 0.24157 s               | 6.09714 %               |
+| OccMDP::TIME_IN_COMPRESS       | 0.13510 s               | 3.40979 %               |
+| OccMDP::TIME_IN_GET_REWARD     | 2.98747 s               | 75.40284 %              |
 | ------------------------------ | ----------------------- | ----------------------- |
+
+
+### MAXPLAN & SAWTOOTH / EXHAUSTIVE
+
+| NAME                           | TIME                    | PERCENT                 |
+| ------------------------------ | ----------------------- | ----------------------- |
+| TOTAL_TIME                     | 173.07457 s             | 100.00000 %             |
+| ------------------------------ | ----------------------- | ----------------------- |
+| HSVI::TIME_INITIALIZATION      | 0.00304 s               | 0.00176 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 4.10709 s               | 2.37302 %               |
+| HSVI::TIME_IN_SELECT_STATE     | 0.10788 s               | 0.06233 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 168.62403 s             | 97.42854 %              |
+| HSVI::TIME_IN_UPDATE_UB        | 0.21085 s               | 0.12183 %               |
+| ------------------------------ | ----------------------- | ----------------------- |
+| OccMDP::TIME_IN_GET_ACTION     | 0.21684 s               | 0.12529 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 78.62268 s              | 45.42706 %              |
+| OccMDP::TIME_IN_COMPRESS       | 30.56853 s              | 17.66206 %              |
+| OccMDP::TIME_IN_GET_REWARD     | 3.36106 s               | 1.94197 %               |
+| ------------------------------ | ----------------------- | ----------------------- |
+
+### MAXPLAN & SAWTOOTH / LP
+
+| NAME                           | TIME                    | PERCENT                 |
+| ------------------------------ | ----------------------- | ----------------------- |
+| TOTAL_TIME                     | 13.54949 s              | 100.00000 %             |
+| ------------------------------ | ----------------------- | ----------------------- |
+| HSVI::TIME_INITIALIZATION      | 0.00406 s               | 0.02996 %               |
+| HSVI::TIME_IN_SELECT_ACTION    | 5.71125 s               | 42.15106 %              |
+| HSVI::TIME_IN_SELECT_STATE     | 0.16362 s               | 1.20760 %               |
+| HSVI::TIME_IN_UPDATE_LB        | 1.39889 s               | 10.32428 %              |
+| HSVI::TIME_IN_UPDATE_UB        | 6.24559 s               | 46.09467 %              |
+| ------------------------------ | ----------------------- | ----------------------- |
+| OccMDP::TIME_IN_GET_ACTION     | 0.00000 s               | 0.00000 %               |
+| OccMDP::TIME_IN_NEXT_STATE     | 0.21809 s               | 1.60954 %               |
+| OccMDP::TIME_IN_COMPRESS       | 0.13124 s               | 0.96858 %               |
+| OccMDP::TIME_IN_GET_REWARD     | 0.01084 s               | 0.07997 %               |
+| ------------------------------ | ----------------------- | ----------------------- |
+
+
 
 ### Tiger 3 with `store_states=false`
 
@@ -382,5 +434,3 @@ oHSVI Tabulaire (M)	Memory Used (increasing)
 | OccMDP::TIME_IN_COMPRESS       | 3.08612 s               | 14.14706 %              |
 | OccMDP::TIME_IN_GET_REWARD     | 10.10381 s              | 46.31682 %              |
 | ------------------------------ | ----------------------- | ----------------------- |
-
-

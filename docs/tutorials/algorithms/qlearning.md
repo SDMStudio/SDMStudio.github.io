@@ -2,6 +2,8 @@
 
 ## Hierarchical Occupancy MDP
 
+### mabc
+
 ![hierarchical occupancy mdp mabc](https://i.imgur.com/DDuTbkp.png)
 ```
 ./src/examples/tmp/quicktest_qlearning -f PrivateHierarchicalOccupancyMDP -p ../data/world/dpomdp/mabc.dpomdp -h 10 -q tabular -b 0 -m 1 -l .1 -t 1000000 --p_b .1 --p_o .1 --p_c .1 -n ../run/phomdp_mabc_10_t_0_1_.1_1000000_.1_.1_.1_1 -s 1
@@ -13,6 +15,7 @@
 ./src/examples/tmp/quicktest_qlearning -f PrivateHierarchicalOccupancyMDP -p ../data/world/dpomdp/mabc.dpomdp -h 10 -q hierarchical -v 2 --ball_r 1.0 -b 0 -m 1 -l .1 -t 1000000 --p_b .1 --p_o .1 --p_c .1 -n ../run/phomdp_mabc_10_hv2_1.0_0_1_.1_1000000_.1_.1_.1_1 -s 1
 ```
 
+### tiger
 
 ![hierarchical occupancy mdp tiger](https://i.imgur.com/GvFfPNG.png)
 ```
@@ -28,6 +31,12 @@
 ./src/examples/tmp/quicktest_qlearning -f PrivateHierarchicalOccupancyMDP -p ../data/world/dpomdp/tiger.dpomdp -h 10 -q hierarchical -v 2 --ball_r 1.0 -b 0 -m 1 -l .1 -t 100000 --p_b .1 --p_o .1 --p_c .1 -n ../run/phomdp_tiger_10_hv2_1.0_0_1_.1_100000_.1_.1_.1_1 -s 1
 ./src/examples/tmp/quicktest_qlearning -f PrivateHierarchicalOccupancyMDP -p ../data/world/dpomdp/tiger.dpomdp -h 10 -q hierarchical -v 2 --ball_r 1.0 -b 0 -m 1 -l .1 -t 100000 --p_b .1 --p_o .1 --p_c .1 -n ../run/phomdp_tiger_10_hv2_1.0_0_1_.1_100000_.1_.1_.1_2 -s 2
 ```
+
+![hierarchical occupancy mdp tiger](https://i.imgur.com/7ikBQ8c.png)
+```
+```
+
+### recycling
 
 ![hierarchical occupancy mdp recycling](https://i.imgur.com/WAgwyzs.png)
 ```
@@ -58,7 +67,7 @@
 
 ```
 
-
+### Grid3x3corners
 
 ![hierarchical occupancy mdp Grid3x3corners](https://i.imgur.com/FUl35Yh.png)
 ```

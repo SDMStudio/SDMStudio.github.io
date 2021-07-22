@@ -59,6 +59,11 @@
 ```
 (Process killed after running for 1.5 hours)
 
+
+* Gardez un espace d'action par etat d'occ. -> Peut se servir des graphs de transitions et reward mais c'est trop couteux et inutile
+* Gardez rien -> Pas couteux, mais il faut calculer S'(S, Z, A) et R(S, A) chaque fois. Trop lent
+* Gardez un sac de regles de decisions apres les avoir generez de facon random ou greedy -> Un peu plus lourd que (2) mais surement beaucoup plus eficace. Il faut juste un bon hash pour les regles de decisions pour pouvoir les trouver en O(1)
+
 <!-- ![hierarchical occupancy mdp mabc]()
 ```
 

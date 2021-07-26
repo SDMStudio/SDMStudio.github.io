@@ -30,7 +30,7 @@
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
-![hierarchical occupancy mdp boxPushingUAI07](https://i.imgur.com/UhTooek.png)
+![hierarchical occupancy mdp boxPushingUAI07](https://i.imgur.com/LGp1smo.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 

@@ -1,5 +1,13 @@
 # Deep Q-learning
 
+* h : horizon (h0 = infinite horizon)
+* m : memory
+* t : number of episodes
+* lr : learning rate
+* b : batch size (number of transitions used during update)
+* s : sampling size (number of items in the sampled occupancy state)
+* c : capacity of the experience memory
+* eps : range of epsilon from beginning to end
 
 ## mabc
 
@@ -46,7 +54,7 @@ Inner dim = 32 est pas assez, l'aprentissage est instable.
 
 ![](https://i.imgur.com/LGp1smo.png)
 
-Il faut un Capacity (limit sur le nombre de transitions dans l'experience replay) = 10,000 ce qui corresponds à 10% des données totales. lr=0.001 est un peu mieux que lr=0.01
+Il faut un Capacity = 10,000 qui corresponds à 10% des données totales. lr=0.001 est un peu mieux que lr=0.01
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 

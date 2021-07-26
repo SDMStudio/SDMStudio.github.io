@@ -17,11 +17,11 @@
 
 Quand on agit de façon greedy les données qu'on récupere détruisent la pérformance. L'algo centrale oublie ce qu'il a deja appris. Du coup avec mabc epsilon va toujours rester à 1.
 
-![](https://i.imgur.com/NOAeEw8.png)
+![](https://i.imgur.com/S2jeuXo.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 
-![](https://i.imgur.com/VMzxWH7.png)
+![](https://i.imgur.com/I4kQlkO.png)
 
 Inner dim = 13 est trop bas, l'aprentissage est instable.
 

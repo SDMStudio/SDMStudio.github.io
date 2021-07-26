@@ -17,7 +17,7 @@
 
 Quand on agit de façon greedy les données qu'on récupere détruisent la pérformance. L'algo centrale oublie ce qu'il a deja appris. Du coup avec mabc epsilon va toujours rester à 1.
 
-![](https://i.imgur.com/S2jeuXo.png)
+![](https://i.imgur.com/svMmsZv.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 

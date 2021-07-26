@@ -29,7 +29,7 @@ Inner dim = 13 est trop bas, l'aprentissage est instable.
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
-![](https://i.imgur.com/cIZd0mV.png)
+![](https://i.imgur.com/jaUgwnR.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 

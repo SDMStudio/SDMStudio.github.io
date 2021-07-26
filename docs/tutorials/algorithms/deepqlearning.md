@@ -38,7 +38,7 @@ Inner dim = 32 est pas assez, l'aprentissage est instable.
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 
-![](https://i.imgur.com/xiJUif5.png)
+![](https://i.imgur.com/Wm9sqMU.png)
 
 ## boxPushingUAI07
 

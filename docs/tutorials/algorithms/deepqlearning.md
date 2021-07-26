@@ -5,8 +5,15 @@
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
+![](https://i.imgur.com/PF80dtj.png)
+
+Quand on agit de façon greedy les données qu'on récupere détruit la pérformance. Du coup avec mabc epsilon va toujours rester à 1.
+
+![](https://i.imgur.com/NOAeEw8.png)
+
 ### Infinite-Horizon Hierarchical Dec-POMDP
 
+![](https://i.imgur.com/VMzxWH7.png)
 
 ## tiger
 
@@ -25,7 +32,7 @@
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 
-![](https://i.imgur.com/4hOVKkE.png)
+![](https://i.imgur.com/Aq5Qf1Y.png)
 
 ## boxPushingUAI07
 

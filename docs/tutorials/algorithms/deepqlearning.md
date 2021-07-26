@@ -12,7 +12,7 @@
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
-![hierarchical occupancy mdp tiger](https://i.imgur.com/WAgwyzs.png)
+![hierarchical occupancy mdp tiger](https://i.imgur.com/cIZd0mV.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 

@@ -12,7 +12,7 @@
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
-![hierarchical occupancy mdp tiger](https://i.imgur.com/cIZd0mV.png)
+![](https://i.imgur.com/cIZd0mV.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 
@@ -21,16 +21,17 @@
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
-![hierarchical occupancy mdp recycling](https://i.imgur.com/wTeEbdY.png)
+![](https://i.imgur.com/wTeEbdY.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 
+![](https://i.imgur.com/4hOVKkE.png)
 
 ## boxPushingUAI07
 
 ### Finite-Horizon Hierarchical Dec-POMDP
 
-![hierarchical occupancy mdp boxPushingUAI07](https://i.imgur.com/LGp1smo.png)
+![](https://i.imgur.com/LGp1smo.png)
 
 ### Infinite-Horizon Hierarchical Dec-POMDP
 

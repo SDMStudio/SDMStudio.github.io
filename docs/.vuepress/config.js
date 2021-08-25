@@ -1,5 +1,5 @@
 module.exports = {
-    base: "/plasma/sdms-web/",
+    base: "/sdms/",
     dest: "public",
     title: "SDM'Studio",
     description: 'Solver for sequential decision making problems.',

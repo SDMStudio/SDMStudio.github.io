@@ -1,14 +1,22 @@
+# Pour commencer 
 
-# Getting started 
+En installant SDM'Studio vous avez installer quatre types de fichiers (binaries, headers, documentation et libraries). Par défault, ceux-ci sont situés dans les répertoires suivants:
+- binaries : `/usr/local/bin/` 
+- headers : `/usr/local/include/` 
+- libraries : `/usr/local/lib/` 
+- documentation : `/usr/local/share/` 
 
-## Command Line Interface
+## Interface en Ligne de Commande (CLI)
 
-By installing SDM'Studio, you are installing four different things (binaries, docs, headers, libraries). By default, the installation folder is ``/usr/local``.
+Le programme principal est ``SDMStudio``. Ce programme concentre les différentes fonctionnalités du logiciel. Pour commencer, exécutez les trois commandes ci-dessous: 
 
-### Binaries
+```bash 
+SDMStudio solve -a "A*" -f "DecPOMDP" 
+SDMStudio solve -a "HSVI" -f "DecPOMDP" 
+SDMStudio solve -a "QLearning" -f "DecPOMDP" 
+```
 
-**Binaries** are store in ``/usr/local/bin/``. The main program is called ``SDMStudio``. It can be used for almost everything. 
-To see how to use it, just type ``SDMStudio --help`` and you will get an help of this kind.
+Vous venez de résoudre un DecPOMDP grâce à trois algorithmes différents (A*, HSVI et Q-Learning). Pour voir comment utiliser le programme `SDMStudio`, il faut utiliser ``SDMStudio --help`` ou encore `man SDMStudio`.
 
 ```bash
     Usage : SDMStudio COMMAND
@@ -26,35 +34,74 @@ To see how to use it, just type ``SDMStudio --help`` and you will get an help of
     Run 'SDMStudio COMMAND --help' for more information on a command.
 ```
 
-The program SDMStudio is simply make alias to other programs. Invoking ``SDMStudio solve`` is the same as invoking ``sdms-solve``. 
-To verify that, you can try to run:
+Le programme principal `SDMStudio` fait contient des alias vers d'autres programmes. Par exemple, utiliser ``SDMStudio solve`` est similaire à utiliser ``sdms-solve``. Les deux lignes ci-dessous vont retourner exactement la même chose.
 
 ```bash
 SDMStudio solve --help
-```
-
-and 
-
-```bash
 sdms-solve --help
 ```
 
-This will display exacly the same thing.
+### Formulation d'un problème 
 
-### Documentation
+Les fichiers de problème peuvent prendre différentes formes. La forme la plus classique est le format `.pomdp` de Anthony Cassandra. Celui-ci est décrit dans le fichier [tiger.dpomdp](/tiger.txt). On considèrera aussi les formats `.dpomdp` et `.posg` comme étant les extensions triviales du format précédent. Quelques fichiers problèmes pré-existants sont situés dans le répertoire `/usr/local/share/sdms/world/`. 
 
-The **documentation** is store in ``/usr/local/share/``.
+## Start with the SDMS library
 
-### Librairies
+For a set of examples, please refer to this [folder](https://gitlab.inria.fr/chroma1/plasma/sdms/-/tree/main/src/examples).
 
-**Libraries** are store in ``/usr/local/lib/``. 
+Let’s write a tiny C++ file called `backinduct.cpp` that includes `sdm/parser/parser.hpp` and for now simply prints out a parsed problem:
 
+```cpp
+#include <iostream>
+#include <sdm/config.hpp>
+#include <sdm/parser/parser.hpp>
 
-### Headers
+int main() {
+  auto problem = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "dpomdp/mabc.dpomdp");
+  std::cout << *problem << std::endl;
+} 
+```
 
-**Header** files are store in ``/usr/local/include/``.
+### Defining the transformed problems
 
+Now that we have basic environment configured, we can dive into a much more interesting part of this turorial. First we will discuss how to transform the original problem into a problem that can be solved by dynamic programming algorithms. Then, we will show how to define a customed problem reformulation and solve it with existing algorithms
 
+**Using an existing problem reformulation**
+
+Let's consider we are looking for a way to solve a POMDP with basic MDP oriented algorithms. To this end, let's define a reformulation of the original POMDP  called belief MDP. 
+
+```cpp
+std::shared_ptr<POMDPInterface> pomdp = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "dpomdp/mabc.dpomdp");
+std::shared_ptr<BeliefMDP> belief_mdp = std::make_shared<BeliefMDP>(pomdp);
+```
+
+This reformulation assumes that the state transition go over beliefs instead of states. The main advantage of using this new formulation is that standard algorithms for MDP can now be applied. The full example of code is below: 
+
+```cpp
+#include <iostream>
+
+#include <sdm/config.hpp>
+#include <sdm/parser/parser.hpp>
+#include <sdm/world/pomdp_interface.hpp>
+#include <sdm/world/belief_mdp.hpp>
+#include <sdm/algorithms/backward_induction.hpp>
+
+using namespace sdm;
+
+int main()
+{
+  // Parse the problem file 
+  std::shared_ptr<POMDPInterface> pomdp = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "pomdp/tiger.pomdp");
+  problem->setHorizon(5);
+  // Transform the problem in a solvable way 
+  std::shared_ptr<BeliefMDP> belief_mdp = std::make_shared<BeliefMDP>(pomdp);
+  // Instanciate the algorithm
+  auto algo = std::make_shared<BackwardInduction>(belief_mdp);
+  // Intialize and solve
+  algo->do_initialize();
+  algo->do_solve();
+} 
+```
 
 ## Deploy and run long experiments
 

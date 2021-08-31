@@ -86,7 +86,19 @@ module.exports = {
                                 children: [
                                     '/doc/api/namespaces',
                                     '/doc/api/annotated',
-                                    '/doc/api/files'
+                                    '/doc/api/files',
+                                    {
+                                        title: 'Experiments',   // required
+                                        path: '/doc/experiments/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: false, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/doc/experiments/hsvi',
+                                            '/doc/experiments/serial_hsvi',
+                                            '/doc/experiments/qlearning',
+                                            '/doc/experiments/hierarchical_qlearning',
+                                        ]
+                                    },
                                 ]
                             }
                         ]

@@ -7,79 +7,84 @@
 
 
 ````cpp
-
 #pragma once
 
-#include <map>
-#include <iostream>
-#include <type_traits>
-
-#include <sdm/utils/value_function/initializer.hpp>
 #include <sdm/utils/linear_algebra/mapped_vector.hpp>
-#include <sdm/utils/linear_algebra/sdms_vector.hpp>
-#include <sdm/utils/backup_operator/backup_operator.hpp>
-#include <sdm/core/state/state.hpp>
-#include <sdm/core/function.hpp>
-#include <sdm/world/solvable_by_hsvi.hpp>
+#include <sdm/utils/value_function/initializer/initializer.hpp>
+#include <sdm/utils/value_function/value_function.hpp>
+#include <sdm/utils/value_function/backup/backup_interface.hpp>
 
 namespace sdm
 {
-    template <typename TState,
-              typename TAction,
-              typename TValue = double,
-              template <typename TI, typename TV> class TBackupOperator = ClassicBellmanBackupOperator,
-              template <typename TI, typename TV> class TStruct = MappedVector>
-    class TabularValueFunction : public ValueFunction<TState, TAction, TValue>
+    template <class Hash = std::hash<std::shared_ptr<State>>, class KeyEqual = std::equal_to<std::shared_ptr<State>>>
+    class BaseTabularValueFunction : public ValueFunction
     {
-    protected:
-        using Container = TStruct<TState, TValue>;
-        using backup_operator_type = TBackupOperator<TState, TAction>;
-
-        std::vector<Container> representation;
-
-        backup_operator_type backup_op_;
-
-        std::shared_ptr<Initializer<TState, TAction>> initializer_;
-
     public:
-        TabularValueFunction(std::shared_ptr<SolvableByHSVI<TState, TAction>> problem, number horizon, std::shared_ptr<Initializer<TState, TAction>> initializer);
+        using Container = MappedVector<std::shared_ptr<State>, double, Hash, KeyEqual>;
 
-        TabularValueFunction(std::shared_ptr<SolvableByHSVI<TState, TAction>> problem, number horizon = 0, TValue default_value = 0.);
+        BaseTabularValueFunction(number horizon, const std::shared_ptr<Initializer> &initializer, const std::shared_ptr<BackupInterfaceForValueFunction> &backup, const std::shared_ptr<ActionVFInterface> &action_vf, bool is_upper_bound );
+        BaseTabularValueFunction(number horizon = 0, double default_value = 0., const std::shared_ptr<BackupInterfaceForValueFunction> &backup = nullptr, const std::shared_ptr<ActionVFInterface> &action_vf = nullptr, bool is_upper_bound = false);
+        BaseTabularValueFunction(const BaseTabularValueFunction& copy);
 
         void initialize();
 
-        void initialize(TValue default_value, number t = 0);
+        void initialize(double default_value, number t = 0);
 
-        TValue getValueAt(const TState &state, number t = 0);
+        double getValueAt(const std::shared_ptr<State> &state, number t = 0);
 
-        Container getValueAt(number t = 0);
+        virtual Pair<std::shared_ptr<State>, double> evaluate(const std::shared_ptr<State> &state, number t);
 
-        void updateValueAt(const TState &state, number t = 0);
-        void updateValueAt(const TState &state, number t, TValue target);
+        virtual void updateValueAt(const std::shared_ptr<State> &state, number t = 0);
+        virtual void updateValueAt(const std::shared_ptr<State> &state,const std::shared_ptr<Action>& action, number t = 0);
 
-        std::string str();
+        void updateValueAt(const std::shared_ptr<State> &state, number t, double target);
 
-        std::vector<TState> getSupport(number t);
+        void save(std::string filename);
 
-        backup_operator_type getBackupOperator();
+        void load(std::string filename);
 
-        friend std::ostream &operator<<(std::ostream &os, TabularValueFunction<TState, TAction> &vf)
+        std::string str() const;
+
+        std::vector<std::shared_ptr<State>> getSupport(number t);
+
+        size_t getSize(number t) const;
+
+        friend std::ostream &operator<<(std::ostream &os, BaseTabularValueFunction &vf)
         {
             os << vf.str();
             return os;
         }
+
+        Container getRepresentation(number t);
+
+        void do_pruning(number t);
+
+        double getDefaultAt(number t);
+
+    protected:
+        std::vector<Container> representation;
+
+        bool is_upper_bound_;
+
+    public:
+        friend class boost::serialization::access;
+
+        template <class Archive>
+        void serialize(Archive &archive, const unsigned int& )
+        {
+
+            using boost::serialization::make_nvp;
+
+            archive &make_nvp("horizon", this->horizon_);
+            archive &make_nvp("representation", representation);
+        }
     };
 
-    template <typename TState, typename TAction, typename TValue = double>
-    using MappedValueFunction = TabularValueFunction<TState, TAction, TValue, ClassicBellmanBackupOperator, MappedVector>;
-
-    template <typename TState, typename TAction, typename TValue = double>
-    using SparseValueFunction = TabularValueFunction<TState, TAction, TValue, ClassicBellmanBackupOperator, SparseVector>;
-
-    template <typename TState, typename TAction, typename TValue = double>
-    using DenseValueFunction = TabularValueFunction<TState, TAction, TValue, ClassicBellmanBackupOperator, DenseVector>;
+    using TabularValueFunction = BaseTabularValueFunction<std::hash<std::shared_ptr<State>>, std::equal_to<std::shared_ptr<State>>>;
+    using TabularValueFunction2 = BaseTabularValueFunction<sdm::hash_from_ptr<State>, sdm::equal_from_ptr<State>>;
 
 } // namespace sdm
+
 #include <sdm/utils/value_function/tabular_value_function.tpp>
 ````
 

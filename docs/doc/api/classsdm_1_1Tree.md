@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::Tree
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 **template &lt;typename T&gt;**
 
@@ -16,10 +18,22 @@ _Generic_ [_**Tree**_](classsdm_1_1Tree.md) _class._[More...](#detailed-descript
 
 
 
-Inherits the following classes: std::enable_shared_from_this< Tree< T > >
+Inherits the following classes: [std::inheritable\_enable\_shared\_from\_this](classstd_1_1inheritable__enable__shared__from__this.md)
 
 
-Inherited by the following classes: [sdm::HistoryTree](classsdm_1_1HistoryTree.md)
+
+
+
+
+
+
+## Public Types
+
+| Type | Name |
+| ---: | :--- |
+| typedef T | [**value\_type**](classsdm_1_1Tree.md#typedef-value-type)  <br> |
+
+
 
 
 
@@ -47,9 +61,35 @@ Inherited by the following classes: [sdm::HistoryTree](classsdm_1_1HistoryTree.m
 |  [**number**](namespacesdm.md#typedef-number) | [**getNumChildren**](classsdm_1_1Tree.md#function-getnumchildren) () const<br> |
 |  std::shared\_ptr&lt; [**Tree**](classsdm_1_1Tree.md)&lt; T &gt; &gt; | [**getOrigin**](classsdm_1_1Tree.md#function-getorigin) () <br> |
 |  std::shared\_ptr&lt; [**Tree**](classsdm_1_1Tree.md)&lt; T &gt; &gt; | [**getParent**](classsdm_1_1Tree.md#function-getparent) () const<br> |
+|  std::shared\_ptr&lt; [**Tree**](classsdm_1_1Tree.md)&lt; T &gt; &gt; | [**getptr**](classsdm_1_1Tree.md#function-getptr) () <br> |
 |  bool | [**isOrigin**](classsdm_1_1Tree.md#function-isorigin) () const<br> |
+|  void | [**serialize**](classsdm_1_1Tree.md#function-serialize) (Archive & archive, const unsigned int) <br> |
 |  void | [**setMaxDepth**](classsdm_1_1Tree.md#function-setmaxdepth) ([**number**](namespacesdm.md#typedef-number)) const<br> |
+|  std::string | [**str**](classsdm_1_1Tree.md#function-str) () const<br> |
 | virtual  | [**~Tree**](classsdm_1_1Tree.md#function-tree) () <br>_Destructor of_ [_**Tree**_](classsdm_1_1Tree.md) _(that's bad)._ |
+
+## Public Functions inherited from std::inheritable_enable_shared_from_this
+
+See [std::inheritable\_enable\_shared\_from\_this](classstd_1_1inheritable__enable__shared__from__this.md)
+
+| Type | Name |
+| ---: | :--- |
+|  std::shared\_ptr&lt; Down &gt; | [**downcasted\_shared\_from\_this**](classstd_1_1inheritable__enable__shared__from__this.md#function-downcasted-shared-from-this) () <br> |
+|  std::shared\_ptr&lt; T &gt; | [**shared\_from\_this**](classstd_1_1inheritable__enable__shared__from__this.md#function-shared-from-this) () <br> |
+
+## Public Functions inherited from std::MultipleInheritableEnableSharedFromThis
+
+See [std::MultipleInheritableEnableSharedFromThis](classstd_1_1MultipleInheritableEnableSharedFromThis.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual  | [**~MultipleInheritableEnableSharedFromThis**](classstd_1_1MultipleInheritableEnableSharedFromThis.md#function-multipleinheritableenablesharedfromthis) () <br> |
+
+
+
+
+
+
 
 
 
@@ -63,8 +103,16 @@ Inherited by the following classes: [sdm::HistoryTree](classsdm_1_1HistoryTree.m
 |  [**number**](namespacesdm.md#typedef-number) | [**depth\_**](classsdm_1_1Tree.md#variable-depth-)   = = 0<br>_depth of the tree_  |
 |  bool | [**is\_origin**](classsdm_1_1Tree.md#variable-is-origin)   = = false<br> |
 |  [**number**](namespacesdm.md#typedef-number) | [**max\_depth\_**](classsdm_1_1Tree.md#variable-max-depth-)   = = std::numeric\_limits&lt;[**number**](namespacesdm.md#typedef-number)&gt;::max()<br>_maximum length of the tree_  |
-|  std::shared\_ptr&lt; [**Tree**](classsdm_1_1Tree.md)&lt; T &gt; &gt; | [**origin\_**](classsdm_1_1Tree.md#variable-origin-)  <br>_the root of the tree_  |
+|  std::weak\_ptr&lt; [**Tree**](classsdm_1_1Tree.md)&lt; T &gt; &gt; | [**origin\_**](classsdm_1_1Tree.md#variable-origin-)  <br>_the root of the tree_  |
 |  std::weak\_ptr&lt; [**Tree**](classsdm_1_1Tree.md)&lt; T &gt; &gt; | [**parent\_**](classsdm_1_1Tree.md#variable-parent-)  <br>_the parent node_  |
+
+
+
+
+
+
+
+
 
 
 
@@ -79,9 +127,30 @@ Inherited by the following classes: [sdm::HistoryTree](classsdm_1_1HistoryTree.m
 
 * `T` the type of the data contains in each node
 
-Usage Tree&lt;int&gt; tree(); tree.addChildren({3, 4, 5}); tree.getChild(3).addChildren({9, 8, 7, 6}); tree.getChild(5).addChildren({1, 3}); 
+Basic Usage
+
+
+````cpp
+std::shared_ptr<Tree<int>> tree = std::make_shared<Tree<int>>(4);
+tree->addChildren({3, 4, 5});
+tree->getChild(3)->addChildren({9, 8, 7, 6});
+tree->getChild(5)->addChildren({1, 3});
+````
+
+ 
 
     
+## Public Types Documentation
+
+
+### typedef value\_type 
+
+
+```cpp
+using sdm::Tree< T >::value_type =  T;
+```
+
+
 ## Public Functions Documentation
 
 
@@ -235,11 +304,33 @@ std::shared_ptr< Tree < T > > sdm::Tree::getParent () const
 
 
 
+### function getptr 
+
+
+```cpp
+std::shared_ptr< Tree < T > > sdm::Tree::getptr () 
+```
+
+
+
 ### function isOrigin 
 
 
 ```cpp
 bool sdm::Tree::isOrigin () const
+```
+
+
+
+### function serialize 
+
+
+```cpp
+template<class Archive class Archive>
+void sdm::Tree::serialize (
+    Archive & archive,
+    const unsigned int
+) 
 ```
 
 
@@ -251,6 +342,15 @@ bool sdm::Tree::isOrigin () const
 void sdm::Tree::setMaxDepth (
     number
 ) const
+```
+
+
+
+### function str 
+
+
+```cpp
+std::string sdm::Tree::str () const
 ```
 
 
@@ -318,7 +418,7 @@ number sdm::Tree< T >::max_depth_;
 
 
 ```cpp
-std::shared_ptr<Tree<T> > sdm::Tree< T >::origin_;
+std::weak_ptr<Tree<T> > sdm::Tree< T >::origin_;
 ```
 
 
@@ -340,11 +440,11 @@ std::weak_ptr<Tree<T> > sdm::Tree< T >::parent_;
 ```cpp
 inline friend std::ostream & sdm::Tree::operator<< (
     std::ostream & os,
-    const Tree < T > & tree
+    Tree < T > & tree
 ) 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tree.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/struct/tree.hpp`

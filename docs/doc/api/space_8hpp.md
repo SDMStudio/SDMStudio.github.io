@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File space.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**core**](dir_92216a09053680f71034e5e26026ee62.md) **>** [**space**](dir_4382197029a4717686416170aae3e90a.md) **>** [**space.hpp**](space_8hpp.md)
@@ -11,8 +13,10 @@
 _File for Space class._ [More...](#detailed-description)
 
 * `#include <vector>`
-* `#include <boost/bimap.hpp>`
 * `#include <sdm/types.hpp>`
+* `#include <sdm/exception.hpp>`
+* `#include <sdm/core/item.hpp>`
+* `#include <sdm/utils/struct/iterator.hpp>`
 
 
 
@@ -32,7 +36,7 @@ _File for Space class._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Space**](classsdm_1_1Space.md) <br>_This class is an abstract interface that all spaces should inherite. It gives some useful general methods to use generic spaces in your algorithms._  |
+| class | [**Space**](classsdm_1_1Space.md) <br>_This class is an abstract interface that all spaces should inherite._  |
 
 
 
@@ -82,4 +86,4 @@ This is an abstract interface for Spaces.
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/space.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/space/space.hpp`

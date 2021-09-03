@@ -17,50 +17,42 @@ namespace sdm
 {
     namespace exception
     {
-
         class Exception : virtual public std::exception
         {
+        public:
+            explicit Exception(const std::string &msg_);
+
+            virtual const char *what() const throw();
 
         protected:
             std::string error_message;
-
-        public:
-            explicit Exception(const std::string &msg_) : error_message(msg_)
-            {
-            }
-
-            virtual const char *what() const throw()
-            {
-                return error_message.c_str();
-            }
         };
 
         class NotImplementedException : public Exception
         {
         public:
-            explicit NotImplementedException() : Exception("Not Implemented Exception") {}
+            explicit NotImplementedException();
         };
 
         class FileNotFoundException : public Exception
         {
+        public:
+            explicit FileNotFoundException(std::string file_);
+
+            std::string get_file() const;
         private:
             std::string file;
-
-        public:
-            explicit FileNotFoundException(std::string file_) : Exception("File \"" + file_ + "\" does not seem to exists."),
-                                                                file(file_) {}
-            std::string get_file() const { return file; }
         };
 
         class ParsingException : public Exception
         {
+        public:
+            explicit ParsingException(const std::string &line_details_ = "");
+
+            std::string get_line_details() const;
+
         protected:
             std::string line_details;
-
-        public:
-            explicit ParsingException(const std::string &line_details_ = "") : Exception("Parsing failed -> Stopped at: \"" + line_details_ + "\"\n"),
-                                                                               line_details(line_details_) {}
-            std::string get_line_details() const { return line_details; }
         };
 
     } // namespace exception

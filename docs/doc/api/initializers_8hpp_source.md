@@ -1,7 +1,7 @@
 
 # File initializers.hpp
 
-[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**value\_function**](dir_9190e49f25bb1396e1fb4a6f0beec9b4.md) **>** [**initializers.hpp**](initializers_8hpp.md)
+[**File List**](files.md) **>** [**initializer**](dir_8f297180fb36cffec7cf6cc452bb4d2e.md) **>** [**initializers.hpp**](initializers_8hpp.md)
 
 [Go to the documentation of this file.](initializers_8hpp.md) 
 
@@ -15,37 +15,37 @@
 #include <boost/function.hpp>
 
 #include <sdm/utils/struct/vector.hpp>
-#include <sdm/utils/value_function/initializer.hpp>
+#include <sdm/utils/value_function/initializer/initializer.hpp>
 #include <sdm/utils/value_function/initializer/mdp_initializer.hpp>
 #include <sdm/utils/value_function/initializer/pomdp_initializer.hpp>
 
 namespace sdm
 {
-    template <typename TState, typename TAction, template <typename TS, typename TA> class TInit>
-    std::shared_ptr<Initializer<TState, TAction>> createInstance() { return std::shared_ptr<TInit<TState, TAction>>(new TInit<TState, TAction>); }
+    template <class TInit>
+    std::shared_ptr<Initializer> createInstance(std::shared_ptr<SolvableByHSVI> world) { return std::shared_ptr<TInit>(new TInit(world)); }
 
-    template <typename TState, typename TAction, template <typename TS, typename TA> class TInit>
-    std::shared_ptr<Initializer<TState, TAction>> createInstanceAlgoInit(std::string algo_name, double error, int trials) { return std::shared_ptr<TInit<TState, TAction>>(new TInit<TState, TAction>(algo_name, error, trials)); }
+    template <class TInit>
+    std::shared_ptr<Initializer> createInstanceAlgoInit(std::shared_ptr<SolvableByHSVI> world,std::string algo_name, double error, int trials) { return std::shared_ptr<TInit>(new TInit(world,algo_name, error, trials)); }
 
-    template <typename TState, typename TAction>
-    std::shared_ptr<Initializer<TState, TAction>> createInstanceTabMDPInit() { return boost::bind(createInstanceAlgoInit<TState, TAction, MDPInitializer>, "tabular_hsvi", 0., 10000)(); }
+    std::shared_ptr<Initializer> createInstanceTabMDPInit(std::shared_ptr<SolvableByHSVI> world) { return boost::bind(createInstanceAlgoInit<MDPInitializer>,world, "tabular_hsvi", 0, 200000)(); }
 
-    template <typename TState, typename TAction>
-    std::shared_ptr<Initializer<TState, TAction>> createInstanceTabPOMDPInit() { return boost::bind(createInstanceAlgoInit<TState, TAction, POMDPInitializer>, "tabular_hsvi", 0., 10000)(); }
+    std::shared_ptr<Initializer> createInstanceMDPValueIterationInit(std::shared_ptr<SolvableByHSVI> world) { return boost::bind(createInstanceAlgoInit<MDPInitializer>,world, "ValueIteration", 0, 200000)(); }
 
-    template <typename TState, typename TAction>
+    std::shared_ptr<Initializer> createInstanceTabPOMDPInit(std::shared_ptr<SolvableByHSVI> world) { return boost::bind(createInstanceAlgoInit<POMDPInitializer>,world, "tabular_hsvi", 0.01, 200000)(); }
+
     class InitializerFactory
     {
     protected:
-        typedef std::map<std::string, std::shared_ptr<Initializer<TState, TAction>> (*)()> map_type;
+        typedef std::map<std::string, std::shared_ptr<Initializer> (*)(std::shared_ptr<SolvableByHSVI> world)> map_type;
         static inline map_type registry_ = {
-            {"MinInitializer", &createInstance<TState, TAction, MinInitializer>},
-            {"MaxInitializer", &createInstance<TState, TAction, MaxInitializer>},
-            {"BlindInitializer", &createInstance<TState, TAction, BlindInitializer>},
-            {"ZeroInitializer", &createInstance<TState, TAction, ZeroInitializer>},
-            //{"PolicyEvaluationInitializer", &createInstance<TState, TAction, PolicyEvaluationInitializer>},
-            {"MdpHsviInitializer", &createInstanceTabMDPInit<TState, TAction>},
-            {"PomdpHsviInitializer", &createInstanceTabPOMDPInit<TState, TAction>},
+            {"Min", &createInstance<MinInitializer>},
+            {"Max", &createInstance<MaxInitializer>},
+            {"Blind", &createInstance<BlindInitializer>},
+            {"Zero", &createInstance<ZeroInitializer<>>},
+            //{"PolicyEvaluationInitializer", &createInstance,PolicyEvaluationInitializer>},
+            {"MdpHsvi", &createInstanceTabMDPInit},
+            {"MdpValueIteration", &createInstanceMDPValueIterationInit},
+            {"PomdpHsvi", &createInstanceTabPOMDPInit},
         };
 
     public:
@@ -62,27 +62,27 @@ namespace sdm
             return available_init;
         }
 
-        static std::shared_ptr<Initializer<TState, TAction>> make(std::string name)
+        static std::shared_ptr<Initializer> make(std::string name,std::shared_ptr<SolvableByHSVI> world)
         {
-            typename map_type::iterator it = InitializerFactory<TState, TAction>::getRegistry().find(name);
-            if (it == InitializerFactory<TState, TAction>::getRegistry().end())
+            typename map_type::iterator it = InitializerFactory::getRegistry().find(name);
+            if (it == InitializerFactory::getRegistry().end())
             {
                 std::string init_names = "{";
-                for (auto &v : InitializerFactory<TState, TAction>::available())
+                for (auto &v : InitializerFactory::available())
                 {
                     init_names = init_names + "\"" + v + "\" ";
                 }
                 throw sdm::exception::Exception(name + " not registered. Available initializers are : " + init_names + "}");
             }
-            return it->second();
+            return it->second(world);
         }
 
-        template <template <typename TS, typename TA> class TInitializer>
+        template <class TInitializer>
         static void addToRegistry(std::string name)
         {
             if (getRegistry().find(name) == getRegistry().end())
             {
-                InitializerFactory<TState, TAction>::getRegistry().insert(std::make_pair(name, &createInstance<TState, TAction, TInitializer>));
+                InitializerFactory::getRegistry().insert(std::make_pair(name, &createInstance<TInitializer>));
             }
             else
             {
@@ -91,10 +91,9 @@ namespace sdm
         }
     };
 
-    template <typename TState, typename TAction>
-    std::shared_ptr<Initializer<TState, TAction>> makeInitializer(std::string init_name)
+    std::shared_ptr<Initializer> makeInitializer(std::string init_name,std::shared_ptr<SolvableByHSVI> world)
     {
-        return InitializerFactory<TState, TAction>::make(init_name);
+        return InitializerFactory::make(init_name,world);
     }
 
 } // namespace sdm

@@ -1,9 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::InteractiveWorld
 
-**template &lt;typename TDecProcess typename TDecProcess&gt;**
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md)
@@ -12,7 +12,7 @@
 
 
 
-* `#include <interactive_world.hpp>`
+* `#include <interactive_world_base.hpp>`
 
 
 
@@ -25,16 +25,6 @@ Inherits the following classes: [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 
 
-## Public Types
-
-| Type | Name |
-| ---: | :--- |
-| typedef typename TDecProcess::action\_space\_type | [**action\_space\_type**](classsdm_1_1InteractiveWorld.md#typedef-action-space-type)  <br> |
-| typedef typename action\_space\_type::value\_type | [**action\_type**](classsdm_1_1InteractiveWorld.md#typedef-action-type)  <br> |
-| typedef typename TDecProcess::observation\_space\_type | [**observation\_space\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-space-type)  <br> |
-| typedef typename observation\_space\_type::value\_type | [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type)  <br> |
-| typedef typename TDecProcess::reward\_type | [**reward\_function\_type**](classsdm_1_1InteractiveWorld.md#typedef-reward-function-type)  <br> |
-| typedef typename reward\_type::value\_type | [**reward\_type**](classsdm_1_1InteractiveWorld.md#typedef-reward-type)  <br> |
 
 
 
@@ -47,11 +37,7 @@ Inherits the following classes: [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-1-3) (TDecProcess \* real\_world) <br> |
-|   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-2-3) (const TDecProcess &) <br> |
-|   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld-3-3) (const std::string &) <br> |
-| virtual [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type) | [**reset**](classsdm_1_1InteractiveWorld.md#function-reset) () <br> |
-|  std::tuple&lt; [**observation\_type**](classsdm_1_1InteractiveWorld.md#typedef-observation-type), [**reward\_type**](classsdm_1_1InteractiveWorld.md#typedef-reward-type), bool &gt; | [**step**](classsdm_1_1InteractiveWorld.md#function-step) ([**action\_type**](classsdm_1_1InteractiveWorld.md#typedef-action-type) ja) <br> |
+|   | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md#function-interactiveworld) (const std::shared\_ptr&lt; [**MDPInterface**](classsdm_1_1MDPInterface.md) &gt; & world) <br> |
 
 ## Public Functions inherited from sdm::GymInterface
 
@@ -59,24 +45,14 @@ See [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-1-2) () <br> |
-|   | [**GymInterface**](classsdm_1_1GymInterface.md#function-gyminterface-2-2) (std::shared\_ptr&lt; TObsSpace &gt;, std::shared\_ptr&lt; TActSpace &gt;) <br> |
-|  std::shared\_ptr&lt; TActSpace &gt; | [**getActionSpace**](classsdm_1_1GymInterface.md#function-getactionspace) () const<br> |
-|  std::shared\_ptr&lt; TObsSpace &gt; | [**getObsSpace**](classsdm_1_1GymInterface.md#function-getobsspace) () const<br> |
-| virtual [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type) | [**reset**](classsdm_1_1GymInterface.md#function-reset) () = 0<br> |
-|  std::tuple&lt; [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type), std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) ([**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)) <br> |
+| virtual std::shared\_ptr&lt; [**Space**](classsdm_1_1Space.md) &gt; | [**getActionSpaceAt**](classsdm_1_1GymInterface.md#function-getactionspaceat) (const std::shared\_ptr&lt; [**Observation**](classsdm_1_1Observation.md) &gt; & observation, [**number**](namespacesdm.md#typedef-number) t) = 0<br>_Get the action space._  |
+| virtual std::shared\_ptr&lt; Action &gt; | [**getRandomAction**](classsdm_1_1GymInterface.md#function-getrandomaction) (const std::shared\_ptr&lt; [**Observation**](classsdm_1_1Observation.md) &gt; & observation, [**number**](namespacesdm.md#typedef-number) t) = 0<br>_Get random action._  |
+| virtual std::shared\_ptr&lt; [**Observation**](classsdm_1_1Observation.md) &gt; | [**reset**](classsdm_1_1GymInterface.md#function-reset) () = 0<br>_Reset the environment and return initial observation._  |
+| virtual std::tuple&lt; std::shared\_ptr&lt; [**Observation**](classsdm_1_1Observation.md) &gt;, std::vector&lt; double &gt;, bool &gt; | [**step**](classsdm_1_1GymInterface.md#function-step) (std::shared\_ptr&lt; Action &gt; action) = 0<br>_Do a step on the environment._  |
 
 
 
 
-## Protected Types inherited from sdm::GymInterface
-
-See [sdm::GymInterface](classsdm_1_1GymInterface.md)
-
-| Type | Name |
-| ---: | :--- |
-| typedef typename TActSpace::value\_type | [**action\_type**](classsdm_1_1GymInterface.md#typedef-action-type)  <br> |
-| typedef typename TObsSpace::value\_type | [**observation\_type**](classsdm_1_1GymInterface.md#typedef-observation-type)  <br> |
 
 
 
@@ -84,143 +60,24 @@ See [sdm::GymInterface](classsdm_1_1GymInterface.md)
 
 | Type | Name |
 | ---: | :--- |
-|  [**number**](namespacesdm.md#typedef-number) | [**ctimestep\_**](classsdm_1_1InteractiveWorld.md#variable-ctimestep-)   = = 0<br>_The current timestep._  |
-|  std::shared\_ptr&lt; TDecProcess &gt; | [**internal\_formalism\_**](classsdm_1_1InteractiveWorld.md#variable-internal-formalism-)  <br> |
-
-## Protected Attributes inherited from sdm::GymInterface
-
-See [sdm::GymInterface](classsdm_1_1GymInterface.md)
-
-| Type | Name |
-| ---: | :--- |
-|  std::shared\_ptr&lt; TActSpace &gt; | [**action\_space\_**](classsdm_1_1GymInterface.md#variable-action-space-)  <br> |
-|  std::shared\_ptr&lt; TObsSpace &gt; | [**observation\_space\_**](classsdm_1_1GymInterface.md#variable-observation-space-)  <br> |
+|  std::shared\_ptr&lt; [**MDPInterface**](classsdm_1_1MDPInterface.md) &gt; | [**world**](classsdm_1_1InteractiveWorld.md#variable-world)  <br> |
 
 
 
 
 
 
-
-## Public Types Documentation
-
-
-### typedef action\_space\_type 
-
-
-```cpp
-using sdm::InteractiveWorld< TDecProcess >::action_space_type =  typename TDecProcess::action_space_type;
-```
-
-
-
-### typedef action\_type 
-
-
-```cpp
-using sdm::InteractiveWorld< TDecProcess >::action_type =  typename action_space_type::value_type;
-```
-
-
-
-### typedef observation\_space\_type 
-
-
-```cpp
-using sdm::InteractiveWorld< TDecProcess >::observation_space_type =  typename TDecProcess::observation_space_type;
-```
-
-
-
-### typedef observation\_type 
-
-
-```cpp
-using sdm::InteractiveWorld< TDecProcess >::observation_type =  typename observation_space_type::value_type;
-```
-
-
-
-### typedef reward\_function\_type 
-
-
-```cpp
-using sdm::InteractiveWorld< TDecProcess >::reward_function_type =  typename TDecProcess::reward_type;
-```
-
-
-
-### typedef reward\_type 
-
-
-```cpp
-using sdm::InteractiveWorld< TDecProcess >::reward_type =  typename reward_type::value_type;
-```
 
 
 ## Public Functions Documentation
 
 
-### function InteractiveWorld [1/3]
+### function InteractiveWorld 
 
 
 ```cpp
 sdm::InteractiveWorld::InteractiveWorld (
-    TDecProcess * real_world
-) 
-```
-
-
-
-
-**Parameters:**
-
-
-* `intern_formalism` problem to interact with 
-
-
-
-        
-
-### function InteractiveWorld [2/3]
-
-
-```cpp
-sdm::InteractiveWorld::InteractiveWorld (
-    const TDecProcess &
-) 
-```
-
-
-
-### function InteractiveWorld [3/3]
-
-
-```cpp
-sdm::InteractiveWorld::InteractiveWorld (
-    const std::string &
-) 
-```
-
-
-
-### function reset 
-
-
-```cpp
-virtual observation_type sdm::InteractiveWorld::reset () 
-```
-
-
-Implements [*sdm::GymInterface::reset*](classsdm_1_1GymInterface.md#function-reset)
-
-
-### function step 
-
-
-```cpp
-std::tuple< observation_type , reward_type , bool > sdm::InteractiveWorld::step (
-    action_type ja
+    const std::shared_ptr< MDPInterface > & world
 ) 
 ```
 
@@ -228,23 +85,14 @@ std::tuple< observation_type , reward_type , bool > sdm::InteractiveWorld::step 
 ## Protected Attributes Documentation
 
 
-### variable ctimestep\_ 
+### variable world 
 
 
 ```cpp
-number sdm::InteractiveWorld< TDecProcess >::ctimestep_;
-```
-
-
-
-### variable internal\_formalism\_ 
-
-
-```cpp
-std::shared_ptr<TDecProcess> sdm::InteractiveWorld< TDecProcess >::internal_formalism_;
+std::shared_ptr<MDPInterface> sdm::InteractiveWorld::world;
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/interactive_world.hpp`
+The documentation for this class was generated from the following file `src/sdm/world/base/interactive_world_base.hpp`

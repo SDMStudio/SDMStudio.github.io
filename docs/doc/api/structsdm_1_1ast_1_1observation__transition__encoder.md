@@ -1,16 +1,18 @@
 
-<NavBar active_item_id="2"/>
-
 # Struct sdm::ast::observation\_transition\_encoder
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**ast**](namespacesdm_1_1ast.md) **>** [**observation\_transition\_encoder**](structsdm_1_1ast_1_1observation__transition__encoder.md)
 
 
 
-_encodes the input into a dynamic class_ 
+_encodes the input into an observation dynamic class_ 
 
-* `#include <encoder.hpp>`
+* `#include <dynamics_encoders.hpp>`
 
 
 
@@ -29,21 +31,21 @@ Inherits the following classes: boost::static_visitor<>
 
 | Type | Name |
 | ---: | :--- |
-|  [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; std::string &gt; | [**act\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-act-space-)  <br> |
-|  [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; std::string &gt; | [**ag\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-ag-space-)  <br> |
-|  std::vector&lt; Matrix &gt; | [**o\_model**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-o-model)  <br> |
-|  [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; std::string &gt; | [**obs\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-obs-space-)  <br> |
-|  [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; std::string &gt; | [**st\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-st-space-)  <br> |
+|  std::shared\_ptr&lt; [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &gt; | [**action\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-action-space-)  <br> |
+|  std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) &gt; | [**agent\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-agent-space-)  <br> |
+|  std::shared\_ptr&lt; [**TabularObservationDynamicsAS**](classsdm_1_1TabularObservationDynamicsAS.md) &gt; | [**obs\_dynamics\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-obs-dynamics-)  <br> |
+|  std::shared\_ptr&lt; [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &gt; | [**obs\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-obs-space-)  <br> |
+|  std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) &gt; | [**state\_space\_**](structsdm_1_1ast_1_1observation__transition__encoder.md#variable-state-space-)  <br> |
 
 
 ## Public Functions
 
 | Type | Name |
 | ---: | :--- |
-|   | [**observation\_transition\_encoder**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-observation-transition-encoder) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; std::string &gt; & st\_space, const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; std::string &gt; & ag\_space, const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; std::string &gt; & act\_space, const [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md)&lt; std::string &gt; & obs\_space) <br> |
-|  void | [**operator()**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-operator()-1-3) (const [**observation\_entry\_3\_t**](structsdm_1_1ast_1_1observation__entry__3__t.md) & z3) <br> |
-|  void | [**operator()**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-operator()-2-3) (const [**observation\_entry\_2\_t**](structsdm_1_1ast_1_1observation__entry__2__t.md) & z2) <br> |
-|  void | [**operator()**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-operator()-3-3) (const [**observation\_entry\_1\_t**](structsdm_1_1ast_1_1observation__entry__1__t.md) & z1) <br> |
+|   | [**observation\_transition\_encoder**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-observation-transition-encoder) (const std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) &gt; & st\_space, const std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) &gt; & ag\_space, const std::shared\_ptr&lt; [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &gt; & act\_space, const std::shared\_ptr&lt; [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &gt; & obs\_space, const std::shared\_ptr&lt; [**TabularObservationDynamicsAS**](classsdm_1_1TabularObservationDynamicsAS.md) &gt; & dynamics) <br> |
+|  void | [**operator()**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-operator()-1-3) (const [**observation\_entry\_1\_t**](structsdm_1_1ast_1_1observation__entry__1__t.md) & z1) <br> |
+|  void | [**operator()**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-operator()-2-3) (const [**observation\_entry\_3\_t**](structsdm_1_1ast_1_1observation__entry__3__t.md) & z3) <br> |
+|  void | [**operator()**](structsdm_1_1ast_1_1observation__transition__encoder.md#function-operator()-3-3) (const [**observation\_entry\_2\_t**](structsdm_1_1ast_1_1observation__entry__2__t.md) & z2) <br> |
 
 
 
@@ -55,29 +57,29 @@ Inherits the following classes: boost::static_visitor<>
 ## Public Attributes Documentation
 
 
-### variable act\_space\_ 
+### variable action\_space\_ 
 
 
 ```cpp
-MultiDiscreteSpace<std::string> sdm::ast::observation_transition_encoder::act_space_;
+std::shared_ptr<MultiDiscreteSpace> sdm::ast::observation_transition_encoder::action_space_;
 ```
 
 
 
-### variable ag\_space\_ 
+### variable agent\_space\_ 
 
 
 ```cpp
-DiscreteSpace<std::string> sdm::ast::observation_transition_encoder::ag_space_;
+std::shared_ptr<DiscreteSpace> sdm::ast::observation_transition_encoder::agent_space_;
 ```
 
 
 
-### variable o\_model 
+### variable obs\_dynamics\_ 
 
 
 ```cpp
-std::vector<Matrix> sdm::ast::observation_transition_encoder::o_model;
+std::shared_ptr<TabularObservationDynamicsAS> sdm::ast::observation_transition_encoder::obs_dynamics_;
 ```
 
 
@@ -86,16 +88,16 @@ std::vector<Matrix> sdm::ast::observation_transition_encoder::o_model;
 
 
 ```cpp
-MultiDiscreteSpace<std::string> sdm::ast::observation_transition_encoder::obs_space_;
+std::shared_ptr<MultiDiscreteSpace> sdm::ast::observation_transition_encoder::obs_space_;
 ```
 
 
 
-### variable st\_space\_ 
+### variable state\_space\_ 
 
 
 ```cpp
-DiscreteSpace<std::string> sdm::ast::observation_transition_encoder::st_space_;
+std::shared_ptr<DiscreteSpace> sdm::ast::observation_transition_encoder::state_space_;
 ```
 
 
@@ -106,11 +108,12 @@ DiscreteSpace<std::string> sdm::ast::observation_transition_encoder::st_space_;
 
 
 ```cpp
-inline sdm::ast::observation_transition_encoder::observation_transition_encoder (
-    const DiscreteSpace < std::string > & st_space,
-    const DiscreteSpace < std::string > & ag_space,
-    const MultiDiscreteSpace < std::string > & act_space,
-    const MultiDiscreteSpace < std::string > & obs_space
+sdm::ast::observation_transition_encoder::observation_transition_encoder (
+    const std::shared_ptr< DiscreteSpace > & st_space,
+    const std::shared_ptr< DiscreteSpace > & ag_space,
+    const std::shared_ptr< MultiDiscreteSpace > & act_space,
+    const std::shared_ptr< MultiDiscreteSpace > & obs_space,
+    const std::shared_ptr< TabularObservationDynamicsAS > & dynamics
 ) 
 ```
 
@@ -120,8 +123,8 @@ inline sdm::ast::observation_transition_encoder::observation_transition_encoder 
 
 
 ```cpp
-inline void sdm::ast::observation_transition_encoder::operator() (
-    const observation_entry_3_t & z3
+void sdm::ast::observation_transition_encoder::operator() (
+    const observation_entry_1_t & z1
 ) 
 ```
 
@@ -131,8 +134,8 @@ inline void sdm::ast::observation_transition_encoder::operator() (
 
 
 ```cpp
-inline void sdm::ast::observation_transition_encoder::operator() (
-    const observation_entry_2_t & z2
+void sdm::ast::observation_transition_encoder::operator() (
+    const observation_entry_3_t & z3
 ) 
 ```
 
@@ -142,12 +145,12 @@ inline void sdm::ast::observation_transition_encoder::operator() (
 
 
 ```cpp
-inline void sdm::ast::observation_transition_encoder::operator() (
-    const observation_entry_1_t & z1
+void sdm::ast::observation_transition_encoder::operator() (
+    const observation_entry_2_t & z2
 ) 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/encoders/dynamics_encoders.hpp`

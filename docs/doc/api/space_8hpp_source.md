@@ -11,41 +11,49 @@
 #pragma once
 
 #include <vector>
-#include <boost/bimap.hpp>
 #include <sdm/types.hpp>
+#include <sdm/exception.hpp>
+#include <sdm/core/item.hpp>
+#include <sdm/utils/struct/iterator.hpp>
+
 
 namespace sdm
 {
-  class Space
+
+  class DiscreteSpace;
+  class MultiDiscreteSpace;
+
+  class Space : public std::enable_shared_from_this<Space>
   {
   public:
+    using iterator_type = std::shared_ptr<ItemIterator>;
+
     virtual ~Space() {}
 
     virtual bool isDiscrete() const = 0;
 
-    bool isContinuous() const
-    {
-      return !(this->isDiscrete());
-    }
+    bool isContinuous() const;
 
     virtual std::vector<number> getDim() const = 0;
 
+    std::shared_ptr<DiscreteSpace> toDiscreteSpace();
+    std::shared_ptr<MultiDiscreteSpace> toMultiDiscreteSpace();
+
+    virtual std::shared_ptr<Item> sample() const { throw sdm::exception::Exception("Cannot sample Abstract space !!!"); }
+
+    virtual iterator_type begin() = 0;
+    virtual iterator_type end() = 0;
+
     virtual std::string str() const = 0;
 
-    bool operator==(const Space &sp) const
+    bool operator==(const Space &sp) const;
+    bool operator!=(const Space &sp) const;
+
+    friend std::ostream &
+    operator<<(std::ostream &os, const Space &sp)
     {
-      if (this->str() == sp.str())
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
-    }
-    bool operator!=(const Space &sp) const
-    {
-      return !(this->operator==(sp));
+      os << sp.str();
+      return os;
     }
   };
 } // namespace sdm

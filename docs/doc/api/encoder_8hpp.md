@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File encoder.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**parser**](dir_6daa6254ddefc40233dd42d3ed88a5a9.md) **>** [**encoder.hpp**](encoder_8hpp.md)
@@ -11,11 +13,20 @@
 
 
 * `#include <sdm/parser/ast.hpp>`
+* `#include <sdm/types.hpp>`
+* `#include <sdm/core/base_item.hpp>`
+* `#include <sdm/core/distribution.hpp>`
 * `#include <sdm/core/space/discrete_space.hpp>`
 * `#include <sdm/core/space/multi_discrete_space.hpp>`
-* `#include <sdm/world/discrete_decpomdp.hpp>`
-* `#include <sdm/utils/linear_algebra/vector.hpp>`
-* `#include <sdm/utils/linear_algebra/matrix.hpp>`
+* `#include <sdm/core/reward/tabular_reward.hpp>`
+* `#include <sdm/core/dynamics/tabular_state_dynamics.hpp>`
+* `#include <sdm/core/dynamics/tabular_observation_dynamics.hpp>`
+* `#include <sdm/world/mpomdp.hpp>`
+* `#include <sdm/parser/encoders/struct_encoders.hpp>`
+* `#include <sdm/parser/encoders/space_encoders.hpp>`
+* `#include <sdm/parser/encoders/item_encoders.hpp>`
+* `#include <sdm/parser/encoders/reward_encoders.hpp>`
+* `#include <sdm/parser/encoders/dynamics_encoders.hpp>`
 
 
 
@@ -36,21 +47,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**discrete\_space\_encoder**](structsdm_1_1ast_1_1discrete__space__encoder.md) <br>_encodes the input into a discrete space class_  |
 | struct | [**dpomdp\_encoder**](structsdm_1_1ast_1_1dpomdp__encoder.md) <br> |
-| struct | [**element\_encoder**](structsdm_1_1ast_1_1element__encoder.md) <br>_encodes the input into a number (index)_  |
-| struct | [**joint\_element\_encoder**](classsdm_1_1ast_1_1joint__element__encoder.md) <br>_encodes the input into a joint element (vector of number)_  |
-| struct | [**matrix\_encoder**](structsdm_1_1ast_1_1matrix__encoder.md) <br>_encodes the input into a matrix_  |
-| struct | [**multi\_discrete\_space\_encoder**](structsdm_1_1ast_1_1multi__discrete__space__encoder.md) <br>_encodes the input into a multi discrete space class_  |
-| class | [**obs\_dynamics\_encoder**](classsdm_1_1ast_1_1obs__dynamics__encoder.md) <br> |
-| struct | [**observation\_transition\_encoder**](structsdm_1_1ast_1_1observation__transition__encoder.md) <br>_encodes the input into a dynamic class_  |
-| struct | [**reward\_encoder**](structsdm_1_1ast_1_1reward__encoder.md) <br> |
-| class | [**rewards\_encoder**](classsdm_1_1ast_1_1rewards__encoder.md) <br> |
-| class | [**state\_dynamics\_encoder**](classsdm_1_1ast_1_1state__dynamics__encoder.md) <br> |
-| struct | [**state\_encoder**](structsdm_1_1ast_1_1state__encoder.md) <br>_encodes the input into a vector of number (vector of states) "\*" -&gt; [0,1,2,3,4,...,n] "s0" -&gt; [0] 0 -&gt; [0]_  |
-| struct | [**state\_transition\_encoder**](structsdm_1_1ast_1_1state__transition__encoder.md) <br>_used to encode state transition dynamics (i.e._ [_**StateDynamics**_](classsdm_1_1StateDynamics.md) _class)_ |
-| struct | [**str\_visitor**](structsdm_1_1ast_1_1str__visitor.md) <br> |
-| struct | [**vector\_encoder**](structsdm_1_1ast_1_1vector__encoder.md) <br>_encodes the input into a vector_  |
 
 
 
@@ -66,4 +63,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/encoder.hpp`

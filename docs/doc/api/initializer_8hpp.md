@@ -1,19 +1,23 @@
 
-<NavBar active_item_id="2"/>
-
 # File initializer.hpp
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**value\_function**](dir_9190e49f25bb1396e1fb4a6f0beec9b4.md) **>** [**initializer.hpp**](initializer_8hpp.md)
+
+
+[**File List**](files.md) **>** [**initializer**](dir_8f297180fb36cffec7cf6cc452bb4d2e.md) **>** [**initializer.hpp**](initializer_8hpp.md)
 
 [Go to the source code of this file.](initializer_8hpp_source.md)
 
 _File that contains definition of different initializers._ [More...](#detailed-description)
 
 * `#include <math.h>`
-* `#include <sdm/algorithms/hsvi.hpp>`
+* `#include <sdm/types.hpp>`
+* `#include <sdm/world/solvable_by_hsvi.hpp>`
+* `#include <sdm/world/base/mdp_interface.hpp>`
 * `#include <sdm/utils/value_function/value_function.hpp>`
-* `#include <sdm/utils/value_function/state_2_occupancy_vf.hpp>`
+* `#include <sdm/utils/value_function/qvalue_function.hpp>`
 
 
 
@@ -33,13 +37,14 @@ _File that contains definition of different initializers._ [More...](#detailed-d
 
 | Type | Name |
 | ---: | :--- |
-| class | [**BlindInitializer**](classsdm_1_1BlindInitializer.md) &lt;typename TState, typename TAction&gt;<br>_This initializer calculates the initial lower bound ${V}\_0$ using the blind policy method [Hauskrecht, 1997]. Trey Smith and Reid Simmons used this initialization procedure in_ [https://arxiv.org/pdf/1207.4166.pdf](https://arxiv.org/pdf/1207.4166.pdf) _._ |
-| class | [**BoundInitializer**](classsdm_1_1BoundInitializer.md) &lt;typename TState, typename TAction&gt;<br>_This initializer initializes a value function to the estimation of the value if if we get a constant reward at every timestep._  |
-| class | [**Initializer**](classsdm_1_1Initializer.md) &lt;typename TState, typename TAction&gt;<br>_Abstract class for initializer._  |
-| class | [**MaxInitializer**](classsdm_1_1MaxInitializer.md) &lt;typename TState, typename TAction&gt;<br>_This initializer initializes a value function to the best value. This is an optimistic initialization._  |
-| class | [**MinInitializer**](classsdm_1_1MinInitializer.md) &lt;typename TState, typename TAction&gt;<br>_This initializer initializes a value function to the worst value. This is a pessimistic initialization._  |
-| class | [**ValueInitializer**](classsdm_1_1ValueInitializer.md) &lt;typename TState, typename TAction&gt;<br>_This initializer initializes a value function to a constant value._  |
-| class | [**ZeroInitializer**](classsdm_1_1ZeroInitializer.md) &lt;typename TState, typename TAction&gt;<br>_This initializer initializes a value function to zero._  |
+| class | [**BlindInitializer**](classsdm_1_1BlindInitializer.md) <br>_This initializer calculates the initial lower bound ${V}\_0$ using the blind policy method [Hauskrecht, 1997]. Trey Smith and Reid Simmons used this initialization procedure in_ [https://arxiv.org/pdf/1207.4166.pdf](https://arxiv.org/pdf/1207.4166.pdf) _._ |
+| class | [**BoundInitializer**](classsdm_1_1BoundInitializer.md) <br>_This initializer initializes a value function to the estimation of the value if we get a constant reward at every timestep._  |
+| class | [**Initializer**](classsdm_1_1Initializer.md) <br>_Abstract class for initializer._  |
+| class | [**MaxInitializer**](classsdm_1_1MaxInitializer.md) <br>_This initializer initializes a value function to the best value. This is an optimistic initialization._  |
+| class | [**MinInitializer**](classsdm_1_1MinInitializer.md) <br>_This initializer initializes a value function to the worst value. This is a pessimistic initialization._  |
+| class | [**QInitializer**](classsdm_1_1QInitializer.md) &lt;class TInput&gt;<br>_Abstract class for initializer._  |
+| class | [**ValueInitializer**](classsdm_1_1ValueInitializer.md) &lt;class TInput&gt;<br>_This initializer initializes a value function to a constant value._  |
+| class | [**ZeroInitializer**](classsdm_1_1ZeroInitializer.md) &lt;class TInput&gt;<br>_This initializer initializes a value function to zero._  |
 
 
 
@@ -89,4 +94,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/value_function/initializer/initializer.hpp`

@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File multi\_discrete\_space.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**core**](dir_92216a09053680f71034e5e26026ee62.md) **>** [**space**](dir_4382197029a4717686416170aae3e90a.md) **>** [**multi\_discrete\_space.hpp**](multi__discrete__space_8hpp.md)
@@ -14,10 +16,9 @@ _File for MultiDiscreteSpace class._ [More...](#detailed-description)
 * `#include <assert.h>`
 * `#include <boost/bimap.hpp>`
 * `#include <sdm/types.hpp>`
-* `#include <sdm/core/space/multi_space.hpp>`
+* `#include <sdm/core/item.hpp>`
 * `#include <sdm/core/space/discrete_space.hpp>`
 * `#include <sdm/core/joint.hpp>`
-* `#include <sdm/core/space/multi_discrete_space.tpp>`
 
 
 
@@ -37,7 +38,7 @@ _File for MultiDiscreteSpace class._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &lt;TItem&gt;<br>_This class provide a way to instantiate multi discrete space (i.e. list of discrete spaces). Typically it is used to store a set of spaces, one by agent (i.e. action\_spaces in POSG). This can be view as a set of discrete spaces or as a discrete space of joint items._  |
+| class | [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) <br>_This class provide a way to instantiate multi discrete space (i.e. list of discrete spaces). Typically it is used to store a set of spaces, one by agent (i.e. action\_spaces in POSG). This can be view as a set of discrete spaces or as a discrete space of joint items._  |
 
 
 
@@ -87,4 +88,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/multi_discrete_space.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/space/multi_discrete_space.hpp`

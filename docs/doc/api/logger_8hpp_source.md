@@ -17,7 +17,6 @@
 
 namespace sdm
 {
-
     class BaseLogger
     {
     public:
@@ -54,6 +53,7 @@ namespace sdm
 
     protected:
         std::shared_ptr<std::ostream> output_stream_;
+
         std::string format_;
     };
 
@@ -113,6 +113,7 @@ namespace sdm
     public:
         MultiLogger(const std::vector<std::shared_ptr<Logger>> &loggers) : std::vector<std::shared_ptr<Logger>>(loggers) {}
         MultiLogger(const std::initializer_list<std::shared_ptr<Logger>> &loggers) : std::vector<std::shared_ptr<Logger>>(loggers) {}
+
 
         template <class... TData>
         void log(TData... vals)

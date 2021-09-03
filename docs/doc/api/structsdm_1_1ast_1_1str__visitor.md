@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Struct sdm::ast::str\_visitor
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**ast**](namespacesdm_1_1ast.md) **>** [**str\_visitor**](structsdm_1_1ast_1_1str__visitor.md)
@@ -10,7 +12,7 @@
 
 
 
-* `#include <encoder.hpp>`
+* `#include <item_encoders.hpp>`
 
 
 
@@ -82,4 +84,4 @@ inline result_type sdm::ast::str_visitor::operator() (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/encoders/item_encoders.hpp`

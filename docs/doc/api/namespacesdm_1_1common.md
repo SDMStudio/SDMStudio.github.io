@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Namespace sdm::common
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**common**](namespacesdm_1_1common.md)
@@ -29,10 +31,10 @@ _Namespace grouping all common functions to the whole project._
 
 | Type | Name |
 | ---: | :--- |
-|  std::string | [**getAgentActionState**](namespacesdm_1_1common.md#function-getagentactionstate) ([**agent**](namespacesdm.md#typedef-agent) i, [**action**](namespacesdm.md#typedef-action) ui, [**state**](namespacesdm.md#typedef-state) x) <br> |
-|  std::string | [**getState**](namespacesdm_1_1common.md#function-getstate) ([**state**](namespacesdm.md#typedef-state) x) <br> |
-|  std::default\_random\_engine & | [**global\_urng**](namespacesdm_1_1common.md#function-global-urng) () <br> |
-|  void | [**logo**](namespacesdm_1_1common.md#function-logo) () <br> |
+|  std::string | [**getAgentActionState**](namespacesdm_1_1common.md#function-getagentactionstate) ([**number**](namespacesdm.md#typedef-number) agent\_id, [**number**](namespacesdm.md#typedef-number) action, [**number**](namespacesdm.md#typedef-number) state) <br> |
+|  std::string | [**getState**](namespacesdm_1_1common.md#function-getstate) ([**number**](namespacesdm.md#typedef-number) state) <br> |
+|  std::default\_random\_engine & | [**global\_urng**](namespacesdm_1_1common.md#function-global-urng) () <br>_Get the random engine._  |
+|  void | [**logo**](namespacesdm_1_1common.md#function-logo) () <br>_Display the logo of SDM'Studio._  |
 
 
 
@@ -49,9 +51,9 @@ _Namespace grouping all common functions to the whole project._
 
 ```cpp
 std::string sdm::common::getAgentActionState (
-    agent i,
-    action ui,
-    state x
+    number agent_id,
+    number action,
+    number state
 ) 
 ```
 
@@ -62,7 +64,7 @@ std::string sdm::common::getAgentActionState (
 
 ```cpp
 std::string sdm::common::getState (
-    state x
+    number state
 ) 
 ```
 
@@ -87,4 +89,4 @@ void sdm::common::logo ()
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/common.cpp`
+The documentation for this class was generated from the following file `src/sdm/common.hpp`

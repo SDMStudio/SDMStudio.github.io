@@ -17,17 +17,12 @@
 
 namespace sdm
 {
-    template <typename TSpace = Space>
     class MultiSpace : public Space
     {
-    protected:
-        std::vector<std::shared_ptr<TSpace>> spaces_;
-
     public:
-        using value_type = void;
-
         MultiSpace();
-        MultiSpace(const std::vector<std::shared_ptr<TSpace>> &);
+        
+        MultiSpace(const std::vector<std::shared_ptr<Space>> &);
 
         bool isDiscrete() const;
 
@@ -35,11 +30,11 @@ namespace sdm
 
         number getNumSpaces() const;
 
-        std::vector<std::shared_ptr<TSpace>> getSpaces() const;
+        std::vector<std::shared_ptr<Space>> getSpaces() const;
 
-        std::shared_ptr<TSpace> getSpace(number index) const;
+        std::shared_ptr<Space> getSpace(number index) const;
 
-        void setSpaces(const std::vector<std::shared_ptr<TSpace>> &);
+        void setSpaces(const std::vector<std::shared_ptr<Space>> &);
 
         std::string str() const;
 
@@ -51,8 +46,10 @@ namespace sdm
             os << sp.str();
             return os;
         }
+
+    protected:
+        std::vector<std::shared_ptr<Space>> spaces_;
     };
 } // namespace sdm
-#include <sdm/core/space/multi_space.tpp>
 ````
 

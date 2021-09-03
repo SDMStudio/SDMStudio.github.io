@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File multi\_space.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**core**](dir_92216a09053680f71034e5e26026ee62.md) **>** [**space**](dir_4382197029a4717686416170aae3e90a.md) **>** [**multi\_space.hpp**](multi__space_8hpp.md)
@@ -14,7 +16,6 @@ _File implementing MultiSpace class._ [More...](#detailed-description)
 * `#include <boost/bimap.hpp>`
 * `#include <sdm/types.hpp>`
 * `#include <sdm/core/space/space.hpp>`
-* `#include <sdm/core/space/multi_space.tpp>`
 
 
 
@@ -34,7 +35,7 @@ _File implementing MultiSpace class._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**MultiSpace**](classsdm_1_1MultiSpace.md) &lt;TSpace&gt;<br>_A multi-space is a set a spaces. Each space can be of any derived class of TSpace class. By default TSpace is set to_ [_**Space**_](classsdm_1_1Space.md) _, which means that any space can be used (can be composed of both discrete and continuous spaces)._[_**MultiSpace**_](classsdm_1_1MultiSpace.md) _herites from_[_**Space**_](classsdm_1_1Space.md) _so you can even build hierarchical spaces like_[_**MultiSpace**_](classsdm_1_1MultiSpace.md) _of_[_**MultiSpace**_](classsdm_1_1MultiSpace.md) _(_[_**MultiSpace**_](classsdm_1_1MultiSpace.md) _&lt;MultiSpace&lt;Space&gt;&gt;&gt;)._ |
+| class | [**MultiSpace**](classsdm_1_1MultiSpace.md) <br>_A multi-space is a set a spaces._  |
 
 
 
@@ -84,4 +85,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/multi_space.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/space/multi_space.hpp`

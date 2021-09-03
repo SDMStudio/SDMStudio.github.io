@@ -1,127 +1,58 @@
 
 # File vector.hpp
 
-[**File List**](files.md) **>** [**linear\_algebra**](dir_f6794c324212297d566732725cbf26ea.md) **>** [**vector.hpp**](vector_8hpp.md)
+[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**struct**](dir_8910f640002ec96a2876ed8b2614abb5.md) **>** [**vector.hpp**](vector_8hpp.md)
 
 [Go to the documentation of this file.](vector_8hpp.md) 
 
 
 ````cpp
-/*=============================================================================
-Copyright (c) 2016 Jilles Steeve Dibangoye
-==============================================================================*/
 #pragma once
-
-#include <boost/numeric/ublas/vector.hpp>
-#include <boost/numeric/ublas/io.hpp>
-
-#include <eigen3/Eigen/Sparse>
-#include <eigen3/Eigen/Dense>
-
-#include <assert.h>
 
 #include <sdm/types.hpp>
 
+#include <iostream>
+#include <boost/serialization/vector.hpp>
 
+namespace sdm
+{
+  // template <typename T>
+  // using Vector = std::vector<T>;
 
-namespace sdm{
-
-  template<typename type, typename value>
-  class vector{
-  protected:
-    size_t _size_;
-
-    type container;
-
-  public:
-    vector();
-
-    vector(size_t);
-
-    vector(const vector&);
-
-    ~vector();
-
-    value sum();
-
-
-    value norm_2() const;
-
-    value norm_1() const;
-
-    value norm_sawtooth(const vector&) const;
-
-
-    value min() const;
-
-
-    value max() const;
-
-
-    size_t size() const;
-
-    void resize(size_t);
-
-    void init(value);
-
-    vector transpose() const;
-
-    const type& getContainer() const;
-
-    void setContainer(const type&);
-
-    value& operator[](size_t);
-
-    value operator[](size_t) const;
-
-    friend const vector& operator/=(vector& arg1, const value& arg2){
-      assert( arg2 != 0 );
-      arg1.container /= arg2;
-      return arg1;
+  template <typename T>
+  std::ostream &operator<<(std::ostream &os, const std::vector<T> &v)
+  {
+    os << "[";
+    for (std::size_t i = 0; i < v.size(); ++i)
+    {
+      os << v[i];
+      if (i != v.size() - 1)
+        os << ", ";
     }
+    os << "]";
+    return os;
+  }
+}
 
-    friend vector operator*(const value& arg1, const vector& arg2){
-        vector vnew;
-        vnew.setContainer( arg1 * arg2.getContainer() );
-        return vnew;
+namespace std
+{
+  template <typename T>
+  struct hash<std::vector<T>>
+  {
+    typedef std::vector<T> argument_type;
+    typedef std::size_t result_type;
+    result_type operator()(argument_type const &in) const
+    {
+      size_t size = in.size();
+      size_t seed = 0;
+      //Combine the hash of the current vector with the hashes of the previous ones
+      for (size_t i = 0; i < size; i++)
+      {
+        sdm::hash_combine(seed, in[i]);
+      }
+      return seed;
     }
-
-    friend std::ostream& operator<<(std::ostream& os, const vector& arg){
-      #ifdef EIGEN
-        return os << arg.getContainer().transpose();
-      #endif
-      #ifdef BOOST
-        return os << arg.getContainer();
-      #endif
-    }
-
-    friend const vector& operator+=(vector& arg1, const vector& arg2){
-      arg1.setContainer( arg1.getContainer() + arg2.getContainer() );
-      return arg1;
-    }
-
-    friend const vector& operator-=(vector& arg1, const vector& arg2){
-      arg1.setContainer( arg1.getContainer() - arg2.getContainer() );
-      return arg1;
-    }
-
-    value operator^(const vector<type, value>&) const;
-
-    bool operator==(const vector<type, value>&) const;
   };
-
-
-
-  #ifdef EIGEN
-      using Vector = class vector<Eigen::VectorXd, double>;
-      using SparseVector = class vector<Eigen::SparseVector<double>, double>;
-  #endif
-
-
-  #ifdef BOOST
-      using Vector = class vector<boost::numeric::ublas::vector<double>, double>;
-  #endif
-
 }
 ````
 

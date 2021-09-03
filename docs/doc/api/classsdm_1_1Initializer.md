@@ -1,9 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::Initializer
 
-**template &lt;typename TState typename TState, typename TAction typename TAction&gt;**
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**Initializer**](classsdm_1_1Initializer.md)
@@ -18,7 +18,7 @@ _Abstract class for initializer._ [More...](#detailed-description)
 
 
 
-Inherited by the following classes: [sdm::BlindInitializer](classsdm_1_1BlindInitializer.md),  [sdm::BoundInitializer](classsdm_1_1BoundInitializer.md),  [sdm::MDPInitializer](classsdm_1_1MDPInitializer.md),  [sdm::POMDPInitializer](classsdm_1_1POMDPInitializer.md),  [sdm::ValueInitializer](classsdm_1_1ValueInitializer.md)
+Inherited by the following classes: [sdm::BoundInitializer](classsdm_1_1BoundInitializer.md),  [sdm::MDPInitializer](classsdm_1_1MDPInitializer.md),  [sdm::POMDPInitializer](classsdm_1_1POMDPInitializer.md),  [sdm::ValueInitializer](classsdm_1_1ValueInitializer.md)
 
 
 
@@ -33,7 +33,7 @@ Inherited by the following classes: [sdm::BlindInitializer](classsdm_1_1BlindIni
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**init**](classsdm_1_1Initializer.md#function-init) ([**ValueFunction**](classsdm_1_1ValueFunction.md)&lt; TState, TAction &gt; \* vf) = 0<br> |
+| virtual void | [**init**](classsdm_1_1Initializer.md#function-init) (std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md) &gt; vf) = 0<br> |
 | virtual  | [**~Initializer**](classsdm_1_1Initializer.md#function-initializer) () <br> |
 
 
@@ -65,7 +65,7 @@ Inherited by the following classes: [sdm::BlindInitializer](classsdm_1_1BlindIni
 
 ```cpp
 virtual void sdm::Initializer::init (
-    ValueFunction < TState, TAction > * vf
+    std::shared_ptr< ValueFunction > vf
 ) = 0
 ```
 
@@ -81,4 +81,4 @@ inline virtual sdm::Initializer::~Initializer ()
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializer.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/value_function/initializer/initializer.hpp`

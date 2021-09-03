@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::Function
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 **template &lt;class TInput, class TOutput&gt;**
 
@@ -39,6 +41,7 @@
 | Type | Name |
 | ---: | :--- |
 | virtual [**output\_type**](classsdm_1_1Function.md#typedef-output-type) | [**operator()**](classsdm_1_1Function.md#function-operator()) (const [**input\_type**](classsdm_1_1Function.md#typedef-input-type) &) = 0<br> |
+| virtual  | [**~Function**](classsdm_1_1Function.md#function-function) () <br> |
 
 
 
@@ -81,5 +84,14 @@ virtual output_type sdm::Function::operator() (
 
 
 
+### function ~Function 
+
+
+```cpp
+inline virtual sdm::Function::~Function () 
+```
+
+
+
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/function.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/function.hpp`

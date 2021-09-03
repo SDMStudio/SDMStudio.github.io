@@ -1,10 +1,12 @@
 
-<NavBar active_item_id="2"/>
-
 # File variations.hpp
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-[**File List**](files.md) **>** [**decision\_rules**](dir_4983fd2ecc8cc6698afce148812a6aba.md) **>** [**variations.hpp**](variations_8hpp.md)
+
+
+[**File List**](files.md) **>** [**core**](dir_92216a09053680f71034e5e26026ee62.md) **>** [**variations.hpp**](variations_8hpp.md)
 
 [Go to the source code of this file.](variations_8hpp_source.md)
 
@@ -12,7 +14,7 @@ _This class provides getter and setter methods for generating Variations for all
 
 * `#include <vector>`
 * `#include <sdm/types.hpp>`
-* `#include <sdm/utils/decision_rules/variations.tpp>`
+* `#include <sdm/core/variations.tpp>`
 
 
 
@@ -32,7 +34,7 @@ _This class provides getter and setter methods for generating Variations for all
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Variations**](classsdm_1_1Variations.md) &lt;TFunction&gt;<br>_Iterator of_ [_**Variations**_](classsdm_1_1Variations.md) _._ |
+| class | [**Variations**](classsdm_1_1Variations.md) &lt;typename TFunction&gt;<br>[_**Iterator**_](classsdm_1_1Iterator.md) _of_[_**Variations**_](classsdm_1_1Variations.md) _._ |
 
 
 
@@ -89,4 +91,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/variations.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/variations.hpp`

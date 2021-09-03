@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File gym\_interface.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**world**](dir_414fa79a2aeb4aba632c04a0d3a53fff.md) **>** [**gym\_interface.hpp**](gym__interface_8hpp.md)
@@ -11,12 +13,9 @@
 [More...](#detailed-description)
 
 * `#include <vector>`
-* `#include <tuple>`
 * `#include <sdm/types.hpp>`
-* `#include <sdm/public/world.hpp>`
-* `#include <sdm/core/space/space.hpp>`
-* `#include <sdm/core/space/multi_discrete_space.hpp>`
-* `#include <sdm/world/gym_interface.tpp>`
+* `#include <sdm/utils/struct/tuple.hpp>`
+* `#include <sdm/core/space/discrete_space.hpp>`
 
 
 
@@ -36,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GymInterface**](classsdm_1_1GymInterface.md) &lt;TObsSpace, TActSpace, is\_multi\_agent&gt;<br>_The interface that must be implemented by reinforcement learning environment. The interface is inspired by_ [OpenAI Gym environments](https://gym.openai.com/) _._ |
+| class | [**GymInterface**](classsdm_1_1GymInterface.md) <br> |
 
 
 
@@ -86,4 +85,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/gym_interface.hpp`
+The documentation for this class was generated from the following file `src/sdm/world/gym_interface.hpp`

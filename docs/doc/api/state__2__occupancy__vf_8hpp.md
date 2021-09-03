@@ -1,10 +1,12 @@
 
-<NavBar active_item_id="2"/>
-
 # File state\_2\_occupancy\_vf.hpp
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**value\_function**](dir_9190e49f25bb1396e1fb4a6f0beec9b4.md) **>** [**state\_2\_occupancy\_vf.hpp**](state__2__occupancy__vf_8hpp.md)
+
+
+[**File List**](files.md) **>** [**initializer**](dir_8f297180fb36cffec7cf6cc452bb4d2e.md) **>** [**state\_2\_occupancy\_vf.hpp**](state__2__occupancy__vf_8hpp.md)
 
 [Go to the source code of this file.](state__2__occupancy__vf_8hpp_source.md)
 
@@ -12,7 +14,8 @@
 
 * `#include <sdm/types.hpp>`
 * `#include <sdm/core/function.hpp>`
-* `#include <sdm/utils/value_function/state_2_occupancy_vf.tpp>`
+* `#include <sdm/utils/struct/pair.hpp>`
+* `#include <sdm/utils/value_function/value_function.hpp>`
 
 
 
@@ -32,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**State2OccupancyValueFunction**](classsdm_1_1State2OccupancyValueFunction.md) &lt;typename TState, typename TOccupancyState&gt;<br> |
+| class | [**State2OccupancyValueFunction**](classsdm_1_1State2OccupancyValueFunction.md) <br> |
 
 
 
@@ -48,4 +51,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/state_2_occupancy_vf.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/value_function/initializer/state_2_occupancy_vf.hpp`

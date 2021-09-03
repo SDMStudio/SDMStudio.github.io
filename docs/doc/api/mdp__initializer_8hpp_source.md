@@ -10,22 +10,22 @@
 
 #pragma once
 
-#include <sdm/utils/value_function/initializer.hpp>
+#include <sdm/algorithms/hsvi.hpp>
+#include <sdm/utils/value_function/initializer/initializer.hpp>
 
 namespace sdm
 {
-    template <typename TState, typename TAction>
-    class MDPInitializer : public Initializer<TState, TAction>
+    class MDPInitializer : public Initializer
     {
     public:
         std::string algo_name_;
         double error_, trials_;
+        std::shared_ptr<SolvableByHSVI> world_;
 
     public:
-        MDPInitializer(std::string algo_name, double error = 0.01, int trials = 10000);
-        void init(ValueFunction<TState, TAction> *vf);
+        MDPInitializer(std::shared_ptr<SolvableByHSVI> world,std::string algo_name, double error = 0.01, int trials = 10000);
+        void init(std::shared_ptr<ValueFunction> vf);
     };
 } // namespace sdm
-#include <sdm/utils/value_function/initializer/mdp_initializer.tpp>
 ````
 

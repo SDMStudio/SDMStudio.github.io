@@ -9,29 +9,55 @@
 ````cpp
 #pragma once
 
-#include <sdm/types.hpp>
+#include <sdm/core/state/base_state.hpp>
+#include <sdm/core/action/action.hpp>
+
 #include <sdm/utils/struct/vector.hpp>
 #include <sdm/utils/struct/pair.hpp>
 
+#include <sdm/core/state/interface/serial_interface.hpp>
+
 namespace sdm
 {
-  class SerializedState : public Pair<number, std::vector<number>>
+  class SerializedState : public BaseState<Pair<std::shared_ptr<State>, Joint<std::shared_ptr<Action>>>>, public BaseSerialInterface 
   {
-  public:
-    using state_type = number;
-    using action_type = number;
-
+  public :
     SerializedState();
-    SerializedState(number state);
-    SerializedState(number state, std::vector<number> actions);
+    SerializedState(std::shared_ptr<State> state, Joint<std::shared_ptr<Action>> actions);
     SerializedState(const SerializedState &v);
+    virtual ~SerializedState();
 
-    number getState() const;
-    std::vector<number> getAction() const;
+    std::shared_ptr<State> getHiddenState() const;
+
+    Joint<std::shared_ptr<Action>> getAction() const;
+
     number getCurrentAgentId() const;
+
+    void setAgentId(number);
+
+    std::string str() const;
+
+  protected : 
+
+    number agentID_;
   };
 
 } // namespace sdm
+
+
+// namespace boost
+// {
+//   namespace serialization
+//   {
+//     template <class Archive>
+//     void serialize(Archive &archive, sdm::SerializedState &serialized_state, const unsigned int)
+//     {
+//       // archive &boost::serialization::base_object<sdm::Pair<sdm::number, std::vector<sdm::number>>>(serialized_state);
+//     }
+
+//   } // namespace serialization
+// } // namespace boost
+
 
 namespace std
 {
@@ -44,8 +70,8 @@ namespace std
     {
       size_t seed = 0;
       //Combine the hash of the current vector with the hashes of the previous ones
-      sdm::hash_combine(seed, in.first);
-      sdm::hash_combine(seed, in.second);
+      sdm::hash_combine(seed, in.getHiddenState());
+      sdm::hash_combine(seed, in.getAction());
       return seed;
     }
   };

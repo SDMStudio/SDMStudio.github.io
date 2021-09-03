@@ -1,14 +1,16 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::exception::NotImplementedException
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**exception**](namespacesdm_1_1exception.md) **>** [**NotImplementedException**](classsdm_1_1exception_1_1NotImplementedException.md)
 
 
 
-
+_Not implemented method exception._ 
 
 * `#include <exception.hpp>`
 
@@ -43,8 +45,8 @@ See [sdm::exception::Exception](classsdm_1_1exception_1_1Exception.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Exception**](classsdm_1_1exception_1_1Exception.md#function-exception) (const std::string & msg\_) <br> |
-| virtual const char \* | [**what**](classsdm_1_1exception_1_1Exception.md#function-what) () const<br> |
+|   | [**Exception**](classsdm_1_1exception_1_1Exception.md#function-exception) (const std::string & msg\_) <br>_Constructor (C++ STL string)._  |
+| virtual const char \* | [**what**](classsdm_1_1exception_1_1Exception.md#function-what) () const<br>_Returns a pointer to the (constant) error description._  |
 
 
 
@@ -74,10 +76,10 @@ See [sdm::exception::Exception](classsdm_1_1exception_1_1Exception.md)
 
 
 ```cpp
-inline explicit sdm::exception::NotImplementedException::NotImplementedException () 
+explicit sdm::exception::NotImplementedException::NotImplementedException () 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/exception.hpp`
+The documentation for this class was generated from the following file `src/sdm/exception.hpp`

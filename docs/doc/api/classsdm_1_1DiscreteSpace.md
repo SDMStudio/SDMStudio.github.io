@@ -1,16 +1,16 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::DiscreteSpace
 
-**template &lt;typename TItem&gt;**
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)
 
 
 
-_The discrete space class give a way to keep all possible values of a finite space. In order to instantiate an object of this class, you must provide the constructor method, a the list of all available values._ [More...](#detailed-description)
+_The discrete space class give a way to keep all possible values of a finite space._ [More...](#detailed-description)
 
 * `#include <discrete_space.hpp>`
 
@@ -19,6 +19,7 @@ _The discrete space class give a way to keep all possible values of a finite spa
 Inherits the following classes: [sdm::Space](classsdm_1_1Space.md)
 
 
+Inherited by the following classes: [sdm::FunctionSpace](classsdm_1_1FunctionSpace.md),  [sdm::MultiDiscreteSpace](classsdm_1_1MultiDiscreteSpace.md)
 
 
 
@@ -29,8 +30,16 @@ Inherits the following classes: [sdm::Space](classsdm_1_1Space.md)
 
 | Type | Name |
 | ---: | :--- |
-| typedef TItem | [**value\_type**](classsdm_1_1DiscreteSpace.md#typedef-value-type)  <br> |
+| typedef [**Space::iterator\_type**](classsdm_1_1Space.md#typedef-iterator-type) | [**iterator\_type**](classsdm_1_1DiscreteSpace.md#typedef-iterator-type)  <br> |
+| typedef std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; | [**value\_type**](classsdm_1_1DiscreteSpace.md#typedef-value-type)  <br> |
 
+## Public Types inherited from sdm::Space
+
+See [sdm::Space](classsdm_1_1Space.md)
+
+| Type | Name |
+| ---: | :--- |
+| typedef std::shared\_ptr&lt; [**ItemIterator**](namespacesdm.md#typedef-itemiterator) &gt; | [**iterator\_type**](classsdm_1_1Space.md#typedef-iterator-type)  <br> |
 
 
 
@@ -43,20 +52,27 @@ Inherits the following classes: [sdm::Space](classsdm_1_1Space.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-1-5) () <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object (default)_ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-2-5) (const std::vector&lt; TItem &gt; & items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object._ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-3-5) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md)&lt; TItem &gt; & copy) <br>_Copy constructor._  |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-4-5) (std::initializer\_list&lt; TItem &gt; vals) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object from a list initializer._ |
-|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-5-5) (std::enable\_if\_t&lt; TBool, int &gt; num\_items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _Base object._ |
-|  std::vector&lt; TItem &gt; | [**getAll**](classsdm_1_1DiscreteSpace.md#function-getall) () <br>_Get all items in the space._  |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-2-5) (const std::vector&lt; std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt;&gt; & items) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-3-5) (const std::vector&lt; T &gt; & items) <br> |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-4-5) (std::initializer\_list&lt; std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt;&gt; vals) <br>_Construct a new Discrete_ [_**Space**_](classsdm_1_1Space.md) _object from a list initializer._ |
+|   | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md#function-discretespace-5-5) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) & copy) <br>_Copy constructor._  |
+| virtual [**iterator\_type**](classsdm_1_1DiscreteSpace.md#typedef-iterator-type) | [**begin**](classsdm_1_1DiscreteSpace.md#function-begin) () <br> |
+|  bool | [**contains**](classsdm_1_1DiscreteSpace.md#function-contains) (const std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; &) const<br>_Verify is the discrete space contains the std::shared\_ptr&lt;Item&gt;;._  |
+| virtual [**iterator\_type**](classsdm_1_1DiscreteSpace.md#typedef-iterator-type) | [**end**](classsdm_1_1DiscreteSpace.md#function-end) () <br> |
+|  int | [**find**](classsdm_1_1DiscreteSpace.md#function-find) (const std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; & item) const<br> |
+|  std::vector&lt; std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; &gt; | [**getAll**](classsdm_1_1DiscreteSpace.md#function-getall) () <br>_Get all possible items in the space._  |
 | virtual std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**getDim**](classsdm_1_1DiscreteSpace.md#function-getdim) () const<br>_Get the dimension._  |
-|  TItem | [**getItem**](classsdm_1_1DiscreteSpace.md#function-getitem) ([**number**](namespacesdm.md#typedef-number) index) const<br>_Get the item at a specific index._  |
-|  [**number**](namespacesdm.md#typedef-number) | [**getItemIndex**](classsdm_1_1DiscreteSpace.md#function-getitemindex) (const TItem & item) const<br>_Get the index of an item._  |
-|  [**number**](namespacesdm.md#typedef-number) | [**getNumItems**](classsdm_1_1DiscreteSpace.md#function-getnumitems) () const<br>_Get the Nummber of Items in the space._  |
+|  std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; | [**getItem**](classsdm_1_1DiscreteSpace.md#function-getitem) ([**number**](namespacesdm.md#typedef-number) index) const<br>_Get the item at a specific index._  |
+|  std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; | [**getItemAddress**](classsdm_1_1DiscreteSpace.md#function-getitemaddress) (const T & item\_value) <br>_Get the item at a specific index._  |
+|  [**number**](namespacesdm.md#typedef-number) | [**getItemIndex**](classsdm_1_1DiscreteSpace.md#function-getitemindex) (const std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; & item) const<br>_Get the index of an item._  |
+|  [**number**](namespacesdm.md#typedef-number) | [**getNumItems**](classsdm_1_1DiscreteSpace.md#function-getnumitems) () const<br>_Get the number of items in the space._  |
 | virtual bool | [**isDiscrete**](classsdm_1_1DiscreteSpace.md#function-isdiscrete) () const<br>_Return true because this is a discrete space._  |
+|  bool | [**isStoringItems**](classsdm_1_1DiscreteSpace.md#function-isstoringitems) () const<br> |
 |  bool | [**operator!=**](classsdm_1_1DiscreteSpace.md#function-operator) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) & sp) const<br> |
-|  [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) & | [**operator=**](classsdm_1_1DiscreteSpace.md#function-operator-2) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) & sp) <br> |
-|  bool | [**operator==**](classsdm_1_1DiscreteSpace.md#function-operator-3) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) & sp) const<br> |
-|  TItem | [**sample**](classsdm_1_1DiscreteSpace.md#function-sample) () const<br>_Sample a random item from the space._  |
+|  bool | [**operator==**](classsdm_1_1DiscreteSpace.md#function-operator-2) (const [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) & sp) const<br> |
+| virtual std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; | [**sample**](classsdm_1_1DiscreteSpace.md#function-sample) () const<br>_Sample a random item from the space._  |
+|  std::string | [**short\_str**](classsdm_1_1DiscreteSpace.md#function-short-str) () const<br> |
+|  void | [**storeItems**](classsdm_1_1DiscreteSpace.md#function-storeitems) (bool store\_items) <br> |
 | virtual std::string | [**str**](classsdm_1_1DiscreteSpace.md#function-str) () const<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
 
 ## Public Functions inherited from sdm::Space
@@ -65,12 +81,17 @@ See [sdm::Space](classsdm_1_1Space.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual [**iterator\_type**](classsdm_1_1Space.md#typedef-iterator-type) | [**begin**](classsdm_1_1Space.md#function-begin) () = 0<br> |
+| virtual [**iterator\_type**](classsdm_1_1Space.md#typedef-iterator-type) | [**end**](classsdm_1_1Space.md#function-end) () = 0<br> |
 | virtual std::vector&lt; [**number**](namespacesdm.md#typedef-number) &gt; | [**getDim**](classsdm_1_1Space.md#function-getdim) () const = 0<br>_Get the dimension of the space._  |
 |  bool | [**isContinuous**](classsdm_1_1Space.md#function-iscontinuous) () const<br>_Check if the space is continous._  |
 | virtual bool | [**isDiscrete**](classsdm_1_1Space.md#function-isdiscrete) () const = 0<br>_Check if the space is discrete._  |
 |  bool | [**operator!=**](classsdm_1_1Space.md#function-operator) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
 |  bool | [**operator==**](classsdm_1_1Space.md#function-operator-2) (const [**Space**](classsdm_1_1Space.md) & sp) const<br> |
+| virtual std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; | [**sample**](classsdm_1_1Space.md#function-sample) () const<br>_Sample a random item from the space._  |
 | virtual std::string | [**str**](classsdm_1_1Space.md#function-str) () const = 0<br>[_**Space**_](classsdm_1_1Space.md) _as a string._ |
+|  std::shared\_ptr&lt; [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) &gt; | [**toDiscreteSpace**](classsdm_1_1Space.md#function-todiscretespace) () <br> |
+|  std::shared\_ptr&lt; [**MultiDiscreteSpace**](classsdm_1_1MultiDiscreteSpace.md) &gt; | [**toMultiDiscreteSpace**](classsdm_1_1Space.md#function-tomultidiscretespace) () <br> |
 | virtual  | [**~Space**](classsdm_1_1Space.md#function-space) () <br> |
 
 
@@ -79,7 +100,7 @@ See [sdm::Space](classsdm_1_1Space.md)
 
 | Type | Name |
 | ---: | :--- |
-| typedef boost::bimaps::bimap&lt; [**number**](namespacesdm.md#typedef-number), TItem &gt; | [**items\_bimap**](classsdm_1_1DiscreteSpace.md#typedef-items-bimap)  <br> |
+| typedef boost::bimaps::bimap&lt; [**number**](namespacesdm.md#typedef-number), std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; &gt; | [**items\_bimap**](classsdm_1_1DiscreteSpace.md#typedef-items-bimap)  <br> |
 | typedef items\_bimap::value\_type | [**items\_bimap\_value**](classsdm_1_1DiscreteSpace.md#typedef-items-bimap-value)  <br> |
 
 
@@ -90,11 +111,19 @@ See [sdm::Space](classsdm_1_1Space.md)
 | Type | Name |
 | ---: | :--- |
 |  [**items\_bimap**](classsdm_1_1DiscreteSpace.md#typedef-items-bimap) | [**all\_items\_**](classsdm_1_1DiscreteSpace.md#variable-all-items-)  <br>_the list of possible items in the space with their index_  |
+|  std::vector&lt; std::shared\_ptr&lt; [**Item**](classsdm_1_1Item.md) &gt; &gt; | [**list\_items\_**](classsdm_1_1DiscreteSpace.md#variable-list-items-)  <br>_the list of possible items without their index_  |
 |  [**number**](namespacesdm.md#typedef-number) | [**num\_items\_**](classsdm_1_1DiscreteSpace.md#variable-num-items-)  <br>_number of possible items in the space (ex: [5, 12]_  _&gt; 8 items)_ |
+|  bool | [**store\_items\_**](classsdm_1_1DiscreteSpace.md#variable-store-items-)   = = true<br> |
 
 
 
 
+## Protected Functions
+
+| Type | Name |
+| ---: | :--- |
+|  void | [**generateItems**](classsdm_1_1DiscreteSpace.md#function-generateitems) () <br>_Generates all joint items and maintains a bimap of indexes and corresponding pointers of joint items._  |
+|  bool | [**isGenerated**](classsdm_1_1DiscreteSpace.md#function-isgenerated) () <br> |
 
 
 
@@ -102,12 +131,14 @@ See [sdm::Space](classsdm_1_1Space.md)
 # Detailed Description
 
 
+In order to instantiate an object of this class, you must provide the constructor method a the list of all available values.
+
 
 
 **Template parameters:**
 
 
-* `TItem` The type of each element in the space. 
+* `std::shared_ptr<Item>` The type of each element in the space. 
 
 
 
@@ -115,11 +146,20 @@ See [sdm::Space](classsdm_1_1Space.md)
 ## Public Types Documentation
 
 
+### typedef iterator\_type 
+
+
+```cpp
+using sdm::DiscreteSpace::iterator_type =  Space::iterator_type;
+```
+
+
+
 ### typedef value\_type 
 
 
 ```cpp
-using sdm::DiscreteSpace< TItem >::value_type =  TItem;
+using sdm::DiscreteSpace::value_type =  std::shared_ptr<Item>;
 ```
 
 
@@ -140,7 +180,7 @@ sdm::DiscreteSpace::DiscreteSpace ()
 
 ```cpp
 sdm::DiscreteSpace::DiscreteSpace (
-    const std::vector< TItem > & items
+    const std::vector< std::shared_ptr< Item >> & items
 ) 
 ```
 
@@ -160,8 +200,9 @@ sdm::DiscreteSpace::DiscreteSpace (
 
 
 ```cpp
-sdm::DiscreteSpace::DiscreteSpace (
-    const DiscreteSpace < TItem > & copy
+template<typename T typename T>
+inline sdm::DiscreteSpace::DiscreteSpace (
+    const std::vector< T > & items
 ) 
 ```
 
@@ -172,7 +213,7 @@ sdm::DiscreteSpace::DiscreteSpace (
 
 ```cpp
 sdm::DiscreteSpace::DiscreteSpace (
-    std::initializer_list< TItem > vals
+    std::initializer_list< std::shared_ptr< Item >> vals
 ) 
 ```
 
@@ -182,10 +223,70 @@ sdm::DiscreteSpace::DiscreteSpace (
 
 
 ```cpp
-template<bool TBool>
 sdm::DiscreteSpace::DiscreteSpace (
-    std::enable_if_t< TBool, int > num_items
+    const DiscreteSpace & copy
 ) 
+```
+
+
+
+### function begin 
+
+
+```cpp
+virtual iterator_type sdm::DiscreteSpace::begin () 
+```
+
+
+Implements [*sdm::Space::begin*](classsdm_1_1Space.md#function-begin)
+
+
+### function contains 
+
+
+```cpp
+bool sdm::DiscreteSpace::contains (
+    const std::shared_ptr< Item > &
+) const
+```
+
+
+
+
+**Returns:**
+
+true 
+
+
+
+
+**Returns:**
+
+false 
+
+
+
+
+        
+
+### function end 
+
+
+```cpp
+virtual iterator_type sdm::DiscreteSpace::end () 
+```
+
+
+Implements [*sdm::Space::end*](classsdm_1_1Space.md#function-end)
+
+
+### function find 
+
+
+```cpp
+int sdm::DiscreteSpace::find (
+    const std::shared_ptr< Item > & item
+) const
 ```
 
 
@@ -194,7 +295,7 @@ sdm::DiscreteSpace::DiscreteSpace (
 
 
 ```cpp
-std::vector< TItem > sdm::DiscreteSpace::getAll () 
+std::vector< std::shared_ptr< Item > > sdm::DiscreteSpace::getAll () 
 ```
 
 
@@ -214,9 +315,21 @@ Implements [*sdm::Space::getDim*](classsdm_1_1Space.md#function-getdim)
 
 
 ```cpp
-TItem sdm::DiscreteSpace::getItem (
+std::shared_ptr< Item > sdm::DiscreteSpace::getItem (
     number index
 ) const
+```
+
+
+
+### function getItemAddress 
+
+
+```cpp
+template<typename T typename T>
+inline std::shared_ptr< Item > sdm::DiscreteSpace::getItemAddress (
+    const T & item_value
+) 
 ```
 
 
@@ -226,7 +339,7 @@ TItem sdm::DiscreteSpace::getItem (
 
 ```cpp
 number sdm::DiscreteSpace::getItemIndex (
-    const TItem & item
+    const std::shared_ptr< Item > & item
 ) const
 ```
 
@@ -252,6 +365,15 @@ virtual bool sdm::DiscreteSpace::isDiscrete () const
 Implements [*sdm::Space::isDiscrete*](classsdm_1_1Space.md#function-isdiscrete)
 
 
+### function isStoringItems 
+
+
+```cpp
+bool sdm::DiscreteSpace::isStoringItems () const
+```
+
+
+
 ### function operator!= 
 
 
@@ -259,17 +381,6 @@ Implements [*sdm::Space::isDiscrete*](classsdm_1_1Space.md#function-isdiscrete)
 bool sdm::DiscreteSpace::operator!= (
     const DiscreteSpace & sp
 ) const
-```
-
-
-
-### function operator= 
-
-
-```cpp
-DiscreteSpace & sdm::DiscreteSpace::operator= (
-    const DiscreteSpace & sp
-) 
 ```
 
 
@@ -289,7 +400,29 @@ bool sdm::DiscreteSpace::operator== (
 
 
 ```cpp
-TItem sdm::DiscreteSpace::sample () const
+virtual std::shared_ptr< Item > sdm::DiscreteSpace::sample () const
+```
+
+
+Implements [*sdm::Space::sample*](classsdm_1_1Space.md#function-sample)
+
+
+### function short\_str 
+
+
+```cpp
+std::string sdm::DiscreteSpace::short_str () const
+```
+
+
+
+### function storeItems 
+
+
+```cpp
+void sdm::DiscreteSpace::storeItems (
+    bool store_items
+) 
 ```
 
 
@@ -311,7 +444,7 @@ Implements [*sdm::Space::str*](classsdm_1_1Space.md#function-str)
 
 
 ```cpp
-typedef boost::bimaps::bimap<number, TItem> sdm::DiscreteSpace< TItem >::items_bimap;
+using sdm::DiscreteSpace::items_bimap =  boost::bimaps::bimap<number, std::shared_ptr<Item> >;
 ```
 
 
@@ -320,7 +453,7 @@ typedef boost::bimaps::bimap<number, TItem> sdm::DiscreteSpace< TItem >::items_b
 
 
 ```cpp
-typedef items_bimap::value_type sdm::DiscreteSpace< TItem >::items_bimap_value;
+using sdm::DiscreteSpace::items_bimap_value =  items_bimap::value_type;
 ```
 
 
@@ -331,7 +464,16 @@ typedef items_bimap::value_type sdm::DiscreteSpace< TItem >::items_bimap_value;
 
 
 ```cpp
-items_bimap sdm::DiscreteSpace< TItem >::all_items_;
+items_bimap sdm::DiscreteSpace::all_items_;
+```
+
+
+
+### variable list\_items\_ 
+
+
+```cpp
+std::vector<std::shared_ptr<Item> > sdm::DiscreteSpace::list_items_;
 ```
 
 
@@ -340,7 +482,36 @@ items_bimap sdm::DiscreteSpace< TItem >::all_items_;
 
 
 ```cpp
-number sdm::DiscreteSpace< TItem >::num_items_;
+number sdm::DiscreteSpace::num_items_;
+```
+
+
+
+### variable store\_items\_ 
+
+
+```cpp
+bool sdm::DiscreteSpace::store_items_;
+```
+
+
+## Protected Functions Documentation
+
+
+### function generateItems 
+
+
+```cpp
+void sdm::DiscreteSpace::generateItems () 
+```
+
+
+
+### function isGenerated 
+
+
+```cpp
+bool sdm::DiscreteSpace::isGenerated () 
 ```
 
 ## Friends Documentation
@@ -360,4 +531,4 @@ inline friend std::ostream & sdm::DiscreteSpace::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/space/discrete_space.hpp`

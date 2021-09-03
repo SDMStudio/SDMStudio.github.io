@@ -1,35 +1,73 @@
 
 # File config.hpp
 
-[**File List**](files.md) **>** [**parser**](dir_6daa6254ddefc40233dd42d3ed88a5a9.md) **>** [**config.hpp**](config_8hpp.md)
+[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**config.hpp**](config_8hpp.md)
 
 [Go to the documentation of this file.](config_8hpp.md) 
 
 
 ````cpp
-/*=============================================================================
-  Copyright (c) 2016 Jilles Steeve Dibangoye
-  ==============================================================================*/
 #pragma once
 
-#include <sdm/parser/error_handler.hpp>
+namespace sdm
+{
+    namespace config
+    {
 
-#include <boost/spirit/home/x3.hpp>
 
-namespace sdm{
-  namespace parser{
-    // our iterator type
-    typedef std::string::const_iterator iterator_type;
+        // ----------------------------------------------------
+        // -------------- PRECISION PARAMETERS ----------------
+        // ----------------------------------------------------
 
-    // the phrase parse context
-    typedef x3::phrase_parse_context<x3::ascii::space_type>::type phrase_context_type;
+        const double PRECISION_SDMS_VECTOR = 0.0001;
 
-    // our error handler
-   typedef error_handler<iterator_type> error_handler_type;
+        const double PRECISION_MAPPED_VECTOR = 0.0001;
+        
+        const double PRECISION_VECTO_INTERFACE = PRECISION_MAPPED_VECTOR;
 
-    // combined error handler and phrase parse context
-    typedef x3::with_context<error_handler_tag, std::reference_wrapper<error_handler_type> const, phrase_context_type>::type context_type;
-  }
+        const double PRECISION_BELIEF = 0.001;
+        
+        const double PRECISION_OCCUPANCY_STATE = 0.001;
+        
+        const double PRECISION_COMPRESSION = 0.1;
+
+
+
+        // --------------------------------------------------
+        // ----------------- PATH PARAMETERS ----------------
+        // --------------------------------------------------
+
+        const std::string PROBLEM_PATH = "/usr/local/share/sdms/world/";
+
+
+
+
+        // --------------------------------------------------
+        // ---------------- THEME PARAMETERS ----------------
+        // --------------------------------------------------
+
+        const std::string SDMS_THEME_1 = "\033[1;36m";
+
+        const std::string NO_COLOR = "\033[0m";
+
+        const std::string LOG_SDMS = SDMS_THEME_1 + "SDMS#>" + NO_COLOR + " ";
+
+
+
+
+        // ----------------------------------------------------
+        // ---------------- DISPLAY PARAMETERS ----------------
+        // ----------------------------------------------------
+
+        const unsigned short BELIEF_DECIMAL_PRINT = 5;
+
+        const unsigned short OCCUPANCY_DECIMAL_PRINT = 5;
+        
+        const unsigned short VALUE_DECIMAL_PRINT = 4;
+
+
+    } // namespace config
+
 }
 ````
 

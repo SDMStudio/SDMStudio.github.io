@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File discrete\_space.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**core**](dir_92216a09053680f71034e5e26026ee62.md) **>** [**space**](dir_4382197029a4717686416170aae3e90a.md) **>** [**discrete\_space.hpp**](discrete__space_8hpp.md)
@@ -15,7 +17,7 @@ _File for DiscreteSpace class._ [More...](#detailed-description)
 * `#include <sdm/types.hpp>`
 * `#include <sdm/core/joint.hpp>`
 * `#include <sdm/core/space/space.hpp>`
-* `#include <sdm/core/space/discrete_space.tpp>`
+* `#include <sdm/utils/struct/iterator/super_iterator.hpp>`
 
 
 
@@ -35,7 +37,7 @@ _File for DiscreteSpace class._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) &lt;TItem&gt;<br>_The discrete space class give a way to keep all possible values of a finite space. In order to instantiate an object of this class, you must provide the constructor method, a the list of all available values._  |
+| class | [**DiscreteSpace**](classsdm_1_1DiscreteSpace.md) <br>_The discrete space class give a way to keep all possible values of a finite space._  |
 
 
 
@@ -85,4 +87,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/core/space/discrete_space.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/space/discrete_space.hpp`

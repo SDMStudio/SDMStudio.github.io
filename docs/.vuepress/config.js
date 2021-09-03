@@ -50,17 +50,24 @@ module.exports = {
                                 children: [
                                     '/tutorials/install',  /* /foo/one.html */
                                     '/tutorials/quickstart',  /* /foo/one.html */
-                                    '/tutorials/theory',  /* /foo/one.html */
+                                    {
+                                        title: 'Theory',   // required
+                                        path: '/tutorials/theory',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/tutorials/theory/2p-zsSG',
+                                            '/tutorials/theory/2p-zsPOSG',
+                                        ]
+                                    },
                                     {
                                         title: 'Algorithms',   // required
                                         path: '/tutorials/algorithms/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: false, // optional, defaults to true
+                                        collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
                                             '/tutorials/algorithms/hsvi',  /* /foo/one.html */
                                             '/tutorials/algorithms/qlearning',  /* /foo/one.html */
-                                            '/tutorials/algorithms/(2p)-zsSG',
-                                            '/tutorials/algorithms/(2p)-zsPOSG',
                                         ]
                                     },
                                     '/tutorials/contribute',  /* /foo/one.html */
@@ -90,12 +97,11 @@ module.exports = {
                                     {
                                         title: 'Experiments',   // required
                                         path: '/doc/experiments/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: false, // optional, defaults to true
+                                        collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
                                             '/doc/experiments/hsvi',
                                             '/doc/experiments/serial_hsvi',
-                                            '/doc/experiments/qlearning',
                                             '/doc/experiments/hierarchical_qlearning',
                                         ]
                                     },
@@ -131,11 +137,20 @@ module.exports = {
                                 children: [
                                     '/fr/tutorials/install',  /* /foo/one.html */
                                     '/fr/tutorials/quickstart',  /* /foo/one.html */
-                                    '/fr/tutorials/theory',  /* /foo/one.html */
                                     {
-                                        title: 'Algorithms',   // required
+                                        title: 'Fondements théoriques',   // required
+                                        path: '/fr/tutorials/theory/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/fr/tutorials/theory/2p-zsSG',  /* /foo/one.html */
+                                            '/fr/tutorials/theory/2p-zsPOSG',  /* /foo/one.html */
+                                        ]
+                                    },
+                                    {
+                                        title: 'Fondements algorithmiques',   // required
                                         path: '/fr/tutorials/algorithms/',      // optional, link of the title, which should be an absolute path and must exist
-                                        collapsable: false, // optional, defaults to true
+                                        collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
                                             '/fr/tutorials/algorithms/hsvi',  /* /foo/one.html */

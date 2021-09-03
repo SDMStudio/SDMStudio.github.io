@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Struct sdm::ast::transition\_entry\_3\_t
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**ast**](namespacesdm_1_1ast.md) **>** [**transition\_entry\_3\_t**](structsdm_1_1ast_1_1transition__entry__3__t.md)
@@ -62,4 +64,4 @@ matrix_t sdm::ast::transition_entry_3_t::transitions;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/ast.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/ast.hpp`

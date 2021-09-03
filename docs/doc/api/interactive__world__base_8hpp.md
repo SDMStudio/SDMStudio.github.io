@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File interactive\_world\_base.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**base**](dir_f82058e37a1f60b84f8487517c6ff983.md) **>** [**interactive\_world\_base.hpp**](interactive__world__base_8hpp.md)
@@ -34,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InteractiveWorldBase**](classsdm_1_1InteractiveWorldBase.md) &lt;typename TState, typename TAction&gt;<br> |
+| class | [**InteractiveWorld**](classsdm_1_1InteractiveWorld.md) <br> |
 
 
 
@@ -50,4 +52,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/base/interactive_world_base.hpp`
+The documentation for this class was generated from the following file `src/sdm/world/base/interactive_world_base.hpp`

@@ -67,20 +67,39 @@ unzip libtorch.zip -d /opt
 
 **Etape 5 : Compilation et installation finale**
 
+La dernière étape consiste à compiler le projet puis l'installer. Pour cela, nous créons le dossier build qui servira de dossier de compilation. Dans ce dossier, nous construisons les fichiers de compilation grâce à l'outil [CMake](https://cmake.org/) puis nous compilons et installons SDMS sur le système.
+
 ```
 mkdir -p build && cd build
 cmake ..
-make -j install
+make -j8 install
 ```
 
-::: warning
-Le chemin par défault pour `ILOG CPLEX` est `/opt/ibm/ILOG/CPLEX_Studio201/`. Remplacez `cmake ..` par `cmake .. -DCPLEX_ROOT_DIR=/path/to/your/ILOG/CPLEX/` pour préciser votre répertoire d'installation d'ILOG CPLEX.
-:::
+<!-- ::: warning -->
+Certaines options de compilation peuvent ne pas convenir. Pour les changer, il faut fournir les arguments de compilation à la commande `cmake`.
+Par exemple, pour changer le chemin d'accès à CPLEX, il faut utilisez `cmake .. -DCPLEX_ROOT_DIR=/path/to/ILOG/CPLEX_VERSION/`.
+<!-- ::: -->
 
+```
+cmake .. [-DOPT1=VALUE] [-DOPT2=VALUE] [-DOPT3=VALUE] 
+```
+Options :
+- ***CMAKE_BUILD_TYPE*** : Type de compilation `Debug`, `RelWithDebInfo` ou `Release` (default : `RelWithDebInfo`) 
+- ***CMAKE_PREFIX_PATH*** : Chemin d'accès à libtorch (default : `/opt/libtorch`)
+- ***CPLEX_ROOT_DIR*** : Chemin d'accès à CPLEX (default : `/opt/ibm/ILOG/CPLEX_Studio201/`)
+- ***SDMS_BUILD_TESTS*** : Compile tests (default : `OFF`)
+- ***SDMS_BUILD_DOCS*** : Compile the documentation (default : `OFF`)
+
+Le type de compilation permet de contrôler les options de compilations. Cela peut impacter les performances du logiciel. La compilation en mode `Debug` ajoute l'option de compilation `-g` pour permettre l'utilisation d'outils de débogage tel que [valgrind](https://valgrind.org/).
+
+| Build Type     | Debug | RelWithDebInfo | Release |
+| -------------- | :---: | :------------: | :-----: |
+| Compiling time | 2m30s |     3m00s      |  3m00s  |
+| Running time   | 2m40s |     0m17s      |  0m17s  |
 
 ## Images Docker
 
-Grâce à la technologie Docker, il est possible d'installer SDMS sans se soucier des privilèges utilisateurs ni de l'OS en question. Pour tous, l'utilisation d'un conteneur Docker plutôt que l'installation directement sur sa machine de SDMS permet également d'éviter d'avoir des dépendances conflictuelles avec d'autres logiciels.
+Grâce à la technologie Docker, il est possible d'installer SDMS sans se soucier des privilèges utilisateurs ni de l'OS en question. L'utilisation d'un conteneur Docker plutôt que l'installation directement sur sa machine de SDMS permet également d'éviter d'avoir des dépendances conflictuelles avec d'autres logiciels.
 
 ### Utilisation d'une image pré-construite
 
@@ -93,14 +112,14 @@ docker run --rm -ti blavad/sdms:latest
 
 ### Construction d'une image
 
-Si aucune image docker existanre ne vous convient, un fichier `Dockerfile` est mis à disposition pour en construire de nouvelles. La construction d'une nouvelle image se fait via la commande suivante:
+Si aucune image docker existante ne vous convient, un fichier `Dockerfile` est disponible pour en construire de nouvelles. La construction d'une nouvelle image se fait via la commande suivante:
 
 ```bash
-docker build --rm -t sdms:<tag> .
+docker build -t sdms:<tag> .
 ```
 
 ::: warning
-Le `Dockerfile` est fournit construire une image utilisant la version CPU de PyTorch. Vous pouvez spécifier un autre chemin pour PyTorch en passant l'argument `LIBTORCH_URL=<path/to/libtorch-xxxxx.zip`.
+Le `Dockerfile` qui est fournit va construire une image utilisant la version CPU de PyTorch. Vous pouvez spécifier un autre chemin pour PyTorch en passant l'argument `LIBTORCH_URL=<path/to/libtorch-xxxxx.zip`.
 :::
 
 Vous pourrez ensuite lancer un conteneur de la nouvelle image en mode interactif :
@@ -111,7 +130,7 @@ docker run --rm -ti sdms:<tag>
 
 ### Pour les développeurs
 
-Les développeurs peuvent utiliser l'architecture *multi-stage* pour bénéficier des fonctionnalités de Docker en phase de développement. Ainsi, vous pourrez tester vos modifications locales dans un container Docker. Pour cela, il faut utiliser une image construite sur la base `dev` (tags `*-devel` sur [DockerHub](https://hub.docker.com/r/blavad/sdms)) et utiliser la fonctionnalité `bind mount` pour monter le répertoire local `sdms` dans le container. Les commandes suivantes montrent comment construire une image de développement et l'exécuter: 
+Les développeurs peuvent utiliser l'architecture *multi-stage* pour bénéficier des fonctionnalités de Docker en phase de développement. Ainsi, vous pourrez tester vos modifications locales dans un container Docker. Pour cela, il vous suffit d'utiliser une image construite sur la base `dev` (tags `*-devel` sur [DockerHub](https://hub.docker.com/r/blavad/sdms)) et utiliser la fonctionnalité `bind mount` pour monter le répertoire local `sdms` dans le container. Les commandes suivantes montrent comment construire une image de développement et l'exécuter: 
 
 ```bash
 docker build --target dev -t sdms:develop .

@@ -1,10 +1,12 @@
 
-<NavBar active_item_id="2"/>
-
 # File initializers.hpp
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**value\_function**](dir_9190e49f25bb1396e1fb4a6f0beec9b4.md) **>** [**initializers.hpp**](initializers_8hpp.md)
+
+
+[**File List**](files.md) **>** [**initializer**](dir_8f297180fb36cffec7cf6cc452bb4d2e.md) **>** [**initializers.hpp**](initializers_8hpp.md)
 
 [Go to the source code of this file.](initializers_8hpp_source.md)
 
@@ -14,7 +16,7 @@ _This file contains the initializer factory class._ [More...](#detailed-descript
 * `#include <boost/bind.hpp>`
 * `#include <boost/function.hpp>`
 * `#include <sdm/utils/struct/vector.hpp>`
-* `#include <sdm/utils/value_function/initializer.hpp>`
+* `#include <sdm/utils/value_function/initializer/initializer.hpp>`
 * `#include <sdm/utils/value_function/initializer/mdp_initializer.hpp>`
 * `#include <sdm/utils/value_function/initializer/pomdp_initializer.hpp>`
 
@@ -36,12 +38,7 @@ _This file contains the initializer factory class._ [More...](#detailed-descript
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InitializerFactory**](classsdm_1_1InitializerFactory.md) &lt;typename TState, typename TAction&gt;<br>_The InitializerFactor class facilitates users to interact and instanciate value function initializers. Some of the available initializers are :_ [_**MinInitializer**_](classsdm_1_1MinInitializer.md) _,_[_**MaxInitializer**_](classsdm_1_1MaxInitializer.md) _,_[_**BlindInitializer**_](classsdm_1_1BlindInitializer.md) _,_[_**ZeroInitializer**_](classsdm_1_1ZeroInitializer.md) _. For a complete list of initializer, you can use :_
-````cpp
-std::cout << InitializerFactory<TState, TAction>::available() << std::endl;
-````
-
- _._ |
+| class | [**InitializerFactory**](classsdm_1_1InitializerFactory.md) <br>_The InitializerFactor class facilitates users to interact and instanciate value function initializers. Some of the available initializers are :_ [_**MinInitializer**_](classsdm_1_1MinInitializer.md) _,_[_**MaxInitializer**_](classsdm_1_1MaxInitializer.md) _,_[_**BlindInitializer**_](classsdm_1_1BlindInitializer.md) _,_[_**ZeroInitializer**_](classsdm_1_1ZeroInitializer.md) _. For a complete list of initializer, you can use : std::cout &lt;&lt;_[_**InitializerFactory::available()**_](classsdm_1_1InitializerFactory.md#function-available) _&lt;&lt; std::endl;._ |
 
 
 
@@ -91,4 +88,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/initializers.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/value_function/initializer/initializers.hpp`

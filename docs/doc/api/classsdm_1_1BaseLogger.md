@@ -1,14 +1,16 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::BaseLogger
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**BaseLogger**](classsdm_1_1BaseLogger.md)
 
 
 
-
+_This class provide a common interface for all loggers._ 
 
 * `#include <logger.hpp>`
 
@@ -31,7 +33,7 @@ Inherited by the following classes: [sdm::Logger](classsdm_1_1Logger.md),  [sdm:
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**log**](classsdm_1_1BaseLogger.md#function-log) (TData... vals) <br> |
+|  void | [**log**](classsdm_1_1BaseLogger.md#function-log) (TData... vals) <br>_Record values._  |
 
 
 
@@ -55,5 +57,22 @@ void sdm::BaseLogger::log (
 
 
 
+
+**Template parameters:**
+
+
+* `TData...` the types of input values 
+
+
+
+**Parameters:**
+
+
+* `vals` the values to log 
+
+
+
+        
+
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/logging/logger.hpp`

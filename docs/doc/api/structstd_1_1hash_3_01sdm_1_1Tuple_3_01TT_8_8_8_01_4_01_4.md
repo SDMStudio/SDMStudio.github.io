@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Struct std::hash&lt; sdm::Tuple&lt; TT... &gt; &gt;
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 **template &lt;class... TT&gt;**
 
@@ -56,4 +58,4 @@ inline size_t std::hash< sdm::Tuple< TT... > >::operator() (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/tuple.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/struct/tuple.hpp`

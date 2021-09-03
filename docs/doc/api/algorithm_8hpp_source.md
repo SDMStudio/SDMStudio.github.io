@@ -15,11 +15,19 @@ namespace sdm
   class Algorithm
   {
   public:
+    virtual ~Algorithm() {}
+
     virtual void do_initialize() = 0;
 
     virtual void do_solve() = 0;
 
     virtual void do_test() = 0;
+
+    virtual void do_save() = 0;
+
+    virtual int getTrial() = 0;
+
+    virtual double getResult() =0;
   };
 } // namespace sdm
 ````

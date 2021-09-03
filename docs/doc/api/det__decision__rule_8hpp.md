@@ -1,19 +1,21 @@
 
-<NavBar active_item_id="2"/>
-
 # File det\_decision\_rule.hpp
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-[**File List**](files.md) **>** [**decision\_rules**](dir_4983fd2ecc8cc6698afce148812a6aba.md) **>** [**det\_decision\_rule.hpp**](det__decision__rule_8hpp.md)
+
+
+[**File List**](files.md) **>** [**action**](dir_da22f131ef310b227029eb4cfbb3e75b.md) **>** [**det\_decision\_rule.hpp**](det__decision__rule_8hpp.md)
 
 [Go to the source code of this file.](det__decision__rule_8hpp_source.md)
 
 
 
 * `#include <map>`
-* `#include <sdm/core/function.hpp>`
-* `#include <sdm/utils/linear_algebra/mapped_vector.hpp>`
-* `#include <sdm/tools.hpp>`
+* `#include <sdm/core/state/state.hpp>`
+* `#include <sdm/core/action/action.hpp>`
+* `#include <sdm/core/action/decision_rule.hpp>`
 
 
 
@@ -34,8 +36,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**DeterministicDecisionRule**](classsdm_1_1DeterministicDecisionRule.md) &lt;TState, TAction&gt;<br>_The deterministic decision rule class. This class is a function that maps generic states to generic actions._  |
-| struct | [**hash&lt; sdm::DeterministicDecisionRule&lt; S, A &gt; &gt;**](structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_3_01S_00_01A_01_4_01_4.md) &lt;typename S, typename A&gt;<br> |
+| class | [**DeterministicDecisionRule**](classsdm_1_1DeterministicDecisionRule.md) <br>_This class provide a way to manipulate data relative to a deterministic decision rule._  |
+| struct | [**hash&lt; sdm::DeterministicDecisionRule &gt;**](structstd_1_1hash_3_01sdm_1_1DeterministicDecisionRule_01_4.md) &lt;&gt;<br> |
 
 
 
@@ -51,4 +53,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/det_decision_rule.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/action/det_decision_rule.hpp`

@@ -13,7 +13,7 @@ Le programme principal est ``SDMStudio``. Ce programme concentre les différente
 ```bash 
 SDMStudio solve -a "A*" -f "DecPOMDP" 
 SDMStudio solve -a "HSVI" -f "DecPOMDP" 
-SDMStudio solve -a "QLearning" -f "DecPOMDP" 
+SDMStudio solve -a "QLearning" -f "DecPOMDP" -m 1 -e 0.1 -t 10000
 ```
 
 Vous venez de résoudre un DecPOMDP grâce à trois algorithmes différents (A*, HSVI et Q-Learning). Pour voir comment utiliser le programme `SDMStudio`, il faut utiliser ``SDMStudio --help`` ou encore `man SDMStudio`.
@@ -34,7 +34,7 @@ Vous venez de résoudre un DecPOMDP grâce à trois algorithmes différents (A*,
     Run 'SDMStudio COMMAND --help' for more information on a command.
 ```
 
-Le programme principal `SDMStudio` fait contient des alias vers d'autres programmes. Par exemple, utiliser ``SDMStudio solve`` est similaire à utiliser ``sdms-solve``. Les deux lignes ci-dessous vont retourner exactement la même chose.
+Le programme principal `SDMStudio` contient des alias vers d'autres programmes. Par exemple, la commande ``SDMStudio solve`` est équivalent à ``sdms-solve``. Les deux lignes ci-dessous vont retourner exactement la même chose.
 
 ```bash
 SDMStudio solve --help
@@ -75,7 +75,7 @@ std::shared_ptr<POMDPInterface> pomdp = sdm::parser::parse_file(sdm::config::PRO
 std::shared_ptr<BeliefMDP> belief_mdp = std::make_shared<BeliefMDP>(pomdp);
 ```
 
-This reformulation assumes that the state transition go over beliefs instead of states. The main advantage of using this new formulation is that standard algorithms for MDP can now be applied. The full example of code is below: 
+This reformulation assumes that the state transition go over beliefs instead of states. The main advantage of using this relaxation is that standard algorithms for MDP can now be applied. The full example of code is below: 
 
 ```cpp
 #include <iostream>
@@ -102,7 +102,7 @@ int main()
   algo->do_solve();
 } 
 ```
-
+<!-- 
 ## Deploy and run long experiments
 
 Your algorithm is ready to be used. The project can be build correctly using CMake. Your main program seems to do what you want but your computer is too slow to solve such a difficult problem in acceptable time.
@@ -126,4 +126,4 @@ docker run -d sdms:v1.0 SMDStudio solve [ARG...]
 
 ::: warning
 The default ``Dockerfile`` build an image containing PyTorch for CPU. You can pass ``LIBTORCH_URL=<path/to/libtorch-xxxxx.zip`` argument to specify a different configuration of PyTorch and use, for instance, pytorch for GPU 10.2.
-:::
+::: -->

@@ -1,14 +1,16 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::Logger
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**Logger**](classsdm_1_1Logger.md)
 
 
 
-
+_The main logger. This logger will print logs with a given format on the output stream._ 
 
 * `#include <logger.hpp>`
 
@@ -39,8 +41,8 @@ Inherited by the following classes: [sdm::FileLogger](classsdm_1_1FileLogger.md)
 |   | [**Logger**](classsdm_1_1Logger.md#function-logger-1-3) () <br> |
 |   | [**Logger**](classsdm_1_1Logger.md#function-logger-2-3) (std::ostream \* os, const std::string & format="") <br> |
 |   | [**Logger**](classsdm_1_1Logger.md#function-logger-3-3) (std::shared\_ptr&lt; std::ostream &gt; os, const std::string & format="") <br> |
-|  void | [**log**](classsdm_1_1Logger.md#function-log) (TData... vals) <br> |
-|  void | [**setFormat**](classsdm_1_1Logger.md#function-setformat) (const std::string & format) <br> |
+|  void | [**log**](classsdm_1_1Logger.md#function-log) (TData... vals) <br>_Record values._  |
+|  void | [**setFormat**](classsdm_1_1Logger.md#function-setformat) (const std::string & format) <br>[_**Set**_](structsdm_1_1Set.md) _the format of logs._ |
 
 ## Public Functions inherited from sdm::BaseLogger
 
@@ -48,7 +50,7 @@ See [sdm::BaseLogger](classsdm_1_1BaseLogger.md)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**log**](classsdm_1_1BaseLogger.md#function-log) (TData... vals) <br> |
+|  void | [**log**](classsdm_1_1BaseLogger.md#function-log) (TData... vals) <br>_Record values._  |
 
 
 
@@ -60,8 +62,8 @@ See [sdm::BaseLogger](classsdm_1_1BaseLogger.md)
 
 | Type | Name |
 | ---: | :--- |
-|  std::string | [**format\_**](classsdm_1_1Logger.md#variable-format-)  <br> |
-|  std::shared\_ptr&lt; std::ostream &gt; | [**output\_stream\_**](classsdm_1_1Logger.md#variable-output-stream-)  <br> |
+|  std::string | [**format\_**](classsdm_1_1Logger.md#variable-format-)  <br>_the output format_  |
+|  std::shared\_ptr&lt; std::ostream &gt; | [**output\_stream\_**](classsdm_1_1Logger.md#variable-output-stream-)  <br>_the output stream for logs._  |
 
 
 
@@ -118,6 +120,23 @@ inline void sdm::Logger::log (
 
 
 
+
+**Template parameters:**
+
+
+* `TData...` the types of input values 
+
+
+
+**Parameters:**
+
+
+* `vals` the values to log 
+
+
+
+        
+
 ### function setFormat 
 
 
@@ -128,6 +147,28 @@ inline void sdm::Logger::setFormat (
 ```
 
 
+Use `{}` each time a value must be added.
+
+Example:
+
+
+````cpp
+Logger logger;
+logger.setFormat("#> Here, I print my results : result1={}, result2={}");
+````
+
+
+
+
+
+**Parameters:**
+
+
+* `format` the format as a string. 
+
+
+
+        
 ## Protected Attributes Documentation
 
 
@@ -150,4 +191,4 @@ std::shared_ptr<std::ostream> sdm::Logger::output_stream_;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/logging/logger.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/logging/logger.hpp`

@@ -1,9 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::Belief2OccupancyValueFunction
 
-**template &lt;typename TBelief typename TBelief, typename TOccupancyState typename TOccupancyState&gt;**
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**Belief2OccupancyValueFunction**](classsdm_1_1Belief2OccupancyValueFunction.md)
@@ -16,7 +16,9 @@
 
 
 
-Inherits the following classes: [sdm::BinaryFunction](classsdm_1_1BinaryFunction.md)
+Inherits the following classes: [sdm::RelaxedValueFunction](classsdm_1_1RelaxedValueFunction.md)
+
+
 
 
 
@@ -53,15 +55,47 @@ See [sdm::Function](classsdm_1_1Function.md)
 
 
 
+
+
+
+
+
+
 ## Public Functions
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Belief2OccupancyValueFunction**](classsdm_1_1Belief2OccupancyValueFunction.md#function-belief2occupancyvaluefunction) (std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md)&lt; TBelief, [**number**](namespacesdm.md#typedef-number) &gt;&gt; pomdp\_vf) <br> |
-| virtual std::enable\_if\_t&lt; is\_solving\_dpomdp, double &gt; | [**operator()**](classsdm_1_1Belief2OccupancyValueFunction.md#function-operator()-1-3) (const TOccupancyState & ostate, const [**number**](namespacesdm.md#typedef-number) & tau) <br> |
-| virtual std::enable\_if\_t&lt;!is\_solving\_dpomdp, double &gt; | [**operator()**](classsdm_1_1Belief2OccupancyValueFunction.md#function-operator()-2-3) (const TOccupancyState & ostate, const [**number**](namespacesdm.md#typedef-number) & tau) <br> |
-| virtual double | [**operator()**](classsdm_1_1Belief2OccupancyValueFunction.md#function-operator()-3-3) (const TOccupancyState & ostate, const [**number**](namespacesdm.md#typedef-number) & tau) <br> |
-|  std::enable\_if\_t&lt; is\_solving\_dpomdp, double &gt; | [**sawtooth**](classsdm_1_1Belief2OccupancyValueFunction.md#function-sawtooth) (const TBelief & bstate, const [**number**](namespacesdm.md#typedef-number) & tau) <br> |
+|   | [**Belief2OccupancyValueFunction**](classsdm_1_1Belief2OccupancyValueFunction.md#function-belief2occupancyvaluefunction) (std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md) &gt; pomdp\_vf) <br> |
+| virtual std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md) &gt; | [**getRelaxation**](classsdm_1_1Belief2OccupancyValueFunction.md#function-getrelaxation) () <br> |
+| virtual bool | [**isMdpAvailable**](classsdm_1_1Belief2OccupancyValueFunction.md#function-ismdpavailable) () <br> |
+| virtual bool | [**isPomdpAvailable**](classsdm_1_1Belief2OccupancyValueFunction.md#function-ispomdpavailable) () <br> |
+| virtual double | [**operator()**](classsdm_1_1Belief2OccupancyValueFunction.md#function-operator()-1-2) (const std::shared\_ptr&lt; [**State**](classsdm_1_1State.md) &gt; &, const [**number**](namespacesdm.md#typedef-number) &) <br> |
+| virtual double | [**operator()**](classsdm_1_1Belief2OccupancyValueFunction.md#function-operator()-2-2) (const [**Pair**](namespacesdm.md#typedef-pair)&lt; std::shared\_ptr&lt; [**State**](classsdm_1_1State.md) &gt;, std::shared\_ptr&lt; Action &gt;&gt; &, const [**number**](namespacesdm.md#typedef-number) &) <br> |
+|  double | [**operatorMPOMDP**](classsdm_1_1Belief2OccupancyValueFunction.md#function-operatormpomdp) (const std::shared\_ptr&lt; [**State**](classsdm_1_1State.md) &gt; &, const [**number**](namespacesdm.md#typedef-number) &) <br> |
+
+## Public Functions inherited from sdm::RelaxedValueFunction
+
+See [sdm::RelaxedValueFunction](classsdm_1_1RelaxedValueFunction.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md) &gt; | [**getRelaxation**](classsdm_1_1RelaxedValueFunction.md#function-getrelaxation) () = 0<br> |
+| virtual bool | [**isMdpAvailable**](classsdm_1_1RelaxedValueFunction.md#function-ismdpavailable) () = 0<br> |
+| virtual bool | [**isPomdpAvailable**](classsdm_1_1RelaxedValueFunction.md#function-ispomdpavailable) () = 0<br> |
+| virtual double | [**operator()**](classsdm_1_1RelaxedValueFunction.md#function-operator()-1-2) (const std::shared\_ptr&lt; [**State**](classsdm_1_1State.md) &gt; & ostate, const [**number**](namespacesdm.md#typedef-number) & tau) = 0<br> |
+| virtual double | [**operator()**](classsdm_1_1RelaxedValueFunction.md#function-operator()-2-2) (const [**Pair**](namespacesdm.md#typedef-pair)&lt; std::shared\_ptr&lt; [**State**](classsdm_1_1State.md) &gt;, std::shared\_ptr&lt; Action &gt;&gt; & ostate, const [**number**](namespacesdm.md#typedef-number) & tau) = 0<br> |
+| virtual  | [**~RelaxedValueFunction**](classsdm_1_1RelaxedValueFunction.md#function-relaxedvaluefunction) () <br> |
+
+## Public Functions inherited from sdm::BaseRelaxedValueFunction
+
+See [sdm::BaseRelaxedValueFunction](classsdm_1_1BaseRelaxedValueFunction.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual bool | [**isMdpAvailable**](classsdm_1_1BaseRelaxedValueFunction.md#function-ismdpavailable) () = 0<br> |
+| virtual bool | [**isPomdpAvailable**](classsdm_1_1BaseRelaxedValueFunction.md#function-ispomdpavailable) () = 0<br> |
+| virtual double | [**operator()**](classsdm_1_1BaseRelaxedValueFunction.md#function-operator()) (const std::shared\_ptr&lt; [**State**](classsdm_1_1State.md) &gt; & ostate, const [**number**](namespacesdm.md#typedef-number) & tau) = 0<br> |
+| virtual  | [**~BaseRelaxedValueFunction**](classsdm_1_1BaseRelaxedValueFunction.md#function-baserelaxedvaluefunction) () <br> |
 
 ## Public Functions inherited from sdm::BinaryFunction
 
@@ -71,6 +105,7 @@ See [sdm::BinaryFunction](classsdm_1_1BinaryFunction.md)
 | ---: | :--- |
 | virtual [**output\_type**](classsdm_1_1BinaryFunction.md#typedef-output-type) | [**operator()**](classsdm_1_1BinaryFunction.md#function-operator()-1-2) (const TInput1 &, const TInput2 &) = 0<br> |
 | virtual [**output\_type**](classsdm_1_1BinaryFunction.md#typedef-output-type) | [**operator()**](classsdm_1_1BinaryFunction.md#function-operator()-2-2) (const [**input\_type**](classsdm_1_1BinaryFunction.md#typedef-input-type) & p\_input) <br> |
+| virtual  | [**~BinaryFunction**](classsdm_1_1BinaryFunction.md#function-binaryfunction) () <br> |
 
 ## Public Functions inherited from sdm::Function
 
@@ -79,6 +114,13 @@ See [sdm::Function](classsdm_1_1Function.md)
 | Type | Name |
 | ---: | :--- |
 | virtual [**output\_type**](classsdm_1_1Function.md#typedef-output-type) | [**operator()**](classsdm_1_1Function.md#function-operator()) (const [**input\_type**](classsdm_1_1Function.md#typedef-input-type) &) = 0<br> |
+| virtual  | [**~Function**](classsdm_1_1Function.md#function-function) () <br> |
+
+
+
+
+
+
 
 
 
@@ -93,7 +135,15 @@ See [sdm::Function](classsdm_1_1Function.md)
 
 | Type | Name |
 | ---: | :--- |
-|  std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md)&lt; TBelief, [**number**](namespacesdm.md#typedef-number) &gt; &gt; | [**pomdp\_vf\_**](classsdm_1_1Belief2OccupancyValueFunction.md#variable-pomdp-vf-)  <br> |
+|  std::shared\_ptr&lt; [**ValueFunction**](classsdm_1_1ValueFunction.md) &gt; | [**pomdp\_vf\_**](classsdm_1_1Belief2OccupancyValueFunction.md#variable-pomdp-vf-)  <br> |
+
+
+
+
+
+
+
+
 
 
 
@@ -114,64 +164,80 @@ See [sdm::Function](classsdm_1_1Function.md)
 
 ```cpp
 sdm::Belief2OccupancyValueFunction::Belief2OccupancyValueFunction (
-    std::shared_ptr< ValueFunction < TBelief, number >> pomdp_vf
+    std::shared_ptr< ValueFunction > pomdp_vf
 ) 
 ```
 
 
 
-### function operator() [1/3]
+### function getRelaxation 
 
 
 ```cpp
-template<bool is_solving_dpomdp>
-virtual std::enable_if_t< is_solving_dpomdp, double > sdm::Belief2OccupancyValueFunction::operator() (
-    const TOccupancyState & ostate,
-    const number & tau
-) 
+virtual std::shared_ptr< ValueFunction > sdm::Belief2OccupancyValueFunction::getRelaxation () 
 ```
 
 
-Implements [*sdm::BinaryFunction::operator()*](classsdm_1_1BinaryFunction.md#function-operator()-1-2)
+Implements [*sdm::RelaxedValueFunction::getRelaxation*](classsdm_1_1RelaxedValueFunction.md#function-getrelaxation)
 
 
-### function operator() [2/3]
+### function isMdpAvailable 
 
 
 ```cpp
-template<bool is_solving_dpomdp>
-virtual std::enable_if_t<!is_solving_dpomdp, double > sdm::Belief2OccupancyValueFunction::operator() (
-    const TOccupancyState & ostate,
-    const number & tau
-) 
+virtual bool sdm::Belief2OccupancyValueFunction::isMdpAvailable () 
 ```
 
 
-Implements [*sdm::BinaryFunction::operator()*](classsdm_1_1BinaryFunction.md#function-operator()-1-2)
+Implements [*sdm::RelaxedValueFunction::isMdpAvailable*](classsdm_1_1RelaxedValueFunction.md#function-ismdpavailable)
 
 
-### function operator() [3/3]
+### function isPomdpAvailable 
+
+
+```cpp
+virtual bool sdm::Belief2OccupancyValueFunction::isPomdpAvailable () 
+```
+
+
+Implements [*sdm::RelaxedValueFunction::isPomdpAvailable*](classsdm_1_1RelaxedValueFunction.md#function-ispomdpavailable)
+
+
+### function operator() [1/2]
 
 
 ```cpp
 virtual double sdm::Belief2OccupancyValueFunction::operator() (
-    const TOccupancyState & ostate,
-    const number & tau
+    const std::shared_ptr< State > &,
+    const number &
 ) 
 ```
 
 
-Implements [*sdm::BinaryFunction::operator()*](classsdm_1_1BinaryFunction.md#function-operator()-1-2)
+Implements [*sdm::RelaxedValueFunction::operator()*](classsdm_1_1RelaxedValueFunction.md#function-operator()-1-2)
 
 
-### function sawtooth 
+### function operator() [2/2]
 
 
 ```cpp
-template<bool is_solving_dpomdp>
-std::enable_if_t< is_solving_dpomdp, double > sdm::Belief2OccupancyValueFunction::sawtooth (
-    const TBelief & bstate,
-    const number & tau
+virtual double sdm::Belief2OccupancyValueFunction::operator() (
+    const Pair < std::shared_ptr< State >, std::shared_ptr< Action >> &,
+    const number &
+) 
+```
+
+
+Implements [*sdm::RelaxedValueFunction::operator()*](classsdm_1_1RelaxedValueFunction.md#function-operator()-2-2)
+
+
+### function operatorMPOMDP 
+
+
+```cpp
+double sdm::Belief2OccupancyValueFunction::operatorMPOMDP (
+    const std::shared_ptr< State > &,
+    const number &
 ) 
 ```
 
@@ -183,10 +249,10 @@ std::enable_if_t< is_solving_dpomdp, double > sdm::Belief2OccupancyValueFunction
 
 
 ```cpp
-std::shared_ptr<ValueFunction<TBelief, number> > sdm::Belief2OccupancyValueFunction< TBelief, TOccupancyState >::pomdp_vf_;
+std::shared_ptr<ValueFunction> sdm::Belief2OccupancyValueFunction::pomdp_vf_;
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/belief_2_occupancy_vf.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/value_function/initializer/belief_2_occupancy_vf.hpp`

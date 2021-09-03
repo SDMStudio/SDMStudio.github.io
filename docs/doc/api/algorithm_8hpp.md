@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File algorithm.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**public**](dir_33715f1cc09e852083918bf432e54d5e.md) **>** [**algorithm.hpp**](algorithm_8hpp.md)
@@ -29,7 +31,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Algorithm**](classsdm_1_1Algorithm.md) <br> |
+| class | [**Algorithm**](classsdm_1_1Algorithm.md) <br>_The public interface common to all algorithms in_ **SDM'Studio** _._ |
 
 
 
@@ -45,4 +47,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/public/algorithm.hpp`
+The documentation for this class was generated from the following file `src/sdm/public/algorithm.hpp`

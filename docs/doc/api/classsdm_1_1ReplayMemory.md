@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::ReplayMemory
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**ReplayMemory**](classsdm_1_1ReplayMemory.md)
@@ -124,4 +126,4 @@ int sdm::ReplayMemory::position;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/rl/replay_memory.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/rl/replay_memory.hpp`

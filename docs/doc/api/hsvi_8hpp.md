@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File hsvi.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**algorithms**](dir_baab9deb2ceef290d17fdadea9d6b69b.md) **>** [**hsvi.hpp**](hsvi_8hpp.md)
@@ -10,13 +12,15 @@
 
 _HSVI algorithm._ [More...](#detailed-description)
 
+* `#include <chrono>`
 * `#include <string>`
 * `#include <sdm/types.hpp>`
 * `#include <sdm/public/algorithm.hpp>`
 * `#include <sdm/core/state/state.hpp>`
-* `#include <sdm/utils/value_function/value_function.hpp>`
+* `#include <sdm/core/action/action.hpp>`
 * `#include <sdm/utils/logging/logger.hpp>`
-* `#include <sdm/algorithms/hsvi.tpp>`
+* `#include <sdm/world/solvable_by_hsvi.hpp>`
+* `#include <sdm/utils/value_function/value_function.hpp>`
 
 
 
@@ -36,7 +40,7 @@ _HSVI algorithm._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| class | [**HSVI**](classsdm_1_1HSVI.md) &lt;typename TState, typename TAction&gt;<br> |
+| class | [**HSVI**](classsdm_1_1HSVI.md) <br>[Heuristic Search Value Iteration (HSVI)](https://arxiv.org/abs/1207.4166) _and its extensions (FB-HSVI, one-sided_[_**HSVI**_](classsdm_1_1HSVI.md) _)._ |
 
 
 
@@ -49,6 +53,11 @@ _HSVI algorithm._ [More...](#detailed-description)
 
 
 
+## Macros
+
+| Type | Name |
+| ---: | :--- |
+| define  | [**LOGTIME**](hsvi_8hpp.md#define-logtime)  <br> |
 
 # Detailed Description
 
@@ -84,6 +93,18 @@ Copyright (c) 2020
 
 
     
+## Macro Definition Documentation
+
+
+
+### define LOGTIME 
+
+
+```cpp
+#define LOGTIME 
+```
+
+
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/algorithms/hsvi.hpp`
+The documentation for this class was generated from the following file `src/sdm/algorithms/hsvi.hpp`

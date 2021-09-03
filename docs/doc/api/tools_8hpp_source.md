@@ -15,20 +15,51 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <set>
+
+#include <sdm/utils/struct/vector.hpp>
 
 namespace sdm
 {
     namespace tools
     {
-        std::string getPathTo(std::string base, std::string world_name, std::string formalism_name);
-
         bool hasExtension(std::string filename, std::string extension);
 
-        std::string addIndent(std::string s, int num_indents, std::string indent = "\t");
+        void indentedOutput(std::ostream &outStream, const char *message, int num_indent = 1);
 
-        void indentedOutput(std::ostream &outStream, const char *message);
+        std::string addIndent(std::string input_string, int num_indents = 1, std::string indent = "\t");
 
         std::string repeatString(const std::string &str, size_t times);
+
+        std::string getPathTo(std::string base, std::string world_name, std::string formalism_name);
+
+        template <typename T>
+        std::vector<T> set2vector(const std::set<T> &set)
+        {
+            return std::vector<T>(set.begin(), set.end());
+        }
+
+        template <typename TKey, typename TValue>
+        std::vector<TKey> extractKeys(const std::map<TKey, TValue> &input_map)
+        {
+            std::vector<TKey> retkey;
+            for (auto const &element : input_map)
+            {
+                retkey.push_back(element.first);
+            }
+            return retkey;
+        }
+
+        template <typename TKey, typename TValue>
+        std::vector<TValue> extractValues(const std::map<TKey, TValue> &input_map)
+        {
+            std::vector<TValue> retvalue;
+            for (auto const &element : input_map)
+            {
+                retvalue.push_back(element.second);
+            }
+            return retvalue;
+        }
 
     } // namespace tools
 } // namespace sdm

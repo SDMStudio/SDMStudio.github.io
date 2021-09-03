@@ -1,7 +1,7 @@
 
 # File state\_2\_occupancy\_vf.hpp
 
-[**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**value\_function**](dir_9190e49f25bb1396e1fb4a6f0beec9b4.md) **>** [**state\_2\_occupancy\_vf.hpp**](state__2__occupancy__vf_8hpp.md)
+[**File List**](files.md) **>** [**initializer**](dir_8f297180fb36cffec7cf6cc452bb4d2e.md) **>** [**state\_2\_occupancy\_vf.hpp**](state__2__occupancy__vf_8hpp.md)
 
 [Go to the documentation of this file.](state__2__occupancy__vf_8hpp.md) 
 
@@ -11,30 +11,36 @@
 
 #include <sdm/types.hpp>
 #include <sdm/core/function.hpp>
+#include <sdm/utils/struct/pair.hpp>
+#include <sdm/utils/value_function/value_function.hpp>
 
 namespace sdm
 {
-    template <typename TState, typename TOccupancyState>
-    class State2OccupancyValueFunction : public BinaryFunction<TOccupancyState, number, double>
+    class State2OccupancyValueFunction : public RelaxedValueFunction
     {
     protected:
-        std::shared_ptr<BinaryFunction<TState, number, double>> mdp_vf_;
+        std::shared_ptr<ValueFunction> mdp_vf_;
 
     public:
-        State2OccupancyValueFunction(std::shared_ptr<BinaryFunction<TState, number, double>> vf);
+        State2OccupancyValueFunction(std::shared_ptr<ValueFunction> );
 
-        template <bool is_mdp = std::is_same<TState, TOccupancyState>::value>
-        std::enable_if_t<is_mdp, double>
-        operator()(const TOccupancyState &ostate, const number &tau);
+        double operatorState(const std::shared_ptr<State> &, const number &);
+        double operatorBelief(const std::shared_ptr<State> &, const number &);
+        double operatorOccupancy(const std::shared_ptr<State> &, const number &);
 
-        template <bool is_mdp = std::is_same<TState, TOccupancyState>::value>
-        std::enable_if_t<!is_mdp, double>
-        operator()(const TOccupancyState &ostate, const number &tau);
-        
-        double operator()(const TOccupancyState &ostate, const number &tau);
+        double operator()(const std::shared_ptr<State> &, const number &);
+
+        double operator()(const Pair<std::shared_ptr<State>, std::shared_ptr<Action> > &, const number &);
+        double operatorQTableState(const Pair<std::shared_ptr<State>, std::shared_ptr<Action>>  &state_AND_action, const number &tau);
+        double operatorQTableBelief(const Pair<std::shared_ptr<State>, std::shared_ptr<Action>>  &state_AND_action, const number &tau);
+
+
+        bool isPomdpAvailable();
+        bool isMdpAvailable();
+
+        std::shared_ptr<ValueFunction> getRelaxation();
+
     };
 } // namespace sdm
-
-#include <sdm/utils/value_function/state_2_occupancy_vf.tpp>
 ````
 

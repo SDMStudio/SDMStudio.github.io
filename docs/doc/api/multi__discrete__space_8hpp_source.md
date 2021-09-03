@@ -15,78 +15,79 @@
 #include <boost/bimap.hpp>
 
 #include <sdm/types.hpp>
-#include <sdm/core/space/multi_space.hpp>
+#include <sdm/core/item.hpp>
 #include <sdm/core/space/discrete_space.hpp>
 #include <sdm/core/joint.hpp>
 
 namespace sdm
 {
-    template <typename TItem>
-    class MultiDiscreteSpace : public virtual MultiSpace<DiscreteSpace<TItem>>, public DiscreteSpace<Joint<TItem>>
+    class MultiDiscreteSpace : public DiscreteSpace,
+                               public Joint<std::shared_ptr<Space>>
     {
-    protected:
-        typedef boost::bimaps::bimap<number, Joint<TItem>> jitems_bimap;
-        typedef typename jitems_bimap::value_type jitems_bimap_value;
-
-        void generateJointItems();
-
-        void setNumJItems(number);
-
     public:
-        using value_type = Joint<TItem>;
+        using value_type = Joint<std::shared_ptr<Item>>;
+        using iterator_type = DiscreteSpace::iterator_type;
 
         MultiDiscreteSpace();
-        
-        MultiDiscreteSpace(const std::vector<std::shared_ptr<DiscreteSpace<TItem>>> &);
 
-        MultiDiscreteSpace(const std::vector<std::vector<TItem>> &values);
+        MultiDiscreteSpace(const std::vector<std::shared_ptr<Space>> &sub_spaces, bool store_items = true);
 
-        MultiDiscreteSpace(const MultiDiscreteSpace<TItem> &copy);
+        MultiDiscreteSpace(const std::vector<std::vector<std::shared_ptr<Item>>> &values, bool store_items = true);
 
-        MultiDiscreteSpace(const std::vector<DiscreteSpace<TItem>> &);
+        MultiDiscreteSpace(const MultiDiscreteSpace &copy);
 
-        template <bool TBool = std::is_integral<TItem>::value>
-        MultiDiscreteSpace(const std::enable_if_t<TBool, std::vector<TItem>> &num_items);
+        template <bool TBool = std::is_integral<std::shared_ptr<Item>>::value>
+        MultiDiscreteSpace(const std::enable_if_t<TBool, std::vector<std::shared_ptr<Item>>> &num_items);
 
-        number joint2single(const std::vector<TItem> &jitem) const;
+        number getItemIndex(number ag_id, const std::shared_ptr<Item> &item) const;
 
-        std::vector<TItem> single2joint(number sitem) const;
+        std::shared_ptr<Item> getItem(number index) const;
 
-        number getNumJointItems() const;
+        std::shared_ptr<Item> getItem(number ag_id, number item_index) const;
 
-        number getItemIndex(number ag_id, const TItem &item) const;
+        number getNumSpaces() const;
 
-        TItem getItem(number) const;
+        std::shared_ptr<Space> getSpace(number index) const;
 
-        TItem getItem(number ag_id, number item_index) const;
+        template <bool TBool = std::is_integral<std::shared_ptr<Item>>::value>
+        void setSpaces(const std::enable_if_t<TBool, std::vector<std::shared_ptr<Item>>> &num_items);
+        void setSpaces(const std::vector<std::vector<std::shared_ptr<Item>>> &);
+        void setSpaces(const std::vector<std::shared_ptr<Space>> &spaces);
 
-        template <bool TBool = std::is_integral<TItem>::value>
-        void setSpaces(const std::enable_if_t<TBool, std::vector<TItem>> &num_items);
-        void setSpaces(const std::vector<std::vector<TItem>> &);
-        void setSpaces(const std::vector<std::shared_ptr<DiscreteSpace<TItem>>> &spaces);
-        void setSpaces(const std::vector<DiscreteSpace<TItem>> &spaces);
+        number getJointItemIndex(std::shared_ptr<Joint<std::shared_ptr<Item>>> &jitem) const;
+        // number getJointItemIndex(const std::vector<std::shared_ptr<Item>> &) const;
 
+        std::shared_ptr<Item> getJointItem(number) const;
 
-        number getJointItemIndex(Joint<TItem> &jitem) const;
-        number getJointItemIndex(const std::vector<TItem> &) const;
-
-        Joint<TItem> getJointItem(number) const;
-
-        std::vector<Joint<TItem>> getAll();
+        std::vector<std::shared_ptr<Item>> getAll();
 
         std::string str() const;
 
-        MultiDiscreteSpace<TItem> &operator=(const MultiDiscreteSpace<TItem> &);
+        virtual iterator_type begin();
+        virtual iterator_type end();
 
-        friend std::ostream &operator<<(std::ostream &os, const MultiDiscreteSpace<TItem> &sp)
+        MultiDiscreteSpace &operator=(const MultiDiscreteSpace &);
+        bool operator==(const MultiDiscreteSpace &other) const;
+        bool operator!=(const MultiDiscreteSpace &other) const;
+
+        bool contains(const std::shared_ptr<Item> &) const;
+
+        friend std::ostream &operator<<(std::ostream &os, const MultiDiscreteSpace &sp)
         {
             os << sp.str();
             return os;
         }
+
+    protected:
+        using jitems_bimap = DiscreteSpace::items_bimap;
+        using jitems_bimap_value = jitems_bimap::value_type;
+
+        void setNumJItems(number);
+
+        inline std::shared_ptr<DiscreteSpace> cast(const std::shared_ptr<Space> &space) const;
+
     };
 
 } // namespace sdm
-
-#include <sdm/core/space/multi_discrete_space.tpp>
 ````
 

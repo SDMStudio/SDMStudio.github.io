@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File recursive\_map.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**utils**](dir_d5f9b32a4b7e3085fe36bb5e85e812de.md) **>** [**struct**](dir_8910f640002ec96a2876ed8b2614abb5.md) **>** [**recursive\_map.hpp**](recursive__map_8hpp.md)
@@ -10,7 +12,9 @@
 
 
 
-* `#include <map>`
+* `#include <boost/serialization/base_object.hpp>`
+* `#include <boost/serialization/unordered_map.hpp>`
+* `#include <unordered_map>`
 * `#include <vector>`
 * `#include <sdm/utils/struct/recursive_map.tpp>`
 
@@ -40,7 +44,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| typedef std::map&lt; K, V &gt; | [**map\_t**](recursive__map_8hpp.md#typedef-map-t)  <br> |
+| typedef std::unordered\_map&lt; K, V &gt; | [**map\_t**](recursive__map_8hpp.md#typedef-map-t)  <br> |
 
 
 
@@ -60,10 +64,10 @@
 
 
 ```cpp
-using map_t =  std::map<K, V>;
+using map_t =  std::unordered_map<K, V>;
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/struct/recursive_map.hpp`

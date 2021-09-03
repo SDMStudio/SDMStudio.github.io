@@ -10,14 +10,23 @@
 
 ## c
 
+* **cast** ([**sdm**](namespacesdm.md))
 * **createInstance** ([**sdm**](namespacesdm.md))
 * **createInstanceAlgoInit** ([**sdm**](namespacesdm.md))
+* **createInstanceMDPValueIterationInit** ([**sdm**](namespacesdm.md))
 * **createInstanceTabMDPInit** ([**sdm**](namespacesdm.md))
 * **createInstanceTabPOMDPInit** ([**sdm**](namespacesdm.md))
 
 
+## e
+
+* **extractKeys** ([**sdm::tools**](namespacesdm_1_1tools.md))
+* **extractValues** ([**sdm::tools**](namespacesdm_1_1tools.md))
+
+
 ## g
 
+* **getTypeAction** ([**sdm**](namespacesdm.md))
 * **getAgentActionState** ([**sdm::common**](namespacesdm_1_1common.md))
 * **getState** ([**sdm::common**](namespacesdm_1_1common.md))
 * **global\_urng** ([**sdm::common**](namespacesdm_1_1common.md))
@@ -45,15 +54,16 @@
 * **makeInitializer** ([**sdm**](namespacesdm.md))
 * **makeValueFunction** ([**sdm**](namespacesdm.md))
 * **make** ([**sdm::algo**](namespacesdm_1_1algo.md))
-* **makeMappedHSVI** ([**sdm::algo**](namespacesdm_1_1algo.md))
+* **makeAlgorithm** ([**sdm::algo**](namespacesdm_1_1algo.md))
+* **makeFormalism** ([**sdm::algo**](namespacesdm_1_1algo.md))
+* **makeHSVI** ([**sdm::algo**](namespacesdm_1_1algo.md))
+* **makeQLearning** ([**sdm::algo**](namespacesdm_1_1algo.md))
+* **makeValueIteration** ([**sdm::algo**](namespacesdm_1_1algo.md))
 
 
 ## o
 
-* **operator\*** ([**sdm**](namespacesdm.md))
 * **operator&lt;&lt;** ([**sdm**](namespacesdm.md))
-* **operator==** ([**sdm**](namespacesdm.md))
-* **operator^** ([**sdm**](namespacesdm.md))
 
 
 ## p
@@ -67,7 +77,16 @@
 * **repeatString** ([**sdm::tools**](namespacesdm_1_1tools.md))
 
 
+## s
+
+* **set2vector** ([**sdm::tools**](namespacesdm_1_1tools.md))
+* **str** ([**sdm**](namespacesdm.md))
+
+
 ## t
 
-* **toNumberedSpace** ([**sdm::ast**](namespacesdm_1_1ast.md))
+* **TORCH\_MODULE** ([**sdm::nn**](namespacesdm_1_1nn.md))
+* **test** ([**sdm**](namespacesdm.md))
+* **toDecisionRule** ([**sdm**](namespacesdm.md))
+* **toJointDeterministicDecisionRule** ([**sdm**](namespacesdm.md))
 

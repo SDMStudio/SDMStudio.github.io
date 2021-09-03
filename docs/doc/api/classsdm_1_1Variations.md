@@ -1,16 +1,18 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::Variations
 
-**template &lt;typename TFunction&gt;**
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
+
+**template &lt;typename TFunction typename TFunction&gt;**
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**Variations**](classsdm_1_1Variations.md)
 
 
 
-_Iterator of_ [_**Variations**_](classsdm_1_1Variations.md) _._[More...](#detailed-description)
+[_**Iterator**_](classsdm_1_1Iterator.md) _of_[_**Variations**_](classsdm_1_1Variations.md) _._[More...](#detailed-description)
 
 * `#include <variations.hpp>`
 
@@ -312,4 +314,4 @@ std::shared_ptr<TFunction> sdm::Variations< TFunction >::vout;
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/decision_rules/variations.hpp`
+The documentation for this class was generated from the following file `src/sdm/core/variations.hpp`

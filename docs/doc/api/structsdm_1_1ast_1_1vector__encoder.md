@@ -1,20 +1,22 @@
 
-<NavBar active_item_id="2"/>
-
 # Struct sdm::ast::vector\_encoder
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**ast**](namespacesdm_1_1ast.md) **>** [**vector\_encoder**](structsdm_1_1ast_1_1vector__encoder.md)
 
 
 
-_encodes the input into a vector_ 
+_encodes the input into a mapped vector_ 
 
-* `#include <encoder.hpp>`
+* `#include <struct_encoders.hpp>`
 
 
 
-Inherits the following classes: boost::static_visitor< Vector >
+Inherits the following classes: boost::static_visitor< std::shared_ptr< MappedVector< number, double > > >
 
 
 
@@ -29,15 +31,15 @@ Inherits the following classes: boost::static_visitor< Vector >
 
 | Type | Name |
 | ---: | :--- |
-|  [**number**](namespacesdm.md#typedef-number) | [**size**](structsdm_1_1ast_1_1vector__encoder.md#variable-size)  <br>_the size of the vector vector_  |
+|  [**number**](namespacesdm.md#typedef-number) | [**size\_**](structsdm_1_1ast_1_1vector__encoder.md#variable-size-)  <br>_the size of the vector vector_  |
 
 
 ## Public Functions
 
 | Type | Name |
 | ---: | :--- |
-|  Vector | [**operator()**](structsdm_1_1ast_1_1vector__encoder.md#function-operator()-1-2) (const std::string & name) const<br>_encodes a string into a vector of probabilities_  |
-|  Vector | [**operator()**](structsdm_1_1ast_1_1vector__encoder.md#function-operator()-2-2) (const std::vector&lt; float &gt; & vector) const<br>_encodes a vector into a vector vector_  |
+|  std::shared\_ptr&lt; [**MappedVector**](classsdm_1_1MappedVector.md)&lt; [**number**](namespacesdm.md#typedef-number), double &gt; &gt; | [**operator()**](structsdm_1_1ast_1_1vector__encoder.md#function-operator()-1-2) (const std::string & name) const<br>_encodes a string into a mapped vector of probabilities_  |
+|  std::shared\_ptr&lt; [**MappedVector**](classsdm_1_1MappedVector.md)&lt; [**number**](namespacesdm.md#typedef-number), double &gt; &gt; | [**operator()**](structsdm_1_1ast_1_1vector__encoder.md#function-operator()-2-2) (const std::vector&lt; float &gt; & vector) const<br>_encodes a vector into a mapped vector_  |
 |   | [**vector\_encoder**](structsdm_1_1ast_1_1vector__encoder.md#function-vector-encoder) (const [**number**](namespacesdm.md#typedef-number) size) <br> |
 
 
@@ -50,11 +52,11 @@ Inherits the following classes: boost::static_visitor< Vector >
 ## Public Attributes Documentation
 
 
-### variable size 
+### variable size\_ 
 
 
 ```cpp
-number sdm::ast::vector_encoder::size;
+number sdm::ast::vector_encoder::size_;
 ```
 
 
@@ -65,7 +67,7 @@ number sdm::ast::vector_encoder::size;
 
 
 ```cpp
-inline Vector sdm::ast::vector_encoder::operator() (
+std::shared_ptr< MappedVector < number , double > > sdm::ast::vector_encoder::operator() (
     const std::string & name
 ) const
 ```
@@ -76,7 +78,14 @@ inline Vector sdm::ast::vector_encoder::operator() (
 **Parameters:**
 
 
-* `name` the way to encode the vector 
+* `name` a string describing the vector (i.e. "uniform") 
+
+
+
+**Returns:**
+
+the corresponding mapped vector 
+
 
 
 
@@ -86,7 +95,7 @@ inline Vector sdm::ast::vector_encoder::operator() (
 
 
 ```cpp
-inline Vector sdm::ast::vector_encoder::operator() (
+std::shared_ptr< MappedVector < number , double > > sdm::ast::vector_encoder::operator() (
     const std::vector< float > & vector
 ) const
 ```
@@ -97,7 +106,14 @@ inline Vector sdm::ast::vector_encoder::operator() (
 **Parameters:**
 
 
-* `vector` the vector 
+* `vector` a vector of real values 
+
+
+
+**Returns:**
+
+the corresponding mapped vector 
+
 
 
 
@@ -107,7 +123,7 @@ inline Vector sdm::ast::vector_encoder::operator() (
 
 
 ```cpp
-inline sdm::ast::vector_encoder::vector_encoder (
+sdm::ast::vector_encoder::vector_encoder (
     const number size
 ) 
 ```
@@ -115,4 +131,4 @@ inline sdm::ast::vector_encoder::vector_encoder (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/encoders/struct_encoders.hpp`

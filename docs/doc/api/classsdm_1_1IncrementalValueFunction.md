@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::IncrementalValueFunction
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 **template &lt;typename TState typename TState, typename TAction typename TAction, typename TValueFunction typename TValueFunction&gt;**
 
@@ -107,4 +109,4 @@ inline void sdm::IncrementalValueFunction::updateValueAt (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/value_function/incremental_value_function.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/value_function/incremental_value_function.hpp`

@@ -12,19 +12,23 @@
 
 #include <sdm/core/state/history_tree.hpp>
 #include <sdm/core/joint.hpp>
+#include <sdm/types.hpp>
+#include <sdm/core/observation/default_observation.hpp>
+#include <sdm/core/state/interface/joint_history_interface.hpp>
 
 namespace sdm
 {
 
-    template <typename T>
-    class JointHistoryTree : public HistoryTree<Joint<T>>
-    {
-    protected:
+    class JointHistoryTree : public JointHistoryInterface,
+                             public HistoryTree,
+                             public Joint<std::shared_ptr<HistoryInterface>>,
+                             public BoostSerializable<JointHistoryTree>
 
-        void addIndivHist(std::shared_ptr<HistoryTree<T>> ihist);
+    {
+
     public:
-        using ihistory_type = std::shared_ptr<HistoryTree<T>>;
-        Joint<std::shared_ptr<HistoryTree<T>>> indiv_hist;
+        using ihistory_type = std::shared_ptr<HistoryTree>;
+        using value_type = typename HistoryTree::value_type;
 
         JointHistoryTree();
 
@@ -32,21 +36,46 @@ namespace sdm
 
         JointHistoryTree(number n_agents, number max_depth);
 
-        JointHistoryTree(std::shared_ptr<JointHistoryTree<T>> parent, const Joint<T> &item);
+        JointHistoryTree(std::shared_ptr<HistoryTree> parent, const std::shared_ptr<Observation> &item);
 
-        std::shared_ptr<JointHistoryTree<T>> expand(const Joint<T> &data, bool backup = true);
+        JointHistoryTree(const Joint<std::shared_ptr<HistoryInterface>> &ihistories);
 
-        std::shared_ptr<HistoryTree<T>> getIndividualHistory(number ag_id) const;
-        std::vector<std::shared_ptr<HistoryTree<T>>> getIndividualHistories() const;
+        std::shared_ptr<HistoryInterface> expand(const std::shared_ptr<Joint<std::shared_ptr<Observation>>> &joint_observation, bool backup = true);
+        std::shared_ptr<HistoryInterface> expand(const std::shared_ptr<Observation> &joint_observation, bool backup = true);
 
-        friend std::ostream &operator<<(std::ostream &os, const JointHistoryTree &j_hist)
+        std::shared_ptr<HistoryInterface> getIndividualHistory(number agent_id) const;
+
+        Joint<std::shared_ptr<HistoryInterface>> getIndividualHistories() const;
+
+        std::string str() const;
+
+        std::shared_ptr<JointHistoryTree> getptr();
+
+        template <class Archive>
+        void serialize(Archive &archive, const unsigned int);
+
+        std::shared_ptr<Joint<std::shared_ptr<Observation>>> getDefaultObs();
+        void setDefaultObs(const std::shared_ptr<Joint<std::shared_ptr<Observation>>> &default_observation);
+
+        std::shared_ptr<JointHistoryTree> getParent() const;
+        std::shared_ptr<JointHistoryTree> getOrigin();
+        void isNotOrigin();
+        std::vector<std::shared_ptr<JointHistoryTree>> getChildren() const;
+        std::shared_ptr<JointHistoryTree> getChild(const std::shared_ptr<Observation> &child_item) const;
+
+        friend std::ostream &operator<<(std::ostream &os, JointHistoryTree &j_hist)
         {
-            os << static_cast<HistoryTree<Joint<T>>>(j_hist);
+            os << j_hist.str();
             return os;
         }
+
+    protected:
+        void addIndividualHistory(std::shared_ptr<HistoryInterface> ihist);
+
+        void setupDefaultObs(number num_agents, const std::shared_ptr<Observation> &default_observation = sdm::NO_OBSERVATION);
+        std::shared_ptr<Joint<std::shared_ptr<Observation>>> default_observation_;
     };
 
 } // namespace sdm
-#include <sdm/core/state/jhistory_tree.tpp>
 ````
 

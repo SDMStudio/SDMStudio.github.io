@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Namespace sdm::parser
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**parser**](namespacesdm_1_1parser.md)
@@ -32,7 +34,7 @@ _Namespace grouping all functions for parsing files._
 | ---: | :--- |
 | typedef x3::with\_context&lt; [**error\_handler\_tag**](namespacesdm_1_1parser.md#typedef-error-handler-tag), std::reference\_wrapper&lt; [**error\_handler\_type**](namespacesdm_1_1parser.md#typedef-error-handler-type) &gt; const, [**phrase\_context\_type**](namespacesdm_1_1parser.md#typedef-phrase-context-type) &gt;::type | [**context\_type**](namespacesdm_1_1parser.md#typedef-context-type)  <br> |
 | typedef x3::rule&lt; dpomdp\_class, [**ast::dpomdp\_t**](structsdm_1_1ast_1_1dpomdp__t.md) &gt; | [**dpomdp\_type**](namespacesdm_1_1parser.md#typedef-dpomdp-type)  <br> |
-| typedef x3::error\_handler&lt; Iterator &gt; | [**error\_handler**](namespacesdm_1_1parser.md#typedef-error-handler)  <br> |
+| typedef x3::error\_handler&lt; [**Iterator**](classsdm_1_1Iterator.md) &gt; | [**error\_handler**](namespacesdm_1_1parser.md#typedef-error-handler)  <br> |
 | typedef x3::error\_handler\_tag | [**error\_handler\_tag**](namespacesdm_1_1parser.md#typedef-error-handler-tag)  <br> |
 | typedef [**error\_handler**](namespacesdm_1_1parser.md#typedef-error-handler)&lt; [**iterator\_type**](namespacesdm_1_1parser.md#typedef-iterator-type) &gt; | [**error\_handler\_type**](namespacesdm_1_1parser.md#typedef-error-handler-type)  <br> |
 | typedef std::string::const\_iterator | [**iterator\_type**](namespacesdm_1_1parser.md#typedef-iterator-type)  <br> |
@@ -112,9 +114,9 @@ _Namespace grouping all functions for parsing files._
 
 | Type | Name |
 | ---: | :--- |
-|  std::shared\_ptr&lt; [**sdm::DiscreteDecPOMDP**](classsdm_1_1DiscreteDecPOMDP.md) &gt; | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (char const \* filename) <br> |
-|  std::shared\_ptr&lt; [**sdm::DiscreteDecPOMDP**](classsdm_1_1DiscreteDecPOMDP.md) &gt; | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (std::string filename) <br> |
-|  std::shared\_ptr&lt; [**sdm::DiscreteDecPOMDP**](classsdm_1_1DiscreteDecPOMDP.md) &gt; | [**parse\_string**](namespacesdm_1_1parser.md#function-parse-string) (std::string storage) <br> |
+|  std::shared\_ptr&lt; [**sdm::DecPOMDP**](namespacesdm.md#typedef-decpomdp) &gt; | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (char const \*) <br> |
+|  std::shared\_ptr&lt; [**sdm::DecPOMDP**](namespacesdm.md#typedef-decpomdp) &gt; | [**parse\_file**](namespacesdm_1_1parser.md#function-parse-file) (std::string) <br> |
+|  std::shared\_ptr&lt; [**sdm::DecPOMDP**](namespacesdm.md#typedef-decpomdp) &gt; | [**parse\_string**](namespacesdm_1_1parser.md#function-parse-string) (std::string) <br> |
 
 
 
@@ -611,8 +613,8 @@ auto const sdm::parser::vector_stochastic;
 
 
 ```cpp
-std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_file (
-    char const * filename
+std::shared_ptr< sdm::DecPOMDP > sdm::parser::parse_file (
+    char const *
 ) 
 ```
 
@@ -622,8 +624,8 @@ std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_file (
 
 
 ```cpp
-std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_file (
-    std::string filename
+std::shared_ptr< sdm::DecPOMDP > sdm::parser::parse_file (
+    std::string
 ) 
 ```
 
@@ -633,12 +635,12 @@ std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_file (
 
 
 ```cpp
-std::shared_ptr< sdm::DiscreteDecPOMDP > sdm::parser::parse_string (
-    std::string storage
+std::shared_ptr< sdm::DecPOMDP > sdm::parser::parse_string (
+    std::string
 ) 
 ```
 
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/config.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/config.hpp`

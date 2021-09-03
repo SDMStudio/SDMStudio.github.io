@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # File belief\_mdp.hpp
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**world**](dir_414fa79a2aeb4aba632c04a0d3a53fff.md) **>** [**belief\_mdp.hpp**](belief__mdp_8hpp.md)
@@ -12,9 +14,15 @@ _File that contains the implementation of the belief mdp process class._ [More..
 
 * `#include <sdm/types.hpp>`
 * `#include <sdm/core/state/state.hpp>`
-* `#include <sdm/world/solvable_by_hsvi.hpp>`
-* `#include <sdm/world/discrete_mdp.hpp>`
-* `#include <sdm/world/discrete_mmdp.hpp>`
+* `#include <sdm/core/state/belief_state.hpp>`
+* `#include <sdm/core/state/interface/belief_interface.hpp>`
+* `#include <sdm/core/action/action.hpp>`
+* `#include <sdm/utils/struct/recursive_map.hpp>`
+* `#include <sdm/utils/struct/graph.hpp>`
+* `#include <sdm/world/solvable_by_mdp.hpp>`
+* `#include <sdm/world/base/pomdp_interface.hpp>`
+* `#include <sdm/world/gym_interface.hpp>`
+* `#include <sdm/world/mdp.hpp>`
 * `#include <sdm/world/belief_mdp.tpp>`
 
 
@@ -35,7 +43,7 @@ _File that contains the implementation of the belief mdp process class._ [More..
 
 | Type | Name |
 | ---: | :--- |
-| class | [**BeliefMDP**](classsdm_1_1BeliefMDP.md) &lt;typename TBelief, typename TAction, typename TObservation&gt;<br>_The_ [_**BeliefMDP**_](classsdm_1_1BeliefMDP.md) _class is the interface that enables solving Discret POMDP using_[_**HSVI**_](classsdm_1_1HSVI.md) _algorithm._ |
+| class | [**BaseBeliefMDP**](classsdm_1_1BaseBeliefMDP.md) &lt;TBelief&gt;<br>_This class provides a way to transform a_ [_**POMDP**_](classsdm_1_1POMDP.md) _into belief_[_**MDP**_](classsdm_1_1MDP.md) _formalism._ |
 
 
 
@@ -85,4 +93,4 @@ Copyright (c) 2021
     
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/belief_mdp.hpp`
+The documentation for this class was generated from the following file `src/sdm/world/belief_mdp.hpp`

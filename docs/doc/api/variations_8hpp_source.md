@@ -1,7 +1,7 @@
 
 # File variations.hpp
 
-[**File List**](files.md) **>** [**decision\_rules**](dir_4983fd2ecc8cc6698afce148812a6aba.md) **>** [**variations.hpp**](variations_8hpp.md)
+[**File List**](files.md) **>** [**core**](dir_92216a09053680f71034e5e26026ee62.md) **>** [**variations.hpp**](variations_8hpp.md)
 
 [Go to the documentation of this file.](variations_8hpp.md) 
 
@@ -55,6 +55,6 @@ namespace sdm
     std::shared_ptr<TFunction> end();
   };
 } // namespace sdm
-#include <sdm/utils/decision_rules/variations.tpp>
+#include <sdm/core/variations.tpp>
 ````
 

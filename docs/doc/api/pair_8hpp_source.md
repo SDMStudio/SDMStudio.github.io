@@ -27,6 +27,7 @@ namespace sdm
 
 namespace std
 {
+
     template <typename T, typename U>
     struct hash<sdm::Pair<T, U>>
     {

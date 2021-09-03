@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
+# Dir src/sdm/world
 
-# Dir /home/dalbert/Documents/SDMStudio/sdms/src/sdm/world
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**File List**](files.md) **>** [**sdm**](dir_ae1b8d8c3d2627954ba53c22978558f0.md) **>** [**world**](dir_414fa79a2aeb4aba632c04a0d3a53fff.md)
@@ -21,26 +23,24 @@
 | Type | Name |
 | ---: | :--- |
 | file | [**belief\_mdp.hpp**](belief__mdp_8hpp.md) <br>_File that contains the implementation of the belief mdp process class._  |
-| file | [**decision\_process.hpp**](decision__process_8hpp.md) <br>_File that contains the implementation of the decision process class._  |
-| file | [**discrete\_decpomdp.cpp**](discrete__decpomdp_8cpp.md) <br> |
-| file | [**discrete\_decpomdp.hpp**](discrete__decpomdp_8hpp.md) <br> |
-| file | [**discrete\_mdp.cpp**](discrete__mdp_8cpp.md) <br> |
-| file | [**discrete\_mdp.hpp**](discrete__mdp_8hpp.md) <br>_The file that contains the DiscreteMDP class._  |
-| file | [**discrete\_mmdp.cpp**](discrete__mmdp_8cpp.md) <br> |
-| file | [**discrete\_mmdp.hpp**](discrete__mmdp_8hpp.md) <br>_The file that contains the DiscreteMMDP class._  |
-| file | [**discrete\_pomdp.cpp**](discrete__pomdp_8cpp.md) <br> |
-| file | [**discrete\_pomdp.hpp**](discrete__pomdp_8hpp.md) <br>_The file that contains the DiscretePOMDP class._  |
 | file | [**gym\_interface.hpp**](gym__interface_8hpp.md) <br> |
-| file | [**interactive\_world.hpp**](interactive__world_8hpp.md) <br> |
-| file | [**ndpomdp.cpp**](ndpomdp_8cpp.md) <br> |
-| file | [**ndpomdp.hpp**](ndpomdp_8hpp.md) <br> |
+| file | [**hierarchical\_mpomdp.hpp**](hierarchical__mpomdp_8hpp.md) <br>_The file to transforme a MPOMDP in a hierarchical MPOMDP._  |
+| file | [**hierarchical\_occupancy\_mdp.hpp**](hierarchical__occupancy__mdp_8hpp.md) <br> |
+| file | [**mdp.hpp**](mdp_8hpp.md) <br>_The file that contains the MDP class._  |
+| file | [**mmdp.hpp**](mmdp_8hpp.md) <br> |
+| file | [**mpomdp.hpp**](mpomdp_8hpp.md) <br> |
+| file | [**networked\_distributed\_pomdp.hpp**](networked__distributed__pomdp_8hpp.md) <br> |
 | file | [**occupancy\_mdp.hpp**](occupancy__mdp_8hpp.md) <br> |
-| file | [**po\_decision\_process.hpp**](po__decision__process_8hpp.md) <br>_File that define the PartiallyObservableDecisionProcess generic class._  |
-| file | [**serialized\_belief\_mdp.hpp**](serialized__belief__mdp_8hpp.md) <br> |
-| file | [**serialized\_mdp.hpp**](serialized__mdp_8hpp.md) <br> |
-| file | [**serialized\_occupancy\_mdp.hpp**](serialized__occupancy__mdp_8hpp.md) <br> |
-| file | [**solvable\_by\_hsvi.hpp**](solvable__by__hsvi_8hpp.md) <br> |
-| file | [**world\_type.hpp**](world__type_8hpp.md) <br> |
+| file | [**pomdp.hpp**](pomdp_8hpp.md) <br> |
+| file | [**private\_hierarchical\_occupancy\_mdp.hpp**](private__hierarchical__occupancy__mdp_8hpp.md) <br> |
+| file | [**private\_hierarchical\_occupancy\_mdp\_with\_history.hpp**](private__hierarchical__occupancy__mdp__with__history_8hpp.md) <br> |
+| file | [**serial\_occupancy\_mdp.hpp**](serial__occupancy__mdp_8hpp.md) <br> |
+| file | [**serialized\_mmdp.hpp**](serialized__mmdp_8hpp.md) <br>_Defines the Serialized MMDP._  |
+| file | [**serialized\_mpomdp.hpp**](serialized__mpomdp_8hpp.md) <br> |
+| file | [**solvable\_by\_dp.hpp**](solvable__by__dp_8hpp.md) <br> |
+| file | [**solvable\_by\_hsvi.hpp**](solvable__by__hsvi_8hpp.md) <br>_File defining the interface SolvableByHSVI._  |
+| file | [**solvable\_by\_mdp.hpp**](solvable__by__mdp_8hpp.md) <br> |
+| file | [**transformed\_mpomdp.hpp**](transformed__mpomdp_8hpp.md) <br> |
 
 ## Directories
 
@@ -65,4 +65,4 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/world/`
+The documentation for this class was generated from the following file `src/sdm/world/`

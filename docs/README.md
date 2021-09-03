@@ -10,10 +10,10 @@ actionLink: /tutorials/quickstart.html
 features:
 - title: Help researchers in their experiments
   img: /assets/img/search_IA.jpg
-  details: High level interface with efficient algorithms will helps researchers to reduce the time from theory to experiments.
+  details: High level interface with efficient algorithms will help researchers to reduce time from theory to experiments.
 - title: Easily build new algorithms based on existed ones
   img: /assets/img/algos.jpg
-  details: Algorithms in SDMS are generic and highly reusable. Developers require minimal modification to build a new algorithm.   
+  details: Algorithms in SDMS are generic and highly reusable. Developers need minimal modification to apply them on new problem formulation.   
 - title: Quickly find solutions to decision making problems
   img: /assets/img/solution.jpg
   details: With the command line interface (CLI), you can quickly use the software to solve decision making problems.

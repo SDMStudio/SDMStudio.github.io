@@ -25,7 +25,7 @@ SDM'Studio est une plateforme logicielle open-source dédiée à la recherche en
 
 ## Pour qui ?
 
-SDM'Studio est à la fois un logiciel et une bibliothèque. Cette caractéristique permet différents types d'usages selon les besoins et les connaissances de l'utilisateur. Un utilisateur sans connaissance particulière en informatique peut utiliser l'interface haut-niveau du logiciel pour résoudre un problème qu'il aura préalablement formulé selon les formatages prédéfinis (voir [Formulation d'un problème](/fr/tutorials/quickstart.html#formulation-d-un-probleme)). Dans le cas d'une personne ayant des connaissances en informatique ou d'un chercheur dans le domaine, elle pourra utiliser l'aspect bibliothèque C++ pour l'intégrer à son application ou pour expérimenter de nouvelles approches de résolutions.
+SDM'Studio est à la fois un logiciel et une bibliothèque. Cette caractéristique permet différents types d'usages selon les besoins et les connaissances de l'utilisateur. Un utilisateur sans connaissance particulière en informatique peut utiliser l'interface haut-niveau du logiciel pour résoudre un problème qu'il aura préalablement formulé selon les formatages prédéfinis (voir [Formulation d'un problème](/fr/tutorials/quickstart.html#formulation-d-un-probleme)). Dans le cas d'une personne ayant des connaissances en informatique, elle pourra utiliser l'aspect bibliothèque C++ pour l'intégrer à son application ou pour expérimenter de nouvelles approches de résolutions. 
 
 ## Par où commencer ?
 

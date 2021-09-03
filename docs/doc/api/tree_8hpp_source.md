@@ -10,37 +10,26 @@
 
 #pragma once
 
-#include <unordered_set>
-#include <unordered_map>
 #include <memory>
 #include <iostream>
+#include <unordered_set>
+#include <unordered_map>
+#include <boost/serialization/shared_ptr.hpp>
+#include <boost/serialization/weak_ptr.hpp>
 
-// #include <sdm/utils/struct/node.hpp>
 #include <sdm/types.hpp>
 #include <sdm/tools.hpp>
+#include <sdm/public/boost_serializable.hpp>
 
 namespace sdm
 {
 
     template <typename T>
-    class Tree : public std::enable_shared_from_this<Tree<T>>
+    class Tree : public std::inheritable_enable_shared_from_this<Tree<T>>
+    //public BoostSerializable<Tree<T>>
     {
-    protected:
-        number max_depth_ = std::numeric_limits<number>::max();
-
-        number depth_ = 0;
-
-        T data_;
-
-        std::shared_ptr<Tree<T>> origin_;
-
-        std::weak_ptr<Tree<T>> parent_;
-
-        std::map<T, std::shared_ptr<Tree<T>>> children_;
-
-        bool is_origin = false;
-
     public:
+        using value_type = T;
         Tree();
 
         Tree(number max_depth);
@@ -50,7 +39,7 @@ namespace sdm
         virtual ~Tree();
 
         bool isOrigin() const;
-        
+
         const T &getData() const;
 
         number getNumChildren() const;
@@ -73,22 +62,33 @@ namespace sdm
 
         void setMaxDepth(number) const;
 
-        friend std::ostream &operator<<(std::ostream &os, const Tree<T> &tree)
+        std::string str() const;
+
+        std::shared_ptr<Tree<T>> getptr();
+
+        template <class Archive>
+        void serialize(Archive &archive, const unsigned int);
+
+        friend std::ostream &operator<<(std::ostream &os, Tree<T> &tree)
         {
-            os << sdm::tools::addIndent("", tree.getDepth());
-            os << "<tree address=\"" << &tree << "\" size=\"" << tree.getNumChildren() << "\"  horizon=\"" << tree.getDepth() << "\">" << std::endl;
-            os << sdm::tools::addIndent("<data>", tree.getDepth() + 1) << std::endl;
-            os << sdm::tools::addIndent("", tree.getDepth() + 2) << tree.getData() << std::endl;
-            os << sdm::tools::addIndent("</data>", tree.getDepth() + 1) << std::endl;
-            for (auto child : tree.getChildren())
-            {
-                os << *child << std::endl;
-            }
-            os << sdm::tools::addIndent("", tree.getDepth());
-            os << "</tree>" << std::endl;
-            // }
+            os << tree.str();
             return os;
         }
+
+    protected:
+        number depth_ = 0;
+
+        number max_depth_ = std::numeric_limits<number>::max();
+
+        T data_;
+
+        std::weak_ptr<Tree<T>> origin_;
+
+        std::weak_ptr<Tree<T>> parent_;
+
+        std::map<T, std::shared_ptr<Tree<T>>> children_;
+
+        bool is_origin = false;
     };
 
 } // namespace sdm

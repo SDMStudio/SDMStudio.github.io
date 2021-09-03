@@ -1,7 +1,9 @@
 
-<NavBar active_item_id="2"/>
-
 # Class sdm::RecursiveMap&lt; T0, T1 &gt;
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 **template &lt;class T0 class T0, class T1 class T1&gt;**
 
@@ -30,6 +32,7 @@ Inherits the following classes: map_t< T0, T1 >
 | Type | Name |
 | ---: | :--- |
 | typedef [**RecursiveMap**](classsdm_1_1RecursiveMap.md)&lt; T0, T1 &gt; | [**type**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#typedef-type)  <br> |
+| typedef [**value\_type**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#typedef-value-type) | [**value\_list\_type**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#typedef-value-list-type)  <br> |
 | typedef std::pair&lt; const T0, T1 &gt; | [**value\_type**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#typedef-value-type)  <br> |
 
 
@@ -39,9 +42,10 @@ Inherits the following classes: map_t< T0, T1 >
 
 | Type | Name |
 | ---: | :--- |
-|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-1-3) () <br> |
-|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-2-3) (const [**map\_t**](recursive__map_8hpp.md#typedef-map-t)&lt; T0, T1 &gt; & x) <br> |
-|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-3-3) (std::initializer\_list&lt; [**value\_type**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#typedef-value-type) &gt; vals) <br> |
+|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-1-4) () <br> |
+|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-2-4) (const [**map\_t**](recursive__map_8hpp.md#typedef-map-t)&lt; T0, T1 &gt; & x) <br> |
+|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-3-4) (const [**RecursiveMap**](classsdm_1_1RecursiveMap.md) & rmap) <br> |
+|   | [**RecursiveMap**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursivemap-4-4) (std::initializer\_list&lt; [**value\_type**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#typedef-value-type) &gt; vals) <br> |
 |  T1 | [**operator()**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-operator()) (T0 v0) <br>_Get a specific item._  |
 |  void | [**recursive\_emplace**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-recursive-emplace) (T0 v0, T1 v1) <br>_Emplace a specific element._  |
 
@@ -50,6 +54,11 @@ Inherits the following classes: map_t< T0, T1 >
 
 
 
+## Protected Functions
+
+| Type | Name |
+| ---: | :--- |
+|  void | [**serialize**](classsdm_1_1RecursiveMap_3_01T0_00_01T1_01_4.md#function-serialize) (Archive & archive, const unsigned int) <br> |
 
 
 # Detailed Description
@@ -78,6 +87,15 @@ using sdm::RecursiveMap< T0, T1 >::type =  RecursiveMap<T0, T1>;
 
 
 
+### typedef value\_list\_type 
+
+
+```cpp
+using sdm::RecursiveMap< T0, T1 >::value_list_type =  value_type;
+```
+
+
+
 ### typedef value\_type 
 
 
@@ -89,7 +107,7 @@ using sdm::RecursiveMap< T0, T1 >::value_type =  std::pair<const T0, T1>;
 ## Public Functions Documentation
 
 
-### function RecursiveMap [1/3]
+### function RecursiveMap [1/4]
 
 
 ```cpp
@@ -98,7 +116,7 @@ inline sdm::RecursiveMap< T0, T1 >::RecursiveMap ()
 
 
 
-### function RecursiveMap [2/3]
+### function RecursiveMap [2/4]
 
 
 ```cpp
@@ -109,7 +127,18 @@ inline sdm::RecursiveMap< T0, T1 >::RecursiveMap (
 
 
 
-### function RecursiveMap [3/3]
+### function RecursiveMap [3/4]
+
+
+```cpp
+inline sdm::RecursiveMap< T0, T1 >::RecursiveMap (
+    const RecursiveMap & rmap
+) 
+```
+
+
+
+### function RecursiveMap [4/4]
 
 
 ```cpp
@@ -152,7 +181,31 @@ void sdm::RecursiveMap< T0, T1 >::recursive_emplace (
 
 
 
-        ## Friends Documentation
+        
+## Protected Functions Documentation
+
+
+### function serialize 
+
+
+```cpp
+template<class Archive class Archive>
+inline void sdm::RecursiveMap< T0, T1 >::serialize (
+    Archive & archive,
+    const unsigned int
+) 
+```
+
+## Friends Documentation
+
+
+
+### friend access 
+
+
+```cpp
+friend class sdm::RecursiveMap< T0, T1 >::access () 
+```
 
 
 
@@ -169,4 +222,4 @@ inline friend std::ostream & sdm::RecursiveMap< T0, T1 >::operator<< (
 
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/utils/struct/recursive_map.hpp`
+The documentation for this class was generated from the following file `src/sdm/utils/struct/recursive_map.hpp`

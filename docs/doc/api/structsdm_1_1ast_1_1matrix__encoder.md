@@ -1,20 +1,22 @@
 
-<NavBar active_item_id="2"/>
-
 # Struct sdm::ast::matrix\_encoder
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
+
 
 
 [**Class List**](annotated.md) **>** [**sdm**](namespacesdm.md) **>** [**ast**](namespacesdm_1_1ast.md) **>** [**matrix\_encoder**](structsdm_1_1ast_1_1matrix__encoder.md)
 
 
 
-_encodes the input into a matrix_ 
+_encodes the input into a mapped matrix_ 
 
-* `#include <encoder.hpp>`
+* `#include <struct_encoders.hpp>`
 
 
 
-Inherits the following classes: boost::static_visitor< Matrix >
+Inherits the following classes: boost::static_visitor< std::shared_ptr< MappedMatrix< number, number > > >
 
 
 
@@ -38,8 +40,8 @@ Inherits the following classes: boost::static_visitor< Matrix >
 | Type | Name |
 | ---: | :--- |
 |   | [**matrix\_encoder**](structsdm_1_1ast_1_1matrix__encoder.md#function-matrix-encoder) ([**number**](namespacesdm.md#typedef-number) rows, [**number**](namespacesdm.md#typedef-number) cols) <br> |
-|  Matrix | [**operator()**](structsdm_1_1ast_1_1matrix__encoder.md#function-operator()-1-2) (const std::string & str) const<br>_encodes a string into a matrix_  |
-|  Matrix | [**operator()**](structsdm_1_1ast_1_1matrix__encoder.md#function-operator()-2-2) (const std::vector&lt; std::vector&lt; float &gt;&gt; & v) const<br>_encodes a matrix into a matrix_  |
+|  std::shared\_ptr&lt; [**MappedMatrix**](classsdm_1_1MappedMatrix.md)&lt; [**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number) &gt; &gt; | [**operator()**](structsdm_1_1ast_1_1matrix__encoder.md#function-operator()-1-2) (const std::string & str) const<br>_encodes a string into a mapped matrix_  |
+|  std::shared\_ptr&lt; [**MappedMatrix**](classsdm_1_1MappedMatrix.md)&lt; [**number**](namespacesdm.md#typedef-number), [**number**](namespacesdm.md#typedef-number) &gt; &gt; | [**operator()**](structsdm_1_1ast_1_1matrix__encoder.md#function-operator()-2-2) (const std::vector&lt; std::vector&lt; float &gt;&gt; & v) const<br>_encodes a vector of vector of real values into a mapped matrix_  |
 
 
 
@@ -75,7 +77,7 @@ number sdm::ast::matrix_encoder::rows;
 
 
 ```cpp
-inline sdm::ast::matrix_encoder::matrix_encoder (
+sdm::ast::matrix_encoder::matrix_encoder (
     number rows,
     number cols
 ) 
@@ -87,7 +89,7 @@ inline sdm::ast::matrix_encoder::matrix_encoder (
 
 
 ```cpp
-inline Matrix sdm::ast::matrix_encoder::operator() (
+std::shared_ptr< MappedMatrix < number , number > > sdm::ast::matrix_encoder::operator() (
     const std::string & str
 ) const
 ```
@@ -98,7 +100,14 @@ inline Matrix sdm::ast::matrix_encoder::operator() (
 **Parameters:**
 
 
-* `str` the way to encode the matrix 
+* `str` a string describing the matrix (i.e. "uniform", "identity", etc) 
+
+
+
+**Returns:**
+
+the corresponding mapped matrix 
+
 
 
 
@@ -108,7 +117,7 @@ inline Matrix sdm::ast::matrix_encoder::operator() (
 
 
 ```cpp
-inline Matrix sdm::ast::matrix_encoder::operator() (
+std::shared_ptr< MappedMatrix < number , number > > sdm::ast::matrix_encoder::operator() (
     const std::vector< std::vector< float >> & v
 ) const
 ```
@@ -119,11 +128,18 @@ inline Matrix sdm::ast::matrix_encoder::operator() (
 **Parameters:**
 
 
-* `v` the matrix 
+* `v` a vector of vector of real values 
+
+
+
+**Returns:**
+
+the corresponding mapped matrix 
+
 
 
 
         
 
 ------------------------------
-The documentation for this class was generated from the following file `/home/dalbert/Documents/SDMStudio/sdms/src/sdm/parser/encoder.hpp`
+The documentation for this class was generated from the following file `src/sdm/parser/encoders/struct_encoders.hpp`

@@ -34,7 +34,7 @@ Les schémas algorithmiques peuvent être vu comme des templates génériques. C
 Le schéma algorithmique général d'HSVI est représenté par le schéma ci-dessous. 
 Pour en définir une instance, celui-ci nécessite de définir les notions d'état $s_t$, d'action $a_t$, de borne inférieur $\underline{V}$ et borne supérieur $\bar{V}$.
 
-![Schéma HSVI](/assets/img/schemaHSVI.png)
+![Schéma HSVI](https://aldavid.gitlabpages.inria.fr/sdms/assets/img/schemaHSVI.png)
 
 
 **Exemple** : une instance d'HSVI est l'algorithme oHSVI. Cette instance permet de résoudre un Dec-POMDP formulé comme un occupancy-state MDP. Le type d'état dans ce cas est un état d'occupation, noté $\xi_t = p\left( x_t, o_t \mid \iota_t \right)$. Le type d'action est un ensemble de règles de décision individuelles, noté $\mathbf{d}_t = (d_t^1, ..., d_t^n) =  \left(p(u^1 \mid o_t^1), p(u^2 \mid o_t^2),..., p(u^n \mid o_t^n)\right)$. La borne inférieure est représentée par une ensemble d'hyperplan et la borne supérieure par un ensemble de point.
@@ -43,4 +43,4 @@ Pour en définir une instance, celui-ci nécessite de définir les notions d'ét
 
 Le schéma algorithmique général de Q-learning nécessite, quand à lui, de définir les notions d'état, d'action et de fonction de valeur d'action (Q-valeur).
 
-![Schéma QLearning](/assets/img/schemaQLearning.png)
+![Schéma QLearning](https://aldavid.gitlabpages.inria.fr/sdms/assets/img/schemaQLearning.png)

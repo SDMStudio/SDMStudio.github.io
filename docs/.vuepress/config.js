@@ -113,14 +113,14 @@ module.exports = {
             '/fr/': {
 
                 // text for the language dropdown
-                selectText: 'Languages',
+                selectText: 'Langages',
                 // label for this locale in the language dropdown
                 label: 'Français',
                 // Aria Label for locale in the dropdown
                 ariaLabel: 'Languages',
 
                 nav: [
-                    { text: 'Home', link: '/fr/' },
+                    { text: 'Accueil', link: '/fr/' },
                     { text: 'Tutoriels', link: '/fr/tutorials/' },
                     { text: 'Doc', link: '/doc/' },
                     { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },

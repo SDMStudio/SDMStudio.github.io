@@ -1,6 +1,8 @@
-# Solving DecPOMDP by serializing the problem 
+# HSVI for DecPOMDP (Serial vs Simultaneous)
 
-## Comparaison des méthodes dans le cas des NDPOMDP
+<!-- # Solving DecPOMDP by serializing the problem  -->
+
+<!-- ## Comparaison des méthodes dans le cas des NDPOMDP
 
 ### Test `example_4_3-1` (h=3)
 
@@ -129,4 +131,117 @@
 | 7       | 1          | 0     | 6,95999  | 6,96     | 7       | 7       | 46                   | 4             | 0,0759973   |
 | 8       | 1          | 0     | 7,95     | 7,95     | 8       | 8       | 46                   | 4             | 0,0869752   |
 | 9       | 1          | 0     | 8,94     | 8,94     | 9       | 9       | 46                   | 4             | 0,0983599   |
-| 10      | 1          | 0     | 9,93     | 9,93     | 10      | 10      | 46                   | 4             | 0,110252    |
+| 10      | 1          | 0     | 9,93     | 9,93     | 10      | 10      | 46                   | 4             | 0,110252    | --> |
+
+
+# Comparaison des méthodes
+
+## mabc_100_1 
+
+### PARAMS
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o   | p_b  | p_c |
+ | --------- | -------- | ----- | ------- | ----- | ---- | --- |
+ | 34464     | 1800     | 0.01  | 100     | 0.001 | 0.01 | 0.1 |
+
+### RESULTS
+ |     | Time    | Trials | Error      | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+ | --- | ------- | ------ | ---------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+ | SIM | 1.28028 | 3      | 0.00828585 | 90.738   | 90.7463  | 244           | 244           | 58                       | 118                      | 1                   | 8253   |
+ | SER | 1.43325 | 15     | 0.00137701 | 90.7389  | 90.7403  | 814           | 814           | 127                      | 297                      | 1                   | 8269   |
+
+## recycling_10_1
+
+### PARAMS
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o | p_b | p_c |
+ | --------- | -------- | ----- | ------- | --- | --- | --- |
+ | 34464     | 1800     | 0.01  | 10      | 0.1 | 0.1 | 0.1 |
+
+### RESULTS
+   |     | Time    | Trials | Error      | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+   | --- | ------- | ------ | ---------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+   | SIM | 5.56031 | 203    | 0.00998992 | 31.4     | 31.41    | 283           | 283           | 123                      | 5                        | 4                   | 3813   |
+   | SER | 2.34171 | 279    | 0.00362873 | 31.755   | 31.7586  | 647           | 647           | 553                      | 17                       | 4                   | 3461   |
+
+## recycling_20_1
+
+### PARAMS
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o   | p_b  | p_c |
+ | --------- | -------- | ----- | ------- | ----- | ---- | --- |
+ | 34464     | 1800     | 0.01  | 20      | 0.001 | 0.01 | 0.1 |
+
+### RESULTS
+  |     | Time    | Trials | Error    | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+  | --- | ------- | ------ | -------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+  | SIM | 1072.45 | 14358  | 0.614851 | 62.6324  | 63.2473  | 40209         | 40209         | 18695                    | 5                        | 4                   | 15528  |
+  | SER | 482.781 | 34465  | 0.614563 | 62.514   | 63.1286  | 145944        | 145944        | 470                      | 17                       | 4                   | 15528  |
+  
+
+## aligment_10_1
+### PARAMS
+
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o   | p_b  | p_c |
+ | --------- | -------- | ----- | ------- | ----- | ---- | --- |
+ | 34464     | 1800     | 0.01  | 10      | 0.001 | 0.01 | 0.1 |
+
+### RESULTS
+
+|     | Time    | Trials | Error       | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+| --- | ------- | ------ | ----------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+| SIM | 111.246 | 2552   | 4.26326e-14 | 91       | 91       | 3798          | 3798          | 13379                    | 257                      | 2                   | 6752   |
+| SER | 191.987 | 14298  | 0.00520833  | 91       | 91.0052  | 21576         | 21576         | 43993                    | 1272                     | 2                   | 7707   |
+
+## Mars_5_1
+### PARAMS
+
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o | p_b | p_c |
+ | --------- | -------- | ----- | ------- | --- | --- | --- |
+ | 34464     | 1800     | 0.01  | 5       | 0.1 | 0.1 | 0.1 |
+
+### RESULTS
+   |     | Time    | Trials | Error   | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+   | --- | ------- | ------ | ------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+   | SIM | 1801.67 | 0      | 69.3856 | -55      | 14.3856  | 0             | 0             | 1                        | 95                       | 0                   | 7047   |
+   | SER | 1803.23 | 13     | 2.17971 | 11.8366  | 14.0163  | 51            | 51            | 1                        | 369                      | 0                   | 6544   |
+
+## GridSmall_10_1
+### PARAMS
+
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o | p_b | p_c |
+ | --------- | -------- | ----- | ------- | --- | --- | --- |
+ | 34464     | 1800     | 0.01  | 10      | 0.1 | 0.1 | 0.1 |
+
+### RESULTS
+
+|     | Time    | Trials | Error      | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+| --- | ------- | ------ | ---------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+| SIM | 78.5667 | 17     | -0.0892865 | 6.35295  | 6.26367  | 66            | 66            | 1                        | 629                      | 0                   | 7186   |
+| SER | 6.6975  | 16     | -0.0781523 | 6.25727  | 6.17912  | 107           | 107           | 1                        | 3818                     | 0                   | 7176   |
+
+## tiger_4_3
+
+### PARAMS
+ | MAX_TRIAL | MAX_TIME | Error | Discount | Horizon | p_o  | p_b | p_c |
+ | --------- | -------- | ----- | -------- | ------- | ---- | --- | --- |
+ | 34464     | 1800     | 0.01  | 4        | 0.01    | 0.01 | 0.1 |
+
+### RESULTS
+
+ 
+|     | Time    | Trials | Error      | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+| --- | ------- | ------ | ---------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+| SIM | 1801.68 | 5      | 2.99098    | 4.02227  | 7.01325  | 8             | 8             | 1                        | 5                        | 0                   | 8304   |
+| SER | 422.387 | 136    | 0.00454273 | 4.02227  | 4.02681  | 173           | 173           | 1                        | 20                       | 0                   | 7967   |
+
+
+## boxPushing_4_1 
+### PARAMS
+ | MAX_TRIAL | MAX_TIME | Error | Horizon | p_o | p_b  | p_c |
+ | --------- | -------- | ----- | ------- | --- | ---- | --- |
+ | 34464     | 1800     | 0.01  | 4       | 0.1 | 0.01 | 0.1 |
+
+### RESULTS
+
+ |     | Time    | Trials | Error    | LB Value | UB Value | Total Size LB | Total Size UB | Num Nodes (oState graph) | Num Nodes (belief graph) | Num Max of JHistory | Memory |
+ | --- | ------- | ------ | -------- | -------- | -------- | ------------- | ------------- | ------------------------ | ------------------------ | ------------------- | ------ |
+ | SIM | 1801.68 | 3      | 0.250605 | 97.7405  | 97.9911  | 7             | 7             | 1                        | 179                      | 0                   | 7387   |
+ | SER | 52.832  | 14     | 0        | 96.4869  | 96.4869  | 23            | 23            | 1                        | 309                      | 0                   | 8303   |

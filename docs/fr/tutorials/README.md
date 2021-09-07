@@ -15,8 +15,8 @@ tags:
 # SDM'Studio - Sequential Decision Making Studio 
 
   - [Introduction](#introduction)
-  - [Pour qui ?](#pour-qui-)
-  - [Par où commencer ?](#par-où-commencer-)
+  - [Pour qui ?](#pour-qui)
+  - [Par où commencer ?](#par-ou-commencer)
   - [Philosophie](#philosophie)
   
 ## Introduction

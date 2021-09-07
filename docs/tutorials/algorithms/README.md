@@ -9,15 +9,12 @@ tags:
   - algorithms
 ---
 
-# Fondements algorithmiques
+# Algorithmic foundations 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-
-La plateforme SDM'Studio est construite autour de la généricité des schémas algorithmiques de planification et d'apprentissage par renforcement. Les schémas algorithmique natifs de la plateforme sont HSVI et Q-learning. Toutefois, la liste est étendue à d'autres algorithmes de l'état de l'art.
-
-
+The SDM'Studio platform is built around the genericity of algorithmic schemes for planning and reinforcement learning. The platform's native algorithmic schemes are HSVI and Q-learning. However, the list is extended to other state-of-the-art algorithms.
 
 |           |         A*         | Backward Induction  |        HSVI        |     Q-Learning     |  Value Iteration   |
 | :-------- | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
@@ -27,20 +24,19 @@ La plateforme SDM'Studio est construite autour de la généricité des schémas 
 | ZS-POSG   |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |
 | POSG      |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |
 
-Les schémas algorithmiques peuvent être vu comme des templates génériques. Chaque instance d'un de ces schémas constitue un algorithme à part entière. Les changements peuvent intervenir au niveau de la définition du problème ou dans la façon de représenter les fonctions de valeurs. 
+Algorithmic patterns can be seen as generic templates. Each instance of one of these schemes is an algorithm in its own right. The changes may occur in the problem definition or in the way the value functions are represented. 
 
+## HSVI algorithmic scheme
 
-## Schéma algorithmique d'HSVI
-
-Le schéma algorithmique général d'HSVI est représenté par le schéma ci-dessous. 
-Pour en définir une instance, celui-ci nécessite de définir les notions d'état $s_t$, d'action $a_t$, de borne inférieur $\underline{V}$ et borne supérieur $\bar{V}$.
+The general algorithmic scheme of HSVI is represented by the diagram below. 
+To define an instance, this one requires to define the notions of state $s_t$, action $a_t$, lower bound $underline{V}$ and upper bound $bar{V}$.
 
 ![SchemaHSVI](https://aldavid.gitlabpages.inria.fr/sdms/assets/img/schemaHSVI.png)
 
-**Exemple** : une instance d'HSVI est l'algorithme oHSVI. Cette instance permet de résoudre un Dec-POMDP formulé comme un occupancy-state MDP. Le type d'état dans ce cas est un état d'occupation, noté $\xi_t = p\left( x_t, o_t \mid \iota_t \right)$. Le type d'action est un ensemble de règles de décision individuelles, noté $\mathbf{d}_t = (d_t^1, ..., d_t^n) =  \left(p(u^1 \mid o_t^1), p(u^2 \mid o_t^2),..., p(u^n \mid o_t^n)\right)$. La borne inférieure est représentée par une ensemble d'hyperplan et la borne supérieure par un ensemble de point.
+**Example** : An instance of HSVI is the oHSVI algorithm. This instance allows to solve a Dec-POMDP formulated as an occupancy-state MDP. The state type in this case is an occupancy state, noted $xi_t = p\left( x_t, o_t \mid \iota_t \right)$. The action type is a set of individual decision rules, denoted $\mathbf{d}_t = (d_t^1, ..., d_t^n) = \left(p(u^1 \mid o_t^1), p(u^2 \mid o_t^2),..., p(u^n \mid o_t^n)\right)$. The lower bound is represented by a set of hyperplanes and the upper bound by a set of points.
 
-## Schéma algorithmique du Q-learning
+## Q-learning algorithmic scheme
 
-Le schéma algorithmique général de Q-learning nécessite, quand à lui, de définir les notions d'état, d'action et de fonction de valeur d'action (Q-valeur).
+The general algorithmic scheme of Q-learning requires the definition of the notions of state, action and action value function (Q-value).
 
 ![SchemaQLearning](https://aldavid.gitlabpages.inria.fr/sdms/assets/img/schemaQLearning.png)

@@ -15,30 +15,30 @@ tags:
 # SDM'Studio - Sequential Decision Making Studio 
 
   - [Introduction](#introduction)
-  - [Pour qui ?](#pour-qui-)
-  - [Par où commencer ?](#par-où-commencer-)
-  - [Philosophie](#philosophie)
+  - [For whom ?](#for-whom)
+  - [Getting started](#getting-started)
+  - [Philosophy](#philosophy)
   
 ## Introduction
 
-SDM'Studio est une plateforme logicielle open-source dédiée à la recherche en intelligence artificielle. La plateforme s'intéresse à la résolution de ce que l'on appelle les problèmes de prise de décision séquentielle. C'est-à-dire, des problèmes dans lesquels un ou plusieurs agents ont pour objectif d'accomplir une tâche prédéfinie en interagissant dans un environnement<!-- qu'ils observent partiellement -->. SDMS repose sur les fondements théoriques de la résolution des processus de décision de Markov (MDP). Grâce à des reformulations judicieusement choisies, nous étendons les équations de Bellman classiques, et les algorithmes qui en découlent, à des classes de problèmes plus complexes tels que les POMDP, les DecPOMDP et les POSG (voir [Fondements théoriques](/fr/tutorials/theory/)). 
+SDM'Studio is an open-source software platform dedicated to artificial intelligence research. The platform focuses on solving so-called sequential decision making problems. That is, problems in which one or more agents have the objective of accomplishing a predefined task by interacting in an environment. SDMS is based on the theoretical foundations of Markov decision processes (MDP). Through carefully chosen reformulations, we extend the classical Bellman equations, and the algorithms derived from them, to more complex classes of problems such as POMDPs, DecPOMDPs and POSGs (see [Theoretical Foundations](/tutorials/theory/)). 
 
-## Pour qui ?
+## For whom ?
 
-SDM'Studio est à la fois un logiciel et une bibliothèque. Cette caractéristique permet différents types d'usages selon les besoins et les connaissances de l'utilisateur. Un utilisateur sans connaissance particulière en informatique peut utiliser l'interface haut-niveau du logiciel pour résoudre un problème qu'il aura préalablement formulé selon les formatages prédéfinis (voir [Formulation d'un problème](/fr/tutorials/quickstart.html#formulation-d-un-probleme)). Dans le cas d'une personne ayant des connaissances en informatique, elle pourra utiliser l'aspect bibliothèque C++ pour l'intégrer à son application ou pour expérimenter de nouvelles approches de résolutions. 
+SDM'Studio is both a software and a library. This characteristic allows different types of use according to the needs and knowledge of the user. A user with no particular knowledge in programming can use the high-level interface of the software to solve a problem that was formulated beforehand according to the predefined formatting (see [Formulating a problem](/tutorials/quickstart.html#formulating-a-problem)). In the case of a person with a computer science background, she can use the C++ library part to integrate it into their application or to experiment it with new approaches to solving problems. 
 
-## Par où commencer ?
+## Getting started
 
-Pour commencer, le plus simple est d'essayer. Commencez par installer SDM'Studio sur votre machine `Linux` ou `MacOS` grâce au guide d'[Installation](/fr/tutorials/install.html). Ensuite, suivez le tutoriel '[Pour commencer](/fr/tutorials/quickstart.html)' et lancez vos premières résolution de problème en ligne de commande. Vous pourrez continuer en lisant les sections relatives aux [Fondements théoriques](/fr/tutorials/theory/) et aux [Fondements algorithmiques](/fr/tutorials/algorithms/) pour avoir une vue d'ensemble des briques logicielles existantes dans SDMS. Finalement, la section [Contribuer](/fr/tutorials/contribute.html) et la [Documentation](/doc/) de la bibliothèque vous permettront de prendre en main l'outil en tant que développeur.
+The easiest way to get started is to try it out. Start by installing SDM'Studio on your `Linux` or `MacOS` computer using the [Installation](/tutorials/install.html) guide. Then follow the tutorial '[Getting started](/tutorials/quickstart.html)' and do your first command line troubleshooting. You can continue by reading the sections on [Theoretical Foundations](/tutorials/theory/) and [Algorithmic Foundations](/tutorials/algorithms/) to get an overview of the existing software building blocks in SDMS. Finally, the [Contribute](/tutorials/contribute.html) and [Documentation](/doc/) sections of the library will allow you to get to grips with the tool as a developer.
 
-## Philosophie
+## Philosophy
 
-SDMS est développé dans le but de contribuer aux recherches scientifiques courantes et futures. A cet effet, le logiciel est mis à disposition gratuite et le code est open-source. Cela à pour but de permettre à la communauté de recherche en IA d'en bénéficier rapidement et simplement. Son usage peut servir à des fins commerciales, sous condition qu'il respecte les termes de la licence définie par les auteurs. 
+SDMS is developed with the aim of contributing to current and future scientific research. To this end, the software is made available free of charge and the code is open-source. This is to allow the AI research community to benefit from it quickly and easily. It can be used for commercial purposes, provided that it respects the terms of the licence defined by the authors. 
 
-L'objectif du projet SDMS, principalement financé sur fond de l'[Agence Nationale de Recherche](https://anr.fr/), est de construire un logiciel: 
-1. gratuit
-2. performant 
-3. rassemblant les dernières avancées scientifiques du domaine
-4. réutilisable dans le cadre de recherches futures 
-5. simple d'utilisation
+The objective of the SDMS project, mainly funded by the [French National Research Agency](https://anr.fr/), is to build a software: 
+1. free of charge
+2. efficient 
+3. bringing together the latest scientific advances in the field
+4. reusable for future research 
+5. easy to use
 

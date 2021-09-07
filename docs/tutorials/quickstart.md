@@ -43,7 +43,7 @@ sdms-solve --help
 ```
 
 
-### Problem formulation
+### Formulating a problem
 
 To define a new problem, one way is to write a file of the standardized format `.pomdp` by Anthony Cassandra. This format is described in the file [tiger.dpomdp](/tiger.txt). We also consider the format `.dpomdp` and `.posg`, which are extensions of `.pomdp`. Predefined problems can be found in `/usr/local/share/sdms/world/`. 
 

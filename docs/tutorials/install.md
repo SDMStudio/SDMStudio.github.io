@@ -39,7 +39,8 @@ cd sdms
 <code-group>
 <code-block title="Linux" active>
 ```bash
-apt-get install libeigen3-dev libboost-all-dev libfmt-dev
+apt-get update 
+apt-get install libeigen3-dev libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev
 ```
 </code-block>
 

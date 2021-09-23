@@ -66,6 +66,8 @@ module.exports = {
                                         collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
+                                            '/doc/experiments/params',
+                                            '/doc/experiments/notes',
                                             '/tutorials/algorithms/hsvi',  /* /foo/one.html */
                                             '/tutorials/algorithms/qlearning',  /* /foo/one.html */
                                         ]
@@ -100,11 +102,14 @@ module.exports = {
                                         collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
+                                            '/doc/experiments/params',
+                                            '/doc/experiments/notes',
                                             '/doc/experiments/hsvi',
                                             '/doc/experiments/serial_hsvi',
                                             '/doc/experiments/hierarchical_qlearning',
                                         ]
                                     },
+                                    '/doc/debugging/',
                                 ]
                             }
                         ]

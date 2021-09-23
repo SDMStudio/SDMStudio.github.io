@@ -1,6 +1,7 @@
 
 # Selection of parameters
 
+TEST GITHUB !!!!! TO BE DELETED !!!
 ## Memory
 
 Minimum memory size required to achieve optimality

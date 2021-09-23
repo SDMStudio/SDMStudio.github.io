@@ -37,7 +37,7 @@ jobs:
     # Create a fresh git repo in wwwroot
     - name: Init new repo in dist and commit generated files
       run: |
-        cd docs/.vuepress/dist
+        cd public
         git init
         git add -A
         git config --local user.email "action@github.com"
@@ -56,4 +56,4 @@ jobs:
         # Determines if force push is used
         force: true
         # Directory to change to before pushing.
-        directory: ./docs/.vuepress/dist
+        directory: ./public

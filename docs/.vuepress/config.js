@@ -1,5 +1,5 @@
 module.exports = {
-    base: "/sdms/",
+    base: "/",
     dest: "public",
     title: "SDM'Studio",
     description: 'Solver for sequential decision making problems.',

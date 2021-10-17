@@ -4,7 +4,8 @@
       class="myImg"
       :src="$withBase(img)"
       :alt="title"
-      style="width: 200%; max-width: 1000px"
+      style="width: 200%"
+      :style="'max-width:' + max_width + 'px'"
       v-on:click="zoom(img, title)"
     />
 
@@ -28,6 +29,10 @@ export default {
   props: {
     img: String,
     title: String,
+    max_width: {
+      type: Number,
+      default: 1000,
+    },
   },
   methods: {
     zoom: function (image, titlee) {

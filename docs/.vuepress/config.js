@@ -23,6 +23,7 @@ module.exports = {
         }
     },
     themeConfig: {
+        // logo : "/assets/img/sdms-icon2.png",
         locales: {
             '/': {
                 // text for the language dropdown
@@ -162,6 +163,16 @@ module.exports = {
                                             '/fr/tutorials/algorithms/qlearning',  /* /foo/one.html */
                                         ]
                                     },
+                                    {
+                                        title: 'Fonctions de valeurs',   // required
+                                        path: '/fr/tutorials/value_function/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/fr/tutorials/value_function/q/',  /* /foo/one.html */
+                                            '/fr/tutorials/value_function/v/',  /* /foo/one.html */
+                                        ]
+                                    },
                                     '/fr/tutorials/contribute',  /* /foo/one.html */
                                 ]
                             },
@@ -189,7 +200,7 @@ module.exports = {
                 },
             }
         },
-        repo: 'https://gitlab.inria.fr/chroma1/plasma/sdms',
+        repo: 'https://github.com/SDMStudio/sdms',
 
     },
 

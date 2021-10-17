@@ -10,7 +10,7 @@
         :alt="$siteTitle"
       />
       <span
-        v-if="$siteTitle"
+        v-else-if="$siteTitle"
         ref="siteName"
         class="site-name"
         :class="{ 'can-hide': $site.themeConfig.logo }"

@@ -3,6 +3,7 @@ sidebar: false
 home: true
 # layout: SpecialLayout
 heroImage: /assets/img/sdms-icon-light.png
+# heroImage: /assets/img/sdms-icon2.png
 heroText: Explore decision making researches.
 tagline: Solve sequential decision making problems using most advanced algorithms in this field. 
 actionText: Get Started →

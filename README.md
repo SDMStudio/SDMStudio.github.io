@@ -1,5 +1,5 @@
 # Website of the [SDM'Studio](https://gitlab.inria.fr/chroma1/plasma/sdms) library
-[![pipeline status](https://gitlab.inria.fr/aldavid/sdms/badges/master/pipeline.svg)](https://gitlab.inria.fr/aldavid/sdms/-/commits/master)
+[![pipeline status](https://github.com/SDMStudio/SDMStudio.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/SDMStudio/SDMStudio.github.io/actions/workflows/deploy.yml/badge.svg)
 
 
 SDM'Studio is a C++ librairy that provides efficient solvers for sequential decision making problems. The associated webpage provides information about how to use the library and how to contribute to it. Moreover, the website provides a full documentation of the platform and some tutorials to understand the theoritical concepts behind the platform.

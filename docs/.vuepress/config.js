@@ -73,6 +73,16 @@ module.exports = {
                                             '/tutorials/algorithms/qlearning',  /* /foo/one.html */
                                         ]
                                     },
+                                    {
+                                        title: 'Value functions',   // required
+                                        path: '/tutorials/value_function/',      // optional, link of the title, which should be an absolute path and must exist
+                                        collapsable: true, // optional, defaults to true
+                                        sidebarDepth: 1,
+                                        children: [
+                                            '/tutorials/value_function/q/',  /* /foo/one.html */
+                                            '/tutorials/value_function/v/',  /* /foo/one.html */
+                                        ]
+                                    },
                                     '/tutorials/contribute',  /* /foo/one.html */
                                 ]
                             },

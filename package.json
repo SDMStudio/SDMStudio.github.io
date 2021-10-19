@@ -18,11 +18,14 @@
   "author": "David Albert",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "vue-particles": "^1.0.9",
     "vuepress": "^1.8.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
     "markdown-it": "^8.4.2",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-katex": "^2.0.3"

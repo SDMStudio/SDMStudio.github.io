@@ -37,10 +37,25 @@ module.exports = {
                     { text: 'Home', link: '/' },
                     { text: 'Tutorials', link: '/tutorials/' },
                     { text: 'Doc', link: '/doc/' },
-                    { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },
+                    { text: 'ANR Plasma', link: '/anr/' },
+                    // { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },
                 ],
                 sidebar: {
-
+                    "/anr/":
+                        [
+                            {
+                                title: 'ANR PLASMA',   // required
+                                path: '/anr/',      // optional, link of the title, which should be an absolute path and must exist
+                            },
+                            {
+                                title: 'Team Members',   // required
+                                path: '/anr/members',      // optional, link of the title, which should be an absolute path and must exist
+                            },
+                            {
+                                title: 'Publications',   // required
+                                path: '/anr/publications',      // optional, link of the title, which should be an absolute path and must exist
+                            },
+                        ],
                     "/tutorials/":
                         [
                             {
@@ -139,10 +154,24 @@ module.exports = {
                     { text: 'Accueil', link: '/fr/' },
                     { text: 'Tutoriels', link: '/fr/tutorials/' },
                     { text: 'Doc', link: '/doc/' },
-                    { text: 'ANR Plasma', link: 'https://anr.fr/Projet-ANR-19-CE23-0018' },
+                    { text: 'ANR Plasma', link: '/fr/anr/' },
                 ],
                 sidebar: {
-
+                    "/fr/anr/":
+                        [
+                            {
+                                title: 'ANR PLASMA',   // required
+                                path: '/fr/anr/',      // optional, link of the title, which should be an absolute path and must exist
+                            },
+                            {
+                                title: 'Team Members',   // required
+                                path: '/fr/anr/members',      // optional, link of the title, which should be an absolute path and must exist
+                            },
+                            {
+                                title: 'Publications',   // required
+                                path: '/fr/anr/publications',      // optional, link of the title, which should be an absolute path and must exist
+                            },
+                        ],
                     "/fr/tutorials/":
                         [
                             {

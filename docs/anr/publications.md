@@ -32,3 +32,13 @@ date="2020"
 url="https://hal.inria.fr/hal-03080287"
 abstract="Many non-trivial sequential decision-making problems are efficiently solved by relying on Bellman's optimality principle, i.e., exploiting the fact that sub-problems are nested recursively within the original problem. Here we show how it can apply to (infinite horizon) 2-player zero-sum partially observable stochastic games (zs-POSGs) by (i) taking a central planner's viewpoint, which can only reason on a sufficient statistic called occupancy state, and (ii) turning such problems into zero-sum occupancy Markov games (zs-OMGs). Then, exploiting the Lipschitz-continuity of the value function in occupancy space, one can derive a version of the HSVI algorithm (Heuristic Search Value Iteration) that provably finds an-Nash equilibrium in finite time."
 />
+
+
+
+<Publication 
+title="Template" 
+authors="Names" 
+date="2021" 
+url="https://hal.inria.fr/hal-03080287"
+abstract="Abstract example."
+/>

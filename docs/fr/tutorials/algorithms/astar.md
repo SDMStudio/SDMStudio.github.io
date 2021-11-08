@@ -1,0 +1,5 @@
+# A*
+
+## Schéma algorithmique
+
+## Composantes 

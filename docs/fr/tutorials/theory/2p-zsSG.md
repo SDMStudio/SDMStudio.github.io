@@ -1,4 +1,4 @@
-# Two-player zero-sum SG
+# zero-sum SG
 
 ## Model
 Un jeu stochastique (ou de Markov) décompté à deux joueurs et somme

@@ -188,8 +188,14 @@ module.exports = {
                                         collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
+                                            '/fr/tutorials/theory/mdp',  /* /foo/one.html */
+                                            '/fr/tutorials/theory/pomdp',  /* /foo/one.html */
+                                            '/fr/tutorials/theory/decpomdp',  /* /foo/one.html */
                                             '/fr/tutorials/theory/2p-zsSG',  /* /foo/one.html */
                                             '/fr/tutorials/theory/2p-zsPOSG',  /* /foo/one.html */
+                                            '/fr/tutorials/theory/posg',  /* /foo/one.html */
+                                            '/fr/tutorials/theory/bMDP',  /* /foo/one.html */
+                                            '/fr/tutorials/theory/oMDP',  /* /foo/one.html */
                                         ]
                                     },
                                     {
@@ -198,7 +204,9 @@ module.exports = {
                                         collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
+                                            '/fr/tutorials/algorithms/astar',  /* /foo/one.html */
                                             '/fr/tutorials/algorithms/hsvi',  /* /foo/one.html */
+                                            '/fr/tutorials/algorithms/pbvi',  /* /foo/one.html */
                                             '/fr/tutorials/algorithms/qlearning',  /* /foo/one.html */
                                         ]
                                     },

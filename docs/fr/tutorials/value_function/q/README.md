@@ -21,7 +21,7 @@ tags:
 La fonction de $Q$ la plus simple est la fonction tabulaire. On la représente par une simple matrice dont les lignes représentent les états et les colonnes les actions. Cette fonction est parfaitement appropriée pour les cas où les espace d'état et d'action sont discrets et relativement petits. En effet, dans le cas d'un espace d'état (resp. espace d'action) continu, le nombre de valeurs à stoker tendra vers l'infinie. Pour faire face à ce problème, nous devons définir une distance entre les états (resp. les actions) qui 
 garantisse l'obtention d'une matrice de dimension finie. 
 
-
+ 
 En prenant le cas d'une statistique suffisante $s$ définit sur le $(n+1)$-simplexe (i.e $s \in [0,1]^n$ et $\sum_{x=1}^n s(x) = 1$), la fonction de valeur tabulaire pourrait être représentée comme ci-dessous.
 
 <img src="/assets/img/qtabular.png" width="500px">

@@ -4,7 +4,7 @@
       class="myImg"
       :src="$withBase(img)"
       :alt="title"
-      style="width: 200%"
+      style="width: 100%"
       :style="'max-width:' + max_width + 'px'"
       v-on:click="zoom(img, title)"
     />
@@ -86,7 +86,8 @@ export default {
   margin: auto;
   display: block;
   width: 90%;
-  max-width: 700px;
+  height: 800px;
+  // max-width: 700px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */

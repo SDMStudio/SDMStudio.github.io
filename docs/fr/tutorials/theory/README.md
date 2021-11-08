@@ -12,6 +12,7 @@ tags:
 # Fondements théoriques
 
 ### *Notations*
+
 - $x_t$ : état à l'instant $t$
 - $u_t$ : action à l'instant $t$
 - $z_t$ : observation à l'instant $t$
@@ -23,19 +24,22 @@ tags:
 
 
 
-| Problème                   | Etat                                                            | Action                                                                                                              | Observation |
-| -------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------- |
-| *MDP*                      | $x_t$                                                           | $u_t$                                                                                                               |        $x_t$     |
-| *POMDP*                    | $b_t =  p\left( x_t \mid o_t \right)$                           | $u_t$                                                                                                               |       $z_t$      |
-| *MMDP*                     | $s_t$                                                           | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                                                             |       $x_t$      |
-| *MPOMDP*                   | $b_t =  p\left( x_t \mid \mathbf{o}_t \right)$                  | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                                                             |      $\mathbf{z}_t = \left( z_t^1, z_t^2, ..., z_t^n\right)$       |
-| *Dec-POMDP*                | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$                | $\mathbf{d}_t = (d_t^i)_{i=1..n} =  \left(p(u^i \mid o_t^i)\right)_{i=1..n}$ |
-| *Extensive-Form Dec-POMDP* | $\xi_t^i =  p\left( x_t, o_t, u_t^{0:i-1} \mid \iota_t \right)$ | $d_t^i =  p(u_t^i \mid o_t^i)$                                                                                      |             |
-| *(2p)-ZS-SG*               | $s_t$                                                           | $(p(u_t^1),p(u_t^2))$                                                                                               |             |
-| *(2p)-ZS-POSG*             | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$                | $\mathbf{d}_t = (d_t^i)_{i=1..n} =  \left(p(u^i \mid o_t^i)\right)_{i=1..n}$ |             |
+| Problème                     | Etat                                                            | Action                                                                       | Observation                                             |
+| ---------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------- |
+| *MDP*                        | $x_t$                                                           | $u_t$                                                                        | $x_t$                                                   |
+| *POMDP*                      | $x_t$                                                           | $u_t$                                                                        | $z_t$                                                   |
+| *MMDP*                       | $x_t$                                                           | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                      | $x_t$                                                   |
+| *serial MMMDP*              | $x_t$                                                           | $u_t^i$                                                                      | $x_t$                                                 |
+| *MPOMDP*                     | $x_t$                                                           | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                      | $\mathbf{z}_t = \left( z_t^1, z_t^2, ..., z_t^n\right)$ |
+| *serial MPOMDP*              | $x_t$                                                           | $u_t^i$                                                                      | $\mathbf{z}_t$ if $i = n$ else   $\emptyset$                                               |
+| *hierarchical MPOMDP*        | $x_t$                                                           | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                      | $\mathbf{z}_t = \left( z_t^{1:n}, z_t^{2:n}, ..., z_t^n\right)$ |
+| *belief MDP*                 | $b_t =  p\left( x_t \mid \mathbf{o}_t \right)$                  | $\mathbf{u}_t = \left( u_t^1, u_t^2, ..., u_t^n\right)$                      | $\mathbf{z}_t = \left( z_t^1, z_t^2, ..., z_t^n\right)$ |
+| *occupancy MDP*              | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$                | $\mathbf{d}_t = (d_t^i)_{i=1..n} =  \left(p(u^i \mid o_t^i)\right)_{i=1..n}$ | $\rho_t = \emptyset$                                    |
+| *serial occupancy MDP*       | $\xi_t^i =  p\left( x_t, o_t, u_t^{0:i-1} \mid \iota_t \right)$ | $d_t^i =  p(u_t^i \mid o_t^i)$                                               | $\rho_t = \emptyset$                                    |
+| *hierarchical occupancy MDP* | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$                | $\mathbf{d}_t = (d_t^i)_{i=1..n} =  \left(p(u^i \mid o_t^i)\right)_{i=1..n}$ | $\rho_t = z_t^n$                                        |
+| *(2p)-ZS-SG*                 | $s_t$                                                           | $(p(u_t^1),p(u_t^2))$                                                        |                                                         |
+| *occupancy MG*               | $\xi_t =  p\left( x_t, o_t \mid \iota_t \right)$                | $\mathbf{d}_t = (d_t^i)_{i=1..n} =  \left(p(u^i \mid o_t^i)\right)_{i=1..n}$ |                                                         |
 
-
-## Reformulation de problèmes
 
 
 

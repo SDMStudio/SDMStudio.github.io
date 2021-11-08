@@ -1,2 +1,2 @@
-# Two-player zero-sum POSG
+# zero-sum POSG
 

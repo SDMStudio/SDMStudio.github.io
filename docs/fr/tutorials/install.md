@@ -135,8 +135,51 @@ Les développeurs peuvent utiliser l'architecture *multi-stage* pour bénéficie
 
 ```bash
 docker build --target dev -t sdms:develop .
-docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sdms sdms:devel
+docker run -ti --rm --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sdms sdms:develop
 ```
+
+::: details Mise en place de l'environnement développeur
+```bash
+# Get sources
+git clone <sdms-reop>
+cd sdms
+
+# Checkout to the develop branch and create your own feature branch
+git checkout develop
+git checkout -b feature/branchName
+
+# then, you can add your code
+
+# Run the latest docker image (blavad/sdms:0.6-cpu-devel at this time)
+docker run  -ti --rm --name sdms-dev \
+    --mount type=bind,source="$(pwd)",target=/home/sdms \
+    --mount type=bind,source="/opt/ibm",target=/opt/ibm \
+    blavad/sdms:0.6-cpu-devel
+
+# at this moment, the container docker is running
+# and you will be able to compile your code
+
+cd /home/sdms
+```
+Pour installer simplement SDMS'Studio et l'utiliser.
+
+```bash
+./install.sh
+SDMStudio solve --help
+SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
+```
+
+Pour suivre la chaîne de compilation complète (mieux pour un usage intensif de la recompilation du projet).
+```bash
+# We need to copy libtb2.so in the lib directory
+cp lib/libtb2.so /lib 
+mkdir build && cd build
+cmake .. 
+make -j8 SDMStudio
+src/SDMStudio solve --help
+src/SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
+```
+:::
 
 En ajoutant certains arguments, on peut construire une image configurée pour CUDA.
 
@@ -145,10 +188,12 @@ docker build --build-arg BASE_IMAGE=nvidia/cuda:<tag> --build-arg LIBTORCH_URL=<
 docker build --build-arg BASE_IMAGE=nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04 --build-arg LIBTORCH_URL=https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.7.1.zip --target dev -t blavad/sdms:0.1-cuda10.2-cudnn7-devel .
 ```
 
+
 ### Pour les utilisateurs de Grid'5000
 
 Les utilisateurs du serveur de calcul *Grid'5000* peuvent suivre la procédure ci-dessous pour faire leurs expérimentations.
 
+::: details Procedure d'utilisation sous Grid'5000
 ```bash
 # Connect to a site on grid'5000
 ssh (site).g5k
@@ -175,3 +220,4 @@ docker run --rm --gpus all -ti --name sdms-dev  --mount type=bind,source="$(pwd)
 
 # Run experiments on your needs 
 ```
+:::

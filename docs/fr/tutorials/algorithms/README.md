@@ -18,12 +18,17 @@ La plateforme SDM'Studio est construite autour de la généricité des schémas 
 
 
 
-|              |         A*         | Backward Induction |        HSVI        | MCTS  |        PBVI        |      Perseus       |     Q-Learning     | REINFORCE | SARSA |  Value Iteration   |
-| :----------- | :----------------: | :----------------: | :----------------: | :---: | :----------------: | :----------------: | :----------------: | :-------: | :---: | :----------------: |
-| MDP          |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :x:  |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: |    :x:    |  :x:  | :white_check_mark: |
-| BeliefMDP    |  :x:   | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
-| OccupancyMDP | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
-| OccupancyMG  |        :x:         |        :x:         |        :x:         |  :x:  |        :x:         |        :x:         |        :x:         |    :x:    |  :x:  |  :no_entry_sign:   |
+|                            |         A*         | Backward Induction |        HSVI        | MCTS  |        PBVI        |      Perseus       |     Q-Learning     | REINFORCE | SARSA |  Value Iteration   |
+| :------------------------- | :----------------: | :----------------: | :----------------: | :---: | :----------------: | :----------------: | :----------------: | :-------: | :---: | :----------------: |
+| MDP                        |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :x:  |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: |    :x:    |  :x:  | :white_check_mark: |
+| serial MMDP                |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :x:  |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: |    :x:    |  :x:  | :white_check_mark: |
+| belief MDP                 |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
+| serial belief MDP          |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
+| hierarchical belief MDP    |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
+| occupancy MDP              | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
+| serial occupancy MDP       |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
+| hierarchical occupancy MDP |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :x:  |  :no_entry_sign:   |
+| OccupancyMG                |        :x:         |        :x:         |        :x:         |  :x:  |        :x:         |        :x:         |        :x:         |    :x:    |  :x:  |  :no_entry_sign:   |
 
 Legend :  :x: not implemented :no_entry_sign: not allowed  :white_check_mark: implemented
 
@@ -33,3 +38,16 @@ Les schémas algorithmiques peuvent être vu comme des templates génériques. C
 
 
 <ImageZoom img="/assets/img/algoUML.png" title="Relations between algorithms" max_width="800"/>
+
+
+|                            |         A*         | Backward Induction |        HSVI        |        PBVI        |      Perseus       |     Q-Learning     |  Value Iteration   |
+| :------------------------- | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
+| MDP                        |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |
+| serial MMDP                |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |
+| belief MDP                 |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |
+| serial belief MDP          |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |
+| hierarchical belief MDP    |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |
+| occupancy MDP              | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |
+| serial occupancy MDP       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |
+| hierarchical occupancy MDP |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :no_entry_sign:   |
+| OccupancyMG                |  :no_entry_sign:   |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |  :no_entry_sign:   |

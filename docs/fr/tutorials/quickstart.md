@@ -11,12 +11,12 @@ En installant SDM'Studio vous avez installer quatre types de fichiers (binaries,
 Le programme principal est ``SDMStudio``. Ce programme concentre les différentes fonctionnalités du logiciel. Pour commencer, exécutez les trois commandes ci-dessous: 
 
 ```bash 
-SDMStudio solve -a "A*" -f "DecPOMDP" 
-SDMStudio solve -a "HSVI" -f "DecPOMDP" 
-SDMStudio solve -a "QLearning" -f "DecPOMDP" -m 1 -e 0.1 -t 10000
+SDMStudio solve -a "A*" -f "OccupancyMDP" 
+SDMStudio solve -a "HSVI" -f "OccupancyMDP" 
+SDMStudio solve -a "QLearning" -f "OccupancyMDP" -m 1 -e 0.1 -t 10000
 ```
 
-Vous venez de résoudre un DecPOMDP grâce à trois algorithmes différents (A*, HSVI et Q-Learning). Pour voir comment utiliser le programme `SDMStudio`, il faut utiliser ``SDMStudio --help`` ou encore `man SDMStudio`.
+Vous venez de résoudre un **POMDP décentralisé** grâce à trois algorithmes différents (A*, HSVI et Q-Learning). Le paramètre `-f` spécifie au programme d'utiliser la reformulation en **occupancy MDP** pour le résoudre.  Pour voir comment utiliser le programme `SDMStudio`, il faut utiliser ``SDMStudio --help`` ou encore `man SDMStudio`.
 
 ```bash
     Usage : SDMStudio COMMAND

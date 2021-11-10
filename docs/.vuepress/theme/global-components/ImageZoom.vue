@@ -85,9 +85,8 @@ export default {
 .modal-content {
   margin: auto;
   display: block;
-  width: 90%;
-  height: 800px;
-  // max-width: 700px;
+  width: 90rem;
+  max-width: 900px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */

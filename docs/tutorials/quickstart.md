@@ -12,12 +12,12 @@ Installing SDM'Studio results in installing four types of files (binaries, heade
 The main program is called `SDMStudio`. This program gather all functionalities of the software. Firstly, let's execute the commands below:
 
 ```bash 
-SDMStudio solve -a "A*" -f "DecPOMDP" 
-SDMStudio solve -a "HSVI" -f "DecPOMDP" 
-SDMStudio solve -a "QLearning" -f "DecPOMDP" -m 1 -e 0.1 -t 10000
+SDMStudio solve -a "A*" -f "OccupancyMDP" 
+SDMStudio solve -a "HSVI" -f "OccupancyMDP" 
+SDMStudio solve -a "QLearning" -f "OccupancyMDP" -m 1 -e 0.1 -t 10000
 ```
 
-You just solved a DecPOMDP thanks to three different algorithms (A*, HSVI and Q-Learning). To check the different usage of `SDMStudio`, simply run  ``SDMStudio --help`` or `man SDMStudio`.
+You just solved a **decentralized POMDP** thanks to three different algorithms (A*, HSVI and Q-Learning). The `-f` parameter tells the program to use the **occupancy MDP** reformulation to solve it. To check the different usage of `SDMStudio`, simply run  ``SDMStudio --help`` or `man SDMStudio`.
 
 ```bash
     Usage : SDMStudio COMMAND

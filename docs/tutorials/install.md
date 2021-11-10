@@ -140,6 +140,50 @@ docker build --target dev -t sdms:develop .
 docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sdms sdms:devel
 ```
 
+::: details Setup the developer environment
+
+```bash
+# Get sources
+git clone <sdms-reop>
+cd sdms
+
+# Checkout to the develop branch and create your own feature branch
+git checkout develop
+git checkout -b feature/branchName
+
+# then, you can add your code
+
+# Run the latest docker image (blavad/sdms:0.6-cpu-devel at this time)
+docker run  -ti --rm --name sdms-dev \
+    --mount type=bind,source="$(pwd)",target=/home/sdms \
+    --mount type=bind,source="/opt/ibm",target=/opt/ibm \
+    blavad/sdms:0.6-cpu-devel
+
+# at this moment, the container docker is running
+# and you will be able to compile your code
+
+cd /home/sdms
+```
+If you only need to install and use SDMS'Studio.
+
+```bash
+./install.sh
+SDMStudio solve --help
+SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
+```
+
+If you prefer a step by step compilation and usage.
+```bash
+# For now, we need to copy libtb2.so in the lib directory
+cp lib/libtb2.so /lib 
+mkdir build && cd build
+cmake .. 
+make -j8 SDMStudio
+src/SDMStudio solve --help
+src/SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
+```
+:::
+
 With custom parameters, it is possible to build an image that is configure to work with any required version of CUDA.
 ```bash
 docker build --build-arg BASE_IMAGE=nvidia/cuda:<tag> --build-arg LIBTORCH_URL=<url/to/cuda/libtorch> --target dev -t sdms:<tag> .
@@ -150,6 +194,7 @@ docker build --build-arg BASE_IMAGE=nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04 --
 
 Grid'5000 users can follow the procedure below to run experiments with GPUs on Grid'5000.
 
+::: details Procedure to follow on Grid'5000
 ```bash
 # Connect to a site on grid'5000
 ssh (site).g5k
@@ -176,3 +221,4 @@ docker run --rm --gpus all -ti --name sdms-dev  --mount type=bind,source="$(pwd)
 
 # Run experiments on your needs 
 ```
+:::

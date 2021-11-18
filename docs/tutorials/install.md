@@ -8,9 +8,13 @@ The SDM'Studio platform requires the libraries below mentionned:
 - [eigen](https://eigen.tuxfamily.org) : linear algebra library
 - [fmt](https://fmt.dev) : library to format inputs and outputs
 - [torch](https://pytorch.org/) : machine learning library
-## Quick install
 
-To quickly install SDMS, execute the file `install.sh`. 
+## Install from sources
+
+
+### *Ubuntu 18.04*
+
+To quickly install SDMS on ***Ubuntu 18.04***, execute the file `install.sh`. 
 
 ```bash
 git clone https://gitlab.inria.fr/chroma1/plasma/sdms.git
@@ -22,7 +26,11 @@ cd sdms
 You may need to change permissions using ``chmod +x install.sh``.
 :::
 
-## Step by step installation
+### Other distributions
+
+Installation procedure on other distributions requires to install Docker. See the section on [Docker images](#docker-images) for more information.
+
+### Step by step installation
 
 The step by step installation allows to better understand the different stages in the installation procedure. If you face a problem when executing `install.sh` or if you prefer manage dependencies by yourself, this section is for you. 
 
@@ -102,69 +110,100 @@ The parameter `CMAKE_BUILD_TYPE` will change the options of the compilation. Thi
 
 ## Docker Images 
 
-Docker provide a way to install SDMS on any OS and without being administrator of the computer. Thanks to docker containers, the process that is running SDMS, will be isolated to other processes.
+Docker provides a way to install SDMS on any OS. 
+
+### Quick install with Docker 
+
+**Step 1. Get sources**
+```bash
+git clone --branch develop https://github.com/SDMStudio/sdms.git
+cd sdms
+```
+
+**Step 2. Configure a development environment with Docker**
+```bash
+./open-docker.sh
+```
+
+**Step 3. Install SDMS in the container**
+```bash
+./install-docker.sh
+```
+
+**Step 4. Use the solver**
+```bash
+SDMStudio --help
+SDMStudio solve --help
+
+# HSVI
+SDMStudio solve -w mabc.dpomdp -a HSVI -f oMDP -h 10 -m 1 -e 0.01 --p_c 0.1 --p_o 0.1 --p_b 0.1 --lower_bound maxplan_wcsp --lb_freq_pruning 10 --lb_type_of_pruning bounded --upper_bound sawtooth_lp --ub_init Pomdp --time_max 7200 --name mabc-test
+
+# PBVI
+SDMStudio solve -w recycling.dpomdp -a PBVI -f oMDP -h 10 -m 1 -e 0.1 --p_o 0.01 --p_c 0.1 --p_b 0.1 --time_max 7200 --num_samples 100 --name pbvi
+
+# QLearning
+SDMStudio solve -w tiger.dpomdp -a QLearning -f oMDP -h 3 -m 3 -e 0.1 --p_c 0.1 --p_o 0.1 --p_b 0.1 --qvalue_function maxplan_wcsp --q_init Zero --time_max 7200 --name qlearning -t 10000
+```
 
 ### Using pre-built images
 
 You can run a pre-built docker image from the Docker Hub. See available tags on [DockerHub](https://hub.docker.com/r/blavad/sdms).
 
 ```bash
-docker run --rm -ti blavad/sdms:<tag>
-docker run --rm -ti blavad/sdms:latest
+docker run --rm -ti blavad/sdms:<TAG>
+docker run --rm -ti blavad/sdms:<VERSION>-<PROCESSOR>-<TYPE> # Most of the tags follow this format
 ```
 
-### Building the image yourself
+**1. Runtime Images**
 
-To build a custom image, you can use the `Dockerfile` provided. The command is :
+The **runtime** images (i.e. `blavad/sdms:*-run`) allow you to run the software without having to worry about building it.
 
+Usage example:
 ```bash
-docker build -t sdms:<tag> .
+docker run --rm -ti blavad/sdms:0.7-cpu-run
+SDMStudio --help
 ```
 
-::: warning
-The `Dockerfile` supplied will build images with  PyTorch for CPU.  You can specify another path to the PyTorch repository by adding the argument : `LIBTORCH_URL=<path/to/libtorch-xxxxx.zip`.
-:::
+**2. Development Images**
 
-It will then be possible to instanciate a container from the newly built image in interactive mode.  
+The **development** images (i.e. `blavad/sdms:*-devel`) allow platform developers to have access to a configured environment with the necessary dependencies. This type of image is particularly useful for contributing to the code with a *Mac OSX* or *Windows* platform. 
 
+Usage example:
 ```bash
-docker run --rm -ti sdms:<tag>
+docker run --rm -ti blavad/sdms:0.7-cpu-devel # Example of devel image
+
+docker run --rm -ti --mount type=bind,source="$(pwd)",target=/home/sdms blavad/sdms:0.7-cpu-devel # Example of devel image
 ```
 
-### For developers
-
-Developers can use the multi-stage build architecture to improve flexibility during development process. If you don't want to install SDMS dependencies on your machine or you want to avoid building a new docker image each time you make changes in the code, you can build and run the base `dev` image using `bind mount` tools. This feature will mount your local repo in a container. The following command lines do that: 
-
-```bash
-docker build --target dev -t sdms:develop .
-docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sdms sdms:devel
-```
 
 ::: details Setup the developer environment
 
+1. Get sources.
 ```bash
-# Get sources
-git clone <sdms-reop>
+# Get sources from a specific SDMS repository
+git clone <SDMS_REPO>
 cd sdms
+```
 
+2. Checkout to or create your working branch.
+```bash
 # Checkout to the develop branch and create your own feature branch
 git checkout develop
-git checkout -b feature/branchName
-
-# then, you can add your code
-
-# Run the latest docker image (blavad/sdms:0.6-cpu-devel at this time)
-docker run  -ti --rm --name sdms-dev \
-    --mount type=bind,source="$(pwd)",target=/home/sdms \
-    --mount type=bind,source="/opt/ibm",target=/opt/ibm \
-    blavad/sdms:0.6-cpu-devel
-
-# at this moment, the container docker is running
-# and you will be able to compile your code
-
-cd /home/sdms
+git checkout -b feature/<BRANCH_NAME>
 ```
-If you only need to install and use SDMS'Studio.
+
+3. Now, you can add your code.
+
+4. Run develop image and move to the source directory.
+```bash
+# Run the latest -devel image ( blavad/sdms:0.7-cpu-devel at this time )
+docker run  -ti --rm --mount type=bind,source="$(pwd)",target=/sdms blavad/sdms:0.7-cpu-devel
+
+# Here, the container docker is running; you will be able to compile and run your code
+cd /sdms
+```
+
+5.1. If you only need to install and use SDMS'Studio (slower method).
 
 ```bash
 ./install.sh
@@ -172,23 +211,53 @@ SDMStudio solve --help
 SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
 ```
 
-If you prefer a step by step compilation and usage.
+5.2. If you prefer a step by step compilation and usage (faster method). 
 ```bash
-# For now, we need to copy libtb2.so in the lib directory
-cp lib/libtb2.so /lib 
 mkdir build && cd build
 cmake .. 
-make -j8 SDMStudio
+make -j4 SDMStudio
 src/SDMStudio solve --help
 src/SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
 ```
 :::
 
+
+
+### Building the image yourself
+
+To build a custom image, you can use the `Dockerfile` provided. The command is :
+
+```bash
+docker build -t sdms:<TAG_NAME> .
+```
+
+::: warning
+The `Dockerfile` supplied will build images with  PyTorch for CPU.  You can specify another path to the PyTorch repository by adding the argument : `LIBTORCH_URL=<PATH/TO/libtorch-xxxxx.zip>`.
+:::
+
+
 With custom parameters, it is possible to build an image that is configure to work with any required version of CUDA.
 ```bash
-docker build --build-arg BASE_IMAGE=nvidia/cuda:<tag> --build-arg LIBTORCH_URL=<url/to/cuda/libtorch> --target dev -t sdms:<tag> .
-docker build --build-arg BASE_IMAGE=nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04 --build-arg LIBTORCH_URL=https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.7.1.zip --target dev -t blavad/sdms:0.1-cuda10.2-cudnn7-devel .
+docker build --build-arg BASE_IMAGE=nvidia/cuda:<CUDA_TAG_NAME> --build-arg LIBTORCH_URL=<PATH/TO/CUDA/LIBTORCH> --target dev -t sdms:<TAG_NAME> .
+docker build --build-arg BASE_IMAGE=nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04 --build-arg LIBTORCH_URL=https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.7.1.zip --target dev -t blavad/sdms:0.7-cuda10.2-cudnn7-devel.
 ```
+
+It will then be possible to instanciate a container from previously built image in interactive mode.  
+
+```bash
+docker run --rm -ti sdms:<TAG_NAME>
+```
+
+<!-- 
+### For developers
+
+Developers can use the multi-stage build architecture to improve flexibility during development process. If you don't want to install SDMS dependencies on your machine or you want to avoid building a new docker image each time you make changes in the code, you can build and run the base `dev` image using `bind mount` tools. This feature will mount your local repo in a container. The following command lines do that: 
+
+```bash
+docker build --target dev -t sdms:develop .
+docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sdms sdms:devel
+``` -->
+
 
 ### Grid'5000 users
 

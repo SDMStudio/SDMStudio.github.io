@@ -1,5 +1,17 @@
 # HSVI
 
+## Experiments 17/12/2021
+
+**Parameters :**
+ 
+- lower_bound = PWLC / WCSP
+- upper_bound = SAWTOOTH / MILP
+- p_b = 0.001
+- p_o = 0.01
+- max_time = 7200 s
+
+<ImageZoom img="/assets/img/plotly_h2-5.png" title="Icon dark"/>
+
 ## Variation en fonction de la précision de compression
 
 **Parameters :**

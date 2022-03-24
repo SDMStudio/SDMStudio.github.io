@@ -5,32 +5,34 @@ The library SDM'Studio is compatible with ***Linux*** and ***Mac OSX*** platform
 
 The SDM'Studio platform requires the libraries below mentionned: 
 - [boost](https://www.boost.org/) : C++ tools library
-- [eigen](https://eigen.tuxfamily.org) : linear algebra library
 - [fmt](https://fmt.dev) : library to format inputs and outputs
 - [torch](https://pytorch.org/) : machine learning library
+<!-- - [eigen](https://eigen.tuxfamily.org) : linear algebra library -->
 
 ## Install from sources
+ 
+To install SDMS from sources, simply get sources and execute the file `install.sh`. 
 
-
-### *Ubuntu 18.04*
-
-To quickly install SDMS on ***Ubuntu 18.04***, execute the file `install.sh`. 
+<code-group>
+<code-block title="Linux & Mac" active>
 
 ```bash
 git clone https://gitlab.inria.fr/chroma1/plasma/sdms.git
 cd sdms
-./install.sh
+./install.sh # this will install sdms sources in /usr/local/
 ```
+</code-block>
+</code-group>
 
 ::: warning
 You may need to change permissions using ``chmod +x install.sh``.
 :::
 
-### Other distributions
+If installation suceed, go to the [Getting Started](./quickstart.html) section.
 
-Installation procedure on other distributions requires to install Docker. See the section on [Docker images](#docker-images) for more information.
 
-### Step by step installation
+
+## Step by step installation
 
 The step by step installation allows to better understand the different stages in the installation procedure. If you face a problem when executing `install.sh` or if you prefer manage dependencies by yourself, this section is for you. 
 
@@ -48,13 +50,13 @@ cd sdms
 <code-block title="Linux" active>
 ```bash
 apt-get update 
-apt-get install libeigen3-dev libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev
+apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev
 ```
 </code-block>
 
 <code-block title="Mac">
 ```bash
-brew install eigen boost fmt
+brew install boost fmt gmp zlib zma unzip wget cmake clang
 ```
 </code-block>
 </code-group>

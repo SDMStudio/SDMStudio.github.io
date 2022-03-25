@@ -11,6 +11,14 @@ The SDM'Studio platform requires the libraries below mentionned:
 
 ## Install from sources
  
+
+**1. Prerequisite (optional) : ILOG CPLEX**
+
+Some algorithms use `ILOG CPLEX` solver to get solutions of linear programs.
+To be able to run these algorithms, download `ILOG CPLEX` on [https://www.ibm.com](https://www.ibm.com) and install it.
+
+**2. Installation**
+
 To install SDMS from sources, simply get sources and execute the file `install.sh`. 
 
 <code-group>
@@ -25,7 +33,10 @@ cd sdms
 </code-group>
 
 ::: warning
-You may need to change permissions using ``chmod +x install.sh``.
+If you have installed CPLEX, you will need to fill in the installation path as an argument. 
+```bash
+./install.sh --cplex_root=/opt/ibm/ILOG/CPLEX_Studio201/
+```
 :::
 
 If installation suceed, go to the [Getting Started](./quickstart.html) section.

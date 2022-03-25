@@ -10,9 +10,14 @@ Lors de l'installation, les dépendances ci-dessous seront installées:
 
 ## Installation rapide
 
+**1. Prerequis (optionnel) : ILOG CPLEX**
+
+Certains algorithms utilisent le logiciel propriétaire `ILOG CPLEX` pour résoudre des programmes linéaires.
+Pour utiliser ces algorithmes, téléchargez et installez `ILOG CPLEX` depuis le site [https://www.ibm.com](https://www.ibm.com).
+
+**2. Installation**
+
 Après avoir récupérer les sources de SDMS, lancer le script ``install.sh``.
-
-
 
 <code-group>
 <code-block title="Linux & Mac" active>
@@ -26,7 +31,10 @@ cd sdms
 </code-group>
 
 ::: warning
-Il peut être nécessaire d'autoriser l'exécution du fichier : ``chmod +x install.sh``.
+Si vous avez installé CPLEX, il faudra renseigner le chemin d'installation en argument. 
+```bash
+./install.sh --cplex_root=/opt/ibm/ILOG/CPLEX_Studio201/
+```
 :::
 
 Une fois l'installation terminée, vous pouvez sautez à la section [Getting Started](./quickstart.html).

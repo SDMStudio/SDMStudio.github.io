@@ -17,7 +17,7 @@ To install SDMS from sources, simply get sources and execute the file `install.s
 <code-block title="Linux & Mac" active>
 
 ```bash
-git clone https://gitlab.inria.fr/chroma1/plasma/sdms.git
+git clone https://github.com/SDMStudio/sdms.git # you need `git` to be installed
 cd sdms
 ./install.sh # this will install sdms sources in /usr/local/
 ```
@@ -30,8 +30,6 @@ You may need to change permissions using ``chmod +x install.sh``.
 
 If installation suceed, go to the [Getting Started](./quickstart.html) section.
 
-
-
 ## Step by step installation
 
 The step by step installation allows to better understand the different stages in the installation procedure. If you face a problem when executing `install.sh` or if you prefer manage dependencies by yourself, this section is for you. 
@@ -40,7 +38,7 @@ The step by step installation allows to better understand the different stages i
 **Step 1 : Downloading SDM'Studio sources**
 
 ```bash
-git clone https://gitlab.inria.fr/chroma1/plasma/sdms.git
+git clone https://github.com/SDMStudio/sdms.git # you need `git` to be installed 
 cd sdms
 ```
 
@@ -50,7 +48,7 @@ cd sdms
 <code-block title="Linux" active>
 ```bash
 apt-get update 
-apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev
+apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev unzip wget cmake clang
 ```
 </code-block>
 

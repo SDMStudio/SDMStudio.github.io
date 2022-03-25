@@ -4,23 +4,33 @@ La bibliothèque SDM'Studio est compatible avec les plateforme ***Linux*** et **
 
 Lors de l'installation, les dépendances ci-dessous seront installées: 
 - [boost](https://www.boost.org/) : bibliothèque d'outils C++
-- [eigen](https://eigen.tuxfamily.org) : bibliothèque d'algèbre linéaire
 - [fmt](https://fmt.dev) : bibliothèque de formatage d'entrées/sorties
 - [torch](https://pytorch.org/) : bibliothèque de machine learning
+<!-- - [eigen](https://eigen.tuxfamily.org) : bibliothèque d'algèbre linéaire -->
 
 ## Installation rapide
 
-L'installation de SDMS se fait grâce au fichier ``install.sh``.
+Après avoir récupérer les sources de SDMS, lancer le script ``install.sh``.
 
+
+
+<code-group>
+<code-block title="Linux & Mac" active>
 
 ```bash
-git clone https://gitlab.inria.fr/chroma1/plasma/sdms.git
+git clone https://github.com/SDMStudio/sdms.git # nécessite d'installer l'utilitaire git
 cd sdms
-./install.sh
+./install.sh # this will install sdms sources in /usr/local/
 ```
+</code-block>
+</code-group>
+
 ::: warning
 Il peut être nécessaire d'autoriser l'exécution du fichier : ``chmod +x install.sh``.
 :::
+
+Une fois l'installation terminée, vous pouvez sautez à la section [Getting Started](./quickstart.html).
+
 
 ## Installation pas à pas
 
@@ -30,7 +40,7 @@ L'installation pas à pas permet de mieux comprendre les différentes étapes d'
 **Etape 1 : Téléchargement des sources**
 
 ```bash
-git clone https://gitlab.inria.fr/chroma1/plasma/sdms.git
+git clone https://github.com/SDMStudio/sdms.git # nécessite d'installer l'utilitaire git 
 cd sdms
 ```
 
@@ -41,16 +51,17 @@ cd sdms
 <code-block title="Linux" active>
 ```bash
 apt-get update 
-apt-get install libeigen3-dev libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev
+apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev unzip wget cmake clang
 ```
 </code-block>
 
 <code-block title="Mac">
 ```bash
-brew install eigen boost fmt
+brew install boost fmt gmp zlib zma unzip wget cmake clang
 ```
 </code-block>
 </code-group>
+
 
 **Etape 3 (facultatif) : Installation d'ILOG CPLEX**
 

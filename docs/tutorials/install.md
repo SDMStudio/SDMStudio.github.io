@@ -21,16 +21,16 @@ To be able to run these algorithms, download `ILOG CPLEX` on [https://www.ibm.co
 
 To install SDMS from sources, simply get sources and execute the file `install.sh`. 
 
-<code-group>
-<code-block title="Linux & Mac" active>
+<!-- <code-group>
+<code-block title="Linux & Mac" active> -->
 
 ```bash
 git clone https://github.com/SDMStudio/sdms.git # you need `git` to be installed
 cd sdms
 ./install.sh # this will install sdms sources in /usr/local/
 ```
-</code-block>
-</code-group>
+<!-- </code-block>
+</code-group> -->
 
 ::: warning
 If you have installed CPLEX, you will need to fill in the installation path as an argument. 
@@ -57,14 +57,12 @@ cd sdms
 
 <code-group>
 <code-block title="Linux" active>
-
 ```bash
 apt-get update 
 apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev unzip wget cmake clang
 ```
 </code-block>
 <code-block title="Mac">
-
 ```bash
 brew install boost fmt gmp zlib zma unzip wget cmake clang
 ```

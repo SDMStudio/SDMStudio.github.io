@@ -57,13 +57,14 @@ cd sdms
 
 <code-group>
 <code-block title="Linux" active>
+
 ```bash
 apt-get update 
 apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev unzip wget cmake clang
 ```
 </code-block>
-
 <code-block title="Mac">
+
 ```bash
 brew install boost fmt gmp zlib zma unzip wget cmake clang
 ```

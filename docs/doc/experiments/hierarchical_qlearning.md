@@ -1,5 +1,24 @@
 # Q-learning
 
+
+Pour les paramètres, voir fichier solve.cpp.
+
+| Param Baris                       | Param actuels                                                                              |
+| --------------------------------- | ------------------------------------------------------------------------------------------ |
+| -q                                | --value_function                                                                           |
+| --ball_r                          | --g_start, --g_end                                                                         |
+| -l                                | --rate_start, --rate_end, --rate_decay                                                     |
+| -s, --seed                        | -s, --seed                                                                                 |
+| -p, --problem                     | -w, --world                                                                                |
+| "PrivateHierarchicalOccupancyMDP" | "hoMDP"                                                                                    |
+| -q tabular                        | --lower_function tabular  --store_actions true --store_states true                         |
+| -q hierarchical                   | --lower_function maxplan  --store_actions false --store_states false                       |
+| <!--                              | -q deep                                                                                    | --lower_function deep | --> |
+| -n, --name                        | -n, --name = nom du fichier de log                                                         |
+| --p_b, --p_o, --p_c               | --p_b = precision belief, --p_o = precision occupancy state, --p_c = precision compression |
+| --time_max                        | --time_max                                                         |
+
+
 ## Hierarchical Occupancy MDP
 
 ![hierarchical occupancy mdp mabc](https://i.imgur.com/DDuTbkp.png)

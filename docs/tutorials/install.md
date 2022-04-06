@@ -7,8 +7,8 @@ The SDM'Studio platform requires the libraries below mentionned:
 - [boost](https://www.boost.org/) : C++ tools library
 - [fmt](https://fmt.dev) : library to format inputs and outputs
 - [torch](https://pytorch.org/) : machine learning library
-<!-- - [eigen](https://eigen.tuxfamily.org) : linear algebra library -->
 
+<!-- - [eigen](https://eigen.tuxfamily.org) : linear algebra library -->
 ## Install from sources
  
 
@@ -19,7 +19,7 @@ To be able to run these algorithms, download `ILOG CPLEX` on [https://www.ibm.co
 
 **2. Installation**
 
-To install SDMS from sources, simply get sources and execute the file `install.sh`. 
+To install *SDM'Studio* from sources, simply get sources and execute the file `install.sh`. 
 
 <!-- <code-group>
 <code-block title="Linux & Mac" active> -->
@@ -39,6 +39,13 @@ If you have installed CPLEX, you will need to fill in the installation path as a
 ```
 :::
 
+**3. Check the installation**
+
+```bash
+cd build
+make test
+```
+
 If installation suceed, go to the [Getting Started](./quickstart.html) section.
 
 ## Step by step installation
@@ -46,24 +53,26 @@ If installation suceed, go to the [Getting Started](./quickstart.html) section.
 The step by step installation allows to better understand the different stages in the installation procedure. If you face a problem when executing `install.sh` or if you prefer manage dependencies by yourself, this section is for you. 
 
 
-**Step 1 : Downloading SDM'Studio sources**
+**Step 1 : Downloading *SDM'Studio* sources**
 
 ```bash
 git clone https://github.com/SDMStudio/sdms.git # you need `git` to be installed 
 cd sdms
 ```
 
-**Step 2 : Installing SDMS dependencies**
+**Step 2 : Installing *SDM'Studio* dependencies**
 
 <code-group>
 <code-block title="Linux" active>
-```bash
-apt-get update 
-apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev unzip wget cmake clang
+
+```sh
+sudo apt-get update 
+sudo apt-get install libboost-all-dev libfmt-dev libgmp-dev zlib1g-dev liblzma-dev unzip wget cmake clang
 ```
 </code-block>
 <code-block title="Mac">
-```bash
+
+```sh
 brew install boost fmt gmp zlib zma unzip wget cmake clang
 ```
 </code-block>
@@ -79,17 +88,17 @@ Download `ILOG CPLEX` on [https://www.ibm.com](https://www.ibm.com) and install 
 Download the last version of PyTorch C++ for cxx11 ABI according to your machine requirements (download links are accessible at  [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/) ). Uncompress the files in `/opt/` directory.
 
 
-```bash
+```sh
 wget https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-xxxxxxx.zip -O libtorch.zip
 unzip libtorch.zip -d /opt
 ```
 
 
-**Step 5 : Compiling and installing SDMS**
+**Step 5 : Compiling and installing *SDM'Studio***
 
-For the last step, let's compile the project and install it on your machine. To this end, we will create a folder called `build` and use [CMake](https://cmake.org/) to build compilation files in this folder. We now are able to install SDMS on the system.
+For the last step, let's compile the project and install it on your machine. To this end, we will create a folder called `build` and use [CMake](https://cmake.org/) to build compilation files in this folder. We now are able to install *SDM'Studio* on the system.
 
-```
+```sh
 mkdir -p build && cd build
 cmake ..
 make -j8 install
@@ -100,14 +109,17 @@ Some options can be provided when executing `cmake` command. These options may b
 For instance, a modification in the path to CPLEX can be specified with the argument `cmake .. -DCPLEX_ROOT_DIR=/path/to/ILOG/CPLEX_VERSION/`.
 <!-- ::: -->
 
-```
+```sh
+# Command line
 cmake .. [-DOPT1=VALUE] [-DOPT2=VALUE] [-DOPT3=VALUE] 
+# For instance, the following line modifies some compiling options:
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=~/.local/libtorch -DCPLEX_ROOT_DIR=/opt/ibm/ILOG/CPLEX_Studio/ -DSDMS_BUILD_TESTS=OFF  
 ```
 Options :
 - ***CMAKE_BUILD_TYPE*** : Compiling type `Debug`, `RelWithDebInfo` or `Release` (default : `RelWithDebInfo`) 
 - ***CMAKE_PREFIX_PATH*** : Absolute path to libtorch (default : `/opt/libtorch`)
 - ***CPLEX_ROOT_DIR*** : Absolute path to CPLEX (default : `/opt/ibm/ILOG/CPLEX_Studio201/`)
-- ***SDMS_BUILD_TESTS*** : Build tests (default : `OFF`)
+- ***SDMS_BUILD_TESTS*** : Build tests (default : `ON`)
 - ***SDMS_BUILD_DOCS*** : Build the documentation (default : `OFF`)
 
 The parameter `CMAKE_BUILD_TYPE` will change the options of the compilation. This can impact the speed of the software. Build the program in `Debug` mode will add the option `-g` and, thus, allow to use debugging tools such as [valgrind](https://valgrind.org/).
@@ -120,13 +132,14 @@ The parameter `CMAKE_BUILD_TYPE` will change the options of the compilation. Thi
 
 ## Docker Images 
 
-Docker provides a way to install SDMS on any OS. 
+Docker provides a way to install *SDM'Studio* on any OS. 
 
-### Quick install with Docker 
+### I. Quick install with Docker 
+<br>
 
 **Step 1. Get sources**
 ```bash
-git clone --branch develop https://github.com/SDMStudio/sdms.git
+git clone https://github.com/SDMStudio/sdms.git
 cd sdms
 ```
 
@@ -135,12 +148,13 @@ cd sdms
 ./open-docker.sh
 ```
 
-**Step 3. Install SDMS in the container**
+**Step 3. Install *SDM'Studio* in the container**
 ```bash
 ./install-docker.sh
 ```
+*SDM'Studio* is now installed in the corresponding Docker container.
 
-**Step 4. Use the solver**
+<!-- **Step 4. Use the solver**
 ```bash
 SDMStudio --help
 SDMStudio solve --help
@@ -153,9 +167,9 @@ SDMStudio solve -w recycling.dpomdp -a PBVI -f oMDP -h 10 -m 1 -e 0.1 --p_o 0.01
 
 # QLearning
 SDMStudio solve -w tiger.dpomdp -a QLearning -f oMDP -h 3 -m 3 -e 0.1 --p_c 0.1 --p_o 0.1 --p_b 0.1 --qvalue_function maxplan_wcsp --q_init Zero --time_max 7200 --name qlearning -t 10000
-```
+``` -->
 
-### Using pre-built images
+### II. Using pre-built images
 
 You can run a pre-built docker image from the Docker Hub. See available tags on [DockerHub](https://hub.docker.com/r/blavad/sdms).
 
@@ -164,33 +178,35 @@ docker run --rm -ti blavad/sdms:<TAG>
 docker run --rm -ti blavad/sdms:<VERSION>-<PROCESSOR>-<TYPE> # Most of the tags follow this format
 ```
 
+There are three types of image (`run`, `devel` and `build`). 
+
 **1. Runtime Images**
 
-The **runtime** images (i.e. `blavad/sdms:*-run`) allow you to run the software without having to worry about building it.
+The **runtime** images (i.e. `blavad/sdms:*-run`) are ready-to-run images. They allow you to run the software without having to worry about compiling it. In addition, the image is lighter. 
 
 Usage example:
 ```bash
 docker run --rm -ti blavad/sdms:0.7-cpu-run
-SDMStudio --help
+sdms --help
 ```
 
 **2. Development Images**
 
-The **development** images (i.e. `blavad/sdms:*-devel`) allow platform developers to have access to a configured environment with the necessary dependencies. This type of image is particularly useful for contributing to the code with a *Mac OSX* or *Windows* platform. 
+The **development** images (i.e. `blavad/sdms:*-devel`) allow platform developers to have access to a configured environment with the necessary dependencies. This type of image is particularly useful for people who want to contribute to the code with a *Mac OSX* or *Windows* platform. 
 
 Usage example:
 ```bash
-docker run --rm -ti blavad/sdms:0.7-cpu-devel # Example of devel image
-
-docker run --rm -ti --mount type=bind,source="$(pwd)",target=/home/sdms blavad/sdms:0.7-cpu-devel # Example of devel image
+# Example of running a development container where sources are bind mounted
+# - this setting allows to make local modifications to the code and test it using the docker container  
+docker run --rm -ti --mount type=bind,source="$(pwd)",target=/home/sdms blavad/sdms:0.7-cpu-devel 
 ```
 
 
-::: details Setup the developer environment
+::: details How to setup the developer environment
 
 1. Get sources.
 ```bash
-# Get sources from a specific SDMS repository
+# Get sources from a specific SDM'Studio repository
 git clone <SDMS_REPO>
 cd sdms
 ```
@@ -213,27 +229,27 @@ docker run  -ti --rm --mount type=bind,source="$(pwd)",target=/sdms blavad/sdms:
 cd /sdms
 ```
 
-5.1. If you only need to install and use SDMS'Studio (slower method).
+5.1. If you only need to install and use *SDM'Studio* (slower method).
 
 ```bash
 ./install.sh
-SDMStudio solve --help
-SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
+sdms solve --help
+sdms solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
 ```
 
-5.2. If you prefer a step by step compilation and usage (faster method). 
+5.2. If you prefer a step by step compilation and usage (**better** method). 
 ```bash
 mkdir build && cd build
 cmake .. 
 make -j4 SDMStudio
-src/SDMStudio solve --help
-src/SDMStudio solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
+src/sdms solve --help
+src/sdms solve -w mabc.dpomdp -a "HSVI" -f "oMDP" -h 10 -m 1 -d 1
 ```
 :::
 
 
 
-### Building the image yourself
+### III. Building the image yourself
 
 To build a custom image, you can use the `Dockerfile` provided. The command is :
 
@@ -242,7 +258,7 @@ docker build -t sdms:<TAG_NAME> .
 ```
 
 ::: warning
-The `Dockerfile` supplied will build images with  PyTorch for CPU.  You can specify another path to the PyTorch repository by adding the argument : `LIBTORCH_URL=<PATH/TO/libtorch-xxxxx.zip>`.
+The default `Dockerfile` will build images with  PyTorch for CPU.  You can specify another path to the PyTorch repository by adding the argument : `LIBTORCH_URL=<PATH/TO/libtorch-xxxxx.zip>`.
 :::
 
 
@@ -269,9 +285,9 @@ docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sd
 ``` -->
 
 
-### Grid'5000 users
+### IV. Grid'5000 users
 
-Grid'5000 users can follow the procedure below to run experiments with GPUs on Grid'5000.
+The following contains few commands that could help Grid'5000 users in their use of *SDM'Studio* under this server. To run experiments with GPUs on Grid'5000, one could follow the procedure below.
 
 ::: details Procedure to follow on Grid'5000
 ```bash
@@ -279,7 +295,7 @@ Grid'5000 users can follow the procedure below to run experiments with GPUs on G
 ssh (site).g5k
 
 # Get SDMS sources on g5k with the way you prefer (git clone, scp or rsync)
-git clone https://gitlab.inria.fr/chroma1/plasma/sdms
+git clone <SDMS_REPO>
 cd sdms/
 
 # Reserve a node with GPUs (params should be adapted to your needs)
@@ -290,7 +306,7 @@ g5k-setup-nvidia-docker -t
 module load cudnn
 
 # Pull the docker image that is adapted for your usage (on g5k must be 'cuda10.1-cudnn8') 
-docker pull blavad/sdms:<version> # ex: docker pull blavad/sdms:0.1-cuda10.1-cudnn8-devel
+docker pull blavad/sdms:<version> # ex: docker pull blavad/sdms:0.7-cuda10.1-cudnn8-devel
 
 # (alternatively you can build the image yourself)
 # docker build --build-arg BASE_IMAGE=nvidia/cuda:10.1-cudnn8-devel-ubuntu18.04 --build-arg LIBTORCH_URL=https://download.pytorch.org/libtorch/cu101/libtorch-cxx11-abi-shared-with-deps-1.8.0%2Bcu101.zip --target dev -t  sdms:0.1-cuda10.1-cudnn8-devel .

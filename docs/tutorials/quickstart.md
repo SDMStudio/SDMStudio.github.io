@@ -1,7 +1,7 @@
 
 # Getting started 
 
-Installing SDM'Studio results in installing four types of files (binaries, headers, libraries and the documentation). By default, those files are located in the following repositories:
+Installing *SDM'Studio* results in installing four types of files (binaries, headers, libraries and the documentation). By default, those files are located in the following repositories:
 - binaries : `/usr/local/bin/` 
 - headers : `/usr/local/include/` 
 - libraries : `/usr/local/lib/` 
@@ -9,36 +9,37 @@ Installing SDM'Studio results in installing four types of files (binaries, heade
 
 ## Command Line Interface
 
-The main program is called `SDMStudio`. This program gather all functionalities of the software. Firstly, let's execute the commands below:
+The main program is called `sdms`. This program gather all functionalities of the software. Firstly, let's execute the commands below:
 
 ```bash 
-SDMStudio solve -a "A*" -f "OccupancyMDP" 
-SDMStudio solve -a "HSVI" -f "OccupancyMDP" 
-SDMStudio solve -a "QLearning" -f "OccupancyMDP" -m 1 -e 0.1 -t 10000
+sdms solve -a "A*" -f "OccupancyMDP" 
+sdms solve -a "HSVI" -f "OccupancyMDP" 
+sdms solve -a "QLearning" -f "OccupancyMDP" -m 1 -e 0.1 -t 10000
 ```
 
-You just solved a **decentralized POMDP** thanks to three different algorithms (A*, HSVI and Q-Learning). The `-f` parameter tells the program to use the **occupancy MDP** reformulation to solve it. To check the different usage of `SDMStudio`, simply run  ``SDMStudio --help`` or `man SDMStudio`.
+You just solved a **decentralized POMDP** thanks to three different algorithms (A*, HSVI and Q-Learning). The `-f` parameter tells the program to use the **occupancy MDP** reformulation to solve it. To check the different usage of `sdms`, simply run  ``sdms --help`` or `man sdms`.
 
-```bash
-    Usage : SDMStudio COMMAND
+```
+    Usage : sdms COMMAND
 
     The best solver for sequential decision making problems.
 
     Commands:
-      algorithms	Display all available algorithms.
+      algorithms		Display all available algorithms.
+      formalisms		Display all available formalisms.
       help			Show this help message.
       solve			Solve a sequential decision making problem using specified algorithm.
       test			Test a policy.
       version		Show the version.
       worlds		Display all available worlds.
 
-    Run 'SDMStudio COMMAND --help' for more information on a command.
+    Run 'sdms COMMAND --help' for more information on a command.
 ```
 
-The main program uses aliases to other programs. For instance, the command `SDMStudio solve` is equivalent to `sdms-solve`. The next command lines produce the same outputs.
+The main program uses aliases to other programs. For instance, the command `sdms solve` is equivalent to `sdms-solve`. The next command lines produce the same outputs.
 
 ```bash
-SDMStudio solve --help
+sdms solve --help
 sdms-solve --help
 ```
 
@@ -49,7 +50,7 @@ To define a new problem, one way is to write a file of the standardized format `
 
 ## Start with the SDMS library
 
-For a set of examples, please refer to this [folder](https://gitlab.inria.fr/chroma1/plasma/sdms/-/tree/main/src/examples).
+For a set of examples, please refer to this [folder](https://github.com/SDMStudio/sdms/tree/main/src/examples).
 
 Let’s write a tiny C++ file called `backinduct.cpp` that includes `sdm/parser/parser.hpp` and for now simply prints out a parsed problem:
 
@@ -84,25 +85,24 @@ This reformulation assumes that the state transition go over beliefs instead of 
 
 #include <sdm/config.hpp>
 #include <sdm/parser/parser.hpp>
-#include <sdm/world/pomdp_interface.hpp>
 #include <sdm/world/belief_mdp.hpp>
-#include <sdm/algorithms/backward_induction.hpp>
+#include <sdm/algorithms/planning/backward_induction.hpp>
 
 using namespace sdm;
 
 int main()
 {
-  // Parse the problem file 
-  std::shared_ptr<POMDPInterface> pomdp = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "pomdp/tiger.pomdp");
-  problem->setHorizon(5);
-  // Transform the problem in a solvable way 
-  std::shared_ptr<BeliefMDP> belief_mdp = std::make_shared<BeliefMDP>(pomdp);
-  // Instanciate the algorithm
-  auto algo = std::make_shared<BackwardInduction>(belief_mdp);
-  // Intialize and solve
-  algo->do_initialize();
-  algo->do_solve();
-} 
+    // Parse the problem file
+    auto pomdp = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "dpomdp/tiger.dpomdp");
+    pomdp->setHorizon(4);
+    // Recast the problem instance into a solvable interface
+    auto belief_mdp = std::make_shared<BeliefMDP>(pomdp);
+    // Instanciate the algorithm
+    auto algo = std::make_shared<BackwardInduction>(belief_mdp);
+    // Initialize and solve
+    algo->initialize();
+    algo->solve();
+}
 ```
 
 <!-- 

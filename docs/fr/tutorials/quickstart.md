@@ -8,18 +8,18 @@ En installant SDM'Studio vous avez installer quatre types de fichiers (binaries,
 
 ## Interface en Ligne de Commande (CLI)
 
-Le programme principal est ``SDMStudio``. Ce programme concentre les différentes fonctionnalités du logiciel. Pour commencer, exécutez les trois commandes ci-dessous: 
+Le programme principal est ``sdms``. Ce programme concentre les différentes fonctionnalités du logiciel. Pour commencer, exécutez les trois commandes ci-dessous: 
 
 ```bash 
-SDMStudio solve -a "A*" -f "OccupancyMDP" 
-SDMStudio solve -a "HSVI" -f "OccupancyMDP" 
-SDMStudio solve -a "QLearning" -f "OccupancyMDP" -m 1 -e 0.1 -t 10000
+sdms solve -a "A*" -f "OccupancyMDP" 
+sdms solve -a "HSVI" -f "OccupancyMDP" 
+sdms solve -a "QLearning" -f "OccupancyMDP" -m 1 -e 0.1 -t 10000
 ```
 
-Vous venez de résoudre un **POMDP décentralisé** grâce à trois algorithmes différents (A*, HSVI et Q-Learning). Le paramètre `-f` spécifie au programme d'utiliser la reformulation en **occupancy MDP** pour le résoudre.  Pour voir comment utiliser le programme `SDMStudio`, il faut utiliser ``SDMStudio --help`` ou encore `man SDMStudio`.
+Vous venez de résoudre un **POMDP décentralisé** grâce à trois algorithmes différents (A*, HSVI et Q-Learning). Le paramètre `-f` spécifie au programme d'utiliser la reformulation en **occupancy MDP** pour le résoudre.  Pour voir comment utiliser le programme `sdms`, il faut utiliser ``sdms --help`` ou encore `man sdms`.
 
 ```bash
-    Usage : SDMStudio COMMAND
+    Usage : sdms COMMAND
 
     The best solver for sequential decision making problems.
 
@@ -31,13 +31,13 @@ Vous venez de résoudre un **POMDP décentralisé** grâce à trois algorithmes 
       version		Show the version.
       worlds		Display all available worlds.
 
-    Run 'SDMStudio COMMAND --help' for more information on a command.
+    Run 'sdms COMMAND --help' for more information on a command.
 ```
 
-Le programme principal `SDMStudio` contient des alias vers d'autres programmes. Par exemple, la commande ``SDMStudio solve`` est équivalent à ``sdms-solve``. Les deux lignes ci-dessous vont retourner exactement la même chose.
+Le programme principal `sdms` contient des alias vers d'autres programmes. Par exemple, la commande ``sdms solve`` est équivalent à ``sdms-solve``. Les deux lignes ci-dessous vont retourner exactement la même chose.
 
 ```bash
-SDMStudio solve --help
+sdms solve --help
 sdms-solve --help
 ```
 
@@ -47,7 +47,7 @@ Les fichiers de problème peuvent prendre différentes formes. La forme la plus 
 
 ## Démarrer avec la bibliothèque SDMS
 
-Pour un ensemble d'exemples, veuillez vous référer à ce [dossier](https://gitlab.inria.fr/chroma1/plasma/sdms/-/tree/main/src/examples).
+Pour un ensemble d'exemples, veuillez vous référer à ce [dossier](https://github.com/SDMStudio/sdms/tree/main/src/examples).
 
 Écrivons un petit fichier C++ appelé `backinduct.cpp` qui inclut `sdm/parser/parser.hpp` et qui, pour l'instant, affiche simplement un problème :
 
@@ -83,24 +83,23 @@ Cette reformulation suppose que la transition d'état se fait sur les croyances 
 
 #include <sdm/config.hpp>
 #include <sdm/parser/parser.hpp>
-#include <sdm/world/pomdp_interface.hpp>
 #include <sdm/world/belief_mdp.hpp>
-#include <sdm/algorithms/backward_induction.hpp>
+#include <sdm/algorithms/planning/backward_induction.hpp>
 
 using namespace sdm;
 
 int main()
 {
-  // Parse the problem file 
-  std::shared_ptr<POMDPInterface> pomdp = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "pomdp/tiger.pomdp");
-  problem->setHorizon(5);
-  // Transform the problem in a solvable way 
-  std::shared_ptr<BeliefMDP> belief_mdp = std::make_shared<BeliefMDP>(pomdp);
-  // Instanciate the algorithm
-  auto algo = std::make_shared<BackwardInduction>(belief_mdp);
-  // Intialize and solve
-  algo->do_initialize();
-  algo->do_solve();
+    // Parse the problem file
+    auto pomdp = sdm::parser::parse_file(sdm::config::PROBLEM_PATH + "dpomdp/tiger.dpomdp");
+    pomdp->setHorizon(4);
+    // Recast the problem instance into a solvable interface
+    auto belief_mdp = std::make_shared<BeliefMDP>(pomdp);
+    // Instanciate the algorithm
+    auto algo = std::make_shared<BackwardInduction>(belief_mdp);
+    // Initialize and solve
+    algo->initialize();
+    algo->solve();
 } 
 ```
 

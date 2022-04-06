@@ -82,9 +82,8 @@ module.exports = {
                                         collapsable: true, // optional, defaults to true
                                         sidebarDepth: 1,
                                         children: [
-                                            '/doc/experiments/params',
-                                            '/doc/experiments/notes',
                                             '/tutorials/algorithms/hsvi',  /* /foo/one.html */
+                                            '/tutorials/algorithms/pbvi',  /* /foo/one.html */
                                             '/tutorials/algorithms/qlearning',  /* /foo/one.html */
                                         ]
                                     },

@@ -16,13 +16,20 @@ tags:
 
 The SDM'Studio platform is built around the genericity of algorithmic schemes for planning and reinforcement learning. The platform's native algorithmic schemes are HSVI and Q-learning. However, the list is extended to other state-of-the-art algorithms.
 
-|           |         A*         | Backward Induction  |        HSVI        |     Q-Learning     |  Value Iteration   |
-| :-------- | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
-| MDP       |        :x:         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| POMDP     |        :x:         | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
-| Dec-POMDP | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |        :x:         |
-| ZS-POSG   |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |
-| POSG      |        :x:         |        :x:         |        :x:         |        :x:         |        :x:         |
+
+|                            |         A*         | Backward Induction |        HSVI        | MCTS  |        PBVI        |      Perseus       |     Q-Learning     | REINFORCE | SARSA |  Value Iteration   |
+| :------------------------- | :----------------: | :----------------: | :----------------: | :---: | :----------------: | :----------------: | :----------------: | :-------: | :---: | :----------------: |
+| MDP                        |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :x:  |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: |    :x:    |  :white_check_mark:  | :white_check_mark: |
+| serial MMDP                |  :no_entry_sign:   | :white_check_mark: | :white_check_mark: |  :x:  |  :no_entry_sign:   |  :no_entry_sign:   | :white_check_mark: |    :x:    |  :white_check_mark:  | :white_check_mark: |
+| belief MDP                 |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :white_check_mark:  |  :no_entry_sign:   |
+| serial belief MDP          |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :white_check_mark:  |  :no_entry_sign:   |
+| hierarchical belief MDP    |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :white_check_mark:  |  :no_entry_sign:   |
+| occupancy MDP              | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :white_check_mark:  |  :no_entry_sign:   |
+| serial occupancy MDP       |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :white_check_mark:  |  :no_entry_sign:   |
+| hierarchical occupancy MDP |        :x:         | :white_check_mark: | :white_check_mark: |  :x:  | :white_check_mark: | :white_check_mark: | :white_check_mark: |    :x:    |  :white_check_mark:  |  :no_entry_sign:   |
+| OccupancyMG                |        :x:         |        :x:         |        :x:         |  :x:  |        :x:         |        :x:         |        :x:         |    :x:    |  :x:  |  :no_entry_sign:   |
+
+Legend :  :x: not implemented :no_entry_sign: not allowed  :white_check_mark: implemented
 
 Algorithmic patterns can be seen as generic templates. Each instance of one of these schemes is an algorithm in its own right. The changes may occur in the problem definition or in the way the value functions are represented. 
 

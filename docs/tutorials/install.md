@@ -306,11 +306,11 @@ oarsub -p "cluster='cluster-name'" -I
 # Setup Docker in the interactive node
 g5k-setup-docker -t
 
-# Pull the docker image that is adapted for your usage
-docker pull blavad/sdms:<version> # ex: docker pull blavad/sdms:0.8-cpu-devel
+# To pull a docker image and run it (only use images for CPUs)
+./open-docker.sh
 
-# Run the docker image interactively
-docker run --rm --gpus all -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sdms blavad/sdms:<version>
+# To install SDMS once the container is running
+./install-docker.sh
 
 # Run experiments on your needs 
 ```

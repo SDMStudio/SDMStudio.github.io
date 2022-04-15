@@ -287,9 +287,11 @@ docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sd
 
 ### IV. Grid'5000 users
 
-The following contains few commands that could help Grid'5000 users in their use of *SDM'Studio* under this server. To run experiments with GPUs on Grid'5000, one could follow the procedure below.
+The following contains few commands that could help Grid'5000 users in their use of *SDM'Studio* under this server. 
 
-::: details Procedure to follow on Grid'5000
+To run experiments with GPUs on Grid'5000, one could follow the procedure below:
+
+::: details Procedure to follow on Grid'5000 (en mode GPUs)
 ```bash
 # Connect to a site on grid'5000
 ssh (site).g5k
@@ -317,3 +319,7 @@ docker run --rm --gpus all -ti --name sdms-dev  --mount type=bind,source="$(pwd)
 # Run experiments on your needs 
 ```
 :::
+
+## Uninstall *SDM'Studio*
+
+Linux users can run `cat install_manifest.txt | xargs -d '\n' rm` as root from the build directory to uninstall *SDM'Studio* from their system.

@@ -267,9 +267,11 @@ docker build --build-arg BASE_IMAGE=nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04 --
 ### IV. Pour les utilisateurs de Grid'5000
 
 Les utilisateurs du serveur de calcul *Grid'5000* peuvent s'aider des instructions ci-dessous pour lancer leurs expérimentations sur le serveur.
-Ici, la procédure décrite initialise Grid'5000 en mode GPUs.
 
-::: details Procedure d'utilisation sous Grid'5000
+
+Initialisation de Grid'5000 en mode GPUs.
+
+::: details Procedure d'utilisation sous Grid'5000 (en mode GPUs)
 ```bash
 # Connect to a site on grid'5000
 ssh (site).g5k
@@ -297,3 +299,7 @@ docker run --rm --gpus all -ti --name sdms-dev --mount type=bind,source="$(pwd)"
 # Run experiments on your needs 
 ```
 :::
+
+## Désinstaller *SDM'Studio*
+
+Les utilisateurs Linux peuvent exécuter la commande suivante `cat install_manifest.txt | xargs -d '\n' rm` depuis le répertoire `build` du projet pour désinstaller *SDM'Studio* de leur système.

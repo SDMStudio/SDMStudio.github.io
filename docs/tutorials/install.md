@@ -289,34 +289,8 @@ docker run -ti --name sdms-dev --mount type=bind,source="$(pwd)",target=/home/sd
 
 The following contains few commands that could help Grid'5000 users in their use of *SDM'Studio* under this server. 
 
-
-To run experiments with CPUs on Grid'5000, one could follow the procedure below.
-::: details Procedure d'utilisation sous Grid'5000 (en mode CPUs)
-```bash
-# Connect to a site on grid'5000
-ssh (site).g5k
-
-# Get SDMS sources on g5k with the way you prefer (git clone, scp or rsync)
-git clone https://github.com/SDMStudio/sdms.git
-cd sdms/
-
-# Reserve a node with GPUs (params should be adapted to your needs)
-oarsub -p "cluster='cluster-name'" -I
-
-# Setup Docker in the interactive node
-g5k-setup-docker -t
-
-# To pull a docker image and run it (only use images for CPUs)
-./open-docker.sh
-
-# To install SDMS once the container is running
-./install-docker.sh
-
-# Run experiments on your needs 
-```
-:::
-
 To run experiments with GPUs on Grid'5000, one could follow the procedure below:
+
 ::: details Procedure to follow on Grid'5000 (en mode GPUs)
 ```bash
 # Connect to a site on grid'5000
